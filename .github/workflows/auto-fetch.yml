@@ -1,0 +1,37 @@
+name: Auto Fetch API
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Set Account Info
+      run: echo '${{ secrets.Config }}' > config.py
+
+    - name: Configure Git
+      run: |
+        git config --global user.name "qKuafn"
+        git config --global user.email "qkuafn@gmail.com"
+
+    - name: Main script
+      shell: bash
+      run: python 'Actions.py'
