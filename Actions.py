@@ -686,7 +686,9 @@ if __name__ == "__main__":
 
     for lang in Lang:
         fetch_api2(lang, tags)
+    for lang in Lang:
         fetch_api3(lang, tags)
+    for lang in Lang:
         fetch_api4(lang, tags)
 
     subprocess.run(["git", "add", "."], check=True)
