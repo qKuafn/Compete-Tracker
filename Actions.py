@@ -731,7 +731,7 @@ if __name__ == "__main__":
             ["git", "config", "user.name"], text=True
         ).strip()
 
-        if "ASIA" in tags or "ja" in tags or any(tag.endswith("_Updated") for tag in tags) or any(tag.endswith("_Add") for tag in tags):
+        if "ASIA" in tags or any(tag.endswith("ja") for tag in tags) in tags or any(tag.endswith("_Updated") for tag in tags) or any(tag.endswith("_Add") for tag in tags):
             content = f"## 🆕 API更新通知 : {', '.join(tags)} <@&1372839358591139840>"
         else:
             content = f"## 更新通知 : {', '.join(tags)}"
