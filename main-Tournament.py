@@ -78,7 +78,7 @@ def fetch_api1(region, tags):
         res = requests.get(url, headers=headers)
         if res.status_code == 200:
             data = res.json()
-            filepath = os.path.join(RESPONSE_DIR, f"response_Event_{region}.json")
+            filepath = os.path.join(RESPONSE_DIR, f"EventData_{region}.json")
             new_data = data
             try:
                 before_data = load_json(filepath) if os.path.exists(filepath) else None
@@ -86,7 +86,7 @@ def fetch_api1(region, tags):
                 print("[API1] ❌️ 旧ファイルの取得に失敗")
             if new_data != before_data or before_data is None:
                 try:
-                    with open(get_unique_filepath(ARCHIVE_DIR, f"response_Event_{region}"), "w", encoding="utf-8") as f:
+                    with open(get_unique_filepath(ARCHIVE_DIR, f"EventData_{region}"), "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
@@ -112,7 +112,7 @@ def fetch_api2(lang, tags):
     res = requests.get(url)
     if res.status_code == 200:
         data = res.json()
-        filepath = os.path.join(RESPONSE_DIR, f"WebAPI_Response_{lang}.json")
+        filepath = os.path.join(RESPONSE_DIR, f"WebData_{lang}.json")
         new_data = data
         try:
             before_data = load_json(filepath) if os.path.exists(filepath) else None
@@ -120,11 +120,11 @@ def fetch_api2(lang, tags):
             print("[API2] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
-                with open(get_unique_filepath(ARCHIVE_DIR, f"Fresponse_WebAPI_{lang}"), "w", encoding="utf-8") as f:
+                with open(get_unique_filepath(ARCHIVE_DIR, f"WebData_{lang}"), "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
-                tags.append(f"{lang}")
+                tags.append(f"WebData_{lang}")
                 print(f"[API2] 🟢 {lang} : 更新あり")
             else:
                 print(f"[API2] {lang} : 更新なし")
@@ -133,6 +133,62 @@ def fetch_api2(lang, tags):
             print (f"[API2] ファイルの保存に失敗 : {e}")
     else:
         print(f"[API2] ❌️ 取得失敗 ({lang}) : {res.status_code}")
+        return None
+
+def fetch_api3(lang, tags):
+    url = f"{WEBAPI_URL2}?lang={lang}"
+    res = requests.get(url)
+    if res.status_code == 200:
+        data = res.json()
+        filepath = os.path.join(RESPONSE_DIR, f"ScoreInfo_{lang}.json")
+        new_data = data
+        try:
+            before_data = load_json(filepath) if os.path.exists(filepath) else None
+        except Exception as e:
+            print("[API3] ❌️ 旧ファイルの取得に失敗")
+        try:
+            if new_data != before_data or before_data is None:
+                with open(get_unique_filepath(ARCHIVE_DIR, f"ScoreInfo_{lang}"), "w", encoding="utf-8") as f:
+                    json.dump(data, f, ensure_ascii=False, indent=2)
+                with open(filepath, "w", encoding="utf-8") as f:
+                    json.dump(data, f, ensure_ascii=False, indent=2)
+                tags.append(f"ScoreInfo_{lang}")
+                print(f"[API3] 🟢 {lang} : 更新あり")
+            else:
+                print(f"[API3] {lang} : 更新なし")
+            return data
+        except Exception as e:
+            print (f"[API3] ファイルの保存に失敗 : {e}")
+    else:
+        print(f"[API3] ❌️ 取得失敗 ({lang}) : {res.status_code}")
+        return None
+
+def fetch_api4(lang, tags):
+    url = f"{WEBAPI_URL3}?lang={lang}"
+    res = requests.get(url)
+    if res.status_code == 200:
+        data = res.json()
+        filepath = os.path.join(RESPONSE_DIR, f"LeaderboardInfo_{lang}.json")
+        new_data = data
+        try:
+            before_data = load_json(filepath) if os.path.exists(filepath) else None
+        except Exception as e:
+            print("[API4] ❌️ 旧ファイルの取得に失敗")
+        try:
+            if new_data != before_data or before_data is None:
+                with open(get_unique_filepath(ARCHIVE_DIR, f"LeaderboardInfo_{lang}"), "w", encoding="utf-8") as f:
+                    json.dump(data, f, ensure_ascii=False, indent=2)
+                with open(filepath, "w", encoding="utf-8") as f:
+                    json.dump(data, f, ensure_ascii=False, indent=2)
+                tags.append(f"LeaderboardInfo_{lang}")
+                print(f"[API4] 🟢 {lang} : 更新あり")
+            else:
+                print(f"[API4] {lang} : 更新なし")
+            return data
+        except Exception as e:
+            print (f"[API4] ファイルの保存に失敗 : {e}")
+    else:
+        print(f"[API4] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
 
 # === TournamentData ===
@@ -631,6 +687,8 @@ if __name__ == "__main__":
 
         for lang in Lang:
             fetch_api2(lang, tags)
+            fetch_api3(lang, tags)
+            fetch_api4(lang, tags)
 
         subprocess.run(["git", "add", "."], check=True)
         git_diff = subprocess.run(["git", "diff", "--cached", "--quiet"])
