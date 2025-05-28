@@ -719,6 +719,16 @@ if __name__ == "__main__":
 
         print("🚀 開始")
 
+        result = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
+        is_clean = result.returncode == 0 and result.stdout.strip() == ''
+
+        if is_clean:
+            subprocess.run(['git', 'pull'])
+        else:
+            subprocess.run(['git', 'stash'])
+            subprocess.run(['git', 'pull'])
+            subprocess.run(['git', 'stash', 'pop'])
+        
         extract_tournament_data(tags)
 
         for region in Regions:
@@ -755,7 +765,6 @@ if __name__ == "__main__":
             message = f"Update : {', '.join(tags)}　{timestampA}"
 
             subprocess.run(["git", "commit", "-m", message], check=True)
-            subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=True)
             subprocess.run(["git", "push"], check=True)
 
             commit_hash = subprocess.check_output(
