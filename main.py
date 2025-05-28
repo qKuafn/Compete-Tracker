@@ -224,6 +224,7 @@ def fetch_api5(tags, version, build):
                     print(f"[API5] ❌️ ファイルの保存に失敗 : {e}")
                     return False
             else:
+                print ("[API5] 更新なし")
                 return False
         else:
             print(f"[API5] ❌️ 取得失敗 ({region}) : {res.status_code}")
