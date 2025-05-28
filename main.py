@@ -15,6 +15,9 @@ TOURNAMENT_ARCHIVE_DIR = "./Tournament/Archive"
 Regions = ["ASIA", "EU", "NAC", "NAW", "OCE", "ME", "BR", "ONSITE"]
 Lang = ["ja", "en"]
 
+version = "++Fortnite+Release-35.10"
+build = "42906078"
+
 JST = timezone(timedelta(hours=9))
 
 # === トークン管理 ===
@@ -190,6 +193,46 @@ def fetch_api4(lang, tags):
     else:
         print(f"[API4] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
+    
+def fetch_api5(tags, version, build):
+    url = f"{PlaylistAPI_URL}/{version}/{build}?appId=Fortnite"
+    payload = {
+        "FortPlaylistAthena": 0
+    }
+    for attempt in range(2):
+        ensure_token()
+        headers = {"Authorization": f"Bearer {access_token}"}
+        res = requests.post(url, headers=headers, json=payload)
+        if res.status_code == 200:
+            data = res.json()
+            filepath = os.path.join(RESPONSE_DIR, f"PlaylistData.json")
+            new_data = data
+            try:
+                before_data = load_json(filepath) if os.path.exists(filepath) else None
+            except Exception as e:
+                print("[API5] ❌️ 旧ファイルの取得に失敗")
+            if new_data != before_data or before_data is None:
+                try:
+                    with open(get_unique_filepath(ARCHIVE_DIR, f"PlaylistData"), "w", encoding="utf-8") as f:
+                        json.dump(data, f, ensure_ascii=False, indent=2)
+                    with open(filepath, "w", encoding="utf-8") as f:
+                        json.dump(data, f, ensure_ascii=False, indent=2)
+                    tags.append("Playlist")
+                    print(f"[API5] 🟢 更新あり")
+                    return True
+                except Exception as e:
+                    print(f"[API5] ❌️ ファイルの保存に失敗 : {e}")
+                    return False
+            else:
+                return False
+        else:
+            print(f"[API5] ❌️ 取得失敗 ({region}) : {res.status_code}")
+            if attempt == 0:
+                print("[API5] リトライ")
+                get_token()
+                time.sleep(10)
+            else:
+                return None
 
 # === TournamentData ===
 def get_token_extract():
@@ -692,6 +735,8 @@ if __name__ == "__main__":
         for lang in Lang:
             fetch_api4(lang, tags)
 
+        fetch_api5(tags, version, build)
+
         subprocess.run(["git", "add", "."], check=True)
         git_diff = subprocess.run(["git", "diff", "--cached", "--quiet"])
         should_push = git_diff.returncode != 0
@@ -734,7 +779,7 @@ if __name__ == "__main__":
                 ["git", "config", "user.name"], text=True
             ).strip()
 
-            if "ASIA" in tags or any(tag.endswith("ja") for tag in tags) in tags or any(tag.endswith("_Updated") for tag in tags) or any(tag.endswith("_Add") for tag in tags):
+            if "ASIA" in tags or "Playlist" in tags or any(tag.endswith("ja") for tag in tags) in tags or any(tag.endswith("_Updated") for tag in tags) or any(tag.endswith("_Add") for tag in tags):
                 content = f"## 🆕 API更新通知 : {', '.join(tags)} <@&1372839358591139840>"
             else:
                 content = f"## 更新通知 : {', '.join(tags)}"
