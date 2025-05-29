@@ -130,7 +130,7 @@ def fetch_api2(lang, tags):
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
-                tags.append(f"WebData_{lang}")
+                tags.append(f"Web ({lang})")
                 print(f"[API2] 🟢 {lang} : 更新あり")
             else:
                 print(f"[API2] {lang} : 更新なし")
@@ -159,7 +159,7 @@ def fetch_api3(lang, tags):
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
-                tags.append(f"ScoreInfo_{lang}")
+                tags.append(f"Score ({lang})")
                 print(f"[API3] 🟢 {lang} : 更新あり")
             else:
                 print(f"[API3] {lang} : 更新なし")
@@ -188,7 +188,7 @@ def fetch_api4(lang, tags):
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
-                tags.append(f"LeaderboardInfo_{lang}")
+                tags.append(f"Lead ({lang})")
                 print(f"[API4] 🟢 {lang} : 更新あり")
             else:
                 print(f"[API4] {lang} : 更新なし")
@@ -222,12 +222,12 @@ def fetch_api5(tags, version, build, playlist_tags):
                 new_ids = list(set(current_id_list) - set(before_id_list))
                 new_ids_tournament = [id for id in new_ids if "Showdown_" in id]
                 if new_ids_tournament:
-                    tags.append(f"New : {new_ids_tournament}")
+                    tags.append(f"{new_ids_tournament} (New)")
                     playlist_tags.append(new_ids_tournament)
                 changed_ids = detect_changed_ids(current_id_list, before_id_list)
                 changed_ids_tournament = [id for id in changed_ids if "Showdown_" in id]
                 if changed_ids_tournament:
-                    tags.append(f"Update : {changed_ids_tournament}")
+                    tags.append(f"{changed_ids_tournament} (Upd)")
                     playlist_tags.append(changed_ids_tournament)
                 # 保存
                 try:
@@ -323,7 +323,7 @@ def fetch_api2_extract(lang):
         print(f"[API2 extract用] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
 
-def extract_tournament_data(tags):
+def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
 
     JST = timezone(timedelta(hours=9))
     event_data = fetch_api1_extract()
@@ -570,8 +570,8 @@ def extract_tournament_data(tags):
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
-            tags.append(f"{display_id}_Add")
-            added_Tournaments.append(f"{display_id}")
+            tags.append(f"{display_id} (New)")
+            added_Tournaments.append(display_id)
 
         elif new_data != before_data:
             print(f"[Tournament] 🟢 トーナメント更新 : {display_id}")
@@ -579,8 +579,8 @@ def extract_tournament_data(tags):
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
-            tags.append(f"{display_id}_Updated")
-            updated_Tournaments.append(f"{display_id}")
+            tags.append(f"{display_id} (Upd)")
+            updated_Tournaments.append(display_id)
 
         # === 送信準備 ===
         embeds = [embed_date, embed_mode, embed_match, embed_token, embed_payout]
@@ -752,6 +752,8 @@ if __name__ == "__main__":
         tags = []
         updated_regions = []
         playlist_tags = []
+        added_Tournaments = []
+        updated_Tournaments = []
 
         print("🚀 開始")
 
@@ -765,7 +767,7 @@ if __name__ == "__main__":
             subprocess.run(['git', 'pull'])
             subprocess.run(['git', 'stash', 'pop'])
         
-        extract_tournament_data(tags)
+        extract_tournament_data(tags, added_Tournaments, updated_Tournaments)
 
         for region in Regions:
             if fetch_api1(region, tags):
@@ -798,7 +800,7 @@ if __name__ == "__main__":
             print(f"[DEBUG] タグ一覧 : {tags}")
 
             timestampA = datetime.now(JST).strftime("%m-%d %H:%M:%S")
-            message = f"Update : {', '.join(tags)}　{timestampA}"
+            message = f"更新 : {', '.join(tags)} ({timestampA})"
 
             subprocess.run(["git", "commit", "-m", message], check=True)
             subprocess.run(["git", "push"], check=True)
@@ -824,10 +826,10 @@ if __name__ == "__main__":
                 ["git", "config", "user.name"], text=True
             ).strip()
 
-            if "ASIA" in tags or "Playlist" in tags or any(tag.endswith("ja") for tag in tags) in tags or any(tag.endswith("_Updated") for tag in tags) or any(tag.endswith("_Add") for tag in tags) or playlist_tags:
-                content = f"## 🆕 API更新通知 : {', '.join(tags)} <@&1372839358591139840>"
+            if "ASIA" in tags or any(tag.endswith("(ja)") for tag in tags) in tags or added_Tournaments or updated_Tournaments or playlist_tags:
+                content = f"## 🆕 : {', '.join(tags)} <@&1372839358591139840>"
             else:
-                content = f"## 更新通知 : {', '.join(tags)}"
+                content = f"## 更新 : {', '.join(tags)}"
 
             payload = {
                 "username": "GitHub",
