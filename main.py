@@ -5,6 +5,7 @@ import os
 import subprocess
 from datetime import datetime, timezone, timedelta
 from config import *
+from typing import List
 
 # === ファイルパス ===
 RESPONSE_DIR = "./response"
@@ -47,7 +48,7 @@ def load_json(path):
         print(f"[json] ❌️ json読み込みエラー: {e}")
         return None
 
-# === API1,2 ===
+# === API1,2用 ===
 def get_token():
     global access_token, last_token_time
     headers = {
@@ -73,6 +74,7 @@ def ensure_token():
     if access_token is None or (time.time() - last_token_time) >= TOKEN_EXPIRATION:
         get_token()
 
+# === Tournament Data API ===
 def fetch_api1(region, tags):
     url = f"{TOURNAMENT_URL}?region={region}"
     for attempt in range(2):
@@ -110,6 +112,7 @@ def fetch_api1(region, tags):
             else:
                 return None
 
+# === Main Web API ===
 def fetch_api2(lang, tags):
     url = f"{WEBAPI_URL}?lang={lang}"
     res = requests.get(url)
@@ -138,6 +141,7 @@ def fetch_api2(lang, tags):
         print(f"[API2] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
 
+# === ScoringRule Web API ===
 def fetch_api3(lang, tags):
     url = f"{WEBAPI_URL2}?lang={lang}"
     res = requests.get(url)
@@ -166,6 +170,7 @@ def fetch_api3(lang, tags):
         print(f"[API3] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
 
+# === Leaderboard Web API ===
 def fetch_api4(lang, tags):
     url = f"{WEBAPI_URL3}?lang={lang}"
     res = requests.get(url)
@@ -193,8 +198,9 @@ def fetch_api4(lang, tags):
     else:
         print(f"[API4] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
-    
-def fetch_api5(tags, version, build):
+
+# === Playlistの更新を確認 ===
+def fetch_api5(tags, version, build, playlist_tags):
     url = f"{PlaylistAPI_URL}/{version}/{build}?appId=Fortnite"
     payload = {
         "FortPlaylistAthena": 0
@@ -204,20 +210,31 @@ def fetch_api5(tags, version, build):
         headers = {"Authorization": f"Bearer {access_token}"}
         res = requests.post(url, headers=headers, json=payload)
         if res.status_code == 200:
-            data = res.json()
+            new_data = res.json()
             filepath = os.path.join(RESPONSE_DIR, f"PlaylistData.json")
-            new_data = data
             try:
                 before_data = load_json(filepath) if os.path.exists(filepath) else None
             except Exception as e:
                 print("[API5] ❌️ 旧ファイルの取得に失敗")
             if new_data != before_data or before_data is None:
+                current_id_list = extract_asset_ids(new_data)
+                before_id_list = extract_asset_ids(before_data)
+                new_ids = list(set(current_id_list) - set(before_id_list))
+                new_ids_tournament = [id for id in new_ids if "Showdown_" in id]
+                if new_ids_tournament:
+                    tags.append(f"New : {new_ids_tournament}")
+                    playlist_tags.append(new_ids_tournament)
+                changed_ids = detect_changed_ids(current_id_list, before_id_list)
+                changed_ids_tournament = [id for id in changed_ids if "Showdown_" in id]
+                if changed_ids_tournament:
+                    tags.append(f"Update : {changed_ids_tournament}")
+                    playlist_tags.append(changed_ids_tournament)
+                # 保存
                 try:
                     with open(get_unique_filepath(ARCHIVE_DIR, f"PlaylistData"), "w", encoding="utf-8") as f:
-                        json.dump(data, f, ensure_ascii=False, indent=2)
+                        json.dump(new_data, f, ensure_ascii=False, indent=2)
                     with open(filepath, "w", encoding="utf-8") as f:
-                        json.dump(data, f, ensure_ascii=False, indent=2)
-                    tags.append("Playlist")
+                        json.dump(new_data, f, ensure_ascii=False, indent=2)
                     print(f"[API5] 🟢 更新あり")
                     return True
                 except Exception as e:
@@ -234,6 +251,23 @@ def fetch_api5(tags, version, build):
                 time.sleep(10)
             else:
                 return None
+
+# === 更新が入っているPlaylist Id一覧を取得 ===
+def extract_asset_ids(data: dict) -> List[str]:
+    return list(data.get("FortPlaylistAthena", {}).get("assets", {}).keys())
+
+def detect_changed_ids(current_data: dict, previous_data: dict) -> List[str]:
+    updated_ids = []
+    current_assets = current_data.get("FortPlaylistAthena", {}).get("assets", {})
+    previous_assets = previous_data.get("FortPlaylistAthena", {}).get("assets", {})
+
+    for asset_id, curr_entry in current_assets.items():
+        prev_entry = previous_assets.get(asset_id)
+        if not prev_entry:
+            continue
+        if curr_entry.get("meta") != prev_entry.get("meta") or curr_entry.get("assetData") != prev_entry.get("assetData"):
+            updated_ids.append(asset_id)
+    return updated_ids
 
 # === TournamentData ===
 def get_token_extract():
@@ -717,6 +751,7 @@ if __name__ == "__main__":
     while True:
         tags = []
         updated_regions = []
+        playlist_tags = []
 
         print("🚀 開始")
 
@@ -746,7 +781,7 @@ if __name__ == "__main__":
         for lang in Lang:
             fetch_api4(lang, tags)
 
-        fetch_api5(tags, version, build)
+        fetch_api5(tags, version, build, playlist_tags)
 
         subprocess.run(["git", "add", "."], check=True)
         git_diff = subprocess.run(["git", "diff", "--cached", "--quiet"])
@@ -789,7 +824,7 @@ if __name__ == "__main__":
                 ["git", "config", "user.name"], text=True
             ).strip()
 
-            if "ASIA" in tags or "Playlist" in tags or any(tag.endswith("ja") for tag in tags) in tags or any(tag.endswith("_Updated") for tag in tags) or any(tag.endswith("_Add") for tag in tags):
+            if "ASIA" in tags or "Playlist" in tags or any(tag.endswith("ja") for tag in tags) in tags or any(tag.endswith("_Updated") for tag in tags) or any(tag.endswith("_Add") for tag in tags) or playlist_tags:
                 content = f"## 🆕 API更新通知 : {', '.join(tags)} <@&1372839358591139840>"
             else:
                 content = f"## 更新通知 : {', '.join(tags)}"
