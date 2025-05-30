@@ -263,7 +263,7 @@ def extract_asset_ids(data: dict) -> List[str]:
     return list(data.get("FortPlaylistAthena", {}).get("assets", {}).keys())
 
 # 一時的に更新検知から新しいPlaylistId検知に変更
-def detect_changed_ids(current_data: dict, previous_data: dict) -> List[str]:
+def detect_changed_ids(current_data: dict, previous_data: dict, updated_ids) -> List[str]:
     updated_ids = []
     current_set = set(current_data)
     previous_set = set(previous_data)
@@ -272,6 +272,7 @@ def detect_changed_ids(current_data: dict, previous_data: dict) -> List[str]:
     removed = previous_set - current_set
 
     updated_ids = list(added | removed)
+    print (updated_ids)
     return updated_ids
 
 # === Eventの更新を詳しく確認 & 整形Jsonを保存 ===
