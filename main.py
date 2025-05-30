@@ -265,18 +265,12 @@ def extract_asset_ids(data: dict) -> List[str]:
 # 一時的に更新検知から新しいPlaylistId検知に変更
 def detect_changed_ids(current_data: dict, previous_data: dict) -> List[str]:
     updated_ids = []
-    current_assets = current_data.get("FortPlaylistAthena", {}).get("assets", [])
-    previous_assets = previous_data.get("FortPlaylistAthena", {}).get("assets", [])
+    current_set = set(current_data)
+    previous_set = set(previous_data)
 
-    current_set = set(current_assets)
-    previous_set = set(previous_assets)
-
-    # 追加されたID
     added = current_set - previous_set
-    # 削除されたID
     removed = previous_set - current_set
 
-    # 差分のIDリストをまとめて返す（必要に応じて分けてもよい）
     updated_ids = list(added | removed)
     return updated_ids
 
