@@ -44,13 +44,13 @@ def load_json(path):
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
     except json.JSONDecodeError as e:
-        print(f"[json] ❌️ jsonデコードエラー : {e}")
+        print(f"[load_json] ❌️ jsonデコードエラー : {e}")
         return None
     except Exception as e:
-        print(f"[json] ❌️ json読み込みエラー: {e}")
+        print(f"[load_json] ❌️ json読み込みエラー: {e}")
         return None
 
-# === API1,2用 ===
+# === トークン取得 ===
 def get_token():
     global access_token, last_token_time
     headers = {
@@ -74,16 +74,16 @@ def get_token():
 
 def ensure_token():
     if access_token is None:
-        print ("[ensure] トークンを取得 (None)")
+        print ("[ensure_token] トークンを取得 (None)")
         get_token()
     if (time.time() - last_token_time) >= TOKEN_EXPIRATION:
-        print ("[ensure] トークンを取得 (期限切れ)")
+        print ("[ensure_token] トークンを取得 (期限切れ)")
         get_token()
     elif (time.time() - last_token_time) < TOKEN_EXPIRATION:
-        print ("[ensure] トークンを取得しません (有効)")
+        print ("[ensure_token] トークンを取得しません (有効)")
 
-# === Tournament Data API ===
-def fetch_api1(region, tags):
+# === Event Data API ===
+def fetch_EventData(region, tags):
     url = f"{TOURNAMENT_URL}?region={region}"
     for attempt in range(2):
         ensure_token()
@@ -121,7 +121,7 @@ def fetch_api1(region, tags):
                 return None
 
 # === Main Web API ===
-def fetch_api2(lang, tags):
+def fetch_WebData(lang, tags):
     url = f"{WEBAPI_URL}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
@@ -150,7 +150,7 @@ def fetch_api2(lang, tags):
         return None
 
 # === ScoringRule Web API ===
-def fetch_api3(lang, tags):
+def fetch_ScoreInfo(lang, tags):
     url = f"{WEBAPI_URL2}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
@@ -179,7 +179,7 @@ def fetch_api3(lang, tags):
         return None
 
 # === Leaderboard Web API ===
-def fetch_api4(lang, tags):
+def fetch_LeadInfo(lang, tags):
     url = f"{WEBAPI_URL3}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
@@ -207,8 +207,8 @@ def fetch_api4(lang, tags):
         print(f"[API4] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
 
-# === Playlistの更新を確認 ===
-def fetch_api5(tags, version, build, playlist_tags):
+# === Playlist API ===
+def fetch_Playlist(tags, version, build, playlist_tags):
     url = f"{PlaylistAPI_URL}/{version}/{build}?appId=Fortnite"
     payload = {
         "FortPlaylistAthena": 0
@@ -277,8 +277,8 @@ def detect_changed_ids(current_data: dict, previous_data: dict) -> List[str]:
             updated_ids.append(asset_id)
     return updated_ids
 
-# === TournamentData ===
-def get_token_extract():
+# === Eventの更新を詳しく確認 & 整形Jsonを保存 ===
+def get_token_for_format():
     global access_token2, last_token_time2
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -299,21 +299,20 @@ def get_token_extract():
         print(f"[get_token2] ❌ トークン取得失敗: {e}")
         access_token2 = None
 
-def ensure_token_extract():
+def ensure_token_for_format():
     if access_token2 is None:
         print ("[ensure2] トークンを取得 (None)")
-        get_token_extract()
+        get_token_for_format()
     if (time.time() - last_token_time2) >= TOKEN_EXPIRATION:
         print ("[ensure2] トークンを取得 (期限切れ)")
-        get_token_extract()
+        get_token_for_format()
     elif (time.time() - last_token_time2) < TOKEN_EXPIRATION:
         print ("[ensure2] トークンを取得しません (有効)")
 
-
-def fetch_api1_extract():
+def fetch_EventData_for_format():
     url = f"{TOURNAMENT_URL2}?region=ASIA"
     for attempt in range(2):
-        ensure_token_extract()
+        ensure_token_for_format()
         headers = {"Authorization": f"Bearer {access_token2}"}
         res = requests.get(url, headers=headers)
         if res.status_code == 200:
@@ -323,12 +322,12 @@ def fetch_api1_extract():
             print(f"[API1 extract用] ❌️ 取得失敗 : {res.status_code} {res.text}")
             if attempt == 0:
                 print("[API1 extract用] リトライ")
-                get_token_extract()
+                get_token_for_format()
                 time.sleep(10)
             else:
                 return None
 
-def fetch_api2_extract(lang):
+def fetch_WebData_for_format(lang):
     url = f"{WEBAPI_URL}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
@@ -338,12 +337,12 @@ def fetch_api2_extract(lang):
         print(f"[API2 extract用] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
 
-def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
+def format_EventData(tags, added_Tournaments, updated_Tournaments):
 
     JST = timezone(timedelta(hours=9))
-    event_data = fetch_api1_extract()
-    webapi_ja = fetch_api2_extract("ja")
-    webapi_en = fetch_api2_extract("en")
+    event_data = fetch_EventData_for_format()
+    webapi_ja = fetch_WebData_for_format("ja")
+    webapi_en = fetch_WebData_for_format("en")
     sent = set()
     updated_Tournaments = []
     added_Tournaments = []
@@ -765,7 +764,7 @@ def get_value_by_path(before_data, new_data, diffs):
 # === 実行 ===
 if __name__ == "__main__":
     ensure_token()
-    ensure_token_extract()
+    ensure_token_for_format()
     while True:
         tags = []
         updated_regions = []
@@ -785,23 +784,23 @@ if __name__ == "__main__":
             subprocess.run(['git', 'pull'])
             subprocess.run(['git', 'stash', 'pop'])
         
-        extract_tournament_data(tags, added_Tournaments, updated_Tournaments)
+        format_EventData(tags, added_Tournaments, updated_Tournaments)
 
         for region in Regions:
-            if fetch_api1(region, tags):
+            if fetch_EventData(region, tags):
                 updated_regions.append(region)
 
         if not updated_regions:
-            print("[API1] 更新なし")
+            print("[EventData] 更新なし")
 
         for lang in Lang:
-            fetch_api2(lang, tags)
+            fetch_WebData(lang, tags)
         for lang in Lang:
-            fetch_api3(lang, tags)
+            fetch_ScoreInfo(lang, tags)
         for lang in Lang:
-            fetch_api4(lang, tags)
+            fetch_LeadInfo(lang, tags)
 
-        fetch_api5(tags, version, build, playlist_tags)
+        fetch_Playlist(tags, version, build, playlist_tags)
 
         subprocess.run(["git", "add", "."], check=True)
         git_diff = subprocess.run(["git", "diff", "--cached", "--quiet"])
