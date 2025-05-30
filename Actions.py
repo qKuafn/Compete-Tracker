@@ -91,7 +91,6 @@ def kill_token():
         res = requests.delete(f"https://account-public-service-prod.ol.epicgames.com/account/api/oauth/sessions/kill/{access_token}", headers=headers)
         if res.status_code == 204:
             print ("[kill_token] アカウントトークンの削除に成功")
-            print(f"[DEBUG] {token_type}")
         else:
             print (f"[kill_token] トークンの削除に失敗: {res.status_code} {res.text}")
     except Exception as e:
