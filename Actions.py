@@ -67,8 +67,8 @@ def get_token():
         res = requests.post("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token", headers=headers, data=data)
         res.raise_for_status()
         access_token = res.json().get("access_token")
-        token_type = res.json().get("token_type")
         print ("　　アカウントトークンの取得に成功")
+        token_type = res.json().get("token_type")
         last_token_time = time.time()
     except Exception as e:
         print(f"[get_token] ❌ トークン取得失敗: {e}")
@@ -83,6 +83,7 @@ def ensure_token():
         get_token()
 
 def kill_token():
+    global access_token
     headers = {
         "Authorization": f"{token_type} {access_token}"
     }
