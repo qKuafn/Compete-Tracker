@@ -26,6 +26,7 @@ UTC = timezone(timedelta(hours=0))
 access_token = None
 access_token2 = None
 last_token_time = 0
+last_token_time2 = 0
 TOKEN_EXPIRATION = 120 * 60
 
 def get_unique_filepath(base_dir, base_name):
@@ -72,7 +73,11 @@ def get_token():
         access_token = None
 
 def ensure_token():
-    if access_token is None or (time.time() - last_token_time) >= TOKEN_EXPIRATION:
+    if access_token is None:
+        print ("[DEBUG] トークンを取得 (None)")
+        get_token()
+    if (time.time() - last_token_time) >= TOKEN_EXPIRATION:
+        print ("[DEBUG] トークンを取得 (期限切れ)")
         get_token()
 
 # === Tournament Data API ===
@@ -272,7 +277,7 @@ def detect_changed_ids(current_data: dict, previous_data: dict) -> List[str]:
 
 # === TournamentData ===
 def get_token_extract():
-    global access_token2, last_token_time
+    global access_token2, last_token_time2
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
         "Authorization": f"Basic {AUTH_TOKEN}"
@@ -287,14 +292,18 @@ def get_token_extract():
         res = requests.post("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token", headers=headers, data=data)
         res.raise_for_status()
         access_token2 = res.json().get("access_token")
-        last_token_time = time.time()
+        last_token_time2 = time.time()
     except Exception as e:
         print(f"❌ トークン取得失敗: {e}")
         access_token2 = None
 
 def ensure_token_extract():
-    if access_token2 is None or (time.time() - last_token_time) >= TOKEN_EXPIRATION:
-        get_token_extract()
+    if access_token2 is None:
+        print ("[DEBUG] トークンを取得 (None)")
+        get_token()
+    if (time.time() - last_token_time2) >= TOKEN_EXPIRATION:
+        print ("[DEBUG] トークンを取得 (期限切れ)")
+        get_token()
 
 def fetch_api1_extract():
     url = f"{TOURNAMENT_URL2}?region=ASIA"
@@ -750,6 +759,8 @@ def get_value_by_path(before_data, new_data, diffs):
 
 # === 実行 ===
 if __name__ == "__main__":
+    ensure_token()
+    ensure_token_extract()
     while True:
         tags = []
         updated_regions = []
