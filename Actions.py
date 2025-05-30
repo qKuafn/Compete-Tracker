@@ -50,7 +50,7 @@ def load_json(path):
         print(f"[load_json] ❌️ json読み込みエラー: {e}")
         return None
 
-# === API1,2用 ===
+# === API1用 ===
 def get_token():
     global access_token, last_token_time
     headers = {
@@ -85,7 +85,7 @@ def kill_token():
     global access_token, last_token_time
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
-        "Authorization": f"Basic {AUTH_TOKEN}"
+        "Authorization": f"Bearer {AUTH_TOKEN}"
     }
     try:
         res = requests.delete("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/sessions/kill", headers=headers)
@@ -99,7 +99,7 @@ def kill_token():
 
 # === Tournament Data API ===
 def fetch_api1(region, tags):
-    print (f"　　{region} の更新を確認")
+    print (f"　{region} の更新を確認")
     url = f"{TOURNAMENT_URL}?region={region}"
     for attempt in range(2):
         ensure_token()
@@ -126,7 +126,7 @@ def fetch_api1(region, tags):
                     print(f"[fetch_API1] ❌️ ファイルの保存に失敗 : {e}")
                     return False
             else:
-                print(f"　　　更新なし")
+                print(f"　　更新なし")
                 return False
         else:
             print(f"[fetch_API1] ❌️ 取得失敗 ({region}) : {res.status_code}")
@@ -139,7 +139,7 @@ def fetch_api1(region, tags):
 
 # === Main Web API ===
 def fetch_api2(lang, tags):
-    print(f"　　{lang} の更新を確認")
+    print(f"　{lang} の更新を確認")
     url = f"{WEBAPI_URL}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
@@ -149,7 +149,7 @@ def fetch_api2(lang, tags):
         try:
             before_data = load_json(filepath) if os.path.exists(filepath) else None
         except Exception as e:
-            print("[API2] ❌️ 旧ファイルの取得に失敗")
+            print("[fetch_API2] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
                 with open(get_unique_filepath(ARCHIVE_DIR, f"WebData_{lang}"), "w", encoding="utf-8") as f:
@@ -162,13 +162,14 @@ def fetch_api2(lang, tags):
                 print(f"　　更新なし")
             return data
         except Exception as e:
-            print (f"[API2] ファイルの保存に失敗 : {e}")
+            print (f"[fetch_API2] ❌️ ファイルの保存に失敗 : {e}")
     else:
-        print(f"[API2] ❌️ 取得失敗 ({lang}) : {res.status_code}")
+        print(f"[fetch_API2] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
 
 # === ScoringRule Web API ===
 def fetch_api3(lang, tags):
+    print(f"　{lang} の更新を確認")
     url = f"{WEBAPI_URL2}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
@@ -178,7 +179,7 @@ def fetch_api3(lang, tags):
         try:
             before_data = load_json(filepath) if os.path.exists(filepath) else None
         except Exception as e:
-            print("[API3] ❌️ 旧ファイルの取得に失敗")
+            print("[fetch_API3] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
                 with open(get_unique_filepath(ARCHIVE_DIR, f"ScoreInfo_{lang}"), "w", encoding="utf-8") as f:
@@ -186,18 +187,19 @@ def fetch_api3(lang, tags):
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 tags.append(f"Score ({lang})")
-                print(f"[API3] 🟢 {lang} : 更新あり")
+                print(f"　　🟢 更新あり")
             else:
-                print(f"[API3] {lang} : 更新なし")
+                print(f"　　更新なし")
             return data
         except Exception as e:
-            print (f"[API3] ファイルの保存に失敗 : {e}")
+            print (f"[fetch_API3] ❌️ ファイルの保存に失敗 : {e}")
     else:
-        print(f"[API3] ❌️ 取得失敗 ({lang}) : {res.status_code}")
+        print(f"[fetch_API3] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
 
 # === Leaderboard Web API ===
 def fetch_api4(lang, tags):
+    print(f"　{lang} の更新を確認")
     url = f"{WEBAPI_URL3}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
@@ -207,7 +209,7 @@ def fetch_api4(lang, tags):
         try:
             before_data = load_json(filepath) if os.path.exists(filepath) else None
         except Exception as e:
-            print("[API4] ❌️ 旧ファイルの取得に失敗")
+            print("[fetch_API4] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
                 with open(get_unique_filepath(ARCHIVE_DIR, f"LeaderboardInfo_{lang}"), "w", encoding="utf-8") as f:
@@ -215,14 +217,14 @@ def fetch_api4(lang, tags):
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 tags.append(f"Lead ({lang})")
-                print(f"[API4] 🟢 {lang} : 更新あり")
+                print(f"　　🟢 更新あり")
             else:
-                print(f"[API4] {lang} : 更新なし")
+                print(f"　　更新なし")
             return data
         except Exception as e:
-            print (f"[API4] ファイルの保存に失敗 : {e}")
+            print (f"[fetch_API4] ❌️ ファイルの保存に失敗 : {e}")
     else:
-        print(f"[API4] ❌️ 取得失敗 ({lang}) : {res.status_code}")
+        print(f"[fetch_API4] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
 
 # === Playlistの更新を確認 ===
@@ -261,18 +263,18 @@ def fetch_api5(tags, version, build, playlist_tags):
                         json.dump(new_data, f, ensure_ascii=False, indent=2)
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(new_data, f, ensure_ascii=False, indent=2)
-                    print(f"[API5] 🟢 更新あり")
+                    print(f"　　🟢 更新あり")
                     return True
                 except Exception as e:
-                    print(f"[API5] ❌️ ファイルの保存に失敗 : {e}")
+                    print(f"[fetch_API5] ❌️ ファイルの保存に失敗 : {e}")
                     return False
             else:
-                print ("[API5] 更新なし")
+                print ("　　更新なし")
                 return False
         else:
-            print(f"[API5] ❌️ 取得失敗 ({region}) : {res.status_code}")
+            print(f"[fetch_API5] ❌️ 取得失敗 ({region}) : {res.status_code}")
             if attempt == 0:
-                print("[API5] リトライ")
+                print("[fetch_API5] リトライ")
                 get_token()
                 time.sleep(10)
             else:
@@ -796,21 +798,28 @@ if __name__ == "__main__":
     extract_tournament_data(tags, added_Tournaments, updated_Tournaments)
     print("=" * 20)
 
-    print("[API1] EventData の取得を開始")
+    print("[fetch_API1] EventData の取得を開始")
     for region in Regions:
         fetch_api1(region, tags)
     print("=" * 20)
 
+    print("[fetch_API2] Web Data の取得を開始")
     for lang in Lang:
         fetch_api2(lang, tags)
     print("=" * 20)
+    
+
+    print("[fetch_API3] Score Info の取得を開始")
     for lang in Lang:
         fetch_api3(lang, tags)
     print("=" * 20)
+
+    print("[fetch_API4] Leaderboard Info の取得を開始")
     for lang in Lang:
         fetch_api4(lang, tags)
     print("=" * 20)
 
+    print("[fetch_API5] Playlist Data の取得を開始")
     fetch_api5(tags, version, build, playlist_tags)
     print("=" * 20)
 
