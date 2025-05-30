@@ -590,10 +590,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                 if Webhook1 is True:
                     try:
                         requests.post(
-                            Tournament_Webhook_URL,
-                            data={"payload_json": json.dumps({"content": content, "embeds": embeds}, ensure_ascii=False)},
-                            files=files
-                        ).raise_for_status()
+                            Tournament_Webhook_URL,data= {"payload_json": json.dumps({"content": content, "embeds": embeds}, ensure_ascii=False)} ,files=files
+                            ).raise_for_status()
                     except Exception as e:
                         print (f"[Tournament] 🔴 エラー：新TournamentのDiscord送信 {e}")
                 time.sleep(2)
