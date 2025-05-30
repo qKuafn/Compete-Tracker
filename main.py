@@ -432,7 +432,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                 })
             embed_date = {
                 "title":  "📅 **開催日時**",
-                "fields": date_section
+                "fields": date_section,
+                "timestamp": datetime.now(UTC)
             }
         except Exception as e:
             print (f"[Tournament] 🔴 エラー：開催日時の組み立て中 {e}")
