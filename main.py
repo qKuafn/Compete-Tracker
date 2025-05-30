@@ -262,17 +262,22 @@ def fetch_Playlist(tags, version, build, playlist_tags):
 def extract_asset_ids(data: dict) -> List[str]:
     return list(data.get("FortPlaylistAthena", {}).get("assets", {}).keys())
 
+# 一時的に更新検知から新しいPlaylistId検知に変更
 def detect_changed_ids(current_data: dict, previous_data: dict) -> List[str]:
     updated_ids = []
-    current_assets = current_data.get("FortPlaylistAthena", {}).get("assets", {})
-    previous_assets = previous_data.get("FortPlaylistAthena", {}).get("assets", {})
+    current_assets = current_data.get("FortPlaylistAthena", {}).get("assets", [])
+    previous_assets = previous_data.get("FortPlaylistAthena", {}).get("assets", [])
 
-    for asset_id, curr_entry in current_assets.items():
-        prev_entry = previous_assets.get(asset_id)
-        if not prev_entry:
-            continue
-        if curr_entry.get("meta") != prev_entry.get("meta") or curr_entry.get("assetData") != prev_entry.get("assetData"):
-            updated_ids.append(asset_id)
+    current_set = set(current_assets)
+    previous_set = set(previous_assets)
+
+    # 追加されたID
+    added = current_set - previous_set
+    # 削除されたID
+    removed = previous_set - current_set
+
+    # 差分のIDリストをまとめて返す（必要に応じて分けてもよい）
+    updated_ids = list(added | removed)
     return updated_ids
 
 # === Eventの更新を詳しく確認 & 整形Jsonを保存 ===
