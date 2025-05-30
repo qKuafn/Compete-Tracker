@@ -231,7 +231,7 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                     tags.append(f"{new_ids_tournament} (New)")
                     playlist_tags.append(new_ids_tournament)
                 changed_ids = detect_changed_ids(current_id_list, before_id_list)
-                changed_ids_tournament = [id for id in changed_ids if "Showdown_" in id]
+                changed_ids_tournament = [id for id in changed_ids if "Showdown" in id]
                 if changed_ids_tournament:
                     tags.append(f"{changed_ids_tournament} (Upd)")
                     playlist_tags.append(changed_ids_tournament)
