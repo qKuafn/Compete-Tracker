@@ -69,15 +69,15 @@ def get_token():
         access_token = res.json().get("access_token")
         last_token_time = time.time()
     except Exception as e:
-        print(f"❌ トークン取得失敗: {e}")
+        print(f"[get_token] ❌ トークン取得失敗: {e}")
         access_token = None
 
 def ensure_token():
     if access_token is None:
-        print ("[DEBUG] トークンを取得 (None)")
+        print ("[ensure] トークンを取得 (None)")
         get_token()
     if (time.time() - last_token_time) >= TOKEN_EXPIRATION:
-        print ("[DEBUG] トークンを取得 (期限切れ)")
+        print ("[ensure] トークンを取得 (期限切れ)")
         get_token()
 
 # === Tournament Data API ===
@@ -294,15 +294,15 @@ def get_token_extract():
         access_token2 = res.json().get("access_token")
         last_token_time2 = time.time()
     except Exception as e:
-        print(f"❌ トークン取得失敗: {e}")
+        print(f"[get_token2] ❌ トークン取得失敗: {e}")
         access_token2 = None
 
 def ensure_token_extract():
     if access_token2 is None:
-        print ("[DEBUG] トークンを取得 (None)")
+        print ("[ensure2] トークンを取得 (None)")
         get_token()
     if (time.time() - last_token_time2) >= TOKEN_EXPIRATION:
-        print ("[DEBUG] トークンを取得 (期限切れ)")
+        print ("[ensure2] トークンを取得 (期限切れ)")
         get_token()
 
 def fetch_api1_extract():
