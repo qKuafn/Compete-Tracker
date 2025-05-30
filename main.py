@@ -440,8 +440,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             date_section = "エラー"
             embed_date = {
                 "title":  "📅 **開催日時**",
-                "fields": date_section,
-                "timestamp": datetime.now(UTC).isoformat() + "Z"
+                "fields": date_section
             }
 
         mode_section = []
@@ -455,16 +454,14 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                 })
             embed_mode = {
                 "title":  "📍 **モード**",
-                "fields": mode_section,
-                "timestamp": datetime.now(UTC).isoformat() + "Z"
+                "fields": mode_section
             }
         except Exception as e:
             print (f"[Tournament] 🔴 エラー：モードの組み立て中 {e}")
             mode_section = "エラー"
             embed_mode = {
                 "title":  "📍 **モード**",
-                "fields": mode_section,
-                "timestamp": datetime.now(UTC).isoformat() + "Z"
+                "fields": mode_section
             }
 
         match_section = []
@@ -478,16 +475,14 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                 })
             embed_match = {
                 "title":  "⚔️ **試合数**",
-                "fields": match_section,
-                "timestamp": datetime.now(UTC).isoformat() + "Z"
+                "fields": match_section
             }
         except Exception as e:
             print (f"[Tournament] 🔴 エラー：試合数の組み立て中 {e}")
             match_section = "エラー"
             embed_match = {
                 "title":  "⚔️ **試合数**",
-                "fields": match_section,
-                "timestamp": datetime.now(UTC).isoformat() + "Z"
+                "fields": match_section
             }
 
         token_section = []
@@ -509,16 +504,14 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                 })
             embed_token = {
                 "title":  "🔑 **参加資格**",
-                "fields": token_section,
-                "timestamp": datetime.now(UTC).isoformat() + "Z"
+                "fields": token_section
             }
         except Exception as e:
             print (f"[Tournament] 🔴 エラー：参加資格の組み立て中 {e}")
             token_section = "エラー"
             embed_token = {
                 "title":  "🔑 **参加資格**",
-                "fields": token_section,
-                "timestamp": datetime.now(UTC).isoformat() + "Z"
+                "fields": token_section
             }
 
         payouts_section = []
