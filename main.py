@@ -432,8 +432,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                 })
             embed_date = {
                 "title":  "📅 **開催日時**",
-                "fields": date_section,
-                "timestamp": datetime.utcnow()
+                "fields": date_section
             }
         except Exception as e:
             print (f"[Tournament] 🔴 エラー：開催日時の組み立て中 {e}")
@@ -526,8 +525,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                 })
             embed_payout = {
                 "title":  "🎁 **賞金 / 賞品**",
-                "fields": payouts_section,
-                "timestamp": datetime.now(UTC).isoformat() + "Z"
+                "fields": payouts_section
             }
         except Exception as e:
             print (f"[Tournament] 🔴 エラー：賞金の組み立て中 {e}")
@@ -637,7 +635,6 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                 embed_changes = {
                     "title": new_path,
                     "fields": changes_section,
-                    "timestamp": datetime.now(UTC).isoformat() + "Z"
                 }
                 embeds.append (embed_changes)
 
@@ -839,7 +836,6 @@ if __name__ == "__main__":
                         "url": commit_url,
                         "description": f"[`{commit_hash}`]({commit_url}) {message}",
                         "color": 0x7289da,
-                        "timestamp": datetime.now(UTC).isoformat() + "Z"
                     }
                 ]
             }
