@@ -20,6 +20,7 @@ version = "++Fortnite+Release-35.20"
 build = "42911808"
 
 JST = timezone(timedelta(hours=9))
+UTC = timezone(timedelta(hours=0))
 
 # === トークン管理 ===
 access_token = None
@@ -461,7 +462,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_date = {
                 "title":  "📅 **開催日時**",
                 "fields": date_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(),
+                "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
             print (f"[Tournament] 🔴エラー：開催日時の組み立て中 {e}")
@@ -469,7 +471,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_date = {
                 "title":  "📅 **開催日時**",
                 "fields": date_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(),
+                "timestamp": datetime.now(UTC).isoformat()
             }
 
         mode_section = []
@@ -484,7 +487,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_mode = {
                 "title":  "📍 **モード**",
                 "fields": mode_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(),
+                "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
             print (f"[Tournament] 🔴エラー：モードの組み立て中 {e}")
@@ -492,7 +496,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_mode = {
                 "title":  "📍 **モード**",
                 "fields": mode_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(),
+                "timestamp": datetime.now(UTC).isoformat()
             }
 
         match_section = []
@@ -507,7 +512,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_match = {
                 "title":  "⚔️ **試合数**",
                 "fields": match_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(),
+                "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
             print (f"[Tournament] 🔴エラー：試合数の組み立て中 {e}")
@@ -515,7 +521,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_match = {
                 "title":  "⚔️ **試合数**",
                 "fields": match_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(),
+                "timestamp": datetime.now(UTC).isoformat()
             }
 
         token_section = []
@@ -538,7 +545,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_token = {
                 "title":  "🔑 **参加資格**",
                 "fields": token_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(),
+                "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
             print (f"[Tournament] 🔴エラー：参加資格の組み立て中 {e}")
@@ -546,7 +554,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_token = {
                 "title":  "🔑 **参加資格**",
                 "fields": token_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(),
+                "timestamp": datetime.now(UTC).isoformat()
             }
 
         payouts_section = []
@@ -562,11 +571,18 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_payout = {
                 "title":  "🎁 **賞金 / 賞品**",
                 "fields": payouts_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(),
+                "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
             print (f"[Tournament] 🔴エラー：賞金の組み立て中 {e}")
             payouts_section = "エラー"
+            embed_payout = {
+                "title":  "🎁 **賞金 / 賞品**",
+                "fields": payouts_section,
+                "timestamp": datetime.now(),
+                "timestamp": datetime.now(UTC).isoformat()
+            }
 
         try:
             images_section = (
