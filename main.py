@@ -393,9 +393,9 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
 
             entry = {
                 "beginTime": w["beginTime"],
-                "endTime": w["endTime"],
                 "beginTime_UNIX": int(begin_dt.timestamp()),
                 "beginTime_JST": begin_dt.astimezone(JST).strftime("%Y-%m-%d %H:%M:%S"),
+                "endTime": w["endTime"],
                 "endTime_UNIX": int(end_dt.timestamp()),
                 "endTime_JST": end_dt.astimezone(JST).strftime("%Y-%m-%d %H:%M:%S"),
                 "playlistId": template.get("playlistId"),
