@@ -79,8 +79,6 @@ def ensure_token():
     if (time.time() - last_token_time) >= TOKEN_EXPIRATION:
         print ("[ensure_token] トークンを取得 (期限切れ)")
         get_token()
-    elif (time.time() - last_token_time) < TOKEN_EXPIRATION:
-        print ("[ensure_token] トークンを取得しません (有効)")
 
 # === Event Data API ===
 def fetch_EventData(region, tags):
@@ -96,7 +94,7 @@ def fetch_EventData(region, tags):
             try:
                 before_data = load_json(filepath) if os.path.exists(filepath) else None
             except Exception as e:
-                print("[API1] ❌️ 旧ファイルの取得に失敗")
+                print("[EventData] ❌️ 旧ファイルの取得に失敗")
             if new_data != before_data or before_data is None:
                 try:
                     with open(get_unique_filepath(ARCHIVE_DIR, f"EventData_{region}"), "w", encoding="utf-8") as f:
@@ -104,17 +102,17 @@ def fetch_EventData(region, tags):
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
                     tags.append(region)
-                    print(f"[API1] 🟢 {region} : 更新あり")
+                    print(f"[EventData] 🟢 {region} : 更新あり")
                     return True
                 except Exception as e:
-                    print(f"[API1] ❌️ ファイルの保存に失敗 : {e}")
+                    print(f"[EventData] ❌️ ファイルの保存に失敗 : {e}")
                     return False
             else:
                 return False
         else:
-            print(f"[API1] ❌️ 取得失敗 ({region}) : {res.status_code}")
+            print(f"[EventData] ❌️ 取得失敗 ({region}) : {res.status_code}")
             if attempt == 0:
-                print("[API1] リトライ")
+                print("[EventData] 🔁 リトライ")
                 get_token()
                 time.sleep(10)
             else:
@@ -131,7 +129,7 @@ def fetch_WebData(lang, tags):
         try:
             before_data = load_json(filepath) if os.path.exists(filepath) else None
         except Exception as e:
-            print("[API2] ❌️ 旧ファイルの取得に失敗")
+            print("[WebData] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
                 with open(get_unique_filepath(ARCHIVE_DIR, f"WebData_{lang}"), "w", encoding="utf-8") as f:
@@ -139,14 +137,14 @@ def fetch_WebData(lang, tags):
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 tags.append(f"Web ({lang})")
-                print(f"[API2] 🟢 {lang} : 更新あり")
+                print(f"[WebData] 🟢 {lang} : 更新あり")
             else:
-                print(f"[API2] {lang} : 更新なし")
+                print(f"[WebData] {lang} : 更新なし")
             return data
         except Exception as e:
-            print (f"[API2] ファイルの保存に失敗 : {e}")
+            print (f"[WebData] ファイルの保存に失敗 : {e}")
     else:
-        print(f"[API2] ❌️ 取得失敗 ({lang}) : {res.status_code}")
+        print(f"[WebData] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
 
 # === ScoringRule Web API ===
@@ -160,7 +158,7 @@ def fetch_ScoreInfo(lang, tags):
         try:
             before_data = load_json(filepath) if os.path.exists(filepath) else None
         except Exception as e:
-            print("[API3] ❌️ 旧ファイルの取得に失敗")
+            print("[ScoreInfo] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
                 with open(get_unique_filepath(ARCHIVE_DIR, f"ScoreInfo_{lang}"), "w", encoding="utf-8") as f:
@@ -168,14 +166,14 @@ def fetch_ScoreInfo(lang, tags):
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 tags.append(f"Score ({lang})")
-                print(f"[API3] 🟢 {lang} : 更新あり")
+                print(f"[ScoreInfo] 🟢 {lang} : 更新あり")
             else:
-                print(f"[API3] {lang} : 更新なし")
+                print(f"[ScoreInfo] {lang} : 更新なし")
             return data
         except Exception as e:
-            print (f"[API3] ファイルの保存に失敗 : {e}")
+            print (f"[ScoreInfo] ファイルの保存に失敗 : {e}")
     else:
-        print(f"[API3] ❌️ 取得失敗 ({lang}) : {res.status_code}")
+        print(f"[ScoreInfo] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
 
 # === Leaderboard Web API ===
@@ -189,7 +187,7 @@ def fetch_LeadInfo(lang, tags):
         try:
             before_data = load_json(filepath) if os.path.exists(filepath) else None
         except Exception as e:
-            print("[API4] ❌️ 旧ファイルの取得に失敗")
+            print("[LeadInfo] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
                 with open(get_unique_filepath(ARCHIVE_DIR, f"LeaderboardInfo_{lang}"), "w", encoding="utf-8") as f:
@@ -197,14 +195,14 @@ def fetch_LeadInfo(lang, tags):
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 tags.append(f"Lead ({lang})")
-                print(f"[API4] 🟢 {lang} : 更新あり")
+                print(f"[LeadInfo] 🟢 {lang} : 更新あり")
             else:
-                print(f"[API4] {lang} : 更新なし")
+                print(f"[LeadInfo] {lang} : 更新なし")
             return data
         except Exception as e:
-            print (f"[API4] ファイルの保存に失敗 : {e}")
+            print (f"[LeadInfo] ファイルの保存に失敗 : {e}")
     else:
-        print(f"[API4] ❌️ 取得失敗 ({lang}) : {res.status_code}")
+        print(f"[LeadInfo] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
 
 # === Playlist API ===
@@ -223,7 +221,7 @@ def fetch_Playlist(tags, version, build, playlist_tags):
             try:
                 before_data = load_json(filepath) if os.path.exists(filepath) else None
             except Exception as e:
-                print("[API5] ❌️ 旧ファイルの取得に失敗")
+                print("[Playlist] ❌️ 旧ファイルの取得に失敗")
             if new_data != before_data or before_data is None:
                 current_id_list = extract_asset_ids(new_data)
                 before_id_list = extract_asset_ids(before_data)
@@ -243,18 +241,18 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                         json.dump(new_data, f, ensure_ascii=False, indent=2)
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(new_data, f, ensure_ascii=False, indent=2)
-                    print(f"[API5] 🟢 更新あり")
+                    print(f"[Playlist] 🟢 更新あり")
                     return True
                 except Exception as e:
-                    print(f"[API5] ❌️ ファイルの保存に失敗 : {e}")
+                    print(f"[Playlist] ❌️ ファイルの保存に失敗 : {e}")
                     return False
             else:
-                print ("[API5] 更新なし")
+                print ("[Playlist] 更新なし")
                 return False
         else:
-            print(f"[API5] ❌️ 取得失敗 ({region}) : {res.status_code}")
+            print(f"[Playlist] ❌️ 取得失敗 ({region}) : {res.status_code}")
             if attempt == 0:
-                print("[API5] リトライ")
+                print("[Playlist] 🔁 リトライ")
                 get_token()
                 time.sleep(10)
             else:
@@ -306,8 +304,6 @@ def ensure_token_for_format():
     if (time.time() - last_token_time2) >= TOKEN_EXPIRATION:
         print ("[ensure2] トークンを取得 (期限切れ)")
         get_token_for_format()
-    elif (time.time() - last_token_time2) < TOKEN_EXPIRATION:
-        print ("[ensure2] トークンを取得しません (有効)")
 
 def fetch_EventData_for_format():
     url = f"{TOURNAMENT_URL2}?region=ASIA"
@@ -319,9 +315,9 @@ def fetch_EventData_for_format():
             data = res.json()
             return data
         else:
-            print(f"[API1 extract用] ❌️ 取得失敗 : {res.status_code} {res.text}")
+            print(f"[EventData2] ❌️ 取得失敗 : {res.status_code} {res.text}")
             if attempt == 0:
-                print("[API1 extract用] リトライ")
+                print("[EventData2] 🔁 リトライ")
                 get_token_for_format()
                 time.sleep(10)
             else:
@@ -334,7 +330,7 @@ def fetch_WebData_for_format(lang):
         data = res.json()
         return data
     else:
-        print(f"[API2 extract用] ❌️ 取得失敗 ({lang}) : {res.status_code}")
+        print(f"[WebData2] ❌️ 取得失敗 ({lang}) : {res.status_code}")
         return None
 
 def format_EventData(tags, added_Tournaments, updated_Tournaments):
@@ -449,7 +445,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
-            print (f"[Tournament] 🔴 エラー：開催日時の組み立て中 {e}")
+            print (f"[format_EventData] 🔴 エラー：開催日時の組み立て中 {e}")
             date_section = "エラー"
             embed_date = {
                 "title":  "📅 **開催日時**",
@@ -471,7 +467,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "fields": mode_section
             }
         except Exception as e:
-            print (f"[Tournament] 🔴 エラー：モードの組み立て中 {e}")
+            print (f"[format_EventData] 🔴 エラー：モードの組み立て中 {e}")
             mode_section = "エラー"
             embed_mode = {
                 "title":  "📍 **モード**",
@@ -494,7 +490,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
-            print (f"[Tournament] 🔴 エラー：試合数の組み立て中 {e}")
+            print (f"[format_EventData] 🔴 エラー：試合数の組み立て中 {e}")
             match_section = "エラー"
             embed_match = {
                 "title":  "⚔️ **試合数**",
@@ -525,7 +521,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
-            print (f"[Tournament] 🔴 エラー：参加資格の組み立て中 {e}")
+            print (f"[format_EventData] 🔴 エラー：参加資格の組み立て中 {e}")
             token_section = "エラー"
             embed_token = {
                 "title":  "🔑 **参加資格**",
@@ -549,7 +545,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
-            print (f"[Tournament] 🔴 エラー：賞金の組み立て中 {e}")
+            print (f"[format_EventData] 🔴 エラー：賞金の組み立て中 {e}")
             payouts_section = "エラー"
             embed_payout = {
                 "title":  "🎁 **賞金 / 賞品**",
@@ -567,7 +563,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 f"- Square    ：{webinfo.get('square_poster_image','未設定')}"
             )
         except Exception as e:
-            print (f"[Tournament] 🔴 エラー：画像URLの組み立て中 {e}")
+            print (f"[format_EventData] 🔴 エラー：画像URLの組み立て中 {e}")
             images_section = "エラー"
 
 
@@ -583,7 +579,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
 
         # === 保存 & タグ追加 ===
         if before_data is None:
-            print(f"[Tournament] 🟢 新トーナメント : {display_id}")
+            print(f"[format_EventData] 🟢 新トーナメント : {display_id}")
             with open(get_unique_filepath(TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
@@ -592,7 +588,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
             added_Tournaments.append(display_id)
 
         elif new_data != before_data:
-            print(f"[Tournament] 🟢 トーナメント更新 : {display_id}")
+            print(f"[format_EventData] 🟢 トーナメント更新 : {display_id}")
             with open(get_unique_filepath(TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
@@ -619,7 +615,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                             Tournament_Webhook_URL,data= {"payload_json": json.dumps({"content": content, "embeds": embeds}, ensure_ascii=False)} ,files=files
                             ).raise_for_status()
                     except Exception as e:
-                        print (f"[Tournament] 🔴 エラー：新TournamentのDiscord送信 {e}")
+                        print (f"[format_EventData] 🔴 エラー：新TournamentのDiscord送信 {e}")
                 time.sleep(2)
                 if Webhook2 is True:
                     try:
@@ -629,7 +625,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                             files=files
                         ).raise_for_status()
                     except Exception as e:
-                        print (f"[Tournament] 🔴 エラー：新TournamentのDiscord送信 {e}")
+                        print (f"[format_EventData] 🔴 エラー：新TournamentのDiscord送信 {e}")
             sent.add(display_id)
 
         elif new_data != before_data:
@@ -678,7 +674,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                             files=files
                         ).raise_for_status()
                     except Exception as e:
-                        print (f"[Tournament] 🔴エラー：Tournament更新のDiscord送信 {e}")
+                        print (f"[format_EventData] 🔴エラー：Tournament更新のDiscord送信 {e}")
                 time.sleep(2)
                 if Webhook2 is True:
                     try:
@@ -688,11 +684,11 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                             files=files
                         ).raise_for_status()
                     except Exception as e:
-                        print (f"[Tournament] 🔴エラー：Tournament更新のDiscord送信 {e}")
+                        print (f"[format_EventData] 🔴エラー：Tournament更新のDiscord送信 {e}")
             sent.add(display_id)
 
     if not added_Tournaments and not updated_Tournaments:
-        print("[Tournament] 更新なし")
+        print("[format_EventData] 更新なし")
 
 def find_diffs(old, new, path=""):
     diffs = []
@@ -712,7 +708,7 @@ def find_diffs(old, new, path=""):
             if old != new:
                 diffs.append(path)
     except Exception as e:
-        print (f"[Tournament] 🔴エラー：更新の確認中 {path} - {e}")
+        print (f"[find_diffs] 🔴エラー：更新の確認中 {path} - {e}")
     return diffs
 
 def filter_diffs(diffs, ignore_keys):
@@ -722,7 +718,7 @@ def filter_diffs(diffs, ignore_keys):
             if not any(d.endswith(k) for k in ignore_keys):
                 filtered.append(d)
     except Exception as e:
-        print (f"[Tournament] 🔴エラー：UNIX,UTCの除外中 {ignore_keys} - {e}")
+        print (f"[filter_diffs] 🔴エラー：UNIX,UTCの除外中 {ignore_keys} - {e}")
     return filtered
 
 def shorten_diff_paths(diffs, max_depth=2):
@@ -735,7 +731,7 @@ def shorten_diff_paths(diffs, max_depth=2):
             else:
                 result.add("/".join(parts[:max_depth + 1]))
     except Exception as e:
-        print (f"[Tournament] 🔴エラー：パスの修正中 {diffs} - {e}")
+        print (f"[shorten_diff_paths] 🔴エラー：パスの修正中 {diffs} - {e}")
     return sorted(result)
 
 def get_value_by_path(before_data, new_data, diffs):
@@ -748,7 +744,7 @@ def get_value_by_path(before_data, new_data, diffs):
                 data = data[key]
             return data
         except (KeyError, IndexError, TypeError) as e:
-            print (f"[Tournament] 🔴エラー：末端のパスの値の確認中 {diffs} - {e}")
+            print (f"[get_value_by_path] 🔴エラー：末端のパスの値の確認中 {diffs} - {e}")
 
     results = {}
     for path_str in diffs:
