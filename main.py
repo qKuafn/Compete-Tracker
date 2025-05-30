@@ -20,6 +20,7 @@ version = "++Fortnite+Release-35.20"
 build = "42911808"
 
 JST = timezone(timedelta(hours=9))
+UTC = timezone(timedelta(hours=0))
 
 # === トークン管理 ===
 access_token = None
@@ -29,7 +30,7 @@ TOKEN_EXPIRATION = 120 * 60
 
 def get_unique_filepath(base_dir, base_name):
     os.makedirs(base_dir, exist_ok=True)
-    date_str = datetime.now().strftime("%m%d")
+    date_str = datetime.now(JST).strftime("%m%d")
     counter = 1
     while True:
         path = os.path.join(base_dir, f"{base_name} {date_str}({counter}).json")
@@ -432,15 +433,15 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_date = {
                 "title":  "📅 **開催日時**",
                 "fields": date_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.utcnow()
             }
         except Exception as e:
-            print (f"[Tournament] 🔴エラー：開催日時の組み立て中 {e}")
+            print (f"[Tournament] 🔴 エラー：開催日時の組み立て中 {e}")
             date_section = "エラー"
             embed_date = {
                 "title":  "📅 **開催日時**",
                 "fields": date_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(UTC).isoformat() + "Z"
             }
 
         mode_section = []
@@ -455,15 +456,15 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_mode = {
                 "title":  "📍 **モード**",
                 "fields": mode_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(UTC).isoformat() + "Z"
             }
         except Exception as e:
-            print (f"[Tournament] 🔴エラー：モードの組み立て中 {e}")
+            print (f"[Tournament] 🔴 エラー：モードの組み立て中 {e}")
             mode_section = "エラー"
             embed_mode = {
                 "title":  "📍 **モード**",
                 "fields": mode_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(UTC).isoformat() + "Z"
             }
 
         match_section = []
@@ -478,15 +479,15 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_match = {
                 "title":  "⚔️ **試合数**",
                 "fields": match_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(UTC).isoformat() + "Z"
             }
         except Exception as e:
-            print (f"[Tournament] 🔴エラー：試合数の組み立て中 {e}")
+            print (f"[Tournament] 🔴 エラー：試合数の組み立て中 {e}")
             match_section = "エラー"
             embed_match = {
                 "title":  "⚔️ **試合数**",
                 "fields": match_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(UTC).isoformat() + "Z"
             }
 
         token_section = []
@@ -509,15 +510,15 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_token = {
                 "title":  "🔑 **参加資格**",
                 "fields": token_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(UTC).isoformat() + "Z"
             }
         except Exception as e:
-            print (f"[Tournament] 🔴エラー：参加資格の組み立て中 {e}")
+            print (f"[Tournament] 🔴 エラー：参加資格の組み立て中 {e}")
             token_section = "エラー"
             embed_token = {
                 "title":  "🔑 **参加資格**",
                 "fields": token_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(UTC).isoformat() + "Z"
             }
 
         payouts_section = []
@@ -533,10 +534,10 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_payout = {
                 "title":  "🎁 **賞金 / 賞品**",
                 "fields": payouts_section,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(UTC).isoformat() + "Z"
             }
         except Exception as e:
-            print (f"[Tournament] 🔴エラー：賞金の組み立て中 {e}")
+            print (f"[Tournament] 🔴 エラー：賞金の組み立て中 {e}")
             payouts_section = "エラー"
 
         try:
@@ -549,7 +550,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                 f"- Square    ：{webinfo.get('square_poster_image','未設定')}"
             )
         except Exception as e:
-            print (f"[Tournament] 🔴エラー：画像URLの組み立て中 {e}")
+            print (f"[Tournament] 🔴 エラー：画像URLの組み立て中 {e}")
             images_section = "エラー"
 
 
@@ -603,7 +604,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                             files=files
                         ).raise_for_status()
                     except Exception as e:
-                        print (f"[Tournament] 🔴エラー：新TournamentのDiscord送信 {e}")
+                        print (f"[Tournament] 🔴 エラー：新TournamentのDiscord送信 {e}")
                 time.sleep(2)
                 if Webhook2 is True:
                     try:
@@ -613,7 +614,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                             files=files
                         ).raise_for_status()
                     except Exception as e:
-                        print (f"[Tournament] 🔴エラー：新TournamentのDiscord送信 {e}")
+                        print (f"[Tournament] 🔴 エラー：新TournamentのDiscord送信 {e}")
             sent.add(display_id)
 
         elif new_data != before_data:
@@ -643,7 +644,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                 embed_changes = {
                     "title": new_path,
                     "fields": changes_section,
-                    "timestamp": datetime.now()
+                    "timestamp": datetime.now(UTC).isoformat() + "Z"
                 }
                 embeds.append (embed_changes)
 
@@ -844,7 +845,8 @@ if __name__ == "__main__":
                         "title": "[Tournament:main] 1 new commit",
                         "url": commit_url,
                         "description": f"[`{commit_hash}`]({commit_url}) {message}",
-                        "color": 0x7289da
+                        "color": 0x7289da,
+                        "timestamp": datetime.now(UTC).isoformat() + "Z"
                     }
                 ]
             }
