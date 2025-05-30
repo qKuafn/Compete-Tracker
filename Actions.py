@@ -854,7 +854,7 @@ if __name__ == "__main__":
         print(f"[DEBUG] タグ一覧 : {tags}")
 
         timestampA = datetime.now(JST).strftime("%m-%d %H:%M:%S")
-        message = f"更新 : {', '.join(tags)} ({timestampA})"
+        message = f"更新 : {', '.join(tags)} ({timestampA}) - GitHubActions"
 
         subprocess.run(["git", "commit", "-m", message], check=True)
         subprocess.run(["git", "push"], check=True)
