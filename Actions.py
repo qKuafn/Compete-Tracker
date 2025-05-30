@@ -99,6 +99,7 @@ def kill_token():
 
 # === Tournament Data API ===
 def fetch_api1(region, tags):
+    print (f"　　{region} の更新を確認")
     url = f"{TOURNAMENT_URL}?region={region}"
     for attempt in range(2):
         ensure_token()
@@ -125,7 +126,7 @@ def fetch_api1(region, tags):
                     print(f"[fetch_API1] ❌️ ファイルの保存に失敗 : {e}")
                     return False
             else:
-                print(f"　　　EventData ({region}) : 更新なし")
+                print(f"　　　更新なし")
                 return False
         else:
             print(f"[fetch_API1] ❌️ 取得失敗 ({region}) : {res.status_code}")
@@ -138,6 +139,7 @@ def fetch_api1(region, tags):
 
 # === Main Web API ===
 def fetch_api2(lang, tags):
+    print(f"　　{lang} の更新を確認")
     url = f"{WEBAPI_URL}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
@@ -155,9 +157,9 @@ def fetch_api2(lang, tags):
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 tags.append(f"Web ({lang})")
-                print(f"[API2] 🟢 {lang} : 更新あり")
+                print(f"　　🟢 更新あり")
             else:
-                print(f"[API2] {lang} : 更新なし")
+                print(f"　　更新なし")
             return data
         except Exception as e:
             print (f"[API2] ファイルの保存に失敗 : {e}")
@@ -797,17 +799,17 @@ if __name__ == "__main__":
     print("[API1] EventData の取得を開始")
     for region in Regions:
         fetch_api1(region, tags)
-        print("=" * 20)
+    print("=" * 20)
 
     for lang in Lang:
         fetch_api2(lang, tags)
-        print("=" * 20)
+    print("=" * 20)
     for lang in Lang:
         fetch_api3(lang, tags)
-        print("=" * 20)
+    print("=" * 20)
     for lang in Lang:
         fetch_api4(lang, tags)
-        print("=" * 20)
+    print("=" * 20)
 
     fetch_api5(tags, version, build, playlist_tags)
     print("=" * 20)
