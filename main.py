@@ -79,6 +79,8 @@ def ensure_token():
     if (time.time() - last_token_time) >= TOKEN_EXPIRATION:
         print ("[ensure] トークンを取得 (期限切れ)")
         get_token()
+    elif (time.time() - last_token_time) < TOKEN_EXPIRATION:
+        print ("[ensure] トークンを取得しません (有効)")
 
 # === Tournament Data API ===
 def fetch_api1(region, tags):
@@ -300,10 +302,13 @@ def get_token_extract():
 def ensure_token_extract():
     if access_token2 is None:
         print ("[ensure2] トークンを取得 (None)")
-        get_token()
+        get_token_extract()
     if (time.time() - last_token_time2) >= TOKEN_EXPIRATION:
         print ("[ensure2] トークンを取得 (期限切れ)")
-        get_token()
+        get_token_extract()
+    elif (time.time() - last_token_time2) < TOKEN_EXPIRATION:
+        print ("[ensure2] トークンを取得しません (有効)")
+
 
 def fetch_api1_extract():
     url = f"{TOURNAMENT_URL2}?region=ASIA"
