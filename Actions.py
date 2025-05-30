@@ -52,10 +52,10 @@ def load_json(path):
 
 # === API1用 ===
 def get_token():
-    global access_token, last_token_time
+    global access_token, token_type, last_token_time
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
-        "Authorization": f"Bearer {AUTH_TOKEN}"
+        "Authorization": f"Basic {AUTH_TOKEN}"
     }
     data = {
         "grant_type": "device_auth",
@@ -67,6 +67,7 @@ def get_token():
         res = requests.post("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token", headers=headers, data=data)
         res.raise_for_status()
         access_token = res.json().get("access_token")
+        token_type = res.json().get("token_type")
         print ("　　アカウントトークンの取得に成功")
         last_token_time = time.time()
     except Exception as e:
@@ -83,7 +84,7 @@ def ensure_token():
 
 def kill_token():
     headers = {
-        "Authorization": f"Bearer {access_token}"
+        "Authorization": f"{token_type} {access_token}"
     }
     try:
         res = requests.delete("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/sessions/kill", headers=headers)
