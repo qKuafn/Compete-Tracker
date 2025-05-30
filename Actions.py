@@ -349,6 +349,7 @@ def fetch_api2_extract(lang):
         return None
 
 def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
+    print ("[Tournament] 大会のデータ更新の確認を開始")
 
     JST = timezone(timedelta(hours=9))
     event_data = fetch_api1_extract()
@@ -607,6 +608,9 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             tags.append(f"{display_id} (Upd)")
             updated_Tournaments.append(display_id)
 
+        else:
+            print(f"　　更新なし : {display_id}")
+
         # === 送信準備 ===
         embeds = [embed_date, embed_mode, embed_match, embed_token, embed_payout]
 
@@ -701,9 +705,6 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                         print (f"[Tournament] 🔴エラー：Tournament更新のDiscord送信 {e}")
             sent.add(display_id)
 
-    if not added_Tournaments and not updated_Tournaments:
-        print("[Tournament] 更新なし")
-
 def find_diffs(old, new, path=""):
     diffs = []
     try:
@@ -795,13 +796,17 @@ if __name__ == "__main__":
 
     for region in Regions:
         fetch_api1(region, tags)
+        print ("\n")
 
     for lang in Lang:
         fetch_api2(lang, tags)
+        print ("\n")
     for lang in Lang:
         fetch_api3(lang, tags)
+        print ("\n")
     for lang in Lang:
         fetch_api4(lang, tags)
+        print ("\n")
 
     fetch_api5(tags, version, build, playlist_tags)
 
