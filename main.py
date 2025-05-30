@@ -263,7 +263,7 @@ def extract_asset_ids(data: dict) -> List[str]:
     return list(data.get("FortPlaylistAthena", {}).get("assets", {}).keys())
 
 # 一時的に更新検知から新しいPlaylistId検知に変更
-def detect_changed_ids(current_data: dict, previous_data: dict, updated_ids) -> List[str]:
+def detect_changed_ids(current_data: dict, previous_data: dict) -> List[str]:
     updated_ids = []
     current_set = set(current_data)
     previous_set = set(previous_data)
