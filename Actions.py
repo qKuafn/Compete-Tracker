@@ -55,7 +55,7 @@ def get_token():
     global access_token, last_token_time
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
-        "Authorization": f"Basic {AUTH_TOKEN}"
+        "Authorization": f"Bearer {AUTH_TOKEN}"
     }
     data = {
         "grant_type": "device_auth",
@@ -82,10 +82,8 @@ def ensure_token():
         get_token()
 
 def kill_token():
-    global access_token, last_token_time
     headers = {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Authorization": f"Bearer {AUTH_TOKEN}"
+        "Authorization": f"Bearer {access_token}"
     }
     try:
         res = requests.delete("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/sessions/kill", headers=headers)
