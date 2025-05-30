@@ -99,7 +99,6 @@ def kill_token():
 
 # === Tournament Data API ===
 def fetch_api1(region, tags):
-    print (f"[API1] EventData ({region})の取得を開始")
     url = f"{TOURNAMENT_URL}?region={region}"
     for attempt in range(2):
         ensure_token()
@@ -120,13 +119,13 @@ def fetch_api1(region, tags):
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
                     tags.append(region)
-                    print(f"　　🟢 {region} : 更新あり")
+                    print(f"　　　🟢 {region} : 更新あり")
                     return True
                 except Exception as e:
                     print(f"[fetch_API1] ❌️ ファイルの保存に失敗 : {e}")
                     return False
             else:
-                print(f"　　EventData ({region}) : 更新なし")
+                print(f"　　　EventData ({region}) : 更新なし")
                 return False
         else:
             print(f"[fetch_API1] ❌️ 取得失敗 ({region}) : {res.status_code}")
@@ -591,7 +590,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
 
         # === 保存 & タグ追加 ===
         if before_data is None:
-            print(f"[Tournament] 🟢 新トーナメント : {display_id}")
+            print(f"　　　🟢 新トーナメント : {display_id}")
             with open(get_unique_filepath(TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
@@ -600,7 +599,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             added_Tournaments.append(display_id)
 
         elif new_data != before_data:
-            print(f"[Tournament] 🟢 トーナメント更新 : {display_id}")
+            print(f"　　　🟢 トーナメント更新 : {display_id}")
             with open(get_unique_filepath(TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
@@ -609,7 +608,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             updated_Tournaments.append(display_id)
 
         else:
-            print(f"　　更新なし : {display_id}")
+            print(f"　　　更新なし : {display_id}")
 
         # === 送信準備 ===
         embeds = [embed_date, embed_mode, embed_match, embed_token, embed_payout]
@@ -793,22 +792,25 @@ if __name__ == "__main__":
         subprocess.run(['git', 'stash', 'pop'])
     
     extract_tournament_data(tags, added_Tournaments, updated_Tournaments)
+    print("=" * 20)
 
+    print("[API1] EventData の取得を開始")
     for region in Regions:
         fetch_api1(region, tags)
-        print ("\n")
+        print("=" * 20)
 
     for lang in Lang:
         fetch_api2(lang, tags)
-        print ("\n")
+        print("=" * 20)
     for lang in Lang:
         fetch_api3(lang, tags)
-        print ("\n")
+        print("=" * 20)
     for lang in Lang:
         fetch_api4(lang, tags)
-        print ("\n")
+        print("=" * 20)
 
     fetch_api5(tags, version, build, playlist_tags)
+    print("=" * 20)
 
     subprocess.run(["git", "add", "."], check=True)
     git_diff = subprocess.run(["git", "diff", "--cached", "--quiet"])
