@@ -127,8 +127,10 @@ def fetch_api1(region, tags):
                 except Exception as e:
                     print(f"[fetch_API1] ❌️ ファイルの保存に失敗 : {e}")
                     return False
-            else:
+            elif new_data == before_data:
                 print(f"　　更新なし")
+                return True
+            else:
                 return False
         else:
             print(f"[fetch_API1] ❌️ 取得失敗 ({region}) : {res.status_code}")
@@ -285,10 +287,14 @@ def fetch_api5(tags, version, build, playlist_tags):
                         json.dump(new_data, f, ensure_ascii=False, indent=2)
                     print(f"　　🟢 更新あり")
                     playlist_send_discord_notify(new, delete, update)
+                    return True
                 except Exception as e:
                     print(f"[fetch_API5] ❌️ ファイルの保存に失敗 : {e}")
-            else:
+                    return False
+            elif new_data == before_data:
                 print ("[Playlist] 更新なし")
+                return True
+            else:
                 return False
         else:
             print(f"[fetch_API5] ❌️ 取得失敗 : {res.status_code}")

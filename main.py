@@ -111,6 +111,8 @@ def fetch_EventData(region, tags):
                 except Exception as e:
                     print(f"[EventData] ❌️ ファイルの保存に失敗 : {e}")
                     return False
+            elif new_data == before_data:
+                return True
             else:
                 return False
         else:
@@ -269,17 +271,21 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                         json.dump(new_data, f, ensure_ascii=False, indent=2)
                     print(f"[Playlist] 🟢 更新あり")
                     playlist_send_discord_notify(new, delete, update)
+                    return True
                 except Exception as e:
                     print(f"[Playlist] ❌️ ファイルの保存に失敗 : {e}")
+                    return False
             elif new_data == before_data:
                 print ("[Playlist] 更新なし")
+                return True
+            else:
                 return False
         else:
             print(f"[Playlist] ❌️ 取得失敗 ({region}) : {res.status_code}")
             if attempt == 0:
                 print("[Playlist] 🔁 リトライ")
-                get_token()
                 time.sleep(10)
+                get_token()
             else:
                 return None
 
@@ -311,7 +317,7 @@ def playlist_send_discord_notify(new, delete, update):
         })
     if delete:
         fields.append({
-            "name": "🔴 削除済み",
+            "name": "🔴 削除",
             "value": "\n".join([f"・`{tag}`" for tag in delete]),
             "inline": False
         })
