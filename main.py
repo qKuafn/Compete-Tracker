@@ -281,8 +281,8 @@ def detect_changed_ids(current_data: List[str], new_data: dict, new_ids: List[st
     previous_assets = old_data.get("FortPlaylistAthena", {}).get("assets", {})
 
     for key in current_data:
-        curr = current_assets.get(key, {}).get("meta", {}).get("revision")
-        old = previous_assets.get(key, {}).get("meta", {}).get("revision")
+        curr = current_assets.get(key, {}).get("meta", {}).get("promotedAt")
+        old = previous_assets.get(key, {}).get("meta", {}).get("promotedAt")
 
         if curr != old and key not in new_ids and key not in removed_ids:
             updated_ids.append(key)
