@@ -225,16 +225,28 @@ def fetch_Playlist(tags, version, build, playlist_tags):
             if new_data != before_data or before_data is None:
                 current_id_list = extract_asset_ids(new_data)
                 before_id_list = extract_asset_ids(before_data)
+                
+                # 新しいIDを検出・タグ追加
                 new_ids = list(set(current_id_list) - set(before_id_list))
-                new_ids_tournament = [id for id in new_ids if "Showdown_" in id]
+                removed_ids = list(set(before_id_list) - set(current_id_list))
+                new_ids_tournament = [id for id in new_ids if "Showdown" in id]
+                removed_ids_tournament = [id for id in removed_ids if "Showdown" in id]
                 if new_ids_tournament:
-                    tags.append(f"{new_ids_tournament} (New)")
-                    playlist_tags.append(new_ids_tournament)
-                changed_ids = detect_changed_ids(current_id_list, before_id_list)
+                    for ids in new_ids_tournament:
+                        tags.append(f"{ids} (New)")
+                        playlist_tags.append(ids)
+                if removed_ids_tournament:
+                    for ids in removed_ids_tournament:
+                        tags.append(f"{ids} (Del)")
+                        playlist_tags.append(ids)
+
+                # 変更されたIDを検出
+                changed_ids = detect_changed_ids(current_id_list, new_data, new_ids, before_data, removed_ids)
                 changed_ids_tournament = [id for id in changed_ids if "Showdown" in id]
                 if changed_ids_tournament:
-                    tags.append(f"{changed_ids_tournament} (Upd)")
-                    playlist_tags.append(changed_ids_tournament)
+                    for ids in changed_ids_tournament:
+                        tags.append(f"{ids} (Upd)")
+                        playlist_tags.append(ids)
                 # 保存
                 try:
                     with open(get_unique_filepath(ARCHIVE_DIR, f"PlaylistData"), "w", encoding="utf-8") as f:
@@ -263,16 +275,17 @@ def extract_asset_ids(data: dict) -> List[str]:
     return list(data.get("FortPlaylistAthena", {}).get("assets", {}).keys())
 
 # 一時的に更新検知から新しいPlaylistId検知に変更
-def detect_changed_ids(current_data: dict, previous_data: dict) -> List[str]:
+def detect_changed_ids(current_data: List[str], new_data: dict, new_ids: List[str], old_data: dict, removed_ids: List[str]) -> List[str]:
     updated_ids = []
-    current_set = set(current_data)
-    previous_set = set(previous_data)
+    current_assets = new_data.get("FortPlaylistAthena", {}).get("assets", {})
+    previous_assets = old_data.get("FortPlaylistAthena", {}).get("assets", {})
 
-    added = current_set - previous_set
-    removed = previous_set - current_set
+    for key in current_data:
+        curr = current_assets.get(key, {}).get("meta", {}).get("revision")
+        old = previous_assets.get(key, {}).get("meta", {}).get("revision")
 
-    updated_ids = list(added | removed)
-    print (updated_ids)
+        if curr != old and key not in new_ids and key not in removed_ids:
+            updated_ids.append(key)
     return updated_ids
 
 # === Eventの更新を詳しく確認 & 整形Jsonを保存 ===
