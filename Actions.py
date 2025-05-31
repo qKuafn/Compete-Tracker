@@ -9,7 +9,7 @@ from typing import List
 
 # === ファイルパス ===
 RESPONSE_DIR = "./response"
-ARCHIVE_DIR = "./Archive"
+ARCHIVE_DIR = "./response/Archive"
 TOURNAMENT_DIR = "./Tournament"
 TOURNAMENT_ARCHIVE_DIR = "./Tournament/Archive"
 
@@ -231,6 +231,9 @@ def fetch_api4(lang, tags):
 
 # === Playlistの更新を確認 ===
 def fetch_api5(tags, version, build, playlist_tags):
+    new = []
+    delete = []
+    update = []
     url = f"{PlaylistAPI_URL}/{version}/{build}?appId=Fortnite"
     payload = {
         "FortPlaylistAthena": 0
@@ -259,10 +262,12 @@ def fetch_api5(tags, version, build, playlist_tags):
                     for ids in new_ids_tournament:
                         tags.append(f"{ids} (New)")
                         playlist_tags.append(ids)
+                        new.append(ids)
                 if removed_ids_tournament:
                     for ids in removed_ids_tournament:
                         tags.append(f"{ids} (Del)")
                         playlist_tags.append(ids)
+                        delete.append(ids)
 
                 # 変更されたIDを検出
                 changed_ids = detect_changed_ids(current_id_list, new_data, new_ids, before_data, removed_ids)
@@ -271,6 +276,7 @@ def fetch_api5(tags, version, build, playlist_tags):
                     for ids in changed_ids_tournament:
                         tags.append(f"{ids} (Upd)")
                         playlist_tags.append(ids)
+                        update.append(ids)
                 # 保存
                 try:
                     with open(get_unique_filepath(ARCHIVE_DIR, f"PlaylistData"), "w", encoding="utf-8") as f:
@@ -278,10 +284,9 @@ def fetch_api5(tags, version, build, playlist_tags):
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(new_data, f, ensure_ascii=False, indent=2)
                     print(f"　　🟢 更新あり")
-                    return True
+                    playlist_send_discord_notify(new, delete, update)
                 except Exception as e:
                     print(f"[fetch_API5] ❌️ ファイルの保存に失敗 : {e}")
-                    return False
             else:
                 print ("[Playlist] 更新なし")
                 return False
@@ -310,6 +315,47 @@ def detect_changed_ids(current_data: List[str], new_data: dict, new_ids: List[st
         if curr != old and key not in new_ids and key not in removed_ids:
             updated_ids.append(key)
     return updated_ids
+
+def playlist_send_discord_notify(new, delete, update):
+    fields = []
+    if new:
+        fields.append({
+            "name": "🟢 新規追加",
+            "value": "\n".join([f"・`{tag}`" for tag in new]),
+            "inline": False
+        })
+    if delete:
+        fields.append({
+            "name": "🔴 削除済み",
+            "value": "\n".join([f"・`{tag}`" for tag in delete]),
+            "inline": False
+        })
+    if update:
+        fields.append({
+            "name": "🟡 更新",
+            "value": "\n".join([f"・`{tag}`" for tag in update]),
+            "inline": False
+        })
+    payload = {
+        "content": "<@&1372839358591139840><@&1359477859764273193>",
+        "embeds": [
+            {
+                "title": "プレイリスト更新 (トーナメント)",
+                "fields": fields,
+                "timestamp": datetime.now(UTC).isoformat()
+            }
+        ]
+    }
+    if Webhook1 is True:
+        try:
+            requests.post(Tournament_Webhook_URL, json=payload).raise_for_status()
+        except Exception as e:
+            print (f"[playlist_send] ❌️ Discord通知失敗 : {e}")
+    if Webhook2 is True:
+        try:
+            requests.post(Tournament_Webhook_URL2, json=payload).raise_for_status()
+        except Exception as e:
+            print (f"[playlist_send] ❌️ Discord通知失敗 : {e}")
 
 # === TournamentData ===
 def get_token_extract():

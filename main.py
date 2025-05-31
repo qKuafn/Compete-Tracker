@@ -9,7 +9,7 @@ from typing import List
 
 # === ファイルパス ===
 RESPONSE_DIR = "./response"
-ARCHIVE_DIR = "./Archive"
+ARCHIVE_DIR = "./response/Archive"
 TOURNAMENT_DIR = "./Tournament"
 TOURNAMENT_ARCHIVE_DIR = "./Tournament/Archive"
 
