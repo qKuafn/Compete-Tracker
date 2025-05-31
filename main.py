@@ -217,7 +217,6 @@ def fetch_Playlist(tags, version, build, playlist_tags):
     new = []
     delete = []
     update = []
-    description_lines = []
     url = f"{PlaylistAPI_URL}/{version}/{build}?appId=Fortnite"
     payload = {
         "FortPlaylistAthena": 0
@@ -269,10 +268,10 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(new_data, f, ensure_ascii=False, indent=2)
                     print(f"[Playlist] 🟢 更新あり")
-                    playlist_send_discord_notify()
+                    playlist_send_discord_notify(new, delete, update)
                 except Exception as e:
                     print(f"[Playlist] ❌️ ファイルの保存に失敗 : {e}")
-            else:
+            elif new_data == before_data:
                 print ("[Playlist] 更新なし")
                 return False
         else:
