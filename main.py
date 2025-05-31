@@ -207,6 +207,10 @@ def fetch_LeadInfo(lang, tags):
 
 # === Playlist API ===
 def fetch_Playlist(tags, version, build, playlist_tags):
+    new = []
+    delete = []
+    update = []
+    description_lines = []
     url = f"{PlaylistAPI_URL}/{version}/{build}?appId=Fortnite"
     payload = {
         "FortPlaylistAthena": 0
@@ -235,10 +239,12 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                     for ids in new_ids_tournament:
                         tags.append(f"{ids} (New)")
                         playlist_tags.append(ids)
+                        new.append(ids)
                 if removed_ids_tournament:
                     for ids in removed_ids_tournament:
                         tags.append(f"{ids} (Del)")
                         playlist_tags.append(ids)
+                        delete.append(ids)
 
                 # 変更されたIDを検出
                 changed_ids = detect_changed_ids(current_id_list, new_data, new_ids, before_data, removed_ids)
@@ -247,6 +253,7 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                     for ids in changed_ids_tournament:
                         tags.append(f"{ids} (Upd)")
                         playlist_tags.append(ids)
+                        update.append(ids)
                 # 保存
                 try:
                     with open(get_unique_filepath(ARCHIVE_DIR, f"PlaylistData"), "w", encoding="utf-8") as f:
@@ -254,30 +261,7 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(new_data, f, ensure_ascii=False, indent=2)
                     print(f"[Playlist] 🟢 更新あり")
-
-                    payload = {
-                        "content": f"{content}",
-                        "embeds": [
-                            {
-                                "author":{
-                                    "name": user_name,
-                                    "icon_url": f"https://github.com/{user_name}.png",
-                                    "url": f"https://github.com/{user_name}?tab=repositories"
-                                },
-                                "title": "[Tournament:main] 1 new commit",
-                                "url": commit_url,
-                                "description": f"[`{commit_hash}`]({commit_url}) {message}",
-                                "color": 0x7289da,
-                            }
-                        ]
-                    }
-
-                    try:
-                        requests.post(WEBHOOK_URL, json=payload).raise_for_status()
-                        print("[Discord] 通知を送信")
-                    except Exception as e:
-                        print (f"Discord通知失敗 : {e}")
-
+                    playlist_send_discord_notify()
                 except Exception as e:
                     print(f"[Playlist] ❌️ ファイルの保存に失敗 : {e}")
             else:
@@ -309,6 +293,47 @@ def detect_changed_ids(current_data: List[str], new_data: dict, new_ids: List[st
         if curr != old and key not in new_ids and key not in removed_ids:
             updated_ids.append(key)
     return updated_ids
+
+def playlist_send_discord_notify(new, delete, update):
+    fields = []
+    if new:
+        fields.append({
+            "name": "🟢 新規追加",
+            "value": "\n".join([f"・`{tag}`" for tag in new]),
+            "inline": False
+        })
+    if delete:
+        fields.append({
+            "name": "🔴 削除済み",
+            "value": "\n".join([f"・`{tag}`" for tag in delete]),
+            "inline": False
+        })
+    if update:
+        fields.append({
+            "name": "🟡 更新",
+            "value": "\n".join([f"・`{tag}`" for tag in update]),
+            "inline": False
+        })
+    payload = {
+        "content": "<@&1372839358591139840><@&1359477859764273193>",
+        "embeds": [
+            {
+                "title": "プレイリスト更新 (トーナメント)",
+                "fields": fields,
+                "timestamp": datetime.now(UTC).isoformat()
+            }
+        ]
+    }
+    if Webhook1 is True:
+        try:
+            requests.post(Tournament_Webhook_URL, json=payload).raise_for_status()
+        except Exception as e:
+            print (f"[Playlist] ❌️ Discord通知失敗 : {e}")
+    if Webhook2 is True:
+        try:
+            requests.post(Tournament_Webhook_URL2, json=payload).raise_for_status()
+        except Exception as e:
+            print (f"[Playlist] ❌️ Discord通知失敗 : {e}")
 
 # === Eventの更新を詳しく確認 & 整形Jsonを保存 ===
 def get_token_for_format():
@@ -876,7 +901,7 @@ if __name__ == "__main__":
             ).strip()
 
             if "ASIA" in tags or any(tag.endswith("(ja)") for tag in tags) in tags or added_Tournaments or updated_Tournaments or playlist_tags:
-                content = f"## 🆕 : {', '.join(tags)} <@&1372839358591139840>"
+                content = f"## 🆕 新規 : {', '.join(tags)} <@&1372839358591139840>"
             else:
                 content = f"## 更新 : {', '.join(tags)}"
 
