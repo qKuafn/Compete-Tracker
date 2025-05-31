@@ -254,10 +254,32 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(new_data, f, ensure_ascii=False, indent=2)
                     print(f"[Playlist] 🟢 更新あり")
-                    return True
+
+                    payload = {
+                        "content": f"{content}",
+                        "embeds": [
+                            {
+                                "author":{
+                                    "name": user_name,
+                                    "icon_url": f"https://github.com/{user_name}.png",
+                                    "url": f"https://github.com/{user_name}?tab=repositories"
+                                },
+                                "title": "[Tournament:main] 1 new commit",
+                                "url": commit_url,
+                                "description": f"[`{commit_hash}`]({commit_url}) {message}",
+                                "color": 0x7289da,
+                            }
+                        ]
+                    }
+
+                    try:
+                        requests.post(WEBHOOK_URL, json=payload).raise_for_status()
+                        print("[Discord] 通知を送信")
+                    except Exception as e:
+                        print (f"Discord通知失敗 : {e}")
+
                 except Exception as e:
                     print(f"[Playlist] ❌️ ファイルの保存に失敗 : {e}")
-                    return False
             else:
                 print ("[Playlist] 更新なし")
                 return False
@@ -860,7 +882,7 @@ if __name__ == "__main__":
 
             payload = {
                 "username": "GitHub",
-                "content": f"{content}",
+                "content": content,
                 "embeds": [
                     {
                         "author":{
