@@ -26,11 +26,12 @@ UTC = timezone(timedelta(hours=0))
 access_token = None
 access_token2 = None
 last_token_time = 0
+last_token_time2 = 0
 TOKEN_EXPIRATION = 120 * 60
 
 def get_unique_filepath(base_dir, base_name):
     os.makedirs(base_dir, exist_ok=True)
-    date_str = datetime.now().strftime("%m%d")
+    date_str = datetime.now(JST).strftime("%m%d")
     counter = 1
     while True:
         path = os.path.join(base_dir, f"{base_name} {date_str}({counter}).json")
@@ -244,20 +245,32 @@ def fetch_api5(tags, version, build, playlist_tags):
             try:
                 before_data = load_json(filepath) if os.path.exists(filepath) else None
             except Exception as e:
-                print("[API5] ❌️ 旧ファイルの取得に失敗")
+                print("[fetch_API5] ❌️ 旧ファイルの取得に失敗")
             if new_data != before_data or before_data is None:
                 current_id_list = extract_asset_ids(new_data)
                 before_id_list = extract_asset_ids(before_data)
+                
+                # 新しいIDを検出・タグ追加
                 new_ids = list(set(current_id_list) - set(before_id_list))
-                new_ids_tournament = [id for id in new_ids if "Showdown_" in id]
+                removed_ids = list(set(before_id_list) - set(current_id_list))
+                new_ids_tournament = [id for id in new_ids if "Showdown" in id]
+                removed_ids_tournament = [id for id in removed_ids if "Showdown" in id]
                 if new_ids_tournament:
-                    tags.append(f"{new_ids_tournament} (New)")
-                    playlist_tags.append(new_ids_tournament)
-                changed_ids = detect_changed_ids(current_id_list, before_id_list)
-                changed_ids_tournament = [id for id in changed_ids if "Showdown_" in id]
+                    for ids in new_ids_tournament:
+                        tags.append(f"{ids} (New)")
+                        playlist_tags.append(ids)
+                if removed_ids_tournament:
+                    for ids in removed_ids_tournament:
+                        tags.append(f"{ids} (Del)")
+                        playlist_tags.append(ids)
+
+                # 変更されたIDを検出
+                changed_ids = detect_changed_ids(current_id_list, new_data, new_ids, before_data, removed_ids)
+                changed_ids_tournament = [id for id in changed_ids if "Showdown" in id]
                 if changed_ids_tournament:
-                    tags.append(f"{changed_ids_tournament} (Upd)")
-                    playlist_tags.append(changed_ids_tournament)
+                    for ids in changed_ids_tournament:
+                        tags.append(f"{ids} (Upd)")
+                        playlist_tags.append(ids)
                 # 保存
                 try:
                     with open(get_unique_filepath(ARCHIVE_DIR, f"PlaylistData"), "w", encoding="utf-8") as f:
@@ -270,37 +283,37 @@ def fetch_api5(tags, version, build, playlist_tags):
                     print(f"[fetch_API5] ❌️ ファイルの保存に失敗 : {e}")
                     return False
             else:
-                print ("　　更新なし")
+                print ("[Playlist] 更新なし")
                 return False
         else:
-            print(f"[fetch_API5] ❌️ 取得失敗 ({region}) : {res.status_code}")
+            print(f"[fetch_API5] ❌️ 取得失敗 : {res.status_code}")
             if attempt == 0:
-                print("[fetch_API5] リトライ")
+                print("[fetch_API5] 🔁 リトライ")
                 get_token()
                 time.sleep(10)
             else:
                 return None
 
-# === 更新が入っているPlaylist Id一覧を取得 ===
 def extract_asset_ids(data: dict) -> List[str]:
     return list(data.get("FortPlaylistAthena", {}).get("assets", {}).keys())
 
-def detect_changed_ids(current_data: dict, previous_data: dict) -> List[str]:
+# === 更新が入っているPlaylist Id一覧を取得 ===
+def detect_changed_ids(current_data: List[str], new_data: dict, new_ids: List[str], old_data: dict, removed_ids: List[str]) -> List[str]:
     updated_ids = []
-    current_assets = current_data.get("FortPlaylistAthena", {}).get("assets", {})
-    previous_assets = previous_data.get("FortPlaylistAthena", {}).get("assets", {})
+    current_assets = new_data.get("FortPlaylistAthena", {}).get("assets", {})
+    previous_assets = old_data.get("FortPlaylistAthena", {}).get("assets", {})
 
-    for asset_id, curr_entry in current_assets.items():
-        prev_entry = previous_assets.get(asset_id)
-        if not prev_entry:
-            continue
-        if curr_entry.get("meta") != prev_entry.get("meta") or curr_entry.get("assetData") != prev_entry.get("assetData"):
-            updated_ids.append(asset_id)
+    for key in current_data:
+        curr = current_assets.get(key, {}).get("meta", {}).get("promotedAt")
+        old = previous_assets.get(key, {}).get("meta", {}).get("promotedAt")
+
+        if curr != old and key not in new_ids and key not in removed_ids:
+            updated_ids.append(key)
     return updated_ids
 
 # === TournamentData ===
 def get_token_extract():
-    global access_token2, last_token_time
+    global access_token2, last_token_time2
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
         "Authorization": f"Basic {AUTH_TOKEN}"
@@ -315,7 +328,7 @@ def get_token_extract():
         res = requests.post("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token", headers=headers, data=data)
         res.raise_for_status()
         access_token2 = res.json().get("access_token")
-        last_token_time = time.time()
+        last_token_time2 = time.time()
     except Exception as e:
         print(f"❌ トークン取得失敗: {e}")
         access_token2 = None
@@ -422,9 +435,9 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
 
             entry = {
                 "beginTime": w["beginTime"],
-                "endTime": w["endTime"],
                 "beginTime_UNIX": int(begin_dt.timestamp()),
                 "beginTime_JST": begin_dt.astimezone(JST).strftime("%Y-%m-%d %H:%M:%S"),
+                "endTime": w["endTime"],
                 "endTime_UNIX": int(end_dt.timestamp()),
                 "endTime_JST": end_dt.astimezone(JST).strftime("%Y-%m-%d %H:%M:%S"),
                 "playlistId": template.get("playlistId"),
@@ -461,8 +474,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                 })
             embed_date = {
                 "title":  "📅 **開催日時**",
-                "fields": date_section,
-                "timestamp": datetime.now(),
+                "fields": date_section,\
                 "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
@@ -471,7 +483,6 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_date = {
                 "title":  "📅 **開催日時**",
                 "fields": date_section,
-                "timestamp": datetime.now(),
                 "timestamp": datetime.now(UTC).isoformat()
             }
 
@@ -487,7 +498,6 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_mode = {
                 "title":  "📍 **モード**",
                 "fields": mode_section,
-                "timestamp": datetime.now(),
                 "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
@@ -496,7 +506,6 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_mode = {
                 "title":  "📍 **モード**",
                 "fields": mode_section,
-                "timestamp": datetime.now(),
                 "timestamp": datetime.now(UTC).isoformat()
             }
 
@@ -512,7 +521,6 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_match = {
                 "title":  "⚔️ **試合数**",
                 "fields": match_section,
-                "timestamp": datetime.now(),
                 "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
@@ -521,7 +529,6 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_match = {
                 "title":  "⚔️ **試合数**",
                 "fields": match_section,
-                "timestamp": datetime.now(),
                 "timestamp": datetime.now(UTC).isoformat()
             }
 
@@ -545,7 +552,6 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_token = {
                 "title":  "🔑 **参加資格**",
                 "fields": token_section,
-                "timestamp": datetime.now(),
                 "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
@@ -554,7 +560,6 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_token = {
                 "title":  "🔑 **参加資格**",
                 "fields": token_section,
-                "timestamp": datetime.now(),
                 "timestamp": datetime.now(UTC).isoformat()
             }
 
@@ -571,7 +576,6 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_payout = {
                 "title":  "🎁 **賞金 / 賞品**",
                 "fields": payouts_section,
-                "timestamp": datetime.now(),
                 "timestamp": datetime.now(UTC).isoformat()
             }
         except Exception as e:
@@ -580,7 +584,6 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_payout = {
                 "title":  "🎁 **賞金 / 賞品**",
                 "fields": payouts_section,
-                "timestamp": datetime.now(),
                 "timestamp": datetime.now(UTC).isoformat()
             }
 
@@ -691,7 +694,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                 embed_changes = {
                     "title": new_path,
                     "fields": changes_section,
-                    "timestamp": datetime.now()
+                    "timestamp": datetime.now(UTC).isoformat()
                 }
                 embeds.append (embed_changes)
 
