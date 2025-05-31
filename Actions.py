@@ -5,6 +5,7 @@ import os
 import subprocess
 from datetime import datetime, timezone, timedelta
 from config import *
+from pub_config import *
 from typing import List
 
 # === ファイルパス ===
