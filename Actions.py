@@ -17,9 +17,6 @@ TOURNAMENT_ARCHIVE_DIR = "./Tournament/Archive"
 Regions = ["ASIA", "EU", "NAC", "NAW", "OCE", "ME", "BR", "ONSITE"]
 Lang = ["ja", "en"]
 
-version = "++Fortnite+Release-35.20"
-build = "42911808"
-
 JST = timezone(timedelta(hours=9))
 UTC = timezone(timedelta(hours=0))
 
