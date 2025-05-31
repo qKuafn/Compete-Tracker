@@ -22,6 +22,9 @@ build = "42911808"
 JST = timezone(timedelta(hours=9))
 UTC = timezone(timedelta(hours=0))
 
+if test is True:
+    Webhook1 = False
+
 # === トークン管理 ===
 access_token = None
 access_token2 = None
@@ -97,8 +100,9 @@ def fetch_EventData(region, tags):
                 print("[EventData] ❌️ 旧ファイルの取得に失敗")
             if new_data != before_data or before_data is None:
                 try:
-                    with open(get_unique_filepath(ARCHIVE_DIR, f"EventData_{region}"), "w", encoding="utf-8") as f:
-                        json.dump(data, f, ensure_ascii=False, indent=2)
+                    if test is False:
+                        with open(get_unique_filepath(TOURNAMENT_ARCHIVE_DIR, f"EventData_{region}"), "w", encoding="utf-8") as f:
+                            json.dump(data, f, ensure_ascii=False, indent=2)
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
                     tags.append(region)
@@ -132,8 +136,9 @@ def fetch_WebData(lang, tags):
             print("[WebData] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
-                with open(get_unique_filepath(ARCHIVE_DIR, f"WebData_{lang}"), "w", encoding="utf-8") as f:
-                    json.dump(data, f, ensure_ascii=False, indent=2)
+                if test is False:
+                    with open(get_unique_filepath(ARCHIVE_DIR, f"WebData_{lang}"), "w", encoding="utf-8") as f:
+                        json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 tags.append(f"Web ({lang})")
@@ -161,8 +166,9 @@ def fetch_ScoreInfo(lang, tags):
             print("[ScoreInfo] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
-                with open(get_unique_filepath(ARCHIVE_DIR, f"ScoreInfo_{lang}"), "w", encoding="utf-8") as f:
-                    json.dump(data, f, ensure_ascii=False, indent=2)
+                if test is False:
+                    with open(get_unique_filepath(ARCHIVE_DIR, f"ScoreInfo_{lang}"), "w", encoding="utf-8") as f:
+                        json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 tags.append(f"Score ({lang})")
@@ -190,8 +196,9 @@ def fetch_LeadInfo(lang, tags):
             print("[LeadInfo] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
-                with open(get_unique_filepath(ARCHIVE_DIR, f"LeaderboardInfo_{lang}"), "w", encoding="utf-8") as f:
-                    json.dump(data, f, ensure_ascii=False, indent=2)
+                if test is False:
+                    with open(get_unique_filepath(ARCHIVE_DIR, f"LeaderboardInfo_{lang}"), "w", encoding="utf-8") as f:
+                        json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 tags.append(f"Lead ({lang})")
@@ -256,8 +263,9 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                         update.append(ids)
                 # 保存
                 try:
-                    with open(get_unique_filepath(ARCHIVE_DIR, f"PlaylistData"), "w", encoding="utf-8") as f:
-                        json.dump(new_data, f, ensure_ascii=False, indent=2)
+                    if test is False:
+                        with open(get_unique_filepath(ARCHIVE_DIR, f"PlaylistData"), "w", encoding="utf-8") as f:
+                            json.dump(new_data, f, ensure_ascii=False, indent=2)
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(new_data, f, ensure_ascii=False, indent=2)
                     print(f"[Playlist] 🟢 更新あり")
@@ -640,8 +648,9 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
         # === 保存 & タグ追加 ===
         if before_data is None:
             print(f"[format_EventData] 🟢 新トーナメント : {display_id}")
-            with open(get_unique_filepath(TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
-                json.dump(new_data, f, ensure_ascii=False, indent=2)
+            if test is False:
+                with open(get_unique_filepath(TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
+                    json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
             tags.append(f"{display_id} (New)")
@@ -649,8 +658,9 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
 
         elif new_data != before_data:
             print(f"[format_EventData] 🟢 トーナメント更新 : {display_id}")
-            with open(get_unique_filepath(TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
-                json.dump(new_data, f, ensure_ascii=False, indent=2)
+            if test is False:
+                with open(get_unique_filepath(TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
+                    json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
             tags.append(f"{display_id} (Upd)")
