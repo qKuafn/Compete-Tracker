@@ -99,7 +99,7 @@ def fetch_EventData(region, tags):
             if new_data != before_data or before_data is None:
                 try:
                     if test is False:
-                        with open(get_unique_filepath(TOURNAMENT_ARCHIVE_DIR, f"EventData_{region}"), "w", encoding="utf-8") as f:
+                        with open(get_unique_filepath(ARCHIVE_DIR, f"EventData_{region}"), "w", encoding="utf-8") as f:
                             json.dump(data, f, ensure_ascii=False, indent=2)
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
