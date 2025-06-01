@@ -270,7 +270,7 @@ def fetch_api5(tags, version, build, playlist_tags):
                         delete.append(ids)
 
                 # 変更されたIDを検出
-                changed_ids = detect_changed_ids(current_id_list, new_data, new_ids, before_data, removed_ids)
+                changed_ids = detect_changed_ids(current_id_list, new_data, before_data)
                 changed_ids_tournament = [id for id in changed_ids if "Showdown" in id]
                 if changed_ids_tournament:
                     for ids in changed_ids_tournament:
@@ -307,7 +307,7 @@ def extract_asset_ids(data: dict) -> List[str]:
     return list(data.get("FortPlaylistAthena", {}).get("assets", {}).keys())
 
 # === 更新が入っているPlaylist Id一覧を取得 ===
-def detect_changed_ids(current_data: List[str], new_data: dict, new_ids: List[str], old_data: dict, removed_ids: List[str]) -> List[str]:
+def detect_changed_ids(current_data: List[str], new_data: dict, old_data: dict) -> List[str]:
     updated_ids = []
     current_assets = new_data.get("FortPlaylistAthena", {}).get("assets", {})
     previous_assets = old_data.get("FortPlaylistAthena", {}).get("assets", {})
@@ -316,7 +316,7 @@ def detect_changed_ids(current_data: List[str], new_data: dict, new_ids: List[st
         curr = current_assets.get(key, {}).get("meta", {}).get("promotedAt")
         old = previous_assets.get(key, {}).get("meta", {}).get("promotedAt")
 
-        if curr != old and key not in new_ids and key not in removed_ids:
+        if curr != old and (not curr is None or not old is None):
             updated_ids.append(key)
     return updated_ids
 
