@@ -914,7 +914,7 @@ if __name__ == "__main__":
             ).strip()
 
             if "ASIA" in tags or any(tag.endswith("(ja)") for tag in tags) in tags or added_Tournaments or updated_Tournaments or playlist_tags:
-                content = f"## 🆕 新規 : {', '.join(tags)} <@&1372839358591139840>"
+                content = f"## 更新 : {', '.join(tags)} <@&1372839358591139840>"
             else:
                 content = f"## 更新 : {', '.join(tags)}"
 
