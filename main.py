@@ -30,6 +30,7 @@ last_token_time = 0
 last_token_time2 = 0
 TOKEN_EXPIRATION = 120 * 60
 
+# === アーカイブ用の保存先(名前)を指定 ===
 def get_unique_filepath(base_dir, base_name):
     os.makedirs(base_dir, exist_ok=True)
     date_str = datetime.now(JST).strftime("%m%d")
@@ -253,7 +254,7 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                         delete.append(ids)
 
                 # 変更されたIDを検出
-                changed_ids = detect_changed_ids(current_id_list, new_data, new_ids, before_data, removed_ids)
+                changed_ids = detect_changed_ids(current_id_list, new_data, before_data)
                 changed_ids_tournament = [id for id in changed_ids if "Showdown" in id]
                 if changed_ids_tournament:
                     for ids in changed_ids_tournament:
@@ -292,16 +293,18 @@ def extract_asset_ids(data: dict) -> List[str]:
     return list(data.get("FortPlaylistAthena", {}).get("assets", {}).keys())
 
 # === 更新が入っているPlaylist Id一覧を取得 ===
-def detect_changed_ids(current_data: List[str], new_data: dict, new_ids: List[str], old_data: dict, removed_ids: List[str]) -> List[str]:
+def detect_changed_ids(current_data: List[str], new_data: dict, old_data: dict) -> List[str]:
     updated_ids = []
     current_assets = new_data.get("FortPlaylistAthena", {}).get("assets", {})
     previous_assets = old_data.get("FortPlaylistAthena", {}).get("assets", {})
 
+    # 最新データのプレイリスト毎に、新・旧の meta > promotedAt を比較
     for key in current_data:
         curr = current_assets.get(key, {}).get("meta", {}).get("promotedAt")
         old = previous_assets.get(key, {}).get("meta", {}).get("promotedAt")
 
-        if curr != old and key not in new_ids and key not in removed_ids:
+        # promotedAtが変わった場合か、どちらかがNoneの場合にタグに追加
+        if curr != old and (not curr is None or not old is None):
             updated_ids.append(key)
     return updated_ids
 
@@ -326,6 +329,7 @@ def playlist_send_discord_notify(new, delete, update):
             "inline": False
         })
     payload = {
+        "username": "大会のプレイリスト修理",
         "content": "<@&1372839358591139840><@&1359477859764273193>",
         "embeds": [
             {
@@ -738,13 +742,18 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 f"{images_section}\n\n"
             )
 
+            payload = {
+                "content": content,
+                "embeds": embeds
+            }
+
             with open(filepath, "rb") as fp:
                 files = {"file": (os.path.basename(filepath), fp, "application/json")}
                 if Webhook1 is True:
                     try:
                         requests.post(
                             Tournament_Webhook_URL,
-                            data={"payload_json": json.dumps({"content": content, "embeds": embeds}, ensure_ascii=False)},
+                            data={"payload_json": json.dumps(payload, ensure_ascii=False)},
                             files=files
                         ).raise_for_status()
                     except Exception as e:
@@ -754,7 +763,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                     try:
                         requests.post(
                             Tournament_Webhook_URL2,
-                            data={"payload_json": json.dumps({"content": content, "embeds": embeds}, ensure_ascii=False)},
+                            data={"payload_json": json.dumps(payload, ensure_ascii=False)},
                             files=files
                         ).raise_for_status()
                     except Exception as e:
