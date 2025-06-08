@@ -272,7 +272,7 @@ def fetch_api5(tags, version, build, playlist_tags):
                 # 変更されたIDを検出
                 changed_ids = detect_changed_ids(current_id_list, new_data, before_data)
                 changed_ids_tournament = [id for id in changed_ids if "Showdown" in id]
-                if changed_ids_tournament:
+                if changed_ids_tournament and (not new) and (not delete):
                     for ids in changed_ids_tournament:
                         tags.append(f"{ids} (Upd)")
                         playlist_tags.append(ids)
