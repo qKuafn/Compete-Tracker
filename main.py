@@ -719,22 +719,23 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                         return f"```json\n{json.dumps(val, ensure_ascii=False, indent=2)}\n```"
                     return f"```{val}```"
                 
-                changes_section.append({
-                    "name": "過去データ" ,
-                    "value": format_value(old_val),
-                    "inline": not isinstance(old_val, (dict, list))
-                })
-                changes_section.append({
-                    "name": "新データ" ,
-                    "value": format_value(new_val),
-                    "inline": not isinstance(new_val, (dict, list))
-                })
-                embed_changes = {
-                    "title": new_path,
-                    "fields": changes_section,
-                    "timestamp": datetime.now(UTC).isoformat()
-                }
-                embeds.append (embed_changes)
+                if len(embeds) < 8:
+                    changes_section.append({
+                        "name": "過去データ" ,
+                        "value": format_value(old_val),
+                        "inline": not isinstance(old_val, (dict, list))
+                    })
+                    changes_section.append({
+                        "name": "新データ" ,
+                        "value": format_value(new_val),
+                        "inline": not isinstance(new_val, (dict, list))
+                    })
+                    embed_changes = {
+                        "title": new_path,
+                        "fields": changes_section,
+                        "timestamp": datetime.now(UTC).isoformat()
+                    }
+                    embeds.append (embed_changes)
 
             content = (
                 f"<@&1372839358591139840><@&1359477859764273193>\n"
