@@ -5,4 +5,4 @@ Webhook2 = True
 test = False
 
 version = "++Fortnite+Release-36.00"
-build = "43214806"
+build = "43339403"
