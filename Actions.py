@@ -813,11 +813,11 @@ def shorten_diff_paths(diffs, max_depth=2):
     result = set()
     try:
         for path in diffs:
-            parts = path.split("/")
+            parts = path.split(" > ")
             if len(parts) <= max_depth:
                 result.add(path)
             else:
-                result.add("/".join(parts[:max_depth + 1]))
+                result.add(" > ".join(parts[:max_depth + 1]))
     except Exception as e:
         print (f"[Tournament] 🔴エラー：パスの修正中 {diffs} - {e}")
     return sorted(result)
@@ -825,7 +825,7 @@ def shorten_diff_paths(diffs, max_depth=2):
 def get_value_by_path(before_data, new_data, diffs):
     def get_nested_value(data, path_str):
         try:
-            keys = path_str.split('/')
+            keys = path_str.split(' > ')
             for key in keys:
                 if isinstance(data, list):
                     data = data[0]
