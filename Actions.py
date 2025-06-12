@@ -721,7 +721,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embeds = []
             for path_str, values in path.items():
                 changes_section = []
-                new_path  = path_str.split("/", 1)[1] if "/" in path_str else path_str
+                new_path  = path_str.split(" > ", 1)[1] if " > " in path_str else path_str
 
                 old_val = values.get("old", "不明")
                 new_val = values.get("new", "不明")
@@ -828,11 +828,13 @@ def get_value_by_path(before_data, new_data, diffs):
             keys = path_str.split(' > ')
             for key in keys:
                 if isinstance(data, list):
-                    data = data[0]
+                    # リスト内アクセスはスキップ（全体を渡す）
+                    break
                 data = data[key]
             return data
         except (KeyError, IndexError, TypeError) as e:
-            print (f"[Tournament] 🔴エラー：末端のパスの値の確認中 {diffs} - {e}")
+            print(f"[get_value_by_path] 🔴エラー：末端のパスの値の確認中 {path_str} - {e}")
+            return None
 
     results = {}
     for path_str in diffs:
