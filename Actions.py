@@ -855,15 +855,16 @@ if __name__ == "__main__":
 
     print("🚀 開始")
 
-    result = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
-    is_clean = result.returncode == 0 and result.stdout.strip() == ''
+    if not test:
+        result = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
+        is_clean = result.returncode == 0 and result.stdout.strip() == ''
 
-    if is_clean:
-        subprocess.run(['git', 'pull'])
-    else:
-        subprocess.run(['git', 'stash'])
-        subprocess.run(['git', 'pull'])
-        subprocess.run(['git', 'stash', 'pop'])
+        if is_clean:
+            subprocess.run(['git', 'pull'])
+        else:
+            subprocess.run(['git', 'stash'])
+            subprocess.run(['git', 'pull'])
+            subprocess.run(['git', 'stash', 'pop'])
     
     extract_tournament_data(tags, added_Tournaments, updated_Tournaments)
     print("=" * 20)
@@ -907,60 +908,61 @@ if __name__ == "__main__":
 
         print(f"[DEBUG] タグ一覧 : {tags}")
 
-        timestampA = datetime.now(JST).strftime("%m-%d %H:%M:%S")
-        message = f"更新 : {', '.join(tags)} ({timestampA}) - GitHubActions"
+        if not test:
+            timestampA = datetime.now(JST).strftime("%m-%d %H:%M:%S")
+            message = f"更新 : {', '.join(tags)} ({timestampA}) - GitHubActions"
 
-        subprocess.run(["git", "commit", "-m", message], check=True)
-        subprocess.run(["git", "push"], check=True)
+            subprocess.run(["git", "commit", "-m", message], check=True)
+            subprocess.run(["git", "push"], check=True)
 
-        commit_hash = subprocess.check_output(
-            ["git", "rev-parse", "--short", "HEAD"], text=True
-        ).strip()
+            commit_hash = subprocess.check_output(
+                ["git", "rev-parse", "--short", "HEAD"], text=True
+            ).strip()
 
-        repo_url = subprocess.check_output(
-            ["git", "config", "--get", "remote.origin.url"], text=True
-        ).strip()
+            repo_url = subprocess.check_output(
+                ["git", "config", "--get", "remote.origin.url"], text=True
+            ).strip()
 
-        if repo_url.startswith("git@"):
-            # git@github.com:owner/repo.git → [https://github.com/owner/repo](https://github.com/owner/repo)
-            repo_url = repo_url.replace("git@github.com:", "[https://github.com/](https://github.com/)") \
-                .removesuffix(".git")
-        else:
-            # https://…/repo.git → https://…/repo
-            repo_url = repo_url.removesuffix(".git")
+            if repo_url.startswith("git@"):
+                # git@github.com:owner/repo.git → [https://github.com/owner/repo](https://github.com/owner/repo)
+                repo_url = repo_url.replace("git@github.com:", "[https://github.com/](https://github.com/)") \
+                    .removesuffix(".git")
+            else:
+                # https://…/repo.git → https://…/repo
+                repo_url = repo_url.removesuffix(".git")
 
-        commit_url = f"{repo_url}/commit/{commit_hash}"
-        user_name = subprocess.check_output(
-            ["git", "config", "user.name"], text=True
-        ).strip()
+            commit_url = f"{repo_url}/commit/{commit_hash}"
+            user_name = subprocess.check_output(
+                ["git", "config", "user.name"], text=True
+            ).strip()
 
-        if "ASIA" in tags or any(tag.endswith("(ja)") for tag in tags) in tags or added_Tournaments or updated_Tournaments or playlist_tags:
-            content = f"## 🆕 : {', '.join(tags)} <@&1372839358591139840>"
-        else:
-            content = f"## 更新 : {', '.join(tags)}"
+            if "ASIA" in tags or any(tag.endswith("(ja)") for tag in tags) in tags or added_Tournaments or updated_Tournaments or playlist_tags:
+                content = f"## 🆕 : {', '.join(tags)} <@&1372839358591139840>"
+            else:
+                content = f"## 更新 : {', '.join(tags)}"
 
-        payload = {
-            "username": "GitHub",
-            "content": f"{content}",
-            "embeds": [
-                {
-                    "author":{
-                        "name": user_name,
-                        "icon_url": f"https://github.com/{user_name}.png",
-                        "url": f"https://github.com/{user_name}?tab=repositories"
-                    },
-                    "title": "[Tournament:main] 1 new commit",
-                    "url": commit_url,
-                    "description": f"[`{commit_hash}`]({commit_url}) {message}",
-                    "color": 0x7289da
-                }
-            ]
-        }
+            payload = {
+                "username": "GitHub",
+                "content": f"{content}",
+                "embeds": [
+                    {
+                        "author":{
+                            "name": user_name,
+                            "icon_url": f"https://github.com/{user_name}.png",
+                            "url": f"https://github.com/{user_name}?tab=repositories"
+                        },
+                        "title": "[Tournament:main] 1 new commit",
+                        "url": commit_url,
+                        "description": f"[`{commit_hash}`]({commit_url}) {message}",
+                        "color": 0x7289da
+                    }
+                ]
+            }
 
-        try:
-            requests.post(WEBHOOK_URL, json=payload).raise_for_status()
-            print("[Discord] 通知を送信")
-        except Exception as e:
-            print (f"Discord通知失敗 : {e}")
+            try:
+                requests.post(WEBHOOK_URL, json=payload).raise_for_status()
+                print("[Discord] 通知を送信")
+            except Exception as e:
+                print (f"Discord通知失敗 : {e}")
     
     kill_token()

@@ -777,20 +777,15 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
 def find_diffs(old, new, path=""):
     diffs = []
     try:
-        if isinstance(old, dict) and isinstance(new, dict):
-            for key in set(old) & set(new):
-                subpath = f"{path} > {key}" if path else key
-                diffs += find_diffs(old[key], new[key], subpath)
-        elif isinstance(old, list) and isinstance(new, list):
+        if isinstance(old, list) and isinstance(new, list):
             for i, (o, n) in enumerate(zip(old, new)):
-                subpath = f"{path}"
+                subpath = f"{path} > {i}"
                 diffs += find_diffs(o, n, subpath)
             if len(old) != len(new):
                 display_path = path or "root"
                 diffs.append(f"{display_path}")
-        else:
-            if old != new:
-                diffs.append(path)
+        elif old != new:
+            diffs.append(path)
     except Exception as e:
         print (f"[find_diffs] 🔴エラー：更新の確認中 {path} - {e}")
     return diffs
@@ -854,15 +849,16 @@ if __name__ == "__main__":
 
         print("🚀 開始")
 
-        result = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
-        is_clean = result.returncode == 0 and result.stdout.strip() == ''
+        if not test:
+            result = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
+            is_clean = result.returncode == 0 and result.stdout.strip() == ''
 
-        if is_clean:
-            subprocess.run(['git', 'pull'])
-        else:
-            subprocess.run(['git', 'stash'])
-            subprocess.run(['git', 'pull'])
-            subprocess.run(['git', 'stash', 'pop'])
+            if is_clean:
+                subprocess.run(['git', 'pull'])
+            else:
+                subprocess.run(['git', 'stash'])
+                subprocess.run(['git', 'pull'])
+                subprocess.run(['git', 'stash', 'pop'])
         
         format_EventData(tags, added_Tournaments, updated_Tournaments)
 
@@ -896,61 +892,62 @@ if __name__ == "__main__":
 
             print(f"[DEBUG] タグ一覧 : {tags}")
 
-            timestampA = datetime.now(JST).strftime("%m-%d %H:%M:%S")
-            message = f"更新 : {', '.join(tags)} ({timestampA})"
+            if not test:
+                timestampA = datetime.now(JST).strftime("%m-%d %H:%M:%S")
+                message = f"更新 : {', '.join(tags)} ({timestampA})"
 
-            subprocess.run(["git", "commit", "-m", message], check=True)
-            subprocess.run(["git", "push"], check=True)
+                subprocess.run(["git", "commit", "-m", message], check=True)
+                subprocess.run(["git", "push"], check=True)
 
-            commit_hash = subprocess.check_output(
-                ["git", "rev-parse", "--short", "HEAD"], text=True
-            ).strip()
+                commit_hash = subprocess.check_output(
+                    ["git", "rev-parse", "--short", "HEAD"], text=True
+                ).strip()
 
-            repo_url = subprocess.check_output(
-                ["git", "config", "--get", "remote.origin.url"], text=True
-            ).strip()
+                repo_url = subprocess.check_output(
+                    ["git", "config", "--get", "remote.origin.url"], text=True
+                ).strip()
 
-            if repo_url.startswith("git@"):
-                # git@github.com:owner/repo.git → [https://github.com/owner/repo](https://github.com/owner/repo)
-                repo_url = repo_url.replace("git@github.com:", "[https://github.com/](https://github.com/)") \
-                    .removesuffix(".git")
-            else:
-                # https://…/repo.git → https://…/repo
-                repo_url = repo_url.removesuffix(".git")
+                if repo_url.startswith("git@"):
+                    # git@github.com:owner/repo.git → [https://github.com/owner/repo](https://github.com/owner/repo)
+                    repo_url = repo_url.replace("git@github.com:", "[https://github.com/](https://github.com/)") \
+                        .removesuffix(".git")
+                else:
+                    # https://…/repo.git → https://…/repo
+                    repo_url = repo_url.removesuffix(".git")
 
-            commit_url = f"{repo_url}/commit/{commit_hash}"
-            user_name = subprocess.check_output(
-                ["git", "config", "user.name"], text=True
-            ).strip()
+                commit_url = f"{repo_url}/commit/{commit_hash}"
+                user_name = subprocess.check_output(
+                    ["git", "config", "user.name"], text=True
+                ).strip()
 
-            if "ASIA" in tags or any(tag.endswith("(ja)") for tag in tags) in tags or added_Tournaments or updated_Tournaments or playlist_tags:
-                content = f"## 更新 : {', '.join(tags)} <@&1372839358591139840>"
-            else:
-                content = f"## 更新 : {', '.join(tags)}"
+                if "ASIA" in tags or any(tag.endswith("(ja)") for tag in tags) in tags or added_Tournaments or updated_Tournaments or playlist_tags:
+                    content = f"## 更新 : {', '.join(tags)} <@&1372839358591139840>"
+                else:
+                    content = f"## 更新 : {', '.join(tags)}"
 
-            payload = {
-                "username": "GitHub",
-                "content": content,
-                "embeds": [
-                    {
-                        "author":{
-                            "name": user_name,
-                            "icon_url": f"https://github.com/{user_name}.png",
-                            "url": f"https://github.com/{user_name}?tab=repositories"
-                        },
-                        "title": "[Tournament:main] 1 new commit",
-                        "url": commit_url,
-                        "description": f"[`{commit_hash}`]({commit_url}) {message}",
-                        "color": 0x7289da,
-                    }
-                ]
-            }
+                payload = {
+                    "username": "GitHub",
+                    "content": content,
+                    "embeds": [
+                        {
+                            "author":{
+                                "name": user_name,
+                                "icon_url": f"https://github.com/{user_name}.png",
+                                "url": f"https://github.com/{user_name}?tab=repositories"
+                            },
+                            "title": "[Tournament:main] 1 new commit",
+                            "url": commit_url,
+                            "description": f"[`{commit_hash}`]({commit_url}) {message}",
+                            "color": 0x7289da,
+                        }
+                    ]
+                }
 
-            try:
-                requests.post(WEBHOOK_URL, json=payload).raise_for_status()
-                print("[Discord] 通知を送信")
-            except Exception as e:
-                print (f"Discord通知失敗 : {e}")
+                try:
+                    requests.post(WEBHOOK_URL, json=payload).raise_for_status()
+                    print("[Discord] 通知を送信")
+                except Exception as e:
+                    print (f"Discord通知失敗 : {e}")
 
         print(f"⏳ 40秒待機中... ({datetime.now(JST).strftime('%H:%M:%S')} ～ {(datetime.now(JST) + timedelta(seconds=40)).strftime('%H:%M:%S')})")
         time.sleep(40)
