@@ -783,7 +783,7 @@ def find_diffs(old, new, path=""):
     try:
         if isinstance(old, dict) and isinstance(new, dict):
             for key in set(old) & set(new):
-                subpath = f"{path}/{key}" if path else key
+                subpath = f"{path} > {key}" if path else key
                 diffs += find_diffs(old[key], new[key], subpath)
         elif isinstance(old, list) and isinstance(new, list):
             for i, (o, n) in enumerate(zip(old, new)):
@@ -828,13 +828,11 @@ def get_value_by_path(before_data, new_data, diffs):
             keys = path_str.split(' > ')
             for key in keys:
                 if isinstance(data, list):
-                    # リスト内アクセスはスキップ（全体を渡す）
-                    break
+                    data = data[0]
                 data = data[key]
             return data
         except (KeyError, IndexError, TypeError) as e:
-            print(f"[get_value_by_path] 🔴エラー：末端のパスの値の確認中 {path_str} - {e}")
-            return None
+            print (f"[Tournament] 🔴エラー：末端のパスの値の確認中 {diffs} - {e}")
 
     results = {}
     for path_str in diffs:
