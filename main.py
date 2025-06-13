@@ -760,6 +760,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                         ).raise_for_status()
                     except Exception as e:
                         print (f"[format_EventData] 🔴エラー：Tournament更新のDiscord送信 {e}")
+                        print (payload)
                 time.sleep(2)
                 if Webhook2 is True:
                     try:
@@ -770,6 +771,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                         ).raise_for_status()
                     except Exception as e:
                         print (f"[format_EventData] 🔴エラー：Tournament更新のDiscord送信 {e}")
+                        print (payload)
             sent.add(display_id)
 
     if not added_Tournaments and not updated_Tournaments:
