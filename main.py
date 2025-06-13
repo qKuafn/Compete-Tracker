@@ -703,6 +703,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                         ).raise_for_status()
                     except Exception as e:
                         print (f"[format_EventData] 🔴 エラー：新TournamentのDiscord送信 {e}")
+                        print (embeds)
             sent.add(display_id)
 
         elif new_data != before_data:
