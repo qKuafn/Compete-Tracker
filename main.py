@@ -813,7 +813,7 @@ def shorten_diff_paths(diffs, max_depth=2):
             if len(parts) <= max_depth:
                 result.add(path)
             else:
-                result.add(" >".join(parts[:max_depth + 1]))
+                result.add(" > ".join(parts[:max_depth + 1]))
     except Exception as e:
         print (f"[shorten_diff_paths] 🔴エラー：パスの修正中 {diffs} - {e}")
     return sorted(result)
