@@ -647,10 +647,10 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
         title_key   = list(new_data[0].keys())[0]
         before_root = before_data[0].get(title_key, {}) if before_data else {}
         after_root  = new_data[0][title_key]
-        diffs       = find_diffs(before_root, after_root, title_key)
-        diffs = filter_diffs(diffs, ignore_keys)
-        diffs = shorten_diff_paths(diffs, max_depth=2)
-        path        = get_value_by_path(before_data, new_data, diffs)
+        if before_data != new_data:
+            diffs       = find_diffs(before_root, after_root, title_key)
+            diffs       = filter_diffs(diffs, ignore_keys)
+            path        = get_value_by_path(before_data, new_data, diffs)
 
         # === 保存 & タグ追加 ===
         if before_data is None:
@@ -703,13 +703,15 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                         ).raise_for_status()
                     except Exception as e:
                         print (f"[format_EventData] 🔴 エラー：新TournamentのDiscord送信 {e}")
+                        print (embeds)
             sent.add(display_id)
 
         elif new_data != before_data:
             embeds = []
             for path_str, values in path.items():
+                display_path = path_str.replace(" > A", "")
                 changes_section = []
-                new_path  = path_str.split(" > ", 1)[1] if " > " in path_str else path_str
+                new_path  = display_path.split(" > ", 1)[1] if " > " in display_path else display_path
 
                 old_val = values.get("old", "不明")
                 new_val = values.get("new", "不明")
@@ -758,7 +760,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                             files=files
                         ).raise_for_status()
                     except Exception as e:
-                        print (f"[format_EventData] 🔴エラー：Tournament更新のDiscord送信 {e}")
+                        print (f"[format_EventData] 🔴 エラー：Tournament更新のDiscord送信 {e}")
                 time.sleep(2)
                 if Webhook2 is True:
                     try:
@@ -768,7 +770,8 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                             files=files
                         ).raise_for_status()
                     except Exception as e:
-                        print (f"[format_EventData] 🔴エラー：Tournament更新のDiscord送信 {e}")
+                        print (f"[format_EventData] 🔴 エラー：Tournament更新のDiscord送信 {e}")
+                        print (embeds)
             sent.add(display_id)
 
     if not added_Tournaments and not updated_Tournaments:
@@ -778,17 +781,42 @@ def find_diffs(old, new, path=""):
     diffs = []
     try:
         if isinstance(old, list) and isinstance(new, list):
-            for i, (o, n) in enumerate(zip(old, new)):
-                subpath = f"{path} > {i}"
-                diffs += find_diffs(o, n, subpath)
+            length = max(len(old), len(new))
+            for i in range(length):
+                o = old[i] if i < len(old) else None
+                n = new[i] if i < len(new) else None
+
+                if len(old) == 1 and len(new) == 1:
+                    subpath = f"{path} > A" if path else "A"
+                else:
+                    subpath = f"{path} > {i}" if path else str(i)
+
+                sub_diffs = find_diffs(o, n, subpath)
+                if sub_diffs:
+                    diffs += sub_diffs
+
+        elif isinstance(old, dict) and isinstance(new, dict):
+            all_keys = set(old.keys()) | set(new.keys())
+            for key in all_keys:
+                o = old.get(key)
+                n = new.get(key)
+                subpath = f"{path} > {key}" if path else key
+                sub_diffs = find_diffs(o, n, subpath)
+                if sub_diffs:
+                    diffs += sub_diffs
+
             if len(old) != len(new):
                 display_path = path or "root"
                 diffs.append(f"{display_path}")
+
         elif old != new:
-            diffs.append(path)
+                print(f"[find_diffs] ❗ 差分検出: {path} | old={old} → new={new}")
+                diffs.append(path)
+
+        return diffs
     except Exception as e:
-        print (f"[find_diffs] 🔴エラー：更新の確認中 {path} - {e}")
-    return diffs
+        print(f"[find_diffs] 🔴 エラー：更新の確認中 {path} - {e}")
+        return None
 
 def filter_diffs(diffs, ignore_keys):
     filtered = []
@@ -796,45 +824,70 @@ def filter_diffs(diffs, ignore_keys):
         for d in diffs:
             if not any(d.endswith(k) for k in ignore_keys):
                 filtered.append(d)
+        shortened = shorten_diff_paths(filtered)
+        return shortened
     except Exception as e:
-        print (f"[filter_diffs] 🔴エラー：UNIX,UTCの除外中 {ignore_keys} - {e}")
-    return filtered
+        print(f"[filter_diffs] 🔴 エラー：UNIX,UTCの除外中 {ignore_keys} - {e}")
+        return None
 
-def shorten_diff_paths(diffs, max_depth=2):
+def shorten_diff_paths(diffs, max_depth=5):
     result = set()
     try:
         for path in diffs:
             parts = path.split(" > ")
-            if len(parts) <= max_depth:
-                result.add(path)
+            
+            cutoff_index = None
+            for i, part in enumerate(parts):
+                if part.isdigit():
+                    cutoff_index = i
+                    break
+            
+            if cutoff_index is not None:
+                shortened = " > ".join(parts[:cutoff_index + 1])
             else:
-                result.add(" > ".join(parts[:max_depth + 1]))
+                if len(parts) <= max_depth:
+                    shortened = " > ".join(parts)
+                else:
+                    shortened = " > ".join(parts[:max_depth])
+            
+            result.add(shortened)
     except Exception as e:
-        print (f"[shorten_diff_paths] 🔴エラー：パスの修正中 {diffs} - {e}")
-    return sorted(result)
+        print(f"[shorten_diff_paths] 🔴 エラー：パスの修正中 {diffs} - {e}")
+    result_list = sorted(result)
+    return result_list
 
 def get_value_by_path(before_data, new_data, diffs):
-    def get_nested_value(data, path_str):
-        try:
-            keys = path_str.split(' > ')
-            for key in keys:
-                if isinstance(data, list):
-                    data = data[0]
-                data = data[key]
-            return data
-        except (KeyError, IndexError, TypeError) as e:
-            print (f"[get_value_by_path] 🔴エラー：末端のパスの値の確認中 {diffs} - {e}")
+    use_diffs = [f"0 > {d}" for d in diffs]
+    if use_diffs:
+        def get_nested_value(data, path_str):
+            try:
+                keys = path_str.split(' > ')
+                for i, key in enumerate(keys):
+                    if isinstance(data, list):
+                        if key == "A":
+                            idx = 0
+                        elif key.isdigit():
+                            idx = int(key)
+                        else:
+                            return "Error"
+                        data = data[idx]
+                    elif isinstance(data, dict):
+                        data = data[key]
+                return data
+            except Exception as e:
+                print(f"[get_value_by_path] 🔴 エラー：末端のパスの値の確認中 {use_diffs} - {e}")
+                return "Error"
 
-    results = {}
-    for path_str in diffs:
-        old_value = get_nested_value(before_data, path_str)
-        new_value = get_nested_value(new_data, path_str)
-        results[path_str] = {
-            "old": old_value,
-            "new": new_value
-        }
+        results = {}
+        for path_str in use_diffs:
+            old_value = get_nested_value(before_data, path_str)
+            new_value = get_nested_value(new_data, path_str)
+            results[path_str] = {
+                "old": old_value,
+                "new": new_value
+            }
+        return results
 
-    return results
 
 # === 実行 ===
 if __name__ == "__main__":
