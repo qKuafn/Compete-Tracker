@@ -272,7 +272,7 @@ def fetch_api5(tags, version, build, playlist_tags):
                 # 変更されたIDを検出
                 changed_ids = detect_changed_ids(current_id_list, new_data, before_data)
                 changed_ids_tournament = [id for id in changed_ids if "Showdown" in id]
-                if changed_ids_tournament and (not new) and (not delete):
+                if changed_ids_tournament:
                     for ids in changed_ids_tournament:
                         tags.append(f"{ids} (Upd)")
                         playlist_tags.append(ids)
@@ -656,10 +656,10 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
         title_key   = list(new_data[0].keys())[0]
         before_root = before_data[0].get(title_key, {}) if before_data else {}
         after_root  = new_data[0][title_key]
-        diffs       = find_diffs(before_root, after_root, title_key)
-        diffs = filter_diffs(diffs, ignore_keys)
-        diffs = shorten_diff_paths(diffs, max_depth=2)
-        path        = get_value_by_path(before_data, new_data, diffs)
+        if before_data!= new_data:
+            diffs       = find_diffs(before_root, after_root, title_key)
+            diffs       = filter_diffs(diffs, ignore_keys)
+            path        = get_value_by_path(before_data, new_data, diffs)
 
         # === 保存 & タグ追加 ===
         if before_data is None:
@@ -704,7 +704,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                             files=files
                         ).raise_for_status()
                     except Exception as e:
-                        print (f"[Tournament] 🔴エラー：新TournamentのDiscord送信 {e}")
+                        print (f"[Tournament] 🔴 エラー：新TournamentのDiscord送信 {e}")
                 time.sleep(2)
                 if Webhook2 is True:
                     try:
@@ -714,14 +714,16 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                             files=files
                         ).raise_for_status()
                     except Exception as e:
-                        print (f"[Tournament] 🔴エラー：新TournamentのDiscord送信 {e}")
+                        print (f"[Tournament] 🔴 エラー：新TournamentのDiscord送信 {e}")
+                        print (embeds)
             sent.add(display_id)
 
         elif new_data != before_data:
             embeds = []
             for path_str, values in path.items():
+                display_path = path_str.replace(" > A", "")
                 changes_section = []
-                new_path  = path_str.split(" > ", 1)[1] if " > " in path_str else path_str
+                new_path  = display_path.split("/", 1)[1] if "/" in display_path else display_path
 
                 old_val = values.get("old", "不明")
                 new_val = values.get("new", "不明")
@@ -731,23 +733,22 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                         return f"```json\n{json.dumps(val, ensure_ascii=False, indent=2)}\n```"
                     return f"```{val}```"
                 
-                if len(embeds) < 8:
-                    changes_section.append({
-                        "name": "過去データ" ,
-                        "value": format_value(old_val),
-                        "inline": not isinstance(old_val, (dict, list))
-                    })
-                    changes_section.append({
-                        "name": "新データ" ,
-                        "value": format_value(new_val),
-                        "inline": not isinstance(new_val, (dict, list))
-                    })
-                    embed_changes = {
-                        "title": new_path,
-                        "fields": changes_section,
-                        "timestamp": datetime.now(UTC).isoformat()
-                    }
-                    embeds.append (embed_changes)
+                changes_section.append({
+                    "name": "過去データ" ,
+                    "value": format_value(old_val),
+                    "inline": not isinstance(old_val, (dict, list))
+                })
+                changes_section.append({
+                    "name": "新データ" ,
+                    "value": format_value(new_val),
+                    "inline": not isinstance(new_val, (dict, list))
+                })
+                embed_changes = {
+                    "title": new_path,
+                    "fields": changes_section,
+                    "timestamp": datetime.now(UTC).isoformat()
+                }
+                embeds.append (embed_changes)
 
             content = (
                 f"<@&1372839358591139840><@&1359477859764273193>\n"
@@ -765,7 +766,7 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                             files=files
                         ).raise_for_status()
                     except Exception as e:
-                        print (f"[Tournament] 🔴エラー：Tournament更新のDiscord送信 {e}")
+                        print (f"[Tournament] 🔴 エラー：Tournament更新のDiscord送信 {e}")
                 time.sleep(2)
                 if Webhook2 is True:
                     try:
@@ -775,29 +776,50 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                             files=files
                         ).raise_for_status()
                     except Exception as e:
-                        print (f"[Tournament] 🔴エラー：Tournament更新のDiscord送信 {e}")
+                        print (f"[Tournament] 🔴 エラー：Tournament更新のDiscord送信 {e}")
+                        print (embeds)
             sent.add(display_id)
 
 def find_diffs(old, new, path=""):
     diffs = []
     try:
-        if isinstance(old, dict) and isinstance(new, dict):
-            for key in set(old) & set(new):
+        if isinstance(old, list) and isinstance(new, list):
+            length = max(len(old), len(new))
+            for i in range(length):
+                o = old[i] if i < len(old) else None
+                n = new[i] if i < len(new) else None
+
+                if len(old) == 1 and len(new) == 1:
+                    subpath = f"{path} > A" if path else "A"
+                else:
+                    subpath = f"{path} > {i}" if path else str(i)
+
+                sub_diffs = find_diffs(o, n, subpath)
+                if sub_diffs:
+                    diffs += sub_diffs
+
+        elif isinstance(old, dict) and isinstance(new, dict):
+            all_keys = set(old.keys()) | set(new.keys())
+            for key in all_keys:
+                o = old.get(key)
+                n = new.get(key)
                 subpath = f"{path} > {key}" if path else key
-                diffs += find_diffs(old[key], new[key], subpath)
-        elif isinstance(old, list) and isinstance(new, list):
-            for i, (o, n) in enumerate(zip(old, new)):
-                subpath = f"{path}"
-                diffs += find_diffs(o, n, subpath)
+                sub_diffs = find_diffs(o, n, subpath)
+                if sub_diffs:
+                    diffs += sub_diffs
+
             if len(old) != len(new):
                 display_path = path or "root"
                 diffs.append(f"{display_path}")
-        else:
-            if old != new:
+
+        elif old != new:
+                print(f"[find_diffs] ❗ 差分検出: {path} | old={old} → new={new}")
                 diffs.append(path)
+
+        return diffs
     except Exception as e:
-        print (f"[Tournament] 🔴エラー：更新の確認中 {path} - {e}")
-    return diffs
+        print(f"[find_diffs] 🔴 エラー：更新の確認中 {path} - {e}")
+        return None
 
 def filter_diffs(diffs, ignore_keys):
     filtered = []
@@ -805,45 +827,74 @@ def filter_diffs(diffs, ignore_keys):
         for d in diffs:
             if not any(d.endswith(k) for k in ignore_keys):
                 filtered.append(d)
+        shortened = shorten_diff_paths(filtered)
+        return shortened
     except Exception as e:
-        print (f"[Tournament] 🔴エラー：UNIX,UTCの除外中 {ignore_keys} - {e}")
-    return filtered
+        print(f"[filter_diffs] 🔴 エラー：UNIX,UTCの除外中 {ignore_keys} - {e}")
+        return None
 
-def shorten_diff_paths(diffs, max_depth=2):
+def shorten_diff_paths(diffs, max_depth=5):
     result = set()
     try:
         for path in diffs:
             parts = path.split(" > ")
-            if len(parts) <= max_depth:
-                result.add(path)
+            print(parts)
+            
+            cutoff_index = None
+            for i, part in enumerate(parts):
+                if part.isdigit():
+                    cutoff_index = i
+                    break
+            
+            if cutoff_index is not None:
+                shortened = " > ".join(parts[:cutoff_index + 1])
             else:
-                result.add(" > ".join(parts[:max_depth + 1]))
+                if len(parts) <= max_depth:
+                    shortened = " > ".join(parts)
+                else:
+                    shortened = " > ".join(parts[:max_depth])
+            
+            print(f"[shorten_diff_paths] ✂️ パス短縮: {path} ➡ {shortened}")
+            result.add(shortened)
     except Exception as e:
-        print (f"[Tournament] 🔴エラー：パスの修正中 {diffs} - {e}")
-    return sorted(result)
+        print(f"[shorten_diff_paths] 🔴 エラー：パスの修正中 {diffs} - {e}")
+    result_list = sorted(result)
+    print(f"[shorten_diff_paths] 更新パス一覧: {result_list}")
+    return result_list
 
 def get_value_by_path(before_data, new_data, diffs):
-    def get_nested_value(data, path_str):
-        try:
-            keys = path_str.split(' > ')
-            for key in keys:
-                if isinstance(data, list):
-                    data = data[0]
-                data = data[key]
-            return data
-        except (KeyError, IndexError, TypeError) as e:
-            print (f"[Tournament] 🔴エラー：末端のパスの値の確認中 {diffs} - {e}")
+    print(f"[DEBUG] 受け取った変更箇所 : {diffs}")
+    use_diffs = [f"0 > {d}" for d in diffs]
+    print (use_diffs)
+    if use_diffs:
+        def get_nested_value(data, path_str):
+            try:
+                keys = path_str.split(' > ')
+                for i, key in enumerate(keys):
+                    if isinstance(data, list):
+                        if key == "A":
+                            idx = 0
+                        elif key.isdigit():
+                            idx = int(key)
+                        else:
+                            return "Error"
+                        data = data[idx]
+                    elif isinstance(data, dict):
+                        data = data[key]
+                return data
+            except Exception as e:
+                print(f"[get_value_by_path] 🔴 エラー：末端のパスの値の確認中 {use_diffs} - {e}")
+                return "Error"
 
-    results = {}
-    for path_str in diffs:
-        old_value = get_nested_value(before_data, path_str)
-        new_value = get_nested_value(new_data, path_str)
-        results[path_str] = {
-            "old": old_value,
-            "new": new_value
-        }
-
-    return results
+        results = {}
+        for path_str in use_diffs:
+            old_value = get_nested_value(before_data, path_str)
+            new_value = get_nested_value(new_data, path_str)
+            results[path_str] = {
+                "old": old_value,
+                "new": new_value
+            }
+        return results
 
 # === 実行 ===
 if __name__ == "__main__":
@@ -855,16 +906,15 @@ if __name__ == "__main__":
 
     print("🚀 開始")
 
-    if not test:
-        result = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
-        is_clean = result.returncode == 0 and result.stdout.strip() == ''
+    result = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
+    is_clean = result.returncode == 0 and result.stdout.strip() == ''
 
-        if is_clean:
-            subprocess.run(['git', 'pull'])
-        else:
-            subprocess.run(['git', 'stash'])
-            subprocess.run(['git', 'pull'])
-            subprocess.run(['git', 'stash', 'pop'])
+    if is_clean:
+        subprocess.run(['git', 'pull'])
+    else:
+        subprocess.run(['git', 'stash'])
+        subprocess.run(['git', 'pull'])
+        subprocess.run(['git', 'stash', 'pop'])
     
     extract_tournament_data(tags, added_Tournaments, updated_Tournaments)
     print("=" * 20)
@@ -908,61 +958,60 @@ if __name__ == "__main__":
 
         print(f"[DEBUG] タグ一覧 : {tags}")
 
-        if not test:
-            timestampA = datetime.now(JST).strftime("%m-%d %H:%M:%S")
-            message = f"更新 : {', '.join(tags)} ({timestampA}) - GitHubActions"
+        timestampA = datetime.now(JST).strftime("%m-%d %H:%M:%S")
+        message = f"更新 : {', '.join(tags)} ({timestampA}) - GitHubActions"
 
-            subprocess.run(["git", "commit", "-m", message], check=True)
-            subprocess.run(["git", "push"], check=True)
+        subprocess.run(["git", "commit", "-m", message], check=True)
+        subprocess.run(["git", "push"], check=True)
 
-            commit_hash = subprocess.check_output(
-                ["git", "rev-parse", "--short", "HEAD"], text=True
-            ).strip()
+        commit_hash = subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"], text=True
+        ).strip()
 
-            repo_url = subprocess.check_output(
-                ["git", "config", "--get", "remote.origin.url"], text=True
-            ).strip()
+        repo_url = subprocess.check_output(
+            ["git", "config", "--get", "remote.origin.url"], text=True
+        ).strip()
 
-            if repo_url.startswith("git@"):
-                # git@github.com:owner/repo.git → [https://github.com/owner/repo](https://github.com/owner/repo)
-                repo_url = repo_url.replace("git@github.com:", "[https://github.com/](https://github.com/)") \
-                    .removesuffix(".git")
-            else:
-                # https://…/repo.git → https://…/repo
-                repo_url = repo_url.removesuffix(".git")
+        if repo_url.startswith("git@"):
+            # git@github.com:owner/repo.git → [https://github.com/owner/repo](https://github.com/owner/repo)
+            repo_url = repo_url.replace("git@github.com:", "[https://github.com/](https://github.com/)") \
+                .removesuffix(".git")
+        else:
+            # https://…/repo.git → https://…/repo
+            repo_url = repo_url.removesuffix(".git")
 
-            commit_url = f"{repo_url}/commit/{commit_hash}"
-            user_name = subprocess.check_output(
-                ["git", "config", "user.name"], text=True
-            ).strip()
+        commit_url = f"{repo_url}/commit/{commit_hash}"
+        user_name = subprocess.check_output(
+            ["git", "config", "user.name"], text=True
+        ).strip()
 
-            if "ASIA" in tags or any(tag.endswith("(ja)") for tag in tags) in tags or added_Tournaments or updated_Tournaments or playlist_tags:
-                content = f"## 🆕 : {', '.join(tags)} <@&1372839358591139840>"
-            else:
-                content = f"## 更新 : {', '.join(tags)}"
+        if "ASIA" in tags or any(tag.endswith("(ja)") for tag in tags) in tags or added_Tournaments or updated_Tournaments or playlist_tags:
+            content = f"## 🆕 : {', '.join(tags)} <@&1372839358591139840>"
+        else:
+            content = f"## 更新 : {', '.join(tags)}"
 
-            payload = {
-                "username": "GitHub",
-                "content": f"{content}",
-                "embeds": [
-                    {
-                        "author":{
-                            "name": user_name,
-                            "icon_url": f"https://github.com/{user_name}.png",
-                            "url": f"https://github.com/{user_name}?tab=repositories"
-                        },
-                        "title": "[Tournament:main] 1 new commit",
-                        "url": commit_url,
-                        "description": f"[`{commit_hash}`]({commit_url}) {message}",
-                        "color": 0x7289da
-                    }
-                ]
-            }
+        payload = {
+            "username": "GitHub",
+            "content": f"{content}",
+            "embeds": [
+                {
+                    "author":{
+                        "name": user_name,
+                        "icon_url": f"https://github.com/{user_name}.png",
+                        "url": f"https://github.com/{user_name}?tab=repositories"
+                    },
+                    "title": "[Tournament:main] 1 new commit",
+                    "url": commit_url,
+                    "description": f"[`{commit_hash}`]({commit_url}) {message}",
+                    "color": 0x7289da
+                }
+            ]
+        }
 
-            try:
-                requests.post(WEBHOOK_URL, json=payload).raise_for_status()
-                print("[Discord] 通知を送信")
-            except Exception as e:
-                print (f"Discord通知失敗 : {e}")
+        try:
+            requests.post(WEBHOOK_URL, json=payload).raise_for_status()
+            print("[Discord] 通知を送信")
+        except Exception as e:
+            print (f"Discord通知失敗 : {e}")
     
     kill_token()
