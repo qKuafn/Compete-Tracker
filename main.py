@@ -869,14 +869,14 @@ def get_value_by_path(before_data, new_data, diffs):
                         elif key.isdigit():
                             idx = int(key)
                         else:
-                            return "Error"
+                            return None
                         data = data[idx]
                     elif isinstance(data, dict):
                         data = data[key]
                 return data
             except Exception as e:
                 print(f"[get_value_by_path] 🔴 エラー：末端のパスの値の確認中 {use_diffs} - {e}")
-                return "Error"
+                return None
 
         results = {}
         for path_str in use_diffs:
