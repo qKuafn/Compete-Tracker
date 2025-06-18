@@ -34,9 +34,9 @@ def get_unique_filepath(base_dir, base_name):
     while True:
         path = os.path.join(base_dir, f"{base_name} {date_str}({counter}).json")
         if not os.path.exists(path):
+            print(f"　　Archiveファイル : {base_name} {date_str}({counter}).json")
             return path
         counter += 1
-        print(f"　　Archiveの作成に成功 : {base_name} {date_str}({counter}).json")
 
 def load_json(path):
     try:
