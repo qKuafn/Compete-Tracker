@@ -269,7 +269,8 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(new_data, f, ensure_ascii=False, indent=2)
                     print(f"[Playlist] 🟢 更新あり")
-                    playlist_send_discord_notify(new, delete, update)
+                    if changed_ids_tournament:
+                        playlist_send_discord_notify(new, delete, update)
                     return True
                 except Exception as e:
                     print(f"[Playlist] ❌️ ファイルの保存に失敗 : {e}")
