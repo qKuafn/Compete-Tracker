@@ -54,7 +54,7 @@ def load_json(path):
 
 # === トークン取得 ===
 def get_token():
-    global access_token, last_token_time
+    global access_token, token_type, last_token_time
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
         "Authorization": f"Basic {AUTH_TOKEN}"
@@ -69,6 +69,7 @@ def get_token():
         res = requests.post("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token", headers=headers, data=data)
         res.raise_for_status()
         access_token = res.json().get("access_token")
+        token_type = res.json().get("token_type")
         last_token_time = time.time()
     except Exception as e:
         print(f"[get_token] ❌ トークン取得失敗: {e}")
@@ -87,7 +88,7 @@ def fetch_EventData(region, tags):
     url = f"{TOURNAMENT_URL}?region={region}"
     for attempt in range(2):
         ensure_token()
-        headers = {"Authorization": f"Bearer {access_token}"}
+        headers = {"Authorization": f"{token_type} {access_token}"}
         res = requests.get(url, headers=headers)
         if res.status_code == 200:
             data = res.json()
@@ -224,7 +225,7 @@ def fetch_Playlist(tags, version, build, playlist_tags):
     }
     for attempt in range(2):
         ensure_token()
-        headers = {"Authorization": f"Bearer {access_token}"}
+        headers = {"Authorization": f"{token_type} {access_token}"}
         res = requests.post(url, headers=headers, json=payload)
         if res.status_code == 200:
             new_data = res.json()
@@ -355,7 +356,7 @@ def playlist_send_discord_notify(new, delete, update):
 
 # === Eventの更新を詳しく確認 & 整形Jsonを保存 ===
 def get_token_for_format():
-    global access_token2, last_token_time2
+    global access_token2, token_type2, last_token_time2
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
         "Authorization": f"Basic {AUTH_TOKEN}"
@@ -370,6 +371,7 @@ def get_token_for_format():
         res = requests.post("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token", headers=headers, data=data)
         res.raise_for_status()
         access_token2 = res.json().get("access_token")
+        token_type2 = res.json().get("token_type")
         last_token_time2 = time.time()
     except Exception as e:
         print(f"[get_token2] ❌ トークン取得失敗: {e}")
@@ -387,7 +389,7 @@ def fetch_EventData_for_format():
     url = f"{TOURNAMENT_URL2}?region=ASIA"
     for attempt in range(2):
         ensure_token_for_format()
-        headers = {"Authorization": f"Bearer {access_token2}"}
+        headers = {"Authorization": f"{token_type2} {access_token2}"}
         res = requests.get(url, headers=headers)
         if res.status_code == 200:
             data = res.json()

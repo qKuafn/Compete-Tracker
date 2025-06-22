@@ -366,7 +366,7 @@ def playlist_send_discord_notify(new, delete, update):
 
 # === TournamentData ===
 def get_token_extract():
-    global access_token2, last_token_time2
+    global access_token2, token_type2, last_token_time2
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
         "Authorization": f"Basic {AUTH_TOKEN}"
@@ -381,6 +381,7 @@ def get_token_extract():
         res = requests.post("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token", headers=headers, data=data)
         res.raise_for_status()
         access_token2 = res.json().get("access_token")
+        token_type2 = res.json().get("token_type")
         last_token_time2 = time.time()
     except Exception as e:
         print(f"❌ トークン取得失敗: {e}")
@@ -394,7 +395,7 @@ def fetch_api1_extract():
     url = f"{TOURNAMENT_URL2}?region=ASIA"
     for attempt in range(2):
         ensure_token_extract()
-        headers = {"Authorization": f"Bearer {access_token2}"}
+        headers = {"Authorization": f"{token_type2} {access_token2}"}
         res = requests.get(url, headers=headers)
         if res.status_code == 200:
             data = res.json()
