@@ -1,6 +1,8 @@
 name: Auto Fetch API
 
 on:
+  schedule:
+    - cron: '*/1 * * * *'
   workflow_dispatch:
 
 permissions:

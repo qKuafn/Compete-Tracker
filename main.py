@@ -252,6 +252,8 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                         tags.append(f"{ids} (Del)")
                         playlist_tags.append(ids)
                         delete.append(ids)
+                else:
+                    tags.append("Playlist")
 
                 # 変更されたIDを検出
                 changed_ids = detect_changed_ids(current_id_list, new_data, before_data)
