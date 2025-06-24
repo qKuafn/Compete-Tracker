@@ -349,7 +349,8 @@ def playlist_send_discord_notify(new, delete, update):
             {
                 "title": "プレイリスト更新 (トーナメント)",
                 "fields": fields,
-                "timestamp": datetime.now(UTC).isoformat()
+                "timestamp": datetime.now(UTC).isoformat(),
+                "footer":"FNLive"
             }
         ]
     }
@@ -529,7 +530,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_date = {
                 "title":  "📅 **開催日時**",
                 "fields": date_section,\
-                "timestamp": datetime.now(UTC).isoformat()
+                "timestamp": datetime.now(UTC).isoformat(),
+                "footer":"FNLive"
             }
         except Exception as e:
             print (f"[Tournament] 🔴エラー：開催日時の組み立て中 {e}")
@@ -537,7 +539,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_date = {
                 "title":  "📅 **開催日時**",
                 "fields": date_section,
-                "timestamp": datetime.now(UTC).isoformat()
+                "timestamp": datetime.now(UTC).isoformat(),
+                "footer":"FNLive"
             }
 
         mode_section = []
@@ -552,7 +555,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_mode = {
                 "title":  "📍 **モード**",
                 "fields": mode_section,
-                "timestamp": datetime.now(UTC).isoformat()
+                "timestamp": datetime.now(UTC).isoformat(),
+                "footer":"FNLive"
             }
         except Exception as e:
             print (f"[Tournament] 🔴エラー：モードの組み立て中 {e}")
@@ -560,7 +564,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_mode = {
                 "title":  "📍 **モード**",
                 "fields": mode_section,
-                "timestamp": datetime.now(UTC).isoformat()
+                "timestamp": datetime.now(UTC).isoformat(),
+                "footer":"FNLive"
             }
 
         match_section = []
@@ -575,7 +580,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_match = {
                 "title":  "⚔️ **試合数**",
                 "fields": match_section,
-                "timestamp": datetime.now(UTC).isoformat()
+                "timestamp": datetime.now(UTC).isoformat(),
+                "footer":"FNLive"
             }
         except Exception as e:
             print (f"[Tournament] 🔴エラー：試合数の組み立て中 {e}")
@@ -583,7 +589,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_match = {
                 "title":  "⚔️ **試合数**",
                 "fields": match_section,
-                "timestamp": datetime.now(UTC).isoformat()
+                "timestamp": datetime.now(UTC).isoformat(),
+                "footer":"FNLive"
             }
 
         token_section = []
@@ -606,7 +613,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_token = {
                 "title":  "🔑 **参加資格**",
                 "fields": token_section,
-                "timestamp": datetime.now(UTC).isoformat()
+                "timestamp": datetime.now(UTC).isoformat(),
+                "footer":"FNLive"
             }
         except Exception as e:
             print (f"[Tournament] 🔴エラー：参加資格の組み立て中 {e}")
@@ -614,7 +622,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_token = {
                 "title":  "🔑 **参加資格**",
                 "fields": token_section,
-                "timestamp": datetime.now(UTC).isoformat()
+                "timestamp": datetime.now(UTC).isoformat(),
+                "footer":"FNLive"
             }
 
         payouts_section = []
@@ -630,7 +639,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_payout = {
                 "title":  "🎁 **賞金 / 賞品**",
                 "fields": payouts_section,
-                "timestamp": datetime.now(UTC).isoformat()
+                "timestamp": datetime.now(UTC).isoformat(),
+                "footer":"FNLive"
             }
         except Exception as e:
             print (f"[Tournament] 🔴エラー：賞金の組み立て中 {e}")
@@ -638,7 +648,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
             embed_payout = {
                 "title":  "🎁 **賞金 / 賞品**",
                 "fields": payouts_section,
-                "timestamp": datetime.now(UTC).isoformat()
+                "timestamp": datetime.now(UTC).isoformat(),
+                "footer":"FNLive"
             }
 
         try:
@@ -750,7 +761,8 @@ def extract_tournament_data(tags, added_Tournaments, updated_Tournaments):
                 embed_changes = {
                     "title": new_path,
                     "fields": changes_section,
-                    "timestamp": datetime.now(UTC).isoformat()
+                    "timestamp": datetime.now(UTC).isoformat(),
+                    "footer":"FNLive"
                 }
                 embeds.append (embed_changes)
 
