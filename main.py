@@ -304,7 +304,9 @@ def playlist_send_discord_notify(new, delete, update):
                 "title": "プレイリスト更新 (トーナメント)",
                 "fields": fields,
                 "timestamp": datetime.now(UTC).isoformat(),
-                "footer":"FNLive"
+                "footer":{
+                    "text":"FNLive"
+                }
             }
         ]
     }
@@ -458,7 +460,9 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "title":  "📅 **開催日時**",
                 "fields": date_section,
                 "timestamp": datetime.now(UTC).isoformat(),
-                "footer":"FNLive"
+                "footer":{
+                    "text":"FNLive"
+                }
             }
         except Exception as e:
             print (f"[format_EventData] 🔴 エラー：開催日時の組み立て中 {e}")
@@ -467,7 +471,9 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "title":  "📅 **開催日時**",
                 "fields": date_section,
                 "timestamp": datetime.now(UTC).isoformat(),
-                "footer":"FNLive"
+                "footer":{
+                    "text":"FNLive"
+                }
             }
 
         mode_section = []
@@ -490,7 +496,9 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "title":  "📍 **モード**",
                 "fields": mode_section,
                 "timestamp": datetime.now(UTC).isoformat(),
-                "footer":"FNLive"
+                "footer":{
+                    "text":"FNLive"
+                }
             }
 
         match_section = []
@@ -515,7 +523,9 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "title":  "⚔️ **試合数**",
                 "fields": match_section,
                 "timestamp": datetime.now(UTC).isoformat(),
-                "footer":"FNLive"
+                "footer":{
+                    "text":"FNLive"
+                }
             }
 
         token_section = []
@@ -539,7 +549,9 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "title":  "🔑 **参加資格**",
                 "fields": token_section,
                 "timestamp": datetime.now(UTC).isoformat(),
-                "footer":"FNLive"
+                "footer":{
+                    "text":"FNLive"
+                }
             }
         except Exception as e:
             print (f"[format_EventData] 🔴 エラー：参加資格の組み立て中 {e}")
@@ -548,7 +560,9 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "title":  "🔑 **参加資格**",
                 "fields": token_section,
                 "timestamp": datetime.now(UTC).isoformat(),
-                "footer":"FNLive"
+                "footer":{
+                    "text":"FNLive"
+                }
             }
 
         payouts_section = []
@@ -565,7 +579,9 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "title":  "🎁 **賞金 / 賞品**",
                 "fields": payouts_section,
                 "timestamp": datetime.now(UTC).isoformat(),
-                "footer":"FNLive"
+                "footer":{
+                    "text":"FNLive"
+                }
             }
         except Exception as e:
             print (f"[format_EventData] 🔴 エラー：賞金の組み立て中 {e}")
@@ -574,7 +590,9 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "title":  "🎁 **賞金 / 賞品**",
                 "fields": payouts_section,
                 "timestamp": datetime.now(UTC).isoformat(),
-                "footer":"FNLive"
+                "footer":{
+                    "text":"FNLive"
+                }
             }
 
         try:
@@ -685,7 +703,9 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                         "title": new_path,
                         "fields": changes_section,
                         "timestamp": datetime.now(UTC).isoformat(),
-                        "footer":"FNLive"
+                        "footer":{
+                            "text":"FNLive"
+                        }
                     }
                     embeds.append (embed_changes)
 
