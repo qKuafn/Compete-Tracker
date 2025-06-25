@@ -4,9 +4,11 @@ import time
 import os
 import subprocess
 from datetime import datetime, timezone, timedelta
-from config import *
-from pub_config import *
 from typing import List
+
+from get_token import ensure_token, get_token, get_token_for_format, ensure_token_for_format
+import config
+import pub_config as config2
 
 # === ファイルパス ===
 RESPONSE_DIR = "./response"
@@ -20,15 +22,8 @@ Lang = ["ja", "en"]
 JST = timezone(timedelta(hours=9))
 UTC = timezone(timedelta(hours=0))
 
-if test is True:
-    Webhook1 = False
-
-# === トークン管理 ===
-access_token = None
-access_token2 = None
-last_token_time = 0
-last_token_time2 = 0
-TOKEN_EXPIRATION = 120 * 60
+if config.test is True:
+    config2.Webhook1 = False
 
 # === アーカイブ用の保存先(名前)を指定 ===
 def get_unique_filepath(base_dir, base_name):
@@ -52,43 +47,12 @@ def load_json(path):
         print(f"[load_json] ❌️ json読み込みエラー: {e}")
         return None
 
-# === トークン取得 ===
-def get_token():
-    global access_token, token_type, last_token_time
-    headers = {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Authorization": f"Basic {AUTH_TOKEN}"
-    }
-    data = {
-        "grant_type": "device_auth",
-        "account_id": ACCOUNT_ID,
-        "device_id": DEVICE_ID,
-        "secret": SECRET,
-    }
-    try:
-        res = requests.post("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token", headers=headers, data=data)
-        res.raise_for_status()
-        access_token = res.json().get("access_token")
-        token_type = res.json().get("token_type")
-        last_token_time = time.time()
-    except Exception as e:
-        print(f"[get_token] ❌ トークン取得失敗: {e}")
-        access_token = None
-
-def ensure_token():
-    if access_token is None:
-        print ("[ensure_token] トークンを取得 (None)")
-        get_token()
-    if (time.time() - last_token_time) >= TOKEN_EXPIRATION:
-        print ("[ensure_token] トークンを取得 (期限切れ)")
-        get_token()
-
 # === Event Data API ===
 def fetch_EventData(region, tags):
-    url = f"{TOURNAMENT_URL}?region={region}"
+    url = f"{config.TOURNAMENT_URL}?region={region}"
     for attempt in range(2):
         ensure_token()
-        headers = {"Authorization": f"{token_type} {access_token}"}
+        headers = {"Authorization": f"{config.token_type} {config.access_token}"}
         res = requests.get(url, headers=headers)
         if res.status_code == 200:
             data = res.json()
@@ -100,7 +64,7 @@ def fetch_EventData(region, tags):
                 print("[EventData] ❌️ 旧ファイルの取得に失敗")
             if new_data != before_data or before_data is None:
                 try:
-                    if test is False:
+                    if config2.test is False:
                         with open(get_unique_filepath(ARCHIVE_DIR, f"EventData_{region}"), "w", encoding="utf-8") as f:
                             json.dump(data, f, ensure_ascii=False, indent=2)
                     with open(filepath, "w", encoding="utf-8") as f:
@@ -126,7 +90,7 @@ def fetch_EventData(region, tags):
 
 # === Main Web API ===
 def fetch_WebData(lang, tags):
-    url = f"{WEBAPI_URL}?lang={lang}"
+    url = f"{config.WEBAPI_URL}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
         data = res.json()
@@ -138,7 +102,7 @@ def fetch_WebData(lang, tags):
             print("[WebData] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
-                if test is False:
+                if config2.test is False:
                     with open(get_unique_filepath(ARCHIVE_DIR, f"WebData_{lang}"), "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
@@ -156,7 +120,7 @@ def fetch_WebData(lang, tags):
 
 # === ScoringRule Web API ===
 def fetch_ScoreInfo(lang, tags):
-    url = f"{WEBAPI_URL2}?lang={lang}"
+    url = f"{config.WEBAPI_URL2}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
         data = res.json()
@@ -168,7 +132,7 @@ def fetch_ScoreInfo(lang, tags):
             print("[ScoreInfo] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
-                if test is False:
+                if config2.test is False:
                     with open(get_unique_filepath(ARCHIVE_DIR, f"ScoreInfo_{lang}"), "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
@@ -186,7 +150,7 @@ def fetch_ScoreInfo(lang, tags):
 
 # === Leaderboard Web API ===
 def fetch_LeadInfo(lang, tags):
-    url = f"{WEBAPI_URL3}?lang={lang}"
+    url = f"{config.WEBAPI_URL3}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
         data = res.json()
@@ -198,7 +162,7 @@ def fetch_LeadInfo(lang, tags):
             print("[LeadInfo] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
-                if test is False:
+                if config2.test is False:
                     with open(get_unique_filepath(ARCHIVE_DIR, f"LeaderboardInfo_{lang}"), "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
@@ -219,13 +183,13 @@ def fetch_Playlist(tags, version, build, playlist_tags):
     new = []
     delete = []
     update = []
-    url = f"{PlaylistAPI_URL}/{version}/{build}?appId=Fortnite"
+    url = f"{config.PlaylistAPI_URL}/{version}/{build}?appId=Fortnite"
     payload = {
         "FortPlaylistAthena": 0
     }
     for attempt in range(2):
         ensure_token()
-        headers = {"Authorization": f"{token_type} {access_token}"}
+        headers = {"Authorization": f"{config.token_type} {config.access_token}"}
         res = requests.post(url, headers=headers, json=payload)
         if res.status_code == 200:
             new_data = res.json()
@@ -266,7 +230,7 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                         update.append(ids)
                 # 保存
                 try:
-                    if test is False:
+                    if config2.test is False:
                         with open(get_unique_filepath(ARCHIVE_DIR, f"PlaylistData"), "w", encoding="utf-8") as f:
                             json.dump(new_data, f, ensure_ascii=False, indent=2)
                     with open(filepath, "w", encoding="utf-8") as f:
@@ -344,53 +308,23 @@ def playlist_send_discord_notify(new, delete, update):
             }
         ]
     }
-    if Webhook1 is True:
+    if config2.Webhook1 is True:
         try:
-            requests.post(Tournament_Webhook_URL, json=payload).raise_for_status()
+            requests.post(config.Tournament_Webhook_URL, json=payload).raise_for_status()
         except Exception as e:
             print (f"[Playlist] ❌️ Discord通知失敗 : {e}")
-    if Webhook2 is True:
+    if config2.Webhook2 is True:
         try:
-            requests.post(Tournament_Webhook_URL2, json=payload).raise_for_status()
+            requests.post(config.Tournament_Webhook_URL2, json=payload).raise_for_status()
         except Exception as e:
             print (f"[Playlist] ❌️ Discord通知失敗 : {e}")
 
 # === Eventの更新を詳しく確認 & 整形Jsonを保存 ===
-def get_token_for_format():
-    global access_token2, token_type2, last_token_time2
-    headers = {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Authorization": f"Basic {AUTH_TOKEN}"
-    }
-    data = {
-        "grant_type": "device_auth",
-        "account_id": SECOND_ACCOUNT_ID,
-        "device_id": SECOND_DEVICE_ID,
-        "secret": SECOND_SECRET,
-    }
-    try:
-        res = requests.post("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token", headers=headers, data=data)
-        res.raise_for_status()
-        access_token2 = res.json().get("access_token")
-        token_type2 = res.json().get("token_type")
-        last_token_time2 = time.time()
-    except Exception as e:
-        print(f"[get_token2] ❌ トークン取得失敗: {e}")
-        access_token2 = None
-
-def ensure_token_for_format():
-    if access_token2 is None:
-        print ("[ensure2] トークンを取得 (None)")
-        get_token_for_format()
-    if (time.time() - last_token_time2) >= TOKEN_EXPIRATION:
-        print ("[ensure2] トークンを取得 (期限切れ)")
-        get_token_for_format()
-
 def fetch_EventData_for_format():
-    url = f"{TOURNAMENT_URL2}?region=ASIA"
+    url = f"{config.TOURNAMENT_URL2}?region=ASIA"
     for attempt in range(2):
         ensure_token_for_format()
-        headers = {"Authorization": f"{token_type2} {access_token2}"}
+        headers = {"Authorization": f"{config.token_type2} {config.access_token2}"}
         res = requests.get(url, headers=headers)
         if res.status_code == 200:
             data = res.json()
@@ -405,7 +339,7 @@ def fetch_EventData_for_format():
                 return None
 
 def fetch_WebData_for_format(lang):
-    url = f"{WEBAPI_URL}?lang={lang}"
+    url = f"{config.WEBAPI_URL}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
         data = res.json()
@@ -670,7 +604,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
         # === 保存 & タグ追加 ===
         if before_data is None:
             print(f"[format_EventData] 🟢 新トーナメント : {display_id}")
-            if test is False:
+            if config2.test is False:
                 with open(get_unique_filepath(TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
                     json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
@@ -680,7 +614,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
 
         elif new_data != before_data:
             print(f"[format_EventData] 🟢 トーナメント更新 : {display_id}")
-            if test is False:
+            if config2.test is False:
                 with open(get_unique_filepath(TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
                     json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
@@ -701,18 +635,18 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
             )
             with open(filepath, "rb") as fp:
                 files = {"file": (os.path.basename(filepath), fp, "application/json")}
-                if Webhook1 is True:
+                if config2.Webhook1 is True:
                     try:
                         requests.post(
-                            Tournament_Webhook_URL,data= {"payload_json": json.dumps({"content": content, "embeds": embeds}, ensure_ascii=False)} ,files=files
+                            config.Tournament_Webhook_URL,data= {"payload_json": json.dumps({"content": content, "embeds": embeds}, ensure_ascii=False)} ,files=files
                             ).raise_for_status()
                     except Exception as e:
                         print (f"[format_EventData] 🔴 エラー：新TournamentのDiscord送信 {e}")
                 time.sleep(2)
-                if Webhook2 is True:
+                if config2.Webhook2 is True:
                     try:
                         requests.post(
-                            Tournament_Webhook_URL2,
+                            config.Tournament_Webhook_URL2,
                             data={"payload_json": json.dumps({"content": content, "embeds": embeds}, ensure_ascii=False)},
                             files=files
                         ).raise_for_status()
@@ -768,20 +702,20 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
 
             with open(filepath, "rb") as fp:
                 files = {"file": (os.path.basename(filepath), fp, "application/json")}
-                if Webhook1 is True:
+                if config2.Webhook1 is True:
                     try:
                         requests.post(
-                            Tournament_Webhook_URL,
+                            config.Tournament_Webhook_URL,
                             data={"payload_json": json.dumps(payload, ensure_ascii=False)},
                             files=files
                         ).raise_for_status()
                     except Exception as e:
                         print (f"[format_EventData] 🔴 エラー：Tournament更新のDiscord送信 {e}")
                 time.sleep(2)
-                if Webhook2 is True:
+                if config2.Webhook2 is True:
                     try:
                         requests.post(
-                            Tournament_Webhook_URL2,
+                            config.Tournament_Webhook_URL2,
                             data={"payload_json": json.dumps(payload, ensure_ascii=False)},
                             files=files
                         ).raise_for_status()
@@ -918,7 +852,7 @@ if __name__ == "__main__":
 
         print("🚀 開始")
 
-        if not test:
+        if not config2.test:
             result = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
             is_clean = result.returncode == 0 and result.stdout.strip() == ''
 
@@ -945,7 +879,7 @@ if __name__ == "__main__":
         for lang in Lang:
             fetch_LeadInfo(lang, tags)
 
-        fetch_Playlist(tags, version, build, playlist_tags)
+        fetch_Playlist(tags, config2.version, config2.build, playlist_tags)
 
         subprocess.run(["git", "add", "."], check=True)
         git_diff = subprocess.run(["git", "diff", "--cached", "--quiet"])
@@ -961,7 +895,7 @@ if __name__ == "__main__":
 
             print(f"[DEBUG] タグ一覧 : {tags}")
 
-            if not test:
+            if not config2.test:
                 timestampA = datetime.now(JST).strftime("%m-%d %H:%M:%S")
                 message = f"更新 : {', '.join(tags)} ({timestampA})"
 
@@ -1013,7 +947,7 @@ if __name__ == "__main__":
                 }
 
                 try:
-                    requests.post(WEBHOOK_URL, json=payload).raise_for_status()
+                    requests.post(config.WEBHOOK_URL, json=payload).raise_for_status()
                     print("[Discord] 通知を送信")
                 except Exception as e:
                     print (f"Discord通知失敗 : {e}")
