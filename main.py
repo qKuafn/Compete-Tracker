@@ -22,7 +22,7 @@ Lang = ["ja", "en"]
 JST = timezone(timedelta(hours=9))
 UTC = timezone(timedelta(hours=0))
 
-if config.test is True:
+if config2.test is True:
     config2.Webhook1 = False
 
 # === アーカイブ用の保存先(名前)を指定 ===
