@@ -4,8 +4,8 @@ import time
 import config
 
 def get_token(type = "first"):
-    print(f"[get_token] トークンを取得 ({type})")
     count = "2" if type == "second" else ""
+    print(f"[get_token{count}] トークンを取得 ({type})")
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
         "Authorization": f"Basic {config.AUTH_TOKEN}"

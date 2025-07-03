@@ -122,6 +122,5 @@ if __name__ == "__main__":
     ensure_token("second")
     while True:
         main()
-
         print(f"⏳ 40秒待機中... ({datetime.now(JST).strftime('%H:%M:%S')} ～ {(datetime.now(JST) + timedelta(seconds=40)).strftime('%H:%M:%S')})")
         time.sleep(40)
