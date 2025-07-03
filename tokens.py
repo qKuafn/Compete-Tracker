@@ -4,6 +4,7 @@ import time
 import config
 
 def get_token(type = "first"):
+    print(f"[get_token] トークンを取得 ({type})")
     count = "2" if type == "second" else ""
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -22,7 +23,7 @@ def get_token(type = "first"):
         setattr(config, f"token_type{count}", res.json().get("token_type"))
         setattr(config, f"last_token_time{count}", time.time())
     else:
-        print(f"[get_token{count}] ❌ トークン取得失敗: {res.status_code} {res.text}")
+        print(f"  [get_token{count}] ❌ トークン取得失敗: {res.status_code} {res.text}")
         setattr(config, f"access_token{count}", None)
 
 def ensure_token(type="first"):
@@ -36,3 +37,17 @@ def ensure_token(type="first"):
     elif (time.time() - last_token_time) >= config.TOKEN_EXPIRATION:
         print (f"[ensure_token{count}] トークンを取得 (期限切れ)")
         get_token(type)
+
+def kill_token():
+    headers = {
+        "Authorization": f"{config.token_type} {config.access_token}"
+    }
+    try:
+        res = requests.delete(f"https://account-public-service-prod.ol.epicgames.com/account/api/oauth/sessions/kill/{config.access_token}", headers=headers)
+        if res.status_code == 204:
+            print ("[kill_token] アカウントトークンの削除に成功")
+        else:
+            print (f"[kill_token] トークンの削除に失敗: {res.status_code} {res.text}")
+    except Exception as e:
+        print(f"[kill_token] ❌ トークンの削除に失敗: {e}")
+        config.access_token = None

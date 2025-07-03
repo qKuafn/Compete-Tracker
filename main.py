@@ -3,7 +3,7 @@ import time
 import subprocess
 from datetime import datetime, timedelta
 
-from get_token import *
+from tokens import *
 from files import *
 from get_EventData import *
 from get_WebData import *
@@ -34,11 +34,8 @@ def main():
     
     format_EventData(tags, added_Tournaments, updated_Tournaments)
 
-    print ("[EventData] 取得開始")
     for region in config2.Regions:
         fetch_EventData(config2.main_type, region, tags, updated_regions)
-    if not updated_regions:
-        print("[EventData] 更新なし")
 
     for lang in config2.Lang:
         fetch_WebData(config2.main_type, lang, tags)
@@ -53,7 +50,7 @@ def main():
     git_diff = subprocess.run(["git", "diff", "--cached", "--quiet"])
     should_push = git_diff.returncode != 0
     if should_push is True:
-        print(f"[DEBUG] 🟢 should_push = {should_push}🟢")
+        print(f"[DEBUG] 🟢 should_push = {should_push}")
     else:
         print(f"[DEBUG] should_push = {should_push}")
 
@@ -117,7 +114,7 @@ def main():
             if res.status_code == 204 or res.status_code == 200:
                 print("[Discord] 通知を送信")
             if not (res.status_code == 204 or res.status_code == 200):
-                print (f"Discord通知失敗 : {res.status_code} {res.text}")
+                print (f"[Discord] Discord通知失敗 : {res.status_code} {res.text}")
 
 # === 実行 ===
 if __name__ == "__main__":
