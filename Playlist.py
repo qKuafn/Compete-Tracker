@@ -14,7 +14,7 @@ def fetch_Playlist(tags, version, build, playlist_tags):
     new = []
     delete = []
     update = []
-    url = f"{config.PlaylistAPI_URL}/{version}/{build}?appId=Fortnite"
+    url = f"{config.PlaylistUpd_URL}/{version}/{build}?appId=Fortnite"
     payload = {
         "FortPlaylistAthena": 0
     }

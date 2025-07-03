@@ -10,7 +10,7 @@ import pub_config as config2
 # === Main API ===
 def fetch_WebData(type, lang, tags=[]):
     count = "2" if type == "second" else ""
-    url = getattr(config, f"WEBAPI_URL{count}") + f"?lang={lang}"
+    url = getattr(config, f"Web_URL{count}") + f"?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
         data = res.json()
@@ -39,7 +39,7 @@ def fetch_WebData(type, lang, tags=[]):
     
 # === ScoringRules API ===
 def fetch_ScoreInfo(lang, tags):
-    url = f"{config.WEBAPI_URL2}?lang={lang}"
+    url = f"{config.ScoreRule_URL}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
         data = res.json()
@@ -69,7 +69,7 @@ def fetch_ScoreInfo(lang, tags):
 
 # === LeaderboardInfo API ===
 def fetch_LeadInfo(lang, tags):
-    url = f"{config.WEBAPI_URL3}?lang={lang}"
+    url = f"{config.LeadInfo_URL}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
         data = res.json()

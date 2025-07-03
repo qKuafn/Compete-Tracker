@@ -112,11 +112,12 @@ def main():
                 ]
             }
 
-            try:
-                requests.post(config.WEBHOOK_URL, json=payload).raise_for_status()
+            res = requests.post(config.Webhook_URL, json=payload)
+            res.raise_for_status()
+            if res.status_code == 204 or res.status_code == 200:
                 print("[Discord] 通知を送信")
-            except Exception as e:
-                print (f"Discord通知失敗 : {e}")
+            if not (res.status_code == 204 or res.status_code == 200):
+                print (f"Discord通知失敗 : {res.status_code} {res.text}")
 
 # === 実行 ===
 if __name__ == "__main__":

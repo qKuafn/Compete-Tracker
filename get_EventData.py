@@ -9,7 +9,7 @@ from files import *
 
 def fetch_EventData(type, region="ASIA", tags=[], updated_regions = []):
     count = "2" if type == "second" else ""
-    url = getattr(config, f"TOURNAMENT_URL{count}") + f"?region={region}"
+    url = getattr(config, f"EventData_URL{count}") + f"?region={region}"
     for attempt in range(2):
         ensure_token(type)
         headers = {"Authorization": getattr(config, f"token_type{count}") + " " + getattr(config, f"access_token{count}")}

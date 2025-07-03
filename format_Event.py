@@ -318,14 +318,16 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
             with open(filepath, "rb") as fp:
                 files = {"file": (os.path.basename(filepath), fp, "application/json")}
                 if config2.Webhook1 is True:
-                    res = requests.post(config.Tournament_Webhook_URL, data=data, files=files).raise_for_status()
+                    res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
+                    res.raise_for_status()
                     if res.status_code == 204 or res.status_code == 200:
                         print("[format_EventData] 🟢 新TournamentのDiscord送信成功")
                     else:
                         print (f"[format_EventData] 🔴 エラー：新TournamentのDiscord送信 {res.status_code} {res.text}")
-                time.sleep(2)
+                time.sleep(20)
                 if config2.Webhook2 is True:
-                    res = requests.post(config.Tournament_Webhook_URL2, data=data, files=files).raise_for_status()
+                    res = requests.post(config.Tournament_Webhook_URL2, data=data, files=files)
+                    res.raise_for_status()
                     if res.status_code == 204 or res.status_code == 200:
                         print("[format_EventData] 🟢 新TournamentのDiscord送信成功")
                     else:
@@ -382,14 +384,16 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
             with open(filepath, "rb") as fp:
                 files = {"file": (os.path.basename(filepath), fp, "application/json")}
                 if config2.Webhook1 is True:
-                    res = requests.post(config.Tournament_Webhook_URL, data=data, files=files).raise_for_status()
+                    res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
+                    res.raise_for_status()
                     if res.status_code == 204 or res.status_code == 200:
                         print("[format_EventData] 🟢 Tournament更新のDiscord送信成功")
                     else:
                         print (f"[format_EventData] 🔴 エラー：Tournament更新のDiscord送信 {res.status_code} {res.text}")
                 time.sleep(2)
                 if config2.Webhook2 is True:
-                    res = requests.post(config.Tournament_Webhook_URL2, data=data, files=files).raise_for_status()
+                    res = requests.post(config.Tournament_Webhook_URL2, data=data, files=files)
+                    res.raise_for_status()
                     if res.status_code == 204 or res.status_code == 200:
                         print("[format_EventData] 🟢 Tournament更新のDiscord送信成功")
                     else:

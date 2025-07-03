@@ -15,14 +15,14 @@ def get_token(type = "first"):
         "device_id": getattr(config, f"DEVICE_ID{count}"),
         "secret": getattr(config, f"SECRET{count}"),
     }
-    try:
-        res = requests.post("https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token", headers=headers, data=data)
-        res.raise_for_status()
+    res = requests.post(config.Token_URL, headers=headers, data=data)
+    res.raise_for_status()
+    if res.status_code == 200:
         setattr(config, f"access_token{count}", res.json().get("access_token"))
         setattr(config, f"token_type{count}", res.json().get("token_type"))
         setattr(config, f"last_token_time{count}", time.time())
-    except Exception as e:
-        print(f"[get_token{count}] ❌ トークン取得失敗: {e}")
+    else:
+        print(f"[get_token{count}] ❌ トークン取得失敗: {res.status_code} {res.text}")
         setattr(config, f"access_token{count}", None)
 
 def ensure_token(type="first"):
