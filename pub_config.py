@@ -16,7 +16,7 @@ Webhook2 = True
 
 Hotfix_Webhook = True
 
-test = True
+test = False
 
 if test is True:
     Webhook1 = False
