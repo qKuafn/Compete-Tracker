@@ -11,10 +11,12 @@ from get_WebData import *
 import config
 import pub_config as config2
 
+type = "second"
+
 def format_EventData(tags, added_Tournaments, updated_Tournaments):
-    event_data = fetch_EventData_for_format()
-    webapi_ja = fetch_WebData_for_format("ja")
-    webapi_en = fetch_WebData_for_format("en")
+    event_data = fetch_EventData(type)
+    webapi_ja = fetch_WebData("secnd", "ja")
+    webapi_en = fetch_WebData("second", "en")
     sent = set()
     updated_Tournaments = []
     added_Tournaments = []

@@ -34,15 +34,14 @@ def main():
     
     format_EventData(tags, added_Tournaments, updated_Tournaments)
 
+    print ("[EventData] 取得開始")
     for region in config2.Regions:
-        if fetch_EventData(region, tags):
-            updated_regions.append(region)
-
+        fetch_EventData(config2.main_type, region, tags, updated_regions)
     if not updated_regions:
         print("[EventData] 更新なし")
 
     for lang in config2.Lang:
-        fetch_WebData(lang, tags)
+        fetch_WebData(config2.main_type, lang, tags)
     for lang in config2.Lang:
         fetch_ScoreInfo(lang, tags)
     for lang in config2.Lang:
@@ -80,11 +79,9 @@ def main():
             ).strip()
 
             if repo_url.startswith("git@"):
-                # git@github.com:owner/repo.git → [https://github.com/owner/repo](https://github.com/owner/repo)
                 repo_url = repo_url.replace("git@github.com:", "[https://github.com/](https://github.com/)") \
                     .removesuffix(".git")
             else:
-                # https://…/repo.git → https://…/repo
                 repo_url = repo_url.removesuffix(".git")
 
             commit_url = f"{repo_url}/commit/{commit_hash}"
@@ -124,7 +121,7 @@ def main():
 # === 実行 ===
 if __name__ == "__main__":
     ensure_token()
-    ensure_token_for_format()
+    ensure_token("second")
     while True:
         main()
 
