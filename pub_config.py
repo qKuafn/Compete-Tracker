@@ -14,7 +14,7 @@ Lang = ["ja", "en"]
 Webhook1 = True
 Webhook2 = True
 
-test = True
+test = False
 
 if test is True:
     Webhook1 = False
