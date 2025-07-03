@@ -22,7 +22,7 @@ def fetch_EventData(type, region="ASIA", tags=[], updated_regions = []):
             try:
                 before_data = load_json(filepath) if os.path.exists(filepath) else None
             except Exception as e:
-                print(f"  [EventData{count}] ❌️ 旧ファイルの取得に失敗")
+                print(f"  [EventData{count}] ❌️ 旧ファイルの取得に失敗 : {e}")
             if new_data != before_data or before_data is None:
                 try:
                     if config2.test is False:
@@ -36,7 +36,7 @@ def fetch_EventData(type, region="ASIA", tags=[], updated_regions = []):
                 except Exception as e:
                     print(f"  [EventData{count}] ❌️ ファイルの保存に失敗 : {e}")
             elif new_data== before_data:
-                print(f"  [EventData{count}] 更新なし")
+                print(f"  [EventData{count}] 変更なし")
         return data
     else:
         print(f"  [EventData{count}] ❌️ 取得失敗 : {res.text} {res.status_code}")

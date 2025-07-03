@@ -14,10 +14,13 @@ Lang = ["ja", "en"]
 Webhook1 = True
 Webhook2 = True
 
-test = False
+Hotfix_Webhook = True
+
+test = True
 
 if test is True:
     Webhook1 = False
+    Hotfix_Webhook = False
 
 version = "++Fortnite+Release-36.10"
 build = "43713507"
