@@ -9,8 +9,7 @@ import pub_config as config2
 
 # === Main API ===
 def fetch_WebData(type, lang, tags=[]):
-    count = "2" if type == "second" else ""
-    url = getattr(config, f"Web_URL{count}") + f"?lang={lang}"
+    url = f"{config.Web_URL}?lang={lang}"
     res = requests.get(url)
     if res.status_code == 200:
         data = res.json()
