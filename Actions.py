@@ -1,5 +1,5 @@
 from main import main
-from token import kill_token
+from tokens import kill_token
 
 if __name__ == "__main__":
     main()
