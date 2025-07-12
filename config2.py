@@ -1,10 +1,10 @@
 from datetime import timezone, timedelta
 
-RESPONSE_DIR = r".\response"
-ARCHIVE_DIR = r".\response\Archive"
-TOURNAMENT_DIR = r".\Tournament"
-TOURNAMENT_ARCHIVE_DIR = r".\Tournament\Archive"
-TEMP_DIR = r".\Temp"
+RESPONSE_DIR = r"./response"
+ARCHIVE_DIR = r"./response/Archive"
+TOURNAMENT_DIR = r"./Tournament"
+TOURNAMENT_ARCHIVE_DIR = r"./Tournament/Archive"
+TEMP_DIR = r"./Temp"
 
 JST = timezone(timedelta(hours=9))
 UTC = timezone(timedelta(hours=0))
