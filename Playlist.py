@@ -5,16 +5,16 @@ from datetime import datetime
 from typing import List
 
 from tokens import ensure_token
-from files import *
+from files import load_json, get_unique_filepath
 import config
-import pub_config as config2
+import config2
 
-def fetch_Playlist(tags, version, build, playlist_tags):
-    print (f"[Playlist] 取得開始 : {version}-{build}")
+def fetch_Playlist():
+    print (f"[INF] Playlist 取得開始 : {config2.version}-{config2.build}")
     new = []
     delete = []
     update = []
-    url = f"{config.PlaylistUpd_URL}/{version}/{build}?appId=Fortnite"
+    url = f"{config.PlaylistUpd_URL}/{config2.version}/{config2.build}?appId=Fortnite"
     payload = {
         "FortPlaylistAthena": 0
     }
@@ -27,7 +27,7 @@ def fetch_Playlist(tags, version, build, playlist_tags):
         try:
             before_data = load_json(filepath) if os.path.exists(filepath) else None
         except Exception as e:
-            print("  [Playlist] ❌️ 旧ファイルの取得に失敗")
+            print("  [ERR] ❌️ 旧ファイルの取得に失敗")
         if new_data != before_data or before_data is None:
             current_id_list = extract_asset_ids(new_data)
             before_id_list = extract_asset_ids(before_data)
@@ -37,27 +37,27 @@ def fetch_Playlist(tags, version, build, playlist_tags):
             removed_ids = list(set(before_id_list) - set(current_id_list))
             new_ids_tournament = [id for id in new_ids if "Showdown" in id]
             removed_ids_tournament = [id for id in removed_ids if "Showdown" in id]
+            changed_ids = detect_changed_ids(current_id_list, new_data, before_data)
+            changed_ids_tournament = [id for id in changed_ids if "Showdown" in id]
+
             if new_ids_tournament:
                 for ids in new_ids_tournament:
-                    tags.append(f"{ids} (New)")
-                    playlist_tags.append(ids)
+                    config2.tags.append(f"{ids} (New)")
+                    config2.playlist_tags.append(ids)
                     new.append(ids)
             if removed_ids_tournament:
                 for ids in removed_ids_tournament:
-                    tags.append(f"{ids} (Del)")
-                    playlist_tags.append(ids)
+                    config2.tags.append(f"{ids} (Del)")
+                    config2.playlist_tags.append(ids)
                     delete.append(ids)
-            else:
-                tags.append("Playlist")
-
-            # 変更されたIDを検出
-            changed_ids = detect_changed_ids(current_id_list, new_data, before_data)
-            changed_ids_tournament = [id for id in changed_ids if "Showdown" in id]
-            if changed_ids_tournament and (not new) and (not delete):
+            elif changed_ids_tournament:
                 for ids in changed_ids_tournament:
-                    tags.append(f"{ids} (Upd)")
-                    playlist_tags.append(ids)
+                    config2.tags.append(f"{ids} (Upd)")
+                    config2.playlist_tags.append(ids)
                     update.append(ids)
+            else:
+                config2.tags.append("Playlist")
+
             # 保存
             try:
                 if config2.test is False:
@@ -65,20 +65,20 @@ def fetch_Playlist(tags, version, build, playlist_tags):
                         json.dump(new_data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(new_data, f, ensure_ascii=False, indent=2)
-                print(f"  [Playlist] 🟢 更新あり")
+                print(f"  [INF] 🟢 変更あり")
                 if changed_ids_tournament:
                     playlist_send_discord_notify(new, delete, update)
                 return True
             except Exception as e:
-                print(f"  [Playlist] ❌️ ファイルの保存に失敗 : {e}")
+                print(f"  [ERR] ❌️ ファイルの保存に失敗 : {e}")
                 return False
         elif new_data == before_data:
-            print ("  [Playlist] 更新なし")
+            print ("  [INF] ✅️ 変更なし")
             return True
         else:
             return False
     else:
-        print(f"  ❌️ 取得失敗 : {res.status_code}")
+        print(f"  [ERR] 🔴 取得失敗 : {res.status_code}")
         return None
 
 # === 更新が入っているPlaylist Id一覧を取得 ===
@@ -135,15 +135,19 @@ def playlist_send_discord_notify(new, delete, update):
             }
         ]
     }
-    if config2.Webhook1 is True:
+    if config2.Tournament_Webhook is True:
         res = requests.post(config.Tournament_Webhook_URL, json=payload).raise_for_status()
         if res.status_code == 204 or res.status_code == 200:
-            print("  [Playlist] ⭕️ Discord通知成功")
+            print("  [INF] ⭕️ Discord通知成功")
         else:
-            print(f"  [Playlist] ❌️ Discord通知失敗 : {res.status_code} {res.text}")
-    if config2.Webhook2 is True:
-        res = requests.post(config2.Tournament_Webhook_URL2, json=payload).raise_for_status()
+            print(f"  [ERR] ❌️ Discord通知失敗 : {res.status_code} {res.text}")
+    if config2.Log_Webhook is True:
+        res = requests.post(config2.Log_Webhook_URL, json=payload).raise_for_status()
         if res.status_code == 204 or res.status_code == 200:
-            print("  [Playlist] ⭕️ Discord通知成功")
+            print("  [INF] ⭕️ Discord通知成功")
         else:
-            print(f"  [Playlist] ❌️ Discord通知失敗 : {res.status_code} {res.text}")
+            print(f"  [ERR] ❌️ Discord通知失敗 : {res.status_code} {res.text}")
+
+if __name__ == "__main__":
+    config2.test = True
+    fetch_Playlist()

@@ -3,21 +3,16 @@ import time
 import subprocess
 from datetime import datetime, timedelta
 
-from tokens import *
-from files import *
-from get_EventData import *
-from get_WebData import *
-from Playlist import *
-from format_Event import *
+from tokens import ensure_token
+from get_EventData import fetch_EventData
+from get_WebData import fetch_WebData, fetch_ScoreInfo, fetch_LeadInfo
+from Playlist import fetch_Playlist
+from format_Event import format_EventData
+from hotfix import fetch_and_store_hotfix
 import config
-import pub_config as config2
+import config2
 
-def main():
-    tags = []
-    updated_regions = []
-    playlist_tags = []
-    added_Tournaments = []
-    updated_Tournaments = []
+def main(Actions=False):
 
     print("🚀 開始")
 
@@ -32,37 +27,41 @@ def main():
             subprocess.run(['git', 'pull'])
             subprocess.run(['git', 'stash', 'pop'])
     
-    format_EventData(tags, added_Tournaments, updated_Tournaments)
+    format_EventData()
 
     for region in config2.Regions:
-        fetch_EventData(config2.main_type, region, tags, updated_regions)
+        fetch_EventData(region)
 
     for lang in config2.Lang:
-        fetch_WebData(config2.main_type, lang, tags)
+        fetch_WebData(lang)
     for lang in config2.Lang:
-        fetch_ScoreInfo(lang, tags)
+        fetch_ScoreInfo(lang)
     for lang in config2.Lang:
-        fetch_LeadInfo(lang, tags)
+        fetch_LeadInfo(lang)
 
-    fetch_Playlist(tags, config2.version, config2.build, playlist_tags)
+    fetch_and_store_hotfix(Actions)
+
+    fetch_Playlist()
 
     subprocess.run(["git", "add", "."], check=True)
     git_diff = subprocess.run(["git", "diff", "--cached", "--quiet"])
     should_push = git_diff.returncode != 0
     if should_push is True:
-        print(f"[DEBUG] 🟢 should_push = {should_push}")
+        print(f"[DBG] 🟢 should_push = {should_push}")
     else:
-        print(f"[DEBUG] should_push = {should_push}")
+        print(f"[DBG] should_push = {should_push}")
 
     if should_push:
-        if not tags:
-            tags.append("ファイル関連")
+        if not config2.tags:
+            config2.tags.append("ファイル関連")
 
-        print(f"[DEBUG] タグ一覧 : {tags}")
+        print(f"[DBG] タグ一覧 : {config2.tags}")
 
         if not config2.test:
-            timestampA = datetime.now(JST).strftime("%m-%d %H:%M:%S")
-            message = f"更新 : {', '.join(tags)} ({timestampA})"
+            timestampA = datetime.now(config2.JST).strftime("%m-%d %H:%M:%S")
+            message = f"更新 : {', '.join(config2.tags)} ({timestampA})"
+            if Actions:
+                message = message + " - GitHubActions"
 
             subprocess.run(["git", "commit", "-m", message], check=True)
             subprocess.run(["git", "push"], check=True)
@@ -86,10 +85,10 @@ def main():
                 ["git", "config", "user.name"], text=True
             ).strip()
 
-            if "ASIA" in tags or any(tag.endswith("(ja)") for tag in tags) in tags or added_Tournaments or updated_Tournaments or playlist_tags:
-                content = f"## 更新 : {', '.join(tags)} <@&1372839358591139840>"
+            if "ASIA" in config2.tags or any(tag.endswith("(ja)") for tag in config2.tags) in config2.tags or config2.added_Tournaments or config2.updated_Tournaments or config2.playlist_tags:
+                content = f"## 更新 : {', '.join(config2.tags)} <@&1372839358591139840>"
             else:
-                content = f"## 更新 : {', '.join(tags)}"
+                content = f"## 更新 : {', '.join(config2.tags)}"
 
             payload = {
                 "username": "GitHub",
@@ -109,7 +108,7 @@ def main():
                 ]
             }
 
-            res = requests.post(config.Webhook_URL, json=payload)
+            res = requests.post(config.GitHub_Webhook_URL, json=payload)
             res.raise_for_status()
             if res.status_code == 204 or res.status_code == 200:
                 print("[Discord] 通知を送信")
@@ -122,5 +121,5 @@ if __name__ == "__main__":
     ensure_token("second")
     while True:
         main()
-        print(f"⏳ 40秒待機中... ({datetime.now(JST).strftime('%H:%M:%S')} ～ {(datetime.now(JST) + timedelta(seconds=40)).strftime('%H:%M:%S')})")
+        print(f"[INF] ⏳ 40秒待機中... ({datetime.now(config2.JST).strftime('%H:%M:%S')} ～ {(datetime.now(config2.JST) + timedelta(seconds=40)).strftime('%H:%M:%S')})")
         time.sleep(40)

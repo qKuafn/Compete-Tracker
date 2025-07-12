@@ -2,18 +2,29 @@ import requests
 import os
 import json
 import config
-import pub_config as config2
+import config2
 
-from tokens import *
-from files import *
+from tokens import ensure_token
+from files import load_json, get_unique_filepath
 
-def fetch_EventData(type, region="ASIA", tags=[], updated_regions = []):
-    count = "2" if type == "second" else ""
-    print (f"[EventData{count}] 取得開始 : {region}")
-    url = getattr(config, f"EventData_URL{count}") + f"?region={region}"
+def fetch_EventData(region="ASIA", type="first"):
+    print (f"[INF] EventData 取得開始 : {region} (Acc:{type})")
     ensure_token(type)
-    headers = {"Authorization": getattr(config, f"token_type{count}") + " " + getattr(config, f"access_token{count}")}
-    res = requests.get(url, headers=headers)
+
+    count = "2" if type == "second" else ""
+
+    url = getattr(config, f"EventData_URL{count}")
+    token_type = getattr(config, f"token_type{count}")
+    access_token = getattr(config, f"access_token{count}")
+
+    headers = {
+        "Authorization": f"{token_type} {access_token}"
+    }
+    params = {
+        "region": region
+    }
+    res = requests.get(url, headers=headers, params=params)
+
     if res.status_code == 200:
         data = res.json()
         if type == "first":
@@ -22,7 +33,7 @@ def fetch_EventData(type, region="ASIA", tags=[], updated_regions = []):
             try:
                 before_data = load_json(filepath) if os.path.exists(filepath) else None
             except Exception as e:
-                print(f"  [EventData{count}] ❌️ 旧ファイルの取得に失敗 : {e}")
+                print(f"  [ERR] ❌️ 旧ファイルの取得に失敗 : {e}")
             if new_data != before_data or before_data is None:
                 try:
                     if config2.test is False:
@@ -30,14 +41,19 @@ def fetch_EventData(type, region="ASIA", tags=[], updated_regions = []):
                             json.dump(data, f, ensure_ascii=False, indent=2)
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
-                    tags.append(region)
-                    updated_regions.append(region)
-                    print(f"  [EventData{count}] 🟢更新あり")
+                    config2.tags.append(region)
+                    config2.updated_regions.append(region)
+                    print(f"  [INF] 🟢 変更あり")
                 except Exception as e:
-                    print(f"  [EventData{count}] ❌️ ファイルの保存に失敗 : {e}")
+                    print(f"  [INF] ❌️ ファイルの保存に失敗 : {e}")
             elif new_data== before_data:
-                print(f"  [EventData{count}] 変更なし")
+                print(f"  [INF] ✅️ 変更なし")
         return data
     else:
-        print(f"  [EventData{count}] ❌️ 取得失敗 : {res.text} {res.status_code}")
+        print(f"  [ERR] 🔴 取得に失敗 : {res.text} {res.status_code}")
         return None
+
+if __name__ == "__main__":
+    config2.test = True
+    for region in config2.Regions:
+        fetch_EventData(region=f"{region}")

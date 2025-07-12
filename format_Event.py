@@ -4,23 +4,22 @@ import time
 import os
 from datetime import datetime, timezone
 
-from files import *
-from tokens import *
-from get_EventData import *
-from get_WebData import *
+from files import load_json, get_unique_filepath
+from tokens import ensure_token
+from get_EventData import fetch_EventData
+from get_WebData import fetch_WebData
 import config
-import pub_config as config2
+import config2
 
 type = "second"
 
-def format_EventData(tags, added_Tournaments, updated_Tournaments):
-    print(f"[format] 取得開始")
-    event_data = fetch_EventData(type)
-    webapi_ja = fetch_WebData("secnd", "ja")
-    webapi_en = fetch_WebData("second", "en")
+def format_EventData():
+    print(f"[INF] FormatEventData 処理開始")
+    ensure_token("second")
+    event_data = fetch_EventData(type=type)
+    webapi_ja = fetch_WebData(type=type)
+    webapi_en = fetch_WebData("en", type)
     sent = set()
-    updated_Tournaments = []
-    added_Tournaments = []
     embeds=[]
 
     templates = {t["eventTemplateId"]: t for t in event_data.get("templates", []) if "eventTemplateId" in t}
@@ -82,10 +81,10 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
             entry = {
                 "beginTime": w["beginTime"],
                 "beginTime_UNIX": int(begin_dt.timestamp()),
-                "beginTime_JST": begin_dt.astimezone(JST).strftime("%Y-%m-%d %H:%M:%S"),
+                "beginTime_JST": begin_dt.astimezone(config2.JST).strftime("%Y-%m-%d %H:%M:%S"),
                 "endTime": w["endTime"],
                 "endTime_UNIX": int(end_dt.timestamp()),
-                "endTime_JST": end_dt.astimezone(JST).strftime("%Y-%m-%d %H:%M:%S"),
+                "endTime_JST": end_dt.astimezone(config2.JST).strftime("%Y-%m-%d %H:%M:%S"),
                 "playlistId": template.get("playlistId"),
                 "matchCap": template.get("matchCap"),
                 "additionalRequirements": w.get("additionalRequirements", []),
@@ -126,7 +125,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 }
             }
         except Exception as e:
-            print (f"  [format] 🔴 エラー：開催日時の組み立て中 {e}")
+            print (f"  [INF] ❌️ 開催日時の組み立て失敗 : {e}")
             date_section = "エラー"
             embed_date = {
                 "title":  "📅 **開催日時**",
@@ -151,7 +150,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 "fields": mode_section
             }
         except Exception as e:
-            print (f"  [format] 🔴 エラー：モードの組み立て中 {e}")
+            print (f"  [ERR] ❌️ モードの組み立て失敗 : {e}")
             mode_section = "エラー"
             embed_mode = {
                 "title":  "📍 **モード**",
@@ -180,7 +179,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 }
             }
         except Exception as e:
-            print (f"  [format] 🔴 エラー：試合数の組み立て中 {e}")
+            print (f"  [ERR] ❌️ 試合数の組み立て失敗 : {e}")
             match_section = "エラー"
             embed_match = {
                 "title":  "⚔️ **試合数**",
@@ -217,7 +216,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 }
             }
         except Exception as e:
-            print (f"　　[format] 🔴 エラー：参加資格の組み立て中 {e}")
+            print (f"　　[ERR] ❌️ 参加資格の組み立て失敗 : {e}")
             token_section = "エラー"
             embed_token = {
                 "title":  "🔑 **参加資格**",
@@ -247,7 +246,7 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 }
             }
         except Exception as e:
-            print (f"　　[format] 🔴 エラー：賞金の組み立て中 {e}")
+            print (f"　　[ERR] ❌️ 賞金の組み立て失敗 : {e}")
             payouts_section = "エラー"
             embed_payout = {
                 "title":  "🎁 **賞金 / 賞品**",
@@ -268,12 +267,12 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 f"- Square    ：{webinfo.get('square_poster_image','未設定')}"
             )
         except Exception as e:
-            print (f"  [format] 🔴 エラー：画像URLの組み立て中 {e}")
+            print (f"  [ERR] ❌️ 画像URL一覧の組み立て失敗 {e}")
             images_section = "🖼️ **画像URL一覧**\nエラー"
 
 
         # === 変更箇所を確認 ===
-        print (f" [format] 比較開始 : {display_id}")
+        print (f" [INF] 比較開始 : {display_id}")
         before_data = load_json(filepath) if os.path.exists(filepath) else None
         ignore_keys = {"beginTime", "endTime", "beginTime_UNIX", "endTime_UNIX"}
         title_key   = list(new_data[0].keys())[0]
@@ -286,24 +285,24 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
 
         # === 保存 & タグ追加 ===
         if before_data is None:
-            print(f"   [format] 🟢 新規トーナメント : {display_id}")
+            print(f"   [INF] 🟢 新規トーナメント : {display_id}")
             if config2.test is False:
                 with open(get_unique_filepath(config2.TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
                     json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
-            tags.append(f"{display_id} (New)")
-            added_Tournaments.append(display_id)
+            config2.tags.append(f"{display_id} (New)")
+            config2.added_Tournaments.append(display_id)
 
         elif new_data != before_data:
-            print(f"   [format] 🟢 トーナメント更新 : {display_id}")
+            print(f"   [INF] 🟢 トーナメント更新 : {display_id}")
             if config2.test is False:
                 with open(get_unique_filepath(config2.TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
                     json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
-            tags.append(f"{display_id} (Upd)")
-            updated_Tournaments.append(display_id)
+            config2.tags.append(f"{display_id} (Upd)")
+            config2.updated_Tournaments.append(display_id)
 
         # === 送信準備 ===
         embeds = [embed_date, embed_mode, embed_match, embed_token, embed_payout]
@@ -321,22 +320,22 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
                 }
             with open(filepath, "rb") as fp:
                 files = {"file": (os.path.basename(filepath), fp, "application/json")}
-                if config2.Webhook1 is True:
+                if config2.Tournament_Webhook is True:
                     res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
                     res.raise_for_status()
                     if res.status_code == 204 or res.status_code == 200:
-                        print("   [format] ⭕️ 新トーナメントのDiscord送信成功")
+                        print("   [INF] ⭕️ 新トーナメントのDiscord通知成功")
                     else:
-                        print (f"   [format] 🔴 エラー：新トーナメントのDiscord送信 {res.status_code} {res.text}")
+                        print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
                 time.sleep(20)
-                if config2.Webhook2 is True:
-                    res = requests.post(config.Tournament_Webhook_URL2, data=data, files=files)
+                if config2.Log_Webhook is True:
+                    res = requests.post(config.Log_Webhook_URL, data=data, files=files)
                     res.raise_for_status()
                     if res.status_code == 204 or res.status_code == 200:
-                        print("   [format] ⭕️ 新トーナメントのDiscord送信成功")
+                        print("   [INF] ⭕️ 新トーナメントのDiscord通知成功")
                     else:
-                        print (f"   [format] 🔴 エラー：新トーナメントのDiscord送信 {res.status_code} {res.text}")
-                        print (embeds)
+                        print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
+                        print (f"'embeds':{embeds}")
             sent.add(display_id)
 
         elif new_data != before_data:
@@ -387,26 +386,26 @@ def format_EventData(tags, added_Tournaments, updated_Tournaments):
 
             with open(filepath, "rb") as fp:
                 files = {"file": (os.path.basename(filepath), fp, "application/json")}
-                if config2.Webhook1 is True:
+                if config2.Tournament_Webhook is True:
                     res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
                     res.raise_for_status()
                     if res.status_code == 204 or res.status_code == 200:
-                        print("   [format] ⭕️ トーナメント更新のDiscord送信成功")
+                        print("   [INF] ⭕️ トーナメント更新のDiscord通知成功")
                     else:
-                        print (f"   [format] 🔴 エラー：トーナメント更新のDiscord送信 {res.status_code} {res.text}")
+                        print (f"   [ERR] 🔴 エラー：トーナメント更新のDiscord通知失敗 : {res.status_code} {res.text}")
                 time.sleep(2)
-                if config2.Webhook2 is True:
-                    res = requests.post(config.Tournament_Webhook_URL2, data=data, files=files)
+                if config2.Log_Webhook is True:
+                    res = requests.post(config.Log_Webhook_URL, data=data, files=files)
                     res.raise_for_status()
                     if res.status_code == 204 or res.status_code == 200:
-                        print("   [format] ⭕️ トーナメント更新のDiscord送信成功")
+                        print("   [INF] ⭕️ トーナメント更新のDiscord通知成功")
                     else:
-                        print (f"   [format] 🔴 エラー：トーナメント更新のDiscord送信 {res.status_code} {res.text}")
-                        print (embeds)
+                        print (f"   [ERR] 🔴 エラー：トーナメント更新のDiscord通知失敗 : {res.status_code} {res.text}")
+                        print (f"'embeds':{embeds}")
             sent.add(display_id)
 
-    if not added_Tournaments and not updated_Tournaments:
-        print(" [format] 更新なし")
+    if not config2.added_Tournaments and not config2.updated_Tournaments:
+        print(" [INF] ✅️ 変更なし")
 
 def find_diffs(old, new, path=""):
     diffs = []
@@ -441,12 +440,12 @@ def find_diffs(old, new, path=""):
                 diffs.append(f"{display_path}")
 
         elif old != new:
-                print(f"  [find_diffs] 差分検出: {path} | old={old} → new={new}")
+                print(f"  [INF] 差分検出 : {path} | old={old} → new={new}")
                 diffs.append(path)
 
         return diffs
     except Exception as e:
-        print(f"  [find_diffs] 🔴 エラー：更新の確認中 {path} - {e}")
+        print(f"  [ERR] ❌️ 更新されたパスの確認に失敗 : {path} - {e}")
         return None
 
 def filter_diffs(diffs, ignore_keys):
@@ -458,11 +457,11 @@ def filter_diffs(diffs, ignore_keys):
         shortened = shorten_diff_paths(filtered)
         return shortened
     except Exception as e:
-        print(f"  [filter_diffs] 🔴 エラー：UNIX,UTCの除外中 {ignore_keys} - {e}")
+        print(f"  [ERR] ❌️ UNIX,UTCの除外に失敗 : {ignore_keys} - {e}")
         return None
 
 def shorten_diff_paths(diffs, max_depth=5):
-    print(f"  [shorten_path] パス短縮開始 : {diffs}")
+    print(f"  [INF] パス短縮開始 : {diffs}")
     result = set()
     try:
         for path in diffs:
@@ -481,10 +480,10 @@ def shorten_diff_paths(diffs, max_depth=5):
                     shortened = " > ".join(parts)
                 else:
                     shortened = " > ".join(parts[:max_depth])
-            print(f"  [shorten_path] パス短縮: {path} → {shortened}")
+            print(f"  [INF] パス短縮: {path} → {shortened}")
             result.add(shortened)
     except Exception as e:
-        print(f"  [shorten_path] 🔴 エラー：パスの修正中 {diffs} - {e}")
+        print(f"  [ERR] ❌️ パスの短縮に失敗 : {diffs} - {e}")
     result_list = sorted(result)
     return result_list
 
@@ -505,20 +504,24 @@ def get_value_by_path(before_data, new_data, diffs):
                         data = data[idx]
                     elif isinstance(data, dict):
                         data = data[key]
-                print (f"   [get_value] ⭕️ パスの値確認成功 : {path_str} - {data}")
+                print (f"   [INF] ⭕️ 末端のパスの値の確認成功 : {path_str} - {data}")
                 return data
             except Exception as e:
-                print(f"   [get_value] 🔴 エラー：末端のパスの値の確認中 {use_diffs} - {e}")
+                print(f"   [ERR] ❌️ 末端のパスの値の確認に失敗 : {use_diffs} - {e}")
                 return None
 
         results = {}
         for path_str in use_diffs:
-            print(f"  [get_value] パスの値を確認(過去) : {use_diffs}")
+            print(f"  [INF] パスの値を確認(過去) : {use_diffs}")
             old_value = get_nested_value(before_data, path_str)
-            print(f"  [get_value] パスの値を確認(新) : {use_diffs}")
+            print(f"  [INF] パスの値を確認(新) : {use_diffs}")
             new_value = get_nested_value(new_data, path_str)
             results[path_str] = {
                 "old": old_value,
                 "new": new_value
             }
         return results
+
+if __name__ == "__main__":
+    config2.test = True
+    format_EventData()
