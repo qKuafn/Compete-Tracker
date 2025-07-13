@@ -435,7 +435,7 @@ def check_depth_changes(diff_data, Actions):
                         }
                         payload = {
                             "embeds": [embed],
-                            "username": "Hotfix Tracker"
+                            "username": "戦利品プール更新"
                         }
                         data = {
                             "payload_json": json.dumps(payload, ensure_ascii=False)
