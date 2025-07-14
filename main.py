@@ -58,7 +58,7 @@ def main(Actions=False):
         print(f"[DBG] タグ一覧 : {config2.tags}")
 
         if not config2.test:
-            timestampA = datetime.now(config2.JST).strftime("%m-%d %H:%M:%S")
+            timestampA = datetime.now(config2.JST).strftime("%m/%d %H:%M:%S")
             message = f"更新 : {', '.join(config2.tags)} ({timestampA})"
             if Actions:
                 message = message + " - GitHubActions"

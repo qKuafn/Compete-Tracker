@@ -29,9 +29,10 @@ def format_EventData():
             for rank in entry.get("ranks", []):
                 for payout in rank.get("payouts", []):
                     payouts_by_key.setdefault(k, []).append({
+                        "scoringType": entry.get("scoringType"),
                         "threshold": rank.get("threshold"),
                         "rewardType": payout.get("rewardType"),
-                        "quantity": payout.get("quantity", 1),
+                        "quantity": payout.get("quantity"),
                         "value": payout.get("value")
                     })
     score_map = {
