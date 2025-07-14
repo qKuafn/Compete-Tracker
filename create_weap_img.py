@@ -167,10 +167,10 @@ def create_image(weapon_path, local):
     
     try:
         if AmmoTypeIcon:
-            BackgroundImage_Path = rf".\Images\{rarity}.png"
+            BackgroundImage_Path = rf"./Images/{rarity}.png"
             BackgroundImage = load_png(BackgroundImage_Path)
         else:
-            BackgroundImage_NoType_Path = rf".\Images\{rarity}_NoType.png"
+            BackgroundImage_NoType_Path = rf"./Images/{rarity}_NoType.png"
             BackgroundImage = load_png(BackgroundImage_NoType_Path)
 
         if isinstance(WeaponIcon, tuple):
