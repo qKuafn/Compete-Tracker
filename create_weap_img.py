@@ -185,7 +185,7 @@ def create_image(weapon_path, local):
 
         BackgroundImage.paste(WeaponIcon, (WeaponIcon_x, WeaponIcon_y), WeaponIcon)
 
-        font_dir = r".\Images\keifont.ttf"
+        font_dir = r"./Images/keifont.ttf"
         WeaponNameFont = ImageFont.truetype(font_dir, 50)
         DescriptionFont = ImageFont.truetype(font_dir, 30)
         StatsFont = ImageFont.truetype(font_dir, 40)
