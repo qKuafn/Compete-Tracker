@@ -368,90 +368,91 @@ def check_depth_changes(diff_data, Actions):
 
     # === 戦利品プール更新の武器画像付きのEmbed組み立て・Discord送信 ===
     for (status, changed_path), weapon_dict in grouped.items():
-        for weapon, entries in weapon_dict.items():
-            if weapon:
-                # === image_pathごとに、対応する lines と weapon_path を image_lines_map に保存 ===
-                image_lines_map = defaultdict(lambda: {"lines": [], "weapon_path": None})
-                for e in entries:
-                    image_path = e.get("image_path", "")
-                    weapon_path = e.get("AssetPath", "")
-                    line = f"- `{e['row']}`\n  - {e['key']} ... {e['display']}"
-                    image_lines_map[image_path]["lines"].append(line)
-                    if weapon_path:
-                        image_lines_map[image_path]["weapon_path"] = weapon_path
-                    else:
-                        print(f"    [ERR] ❌️ 武器画像のパスがありません。画像生成をスキップします")
+        if changed_path != "/ForbiddenFruitDataTables/DataTables/ForbiddenFruitChapterLootPackages" or changed_path != "/Figment_LootTables/DataTables/FigmentLootPackages":
+            for weapon, entries in weapon_dict.items():
+                if weapon:
+                    # === image_pathごとに、対応する lines と weapon_path を image_lines_map に保存 ===
+                    image_lines_map = defaultdict(lambda: {"lines": [], "weapon_path": None})
+                    for e in entries:
+                        image_path = e.get("image_path", "")
+                        weapon_path = e.get("AssetPath", "")
+                        line = f"- `{e['row']}`\n  - {e['key']} ... {e['display']}"
+                        image_lines_map[image_path]["lines"].append(line)
+                        if weapon_path:
+                            image_lines_map[image_path]["weapon_path"] = weapon_path
+                        else:
+                            print(f"    [ERR] ❌️ 武器画像のパスがありません。画像生成をスキップします")
 
-                for image_path, data in image_lines_map.items():
-                    lines = data["lines"]
-                    weapon_path = data["weapon_path"]
+                    for image_path, data in image_lines_map.items():
+                        lines = data["lines"]
+                        weapon_path = data["weapon_path"]
 
-                    description_text = f"```{changed_path}```" + "\n" + "\n".join(lines)
-                    filename = weapon_path.split('/')[-1].split('.')[0] + ".png"
+                        description_text = f"```{changed_path}```" + "\n" + "\n".join(lines)
+                        filename = weapon_path.split('/')[-1].split('.')[0] + ".png"
 
-                    if not Actions and os.path.isfile(image_path):
-                        print(f"    [INF] 画像を読み込み : {image_path}")
+                        if not Actions and os.path.isfile(image_path):
+                            print(f"    [INF] 画像を読み込み : {image_path}")
 
-                    else:
-                        # === 武器画像がなく、作れる状態なら作る ===
-                        if weapon_path and not os.path.isfile(image_path):
-                            print ("=====================================")
-                            print(f"    [INF] 画像を生成します : {weapon_path}")
-                            # === テスト状態のActions か Actionsじゃない なら、ローカルからの取得・保存を試す ===
-                            if (config2.test and Actions) or not Actions:
-                                img = create_image(weapon_path, local=True)
-                            else:
+                        else:
+                            # === 武器画像がなく、作れる状態なら作る ===
+                            if weapon_path and not os.path.isfile(image_path):
+                                print ("=====================================")
+                                print(f"    [INF] 画像を生成します : {weapon_path}")
+                                # === テスト状態のActions か Actionsじゃない なら、ローカルからの取得・保存を試す ===
+                                if (config2.test and Actions) or not Actions:
+                                    img = create_image(weapon_path, local=True)
+                                else:
+                                    img = create_image(weapon_path, local=False)
+
+                            # === テスト状態のActionsなら、必ず画像を生成 (ローカルで動かしているはずなので) ===
+                            if weapon_path and config2.test and Actions:
+                                print ("=====================================")
+                                print(f"    [INF] Actions デバッグ用 : 画像を生成します : {weapon_path}")
                                 img = create_image(weapon_path, local=False)
 
-                        # === テスト状態のActionsなら、必ず画像を生成 (ローカルで動かしているはずなので) ===
-                        if weapon_path and config2.test and Actions:
-                            print ("=====================================")
-                            print(f"    [INF] Actions デバッグ用 : 画像を生成します : {weapon_path}")
-                            img = create_image(weapon_path, local=False)
+                        # === Actionsで画像が作られているなら、Tempフォルダに保存 ===
+                        # === not os.path.isfile じゃないのは、テスト状態のActionsの可能性を考慮 ===
+                        if Actions and img:
+                            os.makedirs(config2.TEMP_DIR, exist_ok=True)
+                            image_path = os.path.join(config2.TEMP_DIR, filename)
+                            try:
+                                img.save(image_path, format="png")
+                                print(f"    [INF] ⭕️ 画像を一時保存 : {image_path}")
+                            except Exception as e:
+                                print(f"    [ERR] ❌️ 画像の一時保存に失敗 : {image_path}, {e}")
 
-                    # === Actionsで画像が作られているなら、Tempフォルダに保存 ===
-                    # === not os.path.isfile じゃないのは、テスト状態のActionsの可能性を考慮 ===
-                    if Actions and img:
-                        os.makedirs(config2.TEMP_DIR, exist_ok=True)
-                        image_path = os.path.join(config2.TEMP_DIR, filename)
-                        try:
-                            img.save(image_path, format="png")
-                            print(f"    [INF] ⭕️ 画像を一時保存 : {image_path}")
-                        except Exception as e:
-                            print(f"    [ERR] ❌️ 画像の一時保存に失敗 : {image_path}, {e}")
-
-                    with open(image_path, "rb") as img:
-                        files = {
-                            "file": (filename, img)
-                        }
-                        embed = {
-                            "title": weapon,
-                            "description": description_text,
-                            "color": 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F,
-                            "timestamp": datetime.now(config2.UTC).isoformat(),
-                            "image": {
-                                "url": f"attachment://{filename}"
+                        with open(image_path, "rb") as img:
+                            files = {
+                                "file": (filename, img)
                             }
-                        }
-                        payload = {
-                            "embeds": [embed],
-                            "username": "戦利品プール更新"
-                        }
-                        data = {
-                            "payload_json": json.dumps(payload, ensure_ascii=False)
-                        }
-                        if config2.Hotfix_Webhook:
-                            response = requests.post(config.Loot_Webhook_URL, data=data, files=files)
-                            if response.status_code in (200, 204):
-                                print(f"    [INF] ⭕️ Discord通知成功 (画像) : {status} ({weapon})")
-                            else:
-                                print(f"    [ERR] ❌ Discord通知失敗 (画像) : {response.status_code} {response.text}")
-                        if config2.Log_Webhook:
-                            response = requests.post(config.Log_Webhook_URL, data=data, files=files)
-                            if response.status_code in (200, 204):
-                                print(f"    [INF] ⭕️ Discord通知成功 (画像) : {status} ({weapon})")
-                            else:
-                                print(f"    [ERR] ❌ Discord通知失敗 (画像) : {response.status_code} {response.text}")
+                            embed = {
+                                "title": weapon,
+                                "description": description_text,
+                                "color": 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F,
+                                "timestamp": datetime.now(config2.UTC).isoformat(),
+                                "image": {
+                                    "url": f"attachment://{filename}"
+                                }
+                            }
+                            payload = {
+                                "embeds": [embed],
+                                "username": "戦利品プール更新"
+                            }
+                            data = {
+                                "payload_json": json.dumps(payload, ensure_ascii=False)
+                            }
+                            if config2.Hotfix_Webhook:
+                                response = requests.post(config.Loot_Webhook_URL, data=data, files=files)
+                                if response.status_code in (200, 204):
+                                    print(f"    [INF] ⭕️ Discord通知成功 (画像) : {status} ({weapon})")
+                                else:
+                                    print(f"    [ERR] ❌ Discord通知失敗 (画像) : {response.status_code} {response.text}")
+                            if config2.Log_Webhook:
+                                response = requests.post(config.Log_Webhook_URL, data=data, files=files)
+                                if response.status_code in (200, 204):
+                                    print(f"    [INF] ⭕️ Discord通知成功 (画像) : {status} ({weapon})")
+                                else:
+                                    print(f"    [ERR] ❌ Discord通知失敗 (画像) : {response.status_code} {response.text}")
     print ("  [INF] ✅️ Hotfix 処理完了")
 
 def get_loc_list():
