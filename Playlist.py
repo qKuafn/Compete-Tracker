@@ -66,7 +66,7 @@ def fetch_Playlist():
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(new_data, f, ensure_ascii=False, indent=2)
                 print(f"  [INF] 🟢 変更あり")
-                if changed_ids_tournament:
+                if new_ids_tournament or removed_ids_tournament or changed_ids_tournament:
                     playlist_send_discord_notify(new, delete, update)
                 return True
             except Exception as e:
