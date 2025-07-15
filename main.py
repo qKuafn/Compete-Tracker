@@ -114,6 +114,7 @@ def main(Actions=False):
                 print("[Discord] 通知を送信")
             if not (res.status_code == 204 or res.status_code == 200):
                 print (f"[Discord] Discord通知失敗 : {res.status_code} {res.text}")
+    config.tags = []
 
 # === 実行 ===
 if __name__ == "__main__":
