@@ -109,13 +109,13 @@ def playlist_send_discord_notify(new, delete, update):
             "value": "\n".join([f"・`{tag}`" for tag in new]),
             "inline": False
         })
-    if delete:
+    elif delete:
         fields.append({
             "name": "🔴 削除",
             "value": "\n".join([f"・`{tag}`" for tag in delete]),
             "inline": False
         })
-    if update:
+    elif update:
         fields.append({
             "name": "🟡 更新",
             "value": "\n".join([f"・`{tag}`" for tag in update]),
