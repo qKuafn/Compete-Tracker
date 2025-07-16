@@ -121,6 +121,8 @@ if __name__ == "__main__":
     ensure_token()
     ensure_token("second")
     while True:
-        main()
+        if config.mac:
+            Actions = True
+        main(Actions)
         print(f"[INF] ⏳ 40秒待機中... ({datetime.now(config2.JST).strftime('%H:%M:%S')} ～ {(datetime.now(config2.JST) + timedelta(seconds=40)).strftime('%H:%M:%S')})")
         time.sleep(40)
