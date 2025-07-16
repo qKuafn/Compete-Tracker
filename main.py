@@ -123,6 +123,8 @@ if __name__ == "__main__":
     while True:
         if config.mac:
             Actions = True
+        else:
+            Actions = False
         main(Actions)
         print(f"[INF] ⏳ 40秒待機中... ({datetime.now(config2.JST).strftime('%H:%M:%S')} ～ {(datetime.now(config2.JST) + timedelta(seconds=40)).strftime('%H:%M:%S')})")
         time.sleep(40)
