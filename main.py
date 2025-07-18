@@ -85,7 +85,7 @@ def main(Actions=False):
                 ["git", "config", "user.name"], text=True
             ).strip()
 
-            if "ASIA" in config2.tags or "(ja)" in config2.tags or config2.added_Tournaments or config2.updated_Tournaments or config2.playlist_tags:
+            if "ASIA" in config2.tags or "ja" in config2.tags or config2.added_Tournaments or config2.updated_Tournaments or config2.playlist_tags:
                 content = f"## 更新 : {', '.join(config2.tags)} <@&1372839358591139840>"
             else:
                 content = f"## 更新 : {', '.join(config2.tags)}"
