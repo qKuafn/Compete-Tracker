@@ -262,12 +262,13 @@ def check_depth_changes(diff_data, Actions):
         # === それ以外は「元 → 更新」をdisplayに追加 ===
         if added and removed:
             display = f"{format_number(removed['value'])} → {format_number(added['value'])}"
-            if added.get("key") == "Weight":
-                if format_number(added['value']) == "0.0":
-                    display = display + "  (無効化)"
-            if removed.get("key") == "Weight":
-                if format_number(removed['value']) == "0.0":
-                    display = display + "  (有効化)"
+            if added['value'] != removed['value']:
+                if added.get("key") == "Weight":
+                    if format_number(added['value']) == "0.0":
+                        display = display + "  (無効化)"
+                if removed.get("key") == "Weight":
+                    if format_number(removed['value']) == "0.0":
+                        display = display + "  (有効化)"
             status = "更新"
             key = added["key"]
         elif added:
@@ -276,11 +277,12 @@ def check_depth_changes(diff_data, Actions):
             elif "CurveTable" in origin_row:
                 default_weight = find_value_by_time(row_data, added["key"])
             display = f"{format_number(default_weight)} → {format_number(added['value'])}"
-            if added.get("key") == "Weight":
-                if format_number(default_weight) == "0.0":
-                    display = display + "  (有効化)"
-                if format_number(added['value']) == "0.0":
-                    display = display + "  (無効化)"
+            if default_weight != added['value']:
+                if added.get("key") == "Weight":
+                    if format_number(default_weight) == "0.0":
+                        display = display + "  (有効化)"
+                    if format_number(added['value']) == "0.0":
+                        display = display + "  (無効化)"
             status = "追加"
             key = added["key"]
         elif removed:
@@ -289,11 +291,12 @@ def check_depth_changes(diff_data, Actions):
             elif "CurveTable" in origin_row:
                 default_weight = find_value_by_time(row_data, removed["key"])
             display = f"{format_number(removed['value'])} → {format_number(default_weight)}"
-            if removed.get("key") == "Weight":
-                if format_number(removed['value']) == "0.0":
-                    display = display + "  (有効化)"
-                if format_number(default_weight) == "0.0":
-                    display = display + "  (無効化)"
+            if removed['value'] != default_weight:
+                if removed.get("key") == "Weight":
+                    if format_number(removed['value']) == "0.0":
+                        display = display + "  (有効化)"
+                    if format_number(default_weight) == "0.0":
+                        display = display + "  (無効化)"
             status = "削除"
             key = removed["key"]
 
