@@ -105,6 +105,7 @@ def format_EventData():
         # === ファイルの比較 & 保存 ===
         filepath = os.path.join(config2.TOURNAMENT_DIR, f"{display_id}.json")
         new_data = [result]
+        before_data = load_json(filepath) if os.path.exists(filepath) else None
 
         # === とりあえずDiscordに送信できる状態に ===
         date_section = []
@@ -229,34 +230,60 @@ def format_EventData():
             }
 
         payouts_section = []
+        total_length = 0
         try:
             for w in windows_to_display:
-                key = score_map.get(w["eventWindowId"])
-                payouts_list = payouts_by_key.get(key, [])
-                payouts_section.append({
-                    "name":  w['eventWindowId'],
-                    "value": f"```json\n{json.dumps(payouts_list, ensure_ascii=False, indent=2)}\n```",
-                    "inline": False
-                })
+                    key = score_map.get(w["eventWindowId"])
+                    payouts_list = payouts_by_key.get(key, [])
+
+                    field_values = []
+                    for payout in payouts_list:
+                        json_text = json.dumps(payout, ensure_ascii=False, indent=2)
+                        wrapped_text = f"```json\n{json_text}\n```"
+
+                        if len(wrapped_text) > 1024:
+                            continue
+
+                        # 合計が超える場合は追加をやめる
+                        if total_length + len(wrapped_text) > 1024:
+                            break
+
+                        field_values.append(payout)
+                        total_length += len(wrapped_text)
+
+                    if field_values:
+                        payouts_section.append({
+                            "name": w['eventWindowId'],
+                            "value": f"```json\n{json.dumps(field_values, ensure_ascii=False, indent=2)}\n```",
+                            "inline": False
+                        })
+
             embed_payout = {
-                "title":  "🎁 **賞金 / 賞品**",
+                "title": "🎁 **賞金 / 賞品 (省略の可能性あり)**",
                 "fields": payouts_section,
                 "timestamp": datetime.now(config2.UTC).isoformat(),
-                "footer":{
-                    "text":"FNLive"
+                "footer": {
+                    "text": "FNLive"
                 }
             }
         except Exception as e:
-            print (f"　　[ERR] ❌️ 賞金の組み立て失敗 : {e}")
-            payouts_section = "エラー"
+            print(f"　　[ERR] ❌️ 賞金の組み立て失敗 : {e}")
+            payouts_section = [
+                {
+                    "name": "エラー",
+                    "value": "賞金データの取得に失敗しました。",
+                    "inline": False
+                }
+            ]
             embed_payout = {
-                "title":  "🎁 **賞金 / 賞品**",
+                "title": "🎁 **賞金 / 賞品**",
                 "fields": payouts_section,
                 "timestamp": datetime.now(config2.UTC).isoformat(),
-                "footer":{
-                    "text":"FNLive"
+                "footer": {
+                    "text": "FNLive"
                 }
             }
+
 
         try:
             images_section = (
@@ -274,7 +301,6 @@ def format_EventData():
 
         # === 変更箇所を確認 ===
         print (f" [INF] 比較開始 : {display_id}")
-        before_data = load_json(filepath) if os.path.exists(filepath) else None
         ignore_keys = {"beginTime", "endTime", "beginTime_UNIX", "endTime_UNIX"}
         title_key   = list(new_data[0].keys())[0]
         before_root = before_data[0].get(title_key, {}) if before_data else {}
@@ -337,6 +363,7 @@ def format_EventData():
                     else:
                         print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
                         print (f"'embeds':{embeds}")
+
             sent.add(display_id)
 
         elif new_data != before_data:
@@ -403,6 +430,7 @@ def format_EventData():
                     else:
                         print (f"   [ERR] 🔴 エラー：トーナメント更新のDiscord通知失敗 : {res.status_code} {res.text}")
                         print (f"'embeds':{embeds}")
+
             sent.add(display_id)
 
     if not config2.added_Tournaments and not config2.updated_Tournaments:
