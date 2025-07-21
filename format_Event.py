@@ -348,19 +348,16 @@ def format_EventData():
             with open(filepath, "rb") as fp:
                 files = {"file": (os.path.basename(filepath), fp, "application/json")}
                 if config2.Tournament_Webhook is True:
-                    res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
-                    res.raise_for_status()
-                    if res.status_code == 204 or res.status_code == 200:
+                    try:
+                        requests.post(config.Tournament_Webhook_URL, data=data, files=files)
                         print("   [INF] ⭕️ 新トーナメントのDiscord通知成功")
-                    else:
+                    except Exception as e:
                         print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
-                time.sleep(20)
                 if config2.Log_Webhook is True:
-                    res = requests.post(config.Log_Webhook_URL, data=data, files=files)
-                    res.raise_for_status()
-                    if res.status_code == 204 or res.status_code == 200:
+                    try:
+                        requests.post(config.Log_Webhook_URL, data=data, files=files)
                         print("   [INF] ⭕️ 新トーナメントのDiscord通知成功")
-                    else:
+                    except Exception as e:
                         print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
                         print (f"'embeds':{embeds}")
 
@@ -415,19 +412,16 @@ def format_EventData():
             with open(filepath, "rb") as fp:
                 files = {"file": (os.path.basename(filepath), fp, "application/json")}
                 if config2.Tournament_Webhook is True:
-                    res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
-                    res.raise_for_status()
-                    if res.status_code == 204 or res.status_code == 200:
+                    try:
+                        requests.post(config.Tournament_Webhook_URL, data=data, files=files)
                         print("   [INF] ⭕️ トーナメント更新のDiscord通知成功")
-                    else:
+                    except Exception as e:
                         print (f"   [ERR] 🔴 エラー：トーナメント更新のDiscord通知失敗 : {res.status_code} {res.text}")
-                time.sleep(2)
                 if config2.Log_Webhook is True:
-                    res = requests.post(config.Log_Webhook_URL, data=data, files=files)
-                    res.raise_for_status()
-                    if res.status_code == 204 or res.status_code == 200:
+                    try:
+                        res = requests.post(config.Log_Webhook_URL, data=data, files=files)
                         print("   [INF] ⭕️ トーナメント更新のDiscord通知成功")
-                    else:
+                    except Exception as e:
                         print (f"   [ERR] 🔴 エラー：トーナメント更新のDiscord通知失敗 : {res.status_code} {res.text}")
                         print (f"'embeds':{embeds}")
 
