@@ -33,4 +33,4 @@ if test is True:
     Hotfix_Webhook = False
 
 version = "++Fortnite+Release-36.20"
-build = "43847582"
+build = "44118662"
