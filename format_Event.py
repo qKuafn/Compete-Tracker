@@ -359,7 +359,7 @@ def format_EventData():
                         print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
                 if config2.Log_Webhook is True:
                     try:
-                        res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
+                        res = requests.post(config.Log_Webhook_URL, data=data, files=files)
                         if res.status_code == 200 or res.status_code == 204:
                             print("   [INF] ⭕️ 新トーナメントのDiscord通知成功")
                         else:
@@ -429,7 +429,7 @@ def format_EventData():
                         print (f"   [ERR] 🔴 トーナメント更新のDiscord通知失敗 : {res.status_code} {res.text}")
                 if config2.Log_Webhook is True:
                     try:
-                        res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
+                        res = requests.post(config.Log_Webhook_URL, data=data, files=files)
                         if res.status_code == 200 or res.status_code == 204:
                             print("   [INF] ⭕️ トーナメント更新のDiscord通知成功")
                         else:
