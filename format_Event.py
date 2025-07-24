@@ -302,11 +302,11 @@ def format_EventData():
         # === 変更箇所を確認 ===
         print (f" [INF] 比較開始 : {display_id}")
         ignore_keys = {"beginTime", "endTime", "beginTime_UNIX", "endTime_UNIX"}
-        title_key   = list(new_data[0].keys())[0]
-        before_root = before_data[0].get(title_key, {}) if before_data else {}
-        after_root  = new_data[0][title_key]
+        eventname   = list(new_data[0].keys())[0]
+        before_root = before_data[0].get(eventname, {}) if before_data else {}
+        after_root  = new_data[0][eventname]
         if before_data != new_data:
-            diffs = find_diffs(before_root, after_root, title_key)
+            diffs = find_diffs(before_root, after_root, eventname)
             diffs = filter_diffs(diffs, ignore_keys)
             path  = get_value_by_path(before_data, new_data, diffs)
 
@@ -349,14 +349,21 @@ def format_EventData():
                 files = {"file": (os.path.basename(filepath), fp, "application/json")}
                 if config2.Tournament_Webhook is True:
                     try:
-                        requests.post(config.Tournament_Webhook_URL, data=data, files=files)
-                        print("   [INF] ⭕️ 新トーナメントのDiscord通知成功")
+                        res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
+                        if res.status_code == 200 or res.status_code == 204:
+                            print("   [INF] ⭕️ 新トーナメントのDiscord通知成功")
+                        else:
+                            print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} - {res.text}")
+
                     except Exception as e:
                         print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
                 if config2.Log_Webhook is True:
                     try:
-                        requests.post(config.Log_Webhook_URL, data=data, files=files)
-                        print("   [INF] ⭕️ 新トーナメントのDiscord通知成功")
+                        res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
+                        if res.status_code == 200 or res.status_code == 204:
+                            print("   [INF] ⭕️ 新トーナメントのDiscord通知成功")
+                        else:
+                            print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} - {res.text}")
                     except Exception as e:
                         print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
                         print (f"'embeds':{embeds}")
@@ -413,16 +420,23 @@ def format_EventData():
                 files = {"file": (os.path.basename(filepath), fp, "application/json")}
                 if config2.Tournament_Webhook is True:
                     try:
-                        requests.post(config.Tournament_Webhook_URL, data=data, files=files)
-                        print("   [INF] ⭕️ トーナメント更新のDiscord通知成功")
+                        res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
+                        if res.status_code == 200 or res.status_code == 204:
+                            print("   [INF] ⭕️ トーナメント更新のDiscord通知成功")
+                        else:
+                            print(f"   [ERR] 🔴 トーナメント更新のDiscord通知失敗 : {res.status_code} - {res.text}")
                     except Exception as e:
-                        print (f"   [ERR] 🔴 エラー：トーナメント更新のDiscord通知失敗 : {res.status_code} {res.text}")
+                        print (f"   [ERR] 🔴 トーナメント更新のDiscord通知失敗 : {res.status_code} {res.text}")
                 if config2.Log_Webhook is True:
                     try:
-                        res = requests.post(config.Log_Webhook_URL, data=data, files=files)
-                        print("   [INF] ⭕️ トーナメント更新のDiscord通知成功")
+                        res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
+                        if res.status_code == 200 or res.status_code == 204:
+                            print("   [INF] ⭕️ トーナメント更新のDiscord通知成功")
+                        else:
+                            print(f"   [ERR] 🔴 トーナメント更新のDiscord通知失敗 : {res.status_code} - {res.text}")
+                            print (f"'embeds':{embeds}")
                     except Exception as e:
-                        print (f"   [ERR] 🔴 エラー：トーナメント更新のDiscord通知失敗 : {res.status_code} {res.text}")
+                        print (f"   [ERR] 🔴 トーナメント更新のDiscord通知失敗 : {res.status_code} {res.text}")
                         print (f"'embeds':{embeds}")
 
             sent.add(display_id)
