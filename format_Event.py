@@ -1,8 +1,8 @@
 import requests
 import json
-import time
 import os
 from datetime import datetime, timezone
+from copy import deepcopy
 
 from files import load_json, get_unique_filepath
 from tokens import ensure_token
@@ -11,554 +11,518 @@ from get_WebData import fetch_WebData
 import config
 import config2
 
-type = "second"
+Eventtype = "second"
 
 def format_EventData():
     print(f"[INF] FormatEventData 処理開始")
     ensure_token("second")
-    event_data = fetch_EventData(type=type)
-    webapi_ja = fetch_WebData(type=type)
-    webapi_en = fetch_WebData("en", type)
+    EventData = fetch_EventData(type=Eventtype)
+    WebData_ja = fetch_WebData(type=Eventtype)
+    WebData_en = fetch_WebData("en", Eventtype)
     sent = set()
-    embeds=[]
 
-    templates = {t["eventTemplateId"]: t for t in event_data.get("templates", []) if "eventTemplateId" in t}
-    payouts_by_key = {}
-    for k, entries in event_data.get("payoutTables", {}).items():
-        for entry in entries:
-            for rank in entry.get("ranks", []):
-                for payout in rank.get("payouts", []):
-                    payouts_by_key.setdefault(k, []).append({
-                        "scoringType": entry.get("scoringType"),
-                        "threshold": rank.get("threshold"),
-                        "rewardType": payout.get("rewardType"),
-                        "quantity": payout.get("quantity"),
-                        "value": payout.get("value")
-                    })
-    score_map = {
-        k.split(":")[2]: v for k, v in event_data.get("scoreLocationPayoutTables", {}).items()
-        if len(k.split(":")) == 3
-    }
-    def build_webapi_lookup(api_data):
-        lookup = {}
-        for v in api_data.values():
-            if isinstance(v, dict):
-                info = v.get("tournament_info", {})
-                if "tournament_display_id" in info:
-                    lookup[info["tournament_display_id"].lower()] = info
-        return lookup
+    # === 組み立て開始 ===
+    for event in EventData["events"]:
+        entry = {}
 
-    lookup_ja = build_webapi_lookup(webapi_ja)
-    lookup_en = build_webapi_lookup(webapi_en)
+        eventId = event["eventId"]
+        metadata = event.get("metadata")
+        eventWindows = event.get("eventWindows")
+        displayDataId = event.get("displayDataId") # WebId
+        WebData = None
+        for key, data in WebData_ja.items():
+            if not isinstance(data, dict):
+                continue
+            if "tournament_info" not in data:
+                continue
+            if data["tournament_info"]["tournament_display_id"] == displayDataId:
+                WebData = data.get("tournament_info")
+                break
 
-    for e in event_data["events"]:
-        metadata = e.get("metadata", {})
-        windows = e.get("eventWindows", [])
-        windows_to_display = windows[:2] if len(windows) > 1 else windows
-        display_id = e.get("displayDataId", "").lower()
-        webinfo = lookup_ja.get(display_id) or lookup_en.get(display_id) or {}
-        title = webinfo.get("long_format_title", e.get("eventId"))
+        if not WebData:
+            for key, data in WebData_en.items():
+                if not isinstance(data, dict):
+                    continue
+                if "tournament_info" not in data:
+                    continue
+                if data["tournament_info"]["tournament_display_id"] == displayDataId:
+                    WebData = data.get("tournament_info")
+                    break
 
-        if display_id in sent:
+        EventName = WebData.get("title_line_1")
+        if WebData.get("title_line_2"):
+            EventName += " " + WebData.get("title_line_2")
+
+        windows_to_display = eventWindows[:2] if len(eventWindows) > 1 else eventWindows
+
+        if displayDataId in sent:
             continue
 
-        result = {
-            title: {
-                "displayDataId": display_id,
-                "metadata": metadata,
-                "loading_screen_image": webinfo.get("loading_screen_image"),
-                "playlist_tile_image": webinfo.get("playlist_tile_image"),
-                "poster_front_image": webinfo.get("poster_front_image"),
-                "tournament_view_background_image": webinfo.get("tournament_view_background_image")
+        output = {
+            EventName: {
+                "eventId": eventId,
+                "displayDataId": displayDataId,
+                "square_poster_image": WebData.get("square_poster_image"),
+                "tournament_view_background_image": WebData.get("tournament_view_background_image"),
+                "loading_screen_image": WebData.get("loading_screen_image"),
+                "playlist_tile_image": WebData.get("playlist_tile_image"),
+                "metadata": metadata
             }
         }
 
-        for w in windows:
-            window_id = w["eventWindowId"]
-            begin_dt = datetime.strptime(w["beginTime"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
-            end_dt = datetime.strptime(w["endTime"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
-            template = templates.get(w.get("eventTemplateId", ""), {})
+        for window in eventWindows:
+            payouts = []
 
-            entry = {
-                "beginTime": w["beginTime"],
-                "beginTime_UNIX": int(begin_dt.timestamp()),
+            eventWindowId = window["eventWindowId"]
+            begin_dt = datetime.strptime(window["beginTime"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+            end_dt = datetime.strptime(window["endTime"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+
+            eventTemplateId = window.get("eventTemplateId")
+            matched_template = None
+            for template in EventData["templates"]: 
+                if template.get("eventTemplateId") == eventTemplateId:
+                    matched_template = template
+                    break
+            if matched_template:
+                playlistId = matched_template.get("playlistId")
+                matchCap = matched_template.get("matchCap")
+
+            for key, value in EventData["scoreLocationPayoutTables"].items():
+                if f"Fortnite:{eventId}:{eventWindowId}" in key:
+                    Payouts_key = value
+                    payout_table = EventData["payoutTables"][Payouts_key]
+                    for entry in payout_table:
+                        scoringType = entry.get("scoringType")
+                        ranks = entry.get("ranks", [])
+                        for rank in ranks:
+                            threshold = rank.get("threshold")
+                            for payout in rank.get("payouts", []):
+                                payouts.append({
+                                    "scoringType": scoringType,
+                                    "threshold": threshold,
+                                    "rewardType": payout.get("rewardType"),
+                                    "quantity": payout.get("quantity"),
+                                    "value": payout.get("value")
+                                })
+
+            beginTime_UNIX = int(begin_dt.timestamp())
+            endTime_UNIX = int(end_dt.timestamp())
+
+            output[EventName][eventWindowId] = {
+                "beginTime": window["beginTime"],
+                "beginTime_UNIX": beginTime_UNIX,
                 "beginTime_JST": begin_dt.astimezone(config2.JST).strftime("%Y-%m-%d %H:%M:%S"),
-                "endTime": w["endTime"],
-                "endTime_UNIX": int(end_dt.timestamp()),
+                "endTime": window["endTime"],
+                "endTime_UNIX": endTime_UNIX,
                 "endTime_JST": end_dt.astimezone(config2.JST).strftime("%Y-%m-%d %H:%M:%S"),
-                "playlistId": template.get("playlistId"),
-                "matchCap": template.get("matchCap"),
-                "additionalRequirements": w.get("additionalRequirements", []),
-                "requireAllTokens": w.get("requireAllTokens", []),
-                "requireAnyTokens": w.get("requireAnyTokens", []),
-                "requireNoneTokensCaller": w.get("requireNoneTokensCaller", []),
-                "requireAllTokensCaller": w.get("requireAllTokensCaller", []),
-                "requireAnyTokensCaller": w.get("requireAnyTokensCaller", []),
+                "playlistId": playlistId,
+                "matchCap": matchCap,
+                "additionalRequirements": window.get("additionalRequirements", []),
+                "requireAllTokens": window.get("requireAllTokens", []),
+                "requireAllTokensCaller": window.get("requireAllTokensCaller", []),
+                "requireAnyTokens": window.get("requireAnyTokens", []),
+                "requireAnyTokensCaller": window.get("requireAnyTokensCaller", []),
+                "requireNoneTokensCaller": window.get("requireNoneTokensCaller", []),
+                "payouts": payouts
             }
 
-            key = score_map.get(window_id)
-            if key in payouts_by_key:
-                entry["payouts"] = payouts_by_key[key]
-
-            result[title].setdefault(window_id, []).append(entry)
-
-        # === ファイルの比較 & 保存 ===
-        filepath = os.path.join(config2.TOURNAMENT_DIR, f"{display_id}.json")
-        new_data = [result]
+        filepath = os.path.join(config2.TOURNAMENT_DIR, f"{displayDataId}.json")
+        new_data = [output]
         before_data = load_json(filepath) if os.path.exists(filepath) else None
 
-        # === とりあえずDiscordに送信できる状態に ===
-        date_section = []
-        try:
-            for w in windows_to_display:
-                begin = int(datetime.strptime(w['beginTime'], '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc).timestamp())
-                end = int(datetime.strptime(w['endTime'], '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc).timestamp())
-                date_section.append({
-                    "name":  w['eventWindowId'],
-                    "value": f"<t:{begin}:F>\n～<t:{end}:F>",
-                    "inline": True
-                })
-            embed_date = {
-                "title":  "📅 **開催日時**",
-                "fields": date_section,
-                "timestamp": datetime.now(config2.UTC).isoformat(),
-                "footer":{
-                    "text":"FNLive"
-                }
-            }
-        except Exception as e:
-            print (f"  [INF] ❌️ 開催日時の組み立て失敗 : {e}")
-            date_section = "エラー"
-            embed_date = {
-                "title":  "📅 **開催日時**",
-                "fields": date_section,
-                "timestamp": datetime.now(config2.UTC).isoformat(),
-                "footer":{
-                    "text":"FNLive"
-                }
-            }
-
-        mode_section = []
-        try:
-            for w in windows_to_display:
-                playlist = templates.get(w.get('eventTemplateId',''),{}).get('playlistId','Unknown')
-                mode_section.append({
-                    "name":  w['eventWindowId'],
-                    "value": f"`{playlist}`",
-                    "inline": True
-                })
-            embed_mode = {
-                "title":  "📍 **モード**",
-                "fields": mode_section
-            }
-        except Exception as e:
-            print (f"  [ERR] ❌️ モードの組み立て失敗 : {e}")
-            mode_section = "エラー"
-            embed_mode = {
-                "title":  "📍 **モード**",
-                "fields": mode_section,
-                "timestamp": datetime.now(config2.UTC).isoformat(),
-                "footer":{
-                    "text":"FNLive"
-                }
-            }
-
-        match_section = []
-        try:
-            for w in windows_to_display:
-                match_cap = templates.get(w.get('eventTemplateId',''), {}).get('matchCap','Unknown')
-                match_section.append({
-                    "name":  w['eventWindowId'],
-                    "value": str(match_cap),
-                    "inline": True
-                })
-            embed_match = {
-                "title":  "⚔️ **試合数**",
-                "fields": match_section,
-                "timestamp": datetime.now(config2.UTC).isoformat(),
-                "footer":{
-                    "text":"FNLive"
-                }
-            }
-        except Exception as e:
-            print (f"  [ERR] ❌️ 試合数の組み立て失敗 : {e}")
-            match_section = "エラー"
-            embed_match = {
-                "title":  "⚔️ **試合数**",
-                "fields": match_section,
-                "timestamp": datetime.now(config2.UTC).isoformat(),
-                "footer":{
-                    "text":"FNLive"
-                }
-            }
-
-        token_section = []
-        try:
-            for w in windows_to_display:
-                eligibility = {
-                    "metadata":             metadata,
-                    "additionalRequirements":  w.get("additionalRequirements", []),
-                    "requireAllTokens":       w.get("requireAllTokens", []),
-                    "requireAnyTokens":       w.get("requireAnyTokens", []),
-                    "requireNoneTokensCaller": w.get("requireNoneTokensCaller", []),
-                    "requireAllTokensCaller":  w.get("requireAllTokensCaller", []),
-                    "requireAnyTokensCaller":  w.get("requireAnyTokensCaller", []),
-                }
-                token_section.append({
-                    "name":  w['eventWindowId'],
-                    "value": f"```json\n{json.dumps(eligibility, ensure_ascii=False, indent=2)}\n```",
-                    "inline": False
-                })
-            embed_token = {
-                "title":  "🔑 **参加資格**",
-                "fields": token_section,
-                "timestamp": datetime.now(config2.UTC).isoformat(),
-                "footer":{
-                    "text":"FNLive"
-                }
-            }
-        except Exception as e:
-            print (f"　　[ERR] ❌️ 参加資格の組み立て失敗 : {e}")
-            token_section = "エラー"
-            embed_token = {
-                "title":  "🔑 **参加資格**",
-                "fields": token_section,
-                "timestamp": datetime.now(config2.UTC).isoformat(),
-                "footer":{
-                    "text":"FNLive"
-                }
-            }
-
-        payouts_section = []
-        total_length = 0
-        try:
-            for w in windows_to_display:
-                    key = score_map.get(w["eventWindowId"])
-                    payouts_list = payouts_by_key.get(key, [])
-
-                    field_values = []
-                    for payout in payouts_list:
-                        json_text = json.dumps(payout, ensure_ascii=False, indent=2)
-                        wrapped_text = f"```json\n{json_text}\n```"
-
-                        if len(wrapped_text) > 1024:
-                            continue
-
-                        # 合計が超える場合は追加をやめる
-                        if total_length + len(wrapped_text) > 1024:
-                            break
-
-                        field_values.append(payout)
-                        total_length += len(wrapped_text)
-
-                    if field_values:
-                        payouts_section.append({
-                            "name": w['eventWindowId'],
-                            "value": f"```json\n{json.dumps(field_values, ensure_ascii=False, indent=2)}\n```",
-                            "inline": False
-                        })
-
-            embed_payout = {
-                "title": "🎁 **賞金 / 賞品 (省略の可能性あり)**",
-                "fields": payouts_section,
-                "timestamp": datetime.now(config2.UTC).isoformat(),
-                "footer": {
-                    "text": "FNLive"
-                }
-            }
-        except Exception as e:
-            print(f"　　[ERR] ❌️ 賞金の組み立て失敗 : {e}")
-            payouts_section = [
-                {
-                    "name": "エラー",
-                    "value": "賞金データの取得に失敗しました。",
-                    "inline": False
-                }
-            ]
-            embed_payout = {
-                "title": "🎁 **賞金 / 賞品**",
-                "fields": payouts_section,
-                "timestamp": datetime.now(config2.UTC).isoformat(),
-                "footer": {
-                    "text": "FNLive"
-                }
-            }
-
-
-        try:
-            images_section = (
-                "🖼️ **画像URL一覧**\n"
-                f"- Poster    ：{webinfo.get('poster_front_image','未設定')}\n"
-                f"- Background：{webinfo.get('tournament_view_background_image','未設定')}\n"
-                f"- Playlist  ：{webinfo.get('playlist_tile_image','未設定')}\n"
-                f"- Loading   ：{webinfo.get('loading_screen_image','未設定')}\n"
-                f"- Square    ：{webinfo.get('square_poster_image','未設定')}"
-            )
-        except Exception as e:
-            print (f"  [ERR] ❌️ 画像URL一覧の組み立て失敗 {e}")
-            images_section = "🖼️ **画像URL一覧**\nエラー"
-
-
-        # === 変更箇所を確認 ===
-        print (f" [INF] 比較開始 : {display_id}")
-        ignore_keys = {"beginTime", "endTime", "beginTime_UNIX", "endTime_UNIX"}
+        print (f" [INF] 比較開始 : {displayDataId}")
         eventname   = list(new_data[0].keys())[0]
         before_root = before_data[0].get(eventname, {}) if before_data else {}
         after_root  = new_data[0][eventname]
         if before_data != new_data:
-            diffs = find_diffs(before_root, after_root, eventname)
-            diffs = filter_diffs(diffs, ignore_keys)
-            path  = get_value_by_path(before_data, new_data, diffs)
 
-        # === 保存 & タグ追加 ===
-        if before_data is None:
-            print(f"   [INF] 🟢 新規トーナメント : {display_id}")
+            # === 保存 ===
+            if before_data is None:
+                print(f"   [INF] 🟢 新規トーナメント : {displayDataId}")
+                config2.tags.append(f"{displayDataId} (New)")
+                config2.added_Tournaments.append(displayDataId)
+            elif new_data != before_data:
+                print(f"   [INF] 🟢 トーナメント更新 : {displayDataId}")
+                config2.tags.append(f"{displayDataId} (Upd)")
+                config2.updated_Tournaments.append(displayDataId)
+            
             if config2.test is False:
-                with open(get_unique_filepath(config2.TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
+                with open(get_unique_filepath(config2.TOURNAMENT_ARCHIVE_DIR, displayDataId), "w", encoding="utf-8") as f:
                     json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
-            config2.tags.append(f"{display_id} (New)")
-            config2.added_Tournaments.append(display_id)
 
-        elif new_data != before_data:
-            print(f"   [INF] 🟢 トーナメント更新 : {display_id}")
-            if config2.test is False:
-                with open(get_unique_filepath(config2.TOURNAMENT_ARCHIVE_DIR, f"{display_id}"), "w", encoding="utf-8") as f:
-                    json.dump(new_data, f, ensure_ascii=False, indent=2)
-            with open(filepath, "w", encoding="utf-8") as f:
-                json.dump(new_data, f, ensure_ascii=False, indent=2)
-            config2.tags.append(f"{display_id} (Upd)")
-            config2.updated_Tournaments.append(display_id)
+        # === Discord Embed送信のためのEmbed組み立て ===
+        if before_data is None or new_data != before_data:
+            image_section = []
+            try:
+                image_section = (
+                    "🖼️ **画像URL一覧**\n"
+                    f"- Square    ：{WebData.get('square_poster_image','未設定')}\n"
+                    f"- Background：{WebData.get('tournament_view_background_image','未設定')}\n"
+                    f"- Playlist  ：{WebData.get('playlist_tile_image','未設定')}\n"
+                    f"- Loading   ：{WebData.get('loading_screen_image','未設定')}"
+                )
+            except Exception as e:
+                print (f"  [ERR] ❌️ 画像URL一覧の組み立て失敗 {e}")
+                image_section = "🖼️ **画像URL一覧**\nエラー"
 
-        # === 送信準備 ===
-        embeds = [embed_date, embed_mode, embed_match, embed_token, embed_payout]
-
-        status = f"## 🆕 新トーナメント : {title}" if before_data is None else f"## 🔄 トーナメント更新 : {title}"
-
+        
         if before_data is None:
-            content = (
-                f"<@&1372839358591139840><@&1359477859764273193>\n"
-                f"{status}\n_ _\n"
-                f"{images_section}\n\n"
-            )
-            data = {
-                "payload_json": json.dumps ( {"content": content, "embeds": embeds} , ensure_ascii=False )
+            embeds=[]
+            date_section = []
+            mode_section = []
+            match_section = []
+            token_section = []
+            payout_section = []
+
+            total_length = 0
+
+            for eventWindow in windows_to_display:
+                eventWindowId = eventWindow["eventWindowId"]
+                try:
+                    begin = new_data[0][eventname][eventWindowId]["beginTime_UNIX"]
+                    end = new_data[0][eventname][eventWindowId]["endTime_UNIX"]
+                    date_section.append({
+                        "name":  eventWindowId,
+                        "value": f"<t:{begin}:F>\n～<t:{end}:F>",
+                        "inline": True
+                    })
+                except Exception as e:
+                    print(f"  [ERR] ❌️ 日付の解析に失敗: {e}")
+                    date_section.append({
+                        "name":  eventWindowId,
+                        "value": "エラー",
+                        "inline": True
+                    })
+                try:
+                    playlist = new_data[0][eventname][eventWindowId]["playlistId"]
+                    mode_section.append({
+                        "name":  eventWindowId,
+                        "value": f"`{playlist}`",
+                        "inline": True
+                    })
+                except Exception as e:
+                    print(f"  [ERR] ❌️ モードの解析に失敗: {e}")
+                    mode_section.append({
+                        "name":  eventWindowId,
+                        "value": "エラー",
+                        "inline": True
+                    })
+                try:
+                    matchCap = new_data[0][eventname][eventWindowId]["matchCap"]
+                    if matchCap == 0:
+                        matchCap = "無制限"
+                    match_section.append({
+                        "name":  eventWindowId,
+                        "value": str(matchCap),
+                        "inline": True
+                    })
+                except Exception as e:
+                    print(f"  [ERR] ❌️ マッチキャップの解析に失敗: {e}")
+                    match_section.append({
+                        "name":  eventWindowId,
+                        "value": "エラー",
+                        "inline": True
+                    })
+                try:
+                    eligibility = {
+                        "metadata": metadata,
+                        "additionalRequirements":   new_data[0][eventname][eventWindowId]["additionalRequirements"],
+                        "requireAllTokens":         new_data[0][eventname][eventWindowId]["requireAllTokens"],
+                        "requireAllTokensCaller":   new_data[0][eventname][eventWindowId]["requireAllTokensCaller"],
+                        "requireAnyTokens":         new_data[0][eventname][eventWindowId]["requireAnyTokens"],
+                        "requireAnyTokensCaller":   new_data[0][eventname][eventWindowId]["requireAnyTokensCaller"],
+                        "requireNoneTokensCaller":  new_data[0][eventname][eventWindowId]["requireNoneTokensCaller"]
+                    }
+                    token_section.append({
+                        "name":  eventWindowId,
+                        "value": f"```json\n{eligibility}\n```",
+                        "inline": False
+                    })
+                except Exception as e:
+                    print(f"  [ERR] ❌️ 参加資格の解析に失敗: {e}")
+                    token_section.append({
+                        "name":  eventWindowId,
+                        "value": "エラー",
+                        "inline": False
+                    })
+                try:
+                    payouts_list = new_data[0][eventname][eventWindowId]["payouts"]
+                    
+                    field_values = []
+                    for payout in payouts_list:
+                        json_text = json.dumps(payout, ensure_ascii=False, indent=2)
+                        wrapped_text = f"```json\n{json_text}\n```"
+                        if len(wrapped_text) > 1024:
+                            continue
+                        if total_length + len(wrapped_text) > 1024:
+                            break
+                        field_values.append(payout)
+                        total_length += len(wrapped_text)
+
+                    if field_values:
+                        payout_section.append({
+                            "name": eventWindowId,
+                            "value": f"```json\n{field_values}\n```",
+                            "inline": False
+                        })
+                except Exception as e:
+                    print(f"  [ERR] ❌️ 賞金の解析に失敗: {e}")
+                    payout_section.append({
+                        "name":  eventWindowId,
+                        "value": "エラー",
+                        "inline": False
+                    })
+
+            embed_date = {
+                "title": "📅 **開催日時**",
+                "fields": date_section,
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "footer":{
+                    "text": "FNLive",
+                    "icon_url": "https://media.discordapp.net/attachments/1398826721129791509/1398826776544940212/VLtjyUF.png?ex=6886c674&is=688574f4&hm=178dda435ced5653551856f935321e4dcd5de6fde7829046f841ca44343f2d64&=&format=webp&quality=lossless&width=320&height=320"
                 }
-            with open(filepath, "rb") as fp:
-                files = {"file": (os.path.basename(filepath), fp, "application/json")}
-                if config2.Tournament_Webhook is True:
-                    try:
-                        res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
-                        if res.status_code == 200 or res.status_code == 204:
-                            print("   [INF] ⭕️ 新トーナメントのDiscord通知成功")
-                        else:
-                            print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} - {res.text}")
-
-                    except Exception as e:
-                        print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
-                if config2.Log_Webhook is True:
-                    try:
-                        res = requests.post(config.Log_Webhook_URL, data=data, files=files)
-                        if res.status_code == 200 or res.status_code == 204:
-                            print("   [INF] ⭕️ 新トーナメントのDiscord通知成功")
-                        else:
-                            print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} - {res.text}")
-                    except Exception as e:
-                        print (f"   [ERR] 🔴 新トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
-                        print (f"'embeds':{embeds}")
-
-            sent.add(display_id)
+            }
+            embed_mode = {
+                "title": "🎮 **モード**",
+                "fields": mode_section,
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "footer":{
+                    "text": "FNLive",
+                    "icon_url": "https://media.discordapp.net/attachments/1398826721129791509/1398826776544940212/VLtjyUF.png?ex=6886c674&is=688574f4&hm=178dda435ced5653551856f935321e4dcd5de6fde7829046f841ca44343f2d64&=&format=webp&quality=lossless&width=320&height=320"
+                }
+            }
+            embed_match = {
+                "title": "⚔️ **試合数**",
+                "fields": match_section,
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "footer":{
+                    "text": "FNLive",
+                    "icon_url": "https://media.discordapp.net/attachments/1398826721129791509/1398826776544940212/VLtjyUF.png?ex=6886c674&is=688574f4&hm=178dda435ced5653551856f935321e4dcd5de6fde7829046f841ca44343f2d64&=&format=webp&quality=lossless&width=320&height=320"
+                }
+            }
+            embed_token = {
+                "title": "🔑 **参加資格**",
+                "fields": token_section,
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "footer":{
+                    "text": "FNLive",
+                    "icon_url": "https://media.discordapp.net/attachments/1398826721129791509/1398826776544940212/VLtjyUF.png?ex=6886c674&is=688574f4&hm=178dda435ced5653551856f935321e4dcd5de6fde7829046f841ca44343f2d64&=&format=webp&quality=lossless&width=320&height=320"
+                }
+            }
+            embed_payout = {
+                "title": "💰 **賞金 (省略の可能性あり)**",
+                "fields": payout_section,
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "footer":{
+                    "text": "FNLive",
+                    "icon_url": "https://media.discordapp.net/attachments/1398826721129791509/1398826776544940212/VLtjyUF.png?ex=6886c674&is=688574f4&hm=178dda435ced5653551856f935321e4dcd5de6fde7829046f841ca44343f2d64&=&format=webp&quality=lossless&width=320&height=320"
+                }
+            }
+            embeds = [embed_date, embed_mode, embed_match, embed_token, embed_payout]
+            content = (
+                f"-# <@&1372839358591139840><@&1359477859764273193>\n"
+                f"## 🆕 新トーナメント : {eventname}\n"
+                f"{image_section}\n"
+            )
+            send_discord(content, embeds, filepath, displayDataId, sent)
 
         elif new_data != before_data:
             embeds = []
-            for path_str, values in path.items():
-                display_path = path_str.replace(" > A", "")
+            
+            diffs = find_diffs(before_root, after_root, eventname)
+            for path, change in diffs.items():
                 changes_section = []
-                new_path  = display_path.split(" > ", 1)[1] if " > " in display_path else display_path
 
-                old_val = values.get("old", "不明")
-                new_val = values.get("new", "不明")
+                old_value = tuple_to_dict(change.get("old"))
+                new_value = tuple_to_dict(change.get("new"))
 
-                def format_value(val):
-                    if isinstance(val, (dict, list)):
-                        return f"```json\n{json.dumps(val, ensure_ascii=False, indent=2)}\n```"
-                    return f"```{val}```"
-                
-                if len(embeds) < 8:
-                    changes_section.append({
-                        "name": "過去データ" ,
-                        "value": format_value(old_val),
-                        "inline": not isinstance(old_val, (dict, list))
-                    })
-                    changes_section.append({
-                        "name": "新データ" ,
-                        "value": format_value(new_val),
-                        "inline": not isinstance(new_val, (dict, list))
-                    })
-                    embed_changes = {
-                        "title": new_path,
+
+                old_str = shorten_json(old_value, 512)
+                new_str = shorten_json(new_value, 512)
+
+                changes_section.append({
+                    "name": "過去データ",
+                    "value": f"```json\n{old_str}\n```",
+                    "inline": not isinstance(old_str, (dict, list))
+                })
+                changes_section.append({
+                    "name": "新データ",
+                    "value": f"```json\n{new_str}\n```",
+                    "inline": not isinstance(new_str, (dict, list))
+                })
+                embed_changes = {
+                        "title": path,
                         "fields": changes_section,
-                        "timestamp": datetime.now(config2.UTC).isoformat(),
+                        "timestamp": datetime.now(timezone.utc).isoformat(),
                         "footer":{
-                            "text":"FNLive"
+                            "text": "FNLive",
+                            "icon_url": "https://media.discordapp.net/attachments/1398826721129791509/1398826776544940212/VLtjyUF.png?ex=6886c674&is=688574f4&hm=178dda435ced5653551856f935321e4dcd5de6fde7829046f841ca44343f2d64&=&format=webp&quality=lossless&width=320&height=320"
                         }
                     }
-                    embeds.append (embed_changes)
-
-            content = (
-                f"<@&1372839358591139840><@&1359477859764273193>\n"
-                f"{status}\n_ _\n"
-                f"{images_section}\n\n"
-            )
-
-            data = {
-                "payload_json": json.dumps ( {"content": content, "embeds": embeds} , ensure_ascii=False )
-                }
-
-            with open(filepath, "rb") as fp:
-                files = {"file": (os.path.basename(filepath), fp, "application/json")}
-                if config2.Tournament_Webhook is True:
-                    try:
-                        res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
-                        if res.status_code == 200 or res.status_code == 204:
-                            print("   [INF] ⭕️ トーナメント更新のDiscord通知成功")
-                        else:
-                            print(f"   [ERR] 🔴 トーナメント更新のDiscord通知失敗 : {res.status_code} - {res.text}")
-                    except Exception as e:
-                        print (f"   [ERR] 🔴 トーナメント更新のDiscord通知失敗 : {res.status_code} {res.text}")
-                if config2.Log_Webhook is True:
-                    try:
-                        res = requests.post(config.Log_Webhook_URL, data=data, files=files)
-                        if res.status_code == 200 or res.status_code == 204:
-                            print("   [INF] ⭕️ トーナメント更新のDiscord通知成功")
-                        else:
-                            print(f"   [ERR] 🔴 トーナメント更新のDiscord通知失敗 : {res.status_code} - {res.text}")
-                            print (f"'embeds':{embeds}")
-                    except Exception as e:
-                        print (f"   [ERR] 🔴 トーナメント更新のDiscord通知失敗 : {res.status_code} {res.text}")
-                        print (f"'embeds':{embeds}")
-
-            sent.add(display_id)
+                embeds.append (embed_changes)
+                content = (
+                    f"-# <@&1372839358591139840><@&1359477859764273193>\n"
+                    f"## 🔄 トーナメント更新 : {eventname}\n"
+                    f"{image_section}\n"
+                )
+            send_discord(content, embeds, filepath, displayDataId, sent)
 
     if not config2.added_Tournaments and not config2.updated_Tournaments:
         print(" [INF] ✅️ 変更なし")
 
-def find_diffs(old, new, path=""):
-    diffs = []
-    try:
-        if isinstance(old, list) and isinstance(new, list):
-            length = max(len(old), len(new))
-            for i in range(length):
-                o = old[i] if i < len(old) else None
-                n = new[i] if i < len(new) else None
+def send_discord(content, embeds, filepath, displayDataId, sent):
+    data = {
+        "payload_json": json.dumps({"content": content, "embeds": embeds}, ensure_ascii=False),
+    }
 
-                if len(old) == 1 and len(new) == 1:
-                    subpath = f"{path} > A" if path else "A"
-                else:
-                    subpath = f"{path} > {i}" if path else str(i)
-
-                sub_diffs = find_diffs(o, n, subpath)
-                if sub_diffs:
-                    diffs += sub_diffs
-
-        elif isinstance(old, dict) and isinstance(new, dict):
-            all_keys = set(old.keys()) | set(new.keys())
-            for key in all_keys:
-                o = old.get(key)
-                n = new.get(key)
-                subpath = f"{path} > {key}" if path else key
-                sub_diffs = find_diffs(o, n, subpath)
-                if sub_diffs:
-                    diffs += sub_diffs
-
-            if len(old) != len(new):
-                display_path = path or "root"
-                diffs.append(f"{display_path}")
-
-        elif old != new:
-                print(f"  [INF] 差分検出 : {path} | old={old} → new={new}")
-                diffs.append(path)
-
-        return diffs
-    except Exception as e:
-        print(f"  [ERR] ❌️ 更新されたパスの確認に失敗 : {path} - {e}")
-        return None
-
-def filter_diffs(diffs, ignore_keys):
-    filtered = []
-    try:
-        for d in diffs:
-            if not any(d.endswith(k) for k in ignore_keys):
-                filtered.append(d)
-        shortened = shorten_diff_paths(filtered)
-        return shortened
-    except Exception as e:
-        print(f"  [ERR] ❌️ UNIX,UTCの除外に失敗 : {ignore_keys} - {e}")
-        return None
-
-def shorten_diff_paths(diffs, max_depth=5):
-    print(f"  [INF] パス短縮開始 : {diffs}")
-    result = set()
-    try:
-        for path in diffs:
-            parts = path.split(" > ")
-            
-            cutoff_index = None
-            for i, part in enumerate(parts):
-                if part.isdigit():
-                    cutoff_index = i
-                    break
-            
-            if cutoff_index is not None:
-                shortened = " > ".join(parts[:cutoff_index + 1])
-            else:
-                if len(parts) <= max_depth:
-                    shortened = " > ".join(parts)
-                else:
-                    shortened = " > ".join(parts[:max_depth])
-            print(f"  [INF] パス短縮: {path} → {shortened}")
-            result.add(shortened)
-    except Exception as e:
-        print(f"  [ERR] ❌️ パスの短縮に失敗 : {diffs} - {e}")
-    result_list = sorted(result)
-    return result_list
-
-def get_value_by_path(before_data, new_data, diffs):
-    use_diffs = [f"0 > {d}" for d in diffs]
-    if use_diffs:
-        def get_nested_value(data, path_str):
+    with open(filepath, "rb") as f:
+        files = {"file": (os.path.basename(filepath), f, "application/json")}
+        if config2.Tournament_Webhook is True:
             try:
-                keys = path_str.split(' > ')
-                for i, key in enumerate(keys):
-                    if isinstance(data, list):
-                        if key == "A":
-                            idx = 0
-                        elif key.isdigit():
-                            idx = int(key)
-                        else:
-                            return None
-                        data = data[idx]
-                    elif isinstance(data, dict):
-                        data = data[key]
-                print (f"   [INF] ⭕️ 末端のパスの値の確認成功 : {path_str} - {data}")
-                return data
-            except Exception as e:
-                print(f"   [ERR] ❌️ 末端のパスの値の確認に失敗 : {use_diffs} - {e}")
-                return None
+                res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
+                if res.status_code == 200 or res.status_code == 204:
+                    print("   [INF] ⭕️ トーナメントのDiscord通知成功")
+                else:
+                    print (f"   [ERR] 🔴 トーナメントのDiscord通知失敗 : {res.status_code} - {res.text}")
 
-        results = {}
-        for path_str in use_diffs:
-            print(f"  [INF] パスの値を確認(過去) : {use_diffs}")
-            old_value = get_nested_value(before_data, path_str)
-            print(f"  [INF] パスの値を確認(新) : {use_diffs}")
-            new_value = get_nested_value(new_data, path_str)
-            results[path_str] = {
-                "old": old_value,
-                "new": new_value
-            }
-        return results
+            except Exception as e:
+                print (f"   [ERR] 🔴 トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
+        if config2.Log_Webhook is True:
+            try:
+                res = requests.post(config.Log_Webhook_URL, data=data, files=files)
+                if res.status_code == 200 or res.status_code == 204:
+                    print("   [INF] ⭕️ トーナメントのDiscord通知成功")
+                else:
+                    print (f"   [ERR] 🔴 トーナメントのDiscord通知失敗 : {res.status_code} - {res.text}")
+            except Exception as e:
+                print (f"   [ERR] 🔴 トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
+                print (f"'embeds':{embeds}")
+        sent.add(displayDataId)
+def find_diffs(old, new, path=""):
+    diffs = {}
+
+    IGNORED_KEYS = {
+        "beginTime",
+        "beginTime_UNIX",
+        "endTime",
+        "endTime_UNIX"
+    }
+
+    IGNORED_ORDER_KEYS = {
+        "additionalRequirements",
+        "requireAllTokens",
+        "requireAnyTokens",
+        "requireNoneTokensCaller",
+        "requireAllTokensCaller",
+        "requireAnyTokensCaller"
+    }
+
+    key_name = path.split(" > ")[-1]
+    if key_name in IGNORED_KEYS:
+        return {}
+
+    if isinstance(old, dict) and isinstance(new, dict):
+        all_keys = set(old) | set(new)
+        for key in all_keys:
+            if key in IGNORED_KEYS:
+                continue
+            new_path = f"{path} > {key}" if path else key
+            diffs.update(find_diffs(old.get(key), new.get(key), new_path))
+
+    elif isinstance(old, list) and isinstance(new, list):
+        if key_name in IGNORED_ORDER_KEYS:
+            old_types = set(type(x) for x in old)
+            new_types = set(type(x) for x in new)
+
+            if len(old_types) == 1 and len(new_types) == 1 and old_types == new_types:
+                try:
+                    if sorted(old) != sorted(new):
+                        diffs[path] = {"old": old, "new": new}
+                except TypeError:
+                    diffs[path] = {"old": old, "new": new}
+            else:
+                if old != new:
+                    diffs[path] = {"old": old, "new": new}
+        elif key_name == "payouts":
+            old_list = old if isinstance(old, list) else []
+            new_list = new if isinstance(new, list) else []
+
+            def dict_to_tuple(d):
+                if not isinstance(d, dict):
+                    return d
+                return tuple(sorted(d.items()))
+
+            old_sorted = sorted([dict_to_tuple(d) for d in old_list])
+            new_sorted = sorted([dict_to_tuple(d) for d in new_list])
+
+            max_len = max(len(old_sorted), len(new_sorted))
+            for i in range(max_len):
+                new_path = f"{path} > {i}"
+                old_item = old_sorted[i] if i < len(old_sorted) else None
+                new_item = new_sorted[i] if i < len(new_sorted) else None
+                if old_item != new_item:
+                    diffs[new_path] = {"old": old_item, "new": new_item}
+        else:
+            max_len = max(len(old), len(new))
+            for i in range(max_len):
+                new_path = f"{path} > {i}"
+                diffs.update(find_diffs(
+                    old[i] if i < len(old) else None,
+                    new[i] if i < len(new) else None,
+                    new_path
+                ))
+
+    else:
+        if old != new:
+            diffs[path] = {"old": old, "new": new}
+
+    return diffs
+
+def shorten_json(obj, max_len):
+    obj = deepcopy(obj)
+
+    def to_str(o):
+        return json.dumps(o, ensure_ascii=False, indent=2)
+
+    s = to_str(obj)
+    if len(s) <= max_len:
+        return s
+
+    if isinstance(obj, dict):
+        keys = list(obj.keys())
+        while len(keys) > 0:
+            s = to_str(obj)
+            if len(s) <= max_len:
+                return s
+            key_to_remove = keys.pop()
+            obj.pop(key_to_remove, None)
+        return "{}"
+
+    if isinstance(obj, list):
+        while len(obj) > 0:
+            s = to_str(obj)
+            if len(s) <= max_len:
+                return s
+            obj.pop()
+        return "[]"
+
+    s = str(obj)
+    if len(s) > max_len:
+        s = s[:max_len] + "…(省略)"
+    return s
+
+def tuple_to_dict(obj):
+    if isinstance(obj, tuple):
+        try:
+            if all(isinstance(x, (list, tuple)) and len(x) == 2 for x in obj):
+                return {k: v for k, v in obj}
+        except Exception:
+            pass
+    return obj
 
 if __name__ == "__main__":
     config2.test = True
     format_EventData()
+    
