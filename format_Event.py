@@ -151,6 +151,9 @@ def format_EventData():
                     json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
+        elif before_data == new_data:
+            print(f"   [INF] ✅️ 変更なし : {displayDataId}")
+            continue
 
         # === Discord Embed送信のためのEmbed組み立て ===
         if before_data is None or new_data != before_data:
@@ -379,27 +382,29 @@ def send_discord(content, embeds, filepath, displayDataId, sent):
 
     with open(filepath, "rb") as f:
         files = {"file": (os.path.basename(filepath), f, "application/json")}
+
         if config2.Tournament_Webhook is True:
             try:
                 res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
                 if res.status_code == 200 or res.status_code == 204:
-                    print("   [INF] ⭕️ トーナメントのDiscord通知成功")
+                    print("   [INF] ⭕️ Discord通知成功")
                 else:
-                    print (f"   [ERR] 🔴 トーナメントのDiscord通知失敗 : {res.status_code} - {res.text}")
-
+                    print (f"   [ERR] 🔴 Discord通知失敗 : {res.status_code} - {res.text}")
             except Exception as e:
-                print (f"   [ERR] 🔴 トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
+                print (f"   [ERR] 🔴 Discord通知失敗 : {e}")
+
         if config2.Log_Webhook is True:
             try:
                 res = requests.post(config.Log_Webhook_URL, data=data, files=files)
                 if res.status_code == 200 or res.status_code == 204:
-                    print("   [INF] ⭕️ トーナメントのDiscord通知成功")
+                    print("   [INF] ⭕️ Discord通知成功")
                 else:
-                    print (f"   [ERR] 🔴 トーナメントのDiscord通知失敗 : {res.status_code} - {res.text}")
+                    print (f"   [ERR] 🔴 Discord通知失敗 : {res.status_code} - {res.text}")
             except Exception as e:
-                print (f"   [ERR] 🔴 トーナメントのDiscord通知失敗 : {res.status_code} {res.text}")
+                print (f"   [ERR] 🔴 Discord通知失敗 : {e}")
                 print (f"'embeds':{embeds}")
         sent.add(displayDataId)
+
 def find_diffs(old, new, path=""):
     diffs = {}
 
