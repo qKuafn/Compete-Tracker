@@ -537,5 +537,6 @@ def tuple_to_dict(obj):
 
 if __name__ == "__main__":
     config2.test = True
+    config2.Tournament_Webhook = False
     format_EventData()
     
