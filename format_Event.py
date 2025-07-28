@@ -437,11 +437,19 @@ def find_diffs(old, new, path=""):
             diffs.update(find_diffs(old.get(key), new.get(key), new_path))
 
     elif isinstance(old, list) and isinstance(new, list):
+        removed_items = [item for item in old if item not in new]
+        added_items = [item for item in new if item not in old]
+
         if key_name in IGNORED_ORDER_KEYS:
             old_types = set(type(x) for x in old)
             new_types = set(type(x) for x in new)
 
             if len(old_types) == 1 and len(new_types) == 1 and old_types == new_types:
+                for item in removed_items:
+                    diffs.setdefault(path, []).append({"old": item, "new": None})
+                for item in added_items:
+                    diffs.setdefault(path, []).append({"old": None, "new": item})
+
                 try:
                     if sorted(old) != sorted(new):
                         diffs[path] = {"old": old, "new": new}
