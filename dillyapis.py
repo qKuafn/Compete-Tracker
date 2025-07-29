@@ -12,10 +12,11 @@ def fetch_export_data(data_path):
     print(f"      [INF] dillyapi データ取得開始 : {url}")
     try:
         response = requests.get(url)
-        response.raise_for_status()
+        if response:
+            response.raise_for_status()
         json_data = response.json().get("jsonOutput", {})
         return json_data
-    except requests.exceptions.RequestException as e:
+    except Exception as e:
         status_code = response.status_code if 'response' in locals() else 'N/A'
         print(f"      [INF] ❌️ 取得失敗: {e}（ステータスコード: {status_code}）")
 

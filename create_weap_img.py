@@ -17,7 +17,7 @@ def fetch_data(Weapon_Path, local):
     
     Description_key = Weapon_Data[0].get("Properties", {}).get("ItemDescription", {}).get("key", "")
     Request_Description_key = Description_key if Description_key else Weapon_Data[0].get("Properties", {}).get("ItemDescription", {}).get("localizedString", "")
-    Description_Data = config2.loc_data.get(Request_Description_key, "なし")
+    Description_Data = config2.loc_data.get(Request_Description_key, "不明")
 
     Rarity_Row = Weapon_Data[0].get("Properties", {}).get("Rarity", "")
     rarity = Rarity_Row.split("::")[-1]

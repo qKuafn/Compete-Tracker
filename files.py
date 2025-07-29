@@ -55,13 +55,15 @@ def sanitize_filename(name: str) -> str:
     return sanitized
 
 def format_number(value):
-    try:
+    if isinstance(value, (int, float)):
         num = float(value)
-        # 小数第2位まで四捨五入
-        rounded = round(num, 2)
-        if rounded == int(rounded):
-            return f"{int(rounded)}.0"
-        else:
-            return f"{rounded:.2f}".rstrip("0").rstrip(".")
-    except (ValueError, TypeError) as e:
+    elif isinstance(value, str) and re.fullmatch(r'-?\d+(\.\d+)?', value.strip()):
+        num = float(value.strip())
+    else:
         return value
+
+    rounded = round(num, 2)
+    if rounded == int(rounded):
+        return f"{int(rounded)}.0"
+    else:
+        return f"{rounded:.2f}".rstrip("0").rstrip(".")
