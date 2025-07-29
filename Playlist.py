@@ -136,7 +136,7 @@ def playlist_send_discord_notify(new, delete, update):
         ]
     }
     if config2.Tournament_Webhook is True:
-        res = requests.post(config.Tournament_Webhook_URL, json=payload).raise_for_status()
+        res = requests.post(config.Tournament_Webhook_URL, json=payload)
         if res.status_code == 204 or res.status_code == 200:
             print("  [INF] ⭕️ Discord通知成功")
         else:
