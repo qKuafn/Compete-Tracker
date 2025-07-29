@@ -32,5 +32,5 @@ if test is True:
     Tournament_Webhook = False
     Hotfix_Webhook = False
 
-version = "++Fortnite+Release-36.20"
-build = "44118662"
+version = "++Fortnite+Release-36.30"
+build = "44367537"
