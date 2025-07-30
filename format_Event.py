@@ -429,7 +429,7 @@ def find_diffs(old, new, path=""):
         return {}
 
     if isinstance(old, dict) and isinstance(new, dict):
-        all_keys = set(old) | set(new)
+        all_keys = list(old.keys()) + [k for k in new.keys() if k not in old]
         for key in all_keys:
             if key in IGNORED_KEYS:
                 continue
