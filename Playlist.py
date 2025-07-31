@@ -52,11 +52,12 @@ def fetch_Playlist():
                     config.tags.append(f"{ids} (Del)")
                     config.playlist_tags.append(ids)
                     delete.append(ids)
-            elif changed_ids_tournament:
+            if changed_ids_tournament:
                 for ids in changed_ids_tournament:
-                    config.tags.append(f"{ids} (Upd)")
-                    config.playlist_tags.append(ids)
-                    update.append(ids)
+                    if ids not in config.playlist_tags:
+                        config.tags.append(f"{ids} (Upd)")
+                        config.playlist_tags.append(ids)
+                        update.append(ids)
             else:
                 config.tags.append("Playlist")
 
