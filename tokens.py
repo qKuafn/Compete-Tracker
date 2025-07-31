@@ -5,7 +5,6 @@ import config
 
 def get_token(type="first"):
     count = "2" if type == "second" else ""
-    print(f"[INF] トークンを取得 (Acc:{type})")
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
         "Authorization": f"Basic {config.AUTH_TOKEN}"
