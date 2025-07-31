@@ -13,11 +13,11 @@ def fetch_data(Weapon_Path, local):
     
     Weapon_Name_key = Weapon_Data[0].get("Properties", {}).get("ItemName", {}).get("key", "")
     Request_Weapon_Name_key = Weapon_Name_key if Weapon_Name_key else Weapon_Data[0].get("Properties", {}).get("ItemName", {}).get("localizedString", "")
-    Weapon_Name = config2.loc_data.get(Request_Weapon_Name_key, "不明")
+    Weapon_Name = config.loc_data.get(Request_Weapon_Name_key, "不明")
     
     Description_key = Weapon_Data[0].get("Properties", {}).get("ItemDescription", {}).get("key", "")
     Request_Description_key = Description_key if Description_key else Weapon_Data[0].get("Properties", {}).get("ItemDescription", {}).get("localizedString", "")
-    Description_Data = config2.loc_data.get(Request_Description_key, "不明")
+    Description_Data = config.loc_data.get(Request_Description_key, "不明")
 
     Rarity_Row = Weapon_Data[0].get("Properties", {}).get("Rarity", "")
     rarity = Rarity_Row.split("::")[-1]
@@ -50,13 +50,13 @@ def fetch_data(Weapon_Path, local):
     print (f"　      [DBG] 弾薬のパス : {Ammo_Path}")
 
     if RangedWeapons_Path and RangedWeapons_RowName:
-        if RangedWeapons_Path not in config2.RangedWeapons_Data_Cache:
+        if RangedWeapons_Path not in config.RangedWeapons_Data_Cache:
             RangedWeapons_Data = fetch_export_data(RangedWeapons_Path)
-            config2.RangedWeapons_Data_Cache[RangedWeapons_Path] = RangedWeapons_Data
+            config.RangedWeapons_Data_Cache[RangedWeapons_Path] = RangedWeapons_Data
         else:
             print (f"      [INF] キャッシュからRangedWeaponsデータを取得 : {Ammo_Path}")
 
-        RangedWeapons_WeaponData = config2.RangedWeapons_Data_Cache.get(RangedWeapons_Path, [{}])[0].get("Rows", {}).get(RangedWeapons_RowName, {})
+        RangedWeapons_WeaponData = config.RangedWeapons_Data_Cache.get(RangedWeapons_Path, [{}])[0].get("Rows", {}).get(RangedWeapons_RowName, {})
 
         if RangedWeapons_WeaponData:
             if any (key in RangedWeapons_WeaponData for key in ["DmgPB", "FiringRate", "ClipSize", "ReloadTime"]):
@@ -115,8 +115,8 @@ def fetch_data(Weapon_Path, local):
 
     # === 弾薬のパスがある場合 (消耗品は、消耗品自身が弾薬として書かれているので除外) ===
     if Ammo_Path and Ammo_Path != Weapon_Path:
-        if Ammo_Path in config2.AmmoType_IconImage_Cache:
-            AmmoType_IconImage = config2.AmmoType_IconImage_Cache[Ammo_Path]
+        if Ammo_Path in config.AmmoType_IconImage_Cache:
+            AmmoType_IconImage = config.AmmoType_IconImage_Cache[Ammo_Path]
             print (f"      [INF] キャッシュから弾薬アイコンを取得 : {Ammo_Path}")
         else:
             Ammo_Data = fetch_export_data(Ammo_Path)
@@ -124,22 +124,22 @@ def fetch_data(Weapon_Path, local):
             if AmmoType_IconPath and AmmoType_IconPath != "/Game/UI/Foundation/Textures/Icons/ItemTypes/T-Icon-Blank.0":
                 # === 弾薬アイコンが武器名で保存されてしまうので、download=False (関数側のデフォルト) ===
                 AmmoType_IconImage = get_image(AmmoType_IconPath)
-                config2.AmmoType_IconImage_Cache[Ammo_Path] = AmmoType_IconImage
+                config.AmmoType_IconImage_Cache[Ammo_Path] = AmmoType_IconImage
             else:
                 print ("      [INF] この弾薬には、弾薬アイコンはありません")
-                config2.AmmoType_IconImage_Cache[Ammo_Path] = None
+                config.AmmoType_IconImage_Cache[Ammo_Path] = None
 
 
     # === 武器が弾薬の場合、Ammo_Pathは取得できない ===
     elif not Ammo_Path:
         AmmoType_IconPath = Weapon_Data[0].get("Properties", {}).get("AmmoIconBrush", {}).get("Brush_L", {}).get("ResourceObject", {}).get("ObjectPath", "")
         if AmmoType_IconPath and AmmoType_IconPath != "/Game/UI/Foundation/Textures/Icons/ItemTypes/T-Icon-Blank.0":
-                if AmmoType_IconPath in config2.AmmoType_IconImage_Cache:
-                    AmmoType_IconImage = config2.AmmoType_IconImage_Cache[AmmoType_IconPath]
+                if AmmoType_IconPath in config.AmmoType_IconImage_Cache:
+                    AmmoType_IconImage = config.AmmoType_IconImage_Cache[AmmoType_IconPath]
                     print ("      [INF] キャッシュから弾薬アイコンを取得")
                 else:
                     AmmoType_IconImage = get_image(AmmoType_IconPath, Weapon_Name, download=True if local else False)
-                    config2.AmmoType_IconImage_Cache[AmmoType_IconPath] = AmmoType_IconImage
+                    config.AmmoType_IconImage_Cache[AmmoType_IconPath] = AmmoType_IconImage
         else:
             print ("      [INF] この弾薬には、弾薬アイコンはありません")
 

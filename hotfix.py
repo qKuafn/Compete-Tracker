@@ -33,7 +33,7 @@ def fetch_and_store_hotfix(Actions):
             except Exception as e:
                 print(f"  [ERR] ❌️ 旧ファイルの取得に失敗 : {e}")
         if new_data != old_data or old_data is None:
-            config2.tags.append("Hotfix")
+            config.tags.append("Hotfix")
             try:
                 if config2.test is False:
                     with open(get_unique_filepath(config2.ARCHIVE_DIR, f"{base_name}", "ini"), "w", encoding="utf-8") as f:
@@ -131,8 +131,8 @@ def parse_hotfix(diff_text, Actions):
     check_depth_changes(parsed_hotfix, Actions)
 
 def check_depth_changes(diff_data, Actions):
-    config2.loc_data = get_loc_list()
-    print(f"    [INF] ⭕️ localization 取得完了（{len(config2.loc_data)}件）")
+    config.loc_data = get_loc_list()
+    print(f"    [INF] ⭕️ localization 取得完了（{len(config.loc_data)}件）")
     
     merged = defaultdict(lambda: {"追加" : None, "削除" : None})
     grouped = defaultdict(lambda: defaultdict(list))
@@ -192,7 +192,7 @@ def check_depth_changes(diff_data, Actions):
                 try:
                     if weapon_data:
                         weapon_name_key = weapon_data[0].get("Properties", {}).get("ItemName", {}).get("key", "不明")
-                        weapon_name = config2.loc_data.get(weapon_name_key, "不明")
+                        weapon_name = config.loc_data.get(weapon_name_key, "不明")
                     else:
                         weapon_name = ""
                 except Exception as e:
@@ -331,7 +331,7 @@ def check_depth_changes(diff_data, Actions):
                     "title": f"Hotfix{status}",
                     "description": "\n".join(current_lines),
                     "color": 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F,
-                    "timestamp": datetime.now(config2.UTC).isoformat()
+                    "timestamp": datetime.now(config.UTC).isoformat()
                 })
                 current_lines = [line]
                 current_length = line_length
@@ -344,7 +344,7 @@ def check_depth_changes(diff_data, Actions):
                 "title": f"Hotfix{status}",
                 "description": "\n".join(current_lines),
                 "color": 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F,
-                "timestamp": datetime.now(config2.UTC).isoformat()
+                "timestamp": datetime.now(config.UTC).isoformat()
             })
 
         for i, embed in enumerate(embeds):
@@ -435,7 +435,7 @@ def check_depth_changes(diff_data, Actions):
                             "title": weapon,
                             "description": description_text,
                             "color": 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F,
-                            "timestamp": datetime.now(config2.UTC).isoformat(),
+                            "timestamp": datetime.now(config.UTC).isoformat(),
                             "image": {
                                 "url": f"attachment://{filename}"
                             }

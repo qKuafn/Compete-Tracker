@@ -52,14 +52,14 @@ def main(Actions=False):
         print(f"[DBG] should_push = {should_push}")
 
     if should_push:
-        if not config2.tags:
-            config2.tags.append("ファイル関連")
+        if not config.tags:
+            config.tags.append("ファイル関連")
 
-        print(f"[DBG] タグ一覧 : {config2.tags}")
+        print(f"[DBG] タグ一覧 : {config.tags}")
 
         if not config2.test:
-            timestampA = datetime.now(config2.JST).strftime("%m/%d %H:%M:%S")
-            message = f"更新 : {', '.join(config2.tags)} ({timestampA})"
+            timestampA = datetime.now(config.JST).strftime("%m/%d %H:%M:%S")
+            message = f"更新 : {', '.join(config.tags)} ({timestampA})"
             if Actions:
                 message = message + " - GitHubActions"
 
@@ -85,10 +85,10 @@ def main(Actions=False):
                 ["git", "config", "user.name"], text=True
             ).strip()
 
-            if "ASIA" in config2.tags or "ja" in config2.tags or config2.added_Tournaments or config2.updated_Tournaments or config2.playlist_tags:
-                content = f"## 更新 : {', '.join(config2.tags)} <@&1372839358591139840>"
+            if "ASIA" in config.tags or "ja" in config.tags or config.added_Tournaments or config.updated_Tournaments or config.playlist_tags:
+                content = f"## 更新 : {', '.join(config.tags)} <@&1372839358591139840>"
             else:
-                content = f"## 更新 : {', '.join(config2.tags)}"
+                content = f"## 更新 : {', '.join(config.tags)}"
 
             payload = {
                 "username": "GitHub",
@@ -116,11 +116,11 @@ def main(Actions=False):
                 print (f"[Discord] Discord通知失敗 : {res.status_code} {res.text}")
 
     # タグの初期化
-    config2.tags = []
-    config2.updated_regions = []
-    config2.playlist_tags = []
-    config2.added_Tournaments = []
-    config2.updated_Tournaments = []
+    config.tags = []
+    config.updated_regions = []
+    config.playlist_tags = []
+    config.added_Tournaments = []
+    config.updated_Tournaments = []
 
 # === 実行 ===
 if __name__ == "__main__":
@@ -132,5 +132,5 @@ if __name__ == "__main__":
         else:
             Actions = False
         main(Actions)
-        print(f"[INF] ⏳ 40秒待機中... ({datetime.now(config2.JST).strftime('%H:%M:%S')} ～ {(datetime.now(config2.JST) + timedelta(seconds=40)).strftime('%H:%M:%S')})")
+        print(f"[INF] ⏳ 40秒待機中... ({datetime.now(config.JST).strftime('%H:%M:%S')} ～ {(datetime.now(config.JST) + timedelta(seconds=40)).strftime('%H:%M:%S')})")
         time.sleep(40)

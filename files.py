@@ -4,11 +4,11 @@ import re
 from datetime import datetime
 from PIL import Image
 
-import config2
+import config
 
 def get_unique_filepath(base_dir, base_name, ext="json"):
     os.makedirs(base_dir, exist_ok=True)
-    date_str = datetime.now(config2.JST).strftime("%m%d")
+    date_str = datetime.now(config.JST).strftime("%m%d")
     counter = 1
     while True:
         path = os.path.join(base_dir, f"{base_name} {date_str}({counter}).{ext}")

@@ -6,15 +6,17 @@ from typing import List
 
 from tokens import ensure_token
 from files import load_json, get_unique_filepath
+from get_version import get_version
 import config
 import config2
 
 def fetch_Playlist():
-    print (f"[INF] Playlist 取得開始 : {config2.version}-{config2.build}")
+    print (f"[INF] Playlist 取得開始")
+    get_version()
     new = []
     delete = []
     update = []
-    url = f"{config.PlaylistUpd_URL}/{config2.version}/{config2.build}?appId=Fortnite"
+    url = f"{config.PlaylistUpd_URL}/{config.version}/{config.build}?appId=Fortnite"
     payload = {
         "FortPlaylistAthena": 0
     }
@@ -42,21 +44,21 @@ def fetch_Playlist():
 
             if new_ids_tournament:
                 for ids in new_ids_tournament:
-                    config2.tags.append(f"{ids} (New)")
-                    config2.playlist_tags.append(ids)
+                    config.tags.append(f"{ids} (New)")
+                    config.playlist_tags.append(ids)
                     new.append(ids)
             if removed_ids_tournament:
                 for ids in removed_ids_tournament:
-                    config2.tags.append(f"{ids} (Del)")
-                    config2.playlist_tags.append(ids)
+                    config.tags.append(f"{ids} (Del)")
+                    config.playlist_tags.append(ids)
                     delete.append(ids)
             elif changed_ids_tournament:
                 for ids in changed_ids_tournament:
-                    config2.tags.append(f"{ids} (Upd)")
-                    config2.playlist_tags.append(ids)
+                    config.tags.append(f"{ids} (Upd)")
+                    config.playlist_tags.append(ids)
                     update.append(ids)
             else:
-                config2.tags.append("Playlist")
+                config.tags.append("Playlist")
 
             # 保存
             try:
@@ -128,7 +130,7 @@ def playlist_send_discord_notify(new, delete, update):
             {
                 "title": "プレイリスト更新 (トーナメント)",
                 "fields": fields,
-                "timestamp": datetime.now(config2.UTC).isoformat(),
+                "timestamp": datetime.now(config.UTC).isoformat(),
                 "footer":{
                     "text":"FNLive"
                 }
@@ -142,7 +144,7 @@ def playlist_send_discord_notify(new, delete, update):
         else:
             print(f"  [ERR] ❌️ Discord通知失敗 : {res.status_code} {res.text}")
     if config2.Log_Webhook is True:
-        res = requests.post(config2.Log_Webhook_URL, json=payload).raise_for_status()
+        res = requests.post(config.Log_Webhook_URL, json=payload).raise_for_status()
         if res.status_code == 204 or res.status_code == 200:
             print("  [INF] ⭕️ Discord通知成功")
         else:

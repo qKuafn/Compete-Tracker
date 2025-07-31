@@ -30,7 +30,7 @@ def fetch_WebData(lang="ja", type="first"):
                             json.dump(data, f, ensure_ascii=False, indent=2)
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
-                    config2.tags.append(f"Web ({lang})")
+                    config.tags.append(f"Web ({lang})")
                     print(f"  [INF] 🟢 変更あり")
                 else:
                     print(f"  [INF] ✅️ 変更なし")
@@ -64,7 +64,7 @@ def fetch_ScoreInfo(lang):
                         json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
-                config2.tags.append(f"Score ({lang})")
+                config.tags.append(f"Score ({lang})")
                 print(f"  [INF] 🟢 変更あり")
             else:
                 print(f"  [INF] ✅️ 変更なし")
@@ -98,7 +98,7 @@ def fetch_LeadInfo(lang):
                         json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
-                config2.tags.append(f"Lead ({lang})")
+                config.tags.append(f"Lead ({lang})")
                 print(f"  [INF] 🟢 変更あり")
             else:
                 print(f"  [INF] ✅️ 変更なし")

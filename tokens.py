@@ -17,7 +17,6 @@ def get_token(type="first"):
         "secret": getattr(config, f"SECRET{count}"),
     }
     res = requests.post(config.Token_URL, headers=headers, data=data)
-    res.raise_for_status()
     if res.status_code == 200:
         print(f"  [INF] ⭕️ トークン取得成功 (Acc:{type})")
         setattr(config, f"access_token{count}", res.json().get("access_token"))

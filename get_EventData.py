@@ -41,8 +41,8 @@ def fetch_EventData(region="ASIA", type="first"):
                             json.dump(data, f, ensure_ascii=False, indent=2)
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
-                    config2.tags.append(region)
-                    config2.updated_regions.append(region)
+                    config.tags.append(region)
+                    config.updated_regions.append(region)
                     print(f"  [INF] 🟢 変更あり")
                 except Exception as e:
                     print(f"  [INF] ❌️ ファイルの保存に失敗 : {e}")

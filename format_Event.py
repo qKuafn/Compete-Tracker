@@ -111,10 +111,10 @@ def format_EventData():
             output[EventName][eventWindowId] = {
                 "beginTime": window["beginTime"],
                 "beginTime_UNIX": beginTime_UNIX,
-                "beginTime_JST": begin_dt.astimezone(config2.JST).strftime("%Y-%m-%d %H:%M:%S"),
+                "beginTime_JST": begin_dt.astimezone(config.JST).strftime("%Y-%m-%d %H:%M:%S"),
                 "endTime": window["endTime"],
                 "endTime_UNIX": endTime_UNIX,
-                "endTime_JST": end_dt.astimezone(config2.JST).strftime("%Y-%m-%d %H:%M:%S"),
+                "endTime_JST": end_dt.astimezone(config.JST).strftime("%Y-%m-%d %H:%M:%S"),
                 "playlistId": playlistId,
                 "matchCap": matchCap,
                 "additionalRequirements": window.get("additionalRequirements", []),
@@ -139,12 +139,12 @@ def format_EventData():
             # === 保存 ===
             if before_data is None:
                 print(f"   [INF] 🟢 新規トーナメント : {displayDataId}")
-                config2.tags.append(f"{displayDataId} (New)")
-                config2.added_Tournaments.append(displayDataId)
+                config.tags.append(f"{displayDataId} (New)")
+                config.added_Tournaments.append(displayDataId)
             elif new_data != before_data:
                 print(f"   [INF] 🟢 トーナメント更新 : {displayDataId}")
-                config2.tags.append(f"{displayDataId} (Upd)")
-                config2.updated_Tournaments.append(displayDataId)
+                config.tags.append(f"{displayDataId} (Upd)")
+                config.updated_Tournaments.append(displayDataId)
             
             if config2.test is False:
                 with open(get_unique_filepath(config2.TOURNAMENT_ARCHIVE_DIR, displayDataId), "w", encoding="utf-8") as f:
@@ -372,7 +372,7 @@ def format_EventData():
                 )
             send_discord(content, embeds, filepath, displayDataId, sent)
 
-    if not config2.added_Tournaments and not config2.updated_Tournaments:
+    if not config.added_Tournaments and not config.updated_Tournaments:
         print(" [INF] ✅️ 変更なし")
 
 def send_discord(content, embeds, filepath, displayDataId, sent):
