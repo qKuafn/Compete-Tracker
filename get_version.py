@@ -3,7 +3,7 @@ from tokens import ensure_token
 import config
 
 def get_version():
-    print (f"  [INF] バージョン 取得開始")
+    print (f"  [INF] バージョン取得開始")
     ensure_token()
 
     headers = {
@@ -17,12 +17,12 @@ def get_version():
             version_data = data["elements"][0]["buildVersion"]
             config.version = version_data.split("-CL")[0]
             config.build = version_data.split("-CL-")[1].split("-")[0]
-            print (f"  [INF] ⭕️ バージョン取得成功: {config.version} - {config.build}")
+            print (f"    [INF] ⭕️ バージョン取得成功 : {config.version} - {config.build}")
         else:
-            print(f"  [ERR] ❌️ バージョンの取得に失敗: {response.status_code} - {response.text}")
+            print(f"    [ERR] ❌️ バージョン取得失敗 : {response.status_code} - {response.text}")
             return None
     except Exception as e:
-        print(f"  [ERR] ❌️ バージョンの取得に失敗: {e}")
+        print(f"    [ERR] ❌️ バージョン取得失敗 : {e}")
         return None
 
 if __name__ == "__main__":
