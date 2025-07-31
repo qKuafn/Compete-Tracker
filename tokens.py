@@ -3,14 +3,20 @@ import time
 
 import config
 
-def get_token(type="first"):
-    count = "2" if type == "second" else ""
+def get_token(type="first", grant_type="device_auth"):
+    if grant_type != "device_auth":
+        count = "3"
+    elif type == "second":
+        count = "2"
+    else:
+        count =""
+
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
         "Authorization": f"Basic {config.AUTH_TOKEN}"
     }
     data = {
-        "grant_type": "device_auth",
+        "grant_type": grant_type,
         "account_id": getattr(config, f"ACCOUNT_ID{count}"),
         "device_id": getattr(config, f"DEVICE_ID{count}"),
         "secret": getattr(config, f"SECRET{count}"),
@@ -25,17 +31,24 @@ def get_token(type="first"):
         print(f"  [ERR] ❌ トークン取得失敗 (Acc:{type}) : {res.status_code} {res.text}")
         setattr(config, f"access_token{count}", None)
 
-def ensure_token(type="first"):
-    count = "2" if type == "second" else ""
+def ensure_token(type="first", grant_type="device_auth"):
+    if grant_type != "device_auth":
+        type = "third"
+        count = "3"
+    elif type == "second":
+        count = "2"
+    else:
+        count =""
+
     access_token = getattr(config, f"access_token{count}")
     last_token_time = getattr(config, f"last_token_time{count}")
 
     if access_token is None:
         print (f"[INF] トークンを取得 (None) (Acc:{type})")
-        get_token(type)
+        get_token(type, grant_type)
     elif (time.time() - last_token_time) >= config.TOKEN_EXPIRATION:
         print (f"[INF] トークンを取得 (期限切れ) (Acc:{type})")
-        get_token(type)
+        get_token(type, grant_type)
 
 def kill_token(type="first"):
     count = "2" if type == "second" else ""

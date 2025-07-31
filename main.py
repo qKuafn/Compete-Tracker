@@ -126,6 +126,7 @@ def main(Actions=False):
 if __name__ == "__main__":
     ensure_token()
     ensure_token("second")
+    ensure_token(grant_type="client_credentials")
     while True:
         if config.mac:
             Actions = True

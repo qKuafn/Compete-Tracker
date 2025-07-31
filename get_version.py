@@ -4,10 +4,10 @@ import config
 
 def get_version():
     print (f"  [INF] バージョン取得開始")
-    ensure_token()
+    ensure_token(grant_type="client_credentials")
 
     headers = {
-        "Authorization": f"{config.token_type} {config.access_token}"
+        "Authorization": f"{config.token_type3} {config.access_token3}"
     }
 
     try:
