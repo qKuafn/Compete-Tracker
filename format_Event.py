@@ -126,11 +126,11 @@ def format_EventData():
                 "payouts": payouts
             }
 
+        print (f" [INF] 比較開始 : {displayDataId}")
         filepath = os.path.join(config2.TOURNAMENT_DIR, f"{displayDataId}.json")
         new_data = [output]
         before_data = load_json(filepath) if os.path.exists(filepath) else None
 
-        print (f" [INF] 比較開始 : {displayDataId}")
         eventname   = list(new_data[0].keys())[0]
         before_root = before_data[0].get(eventname, {}) if before_data else {}
         after_root  = new_data[0][eventname]
