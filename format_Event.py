@@ -151,9 +151,6 @@ def format_EventData():
                     json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
-        elif before_data == new_data:
-            print(f"   [INF] ✅️ 変更なし : {displayDataId}")
-            continue
 
         # === Discord Embed送信のためのEmbed組み立て ===
         if before_data is None or new_data != before_data:
