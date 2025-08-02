@@ -131,8 +131,6 @@ def parse_hotfix(diff_text, Actions):
     check_depth_changes(parsed_hotfix, Actions)
 
 def check_depth_changes(diff_data, Actions):
-    config.loc_data = get_loc_list()
-    print(f"    [INF] ⭕️ localization 取得完了（{len(config.loc_data)}件）")
     
     merged = defaultdict(lambda: {"追加" : None, "削除" : None})
     grouped = defaultdict(lambda: defaultdict(list))
@@ -166,6 +164,11 @@ def check_depth_changes(diff_data, Actions):
             default_weight = ""
             # === 戦利品更新の場合、武器名の取得・武器画像パスの取得 ===
             if "LootPackages" in changed_path:
+
+                if not config.loc_data:
+                    config.loc_data = get_loc_list()
+                    print(f"    [INF] ⭕️ localization 取得完了（{len(config.loc_data)}件）")
+
                 if changed_path not in file_data_cache:
                     file_data = fetch_export_data(changed_path)
                     file_data_cache[changed_path] = file_data[0].get("Rows", {}) if file_data else {}
