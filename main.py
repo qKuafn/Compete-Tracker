@@ -100,7 +100,7 @@ def main(Actions=False):
                             "icon_url": f"https://github.com/{user_name}.png",
                             "url": f"https://github.com/{user_name}?tab=repositories"
                         },
-                        "title": "[Tournament:main] 1 new commit",
+                        "title": "[Compete-Tracker:main] 1 new commit",
                         "url": commit_url,
                         "description": f"[`{commit_hash}`]({commit_url}) {message}",
                         "color": 0x7289da,
