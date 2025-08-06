@@ -235,6 +235,7 @@ def format_EventData():
                         "requireAnyTokensCaller":   new_data[0][eventname][eventWindowId]["requireAnyTokensCaller"],
                         "requireNoneTokensCaller":  new_data[0][eventname][eventWindowId]["requireNoneTokensCaller"]
                     }
+                    eligibility = json.dumps(eligibility, indent=2, ensure_ascii=False)
                     token_section.append({
                         "name":  eventWindowId,
                         "value": f"```json\n{eligibility}\n```",
@@ -262,6 +263,7 @@ def format_EventData():
                         total_length += len(wrapped_text)
 
                     if field_values:
+                        field_values = json.dumps(field_values, ensure_ascii=False, indent=2)
                         payout_section.append({
                             "name": eventWindowId,
                             "value": f"```json\n{field_values}\n```",
