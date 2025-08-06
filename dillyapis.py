@@ -12,8 +12,6 @@ def fetch_export_data(data_path):
     print(f"      [INF] dillyapi データ取得開始 : {url}")
     try:
         response = requests.get(url)
-        if response:
-            response.raise_for_status()
         json_data = response.json().get("jsonOutput", {})
         return json_data
     except Exception as e:
@@ -26,7 +24,6 @@ def get_image(icon_path, name= "", download = False):
     print(f"      [INF] dillyapi 画像取得開始 : {url}")
     try:
         res = requests.get(url)
-        res.raise_for_status()
         img = Image.open(BytesIO(res.content))
         if not download:
             img = img.convert("RGBA")

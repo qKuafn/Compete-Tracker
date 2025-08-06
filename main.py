@@ -109,7 +109,6 @@ def main(Actions=False):
             }
 
             res = requests.post(config.GitHub_Webhook_URL, json=payload)
-            res.raise_for_status()
             if res.status_code == 204 or res.status_code == 200:
                 print("[Discord] 通知を送信")
             if not (res.status_code == 204 or res.status_code == 200):

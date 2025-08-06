@@ -145,7 +145,7 @@ def playlist_send_discord_notify(new, delete, update):
         else:
             print(f"  [ERR] ❌️ Discord通知失敗 : {res.status_code} {res.text}")
     if config2.Log_Webhook is True:
-        res = requests.post(config.Log_Webhook_URL, json=payload).raise_for_status()
+        res = requests.post(config.Log_Webhook_URL, json=payload)
         if res.status_code == 204 or res.status_code == 200:
             print("  [INF] ⭕️ Discord通知成功")
         else:
