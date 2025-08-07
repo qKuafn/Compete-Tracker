@@ -81,7 +81,7 @@ def fetch_data(Weapon_Path, local):
                 # === ヘッドショットの分岐 ===
                 HeadShot_Normal = DmgPB_Calculated * DamageZone_Critical
                 if MaxDamagePerCartridge not in [0, -1]:
-                    HeadShot_Shotgun = BulletsPerCartridge * MaxDamagePerCartridge
+                    HeadShot_Shotgun = MaxDamagePerCartridge
                 elif MaxDamagePerCartridge in [0, -1]:
                     HeadShot_Shotgun = None
 
