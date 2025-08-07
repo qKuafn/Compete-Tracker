@@ -412,6 +412,7 @@ def send_discord(content, embeds, filepath, displayDataId, sent):
                     print("   [INF] ⭕️ Discord通知成功")
                 else:
                     print (f"   [ERR] 🔴 Discord通知失敗 : {res.status_code} - {res.text}")
+                    print (f"'embeds':{embeds}")
             except Exception as e:
                 print (f"   [ERR] 🔴 Discord通知失敗 : {e}")
                 print (f"'embeds':{embeds}")
