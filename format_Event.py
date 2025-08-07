@@ -30,6 +30,11 @@ def format_EventData():
         eventWindows = event.get("eventWindows")
         displayDataId = event.get("displayDataId") # WebId
         WebData = None
+        square_poster_image = "未設定"
+        tournament_view_background_image = "未設定"
+        loading_screen_image = "未設定"
+        playlist_tile_image = "未設定"
+
         for key, data in WebData_ja.items():
             if not isinstance(data, dict):
                 continue
@@ -49,9 +54,17 @@ def format_EventData():
                     WebData = data.get("tournament_info")
                     break
 
-        EventName = WebData.get("title_line_1")
-        if WebData.get("title_line_2"):
-            EventName += " " + WebData.get("title_line_2")
+        if WebData:
+            EventName = WebData.get("title_line_1", "なし")
+            if WebData.get("title_line_2"):
+                EventName += " " + WebData.get("title_line_2")
+
+            square_poster_image = WebData.get("square_poster_image", "未設定")
+            tournament_view_background_image = WebData.get("tournament_view_background_image", "未設定")
+            loading_screen_image = WebData.get("loading_screen_image", "未設定")
+            playlist_tile_image = WebData.get("playlist_tile_image", "未設定")
+        else:
+            EventName = "未設定"
 
         windows_to_display = eventWindows[:2] if len(eventWindows) > 1 else eventWindows
 
@@ -62,10 +75,10 @@ def format_EventData():
             EventName: {
                 "eventId": eventId,
                 "displayDataId": displayDataId,
-                "square_poster_image": WebData.get("square_poster_image"),
-                "tournament_view_background_image": WebData.get("tournament_view_background_image"),
-                "loading_screen_image": WebData.get("loading_screen_image"),
-                "playlist_tile_image": WebData.get("playlist_tile_image"),
+                "square_poster_image": square_poster_image,
+                "tournament_view_background_image": tournament_view_background_image,
+                "loading_screen_image": loading_screen_image,
+                "playlist_title_image": playlist_tile_image,
                 "metadata": metadata
             }
         }
@@ -158,10 +171,10 @@ def format_EventData():
             try:
                 image_section = (
                     "🖼️ **画像URL一覧**\n"
-                    f"- Square    ：{WebData.get('square_poster_image','未設定')}\n"
-                    f"- Background：{WebData.get('tournament_view_background_image','未設定')}\n"
-                    f"- Playlist  ：{WebData.get('playlist_tile_image','未設定')}\n"
-                    f"- Loading   ：{WebData.get('loading_screen_image','未設定')}"
+                    f"- Square    ：{square_poster_image}\n"
+                    f"- Background：{tournament_view_background_image}\n"
+                    f"- Playlist  ：{playlist_tile_image}\n"
+                    f"- Loading   ：{loading_screen_image}"
                 )
             except Exception as e:
                 print (f"  [ERR] ❌️ 画像URL一覧の組み立て失敗 {e}")
