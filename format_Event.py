@@ -64,7 +64,7 @@ def format_EventData():
             loading_screen_image = WebData.get("loading_screen_image", "未設定")
             playlist_tile_image = WebData.get("playlist_tile_image", "未設定")
         else:
-            EventName = "未設定"
+            EventName = event.get("displayDataId", "未設定")
 
         windows_to_display = eventWindows[:2] if len(eventWindows) > 1 else eventWindows
 
