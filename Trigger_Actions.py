@@ -33,5 +33,5 @@ def trigger_workflow():
 if __name__ == "__main__":
     while True:
         trigger_workflow()
-        print(f"[INF] ⏳ 40秒待機中... ({datetime.now(config.JST).strftime('%H:%M:%S')} ～ {(datetime.now(config.JST) + timedelta(seconds=40)).strftime('%H:%M:%S')})")
-        time.sleep(40)
+        print(f"[INF] ⏳ 60秒待機中... ({datetime.now(config.JST).strftime('%H:%M:%S')} ～ {(datetime.now(config.JST) + timedelta(seconds=60)).strftime('%H:%M:%S')})")
+        time.sleep(60)
