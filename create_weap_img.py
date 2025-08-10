@@ -49,69 +49,72 @@ def fetch_data(Weapon_Path, local):
     print (f"　      [DBG] 武器のパス : {Weapon_Path}")
     print (f"　      [DBG] 弾薬のパス : {Ammo_Path}")
 
-    if RangedWeapons_Path and RangedWeapons_RowName:
-        if RangedWeapons_Path not in config.RangedWeapons_Data_Cache:
-            RangedWeapons_Data = fetch_export_data(RangedWeapons_Path)
-            config.RangedWeapons_Data_Cache[RangedWeapons_Path] = RangedWeapons_Data
-        else:
-            print (f"      [INF] キャッシュからRangedWeaponsデータを取得 : {Ammo_Path}")
-
-        RangedWeapons_WeaponData = config.RangedWeapons_Data_Cache.get(RangedWeapons_Path, [{}])[0].get("Rows", {}).get(RangedWeapons_RowName, {})
-
-        if RangedWeapons_WeaponData:
-            if any (key in RangedWeapons_WeaponData for key in ["DmgPB", "FiringRate", "ClipSize", "ReloadTime"]):
-                Stats_JP_Desc = [
-                    "通常ダメージ",
-                    "ヘッドショットダメージ",
-                    "連射速度",
-                    "マガジンサイズ",
-                    "リロード時間"
-                ]
-                BulletsPerCartridge   = RangedWeapons_WeaponData.get("BulletsPerCartridge")         # １撃ごとの発射弾数
-                DamageZone_Critical   = RangedWeapons_WeaponData.get("DamageZone_Critical", 1)      # ヘッドショット時のダメージ倍率
-                MaxDamagePerCartridge = RangedWeapons_WeaponData.get("MaxDamagePerCartridge", -1)   # ダメージ上限
-
-                
-                DmgPB            = RangedWeapons_WeaponData.get("DmgPB", -1)
-                if BulletsPerCartridge:
-                    DmgPB_Calculated = DmgPB * BulletsPerCartridge   # ショットガンは１撃で複数弾撃つ
-                else:
-                    DmgPB_Calculated = DmgPB
-
-                # === ヘッドショットの分岐 ===
-                HeadShot_Normal = DmgPB_Calculated * DamageZone_Critical
-                if MaxDamagePerCartridge not in [0, -1]:
-                    HeadShot_Shotgun = MaxDamagePerCartridge
-                elif MaxDamagePerCartridge in [0, -1]:
-                    HeadShot_Shotgun = None
-
-                HeadShot_Dmg = min(HeadShot_Normal, HeadShot_Shotgun) if HeadShot_Shotgun else HeadShot_Normal  # 理論値の最大ダメージかダメージ上限、どちらか多いほう
-
-                # === 連射速度の分岐 (バースト武器) ===
-                FiringRate_Normal = RangedWeapons_WeaponData.get("FiringRate", -1)
-                CartridgePerFire  = RangedWeapons_WeaponData.get("CartridgePerFire")
-                BurstFiringRate   = RangedWeapons_WeaponData.get("BurstFiringRate")
-                if CartridgePerFire and BurstFiringRate:
-                    FiringRate_Burst  = CartridgePerFire / ( (CartridgePerFire - 1) / BurstFiringRate + (1 / FiringRate_Normal) )
-                else:
-                    FiringRate_Burst = None
-
-                FiringRate = FiringRate_Burst if (FiringRate_Burst and FiringRate_Burst != 0) else FiringRate_Normal
-
-                ClipSize     = RangedWeapons_WeaponData.get("ClipSize", -1)
-                ReloadTime   = RangedWeapons_WeaponData.get("ReloadTime", -1)
-
-                Stats_Data = [
-                    f":  {format_number(DmgPB_Calculated)}",
-                    f":  {format_number(HeadShot_Dmg)}",
-                    f":  {format_number(FiringRate)}",
-                    f":  {format_number(ClipSize)}",
-                    f":  {format_number(ReloadTime)}"
-                ]
+    if "ConsumableItem" not in Weapon_Data[0].get("Properties", {}).get("CreativeTagsHelper", {}).get("CreativeTags", []):
+        if RangedWeapons_Path and RangedWeapons_RowName:
+            if RangedWeapons_Path not in config.RangedWeapons_Data_Cache:
+                RangedWeapons_Data = fetch_export_data(RangedWeapons_Path)
+                config.RangedWeapons_Data_Cache[RangedWeapons_Path] = RangedWeapons_Data
             else:
-                print (f"      [INF] RangedWeaponsの武器データ内に、適する数値データがありません")
-        else:
-            print (f"      [INF] RangedWeapons内に、武器に対応するRowがありません : {RangedWeapons_RowName}")
+                print (f"      [INF] キャッシュからRangedWeaponsデータを取得 : {Ammo_Path}")
+
+            RangedWeapons_WeaponData = config.RangedWeapons_Data_Cache.get(RangedWeapons_Path, [{}])[0].get("Rows", {}).get(RangedWeapons_RowName, {})
+
+            if RangedWeapons_WeaponData:
+                if any (key in RangedWeapons_WeaponData for key in ["DmgPB", "FiringRate", "ClipSize", "ReloadTime"]):
+                    Stats_JP_Desc = [
+                        "通常ダメージ",
+                        "ヘッドショットダメージ",
+                        "連射速度",
+                        "マガジンサイズ",
+                        "リロード時間"
+                    ]
+                    BulletsPerCartridge   = RangedWeapons_WeaponData.get("BulletsPerCartridge")         # １撃ごとの発射弾数
+                    DamageZone_Critical   = RangedWeapons_WeaponData.get("DamageZone_Critical", 1)      # ヘッドショット時のダメージ倍率
+                    MaxDamagePerCartridge = RangedWeapons_WeaponData.get("MaxDamagePerCartridge", -1)   # ダメージ上限
+
+                    
+                    DmgPB            = RangedWeapons_WeaponData.get("DmgPB", -1)
+                    if BulletsPerCartridge:
+                        DmgPB_Calculated = DmgPB * BulletsPerCartridge   # ショットガンは１撃で複数弾撃つ
+                    else:
+                        DmgPB_Calculated = DmgPB
+
+                    # === ヘッドショットの分岐 ===
+                    HeadShot_Normal = DmgPB_Calculated * DamageZone_Critical
+                    if MaxDamagePerCartridge not in [0, -1]:
+                        HeadShot_Shotgun = MaxDamagePerCartridge
+                    elif MaxDamagePerCartridge in [0, -1]:
+                        HeadShot_Shotgun = None
+
+                    HeadShot_Dmg = min(HeadShot_Normal, HeadShot_Shotgun) if HeadShot_Shotgun else HeadShot_Normal  # 理論値の最大ダメージかダメージ上限、どちらか多いほう
+
+                    # === 連射速度の分岐 (バースト武器) ===
+                    FiringRate_Normal = RangedWeapons_WeaponData.get("FiringRate", -1)
+                    CartridgePerFire  = RangedWeapons_WeaponData.get("CartridgePerFire")
+                    BurstFiringRate   = RangedWeapons_WeaponData.get("BurstFiringRate")
+                    if CartridgePerFire and BurstFiringRate:
+                        FiringRate_Burst  = CartridgePerFire / ( (CartridgePerFire - 1) / BurstFiringRate + (1 / FiringRate_Normal) )
+                    else:
+                        FiringRate_Burst = None
+
+                    FiringRate = FiringRate_Burst if (FiringRate_Burst and FiringRate_Burst != 0) else FiringRate_Normal
+
+                    ClipSize     = RangedWeapons_WeaponData.get("ClipSize", -1)
+                    ReloadTime   = RangedWeapons_WeaponData.get("ReloadTime", -1)
+
+                    Stats_Data = [
+                        f":  {format_number(DmgPB_Calculated)}",
+                        f":  {format_number(HeadShot_Dmg)}",
+                        f":  {format_number(FiringRate)}",
+                        f":  {format_number(ClipSize)}",
+                        f":  {format_number(ReloadTime)}"
+                    ]
+                else:
+                    print (f"      [INF] RangedWeaponsの武器データ内に、適する数値データがありません")
+            else:
+                print (f"      [INF] RangedWeapons内に、武器に対応するRowがありません : {RangedWeapons_RowName}")
+    elif "ConsumableItem" in Weapon_Data[0].get("Properties", {}).get("CreativeTagsHelper", {}).get("CreativeTags", []):
+        print (f"      [INF] 消耗品のため、武器データの取得をスキップします")
 
     # === 弾薬のパスがある場合 (消耗品は、消耗品自身が弾薬として書かれているので除外) ===
     if Ammo_Path and Ammo_Path != Weapon_Path:
