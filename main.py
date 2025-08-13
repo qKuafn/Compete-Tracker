@@ -63,6 +63,8 @@ async def main(Actions=False):
             if Actions:
                 message = message + " - GitHubActions"
 
+            subprocess.run(['git', 'pull'])
+
             subprocess.run(["git", "commit", "-m", message], check=True)
             subprocess.run(["git", "push"], check=True)
 
