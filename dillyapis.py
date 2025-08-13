@@ -15,8 +15,22 @@ def fetch_export_data(data_path):
         json_data = response.json().get("jsonOutput", {})
         return json_data
     except Exception as e:
-        status_code = response.status_code if 'response' in locals() else 'N/A'
-        print(f"      [INF] ❌️ 取得失敗: {e}（ステータスコード: {status_code}）")
+        print(f"      [INF] ❌️ 取得失敗: {e}")
+
+async def fetch_export_data_async(session, asset_path):
+    path = strip_after_dot(asset_path)
+    url = f"https://export-service.dillyapis.com/v1/export?Path={path}"
+    print(f"      [INF] dillyapi データ取得開始 : {url}")
+    try:
+        async with session.get(url) as response:
+            if response.status == 200:
+                json_data = await response.json()
+                return json_data.get("jsonOutput", {})
+            else:
+                print(f"      [INF] ❌️ 取得失敗: {response.status} - {await response.text()}")
+    except Exception as e:
+        print(f"      [INF] ❌️ 取得失敗: {e}")
+        return {}
 
 def get_image(icon_path, name= "", download = False):
     path = strip_after_dot(icon_path)
@@ -38,6 +52,34 @@ def get_image(icon_path, name= "", download = False):
             except Exception as e:
                 print(f"      [ERR] ❌️ 保存に失敗 : {e}")
                 return None
+    except Exception as e:
+        print(f"      [ERR] ❌️ 取得失敗 : {e}")
+        return None
+
+async def get_image_async(session, icon_path, name= "", download = False):
+    path = strip_after_dot(icon_path)
+    url = f"https://export-service.dillyapis.com/v1/export?Path={path}"
+    print(f"      [INF] dillyapi 画像取得開始 : {url}")
+
+    try:
+        async with session.get(url) as res:
+            if res.status != 200:
+                print(f"      [ERR] ❌️ HTTPエラー: {res.status} {url}")
+                return None
+            data = await res.read()
+            img = Image.open(BytesIO(data))
+            img = img.convert("RGBA")
+
+            if download:
+                try:
+                    filename = f"{sanitize_filename(name)}.png"
+                    img_path = os.path.join(config.weapicon_dir, filename)
+                    img.save(img_path)
+                except Exception as e:
+                    print(f"      [ERR] ❌️ 保存に失敗 : {e}")
+                    return None
+            return img
+
     except Exception as e:
         print(f"      [ERR] ❌️ 取得失敗 : {e}")
         return None

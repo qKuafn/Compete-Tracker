@@ -1,13 +1,15 @@
 import os
 from PIL import ImageDraw, ImageFont, Image
+import asyncio
+import aiohttp
 
-from dillyapis import fetch_export_data, get_image, get_loc_data
+from dillyapis import fetch_export_data_async, get_image_async, get_loc_data
 from files import load_png, sanitize_filename, format_number
 import config
 import config2
 
-def fetch_data(Weapon_Path, local):
-    Weapon_Data = fetch_export_data(Weapon_Path)
+async def fetch_data(session, Weapon_Path, local):
+    Weapon_Data = await fetch_export_data_async(session, Weapon_Path)
     
     WID = Weapon_Data[0].get("Name", "")
     
@@ -52,7 +54,7 @@ def fetch_data(Weapon_Path, local):
     if "ConsumableItem" not in Weapon_Data[0].get("Properties", {}).get("CreativeTagsHelper", {}).get("CreativeTags", []):
         if RangedWeapons_Path and RangedWeapons_RowName:
             if RangedWeapons_Path not in config.RangedWeapons_Data_Cache:
-                RangedWeapons_Data = fetch_export_data(RangedWeapons_Path)
+                RangedWeapons_Data = await fetch_export_data_async(session, RangedWeapons_Path)
                 config.RangedWeapons_Data_Cache[RangedWeapons_Path] = RangedWeapons_Data
             else:
                 print (f"      [INF] キャッシュからRangedWeaponsデータを取得 : {Ammo_Path}")
@@ -122,11 +124,11 @@ def fetch_data(Weapon_Path, local):
             AmmoType_IconImage = config.AmmoType_IconImage_Cache[Ammo_Path]
             print (f"      [INF] キャッシュから弾薬アイコンを取得 : {Ammo_Path}")
         else:
-            Ammo_Data = fetch_export_data(Ammo_Path)
+            Ammo_Data = await fetch_export_data_async(session, Ammo_Path)
             AmmoType_IconPath = Ammo_Data[0].get("Properties", {}).get("AmmoIconBrush", {}).get("Brush_L", {}).get("ResourceObject", {}).get("ObjectPath", "")
             if AmmoType_IconPath and AmmoType_IconPath != "/Game/UI/Foundation/Textures/Icons/ItemTypes/T-Icon-Blank.0":
                 # === 弾薬アイコンが武器名で保存されてしまうので、download=False (関数側のデフォルト) ===
-                AmmoType_IconImage = get_image(AmmoType_IconPath)
+                AmmoType_IconImage = await get_image_async(session, AmmoType_IconPath)
                 config.AmmoType_IconImage_Cache[Ammo_Path] = AmmoType_IconImage
             else:
                 print ("      [INF] この弾薬には、弾薬アイコンはありません")
@@ -141,7 +143,7 @@ def fetch_data(Weapon_Path, local):
                     AmmoType_IconImage = config.AmmoType_IconImage_Cache[AmmoType_IconPath]
                     print ("      [INF] キャッシュから弾薬アイコンを取得")
                 else:
-                    AmmoType_IconImage = get_image(AmmoType_IconPath, Weapon_Name, download=True if local else False)
+                    AmmoType_IconImage = await get_image_async(session, AmmoType_IconPath, Weapon_Name, download=True if local else False)
                     config.AmmoType_IconImage_Cache[AmmoType_IconPath] = AmmoType_IconImage
         else:
             print ("      [INF] この弾薬には、弾薬アイコンはありません")
@@ -159,14 +161,14 @@ def fetch_data(Weapon_Path, local):
                 WeaponIcon_Path = DataList["Icon"].get("AssetPathName")
     
     if local:
-        Weapon_IconImage = get_image(WeaponIcon_Path, Weapon_Name, download=True)
+        Weapon_IconImage = await get_image_async(session, WeaponIcon_Path, Weapon_Name, download=True)
     else:
-        Weapon_IconImage = get_image(WeaponIcon_Path, Weapon_Name, download=False)
+        Weapon_IconImage = await get_image_async(session, WeaponIcon_Path, Weapon_Name, download=False)
 
     return Weapon_Name, Description_Data, Stats_JP_Desc, Stats_Data, Weapon_Name, AmmoType_IconImage, Weapon_IconImage, WID, rarity
 
-def create_image(weapon_path, local):
-    WeaponName, Description, StatsDesc, Stats, WeaponName, AmmoTypeIcon, WeaponIcon, WID, rarity = fetch_data (weapon_path, local)
+async def create_image(session, weapon_path, local):
+    WeaponName, Description, StatsDesc, Stats, WeaponName, AmmoTypeIcon, WeaponIcon, WID, rarity = await fetch_data(session, weapon_path, local)
     
     try:
         if AmmoTypeIcon:
@@ -330,5 +332,9 @@ def wrap_text(draw, text, font, max_width):
     LinesCount = len(lines)
     return lines, LinesCount
 
+async def main():
+    async with aiohttp.ClientSession() as session:
+        await create_image(session, weapon_path="", local=True)
+
 if __name__ == "__main__":
-    create_image(weapon_path="", local=True)
+    asyncio.run(main())

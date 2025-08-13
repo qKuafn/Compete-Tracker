@@ -3,6 +3,7 @@ import json
 import os
 from datetime import datetime, timezone
 from copy import deepcopy
+import asyncio
 
 from files import load_json, get_unique_filepath
 from tokens import ensure_token
@@ -13,7 +14,7 @@ import config2
 
 Eventtype = "second"
 
-def format_EventData():
+async def format_EventData():
     print(f"[INF] FormatEventData 処理開始")
     ensure_token("second")
     EventData = fetch_EventData(type=Eventtype)
@@ -551,5 +552,5 @@ def tuple_to_dict(obj):
 if __name__ == "__main__":
     config2.test = True
     config2.Tournament_Webhook = False
-    format_EventData()
+    asyncio.run(format_EventData())
     

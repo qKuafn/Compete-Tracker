@@ -1,15 +1,15 @@
 import requests
 import os
 import json
+import asyncio
+
 import config
 import config2
-
 from tokens import ensure_token
-from files import load_json, get_unique_filepath
+from files import load_json, get_unique_filepath, safe_print
 
 def fetch_EventData(region="ASIA", type="first"):
-    print (f"[INF] EventData 取得開始 : {region} (Acc:{type})")
-    ensure_token(type)
+    safe_print(f"[INF] EventData 取得開始 : {region} (Acc:{type})")
 
     count = "2" if type == "second" else ""
 
@@ -33,7 +33,7 @@ def fetch_EventData(region="ASIA", type="first"):
             try:
                 before_data = load_json(filepath) if os.path.exists(filepath) else None
             except Exception as e:
-                print(f"  [ERR] ❌️ 旧ファイルの取得に失敗 : {e}")
+                safe_print(f"  [ERR] ❌️ 旧ファイルの取得に失敗 : {e}")
             if new_data != before_data or before_data is None:
                 try:
                     if config2.test is False:
@@ -43,17 +43,20 @@ def fetch_EventData(region="ASIA", type="first"):
                         json.dump(data, f, ensure_ascii=False, indent=2)
                     config.tags.append(region)
                     config.updated_regions.append(region)
-                    print(f"  [INF] 🟢 変更あり")
+                    safe_print(f"  [INF] 🟢 {region}: 変更あり")
                 except Exception as e:
-                    print(f"  [INF] ❌️ ファイルの保存に失敗 : {e}")
+                    safe_print(f"  [INF] ❌️ ファイルの保存に失敗 : {e}")
             elif new_data== before_data:
-                print(f"  [INF] ✅️ 変更なし")
+                safe_print(f"  [INF] ✅️ {region}: 変更なし")
         return data
     else:
-        print(f"  [ERR] 🔴 取得に失敗 : {res.text} {res.status_code}")
+        safe_print(f"  [ERR] 🔴 {region} 取得に失敗 : {res.text} {res.status_code}")
         return None
+
+async def run():
+    ensure_token()
+    await asyncio.gather(*(asyncio.to_thread(fetch_EventData, region) for region in config2.Regions))
 
 if __name__ == "__main__":
     config2.test = True
-    for region in config2.Regions:
-        fetch_EventData(region=f"{region}")
+    asyncio.run(run())

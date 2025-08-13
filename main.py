@@ -2,6 +2,7 @@ import requests
 import time
 import subprocess
 from datetime import datetime, timedelta
+import asyncio
 
 from tokens import ensure_token
 from get_EventData import fetch_EventData
@@ -12,7 +13,7 @@ from hotfix import fetch_and_store_hotfix
 import config
 import config2
 
-def main(Actions=False):
+async def main(Actions=False):
 
     print("🚀 開始")
 
@@ -27,10 +28,9 @@ def main(Actions=False):
             subprocess.run(['git', 'pull'])
             subprocess.run(['git', 'stash', 'pop'])
     
-    format_EventData()
+    await format_EventData()
 
-    for region in config2.Regions:
-        fetch_EventData(region)
+    await asyncio.gather(*(asyncio.to_thread(fetch_EventData, region) for region in config2.Regions))
 
     for lang in config2.Lang:
         fetch_WebData(lang)
@@ -39,7 +39,7 @@ def main(Actions=False):
     for lang in config2.Lang:
         fetch_LeadInfo(lang)
 
-    fetch_and_store_hotfix(Actions)
+    await fetch_and_store_hotfix(Actions)
 
     fetch_Playlist()
 
@@ -131,6 +131,6 @@ if __name__ == "__main__":
             Actions = True
         else:
             Actions = False
-        main(Actions)
+        asyncio.run(main(Actions))
         print(f"[INF] ⏳ 40秒待機中... ({datetime.now(config.JST).strftime('%H:%M:%S')} ～ {(datetime.now(config.JST) + timedelta(seconds=40)).strftime('%H:%M:%S')})")
         time.sleep(40)

@@ -5,53 +5,17 @@ import os
 import io
 import json
 import difflib
+import asyncio
+import aiohttp
 
 from tokens import ensure_token
 from files import load_ini, get_unique_filepath, sanitize_filename, format_number
-from dillyapis import fetch_export_data, get_loc_data
+from dillyapis import fetch_export_data_async, get_loc_data
 from create_weap_img import create_image
 import config
 import config2
 
 base_name = ".DefaultGame"
-
-def fetch_and_store_hotfix(Actions):
-    uniqueFilename = fetch_hotfix_uniqueFilename()
-    if not uniqueFilename:
-        print("  [ERR]  🔴 DefaultGame.iniに対応するUniqueFileNameがありません")
-        return
-
-    url = config.Hotfix_URL.format(UniqueFileName=uniqueFilename)
-    headers = {"Authorization": f"{config.token_type} {config.access_token}"}
-    res = requests.get(url, headers=headers)
-    if res.status_code == 200:
-        filepath = os.path.join(config2.RESPONSE_DIR, f"{base_name}.ini")
-        new_data = res.text
-        if os.path.exists(filepath):
-            try:
-                old_data = load_ini(filepath)
-            except Exception as e:
-                print(f"  [ERR] ❌️ 旧ファイルの取得に失敗 : {e}")
-        if new_data != old_data or old_data is None:
-            config.tags.append("Hotfix")
-            try:
-                if config2.test is False:
-                    with open(get_unique_filepath(config2.ARCHIVE_DIR, f"{base_name}", "ini"), "w", encoding="utf-8") as f:
-                        f.write(new_data)
-                with open(filepath, "w", encoding="utf-8") as f:
-                    f.write(new_data)
-                print(f"  [INF] 🟢 変更あり")
-            except Exception as e:
-                print(f"  [ERR] ❌️ ファイルの保存に失敗 : {e}")
-                return
-        elif new_data == old_data:
-            print("  [INF] ✅️ 変更なし")
-            return
-    else:
-        print(f"  [ERR] ❌️ DefaultGame.ini 取得失敗 : {res.status_code} {res.text}")
-        return
-
-    load_changes(old_data, new_data, Actions)
 
 def fetch_hotfix_uniqueFilename():
     ensure_token()
@@ -68,7 +32,46 @@ def fetch_hotfix_uniqueFilename():
         print(f"  [ERR] ❌️ CloudStrage 取得失敗 : {res.status_code} {res.text}")
         return None
 
-def load_changes(old_data, new_data, Actions):
+async def fetch_and_store_hotfix(Actions):
+    async with aiohttp.ClientSession() as session:
+        uniqueFilename = fetch_hotfix_uniqueFilename()
+        if not uniqueFilename:
+            print("  [ERR]  🔴 DefaultGame.iniに対応するUniqueFileNameがありません")
+            return
+
+        url = config.Hotfix_URL.format(UniqueFileName=uniqueFilename)
+        headers = {"Authorization": f"{config.token_type} {config.access_token}"}
+        res = requests.get(url, headers=headers)
+        if res.status_code == 200:
+            filepath = os.path.join(config2.RESPONSE_DIR, f"{base_name}.ini")
+            new_data = res.text
+            if os.path.exists(filepath):
+                try:
+                    old_data = load_ini(filepath)
+                except Exception as e:
+                    print(f"  [ERR] ❌️ 旧ファイルの取得に失敗 : {e}")
+            if new_data != old_data or old_data is None:
+                config.tags.append("Hotfix")
+                try:
+                    if config2.test is False:
+                        with open(get_unique_filepath(config2.ARCHIVE_DIR, f"{base_name}", "ini"), "w", encoding="utf-8") as f:
+                            f.write(new_data)
+                    with open(filepath, "w", encoding="utf-8") as f:
+                        f.write(new_data)
+                    print(f"  [INF] 🟢 変更あり")
+                except Exception as e:
+                    print(f"  [ERR] ❌️ ファイルの保存に失敗 : {e}")
+                    return
+            elif new_data == old_data:
+                print("  [INF] ✅️ 変更なし")
+                return
+        else:
+            print(f"  [ERR] ❌️ DefaultGame.ini 取得失敗 : {res.status_code} {res.text}")
+            return
+
+        await load_changes(session, old_data, new_data, Actions)
+
+async def load_changes(session, old_data, new_data, Actions):
     old_lines = old_data.splitlines()
     new_lines = new_data.splitlines()
     diff = difflib.ndiff(old_lines, new_lines)
@@ -101,9 +104,9 @@ def load_changes(old_data, new_data, Actions):
             else:
                 print(f"    [ERR] 🔴 diffのDiscord通知失敗 : {response.status_code} {response.text}")
 
-    parse_hotfix(diff_text, Actions)
+    await parse_hotfix(session, diff_text, Actions)
 
-def parse_hotfix(diff_text, Actions):
+async def parse_hotfix(session, diff_text, Actions):
     print("  [INF] 差分の解析開始")
     parsed_hotfix = []
     for line in diff_text.splitlines():
@@ -128,10 +131,9 @@ def parse_hotfix(diff_text, Actions):
             })
         if "TableUpdate;" in line or "AddRow;" in line:
             print("   [INF] テーブル更新・行追加は無視")
-    check_depth_changes(parsed_hotfix, Actions)
+    await check_depth_changes(session, parsed_hotfix, Actions)
 
-def check_depth_changes(diff_data, Actions):
-    
+async def check_depth_changes(session, diff_data, Actions):
     merged = defaultdict(lambda: {"追加" : None, "削除" : None})
     grouped = defaultdict(lambda: defaultdict(list))
 
@@ -166,11 +168,11 @@ def check_depth_changes(diff_data, Actions):
             if "LootPackages" in changed_path:
 
                 if not config.loc_data:
-                    config.loc_data = get_loc_list()
+                    config.loc_data = await get_loc_list()
                     print(f"    [INF] ⭕️ localization 取得完了（{len(config.loc_data)}件）")
 
                 if changed_path not in file_data_cache:
-                    file_data = fetch_export_data(changed_path)
+                    file_data = await fetch_export_data_async(session, changed_path)
                     file_data_cache[changed_path] = file_data[0].get("Rows", {}) if file_data else {}
                     row_data = file_data_cache[changed_path].get(f"{row}", {})
                 else:
@@ -180,14 +182,14 @@ def check_depth_changes(diff_data, Actions):
                 if not row_data and "/LootCurrentSeason/DataTables/Comp/LootCurrentSeasonLootPackages_Client_comp" in changed_path:
                     fallback_path = "/LootCurrentSeason/DataTables/LootCurrentSeasonLootPackages_Client"
                     if fallback_path not in file_data_cache:
-                        file_data = fetch_export_data(fallback_path)
+                        file_data = await fetch_export_data_async(session, fallback_path)
                         file_data_cache[fallback_path] = file_data[0].get("Rows", {}) if file_data else {}
                     row_data = file_data_cache[fallback_path].get(f"{row}", {})
 
                 try:
                     weapon_path = (row_data.get("ItemDefinition", {}).get("AssetPathName", ""))
                     wid = weapon_path.split('/')[-1].split('.')[0]
-                    weapon_data = fetch_export_data(weapon_path)
+                    weapon_data = await fetch_export_data_async(session, weapon_path)
                 except Exception as e:
                     print(f"    [ERR] 🔴 武器のパス取得に失敗 : {e}")
                     weapon_data = []
@@ -237,14 +239,14 @@ def check_depth_changes(diff_data, Actions):
             # === DataTavleの更新は、Rows.row
             elif "DataTable=" in origin_row:
                 if changed_path not in file_data_cache:
-                    file_data = fetch_export_data(changed_path)
+                    file_data = await fetch_export_data_async(session, changed_path)
                     file_data_cache[changed_path] = file_data[0].get("Rows", {}) if file_data else {}
                 row_data = file_data_cache[changed_path].get(f"{row}", {})
 
             # CurveTableの更新は、Rows.row.Keys内に "Time": と "Value": がある
             elif "CurveTable=" in origin_row:
                 if changed_path not in file_data_cache:
-                    export_data = fetch_export_data(changed_path)
+                    export_data = await fetch_export_data_async(session, changed_path)
                     file_data_cache[changed_path] = export_data[0].get("Rows", {}) if export_data else {}
                 loot_rows = file_data_cache[changed_path]
                 row_data = loot_rows.get(f"{row}", {}).get("Keys", [])
@@ -275,10 +277,12 @@ def check_depth_changes(diff_data, Actions):
             status = "更新"
             key = added["key"]
         elif added:
-            if "DataTable=" in origin_row:
-                default_weight = row_data.get(added["key"], "エラー")
-            elif "CurveTable" in origin_row:
+            if "CurveTable" in origin_row in changed_path:
                 default_weight = find_value_by_time(row_data, added["key"])
+            elif "DataTable=" in origin_row:
+                default_weight = row_data.get(added["key"], "エラー")
+                if default_weight == "エラー":
+                    default_weight = find_value_by_time(row_data, added["key"])
             display = f"{format_number(default_weight)} → {format_number(added['value'])}"
             if default_weight != added['value']:
                 if added.get("key") == "Weight":
@@ -289,10 +293,12 @@ def check_depth_changes(diff_data, Actions):
             status = "追加"
             key = added["key"]
         elif removed:
-            if "DataTable=" in origin_row:
-                default_weight = row_data.get(removed["key"], "エラー")
-            elif "CurveTable" in origin_row:
-                default_weight = find_value_by_time(row_data, removed["key"])
+            if "CurveTable" in origin_row in changed_path:
+                default_weight = find_value_by_time(row_data, added["key"])
+            elif "DataTable=" in origin_row:
+                default_weight = row_data.get(added["key"], "エラー")
+                if default_weight == "エラー":
+                    default_weight = find_value_by_time(row_data, added["key"])
             display = f"{format_number(removed['value'])} → {format_number(default_weight)}"
             if removed['value'] != default_weight:
                 if removed.get("key") == "Weight":
@@ -409,15 +415,15 @@ def check_depth_changes(diff_data, Actions):
                             print(f"    [INF] 画像を生成します : {weapon_path}")
                             # === テスト状態のActions か Actionsじゃない なら、ローカルからの取得・保存を試す ===
                             if (config2.test and Actions) or not Actions:
-                                img = create_image(weapon_path, local=True)
+                                img = await create_image(session, weapon_path, local=True)
                             else:
-                                img = create_image(weapon_path, local=False)
+                                img = await create_image(session, weapon_path, local=False)
 
                         # === テスト状態のActionsなら、必ず画像を生成 (ローカルで動かしているはずなので) ===
                         if weapon_path and config2.test and Actions:
                             print ("=====================================")
                             print(f"    [INF] Actions デバッグ用 : 画像を生成します : {weapon_path}")
-                            img = create_image(weapon_path, local=False)
+                            img = await create_image(session, weapon_path, local=False)
 
                     # === Actionsで画像が作られているなら、Tempフォルダに保存 ===
                     # === not os.path.isfile じゃないのは、テスト状態のActionsの可能性を考慮 ===
@@ -464,25 +470,32 @@ def check_depth_changes(diff_data, Actions):
                                 print(f"    [ERR] ❌ Discord通知失敗 (画像) : {response.status_code} {response.text}")
     print ("  [INF] ✅️ Hotfix 処理完了")
 
-def get_loc_list():
-    loc_list = {}
-    loc_paths = [
-    "FortniteGame/Content/Localization/Fortnite/ja/Fortnite",
-    "FortniteGame/Content/Localization/Fortnite_locchunk10/ja/Fortnite_locchunk10",
-    "FortniteGame/Content/Localization/Fortnite_locchunk13/ja/Fortnite_locchunk13",
-    "FortniteGame/Content/Localization/Fortnite_locchunk20/ja/Fortnite_locchunk20",
-    "FortniteGame/Content/Localization/Fortnite_locchunk30/ja/Fortnite_locchunk30",
-    "FortniteGame/Content/Localization/Fortnite_locchunk40/ja/Fortnite_locchunk40",
-    "FortniteGame/Content/Localization/Fortnite_locchunk50/ja/Fortnite_locchunk50"
+async def get_loc_list():
+    paths = [
+        "FortniteGame/Content/Localization/Fortnite/ja/Fortnite",
+        "FortniteGame/Content/Localization/Fortnite_locchunk10/ja/Fortnite_locchunk10",
+        "FortniteGame/Content/Localization/Fortnite_locchunk30/ja/Fortnite_locchunk30",
+        "FortniteGame/Content/Localization/Fortnite_locchunk20/ja/Fortnite_locchunk20",
+        "FortniteGame/Content/Localization/Fortnite_locchunk40/ja/Fortnite_locchunk40",
+        "FortniteGame/Content/Localization/Fortnite_locchunk13/ja/Fortnite_locchunk13",
+        "FortniteGame/Content/Localization/Fortnite_locchunk80/ja/Fortnite_locchunk80",
+        "FortniteGame/Content/Localization/Fortnite_locchunk50/ja/Fortnite_locchunk50",
+        "FortniteGame/Content/Localization/Fortnite_locchunk100/ja/Fortnite_locchunk100"
     ]
-    for loc_path in loc_paths:
-        data = fetch_export_data(loc_path)
-        rows = data.get("", {})
-        for key, val in rows.items():
-            if isinstance(val, str):
-                loc_list[key] = val
-    return loc_list
+
+    loc_dict = {}
+    async with aiohttp.ClientSession() as session:
+        tasks = [fetch_export_data_async(session, path) for path in paths]
+
+        for coro in asyncio.as_completed(tasks):
+            data = await coro
+            rows = data.get("", {})
+            for key, val in rows.items():
+                if isinstance(val, str):
+                    loc_dict[key] = val
+
+    return loc_dict
 
 if __name__ == "__main__":
     config2.test = True
-    fetch_and_store_hotfix(Actions=True)
+    asyncio.run(fetch_and_store_hotfix(Actions=True))

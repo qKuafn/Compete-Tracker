@@ -11,7 +11,7 @@ Tournament_Webhook = True
 Hotfix_Webhook = True
 Log_Webhook = True
 
-test = False
+test = True
 
 if test is True:
     Tournament_Webhook = False
