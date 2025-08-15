@@ -146,7 +146,7 @@ async def format_EventData():
 
         filepath = os.path.join(config2.TOURNAMENT_DIR, f"{save_eventId}.json")
         new_data = [output]
-        before_data = load_json(save_eventId) if os.path.exists(save_eventId) else None
+        before_data = load_json(filepath) if os.path.exists(filepath) else None
 
         eventname   = list(new_data[0].keys())[0]
         before_root = before_data[0].get(eventname, {}) if before_data else {}
