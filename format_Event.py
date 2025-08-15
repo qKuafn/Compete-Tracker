@@ -69,7 +69,9 @@ async def format_EventData():
 
         windows_to_display = eventWindows[:2] if len(eventWindows) > 1 else eventWindows
 
-        if displayDataId in sent:
+        save_eventId = "_".join(eventId.split("_")[1:-1])
+
+        if save_eventId in sent:
             continue
 
         output = {
@@ -140,10 +142,11 @@ async def format_EventData():
                 "payouts": payouts
             }
 
-        print (f" [INF] 比較開始 : {displayDataId}")
-        filepath = os.path.join(config2.TOURNAMENT_DIR, f"{displayDataId}.json")
+        print (f" [INF] 比較開始 : {save_eventId}")
+
+        filepath = os.path.join(config2.TOURNAMENT_DIR, f"{save_eventId}.json")
         new_data = [output]
-        before_data = load_json(filepath) if os.path.exists(filepath) else None
+        before_data = load_json(save_eventId) if os.path.exists(save_eventId) else None
 
         eventname   = list(new_data[0].keys())[0]
         before_root = before_data[0].get(eventname, {}) if before_data else {}
@@ -152,16 +155,16 @@ async def format_EventData():
 
             # === 保存 ===
             if before_data is None:
-                print(f"   [INF] 🟢 新規トーナメント : {displayDataId}")
-                config.tags.append(f"{displayDataId} (New)")
-                config.added_Tournaments.append(displayDataId)
+                print(f"   [INF] 🟢 新規トーナメント : {save_eventId}")
+                config.tags.append(f"{save_eventId} (New)")
+                config.added_Tournaments.append(save_eventId)
             elif new_data != before_data:
-                print(f"   [INF] 🟢 トーナメント更新 : {displayDataId}")
-                config.tags.append(f"{displayDataId} (Upd)")
-                config.updated_Tournaments.append(displayDataId)
+                print(f"   [INF] 🟢 トーナメント更新 : {save_eventId}")
+                config.tags.append(f"{save_eventId} (Upd)")
+                config.updated_Tournaments.append(save_eventId)
             
             if config2.test is False:
-                with open(get_unique_filepath(config2.TOURNAMENT_ARCHIVE_DIR, displayDataId), "w", encoding="utf-8") as f:
+                with open(get_unique_filepath(config2.TOURNAMENT_ARCHIVE_DIR, save_eventId), "w", encoding="utf-8") as f:
                     json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
@@ -342,7 +345,7 @@ async def format_EventData():
                 f"## 🆕 新トーナメント : {eventname}\n"
                 f"{image_section}\n"
             )
-            send_discord(content, embeds, filepath, displayDataId, sent)
+            send_discord(content, embeds, filepath, save_eventId, sent)
 
         elif new_data != before_data:
             embeds = []
@@ -383,12 +386,12 @@ async def format_EventData():
                     f"## 🔄 トーナメント更新 : {eventname}\n"
                     f"{image_section}\n"
                 )
-            send_discord(content, embeds, filepath, displayDataId, sent)
+            send_discord(content, embeds, filepath, save_eventId, sent)
 
     if not config.added_Tournaments and not config.updated_Tournaments:
         print(" [INF] ✅️ 変更なし")
 
-def send_discord(content, embeds, filepath, displayDataId, sent):
+def send_discord(content, embeds, filepath, save_eventId, sent):
     data = {
         "payload_json": json.dumps({"content": content, "embeds": embeds}, ensure_ascii=False),
     }
@@ -417,7 +420,7 @@ def send_discord(content, embeds, filepath, displayDataId, sent):
             except Exception as e:
                 print (f"   [ERR] 🔴 Discord通知失敗 : {e}")
                 print (f"'embeds':{embeds}")
-        sent.add(displayDataId)
+        sent.add(save_eventId)
 
 def find_diffs(old, new, path=""):
     diffs = {}
@@ -553,4 +556,3 @@ if __name__ == "__main__":
     config2.test = True
     config2.Tournament_Webhook = False
     asyncio.run(format_EventData())
-    
