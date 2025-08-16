@@ -15,10 +15,8 @@
         "AccountLockType": "Window"
       },
       "S37_SurfWitchCup_ASIA": {
-        "beginTime": "2025-08-31T09:00:00Z",
         "beginTime_UNIX": 1756630800,
         "beginTime_JST": "2025-08-31 18:00:00",
-        "endTime": "2025-08-31T12:00:00Z",
         "endTime_UNIX": 1756641600,
         "endTime_JST": "2025-08-31 21:00:00",
         "playlistId": "Playlist_ShowdownTournament_Solo",
@@ -35,6 +33,15 @@
         "requireNoneTokensCaller": [
           "EpicAccountPrizingRestriction_v2",
           "Permanent_Tournament_Ban"
+        ],
+        "ScoringRules": [
+          {
+            "leaderboardDefId": "S37_SurfWitch_LeaderboardDef",
+            "scoringRuleSetId": "S37_SurfWitchCup_ScoringRules",
+            "isMainWindowLeaderboard": true,
+            "useIndividualScores": false,
+            "onlyScoreTopN": "All"
+          }
         ],
         "payouts": [
           {

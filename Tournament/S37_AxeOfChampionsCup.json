@@ -15,10 +15,8 @@
         "AccountLockType": "Window"
       },
       "S37_AxeOfChampionsCup_ASIA": {
-        "beginTime": "2025-08-30T05:00:00Z",
         "beginTime_UNIX": 1756530000,
         "beginTime_JST": "2025-08-30 14:00:00",
-        "endTime": "2025-08-30T08:00:00Z",
         "endTime_UNIX": 1756540800,
         "endTime_JST": "2025-08-30 17:00:00",
         "playlistId": "Playlist_ShowdownTournament_Solo",
@@ -35,6 +33,15 @@
         "requireNoneTokensCaller": [
           "EpicAccountPrizingRestriction_v2",
           "Permanent_Tournament_Ban"
+        ],
+        "ScoringRules": [
+          {
+            "leaderboardDefId": "S37_AxeOfChampionsCup_LeaderboardDef",
+            "scoringRuleSetId": "S37_AxeOfChampionsCup_ScoringRules",
+            "isMainWindowLeaderboard": true,
+            "useIndividualScores": false,
+            "onlyScoreTopN": "All"
+          }
         ],
         "payouts": [
           {

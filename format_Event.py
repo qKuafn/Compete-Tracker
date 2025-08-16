@@ -88,6 +88,7 @@ async def format_EventData():
 
         for window in eventWindows:
             payouts = []
+            scoringrules = []
 
             eventWindowId = window["eventWindowId"]
             begin_dt = datetime.strptime(window["beginTime"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
@@ -121,14 +122,31 @@ async def format_EventData():
                                     "value": payout.get("value")
                                 })
 
+            for scoreLocations in window["scoreLocations"]:
+                leaderboardDefId = scoreLocations["leaderboardDefId"]
+                isMainWindowLeaderboard = scoreLocations["isMainWindowLeaderboard"]
+                for key, value in EventData["scoreLocationScoringRuleSets"].items():
+                    if f"Fortnite:{eventId}:{eventWindowId}" in key:
+                        scoringRuleSetId = value
+                        for leaderboardDef in EventData["leaderboardDefs"]:
+                            if leaderboardDef["scoringRuleSetId"] == scoringRuleSetId and leaderboardDef["leaderboardDefId"] == leaderboardDefId:
+                                useIndividualScores = leaderboardDef["useIndividualScores"]
+                                onlyScoreTopN = leaderboardDef.get("onlyScoreTopN", "All")
+
+                                scoringrules.append({
+                                    "leaderboardDefId": leaderboardDefId,
+                                    "scoringRuleSetId": scoringRuleSetId,
+                                    "isMainWindowLeaderboard": isMainWindowLeaderboard,
+                                    "useIndividualScores": useIndividualScores,
+                                    "onlyScoreTopN": onlyScoreTopN
+                                })
+
             beginTime_UNIX = int(begin_dt.timestamp())
             endTime_UNIX = int(end_dt.timestamp())
 
             output[EventName][eventWindowId] = {
-                "beginTime": window["beginTime"],
                 "beginTime_UNIX": beginTime_UNIX,
                 "beginTime_JST": begin_dt.astimezone(config.JST).strftime("%Y-%m-%d %H:%M:%S"),
-                "endTime": window["endTime"],
                 "endTime_UNIX": endTime_UNIX,
                 "endTime_JST": end_dt.astimezone(config.JST).strftime("%Y-%m-%d %H:%M:%S"),
                 "playlistId": playlistId,
@@ -139,6 +157,7 @@ async def format_EventData():
                 "requireAnyTokens": window.get("requireAnyTokens", []),
                 "requireAnyTokensCaller": window.get("requireAnyTokensCaller", []),
                 "requireNoneTokensCaller": window.get("requireNoneTokensCaller", []),
+                "ScoringRules": scoringrules,
                 "payouts": payouts
             }
 
@@ -392,6 +411,15 @@ async def format_EventData():
         print(" [INF] ✅️ 変更なし")
 
 def send_discord(content, embeds, filepath, save_eventId, sent):
+    MAX_EMBEDS = 10
+    if len(embeds) > MAX_EMBEDS:
+        embeds = embeds[:MAX_EMBEDS-1]
+        
+        embeds.append({
+            "title": "省略",
+            "description": f"{len(embeds)+1}個以上のembedが存在するため省略しました。"
+        })
+
     data = {
         "payload_json": json.dumps({"content": content, "embeds": embeds}, ensure_ascii=False),
     }
@@ -402,7 +430,7 @@ def send_discord(content, embeds, filepath, save_eventId, sent):
         if config2.Tournament_Webhook is True:
             try:
                 res = requests.post(config.Tournament_Webhook_URL, data=data, files=files)
-                if res.status_code == 200 or res.status_code == 204:
+                if res.status_code in (200, 204):
                     print("   [INF] ⭕️ Discord通知成功")
                 else:
                     print (f"   [ERR] 🔴 Discord通知失敗 : {res.status_code} - {res.text}")
@@ -412,7 +440,7 @@ def send_discord(content, embeds, filepath, save_eventId, sent):
         if config2.Log_Webhook is True:
             try:
                 res = requests.post(config.Log_Webhook_URL, data=data, files=files)
-                if res.status_code == 200 or res.status_code == 204:
+                if res.status_code in (200, 204):
                     print("   [INF] ⭕️ Discord通知成功")
                 else:
                     print (f"   [ERR] 🔴 Discord通知失敗 : {res.status_code} - {res.text}")
@@ -420,7 +448,8 @@ def send_discord(content, embeds, filepath, save_eventId, sent):
             except Exception as e:
                 print (f"   [ERR] 🔴 Discord通知失敗 : {e}")
                 print (f"'embeds':{embeds}")
-        sent.add(save_eventId)
+    
+    sent.add(save_eventId)
 
 def find_diffs(old, new, path=""):
     diffs = {}

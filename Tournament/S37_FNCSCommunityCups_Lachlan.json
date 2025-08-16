@@ -14,10 +14,8 @@
         "AccountLockType": "Window"
       },
       "S37_FNCSCommunityCups_Lachlan_ASIA": {
-        "beginTime": "2025-08-20T09:00:00Z",
         "beginTime_UNIX": 1755680400,
         "beginTime_JST": "2025-08-20 18:00:00",
-        "endTime": "2025-08-20T11:30:00Z",
         "endTime_UNIX": 1755689400,
         "endTime_JST": "2025-08-20 20:30:00",
         "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_NoFill",
@@ -34,6 +32,15 @@
         "requireNoneTokensCaller": [
           "EpicAccountPrizingRestriction_v2",
           "Permanent_Tournament_Ban"
+        ],
+        "ScoringRules": [
+          {
+            "leaderboardDefId": "S37_FNCSCommunityCups_LeaderboardDef",
+            "scoringRuleSetId": "Scoringrules_S37_FNCS_Community_Cups",
+            "isMainWindowLeaderboard": true,
+            "useIndividualScores": false,
+            "onlyScoreTopN": "All"
+          }
         ],
         "payouts": [
           {

@@ -15,10 +15,8 @@
         "AccountLockType": "Window"
       },
       "S37_PlayStationCup_Qualifier_ASIA": {
-        "beginTime": "2025-09-03T09:00:00Z",
         "beginTime_UNIX": 1756890000,
         "beginTime_JST": "2025-09-03 18:00:00",
-        "endTime": "2025-09-03T12:00:00Z",
         "endTime_UNIX": 1756900800,
         "endTime_JST": "2025-09-03 21:00:00",
         "playlistId": "Playlist_ShowdownTournament_Solo",
@@ -35,6 +33,15 @@
         "requireNoneTokensCaller": [
           "EpicAccountPrizingRestriction_v2",
           "Permanent_Tournament_Ban"
+        ],
+        "ScoringRules": [
+          {
+            "leaderboardDefId": "S37_PlayStationCup_LeaderboardDef_Qualifier",
+            "scoringRuleSetId": "S37_PlayStationCup_ScoringRules_Qualifier",
+            "isMainWindowLeaderboard": true,
+            "useIndividualScores": false,
+            "onlyScoreTopN": "All"
+          }
         ],
         "payouts": [
           {
@@ -54,10 +61,8 @@
         ]
       },
       "S37_PlayStationCup_Final_ASIA": {
-        "beginTime": "2025-09-04T09:00:00Z",
         "beginTime_UNIX": 1756976400,
         "beginTime_JST": "2025-09-04 18:00:00",
-        "endTime": "2025-09-04T12:00:00Z",
         "endTime_UNIX": 1756987200,
         "endTime_JST": "2025-09-04 21:00:00",
         "playlistId": "Playlist_ShowdownTournament_Solo",
@@ -76,6 +81,15 @@
         "requireNoneTokensCaller": [
           "EpicAccountPrizingRestriction_v2",
           "Permanent_Tournament_Ban"
+        ],
+        "ScoringRules": [
+          {
+            "leaderboardDefId": "S37_PlayStationCup_LeaderboardDef_Final",
+            "scoringRuleSetId": "S37_PlayStationCup_ScoringRules_Final",
+            "isMainWindowLeaderboard": true,
+            "useIndividualScores": false,
+            "onlyScoreTopN": "All"
+          }
         ],
         "payouts": [
           {
