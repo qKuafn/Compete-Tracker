@@ -131,7 +131,7 @@ async def format_EventData():
                         for leaderboardDef in EventData["leaderboardDefs"]:
                             if leaderboardDef["scoringRuleSetId"] == scoringRuleSetId and leaderboardDef["leaderboardDefId"] == leaderboardDefId:
                                 useIndividualScores = leaderboardDef["useIndividualScores"]
-                                onlyScoreTopN = leaderboardDef.get("onlyScoreTopN", "All")
+                                onlyScoreTopN = leaderboardDef.get("onlyScoreTopN", -1)
 
                                 scoringrules.append({
                                     "leaderboardDefId": leaderboardDefId,
@@ -193,11 +193,10 @@ async def format_EventData():
             image_section = []
             try:
                 image_section = (
-                    "🖼️ **画像URL一覧**\n"
-                    f"- Square    ：{square_poster_image}\n"
-                    f"- Background：{tournament_view_background_image}\n"
-                    f"- Playlist  ：{playlist_tile_image}\n"
-                    f"- Loading   ：{loading_screen_image}"
+                    f"-# - Square    ：{square_poster_image}\n"
+                    f"-# - Background：{tournament_view_background_image}\n"
+                    f"-# - Playlist  ：{playlist_tile_image}\n"
+                    f"-# - Loading   ：{loading_screen_image}"
                 )
             except Exception as e:
                 print (f"  [ERR] ❌️ 画像URL一覧の組み立て失敗 {e}")
@@ -361,7 +360,7 @@ async def format_EventData():
             embeds = [embed_date, embed_mode, embed_match, embed_token, embed_payout]
             content = (
                 f"-# <@&1372839358591139840><@&1359477859764273193>\n"
-                f"## 🆕 新トーナメント : {eventname}\n"
+                f"### 🆕 新規追加 : {eventname}\n"
                 f"{image_section}\n"
             )
             send_discord(content, embeds, filepath, save_eventId, sent)
@@ -373,9 +372,10 @@ async def format_EventData():
             for path, change in diffs.items():
                 changes_section = []
 
+                path = " > ".join(path.split(" > ")[1:])
+
                 old_value = tuple_to_dict(change.get("old"))
                 new_value = tuple_to_dict(change.get("new"))
-
 
                 old_str = shorten_json(old_value, 512)
                 new_str = shorten_json(new_value, 512)
@@ -402,7 +402,7 @@ async def format_EventData():
                 embeds.append (embed_changes)
                 content = (
                     f"-# <@&1372839358591139840><@&1359477859764273193>\n"
-                    f"## 🔄 トーナメント更新 : {eventname}\n"
+                    f"### 🔄 更新 : {eventname}\n"
                     f"{image_section}\n"
                 )
             send_discord(content, embeds, filepath, save_eventId, sent)
@@ -411,12 +411,10 @@ async def format_EventData():
         print(" [INF] ✅️ 変更なし")
 
 def send_discord(content, embeds, filepath, save_eventId, sent):
-    MAX_EMBEDS = 10
-    if len(embeds) > MAX_EMBEDS:
-        embeds = embeds[:MAX_EMBEDS-1]
+    if len(embeds) > 10:
+        embeds = embeds[:10-1]
         
         embeds.append({
-            "title": "省略",
             "description": f"{len(embeds)+1}個以上のembedが存在するため省略しました。"
         })
 
