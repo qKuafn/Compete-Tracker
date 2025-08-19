@@ -383,12 +383,12 @@ async def format_EventData():
                 changes_section.append({
                     "name": "過去データ",
                     "value": f"```json\n{old_str}\n```",
-                    "inline": not isinstance(old_str, (dict, list))
+                    "inline": all(len(line) <= 26 for line in str(old_str).splitlines())
                 })
                 changes_section.append({
                     "name": "新データ",
                     "value": f"```json\n{new_str}\n```",
-                    "inline": not isinstance(new_str, (dict, list))
+                    "inline": all(len(line) <= 26 for line in str(new_str).splitlines())
                 })
                 embed_changes = {
                         "title": path,
