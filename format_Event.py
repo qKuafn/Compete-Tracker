@@ -411,11 +411,11 @@ async def format_EventData():
         print(" [INF] ✅️ 変更なし")
 
 def send_discord(content, embeds, filepath, save_eventId, sent):
-    if len(embeds) > 10:
-        embeds = embeds[:10-1]
+    if len(embeds) > 7:
+        embeds = embeds[:4]
         
         embeds.append({
-            "description": f"{len(embeds)+1}個以上のembedが存在するため省略しました。"
+            "description": f"8個以上のembedが存在するため省略しました。"
         })
 
     data = {
