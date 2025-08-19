@@ -294,11 +294,11 @@ async def check_depth_changes(session, diff_data, Actions):
             key = added["key"]
         elif removed:
             if "CurveTable" in origin_row in changed_path:
-                default_weight = find_value_by_time(row_data, added["key"])
+                default_weight = find_value_by_time(row_data, removed["key"])
             elif "DataTable=" in origin_row:
-                default_weight = row_data.get(added["key"], "エラー")
+                default_weight = row_data.get(removed["key"], "エラー")
                 if default_weight == "エラー":
-                    default_weight = find_value_by_time(row_data, added["key"])
+                    default_weight = find_value_by_time(row_data, removed["key"])
             display = f"{format_number(removed['value'])} → {format_number(default_weight)}"
             if removed['value'] != default_weight:
                 if removed.get("key") == "Weight":
