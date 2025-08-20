@@ -264,7 +264,7 @@ async def format_EventData():
                     })
                 try:
                     eligibility = {
-                        "metadata": metadata,
+                        "minimumAccountLevel": metadata.get("minimumAccountLevel", "30"),
                         "additionalRequirements":   new_data[0][eventname][eventWindowId]["additionalRequirements"],
                         "requireAllTokens":         new_data[0][eventname][eventWindowId]["requireAllTokens"],
                         "requireAllTokensCaller":   new_data[0][eventname][eventWindowId]["requireAllTokensCaller"],
