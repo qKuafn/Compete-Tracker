@@ -28,6 +28,7 @@ async def format_EventData():
 
         eventId = event["eventId"]
         metadata = event.get("metadata")
+        platforms = event["platforms"]
         eventWindows = event.get("eventWindows")
         displayDataId = event.get("displayDataId") # WebId
         WebData = None
@@ -82,7 +83,8 @@ async def format_EventData():
                 "tournament_view_background_image": tournament_view_background_image,
                 "loading_screen_image": loading_screen_image,
                 "playlist_title_image": playlist_tile_image,
-                "metadata": metadata
+                "metadata": metadata,
+                "platforms": platforms
             }
         }
 
