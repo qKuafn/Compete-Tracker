@@ -83,31 +83,15 @@ async def main(Actions=False):
                 repo_url = repo_url.removesuffix(".git")
 
             commit_url = f"{repo_url}/commit/{commit_hash}"
-            user_name = subprocess.check_output(
-                ["git", "config", "user.name"], text=True
-            ).strip()
 
             if "ASIA" in config.tags or "ja" in config.tags or config.added_Tournaments or config.updated_Tournaments or config.playlist_tags:
-                content = f"## 更新 : {', '.join(config.tags)} <@&1372839358591139840>"
+                content = f"## [更新 : {', '.join(config.tags)}]({commit_url}) <@&1372839358591139840>"
             else:
-                content = f"## 更新 : {', '.join(config.tags)}"
+                content = f"## [更新 : {', '.join(config.tags)}]({commit_url})"
 
             payload = {
                 "username": "GitHub",
-                "content": content,
-                "embeds": [
-                    {
-                        "author":{
-                            "name": user_name,
-                            "icon_url": f"https://github.com/{user_name}.png",
-                            "url": f"https://github.com/{user_name}?tab=repositories"
-                        },
-                        "title": "[Compete-Tracker:main] 1 new commit",
-                        "url": commit_url,
-                        "description": f"[`{commit_hash}`]({commit_url}) {message}",
-                        "color": 0x7289da,
-                    }
-                ]
+                "content": content
             }
 
             res = requests.post(config.GitHub_Webhook_URL, json=payload)
