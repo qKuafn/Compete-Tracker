@@ -66,7 +66,6 @@ async def main(Actions=False):
             subprocess.run(['git', 'pull'])
 
             subprocess.run(["git", "commit", "-m", message], check=True)
-            subprocess.run(["git", "push"], check=True)
 
             commit_hash = subprocess.check_output(
                 ["git", "rev-parse", "--short", "HEAD"], text=True
@@ -99,6 +98,8 @@ async def main(Actions=False):
                 print("[Discord] 通知を送信")
             if not (res.status_code == 204 or res.status_code == 200):
                 print (f"[Discord] Discord通知失敗 : {res.status_code} {res.text}")
+
+            subprocess.run(["git", "push"], check=True)
 
     # タグの初期化
     config.tags = []
