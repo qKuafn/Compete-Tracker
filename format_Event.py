@@ -76,16 +76,15 @@ async def format_EventData():
             continue
 
         output = {
-            EventName: {
-                "eventId": eventId,
-                "displayDataId": displayDataId,
-                "square_poster_image": square_poster_image,
-                "tournament_view_background_image": tournament_view_background_image,
-                "loading_screen_image": loading_screen_image,
-                "playlist_title_image": playlist_tile_image,
-                "metadata": metadata,
-                "platforms": platforms
-            }
+            "EventName": EventName,
+            "eventId": eventId,
+            "displayDataId": displayDataId,
+            "square_poster_image": square_poster_image,
+            "tournament_view_background_image": tournament_view_background_image,
+            "loading_screen_image": loading_screen_image,
+            "playlist_title_image": playlist_tile_image,
+            "metadata": metadata,
+            "platforms": platforms
         }
 
         for window in eventWindows:
@@ -146,7 +145,7 @@ async def format_EventData():
             beginTime_UNIX = int(begin_dt.timestamp())
             endTime_UNIX = int(end_dt.timestamp())
 
-            output[EventName][eventWindowId] = {
+            output[eventWindowId] = {
                 "beginTime_UNIX": beginTime_UNIX,
                 "beginTime_JST": begin_dt.astimezone(config.JST).strftime("%Y-%m-%d %H:%M:%S"),
                 "endTime_UNIX": endTime_UNIX,
@@ -166,12 +165,12 @@ async def format_EventData():
         print (f" [INF] 比較開始 : {save_eventId}")
 
         filepath = os.path.join(config2.TOURNAMENT_DIR, f"{save_eventId}.json")
-        new_data = [output]
+        new_data = output
         before_data = load_json(filepath) if os.path.exists(filepath) else None
 
-        eventname   = list(new_data[0].keys())[0]
-        before_root = before_data[0].get(eventname, {}) if before_data else {}
-        after_root  = new_data[0][eventname]
+        eventname   = new_data["EventName"]
+        before_root = before_data if before_data else {}
+        after_root  = new_data
         if before_data != new_data:
 
             # === 保存 ===
@@ -217,9 +216,10 @@ async def format_EventData():
 
             for eventWindow in windows_to_display:
                 eventWindowId = eventWindow["eventWindowId"]
+
                 try:
-                    begin = new_data[0][eventname][eventWindowId]["beginTime_UNIX"]
-                    end = new_data[0][eventname][eventWindowId]["endTime_UNIX"]
+                    begin = eventWindow["beginTime_UNIX"]
+                    end = eventWindow["endTime_UNIX"]
                     date_section.append({
                         "name":  eventWindowId,
                         "value": f"<t:{begin}:F>\n～<t:{end}:F>",
@@ -232,8 +232,9 @@ async def format_EventData():
                         "value": "エラー",
                         "inline": True
                     })
+
                 try:
-                    playlist = new_data[0][eventname][eventWindowId]["playlistId"]
+                    playlist = eventWindow["playlistId"]
                     mode_section.append({
                         "name":  eventWindowId,
                         "value": f"`{playlist}`",
@@ -246,8 +247,9 @@ async def format_EventData():
                         "value": "エラー",
                         "inline": True
                     })
+
                 try:
-                    matchCap = new_data[0][eventname][eventWindowId]["matchCap"]
+                    matchCap = eventWindow["matchCap"]
                     if matchCap == 0:
                         matchCap = "無制限"
                     match_section.append({
@@ -262,15 +264,16 @@ async def format_EventData():
                         "value": "エラー",
                         "inline": True
                     })
+
                 try:
                     eligibility = {
                         "minimumAccountLevel": metadata.get("minimumAccountLevel", "30"),
-                        "additionalRequirements":   new_data[0][eventname][eventWindowId]["additionalRequirements"],
-                        "requireAllTokens":         new_data[0][eventname][eventWindowId]["requireAllTokens"],
-                        "requireAllTokensCaller":   new_data[0][eventname][eventWindowId]["requireAllTokensCaller"],
-                        "requireAnyTokens":         new_data[0][eventname][eventWindowId]["requireAnyTokens"],
-                        "requireAnyTokensCaller":   new_data[0][eventname][eventWindowId]["requireAnyTokensCaller"],
-                        "requireNoneTokensCaller":  new_data[0][eventname][eventWindowId]["requireNoneTokensCaller"]
+                        "additionalRequirements":  eventWindow["additionalRequirements"],
+                        "requireAllTokens":        eventWindow["requireAllTokens"],
+                        "requireAllTokensCaller":  eventWindow["requireAllTokensCaller"],
+                        "requireAnyTokens":        eventWindow["requireAnyTokens"],
+                        "requireAnyTokensCaller":  eventWindow["requireAnyTokensCaller"],
+                        "requireNoneTokensCaller": eventWindow["requireNoneTokensCaller"]
                     }
                     eligibility = json.dumps(eligibility, indent=2, ensure_ascii=False)
                     token_section.append({
@@ -285,9 +288,10 @@ async def format_EventData():
                         "value": "エラー",
                         "inline": False
                     })
+
                 try:
-                    payouts_list = new_data[0][eventname][eventWindowId]["payouts"]
-                    
+                    payouts_list = eventWindow["payouts"]
+
                     field_values = []
                     for payout in payouts_list:
                         json_text = json.dumps(payout, ensure_ascii=False, indent=2)
@@ -462,6 +466,7 @@ def find_diffs(old, new, path=""):
     }
 
     IGNORED_ORDER_KEYS = {
+        "platforms",
         "additionalRequirements",
         "requireAllTokens",
         "requireAnyTokens",
