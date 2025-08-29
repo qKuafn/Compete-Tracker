@@ -24,38 +24,45 @@ def fetch_EventData(region="ASIA", type="first"):
     params = {
         "region": region
     }
-    res = requests.get(url, headers=headers, params=params)
+    for attempt in range(2):
+        try:
+            res = requests.get(url, headers=headers, params=params)
 
-    if res.status_code == 200:
-        data = res.json()
-        if type == "first":
-            filepath = os.path.join(config2.RESPONSE_DIR, f"EventData_{region}.json")
-            new_data = data
-            try:
-                before_data = load_json(filepath) if os.path.exists(filepath) else None
-            except Exception as e:
-                safe_print(f"  [ERR] ❌️ 旧ファイルの取得に失敗 : {e}")
-            if new_data != before_data or before_data is None:
-                try:
-                    if config2.test is False:
-                        with open(get_unique_filepath(config2.ARCHIVE_DIR, f"EventData_{region}"), "w", encoding="utf-8") as f:
-                            json.dump(data, f, ensure_ascii=False, indent=2)
-                    with open(filepath, "w", encoding="utf-8") as f:
-                        json.dump(data, f, ensure_ascii=False, indent=2)
-                    config.tags.append(region)
-                    config.updated_regions.append(region)
-                    safe_print(f"  [INF] 🟢 {region}: 変更あり")
-                except Exception as e:
-                    safe_print(f"  [INF] ❌️ ファイルの保存に失敗 : {e}")
-            elif new_data== before_data:
-                safe_print(f"  [INF] ✅️ {region}: 変更なし")
-        return data
-    else:
-        safe_print(f"  [ERR] 🔴 {region} 取得に失敗 : {res.text} {res.status_code}")
-        safe_print(f"  [INF] リトライします: {region} (Acc:{type})")
-        time.sleep(30)
-        fetch_EventData(region, type)
+            if res.status_code == 200:
+                data = res.json()
+                if type == "first":
+                    filepath = os.path.join(config2.RESPONSE_DIR, f"EventData_{region}.json")
+                    new_data = data
+                    try:
+                        before_data = load_json(filepath) if os.path.exists(filepath) else None
+                    except Exception as e:
+                        safe_print(f"  [ERR] ❌️ 旧ファイルの取得に失敗 : {e}")
+                    if new_data != before_data or before_data is None:
+                        try:
+                            if config2.test is False:
+                                with open(get_unique_filepath(config2.ARCHIVE_DIR, f"EventData_{region}"), "w", encoding="utf-8") as f:
+                                    json.dump(data, f, ensure_ascii=False, indent=2)
+                            with open(filepath, "w", encoding="utf-8") as f:
+                                json.dump(data, f, ensure_ascii=False, indent=2)
+                            config.tags.append(region)
+                            config.updated_regions.append(region)
+                            safe_print(f"  [INF] 🟢 {region}: 変更あり")
+                        except Exception as e:
+                            safe_print(f"  [INF] ❌️ ファイルの保存に失敗 : {e}")
+                    elif new_data== before_data:
+                        safe_print(f"  [INF] ✅️ {region}: 変更なし")
+                return data
+            else:
+                safe_print(f"  [ERR] 🔴 {region} 取得に失敗 : {res.text} {res.status_code}")
+        except Exception as e:
+            safe_print(f"  [ERR] 🔴 {region} 取得中に例外発生 : {e}")
 
+        if attempt < 2 - 1:
+            safe_print(f"  [INF] {region} リトライします ({attempt + 1}/{2}) ...")
+            time.sleep(30)
+        else:
+            safe_print(f"  [ERR] {region} 取得失敗: 最大リトライ回数に達しました")
+            return None
 
 async def run():
     ensure_token()
