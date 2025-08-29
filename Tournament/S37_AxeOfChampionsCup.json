@@ -55,30 +55,32 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_AxeOfChampionsCup_LeaderboardDef",
+    "ScoringRules": {
+      "S37_AxeOfChampionsCup_LeaderboardDef": {
         "scoringRuleSetId": "S37_AxeOfChampionsCup_ScoringRules",
+        "WindowLocation": "S37_AxeOfChampionsCup_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:spray_fncsaxeofchamps"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 200,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_id_376_fncs"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 8,
-        "rewardType": "game",
-        "quantity": 1,
-        "value": "AthenaDance:spray_fncsaxeofchamps"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 200,
-        "rewardType": "game",
-        "quantity": 1,
-        "value": "AthenaPickaxe:pickaxe_id_376_fncs"
-      }
-    ]
+    }
   }
 }

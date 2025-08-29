@@ -75,30 +75,32 @@
       "RegionLock_S37_DuosDivisionalTrial_OCE",
       "RegionLock_S37_DuosDivisionalTrial_BR"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup",
+        "WindowLocation": "S37_Duos_DivisionalCupTrial_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "RegionLock_S37_DuosDivisionalTrial_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 1000,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_Duos_Division2_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 0,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "RegionLock_S37_DuosDivisionalTrial_ASIA"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 1000,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_Duos_Division2_ASIA"
-      }
-    ]
+    }
   }
 }

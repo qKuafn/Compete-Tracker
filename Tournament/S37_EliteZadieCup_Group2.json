@@ -57,23 +57,24 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ZadieReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ZadieReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_EliteZadieCup_Round2Group2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:spray_fncsrankedtrooper"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 8,
-        "rewardType": "game",
-        "quantity": 1,
-        "value": "AthenaDance:spray_fncsrankedtrooper"
-      }
-    ]
+    }
   }
 }

@@ -67,31 +67,42 @@
       "S37_DuosDivisionLock_Division2Event1_ASIA",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week1Day1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week1_ASIA"
+          }
+        ]
       },
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard",
+      "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week1Day1_ASIA",
         "isMainWindowLeaderboard": false,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week1_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 0,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_DuosDivisionLock_Division1Week1_ASIA"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week1Day2_ASIA": {
     "beginTime_UNIX": 1758186000,
@@ -120,38 +131,58 @@
       "S37_DuosDivisionLock_Division2Event2_ASIA",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week1Day2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week1_ASIA"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ASIA_Week1_cumulative",
+            "scoringType": "rank",
+            "threshold": 33,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_Duos_Division1Week1_Final_ASIA"
+          }
+        ]
       },
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard",
+      "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week1Day2_ASIA",
         "isMainWindowLeaderboard": false,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week1_ASIA"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ASIA_Week1_cumulative",
+            "scoringType": "rank",
+            "threshold": 33,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_Duos_Division1Week1_Final_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 0,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_DuosDivisionLock_Division1Week1_ASIA"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 33,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_Duos_Division1Week1_Final_ASIA"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week1Final_ASIA": {
     "beginTime_UNIX": 1758344400,
@@ -175,59 +206,65 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Finals_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Finals_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1Final",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week1Final_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 1,
+            "rewardType": "ecomm",
+            "quantity": 1000,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "ecomm",
+            "quantity": 500,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 3,
+            "rewardType": "ecomm",
+            "quantity": 250,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 5,
+            "rewardType": "ecomm",
+            "quantity": 150,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "ecomm",
+            "quantity": 100,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 1,
-        "rewardType": "ecomm",
-        "quantity": 1000,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 2,
-        "rewardType": "ecomm",
-        "quantity": 500,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 3,
-        "rewardType": "ecomm",
-        "quantity": 250,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 4,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 5,
-        "rewardType": "ecomm",
-        "quantity": 150,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "ecomm",
-        "quantity": 100,
-        "value": "USD"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week2Day1_ASIA": {
     "beginTime_UNIX": 1758704400,
@@ -256,31 +293,42 @@
       "Permanent_Tournament_Ban",
       "S37_DuosDivisionLock_Division5Event3_ASIA"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week2Day1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week2_ASIA"
+          }
+        ]
       },
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard",
+      "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week2Day1_ASIA",
         "isMainWindowLeaderboard": false,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week2_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 0,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_DuosDivisionLock_Division1Week2_ASIA"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week2Day2_ASIA": {
     "beginTime_UNIX": 1758790800,
@@ -309,38 +357,58 @@
       "S37_DuosDivisionLock_Division2Event4_ASIA",
       "S37_DuosDivisionLock_Division5Event4_ASIA"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week2Day2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week2_ASIA"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ASIA_Week2_cumulative",
+            "scoringType": "rank",
+            "threshold": 33,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_Duos_Division1Week2_Final_ASIA"
+          }
+        ]
       },
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard",
+      "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week2Day2_ASIA",
         "isMainWindowLeaderboard": false,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week2_ASIA"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ASIA_Week2_cumulative",
+            "scoringType": "rank",
+            "threshold": 33,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_Duos_Division1Week2_Final_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 0,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_DuosDivisionLock_Division1Week2_ASIA"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 33,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_Duos_Division1Week2_Final_ASIA"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week2Final_ASIA": {
     "beginTime_UNIX": 1758949200,
@@ -364,59 +432,65 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Finals_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Finals_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1Final",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week2Final_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 1,
+            "rewardType": "ecomm",
+            "quantity": 1000,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "ecomm",
+            "quantity": 500,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 3,
+            "rewardType": "ecomm",
+            "quantity": 250,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 5,
+            "rewardType": "ecomm",
+            "quantity": 150,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "ecomm",
+            "quantity": 100,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 1,
-        "rewardType": "ecomm",
-        "quantity": 1000,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 2,
-        "rewardType": "ecomm",
-        "quantity": 500,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 3,
-        "rewardType": "ecomm",
-        "quantity": 250,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 4,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 5,
-        "rewardType": "ecomm",
-        "quantity": 150,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "ecomm",
-        "quantity": 100,
-        "value": "USD"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week3Day1_ASIA": {
     "beginTime_UNIX": 1759309200,
@@ -445,31 +519,42 @@
       "S37_DuosDivisionLock_Division3Event5_ASIA",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week3Day1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week3_ASIA"
+          }
+        ]
       },
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard",
+      "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week3Day1_ASIA",
         "isMainWindowLeaderboard": false,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week3_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 0,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_DuosDivisionLock_Division1Week3_ASIA"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week3Day2_ASIA": {
     "beginTime_UNIX": 1759395600,
@@ -498,38 +583,58 @@
       "S37_DuosDivisionLock_Division3Event6_ASIA",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week3Day2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week3_ASIA"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ASIA_Week3_cumulative",
+            "scoringType": "rank",
+            "threshold": 33,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_Duos_Division1Week3_Final_ASIA"
+          }
+        ]
       },
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard",
+      "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week3Day2_ASIA",
         "isMainWindowLeaderboard": false,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week3_ASIA"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ASIA_Week3_cumulative",
+            "scoringType": "rank",
+            "threshold": 33,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_Duos_Division1Week3_Final_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 0,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_DuosDivisionLock_Division1Week3_ASIA"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 33,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_Duos_Division1Week3_Final_ASIA"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week3Final_ASIA": {
     "beginTime_UNIX": 1759554000,
@@ -553,59 +658,65 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Finals_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Finals_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1Final",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week3Final_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 1,
+            "rewardType": "ecomm",
+            "quantity": 1000,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "ecomm",
+            "quantity": 500,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 3,
+            "rewardType": "ecomm",
+            "quantity": 250,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 5,
+            "rewardType": "ecomm",
+            "quantity": 150,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "ecomm",
+            "quantity": 100,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 1,
-        "rewardType": "ecomm",
-        "quantity": 1000,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 2,
-        "rewardType": "ecomm",
-        "quantity": 500,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 3,
-        "rewardType": "ecomm",
-        "quantity": 250,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 4,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 5,
-        "rewardType": "ecomm",
-        "quantity": 150,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "ecomm",
-        "quantity": 100,
-        "value": "USD"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week4Day1_ASIA": {
     "beginTime_UNIX": 1759914000,
@@ -634,31 +745,42 @@
       "Permanent_Tournament_Ban",
       "S37_DuosDivisionLock_Division4Event7_ASIA"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week4Day1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week4_ASIA"
+          }
+        ]
       },
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard",
+      "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week4Day1_ASIA",
         "isMainWindowLeaderboard": false,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week4_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 0,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_DuosDivisionLock_Division1Week4_ASIA"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week4Day2_ASIA": {
     "beginTime_UNIX": 1760000400,
@@ -687,38 +809,58 @@
       "EpicAccountPrizingRestriction_v2",
       "S37_DuosDivisionLock_Division2Event8_ASIA"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week4Day2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week4_ASIA"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ASIA_Week4_cumulative",
+            "scoringType": "rank",
+            "threshold": 33,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_Duos_Division1Week4_Final_ASIA"
+          }
+        ]
       },
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard",
+      "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week4Day2_ASIA",
         "isMainWindowLeaderboard": false,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week4_ASIA"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ASIA_Week4_cumulative",
+            "scoringType": "rank",
+            "threshold": 33,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_Duos_Division1Week4_Final_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 0,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_DuosDivisionLock_Division1Week4_ASIA"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 33,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_Duos_Division1Week4_Final_ASIA"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week4Final_ASIA": {
     "beginTime_UNIX": 1760158800,
@@ -742,59 +884,65 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Finals_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Finals_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1Final",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week4Final_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 1,
+            "rewardType": "ecomm",
+            "quantity": 1000,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "ecomm",
+            "quantity": 500,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 3,
+            "rewardType": "ecomm",
+            "quantity": 250,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 5,
+            "rewardType": "ecomm",
+            "quantity": 150,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "ecomm",
+            "quantity": 100,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 1,
-        "rewardType": "ecomm",
-        "quantity": 1000,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 2,
-        "rewardType": "ecomm",
-        "quantity": 500,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 3,
-        "rewardType": "ecomm",
-        "quantity": 250,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 4,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 5,
-        "rewardType": "ecomm",
-        "quantity": 150,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "ecomm",
-        "quantity": 100,
-        "value": "USD"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week5Day1_ASIA": {
     "beginTime_UNIX": 1760518800,
@@ -823,31 +971,42 @@
       "S37_DuosDivisionLock_Division2Event9_ASIA",
       "S37_DuosDivisionLock_Division4Event9_ASIA"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week5Day1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week5_ASIA"
+          }
+        ]
       },
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard",
+      "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week5Day1_ASIA",
         "isMainWindowLeaderboard": false,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week5_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 0,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_DuosDivisionLock_Division1Week5_ASIA"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week5Day2_ASIA": {
     "beginTime_UNIX": 1760605200,
@@ -876,38 +1035,58 @@
       "S37_DuosDivisionLock_Division4Event10_ASIA",
       "S37_DuosDivisionLock_Division2Event10_ASIA"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week5Day2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week5_ASIA"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ASIA_Week5_cumulative",
+            "scoringType": "rank",
+            "threshold": 33,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_Duos_Division1Week5_Final_ASIA"
+          }
+        ]
       },
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard",
+      "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week5Day2_ASIA",
         "isMainWindowLeaderboard": false,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week5_ASIA"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ASIA_Week5_cumulative",
+            "scoringType": "rank",
+            "threshold": 33,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_Duos_Division1Week5_Final_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 0,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_DuosDivisionLock_Division1Week5_ASIA"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 33,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_Duos_Division1Week5_Final_ASIA"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week5Final_ASIA": {
     "beginTime_UNIX": 1760763600,
@@ -931,59 +1110,65 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Finals_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Finals_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1Final",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week5Final_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 1,
+            "rewardType": "ecomm",
+            "quantity": 1000,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "ecomm",
+            "quantity": 500,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 3,
+            "rewardType": "ecomm",
+            "quantity": 250,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 5,
+            "rewardType": "ecomm",
+            "quantity": 150,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "ecomm",
+            "quantity": 100,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 1,
-        "rewardType": "ecomm",
-        "quantity": 1000,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 2,
-        "rewardType": "ecomm",
-        "quantity": 500,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 3,
-        "rewardType": "ecomm",
-        "quantity": 250,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 4,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 5,
-        "rewardType": "ecomm",
-        "quantity": 150,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "ecomm",
-        "quantity": 100,
-        "value": "USD"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week6Day1_ASIA": {
     "beginTime_UNIX": 1761123600,
@@ -1012,31 +1197,42 @@
       "Permanent_Tournament_Ban",
       "S37_DuosDivisionLock_Division4Event11_ASIA"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week6Day1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week6_ASIA"
+          }
+        ]
       },
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard",
+      "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week6Day1_ASIA",
         "isMainWindowLeaderboard": false,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week6_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 0,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_DuosDivisionLock_Division1Week6_ASIA"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week6Day2_ASIA": {
     "beginTime_UNIX": 1761210000,
@@ -1065,38 +1261,58 @@
       "S37_DuosDivisionLock_Division4Event12_ASIA",
       "S37_DuosDivisionLock_Division3Event12_ASIA"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Qualifiers_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week6Day2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week6_ASIA"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ASIA_Week6_cumulative",
+            "scoringType": "rank",
+            "threshold": 33,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_Duos_Division1Week6_Final_ASIA"
+          }
+        ]
       },
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard",
+      "S37_DuosDivisionalCup_Division1Weekly_CumulativeLeaderboard": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week6Day2_ASIA",
         "isMainWindowLeaderboard": false,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_DuosDivisionLock_Division1Week6_ASIA"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ASIA_Week6_cumulative",
+            "scoringType": "rank",
+            "threshold": 33,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_Duos_Division1Week6_Final_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 0,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_DuosDivisionLock_Division1Week6_ASIA"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 33,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_Duos_Division1Week6_Final_ASIA"
-      }
-    ]
+    }
   },
   "S37_DuosDivisionalCup_Division1_Week6Final_ASIA": {
     "beginTime_UNIX": 1761368400,
@@ -1120,58 +1336,64 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_DuosDivisionalCup_Division1Finals_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_DuosDivisionalCup_Division1Finals_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1Final",
+        "WindowLocation": "S37_DuosDivisionalCup_Division1_Week6Final_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 1,
+            "rewardType": "ecomm",
+            "quantity": 1000,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "ecomm",
+            "quantity": 500,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 3,
+            "rewardType": "ecomm",
+            "quantity": 250,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 5,
+            "rewardType": "ecomm",
+            "quantity": 150,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "ecomm",
+            "quantity": 100,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 1,
-        "rewardType": "ecomm",
-        "quantity": 1000,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 2,
-        "rewardType": "ecomm",
-        "quantity": 500,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 3,
-        "rewardType": "ecomm",
-        "quantity": 250,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 4,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 5,
-        "rewardType": "ecomm",
-        "quantity": 150,
-        "value": "USD"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "ecomm",
-        "quantity": 100,
-        "value": "USD"
-      }
-    ]
+    }
   }
 }

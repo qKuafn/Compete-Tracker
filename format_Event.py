@@ -4,6 +4,7 @@ import os
 from datetime import datetime, timezone
 from copy import deepcopy
 import asyncio
+from collections import OrderedDict
 
 from files import load_json, get_unique_filepath
 from tokens import ensure_token
@@ -21,6 +22,7 @@ async def format_EventData():
     WebData_ja = fetch_WebData(type=Eventtype)
     WebData_en = fetch_WebData("en", Eventtype)
     sent = set()
+    content = None
 
     # === 組み立て開始 ===
     for event in EventData["events"]:
@@ -88,8 +90,7 @@ async def format_EventData():
         }
 
         for window in eventWindows:
-            payouts = []
-            scoringrules = []
+            scoringrules = {}
 
             eventWindowId = window["eventWindowId"]
             begin_dt = datetime.strptime(window["beginTime"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
@@ -105,42 +106,53 @@ async def format_EventData():
                 playlistId = matched_template.get("playlistId")
                 matchCap = matched_template.get("matchCap")
 
-            for key, value in EventData["scoreLocationPayoutTables"].items():
-                if f"Fortnite:{eventId}:{eventWindowId}" in key:
-                    Payouts_key = value
-                    payout_table = EventData["payoutTables"][Payouts_key]
-                    for entry in payout_table:
-                        scoringType = entry.get("scoringType")
-                        ranks = entry.get("ranks", [])
-                        for rank in ranks:
-                            threshold = rank.get("threshold")
-                            for payout in rank.get("payouts", []):
-                                payouts.append({
-                                    "scoringType": scoringType,
-                                    "threshold": threshold,
-                                    "rewardType": payout.get("rewardType"),
-                                    "quantity": payout.get("quantity"),
-                                    "value": payout.get("value")
-                                })
-
-            for scoreLocations in window["scoreLocations"]:
-                leaderboardDefId = scoreLocations["leaderboardDefId"]
-                isMainWindowLeaderboard = scoreLocations["isMainWindowLeaderboard"]
+            for item in EventData["resolvedWindowLocations"][f"Fortnite:{eventId}:{eventWindowId}"]:
+                WindowLocation = item.split(":")[-1]
                 for key, value in EventData["scoreLocationScoringRuleSets"].items():
-                    if f"Fortnite:{eventId}:{eventWindowId}" in key:
+                    if key == f"Fortnite:{eventId}:{WindowLocation}":
                         scoringRuleSetId = value
-                        for leaderboardDef in EventData["leaderboardDefs"]:
-                            if leaderboardDef["scoringRuleSetId"] == scoringRuleSetId and leaderboardDef["leaderboardDefId"] == leaderboardDefId:
-                                useIndividualScores = leaderboardDef["useIndividualScores"]
-                                onlyScoreTopN = leaderboardDef.get("onlyScoreTopN", -1)
+                        for scoreLocations in window["scoreLocations"]:
+                            leaderboardDefId = scoreLocations["leaderboardDefId"]
+                            isMainWindowLeaderboard = scoreLocations["isMainWindowLeaderboard"]
+                            for leaderboardDef in EventData["leaderboardDefs"]:
+                                if leaderboardDef["scoringRuleSetId"] == scoringRuleSetId and leaderboardDef["leaderboardDefId"] == leaderboardDefId:
+                                    useIndividualScores = leaderboardDef["useIndividualScores"]
+                                    onlyScoreTopN = leaderboardDef.get("onlyScoreTopN", -1)
 
-                                scoringrules.append({
-                                    "leaderboardDefId": leaderboardDefId,
-                                    "scoringRuleSetId": scoringRuleSetId,
-                                    "isMainWindowLeaderboard": isMainWindowLeaderboard,
-                                    "useIndividualScores": useIndividualScores,
-                                    "onlyScoreTopN": onlyScoreTopN
-                                })
+                                    scoringrules[leaderboardDefId] = {
+                                        "scoringRuleSetId": scoringRuleSetId,
+                                        "WindowLocation": WindowLocation,
+                                        "isMainWindowLeaderboard": isMainWindowLeaderboard,
+                                        "useIndividualScores": useIndividualScores,
+                                        "onlyScoreTopN": onlyScoreTopN,
+                                        "payouts": []
+                                    }
+
+            for item in EventData["resolvedWindowLocations"][f"Fortnite:{eventId}:{eventWindowId}"]:
+                WindowLocation = item.split(":")[-1]
+
+                for key, value in EventData["scoreLocationPayoutTables"].items():
+                    if key == f"Fortnite:{eventId}:{WindowLocation}":
+                        Payouts_key = value
+                        payout_table = EventData["payoutTables"][Payouts_key]
+                        for entry in payout_table:
+                            scoringType = entry.get("scoringType")
+                            ranks = entry.get("ranks", [])
+                            for rank in ranks:
+                                threshold = rank.get("threshold")
+                                for payout in rank.get("payouts", []):
+                                    payouts = {
+                                        "scoreId": entry.get("scoreId") if entry.get("scoreId") else "",
+                                        "scoringType": scoringType,
+                                        "threshold": threshold,
+                                        "rewardType": payout.get("rewardType"),
+                                        "quantity": payout.get("quantity"),
+                                        "value": payout.get("value")
+                                    }
+
+                                    for leaderboardDefId, scoringrule in scoringrules.items():
+                                        if scoringrule["WindowLocation"] == WindowLocation:
+                                            scoringrule["payouts"].append(payouts)
 
             beginTime_UNIX = int(begin_dt.timestamp())
             endTime_UNIX = int(end_dt.timestamp())
@@ -158,8 +170,7 @@ async def format_EventData():
                 "requireAnyTokens": window.get("requireAnyTokens", []),
                 "requireAnyTokensCaller": window.get("requireAnyTokensCaller", []),
                 "requireNoneTokensCaller": window.get("requireNoneTokensCaller", []),
-                "ScoringRules": scoringrules,
-                "payouts": payouts
+                "ScoringRules": scoringrules
             }
 
         print (f" [INF] 比較開始 : {save_eventId}")
@@ -218,8 +229,8 @@ async def format_EventData():
                 eventWindowId = eventWindow["eventWindowId"]
 
                 try:
-                    begin = eventWindow["beginTime_UNIX"]
-                    end = eventWindow["endTime_UNIX"]
+                    begin = new_data[eventWindowId]["beginTime_UNIX"]
+                    end = new_data[eventWindowId]["endTime_UNIX"]
                     date_section.append({
                         "name":  eventWindowId,
                         "value": f"<t:{begin}:F>\n～<t:{end}:F>",
@@ -234,7 +245,7 @@ async def format_EventData():
                     })
 
                 try:
-                    playlist = eventWindow["playlistId"]
+                    playlist = new_data[eventWindowId]["playlistId"]
                     mode_section.append({
                         "name":  eventWindowId,
                         "value": f"`{playlist}`",
@@ -249,7 +260,7 @@ async def format_EventData():
                     })
 
                 try:
-                    matchCap = eventWindow["matchCap"]
+                    matchCap = new_data[eventWindowId]["matchCap"]
                     if matchCap == 0:
                         matchCap = "無制限"
                     match_section.append({
@@ -268,12 +279,12 @@ async def format_EventData():
                 try:
                     eligibility = {
                         "minimumAccountLevel": metadata.get("minimumAccountLevel", "30"),
-                        "additionalRequirements":  eventWindow["additionalRequirements"],
-                        "requireAllTokens":        eventWindow["requireAllTokens"],
-                        "requireAllTokensCaller":  eventWindow["requireAllTokensCaller"],
-                        "requireAnyTokens":        eventWindow["requireAnyTokens"],
-                        "requireAnyTokensCaller":  eventWindow["requireAnyTokensCaller"],
-                        "requireNoneTokensCaller": eventWindow["requireNoneTokensCaller"]
+                        "additionalRequirements":  new_data[eventWindowId]["additionalRequirements"],
+                        "requireAllTokens":        new_data[eventWindowId]["requireAllTokens"],
+                        "requireAllTokensCaller":  new_data[eventWindowId]["requireAllTokensCaller"],
+                        "requireAnyTokens":        new_data[eventWindowId]["requireAnyTokens"],
+                        "requireAnyTokensCaller":  new_data[eventWindowId]["requireAnyTokensCaller"],
+                        "requireNoneTokensCaller": new_data[eventWindowId]["requireNoneTokensCaller"]
                     }
                     eligibility = json.dumps(eligibility, indent=2, ensure_ascii=False)
                     token_section.append({
@@ -290,7 +301,8 @@ async def format_EventData():
                     })
 
                 try:
-                    payouts_list = eventWindow["payouts"]
+                    first_key = next(iter(new_data[eventWindowId]["ScoringRules"]))
+                    payouts_list = new_data[eventWindowId]["ScoringRules"][first_key]["payouts"]
 
                     field_values = []
                     for payout in payouts_list:
@@ -411,7 +423,10 @@ async def format_EventData():
                     f"### 🔄 更新 : {eventname}\n"
                     f"{image_section}\n"
                 )
-            send_discord(content, embeds, filepath, save_eventId, sent)
+            if content:
+                send_discord(content, embeds, filepath, save_eventId, sent)
+            else:
+                print (  f"   [INF] 順番のみが変更された可能性があります。更新通知はスキップします。")
 
     if not config.added_Tournaments and not config.updated_Tournaments:
         print(" [INF] ✅️ 変更なし")

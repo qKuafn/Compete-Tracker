@@ -36,58 +36,64 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+    "ScoringRules": {
+      "S37_BlitzMobileCups_LeaderboardDef": {
         "scoringRuleSetId": "S37_BlitzCups_ScoringRules",
+        "WindowLocation": "S37_SurfWitchBlitzMobileCup_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 5,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:spray_fncspunkdevil"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 20,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:emoticon_fncspunkdevil"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_punkdevilsummerfncs"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_sharpdresserfncs"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_fncs_s37"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaItemWrap:wrap_punkdevilsummerfncs"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 5,
-        "rewardType": "game",
-        "quantity": 1,
-        "value": "AthenaDance:spray_fncspunkdevil"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 20,
-        "rewardType": "game",
-        "quantity": 1,
-        "value": "AthenaDance:emoticon_fncspunkdevil"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "game",
-        "quantity": 1,
-        "value": "AthenaCharacter:character_punkdevilsummerfncs"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "game",
-        "quantity": 1,
-        "value": "AthenaPickaxe:pickaxe_sharpdresserfncs"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "game",
-        "quantity": 1,
-        "value": "AthenaBackpack:backpack_fncs_s37"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "game",
-        "quantity": 1,
-        "value": "AthenaItemWrap:wrap_punkdevilsummerfncs"
-      }
-    ]
+    }
   }
 }

@@ -62,38 +62,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event1Round1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 1,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event1Group3Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 10,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event1Group2Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 15,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event1Group1Round2_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 1,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event1Group3Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 10,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event1Group2Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 15,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event1Group1Round2_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event1Group1Round2_ASIA": {
     "beginTime_UNIX": 1757067300,
@@ -117,24 +120,25 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event1Group1Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event1Round3_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event1Round3_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event1Group2Round2_ASIA": {
     "beginTime_UNIX": 1757067301,
@@ -158,16 +162,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event1Group2Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event1Group3Round2_ASIA": {
     "beginTime_UNIX": 1757067302,
@@ -191,16 +195,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event1Group3Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event1Round3_ASIA": {
     "beginTime_UNIX": 1757071800,
@@ -224,38 +228,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_VictoryCup",
+        "WindowLocation": "S37_ReloadQuickCup_Event1Round3_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 100,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 200,
+            "rewardType": "ecomm",
+            "quantity": 400,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 600,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 100,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 200,
-        "rewardType": "ecomm",
-        "quantity": 400,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 300,
-        "rewardType": "ecomm",
-        "quantity": 600,
-        "value": "USD"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event2Round1_ASIA": {
     "beginTime_UNIX": 1757667600,
@@ -279,38 +286,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event2Round1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 1,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event2Group3Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 10,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event2Group2Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 15,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event2Group1Round2_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 1,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event2Group3Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 10,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event2Group2Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 15,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event2Group1Round2_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event2Group1Round2_ASIA": {
     "beginTime_UNIX": 1757672100,
@@ -334,24 +344,25 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event2Group1Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event2Round3_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event2Round3_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event2Group2Round2_ASIA": {
     "beginTime_UNIX": 1757672101,
@@ -375,16 +386,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event2Group2Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event2Group3Round2_ASIA": {
     "beginTime_UNIX": 1757672102,
@@ -408,16 +419,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event2Group3Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event2Round3_ASIA": {
     "beginTime_UNIX": 1757676600,
@@ -441,38 +452,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_VictoryCup",
+        "WindowLocation": "S37_ReloadQuickCup_Event2Round3_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 100,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 200,
+            "rewardType": "ecomm",
+            "quantity": 400,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 600,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 100,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 200,
-        "rewardType": "ecomm",
-        "quantity": 400,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 300,
-        "rewardType": "ecomm",
-        "quantity": 600,
-        "value": "USD"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event3Round1_ASIA": {
     "beginTime_UNIX": 1758272400,
@@ -496,38 +510,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event3Round1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 1,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event3Group3Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 10,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event3Group2Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 15,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event3Group1Round2_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 1,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event3Group3Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 10,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event3Group2Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 15,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event3Group1Round2_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event3Group1Round2_ASIA": {
     "beginTime_UNIX": 1758276900,
@@ -551,24 +568,25 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event3Group1Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event3Round3_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event3Round3_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event3Group2Round2_ASIA": {
     "beginTime_UNIX": 1758276901,
@@ -592,16 +610,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event3Group2Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event3Group3Round2_ASIA": {
     "beginTime_UNIX": 1758276902,
@@ -625,16 +643,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event3Group3Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event3Round3_ASIA": {
     "beginTime_UNIX": 1758281400,
@@ -658,38 +676,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_VictoryCup",
+        "WindowLocation": "S37_ReloadQuickCup_Event3Round3_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 100,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 200,
+            "rewardType": "ecomm",
+            "quantity": 400,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 600,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 100,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 200,
-        "rewardType": "ecomm",
-        "quantity": 400,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 300,
-        "rewardType": "ecomm",
-        "quantity": 600,
-        "value": "USD"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event4Round1_ASIA": {
     "beginTime_UNIX": 1758877200,
@@ -713,38 +734,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event4Round1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 1,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event4Group3Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 10,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event4Group2Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 15,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event4Group1Round2_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 1,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event4Group3Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 10,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event4Group2Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 15,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event4Group1Round2_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event4Group1Round2_ASIA": {
     "beginTime_UNIX": 1758881700,
@@ -768,24 +792,25 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event4Group1Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event4Round3_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event4Round3_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event4Group2Round2_ASIA": {
     "beginTime_UNIX": 1758881701,
@@ -809,16 +834,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event4Group2Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event4Group3Round2_ASIA": {
     "beginTime_UNIX": 1758881702,
@@ -842,16 +867,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event4Group3Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event4Round3_ASIA": {
     "beginTime_UNIX": 1758886200,
@@ -875,38 +900,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_VictoryCup",
+        "WindowLocation": "S37_ReloadQuickCup_Event4Round3_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 100,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 200,
+            "rewardType": "ecomm",
+            "quantity": 400,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 600,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 100,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 200,
-        "rewardType": "ecomm",
-        "quantity": 400,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 300,
-        "rewardType": "ecomm",
-        "quantity": 600,
-        "value": "USD"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event5Round1_ASIA": {
     "beginTime_UNIX": 1759482000,
@@ -930,38 +958,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event5Round1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 1,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event5Group3Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 10,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event5Group2Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 15,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event5Group1Round2_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 1,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event5Group3Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 10,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event5Group2Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 15,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event5Group1Round2_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event5Group1Round2_ASIA": {
     "beginTime_UNIX": 1759486500,
@@ -985,24 +1016,25 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event5Group1Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event5Round3_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event5Round3_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event5Group2Round2_ASIA": {
     "beginTime_UNIX": 1759486501,
@@ -1026,16 +1058,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event5Group2Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event5Group3Round2_ASIA": {
     "beginTime_UNIX": 1759486502,
@@ -1059,16 +1091,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event5Group3Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event5Round3_ASIA": {
     "beginTime_UNIX": 1759491000,
@@ -1092,38 +1124,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_VictoryCup",
+        "WindowLocation": "S37_ReloadQuickCup_Event5Round3_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 100,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 200,
+            "rewardType": "ecomm",
+            "quantity": 400,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 600,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 100,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 200,
-        "rewardType": "ecomm",
-        "quantity": 400,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 300,
-        "rewardType": "ecomm",
-        "quantity": 600,
-        "value": "USD"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event6Round1_ASIA": {
     "beginTime_UNIX": 1760086800,
@@ -1147,38 +1182,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event6Round1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 1,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event6Group3Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 10,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event6Group2Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 15,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event6Group1Round2_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 1,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event6Group3Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 10,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event6Group2Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 15,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event6Group1Round2_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event6Group1Round2_ASIA": {
     "beginTime_UNIX": 1760091300,
@@ -1202,24 +1240,25 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event6Group1Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event6Round3_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event6Round3_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event6Group2Round2_ASIA": {
     "beginTime_UNIX": 1760091301,
@@ -1243,16 +1282,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event6Group2Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event6Group3Round2_ASIA": {
     "beginTime_UNIX": 1760091302,
@@ -1276,16 +1315,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event6Group3Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event6Round3_ASIA": {
     "beginTime_UNIX": 1760095800,
@@ -1309,38 +1348,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_VictoryCup",
+        "WindowLocation": "S37_ReloadQuickCup_Event6Round3_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 100,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 200,
+            "rewardType": "ecomm",
+            "quantity": 400,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 600,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 100,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 200,
-        "rewardType": "ecomm",
-        "quantity": 400,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 300,
-        "rewardType": "ecomm",
-        "quantity": 600,
-        "value": "USD"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event7Round1_ASIA": {
     "beginTime_UNIX": 1760691600,
@@ -1364,38 +1406,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event7Round1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 1,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event7Group3Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 10,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event7Group2Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 15,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event7Group1Round2_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 1,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event7Group3Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 10,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event7Group2Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 15,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event7Group1Round2_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event7Group1Round2_ASIA": {
     "beginTime_UNIX": 1760696100,
@@ -1419,24 +1464,25 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event7Group1Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event7Round3_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event7Round3_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event7Group2Round2_ASIA": {
     "beginTime_UNIX": 1760696101,
@@ -1460,16 +1506,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event7Group2Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event7Group3Round2_ASIA": {
     "beginTime_UNIX": 1760696102,
@@ -1493,16 +1539,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event7Group3Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event7Round3_ASIA": {
     "beginTime_UNIX": 1760700600,
@@ -1526,38 +1572,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_VictoryCup",
+        "WindowLocation": "S37_ReloadQuickCup_Event7Round3_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 100,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 200,
+            "rewardType": "ecomm",
+            "quantity": 400,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 600,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 100,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 200,
-        "rewardType": "ecomm",
-        "quantity": 400,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 300,
-        "rewardType": "ecomm",
-        "quantity": 600,
-        "value": "USD"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event8Round1_ASIA": {
     "beginTime_UNIX": 1761296400,
@@ -1581,38 +1630,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event8Round1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 1,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event8Group3Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 10,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event8Group2Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 15,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event8Group1Round2_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 1,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event8Group3Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 10,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event8Group2Round2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 15,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event8Group1Round2_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event8Group1Round2_ASIA": {
     "beginTime_UNIX": 1761300900,
@@ -1636,24 +1688,25 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event8Group1Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_ReloadQuickCup_Event8Round3_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "rank",
-        "threshold": 20,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_ReloadQuickCup_Event8Round3_ASIA"
-      }
-    ]
+    }
   },
   "S37_ReloadQuickCup_Event8Group2Round2_ASIA": {
     "beginTime_UNIX": 1761300901,
@@ -1677,16 +1730,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event8Group2Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event8Group3Round2_ASIA": {
     "beginTime_UNIX": 1761300902,
@@ -1710,16 +1763,16 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group2_3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_ReloadQuickCup_Event8Group3Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": []
       }
-    ],
-    "payouts": []
+    }
   },
   "S37_ReloadQuickCup_Event8Round3_ASIA": {
     "beginTime_UNIX": 1761305400,
@@ -1743,37 +1796,40 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round3_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_VictoryCup",
+        "WindowLocation": "S37_ReloadQuickCup_Event8Round3_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 100,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 200,
+            "rewardType": "ecomm",
+            "quantity": 400,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 600,
+            "value": "USD"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 100,
-        "rewardType": "ecomm",
-        "quantity": 200,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 200,
-        "rewardType": "ecomm",
-        "quantity": 400,
-        "value": "USD"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 300,
-        "rewardType": "ecomm",
-        "quantity": 600,
-        "value": "USD"
-      }
-    ]
+    }
   }
 }

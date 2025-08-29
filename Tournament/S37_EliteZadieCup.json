@@ -55,38 +55,41 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_EliteZadieCup_Round1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": 1
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 1,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_EliteZadieCup_Round2Group3_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 10,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_EliteZadieCup_Round2Group2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 15,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S37_EliteZadieCup_Round2Group1_ASIA"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 1,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_EliteZadieCup_Round2Group3_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 10,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_EliteZadieCup_Round2Group2_ASIA"
-      },
-      {
-        "scoringType": "value",
-        "threshold": 15,
-        "rewardType": "token",
-        "quantity": 1,
-        "value": "S37_EliteZadieCup_Round2Group1_ASIA"
-      }
-    ]
+    }
   },
   "S37_EliteZadieCup_Round2Group1_ASIA": {
     "beginTime_UNIX": 1756462500,
@@ -110,30 +113,32 @@
       "EpicAccountPrizingRestriction_v2",
       "Permanent_Tournament_Ban"
     ],
-    "ScoringRules": [
-      {
-        "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
+    "ScoringRules": {
+      "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
+        "WindowLocation": "S37_EliteZadieCup_Round2Group1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
-        "onlyScoreTopN": -1
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:spray_fncsrankedtrooper"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 100,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_rankedtroopernoble"
+          }
+        ]
       }
-    ],
-    "payouts": [
-      {
-        "scoringType": "value",
-        "threshold": 8,
-        "rewardType": "game",
-        "quantity": 1,
-        "value": "AthenaDance:spray_fncsrankedtrooper"
-      },
-      {
-        "scoringType": "rank",
-        "threshold": 100,
-        "rewardType": "game",
-        "quantity": 1,
-        "value": "AthenaCharacter:character_rankedtroopernoble"
-      }
-    ]
+    }
   }
 }
