@@ -126,7 +126,7 @@ def playlist_send_discord_notify(new, delete, update):
         })
     payload = {
         "username": "大会のプレイリスト修理",
-        "content": "<@&1372839358591139840><@&1359477859764273193>",
+        "content": "<@&1372839358591139840>",
         "embeds": [
             {
                 "title": "プレイリスト更新 (トーナメント)",
