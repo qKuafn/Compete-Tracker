@@ -104,9 +104,9 @@ async def load_changes(session, old_data, new_data, Actions):
             else:
                 print(f"    [ERR] 🔴 diffのDiscord通知失敗 : {response.status_code} {response.text}")
 
-    await parse_hotfix(session, diff_text, Actions)
+    await parse_hotfix(session, new_data, diff_text, Actions)
 
-async def parse_hotfix(session, diff_text, Actions):
+async def parse_hotfix(session, new_data, diff_text, Actions):
     print("  [INF] 差分の解析開始")
     parsed_hotfix = []
     for line in diff_text.splitlines():
@@ -131,9 +131,9 @@ async def parse_hotfix(session, diff_text, Actions):
             })
         if "TableUpdate;" in line or "AddRow;" in line:
             print("   [INF] テーブル更新・行追加は無視")
-    await check_depth_changes(session, parsed_hotfix, Actions)
+    await check_depth_changes(session, new_data, parsed_hotfix, Actions)
 
-async def check_depth_changes(session, diff_data, Actions):
+async def check_depth_changes(session, new_data, diff_data, Actions):
     merged = defaultdict(lambda: {"追加" : None, "削除" : None})
     grouped = defaultdict(lambda: defaultdict(list))
 
@@ -187,7 +187,12 @@ async def check_depth_changes(session, diff_data, Actions):
                     row_data = file_data_cache[fallback_path].get(f"{row}", {})
 
                 try:
-                    weapon_path = (row_data.get("ItemDefinition", {}).get("AssetPathName", ""))
+                    new_lines = new_data.splitlines()
+                    for line in new_lines:
+                        if f"{changed_path};{row};{key};ItemDefinition;" in line:
+                            weapon_path = line.split(";")[-1]
+                    if not weapon_path:
+                        weapon_path = (row_data.get("ItemDefinition", {}).get("AssetPathName", ""))
                     wid = weapon_path.split('/')[-1].split('.')[0]
                     weapon_data = await fetch_export_data_async(session, weapon_path)
                 except Exception as e:

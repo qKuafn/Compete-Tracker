@@ -2,6 +2,7 @@ import requests
 import os
 import json
 import asyncio
+import time
 
 import config
 import config2
@@ -51,7 +52,10 @@ def fetch_EventData(region="ASIA", type="first"):
         return data
     else:
         safe_print(f"  [ERR] 🔴 {region} 取得に失敗 : {res.text} {res.status_code}")
-        return None
+        safe_print(f"  [INF] リトライします: {region} (Acc:{type})")
+        time.sleep(30)
+        fetch_EventData(region, type)
+
 
 async def run():
     ensure_token()
