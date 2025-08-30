@@ -12,6 +12,8 @@ from files import load_json, get_unique_filepath, safe_print
 def fetch_EventData(region="ASIA", type="first"):
     safe_print(f"[INF] EventData 取得開始 : {region} (Acc:{type})")
 
+    ensure_token(type)
+
     count = "2" if type == "second" else ""
 
     url = getattr(config, f"EventData_URL{count}")
