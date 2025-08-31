@@ -200,6 +200,9 @@ async def format_EventData():
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
 
+            new_data = load_json(filepath)
+            # dict等の順番を揃える
+
         # === Discord Embed送信のためのEmbed組み立て ===
         if before_data is None or new_data != before_data:
             image_section = []
