@@ -71,17 +71,7 @@ async def main(Actions=False):
                 ["git", "rev-parse", "--short", "HEAD"], text=True
             ).strip()
 
-            repo_url = subprocess.check_output(
-                ["git", "config", "--get", "remote.origin.url"], text=True
-            ).strip()
-
-            if repo_url.startswith("git@"):
-                repo_url = repo_url.replace("git@github.com:", "[https://github.com/](https://github.com/)") \
-                    .removesuffix(".git")
-            else:
-                repo_url = repo_url.removesuffix(".git")
-
-            commit_url = f"{repo_url}/commit/{commit_hash}"
+            commit_url = f"https://github.com/qKuafn/Compete-Tracker/commit/{commit_hash}"
 
             if "ASIA" in config.tags or "ja" in config.tags or config.added_Tournaments or config.updated_Tournaments or config.playlist_tags:
                 content = f"## [更新 : {', '.join(config.tags)}](<{commit_url}>) <@&1372839358591139840>"
