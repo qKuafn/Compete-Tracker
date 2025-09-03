@@ -189,7 +189,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                 try:
                     new_lines = new_data.splitlines()
                     for line in new_lines:
-                        if f"{changed_path};{row};{key};ItemDefinition;" in line:
+                        if f"{changed_path};RowUpdate;{row};ItemDefinition;" in line:
                             weapon_path = line.split(";")[-1]
                     if not weapon_path:
                         weapon_path = (row_data.get("ItemDefinition", {}).get("AssetPathName", ""))
@@ -490,10 +490,10 @@ async def get_loc_list():
 
     loc_dict = {}
     async with aiohttp.ClientSession() as session:
-        tasks = [fetch_export_data_async(session, path) for path in paths]
+        for path in paths:
+            data = await fetch_export_data_async(session, path)
+            await asyncio.sleep(0.5)
 
-        for coro in asyncio.as_completed(tasks):
-            data = await coro
             rows = data.get("", {})
             for key, val in rows.items():
                 if isinstance(val, str):
@@ -503,4 +503,5 @@ async def get_loc_list():
 
 if __name__ == "__main__":
     config2.test = True
+    config2.Hotfix_Webhook = False
     asyncio.run(fetch_and_store_hotfix(Actions=True))
