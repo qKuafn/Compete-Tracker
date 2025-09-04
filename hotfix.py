@@ -53,9 +53,9 @@ async def fetch_and_store_hotfix(Actions):
             if new_data != old_data or old_data is None:
                 config.tags.append("Hotfix")
                 try:
-                    if config2.test is False:
-                        with open(get_unique_filepath(config2.ARCHIVE_DIR, f"{base_name}", "ini"), "w", encoding="utf-8") as f:
-                            f.write(new_data)
+                    #if config2.test is False:
+                    #    with open(get_unique_filepath(config2.ARCHIVE_DIR, f"{base_name}", "ini"), "w", encoding="utf-8") as f:
+                    #        f.write(new_data)
                     with open(filepath, "w", encoding="utf-8") as f:
                         f.write(new_data)
                     print(f"  [INF] 🟢 変更あり")

@@ -97,6 +97,7 @@ async def main(Actions=False):
     config.playlist_tags = []
     config.added_Tournaments = []
     config.updated_Tournaments = []
+    config.deleted_Tournaments = []
 
 # === 実行 ===
 if __name__ == "__main__":

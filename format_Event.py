@@ -194,9 +194,9 @@ async def format_EventData():
                 config.tags.append(f"{save_eventId} (Upd)")
                 config.updated_Tournaments.append(save_eventId)
             
-            if config2.test is False:
-                with open(get_unique_filepath(config2.TOURNAMENT_ARCHIVE_DIR, save_eventId), "w", encoding="utf-8") as f:
-                    json.dump(new_data, f, ensure_ascii=False, indent=2)
+            #if config2.test is False:
+            #    with open(get_unique_filepath(config2.TOURNAMENT_ARCHIVE_DIR, save_eventId), "w", encoding="utf-8") as f:
+            #        json.dump(new_data, f, ensure_ascii=False, indent=2)
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(new_data, f, ensure_ascii=False, indent=2)
 
@@ -431,7 +431,27 @@ async def format_EventData():
             else:
                 print (  f"   [INF] 順番のみが変更された可能性があります。更新通知はスキップします。")
 
-    if not config.added_Tournaments and not config.updated_Tournaments:
+    current_event_ids = set()
+    for event in EventData["events"]:
+        save_eventId = "_".join(event["eventId"].split("_")[1:-1])
+        current_event_ids.add(save_eventId)
+
+    for filename in os.listdir(config2.TOURNAMENT_DIR):
+        if not filename.endswith(".json"):
+            continue
+        file_eventId = filename.replace(".json", "")
+        filepath = os.path.join(config2.TOURNAMENT_DIR, filename)
+
+        if file_eventId not in current_event_ids:
+            print(f"   [INF] 🔴 トーナメント削除 : {file_eventId}")
+            try:
+                os.remove(filepath)
+                config.tags.append(f"{file_eventId} (Del)")
+                config.deleted_Tournaments.append(file_eventId)
+            except Exception as e:
+                print(f"   [ERR] 削除失敗 : {file_eventId} ({e})")
+
+    if not config.added_Tournaments and not config.updated_Tournaments and not config.deleted_Tournaments:
         print(" [INF] ✅️ 変更なし")
 
 def send_discord(content, embeds, filepath, save_eventId, sent):

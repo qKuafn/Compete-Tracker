@@ -41,9 +41,9 @@ def fetch_EventData(region="ASIA", type="first"):
                         safe_print(f"  [ERR] ❌️ 旧ファイルの取得に失敗 : {e}")
                     if new_data != before_data or before_data is None:
                         try:
-                            if config2.test is False:
-                                with open(get_unique_filepath(config2.ARCHIVE_DIR, f"EventData_{region}"), "w", encoding="utf-8") as f:
-                                    json.dump(data, f, ensure_ascii=False, indent=2)
+                            #if config2.test is False:
+                            #    with open(get_unique_filepath(config2.ARCHIVE_DIR, f"EventData_{region}"), "w", encoding="utf-8") as f:
+                            #       json.dump(data, f, ensure_ascii=False, indent=2)
                             with open(filepath, "w", encoding="utf-8") as f:
                                 json.dump(data, f, ensure_ascii=False, indent=2)
                             config.tags.append(region)

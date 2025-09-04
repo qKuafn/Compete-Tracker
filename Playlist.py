@@ -63,9 +63,9 @@ def fetch_Playlist():
 
             # 保存
             try:
-                if config2.test is False:
-                    with open(get_unique_filepath(config2.ARCHIVE_DIR, f"PlaylistData"), "w", encoding="utf-8") as f:
-                        json.dump(new_data, f, ensure_ascii=False, indent=2)
+                #if config2.test is False:
+                #    with open(get_unique_filepath(config2.ARCHIVE_DIR, f"PlaylistData"), "w", encoding="utf-8") as f:
+                #        json.dump(new_data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(new_data, f, ensure_ascii=False, indent=2)
                 print(f"  [INF] 🟢 変更あり")

@@ -25,9 +25,9 @@ def fetch_WebData(lang="ja", type="first"):
                 print("  [ERR] ❌️ 旧ファイルの取得に失敗")
             try:
                 if new_data != before_data or before_data is None:
-                    if config2.test is False:
-                        with open(get_unique_filepath(config2.ARCHIVE_DIR, f"WebData_{lang}"), "w", encoding="utf-8") as f:
-                            json.dump(data, f, ensure_ascii=False, indent=2)
+                    #if config2.test is False:
+                    #    with open(get_unique_filepath(config2.ARCHIVE_DIR, f"WebData_{lang}"), "w", encoding="utf-8") as f:
+                    #        json.dump(data, f, ensure_ascii=False, indent=2)
                     with open(filepath, "w", encoding="utf-8") as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
                     config.tags.append(f"Web ({lang})")
@@ -59,9 +59,9 @@ def fetch_ScoreInfo(lang):
             print("  [ERR] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
-                if config2.test is False:
-                    with open(get_unique_filepath(config2.ARCHIVE_DIR, f"ScoreInfo_{lang}"), "w", encoding="utf-8") as f:
-                        json.dump(data, f, ensure_ascii=False, indent=2)
+                #if config2.test is False:
+                #    with open(get_unique_filepath(config2.ARCHIVE_DIR, f"ScoreInfo_{lang}"), "w", encoding="utf-8") as f:
+                #        json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 config.tags.append(f"Score ({lang})")
@@ -93,9 +93,9 @@ def fetch_LeadInfo(lang):
             print("  [ERR] ❌️ 旧ファイルの取得に失敗")
         try:
             if new_data != before_data or before_data is None:
-                if config2.test is False:
-                    with open(get_unique_filepath(config2.ARCHIVE_DIR, f"LeaderboardInfo_{lang}"), "w", encoding="utf-8") as f:
-                        json.dump(data, f, ensure_ascii=False, indent=2)
+                #if config2.test is False:
+                #    with open(get_unique_filepath(config2.ARCHIVE_DIR, f"LeaderboardInfo_{lang}"), "w", encoding="utf-8") as f:
+                #        json.dump(data, f, ensure_ascii=False, indent=2)
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 config.tags.append(f"Lead ({lang})")

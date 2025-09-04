@@ -1,6 +1,6 @@
 RESPONSE_DIR = r"./response"
 ARCHIVE_DIR = r"./response/Archive"
-TOURNAMENT_DIR = r"./Tournament"
+TOURNAMENT_DIR = r"./response/Tournament"
 TOURNAMENT_ARCHIVE_DIR = r"./Tournament/Archive"
 TEMP_DIR = r"./Temp"
 
