@@ -1,10 +1,10 @@
 import requests
 import json
 import os
+import re
 from datetime import datetime, timezone
 from copy import deepcopy
 import asyncio
-from collections import OrderedDict
 
 from files import load_json, get_unique_filepath
 from tokens import ensure_token
@@ -96,6 +96,8 @@ async def format_EventData():
             begin_dt = datetime.strptime(window["beginTime"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
             end_dt = datetime.strptime(window["endTime"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
 
+            round_number = window.get("round", "")
+
             eventTemplateId = window.get("eventTemplateId")
             matched_template = None
             for template in EventData["templates"]: 
@@ -106,33 +108,52 @@ async def format_EventData():
                 playlistId = matched_template.get("playlistId")
                 matchCap = matched_template.get("matchCap")
 
-            for item in EventData["resolvedWindowLocations"][f"Fortnite:{eventId}:{eventWindowId}"]:
-                WindowLocation = item.split(":")[-1]
-                for key, value in EventData["scoreLocationScoringRuleSets"].items():
-                    if key == f"Fortnite:{eventId}:{WindowLocation}":
-                        scoringRuleSetId = value
-                        for scoreLocations in window["scoreLocations"]:
-                            leaderboardDefId = scoreLocations["leaderboardDefId"]
-                            isMainWindowLeaderboard = scoreLocations["isMainWindowLeaderboard"]
-                            for leaderboardDef in EventData["leaderboardDefs"]:
-                                if leaderboardDef["scoringRuleSetId"] == scoringRuleSetId and leaderboardDef["leaderboardDefId"] == leaderboardDefId:
-                                    useIndividualScores = leaderboardDef["useIndividualScores"]
-                                    onlyScoreTopN = leaderboardDef.get("onlyScoreTopN", -1)
+            for WindowLocation in EventData["resolvedWindowLocations"][f"Fortnite:{eventId}:{eventWindowId}"]:
+                displayWindowLocation = WindowLocation.split(":")[-1]
+                if eventId == "epicgames_Dinosauron_Official":
+                    print(f"[DBG] 処理中 WindowLocation: {WindowLocation}, displayWindowLocation: {displayWindowLocation}")
 
-                                    scoringrules[leaderboardDefId] = {
-                                        "scoringRuleSetId": scoringRuleSetId,
-                                        "WindowLocation": WindowLocation,
-                                        "isMainWindowLeaderboard": isMainWindowLeaderboard,
-                                        "useIndividualScores": useIndividualScores,
-                                        "onlyScoreTopN": onlyScoreTopN,
-                                        "payouts": []
-                                    }
+                scoringRuleSetId = EventData["scoreLocationScoringRuleSets"][WindowLocation]
+                for scoreLocation in window["scoreLocations"]:
+                    leaderboardDefId = scoreLocation["leaderboardDefId"]
+                    if eventId == "epicgames_Dinosauron_Official":
+                        print(f"[DBG] leaderboardDefId: {leaderboardDefId}, displayWindowLocation: {displayWindowLocation}")
+                    isMainWindowLeaderboard = scoreLocation["isMainWindowLeaderboard"]
+                    for leaderboardDef in EventData["leaderboardDefs"]:
+                        raw_format = leaderboardDef["leaderboardInstanceIdFormat"]
+                        pattern = re.sub(r"\$\{.*?\}", r"[^:]+", raw_format)
+                        raw_format = leaderboardDef["leaderboardInstanceIdFormat"]  # "${something}_CumulativeLeaderboard"
+
+                        def resolve_format(raw_format, vars_dict):
+                            def replacer(match):
+                                key = match.group(1)
+                                return vars_dict.get(key, f"${{{key}}}")
+                            return re.sub(r"\$\{(.*?)\}", replacer, raw_format)
+                        vars_dict = {"eventId": eventId, "windowId": eventWindowId, "round": str(round_number) if round_number is not None else ""}
+                        pattern = resolve_format(raw_format, vars_dict)
+
+                        if pattern == displayWindowLocation and leaderboardDef["leaderboardDefId"] == leaderboardDefId:
+                            useIndividualScores = leaderboardDef["useIndividualScores"]
+                            onlyScoreTopN = leaderboardDef.get("onlyScoreTopN", -1)
+
+                            if leaderboardDefId not in scoringrules:
+                                scoringrules[leaderboardDefId] = {
+                                    "scoringRuleSetId": scoringRuleSetId,
+                                    "WindowLocation": displayWindowLocation,
+                                    "isMainWindowLeaderboard": isMainWindowLeaderboard,
+                                    "useIndividualScores": useIndividualScores,
+                                    "onlyScoreTopN": onlyScoreTopN,
+                                    "payouts": []
+                                }
 
             for item in EventData["resolvedWindowLocations"][f"Fortnite:{eventId}:{eventWindowId}"]:
-                WindowLocation = item.split(":")[-1]
+                WindowLocation = item.split(":", 1)[-1]
+                displayWindowLocation = WindowLocation.split(":")[-1]
+                if eventId == "epicgames_Dinosauron_Official":
+                    print(f"[DBG] 処理中 WindowLocation: {WindowLocation}")
 
                 for key, value in EventData["scoreLocationPayoutTables"].items():
-                    if key == f"Fortnite:{eventId}:{WindowLocation}":
+                    if key == f"Fortnite:{eventId}:{WindowLocation}" or key == f"Fortnite:{WindowLocation}":
                         Payouts_key = value
                         payout_table = EventData["payoutTables"][Payouts_key]
                         for entry in payout_table:
@@ -151,7 +172,7 @@ async def format_EventData():
                                     }
 
                                     for leaderboardDefId, scoringrule in scoringrules.items():
-                                        if scoringrule["WindowLocation"] == WindowLocation:
+                                        if scoringrule["WindowLocation"] == displayWindowLocation:
                                             scoringrule["payouts"].append(payouts)
 
             beginTime_UNIX = int(begin_dt.timestamp())
