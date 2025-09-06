@@ -10,7 +10,7 @@ import aiohttp
 
 from tokens import ensure_token
 from files import load_ini, get_unique_filepath, sanitize_filename, format_number
-from dillyapis import fetch_export_data_async, get_loc_data
+from dillyapis import fetch_export_data, fetch_export_data_async, get_loc_data
 from create_weap_img import create_image
 import config
 import config2
@@ -172,7 +172,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                     print(f"    [INF] ⭕️ localization 取得完了（{len(config.loc_data)}件）")
 
                 if changed_path not in file_data_cache:
-                    file_data = await fetch_export_data_async(session, changed_path)
+                    file_data = fetch_export_data(changed_path)
                     file_data_cache[changed_path] = file_data[0].get("Rows", {}) if file_data else {}
                     row_data = file_data_cache[changed_path].get(f"{row}", {})
                 else:
@@ -182,7 +182,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                 if not row_data and "/LootCurrentSeason/DataTables/Comp/LootCurrentSeasonLootPackages_Client_comp" in changed_path:
                     fallback_path = "/LootCurrentSeason/DataTables/LootCurrentSeasonLootPackages_Client"
                     if fallback_path not in file_data_cache:
-                        file_data = await fetch_export_data_async(session, fallback_path)
+                        file_data = fetch_export_data(fallback_path)
                         file_data_cache[fallback_path] = file_data[0].get("Rows", {}) if file_data else {}
                     row_data = file_data_cache[fallback_path].get(f"{row}", {})
 
@@ -194,7 +194,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                     if not weapon_path:
                         weapon_path = (row_data.get("ItemDefinition", {}).get("AssetPathName", ""))
                     wid = weapon_path.split('/')[-1].split('.')[0]
-                    weapon_data = await fetch_export_data_async(session, weapon_path)
+                    weapon_data = fetch_export_data(weapon_path)
                 except Exception as e:
                     print(f"    [ERR] 🔴 武器のパス取得に失敗 : {e}")
                     weapon_data = []
@@ -244,14 +244,14 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
             # === DataTavleの更新は、Rows.row
             elif "DataTable=" in origin_row:
                 if changed_path not in file_data_cache:
-                    file_data = await fetch_export_data_async(session, changed_path)
+                    file_data = fetch_export_data(changed_path)
                     file_data_cache[changed_path] = file_data[0].get("Rows", {}) if file_data else {}
                 row_data = file_data_cache[changed_path].get(f"{row}", {})
 
             # CurveTableの更新は、Rows.row.Keys内に "Time": と "Value": がある
             elif "CurveTable=" in origin_row:
                 if changed_path not in file_data_cache:
-                    export_data = await fetch_export_data_async(session, changed_path)
+                    export_data = fetch_export_data(changed_path)
                     file_data_cache[changed_path] = export_data[0].get("Rows", {}) if export_data else {}
                 loot_rows = file_data_cache[changed_path]
                 row_data = loot_rows.get(f"{row}", {}).get("Keys", [])
