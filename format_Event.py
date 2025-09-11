@@ -328,28 +328,23 @@ async def format_EventData():
                     first_key = next(iter(new_data[eventWindowId]["ScoringRules"]))
                     payouts_list = new_data[eventWindowId]["ScoringRules"][first_key]["payouts"]
 
-                    field_values = []
-                    for payout in payouts_list:
+                    for i, payout in enumerate(payouts_list, 1):
                         json_text = json.dumps(payout, ensure_ascii=False, indent=2)
                         wrapped_text = f"```json\n{json_text}\n```"
-                        if len(wrapped_text) > 1024:
-                            continue
-                        if total_length + len(wrapped_text) > 1024:
-                            break
-                        field_values.append(payout)
-                        total_length += len(wrapped_text)
 
-                    if field_values:
-                        field_values = json.dumps(field_values, ensure_ascii=False, indent=2)
+                        if len(wrapped_text) > 1024:
+                            wrapped_text = f"```json\n{json.dumps(payout, ensure_ascii=False)}\n```"
+
                         payout_section.append({
-                            "name": eventWindowId,
-                            "value": f"```json\n{field_values}\n```",
+                            "name": f"{eventWindowId} #{i}",
+                            "value": wrapped_text,
                             "inline": False
                         })
+
                 except Exception as e:
                     print(f"  [ERR] ❌️ 賞金の解析に失敗: {e}")
                     payout_section.append({
-                        "name":  eventWindowId,
+                        "name": eventWindowId,
                         "value": "エラー",
                         "inline": False
                     })
