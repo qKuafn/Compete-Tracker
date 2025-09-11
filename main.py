@@ -60,8 +60,6 @@ async def main(Actions=False):
         if not config2.test:
             timestampA = datetime.now(config.JST).strftime("%m/%d %H:%M:%S")
             message = f"更新 : {', '.join(config.tags)} ({timestampA})"
-            if Actions:
-                message = message + " - GitHubActions"
 
             subprocess.run(['git', 'pull'])
 
