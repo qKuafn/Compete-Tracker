@@ -336,7 +336,7 @@ async def format_EventData():
                             wrapped_text = f"```json\n{json.dumps(payout, ensure_ascii=False)}\n```"
 
                         payout_section.append({
-                            "name": f"{eventWindowId} #{i}",
+                            "name": f"{eventWindowId}",
                             "value": wrapped_text,
                             "inline": False
                         })
