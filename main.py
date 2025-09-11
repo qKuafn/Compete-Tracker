@@ -58,6 +58,9 @@ async def main(Actions=False):
         print(f"[DBG] タグ一覧 : {config.tags}")
 
         if not config2.test:
+            subprocess.run(["git", "config", "user.name", "github-actions[bot]"], check=True)
+            subprocess.run(["git", "config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com"], check=True)
+
             timestampA = datetime.now(config.JST).strftime("%m/%d %H:%M:%S")
             message = f"更新 : {', '.join(config.tags)} ({timestampA})"
 
