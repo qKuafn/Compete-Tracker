@@ -253,8 +253,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                 if changed_path not in file_data_cache:
                     export_data = fetch_export_data(changed_path)
                     file_data_cache[changed_path] = export_data[0].get("Rows", {}) if export_data else {}
-                loot_rows = file_data_cache[changed_path]
-                row_data = loot_rows.get(f"{row}", {}).get("Keys", [])
+                row_data = file_data_cache[changed_path].get(f"{row}", {}).get("Keys", [])
 
         except Exception as e:
             print(f"    [ERR] 🔴 その他データ取得エラー : {e}")
@@ -282,7 +281,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
             status = "更新"
             key = added["key"]
         elif added:
-            if "CurveTable" in origin_row in changed_path:
+            if "CurveTable=" in origin_row:
                 default_weight = find_value_by_time(row_data, added["key"])
             elif "DataTable=" in origin_row:
                 default_weight = row_data.get(added["key"], "エラー")
@@ -298,7 +297,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
             status = "追加"
             key = added["key"]
         elif removed:
-            if "CurveTable" in origin_row in changed_path:
+            if "CurveTable=" in origin_row:
                 default_weight = find_value_by_time(row_data, removed["key"])
             elif "DataTable=" in origin_row:
                 default_weight = row_data.get(removed["key"], "エラー")
