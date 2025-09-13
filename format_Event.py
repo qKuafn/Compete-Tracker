@@ -1,12 +1,8 @@
-import requests
-import json
-import os
-import re
+import requests, json, os, re, asyncio, shutil
 from datetime import datetime, timezone
 from copy import deepcopy
-import asyncio
 
-from files import load_json, get_unique_filepath
+from files import load_json
 from tokens import ensure_token
 from get_EventData import fetch_EventData
 from get_WebData import fetch_WebData
@@ -461,11 +457,12 @@ async def format_EventData():
         if file_eventId not in current_event_ids:
             print(f"   [INF] 🔴 トーナメント削除 : {file_eventId}")
             try:
-                os.remove(filepath)
+                dest_path = os.path.join(config2.ARCHIVE_DIR, os.path.basename(filepath))
+                shutil.move(filepath, dest_path)
                 config.tags.append(f"{file_eventId} (Del)")
                 config.deleted_Tournaments.append(file_eventId)
             except Exception as e:
-                print(f"   [ERR] 削除失敗 : {file_eventId} ({e})")
+                print(f"   [ERR] アーカイブフォルダへの移動失敗 : {file_eventId} ({e})")
 
     if not config.added_Tournaments and not config.updated_Tournaments and not config.deleted_Tournaments:
         print(" [INF] ✅️ 変更なし")
