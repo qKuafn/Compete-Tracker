@@ -6606,66 +6606,6 @@
         ]
       }
     ],
-    "S37_Duos_DivisionalCupTrial_EU": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 0,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "RegionLock_S37_DuosDivisionalTrial_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 1000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_Duos_Division2_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 3000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_Duos_Division3_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 13000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_Duos_Division4_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "S37_DuosDivisionalCup_Division1_Week2Day1_EU": [
       {
         "scoringType": "value",
@@ -11827,116 +11767,6 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s37_consoleduoscashcups_eu"
-      }
-    },
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S37_DuosDivisionalCupTrial_EU",
-      "beginTime": "2025-09-13T17:00:00Z",
-      "endTime": "2025-09-13T20:00:00Z",
-      "displayDataId": "s37_duostrial",
-      "eventGroup": "Season37_DuosDivisionalCupTrial",
-      "announcementTime": "2025-06-06T23:00:00Z",
-      "regions": [
-        "EU"
-      ],
-      "regionMappings": {
-        "EU": "EUCOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "SecureBoot",
-          "CryptoProcessor"
-        ],
-        "tournamentType": "CashCup",
-        "TeamLockType": "Window",
-        "webId": "S37_DuosDivisionalCupTrial",
-        "minimumAccountLevel": 350,
-        "DisqualifyType": "Event",
-        "RegionLockType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S37_Duos_DivisionalCupTrial_EU",
-          "eventTemplateId": "EventTemplate_S37_DuosDivisionalCup",
-          "countdownBeginTime": "2025-09-13T15:00:00Z",
-          "beginTime": "2025-09-13T17:00:00Z",
-          "endTime": "2025-09-13T20:00:00Z",
-          "round": 1,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_duosdiv_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            [
-              "currentRanking:ranked-br:6",
-              "currentRanking:ranked-zb:6",
-              "currentRanking:ranked_blastberry_build:6",
-              "currentRanking:ranked_blastberry_nobuild:6"
-            ]
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_DuosDivisionalCupTrial_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_CashCup_Qualified"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "RegionLock_S37_DuosDivisionalTrial_ME",
-            "S37_Duos_Division1_EU",
-            "RegionLock_S37_DuosDivisionalTrial_NAC",
-            "Permanent_Tournament_Ban",
-            "RegionLock_S37_DuosDivisionalTrial_NAW",
-            "RegionLock_S37_DuosDivisionalTrial_ASIA",
-            "RegionLock_S37_DuosDivisionalTrial_OCE",
-            "RegionLock_S37_DuosDivisionalTrial_BR"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s37_duosdivisionalcuptrial_eu"
       }
     },
     {
@@ -23387,96 +23217,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "RankedCupSolo_Unreal_LeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}_unreal",
-      "maxSessionHistorySize": 150,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "UNREAL_VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "UNREAL_TEAM_ELIMS_STAT_INDEX",
-            "bits": 12,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "UNREAL_PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "UNREAL_TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "ScoringRules_RankedCupSolo_Unreal_v2",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${eventId}",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": []
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "S37_DuosDivisionalCupTrial_DefaultLeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "ScoringRules_DuosDivisionalCupTrial",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": []
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "RankedCupSolo_Elite_LeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -23511,6 +23251,51 @@
         ]
       },
       "scoringRuleSetId": "ScoringRules_RankedCupSolo_Elite_v2",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${eventId}",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    },
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "RankedCupSolo_Unreal_LeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}_unreal",
+      "maxSessionHistorySize": 150,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "UNREAL_VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "UNREAL_TEAM_ELIMS_STAT_INDEX",
+            "bits": 12,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "UNREAL_PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "UNREAL_TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "ScoringRules_RankedCupSolo_Unreal_v2",
       "clampsToZero": true,
       "payoutsConfig": {
         "payoutTableIdFormat": "${eventId}",
@@ -24637,6 +24422,7 @@
     "Fortnite:epicgames_S37_RankedCupSolo_EU:S37_RankedCupSolo_Event13_EU_unreal": "ScoringRules_RankedCupSolo_Unreal_v2",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_EU:S37_RankedCupReloadDuos_Event15_EU_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_ReloadQuickCup_Group3_EU:S37_ReloadQuickCup_Event7Group3Round2_EU": "ScoringRules_ReloadDuosQuick_R1",
+    "Fortnite:cumulative:epicgames_S37_DuosDivisionalCup_Division1_EU_Week5_cumulative": "ScoringRules_DuosDivisionalCup_Div1",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_EU:S37_DuosDivisionalCup_Division1_Week6Day2_EU": "ScoringRules_DuosDivisionalCup_Div1",
     "Fortnite:epicgames_S37_ReloadQuickCup_EU:S37_ReloadQuickCup_Event3Round3_EU": "ScoringRules_VictoryCup",
     "Fortnite:epicgames_S37_RankedCupDuos_EU:S37_RankedCupDuos_Event7_EU_Silver": "ScoringRules_RankedCupDuos_Silver",
@@ -24648,8 +24434,6 @@
     "Fortnite:epicgames_S37_RankedCupSolo_EU:S37_RankedCupSolo_Event13_EU_elite": "ScoringRules_RankedCupSolo_Elite_v2",
     "Fortnite:epicgames_S37_RankedCupSolo_EU:S37_RankedCupSolo_Event19_EU": "EmptyScoringRules",
     "Fortnite:epicgames_S37_RankedCupSolo_EU:S37_RankedCupSolo_Event1_EU_elite": "ScoringRules_RankedCupSolo_Elite_v2",
-    "Fortnite:epicgames_S37_DuosDivisionalCupTrial_EU:S37_Duos_DivisionalCupTrial_EU": "ScoringRules_DuosDivisionalCupTrial",
-    "Fortnite:cumulative:epicgames_S37_DuosDivisionalCup_Division1_EU_Week5_cumulative": "ScoringRules_DuosDivisionalCup_Div1",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_EU:S37_RankedCupReloadDuos_Event10_EU": "EmptyScoringRules",
     "Fortnite:epicgames_S37_RankedCupSolo_EU:S37_RankedCupSolo_Event10_EU": "EmptyScoringRules",
     "Fortnite:epicgames_S37_RankedCupSolo_EU:S37_RankedCupSolo_Event17_EU_diamond": "ScoringRules_RankedCupSolo_Diamond_v2",
@@ -25300,7 +25084,6 @@
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division4_EU:S37_DuosDivisionalCup_Division4_Event7_EU": "S37_DuosDivisionalCup_Division4_Event7_EU",
     "Fortnite:epicgames_S37_RankedCupSolo_EU:S37_RankedCupSolo_Event13_EU_unreal": "epicgames_S37_RankedCupSolo_EU",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_EU:S37_RankedCupReloadDuos_Event15_EU_diamond": "epicgames_S37_RankedCupReloadDuos_EU",
-    "Fortnite:epicgames_S37_DuosDivisionalCupTrial_EU:S37_Duos_DivisionalCupTrial_EU": "S37_Duos_DivisionalCupTrial_EU",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_EU:S37_DuosDivisionalCup_Division1_Week6Day2_EU": "S37_DuosDivisionalCup_Division1_Week6Day2_EU",
     "Fortnite:epicgames_S37_ReloadQuickCup_EU:S37_ReloadQuickCup_Event3Round3_EU": "PayoutTable_ReloadQuickCup",
     "Fortnite:epicgames_S37_RankedCupDuos_EU:S37_RankedCupDuos_Event7_EU_Silver": "epicgames_S37_RankedCupDuos_EU",
@@ -26316,9 +26099,6 @@
     ],
     "Fortnite:epicgames_S37_ReloadQuickCup_Group3_EU:S37_ReloadQuickCup_Event7Group3Round2_EU": [
       "Fortnite:epicgames_S37_ReloadQuickCup_Group3_EU:S37_ReloadQuickCup_Event7Group3Round2_EU"
-    ],
-    "Fortnite:epicgames_S37_DuosDivisionalCupTrial_EU:S37_Duos_DivisionalCupTrial_EU": [
-      "Fortnite:epicgames_S37_DuosDivisionalCupTrial_EU:S37_Duos_DivisionalCupTrial_EU"
     ],
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_EU:S37_DuosDivisionalCup_Division1_Week6Day2_EU": [
       "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_EU:S37_DuosDivisionalCup_Division1_Week6Day2_EU",
