@@ -92,8 +92,8 @@ async def main(Actions=False):
 
             subprocess.run(["git", "push"], check=True)
 
-    subprocess.run(["git", "config", "user.name", "qKuafn"], check=True)
-    subprocess.run(["git", "config", "user.email", "qkuafn@gmail.com"], check=True)
+            subprocess.run(["git", "config", "user.name", "qKuafn"], check=True)
+            subprocess.run(["git", "config", "user.email", "qkuafn@gmail.com"], check=True)
 
     # タグの初期化
     config.tags = []
