@@ -61,6 +61,7 @@ def fetch_EventData(region="ASIA", type="first"):
 
         if attempt < 2 - 1:
             safe_print(f"  [INF] {region} リトライします ({attempt + 1}/{2}) ...")
+            ensure_token(type)
             time.sleep(30)
         else:
             safe_print(f"  [ERR] {region} 取得失敗: 最大リトライ回数に達しました")
