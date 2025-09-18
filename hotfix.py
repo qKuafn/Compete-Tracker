@@ -399,7 +399,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                         print(f"    [ERR] ❌️ 武器画像のパスがありません。画像生成をスキップします")
 
                 for image_path, data in image_lines_map.items():
-                    if changed_path == "/ForbiddenFruitDataTables/DataTables/ForbiddenFruitChapterLootPackages" or changed_path == "/Figment_LootTables/DataTables/FigmentLootPackages" or changed_path == "/BlastBerryLoot/DataTables/BlastBerryLootPackages":
+                    if changed_path == "/ForbiddenFruitDataTables/DataTables/ForbiddenFruitChapterLootPackages" or changed_path == "/Figment_LootTables/DataTables/FigmentLootPackages" or changed_path == "/BlastBerryLoot/DataTables/BlastBerryLootPackages" or changed_path == "/LootCurrentSeason/DataTables/Delulu/DeluluOverrideLootPackages_Client":
                         Send_LootChange = False
                     else:
                         Send_LootChange = True
