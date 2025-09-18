@@ -454,7 +454,7 @@ async def format_EventData():
         file_eventId = filename.replace(".json", "")
         filepath = os.path.join(config2.TOURNAMENT_DIR, filename)
 
-        if file_eventId not in current_event_ids:
+        if file_eventId not in current_event_ids and filename != "S37_Delulu.json":
             print(f"   [INF] 🔴 トーナメント削除 : {file_eventId}")
             try:
                 dest_path = os.path.join(config2.ARCHIVE_DIR, os.path.basename(filepath))
