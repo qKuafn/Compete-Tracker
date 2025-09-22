@@ -1,7 +1,7 @@
 {
   "FortPlaylistAthena": {
     "meta": {
-      "promotion": 83
+      "promotion": 84
     },
     "assets": {
       "Playlist_Habanero_PunchBerry_Squads": {
@@ -399,18 +399,18 @@
       },
       "Playlist_ShowdownTournament_DashBerryDuo_CR": {
         "meta": {
-          "revision": 2,
-          "headRevision": 2,
-          "revisedAt": "2025-09-19T16:32:27.756Z",
-          "promotion": 75,
-          "promotedAt": "2025-09-19T16:32:46.972Z"
+          "revision": 3,
+          "headRevision": 3,
+          "revisedAt": "2025-09-22T16:20:56.281Z",
+          "promotion": 84,
+          "promotedAt": "2025-09-22T16:25:52.528Z"
         },
         "assetData": {
           "bOwnerFilterDestructedBuildingsInGrid": false,
           "bDisplayRespawnWidget": false,
           "LootLevel": "3",
           "bRequireCrossplayEnabled": true,
-          "ForceKickAfterDeathMode": "Disabled",
+          "ForceKickAfterDeathMode": "KickAll",
           "bRequirePickaxeInStartingInventory": true,
           "bRewardsAllowXPProgression": true,
           "MmrThresholdForPrioritySession": "0",
@@ -458,7 +458,7 @@
           "RewardTimePlayedType": "Default",
           "bAllowSpectateAPartyMember": true,
           "CalendarEventsForEndOfMatchUpdate": [],
-          "MinPlayers": "36",
+          "MinPlayers": "40",
           "GameData": "/BlastBerry/DataTables/ChampsRoad/DashBerry/DashBerryDuos_Composite_GD_Comp_Build_CR.DashBerryDuos_Composite_GD_Comp_Build_CR",
           "bEnableCreativeMode": false,
           "UnderfilledMaxPlayers": "0",
@@ -477,71 +477,7 @@
           "ForceOnlyBotsThreshold": "-1",
           "BracketBalanceMergeInterval": "",
           "ServerMetricsEventFrequency": "60.000000",
-          "FillRateTable": [
-            {
-              "MinFillPct": "0.200000",
-              "MinMmr": "0",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "0.300000",
-              "MaxMmr": "400"
-            },
-            {
-              "MinFillPct": "0.300000",
-              "MinMmr": "401",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "0.500000",
-              "MaxMmr": "600"
-            },
-            {
-              "MinFillPct": "0.400000",
-              "MinMmr": "601",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "0.600000",
-              "MaxMmr": "800"
-            },
-            {
-              "MinFillPct": "0.500000",
-              "MinMmr": "801",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "0.700000",
-              "MaxMmr": "1000"
-            },
-            {
-              "MinFillPct": "0.600000",
-              "MinMmr": "1001",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "0.800000",
-              "MaxMmr": "1100"
-            },
-            {
-              "MinFillPct": "0.600000",
-              "MinMmr": "1101",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "0.900000",
-              "MaxMmr": "1200"
-            },
-            {
-              "MinFillPct": "0.700000",
-              "MinMmr": "1201",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "0.900000",
-              "MaxMmr": "1300"
-            },
-            {
-              "MinFillPct": "0.700000",
-              "MinMmr": "1301",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "1.000000",
-              "MaxMmr": "1400"
-            },
-            {
-              "MinFillPct": "0.800000",
-              "MinMmr": "1401",
-              "MaxPriority": "119.000000",
-              "MaxFillPct": "1.000000",
-              "MaxMmr": "2000"
-            }
-          ],
+          "FillRateTable": [],
           "bEnableCustomProximityChatPriorityList": false,
           "bShouldFillWhenNoSquadFillOption": false,
           "LastStepPushAircraftCenterLine_Direction": "0.000000",
@@ -574,7 +510,7 @@
           "AirCraftBehavior": "Default",
           "bUseCustomAircraftPathSelection": false,
           "bDrawCreativeDynamicIslands": false,
-          "MaximumAspectRatio": "0.000000",
+          "MaximumAspectRatio": "1.78",
           "bShowTeamSelectButton": false,
           "CurieManagerConfigOverrides": [],
           "bCheckSquadFillMapForAvailableSlotsInBackfill": true,
@@ -589,10 +525,10 @@
           "bRespawnInAir": true,
           "MaxBracketSize": "0",
           "RankScalingStandardDeviation": "400.000000",
-          "bUsePlayerRating": true,
+          "bUsePlayerRating": false,
           "RichPresenceAssetName": "duos",
           "bUseLocalizationService": false,
-          "CompetitivePointClamp": "100",
+          "CompetitivePointClamp": "9999",
           "MinBracketSize": "25",
           "GameType": "BRArena",
           "WinConditionPlayersRemaining": "1",
@@ -608,7 +544,7 @@
             "/Game/Athena/Playlists/Showdown/Siphon/GameplayMod_Siphon.GameplayMod_Siphon"
           ],
           "bRewardForRevivingTeammates": false,
-          "MaxSquads": "-1",
+          "MaxSquads": "40",
           "bIsTournament": false,
           "RewardsPlacementThreshold": "5",
           "MaxTeamSize": "2",
@@ -616,15 +552,15 @@
           "bForceLTMLoadingScreenBackground": false,
           "FriendlyFireType": "Off",
           "bUseSameDirectionForOpposingAircraft": false,
-          "bEnableDynamicBotBackfill": true,
+          "bEnableDynamicBotBackfill": false,
           "bRequeueAfterFailedSessionAssignment": true,
           "MaxHumanAndBotParticipants": "40",
           "bAllowWarmupPlayerStartInSetupPhase": true,
           "LootTierData": "/BlastBerryLoot/DataTables/BlastBerryComposite_LT.BlastBerryComposite_LT",
           "RankScalingMinDelta": "-500.000000",
           "ReplayChunkTimeSeconds": "0.000000",
-          "bShouldErrorOnAdditionalContentFailure": true,
-          "ForceKickAfterDeathTime": "0.000000",
+          "bShouldErrorOnAdditionalContentFailure": false,
+          "ForceKickAfterDeathTime": "60",
           "bAllowEditingEnemyWalls": false,
           "JoinInProgressMatchType": {
             "Category": "Game",
@@ -639,7 +575,7 @@
           "LootPackages": "/BlastBerryLoot/DataTables/BlastBerryComposite_LP.BlastBerryComposite_LP",
           "AircraftPathMidpointSelectionRadiusMin": "20000.000000",
           "MaxPlayers": "40",
-          "bAllowedInLeto": true,
+          "bAllowedInLeto": false,
           "BotFillMMRCutoff": "-1",
           "GameFeaturePluginURLsToLoad": [],
           "bDisable_ReportAPlayerReason_TeamingUpWithEnemies_WhileInGame": false,
@@ -658,7 +594,7 @@
           "ProximityChatPriorityListProvider": "",
           "bIsDefaultPlaylist": true,
           "MapScaleOverride": "0.000000",
-          "bAllowInGameMatchMaking": true,
+          "bAllowInGameMatchMaking": false,
           "MaxTeamScoreAllowedForBackfill": "0",
           "bOverrideMaxPlayers": true,
           "WinConditionType": "MutatorControlledChinaSupported",
@@ -730,12 +666,53 @@
           },
           "bLimitedPoolMatchmakingEnabled": false,
           "MaxTeamScoreDiscrepancyPercent": "0.000000",
-          "PriorityRatingExpansion": [],
+          "PriorityRatingExpansion": [
+            {
+              "Priority": "0",
+              "RatingDelta": "3"
+            },
+            {
+              "Priority": "30",
+              "RatingDelta": "6"
+            },
+            {
+              "Priority": "60",
+              "RatingDelta": "9"
+            },
+            {
+              "Priority": "80",
+              "RatingDelta": "12"
+            },
+            {
+              "Priority": "100",
+              "RatingDelta": "15"
+            },
+            {
+              "Priority": "120",
+              "RatingDelta": "18"
+            },
+            {
+              "Priority": "150",
+              "RatingDelta": "21"
+            },
+            {
+              "Priority": "180",
+              "RatingDelta": "24"
+            },
+            {
+              "Priority": "210",
+              "RatingDelta": "30"
+            },
+            {
+              "Priority": "280",
+              "RatingDelta": "-1"
+            }
+          ],
           "bUseCreativeStarterIsland": false,
           "bUnderfillMatchmaking": false,
           "bRestrictSquadFillToSoloPlayers": false,
           "NonRenderedCharacterAnimationScale": "1.000000",
-          "bEnforceFullSquadInUI": false,
+          "bEnforceFullSquadInUI": true,
           "MinBracketPriority": "0.000000",
           "bPreloadAthenaMapsForMatchmaking": true,
           "primaryAssetId": "FortPlaylistAthena:Playlist_ShowdownTournament_DashBerryDuo_CR",
