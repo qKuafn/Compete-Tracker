@@ -1,7 +1,7 @@
 {
   "FortPlaylistAthena": {
     "meta": {
-      "promotion": 84
+      "promotion": 86
     },
     "assets": {
       "Playlist_Habanero_PunchBerry_Squads": {
@@ -399,11 +399,11 @@
       },
       "Playlist_ShowdownTournament_DashBerryDuo_CR": {
         "meta": {
-          "revision": 3,
+          "revision": 4,
           "headRevision": 4,
-          "revisedAt": "2025-09-22T16:20:56.281Z",
-          "promotion": 84,
-          "promotedAt": "2025-09-22T16:25:52.528Z"
+          "revisedAt": "2025-09-22T16:57:56.331Z",
+          "promotion": 86,
+          "promotedAt": "2025-09-22T17:01:37.090Z"
         },
         "assetData": {
           "bOwnerFilterDestructedBuildingsInGrid": false,
@@ -661,6 +661,9 @@
               },
               {
                 "TagName": "Plugin.Playlist.Tournament"
+              },
+              {
+                "TagName": "Athena.MapDiscoverability.Disable"
               }
             ]
           },
@@ -11772,18 +11775,18 @@
       },
       "Playlist_ShowdownTournament_RC_DashBerryDuo_NoFill": {
         "meta": {
-          "revision": 2,
+          "revision": 3,
           "headRevision": 3,
-          "revisedAt": "2025-09-21T19:19:34.667Z",
-          "promotion": 83,
-          "promotedAt": "2025-09-21T20:58:14.073Z"
+          "revisedAt": "2025-09-22T16:52:30.594Z",
+          "promotion": 85,
+          "promotedAt": "2025-09-22T17:01:33.740Z"
         },
         "assetData": {
           "bOwnerFilterDestructedBuildingsInGrid": false,
           "bDisplayRespawnWidget": false,
           "LootLevel": "3",
           "bRequireCrossplayEnabled": true,
-          "ForceKickAfterDeathMode": "Disabled",
+          "ForceKickAfterDeathMode": "KickAll",
           "bRequirePickaxeInStartingInventory": true,
           "bRewardsAllowXPProgression": true,
           "MmrThresholdForPrioritySession": "0",
@@ -11850,57 +11853,7 @@
           "ForceOnlyBotsThreshold": "-1",
           "BracketBalanceMergeInterval": "",
           "ServerMetricsEventFrequency": "60.000000",
-          "FillRateTable": [
-            {
-              "MinFillPct": "0.500000",
-              "MinMmr": "0",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "0.600000",
-              "MaxMmr": "400"
-            },
-            {
-              "MinFillPct": "0.600000",
-              "MinMmr": "401",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "0.700000",
-              "MaxMmr": "600"
-            },
-            {
-              "MinFillPct": "0.700000",
-              "MinMmr": "601",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "0.800000",
-              "MaxMmr": "800"
-            },
-            {
-              "MinFillPct": "0.800000",
-              "MinMmr": "801",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "0.900000",
-              "MaxMmr": "1000"
-            },
-            {
-              "MinFillPct": "0.800000",
-              "MinMmr": "1001",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "1.000000",
-              "MaxMmr": "1200"
-            },
-            {
-              "MinFillPct": "0.900000",
-              "MinMmr": "1201",
-              "MaxPriority": "60.000000",
-              "MaxFillPct": "1.000000",
-              "MaxMmr": "1400"
-            },
-            {
-              "MinFillPct": "0.900000",
-              "MinMmr": "1401",
-              "MaxPriority": "119.000000",
-              "MaxFillPct": "1.000000",
-              "MaxMmr": "2000"
-            }
-          ],
+          "FillRateTable": [],
           "bEnableCustomProximityChatPriorityList": false,
           "bShouldFillWhenNoSquadFillOption": false,
           "LastStepPushAircraftCenterLine_Direction": "0.000000",
@@ -11933,7 +11886,7 @@
           "AirCraftBehavior": "Default",
           "bUseCustomAircraftPathSelection": false,
           "bDrawCreativeDynamicIslands": false,
-          "MaximumAspectRatio": "0.000000",
+          "MaximumAspectRatio": "1.78",
           "bShowTeamSelectButton": false,
           "CurieManagerConfigOverrides": [],
           "bCheckSquadFillMapForAvailableSlotsInBackfill": true,
@@ -11951,7 +11904,7 @@
           "bUsePlayerRating": true,
           "RichPresenceAssetName": "duos",
           "bUseLocalizationService": false,
-          "CompetitivePointClamp": "100",
+          "CompetitivePointClamp": "9999",
           "MinBracketSize": "25",
           "GameType": "BlastBerry",
           "WinConditionPlayersRemaining": "1",
@@ -11967,11 +11920,11 @@
             "/Game/Athena/Playlists/Showdown/Siphon/GameplayMod_Siphon.GameplayMod_Siphon"
           ],
           "bRewardForRevivingTeammates": false,
-          "MaxSquads": "-1",
+          "MaxSquads": "40",
           "bIsTournament": true,
           "RewardsPlacementThreshold": "5",
           "MaxTeamSize": "2",
-          "Strategy": "BattleRoyaleStrategy_Skill",
+          "Strategy": "BattleRoyaleStrategy_Showdown",
           "bForceLTMLoadingScreenBackground": false,
           "FriendlyFireType": "Off",
           "bUseSameDirectionForOpposingAircraft": false,
@@ -11982,8 +11935,8 @@
           "LootTierData": "/BlastBerryLoot/DataTables/BlastBerryComposite_LT.BlastBerryComposite_LT",
           "RankScalingMinDelta": "-500.000000",
           "ReplayChunkTimeSeconds": "0.000000",
-          "bShouldErrorOnAdditionalContentFailure": true,
-          "ForceKickAfterDeathTime": "0.000000",
+          "bShouldErrorOnAdditionalContentFailure": false,
+          "ForceKickAfterDeathTime": "60",
           "bAllowEditingEnemyWalls": false,
           "JoinInProgressMatchType": {
             "Category": "Game",
@@ -11998,7 +11951,7 @@
           "LootPackages": "/BlastBerryLoot/DataTables/BlastBerryComposite_LP.BlastBerryComposite_LP",
           "AircraftPathMidpointSelectionRadiusMin": "20000.000000",
           "MaxPlayers": "40",
-          "bAllowedInLeto": true,
+          "bAllowedInLeto": false,
           "BotFillMMRCutoff": "-1",
           "GameFeaturePluginURLsToLoad": [],
           "bDisable_ReportAPlayerReason_TeamingUpWithEnemies_WhileInGame": false,
@@ -12017,7 +11970,7 @@
           "ProximityChatPriorityListProvider": "",
           "bIsDefaultPlaylist": true,
           "MapScaleOverride": "0.000000",
-          "bAllowInGameMatchMaking": true,
+          "bAllowInGameMatchMaking": false,
           "MaxTeamScoreAllowedForBackfill": "0",
           "bOverrideMaxPlayers": true,
           "WinConditionType": "MutatorControlledChinaSupported",
@@ -12084,6 +12037,9 @@
               },
               {
                 "TagName": "Athena.Playlist.DashBerry"
+              },
+              {
+                "TagName": "Athena.MapDiscoverability.Disable"
               }
             ]
           },
@@ -12094,7 +12050,7 @@
           "bUnderfillMatchmaking": false,
           "bRestrictSquadFillToSoloPlayers": false,
           "NonRenderedCharacterAnimationScale": "1.000000",
-          "bEnforceFullSquadInUI": false,
+          "bEnforceFullSquadInUI": true,
           "MinBracketPriority": "0.000000",
           "bPreloadAthenaMapsForMatchmaking": true,
           "primaryAssetId": "FortPlaylistAthena:Playlist_ShowdownTournament_RC_DashBerryDuo_NoFill",
