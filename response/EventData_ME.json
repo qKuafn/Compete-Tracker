@@ -4325,6 +4325,49 @@
         ]
       }
     ],
+    "PayoutTable_ReloadQuickCup": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 100,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 200,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 400,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 300,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 600,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S37_DuosDivisionalCup_Division1_Week1Day2_ME": [
       {
         "scoringType": "value",
@@ -4686,68 +4729,6 @@
           }
         ],
         "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ME_Week2_cumulative"
-      }
-    ],
-    "PayoutTable_ReloadQuickCup": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 100,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 200,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 200,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 400,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 300,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 600,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "epicgames_S37_SoloSeriesCup_ME_series": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 100,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_SoloSeries_Final_ME",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
       }
     ],
     "S37_ConsoleDuosCashCups_Event1Round1_ME": [
@@ -19963,7 +19944,7 @@
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "series",
       "leaderboardInstanceIdFormat": "${eventId}_series",
-      "maxSessionHistorySize": 50,
+      "maxSessionHistorySize": 70,
       "useIndividualScores": false,
       "tiebreakerFormula": {
         "basePointsBits": 53,
@@ -19972,10 +19953,6 @@
       "scoringRuleSetId": "EmptyScoringRules",
       "clampsToZero": true,
       "onlyScoreTopN": 4,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${eventId}_series",
-        "payoutDate": "2025-10-19T06:00:00Z"
-      },
       "hidePlayerScores": false,
       "requiredPlayerListings": []
     },
@@ -20955,7 +20932,6 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ME:S37_RankedCupReloadDuos_Event18_ME_diamond": "epicgames_S37_RankedCupReloadDuos_ME",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ME:S37_RankedCupReloadDuos_Event16_ME_elite": "epicgames_S37_RankedCupReloadDuos_ME",
     "Fortnite:epicgames_S37_RankedCupSolo_ME:S37_RankedCupSolo_Event7_ME_gold": "epicgames_S37_RankedCupSolo_ME",
-    "Fortnite:series:epicgames_S37_SoloSeriesCup_ME_series": "epicgames_S37_SoloSeriesCup_ME_series",
     "Fortnite:epicgames_S37_RankedCupSolo_ME:S37_RankedCupSolo_Event18_ME_platinum": "epicgames_S37_RankedCupSolo_ME",
     "Fortnite:epicgames_S37_RankedCupDuos_ME:S37_RankedCupDuos_Event2_ME_diamond": "epicgames_S37_RankedCupDuos_ME",
     "Fortnite:epicgames_S37_RankedCupSolo_ME:S37_RankedCupSolo_Event11_ME_elite": "epicgames_S37_RankedCupSolo_ME",
