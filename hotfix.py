@@ -151,112 +151,116 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
 
     file_data_cache = {}
 
-    for (changed_path, row, key), change in merged.items():
-        print(f"    [INF] 解析対象 : path={changed_path}, row={row}")
-        added = change["追加"]
-        removed = change["削除"]
-        if added:
-            origin_row = added.get("origin_row")
-        elif removed:
-            origin_row = removed.get("origin_row")
-        try:
-            weapon = ""
-            weapon_path = ""
-            image_path = ""
-            default_weight = ""
-            # === 戦利品更新の場合、武器名の取得・武器画像パスの取得 ===
-            if "LootPackages" in changed_path:
+    try:
+        for (changed_path, row, key), change in merged.items():
+            print(f"    [INF] 解析対象 : path={changed_path}, row={row}")
+            added = change["追加"]
+            removed = change["削除"]
+            if added:
+                origin_row = added.get("origin_row")
+            elif removed:
+                origin_row = removed.get("origin_row")
+            try:
+                weapon = ""
+                weapon_path = ""
+                image_path = ""
+                default_weight = ""
+                # === 戦利品更新の場合、武器名の取得・武器画像パスの取得 ===
+                if "LootPackages" in changed_path:
 
-                if not config.loc_data:
-                    config.loc_data = await get_loc_list()
-                    print(f"    [INF] ⭕️ localization 取得完了（{len(config.loc_data)}件）")
+                    if not config.loc_data:
+                        config.loc_data = await get_loc_list()
+                        print(f"    [INF] ⭕️ localization 取得完了（{len(config.loc_data)}件）")
 
-                if changed_path not in file_data_cache:
-                    file_data = fetch_export_data(changed_path)
-                    file_data_cache[changed_path] = file_data[0].get("Rows", {}) if file_data else {}
-                    row_data = file_data_cache[changed_path].get(f"{row}", {})
-                else:
-                    row_data = file_data_cache[changed_path].get(f"{row}", {})
-
-                # === 競技のLPにデータがない場合、カジュアルから取得 (AddRowの事前対応) ===
-                if not row_data and "/LootCurrentSeason/DataTables/Comp/LootCurrentSeasonLootPackages_Client_comp" in changed_path:
-                    fallback_path = "/LootCurrentSeason/DataTables/LootCurrentSeasonLootPackages_Client"
-                    if fallback_path not in file_data_cache:
-                        file_data = fetch_export_data(fallback_path)
-                        file_data_cache[fallback_path] = file_data[0].get("Rows", {}) if file_data else {}
-                    row_data = file_data_cache[fallback_path].get(f"{row}", {})
-
-                try:
-                    new_lines = new_data.splitlines()
-                    for line in new_lines:
-                        if f"{changed_path};RowUpdate;{row};ItemDefinition;" in line:
-                            weapon_path = line.split(";")[-1]
-                    if not weapon_path:
-                        weapon_path = (row_data.get("ItemDefinition", {}).get("AssetPathName", ""))
-                    wid = weapon_path.split('/')[-1].split('.')[0]
-                    weapon_data = fetch_export_data(weapon_path)
-                except Exception as e:
-                    print(f"    [ERR] 🔴 武器のパス取得に失敗 : {e}")
-                    weapon_data = []
-
-                try:
-                    if weapon_data:
-                        weapon_name_key = weapon_data[0].get("Properties", {}).get("ItemName", {}).get("key", "不明")
-                        weapon_name = config.loc_data.get(weapon_name_key, "不明")
+                    if changed_path not in file_data_cache:
+                        file_data = fetch_export_data(changed_path)
+                        file_data_cache[changed_path] = file_data[0].get("Rows", {}) if file_data else {}
+                        row_data = file_data_cache[changed_path].get(f"{row}", {})
                     else:
+                        row_data = file_data_cache[changed_path].get(f"{row}", {})
+
+                    # === 競技のLPにデータがない場合、カジュアルから取得 (AddRowの事前対応) ===
+                    if not row_data and "/LootCurrentSeason/DataTables/Comp/LootCurrentSeasonLootPackages_Client_comp" in changed_path:
+                        fallback_path = "/LootCurrentSeason/DataTables/LootCurrentSeasonLootPackages_Client"
+                        if fallback_path not in file_data_cache:
+                            file_data = fetch_export_data(fallback_path)
+                            file_data_cache[fallback_path] = file_data[0].get("Rows", {}) if file_data else {}
+                        row_data = file_data_cache[fallback_path].get(f"{row}", {})
+
+                    try:
+                        new_lines = new_data.splitlines()
+                        for line in new_lines:
+                            if f"{changed_path};RowUpdate;{row};ItemDefinition;" in line:
+                                weapon_path = line.split(";")[-1]
+                        if not weapon_path:
+                            weapon_path = (row_data.get("ItemDefinition", {}).get("AssetPathName", ""))
+                        wid = weapon_path.split('/')[-1].split('.')[0]
+                        weapon_data = fetch_export_data(weapon_path)
+                    except Exception as e:
+                        print(f"    [ERR] 🔴 武器のパス取得に失敗 : {e}")
+                        weapon_data = []
+
+                    try:
+                        if weapon_data:
+                            weapon_name_key = weapon_data[0].get("Properties", {}).get("ItemName", {}).get("key", "不明")
+                            weapon_name = config.loc_data.get(weapon_name_key, "不明")
+                        else:
+                            weapon_name = ""
+                    except Exception as e:
+                        print(f"    [ERR] 🔴 武器名の取得に失敗 : {e}")
                         weapon_name = ""
-                except Exception as e:
-                    print(f"    [ERR] 🔴 武器名の取得に失敗 : {e}")
-                    weapon_name = ""
 
-                if weapon_data:
-                    rarity_data = weapon_data[0].get("Properties", {}).get("Rarity", "Uncommon")
-                    rarity = "不明"
-                    if "Common" in rarity_data:
-                        rarity = "白"
-                    elif "Uncommon" in rarity_data:
-                        rarity = "緑"
-                    elif "Rare" in rarity_data:
-                        rarity = "青"
-                    elif "Epic" in rarity_data:
-                        rarity = "紫"
-                    elif "Legendary" in rarity_data:
-                        rarity = "金"
-                    elif "Mythic" in rarity_data:
-                        rarity = "ミシック"
-                    elif "Transcendent" in rarity_data:
-                        rarity = "エキゾチック"
-                    weapon = f"{weapon_name} ({rarity})"
-                else:
-                    weapon = ""
+                    if weapon_data:
+                        rarity_data = weapon_data[0].get("Properties", {}).get("Rarity", "Uncommon")
+                        rarity = "不明"
+                        if "Common" in rarity_data:
+                            rarity = "白"
+                        elif "Uncommon" in rarity_data:
+                            rarity = "緑"
+                        elif "Rare" in rarity_data:
+                            rarity = "青"
+                        elif "Epic" in rarity_data:
+                            rarity = "紫"
+                        elif "Legendary" in rarity_data:
+                            rarity = "金"
+                        elif "Mythic" in rarity_data:
+                            rarity = "ミシック"
+                        elif "Transcendent" in rarity_data:
+                            rarity = "エキゾチック"
+                        weapon = f"{weapon_name} ({rarity})"
+                    else:
+                        weapon = ""
 
-                if wid and weapon_name:
-                    sanized_weapon_name = sanitize_filename(weapon_name)
-                    if rarity not in ("ミシック", "エキゾチック"):
-                        image_path = rf"{config.Weap_dir}\{sanized_weapon_name}\{wid}.png"
-                    elif rarity == "ミシック":
-                        image_path = rf"{config.Weap_dir}\ミシック\{sanized_weapon_name}.png"
-                    elif rarity == "エキゾチック":
-                        image_path = rf"{config.Weap_dir}\エキゾチック\{sanized_weapon_name}.png"
-                else:
-                    image_path = ""
+                    if wid and weapon_name:
+                        sanized_weapon_name = sanitize_filename(weapon_name)
+                        if rarity not in ("ミシック", "エキゾチック"):
+                            image_path = rf"{config.Weap_dir}\{sanized_weapon_name}\{wid}.png"
+                        elif rarity == "ミシック":
+                            image_path = rf"{config.Weap_dir}\ミシック\{sanized_weapon_name}.png"
+                        elif rarity == "エキゾチック":
+                            image_path = rf"{config.Weap_dir}\エキゾチック\{sanized_weapon_name}.png"
+                    else:
+                        image_path = ""
 
-            # === DataTavleの更新は、Rows.row
-            elif "DataTable=" in origin_row:
-                if changed_path not in file_data_cache:
-                    file_data = fetch_export_data(changed_path)
-                    file_data_cache[changed_path] = file_data[0].get("Rows", {}) if file_data else {}
-                row_data = file_data_cache[changed_path].get(f"{row}", {})
+                # === DataTavleの更新は、Rows.row
+                elif "DataTable=" in origin_row:
+                    if changed_path not in file_data_cache:
+                        file_data = fetch_export_data(changed_path)
+                        file_data_cache[changed_path] = file_data[0].get("Rows", {}) if file_data else {}
+                    row_data = file_data_cache[changed_path].get(f"{row}", {})
 
-            # CurveTableの更新は、Rows.row.Keys内に "Time": と "Value": がある
-            elif "CurveTable=" in origin_row:
-                if changed_path not in file_data_cache:
-                    export_data = fetch_export_data(changed_path)
-                    file_data_cache[changed_path] = export_data[0].get("Rows", {}) if export_data else {}
-                row_data = file_data_cache[changed_path].get(f"{row}", {}).get("Keys", [])
+                # CurveTableの更新は、Rows.row.Keys内に "Time": と "Value": がある
+                elif "CurveTable=" in origin_row:
+                    if changed_path not in file_data_cache:
+                        export_data = fetch_export_data(changed_path)
+                        file_data_cache[changed_path] = export_data[0].get("Rows", {}) if export_data else {}
+                    row_data = file_data_cache[changed_path].get(f"{row}", {}).get("Keys", [])
 
-        except Exception as e:
-            print(f"    [ERR] 🔴 その他データ取得エラー : {e}")
+            except Exception as e:
+                print (f"    [ERR] 解析に失敗 : {row}")
+
+    except Exception as e:
+        print(f"    [ERR] 🔴 その他データ取得エラー : {e}")
 
         def find_value_by_time(row_data, target_time):
             for item in row_data:
