@@ -3,18 +3,14 @@ from datetime import datetime, timezone
 from copy import deepcopy
 
 from files import load_json
-from tokens import ensure_token
-from get_EventData import fetch_EventData
 from get_WebData import fetch_WebData
 import config
 import config2
 
 Eventtype = "second"
 
-async def format_EventData():
+def format_EventData(EventData):
     print(f"[INF] FormatEventData 処理開始")
-    ensure_token("second")
-    EventData = fetch_EventData(type=Eventtype)
     WebData_ja = fetch_WebData(type=Eventtype)
     WebData_en = fetch_WebData("en", Eventtype)
     sent = set()

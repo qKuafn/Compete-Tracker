@@ -27,8 +27,6 @@ async def main(Actions=False):
             subprocess.run(['git', 'stash'])
             subprocess.run(['git', 'pull'])
             subprocess.run(['git', 'stash', 'pop'])
-    
-    await format_EventData()
 
     await asyncio.gather(*(asyncio.to_thread(fetch_EventData, region) for region in config2.Regions))
 
