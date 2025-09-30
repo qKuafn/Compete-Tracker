@@ -4670,43 +4670,6 @@
         ]
       }
     ],
-    "S37_DuosDivisionalCup_Division1_Week1Day2_OCE": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 0,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "S37_DuosDivisionLock_Division1Week1_OCE",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 50,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_Duos_Division1Week1_Final_OCE",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ],
-        "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_OCE_Week1_cumulative"
-      }
-    ],
     "S37_DuosDivisionalCup_Division3_Event10_OCE": [
       {
         "scoringType": "value",
@@ -6265,6 +6228,79 @@
             ]
           }
         ]
+      }
+    ],
+    "epicgames_S37_BlitzMobileCupWeekly_OCE_OCT": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 5,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_lopexdale",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 650,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_cuchulainndale",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S37_DuosDivisionalCup_Division1_Week1Day2_OCE": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S37_DuosDivisionLock_Division1Week1_OCE",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S37_Duos_Division1Week1_Final_OCE",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ],
+        "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_OCE_Week1_cumulative"
       }
     ],
     "S37_DuosDivisionalCup_Division2_Event7_OCE": [
@@ -8983,7 +9019,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -9021,7 +9057,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -9059,7 +9095,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -9097,7 +9133,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -18588,6 +18624,51 @@
     },
     {
       "gameId": "Fortnite",
+      "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S37_BlitzCups_ScoringRules",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${eventId}_OCT",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    },
+    {
+      "gameId": "Fortnite",
       "leaderboardDefId": "S37_DuosDivisionalCup_DefaultLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -20719,11 +20800,11 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_OCE:S37_RankedCupReloadDuos_Event3_OCE_champion": "epicgames_S37_RankedCupReloadDuos_OCE",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_OCE:S37_RankedCupReloadDuos_Event16_OCE_gold": "epicgames_S37_RankedCupReloadDuos_OCE",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_OCE:S37_RankedCupReloadDuos_Event17_OCE": "epicgames_S37_RankedCupReloadDuos_OCE",
-    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_OCE:S37_BlitzMobileCupWeekly_Event6_OCE": "epicgames_S37_BlitzMobileCupWeekly_OCE",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_OCE:S37_BlitzMobileCupWeekly_Event6_OCE": "epicgames_S37_BlitzMobileCupWeekly_OCE_OCT",
     "Fortnite:epicgames_S37_RankedCupDuos_OCE:S37_RankedCupDuos_Event6_OCE_Silver": "epicgames_S37_RankedCupDuos_OCE",
     "Fortnite:epicgames_S37_RankedCupSolo_OCE:S37_RankedCupSolo_Event9_OCE_Silver": "epicgames_S37_RankedCupSolo_OCE",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_OCE:S37_RankedCupReloadDuos_Event6_OCE_elite": "epicgames_S37_RankedCupReloadDuos_OCE",
-    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_OCE:S37_BlitzMobileCupWeekly_Event9_OCE": "epicgames_S37_BlitzMobileCupWeekly_OCE",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_OCE:S37_BlitzMobileCupWeekly_Event9_OCE": "epicgames_S37_BlitzMobileCupWeekly_OCE_OCT",
     "Fortnite:epicgames_S37_RankedCupSolo_OCE:S37_RankedCupSolo_Event19_OCE_Bronze": "epicgames_S37_RankedCupSolo_OCE",
     "Fortnite:epicgames_S37_RankedCupSolo_OCE:S37_RankedCupSolo_Event10_OCE_champion": "epicgames_S37_RankedCupSolo_OCE",
     "Fortnite:epicgames_S37_RankedCupSolo_OCE:S37_RankedCupSolo_Event18_OCE": "epicgames_S37_RankedCupSolo_OCE",
@@ -20754,7 +20835,7 @@
     "Fortnite:epicgames_S37_SoloSeriesCup_OCE:S37_SoloSeriesCup_Event3_OCE": "S37_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_OCE:S37_BlitzMobileCupWeekly_Event2_OCE": "epicgames_S37_BlitzMobileCupWeekly_OCE",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_OCE:S37_DuosDivisionalCup_Division1_Week5Day1_OCE": "S37_DuosDivisionalCup_Division1_Week5Day1_OCE",
-    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_OCE:S37_BlitzMobileCupWeekly_Event7_OCE": "epicgames_S37_BlitzMobileCupWeekly_OCE",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_OCE:S37_BlitzMobileCupWeekly_Event7_OCE": "epicgames_S37_BlitzMobileCupWeekly_OCE_OCT",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_OCE:S37_RankedCupReloadDuos_Event6_OCE_champion": "epicgames_S37_RankedCupReloadDuos_OCE",
     "Fortnite:epicgames_S37_RankedCupSolo_OCE:S37_RankedCupSolo_Event19_OCE_gold": "epicgames_S37_RankedCupSolo_OCE",
     "Fortnite:epicgames_S37_RankedCupDuos_OCE:S37_RankedCupDuos_Event8_OCE_platinum": "epicgames_S37_RankedCupDuos_OCE",
@@ -21048,7 +21129,7 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_OCE:S37_RankedCupReloadDuos_Event18_OCE_Silver": "epicgames_S37_RankedCupReloadDuos_OCE",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_OCE:S37_RankedCupReloadDuos_Event6_OCE_diamond": "epicgames_S37_RankedCupReloadDuos_OCE",
     "Fortnite:epicgames_S37_ReloadQuickCup_OCE:S37_ReloadQuickCup_Event8Round3_OCE": "PayoutTable_ReloadQuickCup",
-    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_OCE:S37_BlitzMobileCupWeekly_Event8_OCE": "epicgames_S37_BlitzMobileCupWeekly_OCE",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_OCE:S37_BlitzMobileCupWeekly_Event8_OCE": "epicgames_S37_BlitzMobileCupWeekly_OCE_OCT",
     "Fortnite:epicgames_S37_RankedCupSolo_OCE:S37_RankedCupSolo_Event14_OCE_champion": "epicgames_S37_RankedCupSolo_OCE",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_OCE:S37_RankedCupReloadDuos_Event1_OCE": "epicgames_S37_RankedCupReloadDuos_OCE",
     "Fortnite:epicgames_S37_RankedCupSolo_OCE:S37_RankedCupSolo_Event1_OCE_Bronze": "epicgames_S37_RankedCupSolo_OCE",

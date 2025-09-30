@@ -7912,6 +7912,42 @@
         ]
       }
     ],
+    "epicgames_S37_BlitzMobileCupWeekly_EU_OCT": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 5,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_lopexdale",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 3450,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_cuchulainndale",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S37_DuosDivisionalCup_Division2_Event1_EU": [
       {
         "scoringType": "value",
@@ -11049,7 +11085,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -11087,7 +11123,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -11125,7 +11161,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -11163,7 +11199,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -22630,6 +22666,51 @@
     },
     {
       "gameId": "Fortnite",
+      "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S37_BlitzCups_ScoringRules",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${eventId}_OCT",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    },
+    {
+      "gameId": "Fortnite",
       "leaderboardDefId": "S37_DuosDivisionalCup_DefaultLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -25017,7 +25098,7 @@
     "Fortnite:epicgames_S37_RankedCupSolo_EU:S37_RankedCupSolo_Event14_EU": "epicgames_S37_RankedCupSolo_EU",
     "Fortnite:epicgames_S37_FrenchWeekly_EU:S37_FrenchWeekly_Event5_EU_elite": "epicgames_S37_FrenchWeekly_EU",
     "Fortnite:epicgames_S37_PerformanceEvaluationDuos_EU:S37_PerformanceEvaluationDuos_Event10Round1_EU": "S37_PerformanceEvaluationDuos_Event10Round1_EU",
-    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_EU:S37_BlitzMobileCupWeekly_Event6_EU": "epicgames_S37_BlitzMobileCupWeekly_EU",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_EU:S37_BlitzMobileCupWeekly_Event6_EU": "epicgames_S37_BlitzMobileCupWeekly_EU_OCT",
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_EU:S37_BlitzMobileCupWeekly_Event4_EU": "epicgames_S37_BlitzMobileCupWeekly_EU",
     "Fortnite:epicgames_S37_RankedCupSolo_EU:S37_RankedCupSolo_Event16_EU_diamond": "epicgames_S37_RankedCupSolo_EU",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division3_EU:S37_DuosDivisionalCup_Division3_Event12_EU": "S37_DuosDivisionalCup_Division3_Event12_EU",
@@ -25037,7 +25118,7 @@
     "Fortnite:epicgames_S37_PerformanceEvaluationDuos_EU:S37_PerformanceEvaluationDuos_Event11Round2_EU": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S37_RankedCupDuos_EU:S37_RankedCupDuos_Event7_EU_unreal": "epicgames_S37_RankedCupDuos_EU",
     "Fortnite:epicgames_S37_RankedCupDuos_EU:S37_RankedCupDuos_Event9_EU_Silver": "epicgames_S37_RankedCupDuos_EU",
-    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_EU:S37_BlitzMobileCupWeekly_Event9_EU": "epicgames_S37_BlitzMobileCupWeekly_EU",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_EU:S37_BlitzMobileCupWeekly_Event9_EU": "epicgames_S37_BlitzMobileCupWeekly_EU_OCT",
     "Fortnite:epicgames_S37_FrenchWeekly_EU:S37_FrenchWeekly_Event3_EU_gold": "epicgames_S37_FrenchWeekly_EU",
     "Fortnite:epicgames_S37_RankedCupDuos_EU:S37_RankedCupDuos_Event10_EU_unreal": "epicgames_S37_RankedCupDuos_EU",
     "Fortnite:epicgames_S37_RankedCupDuos_EU:S37_RankedCupDuos_Event10_EU_platinum": "epicgames_S37_RankedCupDuos_EU",
@@ -25290,7 +25371,7 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_EU:S37_RankedCupReloadDuos_Event8_EU_platinum": "epicgames_S37_RankedCupReloadDuos_EU",
     "Fortnite:epicgames_S37_RankedCupSolo_EU:S37_RankedCupSolo_Event7_EU": "epicgames_S37_RankedCupSolo_EU",
     "Fortnite:epicgames_S37_ConsoleDuosCashCups_EU:S37_ConsoleDuosCashCups_Event2Round1_EU": "S37_ConsoleDuosCashCups_Event2Round1_EU",
-    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_EU:S37_BlitzMobileCupWeekly_Event7_EU": "epicgames_S37_BlitzMobileCupWeekly_EU",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_EU:S37_BlitzMobileCupWeekly_Event7_EU": "epicgames_S37_BlitzMobileCupWeekly_EU_OCT",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division4_EU:S37_DuosDivisionalCup_Division4_Event5_EU": "S37_DuosDivisionalCup_Division4_Event5_EU",
     "Fortnite:epicgames_S37_RankedCupDuos_EU:S37_RankedCupDuos_Event2_EU_gold": "epicgames_S37_RankedCupDuos_EU",
     "Fortnite:epicgames_S37_RankedCupSolo_EU:S37_RankedCupSolo_Event7_EU_diamond": "epicgames_S37_RankedCupSolo_EU",
@@ -25433,7 +25514,7 @@
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division5_EU:S37_DuosDivisionalCup_Division5_Event9_EU": "S37_DuosDivisionalCup_Division5_Event9_EU",
     "Fortnite:epicgames_S37_RankedCupSolo_EU:S37_RankedCupSolo_Event20_EU": "epicgames_S37_RankedCupSolo_EU",
     "Fortnite:epicgames_S37_RankedCupDuos_EU:S37_RankedCupDuos_Event4_EU_Bronze": "epicgames_S37_RankedCupDuos_EU",
-    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_EU:S37_BlitzMobileCupWeekly_Event8_EU": "epicgames_S37_BlitzMobileCupWeekly_EU",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_EU:S37_BlitzMobileCupWeekly_Event8_EU": "epicgames_S37_BlitzMobileCupWeekly_EU_OCT",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division2_EU:S37_DuosDivisionalCup_Division2_Event8_EU": "S37_DuosDivisionalCup_Division2_Event8_EU",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division3_EU:S37_DuosDivisionalCup_Division3_Event7_EU": "S37_DuosDivisionalCup_Division3_Event7_EU",
     "Fortnite:epicgames_S37_RankedCupSolo_EU:S37_RankedCupSolo_Event5_EU": "epicgames_S37_RankedCupSolo_EU",
