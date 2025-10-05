@@ -480,6 +480,75 @@
         ]
       }
     ],
+    "ScoringRules_RankedCupDuosReload_Elite": [
+      {
+        "trackedStat": "ELITE_PLACEMENT_STAT_INDEX",
+        "matchRule": "lte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 2,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 3,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 4,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 5,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 6,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 7,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 8,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 9,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 10,
+            "pointsEarned": 1,
+            "multiplicative": false
+          }
+        ]
+      },
+      {
+        "trackedStat": "ELITE_TEAM_ELIMS_STAT_INDEX",
+        "matchRule": "gte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 1,
+            "multiplicative": true
+          }
+        ]
+      }
+    ],
     "ScoringRules_RankedCupSolo_Gold_v2": [
       {
         "trackedStat": "GOLD_PLACEMENT_STAT_INDEX",
@@ -2240,144 +2309,6 @@
           {
             "keyValue": 1,
             "pointsEarned": 2,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
-    "S37_EarlyAccessCup_ScoringRules": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 2,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 3,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 4,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 5,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 6,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 7,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 8,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 9,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 10,
-            "pointsEarned": 1,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 1,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
-    "ScoringRules_RankedCupDuosReload_Elite": [
-      {
-        "trackedStat": "ELITE_PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 2,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 3,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 4,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 5,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 6,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 7,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 8,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 9,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 10,
-            "pointsEarned": 1,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "ELITE_TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 1,
             "multiplicative": true
           }
         ]
@@ -4375,6 +4306,49 @@
     ]
   },
   "payoutTables": {
+    "PayoutTable_ReloadQuickCup": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 100,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 200,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 400,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 300,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 600,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S37_RankedCupReloadDuos_ASIA": [
       {
         "scoringType": "value",
@@ -4972,85 +4946,6 @@
                 "rewardType": "token",
                 "rewardMode": "standard",
                 "value": "S37_ReloadQuickCup_Event1Group1Round2_ASIA",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "PayoutTable_ReloadQuickCup": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 100,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 200,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 200,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 400,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 300,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 600,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "epicgames_S37_EarlyAccessCup_ASIA": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 75,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:character_triplebarker",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "percentile",
-        "ranks": [
-          {
-            "threshold": 0.25,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_EarlyAccess_Final",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -11741,133 +11636,6 @@
     },
     {
       "gameId": "Fortnite",
-      "eventId": "epicgames_S37_EarlyAccessCup_ASIA",
-      "beginTime": "2025-10-03T09:00:00Z",
-      "endTime": "2025-10-05T07:30:00Z",
-      "displayDataId": "s37_earlyaccesscups",
-      "eventGroup": "Season37_EarlyAccessCup",
-      "announcementTime": "2025-09-27T16:00:00Z",
-      "regions": [
-        "ASIA"
-      ],
-      "regionMappings": {
-        "ASIA": "ASIACOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "tournamentType": "ShopCup",
-        "webId": "S37_EarlyAccessCup",
-        "minimumAccountLevel": 50,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S37_EarlyAccess_Round1_ASIA",
-          "eventTemplateId": "EventTemplate_S37_EarlyAccessCup",
-          "countdownBeginTime": "2025-10-03T07:00:00Z",
-          "beginTime": "2025-10-03T09:00:00Z",
-          "endTime": "2025-10-03T11:30:00Z",
-          "round": 0,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_earlyaccess_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_EarlyAccessCup_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_EarlyAccessCup_Round2_ASIA",
-          "eventTemplateId": "EventTemplate_S37_EarlyAccessCup",
-          "countdownBeginTime": "2025-10-05T03:00:00Z",
-          "beginTime": "2025-10-05T05:00:00Z",
-          "endTime": "2025-10-05T07:30:00Z",
-          "round": 0,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_earlyaccess_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_EarlyAccessCup_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s37_earlyaccesscup_asia"
-      }
-    },
-    {
-      "gameId": "Fortnite",
       "eventId": "epicgames_S37_OGCups_ZB_ASIA",
       "beginTime": "2025-08-17T05:00:00Z",
       "endTime": "2025-10-26T08:00:00Z",
@@ -17365,6 +17133,43 @@
   ],
   "templates": [
     {
+      "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_CR",
+      "matchCap": 3,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_ReloadQuickCupsRound1",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_FigmentSquad",
       "matchCap": 10,
       "tiebreakerFormula": {
@@ -17692,80 +17497,6 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_S37_DuosDivisionalCup_NewFinal",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_CR",
-      "matchCap": 3,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_ReloadQuickCupsRound1",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_CR",
-      "matchCap": 10,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S37_EarlyAccessCup",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -18703,51 +18434,6 @@
       },
       "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
       "clampsToZero": true,
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": []
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "S37_EarlyAccessCup_DefaultLeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S37_EarlyAccessCup_ScoringRules",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${eventId}",
-        "payoutDate": "windowEnd+PT24M"
-      },
       "hidePlayerScores": false,
       "percentileAccuracy": 1,
       "requiredPlayerListings": []
@@ -20410,7 +20096,6 @@
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event1_ASIA_Silver": "ScoringRules_RankedCupSolo_Silver_v2",
     "Fortnite:epicgames_S37_RankedCupDuos_ASIA:S37_RankedCupDuos_Event6_ASIA_unreal": "ScoringRules_RankedCupDuos_Unreal",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event19_ASIA_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
-    "Fortnite:epicgames_S37_EarlyAccessCup_ASIA:S37_EarlyAccess_Round1_ASIA": "S37_EarlyAccessCup_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupDuos_ASIA:S37_RankedCupDuos_Event10_ASIA_Bronze": "ScoringRules_RankedCupDuos_Bronze",
     "Fortnite:epicgames_S37_ReloadQuickCup_ASIA:S37_ReloadQuickCup_Event7Group1Round2_ASIA": "ScoringRules_ReloadDuosQuick_R1",
     "Fortnite:epicgames_S37_RankedCupDuos_ASIA:S37_RankedCupDuos_Event8_ASIA_champion": "ScoringRules_RankedCupDuos_Champion",
@@ -20480,6 +20165,7 @@
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event16_ASIA_Silver": "ScoringRules_RankedCupSolo_Silver_v2",
     "Fortnite:epicgames_S37_RankedCupDuos_ASIA:S37_RankedCupDuos_Event3_ASIA_gold": "ScoringRules_RankedCupDuos_Gold",
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event3_ASIA": "EmptyScoringRules",
+    "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event4_ASIA_elite": "ScoringRules_RankedCupSolo_Elite_v2",
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event20_ASIA_unreal": "ScoringRules_RankedCupSolo_Unreal_v2",
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event14_ASIA_platinum": "ScoringRules_RankedCupSolo_Platinum_v2",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event10_ASIA_gold": "ScoringRules_RankedCupDuosReload_Gold",
@@ -20490,8 +20176,6 @@
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event6_ASIA_elite": "ScoringRules_RankedCupSolo_Elite_v2",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_ASIA:S37_DuosDivisionalCup_Division1_Week1Final_ASIA": "ScoringRules_DuosDivisionalCup_Div1Final",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_ASIA:S37_DuosDivisionalCup_Division1_Week6Day1_ASIA": "ScoringRules_DuosDivisionalCup_Div1",
-    "Fortnite:epicgames_S37_EarlyAccessCup_ASIA:S37_EarlyAccessCup_Round2_ASIA": "S37_EarlyAccessCup_ScoringRules",
-    "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event4_ASIA_elite": "ScoringRules_RankedCupSolo_Elite_v2",
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event15_ASIA_Bronze": "ScoringRules_RankedCupSolo_Bronze_v2",
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event1_ASIA_platinum": "ScoringRules_RankedCupSolo_Platinum_v2",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_ASIA:S37_DuosDivisionalCup_Division1_Week2Day1_ASIA": "ScoringRules_DuosDivisionalCup_Div1",
@@ -20952,7 +20636,6 @@
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event1_ASIA_Silver": "epicgames_S37_RankedCupSolo_ASIA",
     "Fortnite:epicgames_S37_RankedCupDuos_ASIA:S37_RankedCupDuos_Event6_ASIA_unreal": "epicgames_S37_RankedCupDuos_ASIA",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event19_ASIA_Bronze": "epicgames_S37_RankedCupReloadDuos_ASIA",
-    "Fortnite:epicgames_S37_EarlyAccessCup_ASIA:S37_EarlyAccess_Round1_ASIA": "epicgames_S37_EarlyAccessCup_ASIA",
     "Fortnite:epicgames_S37_RankedCupDuos_ASIA:S37_RankedCupDuos_Event10_ASIA_Bronze": "epicgames_S37_RankedCupDuos_ASIA",
     "Fortnite:epicgames_S37_ReloadQuickCup_ASIA:S37_ReloadQuickCup_Event7Group1Round2_ASIA": "S37_ReloadQuickCup_Event7Group1Round2_ASIA",
     "Fortnite:epicgames_S37_RankedCupDuos_ASIA:S37_RankedCupDuos_Event8_ASIA_champion": "epicgames_S37_RankedCupDuos_ASIA",
@@ -21015,6 +20698,7 @@
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event16_ASIA_Silver": "epicgames_S37_RankedCupSolo_ASIA",
     "Fortnite:epicgames_S37_RankedCupDuos_ASIA:S37_RankedCupDuos_Event3_ASIA_gold": "epicgames_S37_RankedCupDuos_ASIA",
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event3_ASIA": "epicgames_S37_RankedCupSolo_ASIA",
+    "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event4_ASIA_elite": "epicgames_S37_RankedCupSolo_ASIA",
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event20_ASIA_unreal": "epicgames_S37_RankedCupSolo_ASIA",
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event14_ASIA_platinum": "epicgames_S37_RankedCupSolo_ASIA",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event10_ASIA_gold": "epicgames_S37_RankedCupReloadDuos_ASIA",
@@ -21025,8 +20709,6 @@
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event6_ASIA_elite": "epicgames_S37_RankedCupSolo_ASIA",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_ASIA:S37_DuosDivisionalCup_Division1_Week1Final_ASIA": "epicgames_S37_DuosDivisionalCup_Division1_ASIA",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_ASIA:S37_DuosDivisionalCup_Division1_Week6Day1_ASIA": "S37_DuosDivisionalCup_Division1_Week6Day1_ASIA",
-    "Fortnite:epicgames_S37_EarlyAccessCup_ASIA:S37_EarlyAccessCup_Round2_ASIA": "epicgames_S37_EarlyAccessCup_ASIA",
-    "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event4_ASIA_elite": "epicgames_S37_RankedCupSolo_ASIA",
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event15_ASIA_Bronze": "epicgames_S37_RankedCupSolo_ASIA",
     "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event1_ASIA_platinum": "epicgames_S37_RankedCupSolo_ASIA",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_ASIA:S37_DuosDivisionalCup_Division1_Week2Day1_ASIA": "S37_DuosDivisionalCup_Division1_Week2Day1_ASIA",
@@ -21817,9 +21499,6 @@
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division2_ASIA:S37_DuosDivisionalCup_Division2_Event4_ASIA": [
       "Fortnite:epicgames_S37_DuosDivisionalCup_Division2_ASIA:S37_DuosDivisionalCup_Division2_Event4_ASIA"
     ],
-    "Fortnite:epicgames_S37_EarlyAccessCup_ASIA:S37_EarlyAccess_Round1_ASIA": [
-      "Fortnite:epicgames_S37_EarlyAccessCup_ASIA:S37_EarlyAccess_Round1_ASIA"
-    ],
     "Fortnite:epicgames_S37_ConsoleDuosCashCups_ASIA:S37_ConsoleDuosCashCups_Event6Round2_ASIA": [
       "Fortnite:epicgames_S37_ConsoleDuosCashCups_ASIA:S37_ConsoleDuosCashCups_Event6Round2_ASIA"
     ],
@@ -21947,9 +21626,6 @@
       "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event3_ASIA_elite",
       "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event3_ASIA_champion",
       "Fortnite:epicgames_S37_RankedCupSolo_ASIA:S37_RankedCupSolo_Event3_ASIA_unreal"
-    ],
-    "Fortnite:epicgames_S37_EarlyAccessCup_ASIA:S37_EarlyAccessCup_Round2_ASIA": [
-      "Fortnite:epicgames_S37_EarlyAccessCup_ASIA:S37_EarlyAccessCup_Round2_ASIA"
     ],
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_ASIA:S37_DuosDivisionalCup_Division1_Week2Day1_ASIA": [
       "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_ASIA:S37_DuosDivisionalCup_Division1_Week2Day1_ASIA",
