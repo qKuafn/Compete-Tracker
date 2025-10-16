@@ -323,14 +323,22 @@ async def format_EventData():
                 try:
                     first_key = next(iter(new_data[eventWindowId]["ScoringRules"]))
                     payouts_list = new_data[eventWindowId]["ScoringRules"][first_key]["payouts"]
-
-                    for i, payout in enumerate(payouts_list, 1):
+                    for payout in payouts_list:
+                        scoringType = payout.get("scoringType", "")
+                        threshold = payout.get("threshold", "")
+                        value = payout.get("value", "不明")
+                        if scoringType == "value":
+                            desc = f"{threshold}ポイントで{value}獲得"
+                        elif scoringType == "rank":
+                            desc = f"トップ{threshold}で{value}獲得"
+                        else:
+                            desc = f"{value}獲得"
                         json_text = json.dumps(payout, ensure_ascii=False, indent=2)
                         wrapped_text = f"```json\n{json_text}\n```"
-
+                        
                         if len(wrapped_text) > 1024:
                             wrapped_text = f"```json\n{json.dumps(payout, ensure_ascii=False)}\n```"
-
+                            
                         payout_section.append({
                             "name": f"{eventWindowId}",
                             "value": wrapped_text,
