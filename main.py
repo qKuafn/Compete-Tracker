@@ -75,20 +75,18 @@ async def main(Actions=False):
             commit_url = f"https://github.com/qKuafn/Compete-Tracker/commit/{commit_hash}"
 
             if "ASIA" in config.tags or "ja" in config.tags or config.added_Tournaments or config.updated_Tournaments or config.playlist_tags:
-                content = f"## [{', '.join(config.tags)}](<{commit_url}>) <@&1372839358591139840>"
-            else:
-                content = f"## [{', '.join(config.tags)}](<{commit_url}>)"
+                content = f"## [{', '.join(config.tags)}](<{commit_url}>) <@!1256846025298284628>"
 
-            payload = {
-                "username": "GitHub",
-                "content": content
-            }
+                payload = {
+                    "username": "GitHub",
+                    "content": content
+                }
 
-            res = requests.post(config.GitHub_Webhook_URL, json=payload)
-            if res.status_code == 204 or res.status_code == 200:
-                print("[Discord] 通知を送信")
-            if not (res.status_code == 204 or res.status_code == 200):
-                print (f"[Discord] Discord通知失敗 : {res.status_code} {res.text}")
+                res = requests.post(config.GitHub_Webhook_URL, json=payload)
+                if res.status_code == 204 or res.status_code == 200:
+                    print("[Discord] 通知を送信")
+                if not (res.status_code == 204 or res.status_code == 200):
+                    print (f"[Discord] Discord通知失敗 : {res.status_code} {res.text}")
 
             subprocess.run(["git", "push"], check=True)
 
