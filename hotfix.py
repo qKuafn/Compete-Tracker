@@ -451,6 +451,10 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                             "timestamp": datetime.now(config.UTC).isoformat(),
                             "image": {
                                 "url": f"attachment://{filename}"
+                            },
+                            "footer":{
+                                "text": "FNLive",
+                                "icon_url": "https://media.discordapp.net/attachments/1398826721129791509/1398826776544940212/VLtjyUF.png?ex=6886c674&is=688574f4&hm=178dda435ced5653551856f935321e4dcd5de6fde7829046f841ca44343f2d64&=&format=webp&quality=lossless&width=320&height=320"
                             }
                         }
                         payload = {
