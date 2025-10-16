@@ -392,7 +392,7 @@ async def format_EventData():
             }
             embeds = [embed_date, embed_mode, embed_match, embed_token, embed_payout]
             content = (
-                f"-# <@&1372839358591139840><@&1359477859764273193>\n"
+                f"-# <@&1359477859764273193>\n"
                 f"### 🆕 新規追加 : {eventname}\n"
                 f"{image_section}\n"
             )
@@ -434,7 +434,7 @@ async def format_EventData():
                     }
                 embeds.append (embed_changes)
                 content = (
-                    f"-# <@&1372839358591139840><@&1359477859764273193>\n"
+                    f"-# <@&1359477859764273193>\n"
                     f"### 🔄 更新 : {eventname}\n"
                     f"{image_section}\n"
                 )
