@@ -62,7 +62,7 @@ async def main(Actions=False):
             subprocess.run(["git", "config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com"], check=True)
 
             timestampA = datetime.now(config.JST).strftime("%m/%d %H:%M:%S")
-            message = f"更新 : {', '.join(config.tags)} ({timestampA})"
+            message = f"{', '.join(config.tags)} ({timestampA})"
 
             subprocess.run(['git', 'pull'])
 
@@ -75,9 +75,9 @@ async def main(Actions=False):
             commit_url = f"https://github.com/qKuafn/Compete-Tracker/commit/{commit_hash}"
 
             if "ASIA" in config.tags or "ja" in config.tags or config.added_Tournaments or config.updated_Tournaments or config.playlist_tags:
-                content = f"## [更新 : {', '.join(config.tags)}](<{commit_url}>) <@&1372839358591139840>"
+                content = f"## [{', '.join(config.tags)}](<{commit_url}>) <@&1372839358591139840>"
             else:
-                content = f"## [更新 : {', '.join(config.tags)}](<{commit_url}>)"
+                content = f"## [{', '.join(config.tags)}](<{commit_url}>)"
 
             payload = {
                 "username": "GitHub",
