@@ -4474,6 +4474,42 @@
         "scoreId": "cumulative:epicgames_S37_DuosDivisionalCup_Division1_ME_Week1_cumulative"
       }
     ],
+    "S37_HauntedCupWednesday_ME": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_polkaskate",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 250,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_polkaskate",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S37_DuosDivisionalCup_Division2_Event2_ME": [
       {
         "scoringType": "value",
@@ -12014,6 +12050,95 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s37_hauntedcupjason_me"
+      }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S37_HauntedCupWednesday_ME",
+      "beginTime": "2025-10-22T15:00:00Z",
+      "endTime": "2025-10-22T17:30:00Z",
+      "displayDataId": "s37_wednesday",
+      "eventGroup": "S37_HauntedCupWednesday",
+      "announcementTime": "2025-10-07T21:00:00Z",
+      "regions": [
+        "ME"
+      ],
+      "regionMappings": {
+        "ME": "MECOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "IOS",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "Android",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "tournamentType": "ShopCup",
+        "webId": "S37_HauntedCupWednesday",
+        "minimumAccountLevel": 50,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S37_HauntedCupWednesday_ME",
+          "eventTemplateId": "S37_HauntedCup_EventTemplate",
+          "countdownBeginTime": "2025-10-22T13:00:00Z",
+          "beginTime": "2025-10-22T15:00:00Z",
+          "endTime": "2025-10-22T17:30:00Z",
+          "round": 1,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_haunted_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_HauntedCup_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s37_hauntedcupwednesday_me"
       }
     },
     {
@@ -20377,6 +20502,7 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ME:S37_RankedCupReloadDuos_Event9_ME_gold": "ScoringRules_RankedCupDuosReload_Gold",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division3_ME:S37_DuosDivisionalCup_Division3_Event9_ME": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:epicgames_S37_OGCups_BR_ME:S37_OGCup_BR_Event10_ME": "S37_OGCups_ScoringRules",
+    "Fortnite:epicgames_S37_HauntedCupWednesday_ME:S37_HauntedCupWednesday_ME": "S37_HauntedCup_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupDuos_ME:S37_RankedCupDuos_Event9_ME_Bronze": "ScoringRules_RankedCupDuos_Bronze",
     "Fortnite:epicgames_S37_RankedCupDuos_ME:S37_RankedCupDuos_Event3_ME_champion": "ScoringRules_RankedCupDuos_Champion",
     "Fortnite:epicgames_S37_ReloadQuickCup_ME:S37_ReloadQuickCup_Event2Round3_ME": "ScoringRules_VictoryCup",
@@ -20933,6 +21059,7 @@
     "Fortnite:epicgames_S37_ConsoleDuosCashCups_ME:S37_ConsoleDuosCashCups_Event4Round2_ME": "S37_ConsoleDuosCashCups_Round2",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ME:S37_RankedCupReloadDuos_Event9_ME_gold": "epicgames_S37_RankedCupReloadDuos_ME",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division3_ME:S37_DuosDivisionalCup_Division3_Event9_ME": "S37_DuosDivisionalCup_Division3_Event9_ME",
+    "Fortnite:epicgames_S37_HauntedCupWednesday_ME:S37_HauntedCupWednesday_ME": "S37_HauntedCupWednesday_ME",
     "Fortnite:epicgames_S37_RankedCupDuos_ME:S37_RankedCupDuos_Event9_ME_Bronze": "epicgames_S37_RankedCupDuos_ME",
     "Fortnite:epicgames_S37_RankedCupDuos_ME:S37_RankedCupDuos_Event3_ME_champion": "epicgames_S37_RankedCupDuos_ME",
     "Fortnite:epicgames_S37_ReloadQuickCup_ME:S37_ReloadQuickCup_Event2Round3_ME": "PayoutTable_ReloadQuickCup",
@@ -21745,6 +21872,9 @@
     ],
     "Fortnite:epicgames_S37_OGCups_BR_ME:S37_OGCup_BR_Event10_ME": [
       "Fortnite:epicgames_S37_OGCups_BR_ME:S37_OGCup_BR_Event10_ME"
+    ],
+    "Fortnite:epicgames_S37_HauntedCupWednesday_ME:S37_HauntedCupWednesday_ME": [
+      "Fortnite:epicgames_S37_HauntedCupWednesday_ME:S37_HauntedCupWednesday_ME"
     ],
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ME:S37_RankedCupReloadDuos_Event11_ME": [
       "Fortnite:epicgames_S37_RankedCupReloadDuos_ME:S37_RankedCupReloadDuos_Event11_ME",
