@@ -324,20 +324,29 @@ async def format_EventData():
                     first_key = next(iter(new_data[eventWindowId]["ScoringRules"]))
                     payouts_list = new_data[eventWindowId]["ScoringRules"][first_key]["payouts"]
                     for payout in payouts_list:
-                        scoringType = payout.get("scoringType", "")
-                        threshold = payout.get("threshold", "")
+                        scoreId = payout.get("scoreId")
+                        scoringType = payout.get("scoringType")
+                        threshold = payout.get("threshold")
+                        quantity = payout.get("quantity")
                         value = payout.get("value", "不明")
                         if scoringType == "value":
-                            desc = f"{threshold}ポイントで{value}獲得"
+                            desc = f"{threshold}ポイント"
                         elif scoringType == "rank":
-                            desc = f"トップ{threshold}で{value}獲得"
+                            desc = f"トップ{threshold}"
+                        elif scoringType == "percentile":
+                            desc = f"上位{threshold*100}%"
                         else:
-                            desc = f"{value}獲得"
-                        json_text = json.dumps(payout, ensure_ascii=False, indent=2)
+                            desc = f""
+                        payout_text = {
+                            "scoreId": scoreId,
+                            "Description": desc,
+                            "value": f"{quantity}x {value}"
+                        }
+                        json_text = json.dumps(payout_text, ensure_ascii=False, indent=2)
                         wrapped_text = f"```json\n{json_text}\n```"
                         
                         if len(wrapped_text) > 1024:
-                            wrapped_text = f"```json\n{json.dumps(payout, ensure_ascii=False)}\n```"
+                            wrapped_text = f"```json\n{json.dumps(payout_text, ensure_ascii=False)}\n```"
                             
                         payout_section.append({
                             "name": f"{eventWindowId}",
