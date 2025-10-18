@@ -82,5 +82,53 @@
         ]
       }
     }
+  },
+  "S37_HauntedCupJason_Event2_ASIA": {
+    "beginTime_UNIX": 1760756400,
+    "beginTime_JST": "2025-10-18 12:00:00",
+    "endTime_UNIX": 1760765400,
+    "endTime_JST": "2025-10-18 14:30:00",
+    "playlistId": "Playlist_ShowdownTournament_SourSpawnDuos",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:s37_haunted_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S37_HauntedCup_LeaderboardDef": {
+        "scoringRuleSetId": "S37_HauntedCup_ScoringRules",
+        "WindowLocation": "S37_HauntedCupJason_Event2_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:emoticon_gnatgala"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 150,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_gnatgala"
+          }
+        ]
+      }
+    }
   }
 }
