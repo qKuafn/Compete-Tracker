@@ -10125,7 +10125,7 @@
         },
         {
           "eventWindowId": "S37_DuosDivisionalCup_Division1_Week3Final_OCE",
-          "eventTemplateId": "EventTemplate_S37_DuosDivisionalCup_Final",
+          "eventTemplateId": "EventTemplate_S37_DuosDivisionalCup_Final_New",
           "countdownBeginTime": "2025-10-04T06:00:00Z",
           "beginTime": "2025-10-04T08:00:00Z",
           "endTime": "2025-10-04T11:00:00Z",
@@ -17646,6 +17646,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "S37_BlitzCups_EventTemplate",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_Duos",
+      "matchCap": 7,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S37_DuosDivisionalCup_Final_New",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
