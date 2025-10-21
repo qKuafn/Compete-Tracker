@@ -7,7 +7,7 @@
   "loading_screen_image": "未設定",
   "playlist_title_image": "https://cdn2.unrealengine.com/jp-fnbr-37-50-nitemare-comp-in-game-tab-wednesdayaddamshauntedcup-discoverplaylisttile-1920x1080-1920x1080-33b27206e374.jpg",
   "metadata": {
-    "tournamentType": "ShopCup",
+    "tournamentType": "WorkshopCup",
     "webId": "S37_HauntedCupWednesday",
     "minimumAccountLevel": 50,
     "DisqualifyType": "Window",
@@ -35,7 +35,7 @@
     "GFNMobile",
     "Windows"
   ],
-  "S37_HauntedCupWednesday_ASIA": {
+  "S37_HauntedCupWednesday_Event1_ASIA": {
     "beginTime_UNIX": 1761210000,
     "beginTime_JST": "2025-10-23 18:00:00",
     "endTime_UNIX": 1761219000,
@@ -56,9 +56,57 @@
       "Permanent_Tournament_Ban"
     ],
     "ScoringRules": {
-      "S37_HauntedCup_LeaderboardDef": {
+      "S37_HauntedCupWednesday_LeaderboardDef": {
         "scoringRuleSetId": "S37_HauntedCup_ScoringRules",
-        "WindowLocation": "S37_HauntedCupWednesday_ASIA",
+        "WindowLocation": "S37_HauntedCupWednesday_Event1_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:spray_polkaskate"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 150,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_polkaskate"
+          }
+        ]
+      }
+    }
+  },
+  "S37_HauntedCupWednesday_Event2_ASIA": {
+    "beginTime_UNIX": 1761361200,
+    "beginTime_JST": "2025-10-25 12:00:00",
+    "endTime_UNIX": 1761370200,
+    "endTime_JST": "2025-10-25 14:30:00",
+    "playlistId": "Playlist_ShowdownTournament_SourSpawnDuos",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:s37_haunted_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S37_HauntedCupWednesday_LeaderboardDef": {
+        "scoringRuleSetId": "S37_HauntedCup_ScoringRules",
+        "WindowLocation": "S37_HauntedCupWednesday_Event2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
         "onlyScoreTopN": -1,

@@ -4543,6 +4543,42 @@
     ]
   },
   "payoutTables": {
+    "S37_DuosDivisionalCup_Division4_Event8_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S37_DuosDivisionLock_Division4Event8_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S37_Duos_Division3_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "PayoutTable_ReloadQuickCup": [
       {
         "scoringType": "value",
@@ -5024,78 +5060,6 @@
                 "rewardType": "token",
                 "rewardMode": "standard",
                 "value": "S37_ConsoleDuosCashCups_Event4Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_HauntedCupWednesday_NAC": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 8,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:spray_polkaskate",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 500,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:character_polkaskate",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_DuosDivisionalCup_Division4_Event8_NAC": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 0,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "S37_DuosDivisionLock_Division4Event8_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 200,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_Duos_Division3_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -7447,6 +7411,42 @@
                 "value": "S37_Duos_Division4_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "epicgames_S37_HauntedCupWednesday_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_polkaskate",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 500,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_polkaskate",
+                "quantity": 1,
+                "notifiesPlayer": true
               }
             ]
           }
@@ -15233,7 +15233,7 @@
       "gameId": "Fortnite",
       "eventId": "epicgames_S37_HauntedCupWednesday_NAC",
       "beginTime": "2025-10-23T23:00:00Z",
-      "endTime": "2025-10-24T01:30:00Z",
+      "endTime": "2025-10-25T19:30:00Z",
       "displayDataId": "s37_wednesday",
       "eventGroup": "S37_HauntedCupWednesday",
       "announcementTime": "2025-10-08T05:00:00Z",
@@ -15269,7 +15269,7 @@
       ],
       "platformMappings": {},
       "metadata": {
-        "tournamentType": "ShopCup",
+        "tournamentType": "WorkshopCup",
         "webId": "S37_HauntedCupWednesday",
         "minimumAccountLevel": 50,
         "DisqualifyType": "Window",
@@ -15277,7 +15277,7 @@
       },
       "eventWindows": [
         {
-          "eventWindowId": "S37_HauntedCupWednesday_NAC",
+          "eventWindowId": "S37_HauntedCupWednesday_Event1_NAC",
           "eventTemplateId": "S37_HauntedCup_EventTemplate",
           "countdownBeginTime": "2025-10-23T21:00:00Z",
           "beginTime": "2025-10-23T23:00:00Z",
@@ -15295,7 +15295,45 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S37_HauntedCup_LeaderboardDef",
+              "leaderboardDefId": "S37_HauntedCupWednesday_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S37_HauntedCupWednesday_Event2_NAC",
+          "eventTemplateId": "S37_HauntedCup_EventTemplate",
+          "countdownBeginTime": "2025-10-25T15:00:00Z",
+          "beginTime": "2025-10-25T17:00:00Z",
+          "endTime": "2025-10-25T19:30:00Z",
+          "round": 1,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_haunted_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_HauntedCupWednesday_LeaderboardDef",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -21890,51 +21928,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "S37_HauntedCup_LeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S37_HauntedCup_ScoringRules",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT24M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": []
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "Lead_Default",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -22690,6 +22683,51 @@
       "payoutsConfig": {
         "payoutTableIdFormat": "${eventId}",
         "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    },
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "S37_HauntedCupWednesday_LeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S37_HauntedCup_ScoringRules",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${eventId}",
+        "payoutDate": "windowEnd+PT24M"
       },
       "hidePlayerScores": false,
       "percentileAccuracy": 1,
@@ -23553,7 +23591,6 @@
     "Fortnite:epicgames_S37_RankedCupDuos_NAC:S37_RankedCupDuos_Event3_NAC_gold": "ScoringRules_RankedCupDuos_Gold",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division4_NAC:S37_DuosDivisionalCup_Division4_Event3_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S37_RankedCupDuos_NAC:S37_RankedCupDuos_Event3_NAC_elite": "ScoringRules_RankedCupDuos_Elite",
-    "Fortnite:epicgames_S37_HauntedCupWednesday_NAC:S37_HauntedCupWednesday_NAC": "S37_HauntedCup_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division3_NAC:S37_DuosDivisionalCup_Division3_Event4_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S37_RankedCupDuos_NAC:S37_RankedCupDuos_Event1_NAC_gold": "ScoringRules_RankedCupDuos_Gold",
@@ -24020,6 +24057,7 @@
     "Fortnite:epicgames_S37_RankedCupSolo_NAC:S37_RankedCupSolo_Event4_NAC_unreal": "ScoringRules_RankedCupSolo_Unreal_v2",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event9_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S37_PerformanceEvaluationDuos_NAC:S37_PerformanceEvaluationDuos_Event10Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
+    "Fortnite:epicgames_S37_HauntedCupWednesday_NAC:S37_HauntedCupWednesday_Event1_NAC": "S37_HauntedCup_ScoringRules",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division4_NAC:S37_DuosDivisionalCup_Division4_Event5_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S37_RankedCupSolo_NAC:S37_RankedCupSolo_Event6_NAC_diamond": "ScoringRules_RankedCupSolo_Diamond_v2",
     "Fortnite:epicgames_S37_RankedCupSolo_NAC:S37_RankedCupSolo_Event5_NAC_Silver": "ScoringRules_RankedCupSolo_Silver_v2",
@@ -24083,6 +24121,7 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC_elite": "ScoringRules_RankedCupDuosReload_Elite",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division5_NAC:S37_DuosDivisionalCup_Division5_Event7_NAC": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division3_NAC:S37_DuosDivisionalCup_Division3_Event5_NAC": "ScoringRules_DuosDivisionalCup_v2",
+    "Fortnite:epicgames_S37_HauntedCupWednesday_NAC:S37_HauntedCupWednesday_Event2_NAC": "S37_HauntedCup_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupSolo_NAC:S37_RankedCupSolo_Event17_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S37_RankedCupSolo_NAC:S37_RankedCupSolo_Event3_NAC_champion": "ScoringRules_RankedCupSolo_Champion_v2",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
@@ -24159,7 +24198,6 @@
     "Fortnite:epicgames_S37_RankedCupDuos_NAC:S37_RankedCupDuos_Event3_NAC_gold": "epicgames_S37_RankedCupDuos_NAC",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division4_NAC:S37_DuosDivisionalCup_Division4_Event3_NAC": "S37_DuosDivisionalCup_Division4_Event3_NAC",
     "Fortnite:epicgames_S37_RankedCupDuos_NAC:S37_RankedCupDuos_Event3_NAC_elite": "epicgames_S37_RankedCupDuos_NAC",
-    "Fortnite:epicgames_S37_HauntedCupWednesday_NAC:S37_HauntedCupWednesday_NAC": "S37_HauntedCupWednesday_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division3_NAC:S37_DuosDivisionalCup_Division3_Event4_NAC": "S37_DuosDivisionalCup_Division3_Event4_NAC",
     "Fortnite:epicgames_S37_RankedCupDuos_NAC:S37_RankedCupDuos_Event1_NAC_gold": "epicgames_S37_RankedCupDuos_NAC",
@@ -24591,6 +24629,7 @@
     "Fortnite:epicgames_S37_RankedCupSolo_NAC:S37_RankedCupSolo_Event4_NAC_unreal": "epicgames_S37_RankedCupSolo_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event9_NAC": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_PerformanceEvaluationDuos_NAC:S37_PerformanceEvaluationDuos_Event10Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
+    "Fortnite:epicgames_S37_HauntedCupWednesday_NAC:S37_HauntedCupWednesday_Event1_NAC": "epicgames_S37_HauntedCupWednesday_NAC",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division4_NAC:S37_DuosDivisionalCup_Division4_Event5_NAC": "S37_DuosDivisionalCup_Division4_Event5_NAC",
     "Fortnite:epicgames_S37_RankedCupSolo_NAC:S37_RankedCupSolo_Event6_NAC_diamond": "epicgames_S37_RankedCupSolo_NAC",
     "Fortnite:epicgames_S37_RankedCupSolo_NAC:S37_RankedCupSolo_Event5_NAC_Silver": "epicgames_S37_RankedCupSolo_NAC",
@@ -24650,6 +24689,7 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC_elite": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division5_NAC:S37_DuosDivisionalCup_Division5_Event7_NAC": "S37_DuosDivisionalCup_Division5_Event7_NAC",
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division3_NAC:S37_DuosDivisionalCup_Division3_Event5_NAC": "S37_DuosDivisionalCup_Division3_Event5_NAC",
+    "Fortnite:epicgames_S37_HauntedCupWednesday_NAC:S37_HauntedCupWednesday_Event2_NAC": "epicgames_S37_HauntedCupWednesday_NAC",
     "Fortnite:epicgames_S37_RankedCupSolo_NAC:S37_RankedCupSolo_Event17_NAC": "epicgames_S37_RankedCupSolo_NAC",
     "Fortnite:epicgames_S37_RankedCupSolo_NAC:S37_RankedCupSolo_Event3_NAC_champion": "epicgames_S37_RankedCupSolo_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_Bronze": "epicgames_S37_RankedCupReloadDuos_NAC",
@@ -24733,9 +24773,6 @@
     ],
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event6_NAC": [
       "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event6_NAC"
-    ],
-    "Fortnite:epicgames_S37_HauntedCupWednesday_NAC:S37_HauntedCupWednesday_NAC": [
-      "Fortnite:epicgames_S37_HauntedCupWednesday_NAC:S37_HauntedCupWednesday_NAC"
     ],
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC": [
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC",
@@ -25599,6 +25636,9 @@
     "Fortnite:epicgames_S37_PerformanceEvaluationDuos_NAC:S37_PerformanceEvaluationDuos_Event9Round2_NAC": [
       "Fortnite:epicgames_S37_PerformanceEvaluationDuos_NAC:S37_PerformanceEvaluationDuos_Event9Round2_NAC"
     ],
+    "Fortnite:epicgames_S37_HauntedCupWednesday_NAC:S37_HauntedCupWednesday_Event1_NAC": [
+      "Fortnite:epicgames_S37_HauntedCupWednesday_NAC:S37_HauntedCupWednesday_Event1_NAC"
+    ],
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_NAC:S37_DuosDivisionalCup_Division1_Week6Final_NAC": [
       "Fortnite:epicgames_S37_DuosDivisionalCup_Division1_NAC:S37_DuosDivisionalCup_Division1_Week6Final_NAC"
     ],
@@ -25659,6 +25699,9 @@
     ],
     "Fortnite:epicgames_S37_DuosDivisionalCup_Division3_NAC:S37_DuosDivisionalCup_Division3_Event5_NAC": [
       "Fortnite:epicgames_S37_DuosDivisionalCup_Division3_NAC:S37_DuosDivisionalCup_Division3_Event5_NAC"
+    ],
+    "Fortnite:epicgames_S37_HauntedCupWednesday_NAC:S37_HauntedCupWednesday_Event2_NAC": [
+      "Fortnite:epicgames_S37_HauntedCupWednesday_NAC:S37_HauntedCupWednesday_Event2_NAC"
     ],
     "Fortnite:epicgames_S37_RankedCupSolo_NAC:S37_RankedCupSolo_Event17_NAC": [
       "Fortnite:epicgames_S37_RankedCupSolo_NAC:S37_RankedCupSolo_Event17_NAC",
