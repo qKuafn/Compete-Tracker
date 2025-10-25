@@ -389,75 +389,6 @@
         ]
       }
     ],
-    "S37_HauntedCup_ScoringRules": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 2,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 3,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 4,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 5,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 6,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 7,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 8,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 9,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 10,
-            "pointsEarned": 1,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 1,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
     "EmptyScoringRules": [],
     "S37_OGCups_ScoringRules": [
       {
@@ -2343,42 +2274,6 @@
                 "value": "S37_SoloSeriesCup_SeriesLeaderboardDef",
                 "quantity": 0,
                 "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "epicgames_S37_HauntedCupWednesday_ASIA": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 8,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:spray_polkaskate",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 150,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:character_polkaskate",
-                "quantity": 1,
-                "notifiesPlayer": true
               }
             ]
           }
@@ -7161,133 +7056,6 @@
     },
     {
       "gameId": "Fortnite",
-      "eventId": "epicgames_S37_HauntedCupWednesday_ASIA",
-      "beginTime": "2025-10-23T09:00:00Z",
-      "endTime": "2025-10-25T05:30:00Z",
-      "displayDataId": "s37_wednesday",
-      "eventGroup": "S37_HauntedCupWednesday",
-      "announcementTime": "2025-10-07T15:00:00Z",
-      "regions": [
-        "ASIA"
-      ],
-      "regionMappings": {
-        "ASIA": "ASIACOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "tournamentType": "WorkshopCup",
-        "webId": "S37_HauntedCupWednesday",
-        "minimumAccountLevel": 50,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S37_HauntedCupWednesday_Event1_ASIA",
-          "eventTemplateId": "S37_HauntedCup_EventTemplate",
-          "countdownBeginTime": "2025-10-23T07:00:00Z",
-          "beginTime": "2025-10-23T09:00:00Z",
-          "endTime": "2025-10-23T12:30:00Z",
-          "round": 1,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_haunted_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_HauntedCupWednesday_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_HauntedCupWednesday_Event2_ASIA",
-          "eventTemplateId": "S37_HauntedCup_EventTemplate",
-          "countdownBeginTime": "2025-10-25T01:00:00Z",
-          "beginTime": "2025-10-25T03:00:00Z",
-          "endTime": "2025-10-25T05:30:00Z",
-          "round": 1,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_haunted_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_HauntedCupWednesday_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s37_hauntedcupwednesday_asia"
-      }
-    },
-    {
-      "gameId": "Fortnite",
       "eventId": "epicgames_S37_OGCups_ZB_ASIA",
       "beginTime": "2025-08-17T05:00:00Z",
       "endTime": "2025-10-26T08:00:00Z",
@@ -10438,43 +10206,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_SourSpawnDuos",
-      "matchCap": 10,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "S37_HauntedCup_EventTemplate",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
       "matchCap": 10,
       "tiebreakerFormula": {
@@ -11123,51 +10854,6 @@
       "onlyScoreTopN": 1,
       "payoutsConfig": {
         "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT24M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": []
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "S37_HauntedCupWednesday_LeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S37_HauntedCup_ScoringRules",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${eventId}",
         "payoutDate": "windowEnd+PT24M"
       },
       "hidePlayerScores": false,
@@ -11918,7 +11604,6 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event5_ASIA_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
     "Fortnite:epicgames_S37_SoloSeriesCup_ASIA:S37_SoloSeriesCup_Event5_ASIA": "S37_ScoringRules_SoloSeries",
     "Fortnite:epicgames_S37_ConsoleDuosCashCups_ASIA:S37_ConsoleDuosCashCups_Event2Round2_ASIA": "S37_ConsoleDuosCashCups_ScoringRules_Round2",
-    "Fortnite:epicgames_S37_HauntedCupWednesday_ASIA:S37_HauntedCupWednesday_Event2_ASIA": "S37_HauntedCup_ScoringRules",
     "Fortnite:epicgames_S37_OGCups_ZB_ASIA:S37_OGCup_ZB_Event5_ASIA": "S37_OGCups_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event5_ASIA_Silver": "ScoringRules_RankedCupDuosReload_Silver",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event10_ASIA_elite": "ScoringRules_RankedCupDuosReload_Elite",
@@ -12035,10 +11720,9 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event3_ASIA": "EmptyScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event19_ASIA_gold": "ScoringRules_RankedCupDuosReload_Gold",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event15_ASIA_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
+    "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event12_ASIA_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event19_ASIA_platinum": "ScoringRules_RankedCupDuosReload_Platinum",
     "Fortnite:epicgames_S37_OGCups_BR_ASIA:S37_OGCup_BR_Event8_ASIA": "S37_OGCups_ScoringRules",
-    "Fortnite:epicgames_S37_HauntedCupWednesday_ASIA:S37_HauntedCupWednesday_Event1_ASIA": "S37_HauntedCup_ScoringRules",
-    "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event12_ASIA_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event1_ASIA_champion": "ScoringRules_RankedCupDuosReload_Champion",
     "Fortnite:epicgames_S37_ConsoleDuosCashCups_ASIA:S37_ConsoleDuosCashCups_Event2Round1_ASIA": "S37_ConsoleDuosCashCups_ScoringRules_Round1",
     "Fortnite:epicgames_S37_ReloadQuickCup_ASIA:S37_ReloadQuickCup_Event2Round1_ASIA": "ScoringRules_ReloadDuosQuick_R1",
@@ -12201,7 +11885,6 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event5_ASIA_Bronze": "epicgames_S37_RankedCupReloadDuos_ASIA",
     "Fortnite:epicgames_S37_SoloSeriesCup_ASIA:S37_SoloSeriesCup_Event5_ASIA": "S37_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S37_ConsoleDuosCashCups_ASIA:S37_ConsoleDuosCashCups_Event2Round2_ASIA": "S37_ConsoleDuosCashCups_Round2",
-    "Fortnite:epicgames_S37_HauntedCupWednesday_ASIA:S37_HauntedCupWednesday_Event2_ASIA": "epicgames_S37_HauntedCupWednesday_ASIA",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event5_ASIA_Silver": "epicgames_S37_RankedCupReloadDuos_ASIA",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event10_ASIA_elite": "epicgames_S37_RankedCupReloadDuos_ASIA",
     "Fortnite:epicgames_S37_ReloadQuickCup_ASIA:S37_ReloadQuickCup_Event1Round1_ASIA": "S37_ReloadQuickCup_Event1Round1_ASIA",
@@ -12302,9 +11985,8 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event3_ASIA": "epicgames_S37_RankedCupReloadDuos_ASIA",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event19_ASIA_gold": "epicgames_S37_RankedCupReloadDuos_ASIA",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event15_ASIA_Bronze": "epicgames_S37_RankedCupReloadDuos_ASIA",
-    "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event19_ASIA_platinum": "epicgames_S37_RankedCupReloadDuos_ASIA",
-    "Fortnite:epicgames_S37_HauntedCupWednesday_ASIA:S37_HauntedCupWednesday_Event1_ASIA": "epicgames_S37_HauntedCupWednesday_ASIA",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event12_ASIA_diamond": "epicgames_S37_RankedCupReloadDuos_ASIA",
+    "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event19_ASIA_platinum": "epicgames_S37_RankedCupReloadDuos_ASIA",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event1_ASIA_champion": "epicgames_S37_RankedCupReloadDuos_ASIA",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event18_ASIA_platinum": "epicgames_S37_RankedCupReloadDuos_ASIA",
     "Fortnite:epicgames_S37_ConsoleDuosCashCups_ASIA:S37_ConsoleDuosCashCups_Event2Round1_ASIA": "S37_ConsoleDuosCashCups_Event2Round1_ASIA",
@@ -12410,6 +12092,9 @@
   "resolvedWindowLocations": {
     "Fortnite:epicgames_S37_OGCups_BR_ASIA:S37_OGCup_BR_Event7_ASIA": [
       "Fortnite:epicgames_S37_OGCups_BR_ASIA:S37_OGCup_BR_Event7_ASIA"
+    ],
+    "Fortnite:epicgames_S37_OGCups_BR_ASIA:S37_OGCup_BR_Event8_ASIA": [
+      "Fortnite:epicgames_S37_OGCups_BR_ASIA:S37_OGCup_BR_Event8_ASIA"
     ],
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_ASIA:S37_BlitzMobileCupWeekly_Event6_ASIA": [
       "Fortnite:epicgames_S37_BlitzMobileCupWeekly_ASIA:S37_BlitzMobileCupWeekly_Event6_ASIA"
@@ -12520,9 +12205,6 @@
     ],
     "Fortnite:epicgames_S37_ConsoleDuosCashCups_ASIA:S37_ConsoleDuosCashCups_Event2Round2_ASIA": [
       "Fortnite:epicgames_S37_ConsoleDuosCashCups_ASIA:S37_ConsoleDuosCashCups_Event2Round2_ASIA"
-    ],
-    "Fortnite:epicgames_S37_HauntedCupWednesday_ASIA:S37_HauntedCupWednesday_Event2_ASIA": [
-      "Fortnite:epicgames_S37_HauntedCupWednesday_ASIA:S37_HauntedCupWednesday_Event2_ASIA"
     ],
     "Fortnite:epicgames_S37_OGCups_ZB_ASIA:S37_OGCup_ZB_Event5_ASIA": [
       "Fortnite:epicgames_S37_OGCups_ZB_ASIA:S37_OGCup_ZB_Event5_ASIA"
@@ -12730,12 +12412,6 @@
       "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event3_ASIA_elite",
       "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event3_ASIA_champion",
       "Fortnite:epicgames_S37_RankedCupReloadDuos_ASIA:S37_RankedCupReloadDuos_Event3_ASIA_unreal"
-    ],
-    "Fortnite:epicgames_S37_HauntedCupWednesday_ASIA:S37_HauntedCupWednesday_Event1_ASIA": [
-      "Fortnite:epicgames_S37_HauntedCupWednesday_ASIA:S37_HauntedCupWednesday_Event1_ASIA"
-    ],
-    "Fortnite:epicgames_S37_OGCups_BR_ASIA:S37_OGCup_BR_Event8_ASIA": [
-      "Fortnite:epicgames_S37_OGCups_BR_ASIA:S37_OGCup_BR_Event8_ASIA"
     ],
     "Fortnite:epicgames_S37_ReloadQuickCup_ASIA:S37_ReloadQuickCup_Event8Group1Round2_ASIA": [
       "Fortnite:epicgames_S37_ReloadQuickCup_ASIA:S37_ReloadQuickCup_Event8Group1Round2_ASIA"
