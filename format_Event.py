@@ -196,6 +196,8 @@ async def format_EventData():
         new_data = output
         before_data = load_json(filepath) if os.path.exists(filepath) else None
 
+        os.makedirs(config2.TOURNAMENT_DIR, exist_ok=True)
+
         eventname   = new_data["EventName"]
         before_root = before_data if before_data else {}
         after_root  = new_data
@@ -474,6 +476,7 @@ async def format_EventData():
         if file_eventId not in current_event_ids and filename != "S37_Delulu.json":
             print(f"   [INF] 🔴 トーナメント削除 : {file_eventId}")
             try:
+                os.makedirs(config2.ARCHIVE_DIR, exist_ok=True)
                 dest_path = os.path.join(config2.ARCHIVE_DIR, os.path.basename(filepath))
                 shutil.move(filepath, dest_path)
                 config.tags.append(f"{file_eventId} (Del)")
