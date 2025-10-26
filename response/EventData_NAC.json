@@ -207,95 +207,6 @@
         ]
       }
     ],
-    "ScoringRules_ReloadDuosQuick_R1": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 2,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 3,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 4,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 5,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 6,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 7,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 8,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 9,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 10,
-            "pointsEarned": 1,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 2,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 3,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 4,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 5,
-            "pointsEarned": 1,
-            "multiplicative": false
-          }
-        ]
-      }
-    ],
     "ScoringRules_RankedCupDuosReload_Elite": [
       {
         "trackedStat": "ELITE_PLACEMENT_STAT_INDEX",
@@ -429,30 +340,6 @@
           {
             "keyValue": 1,
             "pointsEarned": 1,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
-    "ScoringRules_VictoryCup": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 100,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 0,
             "multiplicative": true
           }
         ]
@@ -1569,49 +1456,6 @@
         ]
       }
     ],
-    "S37_ReloadQuickCup_Event9Round1_NAC": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 1,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event9Group3Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 10,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event9Group2Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 15,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event9Group1Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "S37_PayoutTable_SoloSeriesCopy": [
       {
         "scoringType": "value",
@@ -1631,68 +1475,6 @@
         ]
       }
     ],
-    "PayoutTable_ReloadQuickCup": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 100,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 200,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 200,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 400,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 300,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 600,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_ReloadQuickCup_Event7Group1Round2_NAC": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 20,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event7Round3_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "epicgames_S37_RankedCupReloadDuos_NAC": [
       {
         "scoringType": "value",
@@ -1704,63 +1486,6 @@
                 "rewardType": "game",
                 "rewardMode": "standard",
                 "value": "AthenaGlider:umbrella_rankedsquish",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_ReloadQuickCup_Event4Group1Round2_NAC": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 20,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event4Round3_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_ReloadQuickCup_Event2Group1Round2_NAC": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 20,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event2Round3_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_ReloadQuickCup_Event1Group1Round2_NAC": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 20,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event1Round3_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -1805,321 +1530,6 @@
         ]
       }
     ],
-    "S37_ReloadQuickCup_Event2Round1_NAC": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 1,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event2Group3Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 10,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event2Group2Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 15,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event2Group1Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_ReloadQuickCup_Event1Round1_NAC": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 1,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event1Group3Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 10,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event1Group2Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 15,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event1Group1Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_ReloadQuickCup_Event3Group1Round2_NAC": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 20,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event3Round3_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_ReloadQuickCup_Event4Round1_NAC": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 1,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event4Group3Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 10,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event4Group2Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 15,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event4Group1Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_ReloadQuickCup_Event7Round1_NAC": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 1,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event7Group3Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 10,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event7Group2Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 15,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event7Group1Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_ReloadQuickCup_Event8Group1Round2_NAC": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 20,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event8Round3_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_ReloadQuickCup_Event8Round1_NAC": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 1,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event8Group3Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 10,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event8Group2Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 15,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event8Group1Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_ReloadQuickCup_Event9Group1Round2_NAC": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 20,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event9Round3_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S37_ReloadQuickCup_Event3Round1_NAC": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 1,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event3Group3Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 10,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event3Group2Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 15,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S37_ReloadQuickCup_Event3Group1Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "epicgames_S37_BlitzMobileCupWeekly_NAC_OCT": [
       {
         "scoringType": "value",
@@ -2158,960 +1568,6 @@
     ]
   },
   "events": [
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S37_ReloadQuickCup_NAC",
-      "beginTime": "2025-09-05T23:00:00Z",
-      "endTime": "2025-10-26T20:30:00Z",
-      "displayDataId": "s37_reloadquick",
-      "eventGroup": "Season37_ReloadQuick",
-      "announcementTime": "2025-08-02T05:00:00Z",
-      "regions": [
-        "NAC",
-        "NAE"
-      ],
-      "regionMappings": {
-        "NAC": "NACCOMP",
-        "NAE": "NACCOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "SecureBoot",
-          "CryptoProcessor"
-        ],
-        "tournamentType": "VictoryCup",
-        "TeamLockType": "Window",
-        "webId": "S37_ReloadQuickCup",
-        "minimumAccountLevel": 350,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event1Round1_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCupsRound1",
-          "countdownBeginTime": "2025-09-05T21:00:00Z",
-          "beginTime": "2025-09-05T23:00:00Z",
-          "endTime": "2025-09-05T23:45:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules",
-            [
-              "currentRanking:ranked-br:6",
-              "currentRanking:ranked-zb:6",
-              "currentRanking:ranked_blastberry_build:6",
-              "currentRanking:ranked_blastberry_nobuild:6"
-            ]
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [
-            "S37_CashCup_Qualified"
-          ],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event1Group1Round2_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-09-05T22:10:00Z",
-          "beginTime": "2025-09-06T00:15:00Z",
-          "endTime": "2025-09-06T01:00:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event1Group1Round2_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event1Round3_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-09-05T23:30:00Z",
-          "beginTime": "2025-09-06T01:30:00Z",
-          "endTime": "2025-09-06T02:30:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event1Round3_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ScheduledMatchmakingInitialDelaySeconds": 600,
-            "ServerReplays": true,
-            "RoundType": "Qualifiers",
-            "ScheduledMatchmakingMatchDelaySeconds": 1440
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event2Round1_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCupsRound1",
-          "countdownBeginTime": "2025-09-12T21:00:00Z",
-          "beginTime": "2025-09-12T23:00:00Z",
-          "endTime": "2025-09-12T23:45:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules",
-            [
-              "currentRanking:ranked-br:6",
-              "currentRanking:ranked-zb:6",
-              "currentRanking:ranked_blastberry_build:6",
-              "currentRanking:ranked_blastberry_nobuild:6"
-            ]
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [
-            "S37_CashCup_Qualified"
-          ],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event2Group1Round2_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-09-12T22:10:00Z",
-          "beginTime": "2025-09-13T00:15:00Z",
-          "endTime": "2025-09-13T01:00:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event2Group1Round2_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event2Round3_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-09-12T23:30:00Z",
-          "beginTime": "2025-09-13T01:30:00Z",
-          "endTime": "2025-09-13T02:30:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event2Round3_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ScheduledMatchmakingInitialDelaySeconds": 600,
-            "ServerReplays": true,
-            "RoundType": "Qualifiers",
-            "ScheduledMatchmakingMatchDelaySeconds": 1440
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event3Round1_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCupsRound1",
-          "countdownBeginTime": "2025-09-19T21:00:00Z",
-          "beginTime": "2025-09-19T23:00:00Z",
-          "endTime": "2025-09-19T23:45:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules",
-            [
-              "currentRanking:ranked-br:6",
-              "currentRanking:ranked-zb:6",
-              "currentRanking:ranked_blastberry_build:6",
-              "currentRanking:ranked_blastberry_nobuild:6"
-            ]
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [
-            "S37_CashCup_Qualified"
-          ],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event3Group1Round2_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-09-19T22:10:00Z",
-          "beginTime": "2025-09-20T00:15:00Z",
-          "endTime": "2025-09-20T01:00:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event3Group1Round2_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event3Round3_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-09-19T23:30:00Z",
-          "beginTime": "2025-09-20T01:30:00Z",
-          "endTime": "2025-09-20T02:30:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event3Round3_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ScheduledMatchmakingInitialDelaySeconds": 600,
-            "ServerReplays": true,
-            "RoundType": "Qualifiers",
-            "ScheduledMatchmakingMatchDelaySeconds": 1440
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event4Round1_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCupsRound1",
-          "countdownBeginTime": "2025-09-28T16:00:00Z",
-          "beginTime": "2025-09-28T18:00:00Z",
-          "endTime": "2025-09-28T18:45:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules",
-            [
-              "currentRanking:ranked-br:6",
-              "currentRanking:ranked-zb:6",
-              "currentRanking:ranked_blastberry_build:6",
-              "currentRanking:ranked_blastberry_nobuild:6"
-            ]
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [
-            "S37_CashCup_Qualified"
-          ],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event4Group1Round2_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-09-28T17:10:00Z",
-          "beginTime": "2025-09-28T19:15:00Z",
-          "endTime": "2025-09-28T20:00:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event4Group1Round2_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event4Round3_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-09-28T18:30:00Z",
-          "beginTime": "2025-09-28T20:30:00Z",
-          "endTime": "2025-09-28T21:30:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event4Round3_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ScheduledMatchmakingInitialDelaySeconds": 600,
-            "ServerReplays": true,
-            "RoundType": "Qualifiers",
-            "ScheduledMatchmakingMatchDelaySeconds": 1440
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event7Round1_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCupsRound1",
-          "countdownBeginTime": "2025-10-10T21:00:00Z",
-          "beginTime": "2025-10-10T23:00:00Z",
-          "endTime": "2025-10-10T23:45:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules",
-            [
-              "currentRanking:ranked-br:6",
-              "currentRanking:ranked-zb:6",
-              "currentRanking:ranked_blastberry_build:6",
-              "currentRanking:ranked_blastberry_nobuild:6"
-            ]
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [
-            "S37_CashCup_Qualified"
-          ],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event7Group1Round2_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-10-10T22:10:00Z",
-          "beginTime": "2025-10-11T00:15:00Z",
-          "endTime": "2025-10-11T01:00:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event7Group1Round2_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event7Round3_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-10-10T23:30:00Z",
-          "beginTime": "2025-10-11T01:30:00Z",
-          "endTime": "2025-10-11T02:30:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event7Round3_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ScheduledMatchmakingInitialDelaySeconds": 600,
-            "ServerReplays": true,
-            "RoundType": "Qualifiers",
-            "ScheduledMatchmakingMatchDelaySeconds": 1440
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event8Round1_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCupsRound1",
-          "countdownBeginTime": "2025-10-17T21:00:00Z",
-          "beginTime": "2025-10-17T23:00:00Z",
-          "endTime": "2025-10-17T23:45:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules",
-            [
-              "currentRanking:ranked-br:6",
-              "currentRanking:ranked-zb:6",
-              "currentRanking:ranked_blastberry_build:6",
-              "currentRanking:ranked_blastberry_nobuild:6"
-            ]
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [
-            "S37_CashCup_Qualified"
-          ],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event8Group1Round2_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-10-17T22:10:00Z",
-          "beginTime": "2025-10-18T00:15:00Z",
-          "endTime": "2025-10-18T01:00:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event8Group1Round2_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event8Round3_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-10-17T23:30:00Z",
-          "beginTime": "2025-10-18T01:30:00Z",
-          "endTime": "2025-10-18T02:30:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event8Round3_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ScheduledMatchmakingInitialDelaySeconds": 600,
-            "ServerReplays": true,
-            "RoundType": "Qualifiers",
-            "ScheduledMatchmakingMatchDelaySeconds": 1440
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event9Round1_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCupsRound1",
-          "countdownBeginTime": "2025-10-26T15:00:00Z",
-          "beginTime": "2025-10-26T17:00:00Z",
-          "endTime": "2025-10-26T17:45:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules",
-            [
-              "currentRanking:ranked-br:6",
-              "currentRanking:ranked-zb:6",
-              "currentRanking:ranked_blastberry_build:6",
-              "currentRanking:ranked_blastberry_nobuild:6"
-            ]
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [
-            "S37_CashCup_Qualified"
-          ],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event9Group1Round2_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-10-26T17:10:00Z",
-          "beginTime": "2025-10-26T18:15:00Z",
-          "endTime": "2025-10-26T19:00:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event9Group1Round2_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S37_ReloadQuickCup_Event9Round3_NAC",
-          "eventTemplateId": "EventTemplate_ReloadQuickCups",
-          "countdownBeginTime": "2025-10-26T18:30:00Z",
-          "beginTime": "2025-10-26T19:30:00Z",
-          "endTime": "2025-10-26T20:30:00Z",
-          "round": 1,
-          "payoutDelay": 24,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "eula:s37_reloadquick_rules"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S37_ReloadQuickCup_Event9Round3_NAC"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ScheduledMatchmakingInitialDelaySeconds": 600,
-            "ServerReplays": true,
-            "RoundType": "Qualifiers",
-            "ScheduledMatchmakingMatchDelaySeconds": 1440
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s37_reloadquickcup_nac"
-      }
-    },
     {
       "gameId": "Fortnite",
       "eventId": "epicgames_S37_BlitzMobileCupWeekly_NAC",
@@ -6540,43 +4996,6 @@
   ],
   "templates": [
     {
-      "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_CR",
-      "matchCap": 3,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_ReloadQuickCupsRound1",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_FigmentSquad",
       "matchCap": 10,
       "tiebreakerFormula": {
@@ -6797,43 +5216,6 @@
       "payoutTable": [],
       "liveSessionAttributes": [],
       "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_CR",
-      "matchCap": 3,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_ReloadQuickCups",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
     }
   ],
   "leaderboardDefs": [
@@ -6877,51 +5259,6 @@
       "payoutsConfig": {
         "payoutTableIdFormat": "${eventId}",
         "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": []
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "S37_ReloadQuick_Round3_DefaultLeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "ScoringRules_VictoryCup",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "PayoutTable_ReloadQuickCup",
-        "payoutDate": "windowEnd+PT24M"
       },
       "hidePlayerScores": false,
       "percentileAccuracy": 1,
@@ -7109,52 +5446,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "S37_ReloadQuick_Round1_DefaultLeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
-      "clampsToZero": true,
-      "onlyScoreTopN": 1,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT24M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": []
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "RankedCupDuosReload_Diamond_LeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -7193,51 +5484,6 @@
       "payoutsConfig": {
         "payoutTableIdFormat": "${eventId}",
         "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": []
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "S37_ReloadQuick_Round2Group1_DefaultLeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 3,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "ScoringRules_ReloadDuosQuick_R1",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT24M"
       },
       "hidePlayerScores": false,
       "percentileAccuracy": 1,
@@ -7631,16 +5877,13 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event8_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event6_NAC": "S37_BlitzCups_ScoringRules",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event7Round1_NAC": "ScoringRules_ReloadDuosQuick_R1",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_champion": "ScoringRules_RankedCupDuosReload_Champion",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event1Round1_NAC": "ScoringRules_ReloadDuosQuick_R1",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event14_NAC_gold": "ScoringRules_RankedCupDuosReload_Gold",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event8_NAC_platinum": "ScoringRules_RankedCupDuosReload_Platinum",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event7_NAC_platinum": "ScoringRules_RankedCupDuosReload_Platinum",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event4_NAC_Silver": "ScoringRules_RankedCupDuosReload_Silver",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event4_NAC_gold": "ScoringRules_RankedCupDuosReload_Gold",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event4Round1_NAC": "ScoringRules_ReloadDuosQuick_R1",
     "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event7_NAC": "S37_OGCups_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC_unreal": "ScoringRules_RankedCupDuosReload_Unreal",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event9_NAC_Silver": "ScoringRules_RankedCupDuosReload_Silver",
@@ -7651,7 +5894,6 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event12_NAC_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
     "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event3_NAC": "S37_OGCups_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event19_NAC_elite": "ScoringRules_RankedCupDuosReload_Elite",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event7Round3_NAC": "ScoringRules_VictoryCup",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event1_NAC_Silver": "ScoringRules_RankedCupDuosReload_Silver",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event18_NAC_Silver": "ScoringRules_RankedCupDuosReload_Silver",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
@@ -7676,14 +5918,12 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC_champion": "ScoringRules_RankedCupDuosReload_Champion",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event2Group1Round2_NAC": "ScoringRules_ReloadDuosQuick_R1",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_unreal": "ScoringRules_RankedCupDuosReload_Unreal",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event12_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event1_NAC": "S37_OGCups_ScoringRules",
     "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event1_NAC": "S37_OGCups_ScoringRules",
     "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event3_NAC": "S37_ScoringRules_SoloSeries",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC": "EmptyScoringRules",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event1Round3_NAC": "ScoringRules_VictoryCup",
     "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event6_NAC": "S37_ScoringRules_SoloSeries",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event8_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC_platinum": "ScoringRules_RankedCupDuosReload_Platinum",
@@ -7694,9 +5934,8 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event13_NAC_champion": "ScoringRules_RankedCupDuosReload_Champion",
-    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event1_NAC": "S37_BlitzCups_ScoringRules",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event9Round3_NAC": "ScoringRules_VictoryCup",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_platinum": "ScoringRules_RankedCupDuosReload_Platinum",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event1_NAC": "S37_BlitzCups_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_Silver": "ScoringRules_RankedCupDuosReload_Silver",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event2_NAC_Silver": "ScoringRules_RankedCupDuosReload_Silver",
     "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event1_NAC": "S37_ScoringRules_SoloSeries",
@@ -7716,11 +5955,8 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event19_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC_elite": "ScoringRules_RankedCupDuosReload_Elite",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event8_NAC_unreal": "ScoringRules_RankedCupDuosReload_Unreal",
-    "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event9_NAC": "S37_OGCups_ScoringRules",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event9Group1Round2_NAC": "ScoringRules_ReloadDuosQuick_R1",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC": "EmptyScoringRules",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event8Group1Round2_NAC": "ScoringRules_ReloadDuosQuick_R1",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event9Round1_NAC": "ScoringRules_ReloadDuosQuick_R1",
+    "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event9_NAC": "S37_OGCups_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event9_NAC_elite": "ScoringRules_RankedCupDuosReload_Elite",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_Silver": "ScoringRules_RankedCupDuosReload_Silver",
     "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event5_NAC": "S37_ScoringRules_SoloSeries",
@@ -7742,7 +5978,6 @@
     "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event5_NAC": "S37_OGCups_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC_gold": "ScoringRules_RankedCupDuosReload_Gold",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC_Silver": "ScoringRules_RankedCupDuosReload_Silver",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event3Round3_NAC": "ScoringRules_VictoryCup",
     "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Final_NAC": "S37_ScoringRules_FinalSoloSeries",
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event12_NAC": "S37_BlitzCups_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC_Silver": "ScoringRules_RankedCupDuosReload_Silver",
@@ -7751,10 +5986,8 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event13_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event10_NAC_champion": "ScoringRules_RankedCupDuosReload_Champion",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event14_NAC_champion": "ScoringRules_RankedCupDuosReload_Champion",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event7Group1Round2_NAC": "ScoringRules_ReloadDuosQuick_R1",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_platinum": "ScoringRules_RankedCupDuosReload_Platinum",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC_platinum": "ScoringRules_RankedCupDuosReload_Platinum",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event4Round3_NAC": "ScoringRules_VictoryCup",
     "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event3_NAC": "S37_OGCups_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event1_NAC_elite": "ScoringRules_RankedCupDuosReload_Elite",
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event11_NAC": "S37_BlitzCups_ScoringRules",
@@ -7763,12 +5996,10 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event10_NAC": "S37_OGCups_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC_champion": "ScoringRules_RankedCupDuosReload_Champion",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event8Round3_NAC": "ScoringRules_VictoryCup",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC_elite": "ScoringRules_RankedCupDuosReload_Elite",
     "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event4_NAC": "S37_OGCups_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event10_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event14_NAC_platinum": "ScoringRules_RankedCupDuosReload_Platinum",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event4Group1Round2_NAC": "ScoringRules_ReloadDuosQuick_R1",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event10_NAC_unreal": "ScoringRules_RankedCupDuosReload_Unreal",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event9_NAC_unreal": "ScoringRules_RankedCupDuosReload_Unreal",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event18_NAC_unreal": "ScoringRules_RankedCupDuosReload_Unreal",
@@ -7783,6 +6014,7 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event12_NAC_Silver": "ScoringRules_RankedCupDuosReload_Silver",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event13_NAC_elite": "ScoringRules_RankedCupDuosReload_Elite",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
+    "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_gold": "ScoringRules_RankedCupDuosReload_Gold",
     "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event8_NAC": "S37_OGCups_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event9_NAC_champion": "ScoringRules_RankedCupDuosReload_Champion",
@@ -7793,9 +6025,6 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_unreal": "ScoringRules_RankedCupDuosReload_Unreal",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event9_NAC_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event1_NAC": "EmptyScoringRules",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event3Round1_NAC": "ScoringRules_ReloadDuosQuick_R1",
-    "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_gold": "ScoringRules_RankedCupDuosReload_Gold",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event8Round1_NAC": "ScoringRules_ReloadDuosQuick_R1",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event4_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC_elite": "ScoringRules_RankedCupDuosReload_Elite",
     "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event10_NAC": "S37_OGCups_ScoringRules",
@@ -7810,15 +6039,13 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event14_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event18_NAC_gold": "ScoringRules_RankedCupDuosReload_Gold",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event2Round3_NAC": "ScoringRules_VictoryCup",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event1_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event4_NAC_platinum": "ScoringRules_RankedCupDuosReload_Platinum",
+    "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event2_NAC_elite": "ScoringRules_RankedCupDuosReload_Elite",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event8_NAC_gold": "ScoringRules_RankedCupDuosReload_Gold",
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event2_NAC": "S37_BlitzCups_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event13_NAC_Silver": "ScoringRules_RankedCupDuosReload_Silver",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event1Group1Round2_NAC": "ScoringRules_ReloadDuosQuick_R1",
-    "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event7_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:series:epicgames_S37_SoloSeriesCup_NAC_series": "EmptyScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event13_NAC_unreal": "ScoringRules_RankedCupDuosReload_Unreal",
@@ -7827,7 +6054,6 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event18_NAC_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_elite": "ScoringRules_RankedCupDuosReload_Elite",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event2_NAC_champion": "ScoringRules_RankedCupDuosReload_Champion",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event2Round1_NAC": "ScoringRules_ReloadDuosQuick_R1",
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event4_NAC": "S37_BlitzCups_ScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC_platinum": "ScoringRules_RankedCupDuosReload_Platinum",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
@@ -7836,7 +6062,6 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_elite": "ScoringRules_RankedCupDuosReload_Elite",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_gold": "ScoringRules_RankedCupDuosReload_Gold",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event3Group1Round2_NAC": "ScoringRules_ReloadDuosQuick_R1",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC_unreal": "ScoringRules_RankedCupDuosReload_Unreal",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event18_NAC": "EmptyScoringRules",
@@ -7853,6 +6078,7 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event19_NAC_unreal": "ScoringRules_RankedCupDuosReload_Unreal"
   },
   "scoreLocationPayoutTables": {
+    "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event4_NAC_gold": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event2_NAC_gold": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event18_NAC_platinum": "epicgames_S37_RankedCupReloadDuos_NAC",
@@ -7864,16 +6090,12 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event8_NAC": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event6_NAC": "epicgames_S37_BlitzMobileCupWeekly_NAC_OCT",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event7Round1_NAC": "S37_ReloadQuickCup_Event7Round1_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_champion": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event1Round1_NAC": "S37_ReloadQuickCup_Event1Round1_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event14_NAC_gold": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event8_NAC_platinum": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event7_NAC_platinum": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event4_NAC_Silver": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event4_NAC_gold": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event4Round1_NAC": "S37_ReloadQuickCup_Event4Round1_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC_unreal": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event9_NAC_Silver": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event9_NAC_gold": "epicgames_S37_RankedCupReloadDuos_NAC",
@@ -7882,7 +6104,6 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event14_NAC_unreal": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event12_NAC_Bronze": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event19_NAC_elite": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event7Round3_NAC": "PayoutTable_ReloadQuickCup",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event1_NAC_Silver": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event18_NAC_Silver": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
@@ -7904,12 +6125,10 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC_Bronze": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC_champion": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event2Group1Round2_NAC": "S37_ReloadQuickCup_Event2Group1Round2_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_unreal": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event12_NAC": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event3_NAC": "S37_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event1Round3_NAC": "PayoutTable_ReloadQuickCup",
     "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event6_NAC": "S37_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event8_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC_platinum": "epicgames_S37_RankedCupReloadDuos_NAC",
@@ -7920,9 +6139,8 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_Bronze": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event13_NAC_champion": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event1_NAC": "epicgames_S37_BlitzMobileCupWeekly_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event9Round3_NAC": "PayoutTable_ReloadQuickCup",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_platinum": "epicgames_S37_RankedCupReloadDuos_NAC",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event1_NAC": "epicgames_S37_BlitzMobileCupWeekly_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_Silver": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event2_NAC_Silver": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event1_NAC": "S37_PayoutTable_SoloSeriesCopy",
@@ -7941,12 +6159,9 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event19_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC_elite": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event8_NAC_unreal": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event9Group1Round2_NAC": "S37_ReloadQuickCup_Event9Group1Round2_NAC",
-    "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event1_NAC_champion": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event8Group1Round2_NAC": "S37_ReloadQuickCup_Event8Group1Round2_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event9Round1_NAC": "S37_ReloadQuickCup_Event9Round1_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event9_NAC_elite": "epicgames_S37_RankedCupReloadDuos_NAC",
+    "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event1_NAC_champion": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_Silver": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event5_NAC": "S37_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event10_NAC_Bronze": "epicgames_S37_RankedCupReloadDuos_NAC",
@@ -7963,7 +6178,6 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event19_NAC_platinum": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC_gold": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC_Silver": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event3Round3_NAC": "PayoutTable_ReloadQuickCup",
     "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Final_NAC": "epicgames_S37_SoloSeriesCup_NAC",
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event12_NAC": "epicgames_S37_BlitzMobileCupWeekly_NAC_OCT",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC_Silver": "epicgames_S37_RankedCupReloadDuos_NAC",
@@ -7972,21 +6186,17 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event13_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event10_NAC_champion": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event14_NAC_champion": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event7Group1Round2_NAC": "S37_ReloadQuickCup_Event7Group1Round2_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_platinum": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC_platinum": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event4Round3_NAC": "PayoutTable_ReloadQuickCup",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event1_NAC_elite": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event11_NAC": "epicgames_S37_BlitzMobileCupWeekly_NAC_OCT",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC_gold": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC_Bronze": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC_champion": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event8Round3_NAC": "PayoutTable_ReloadQuickCup",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC_elite": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event10_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event14_NAC_platinum": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event4Group1Round2_NAC": "S37_ReloadQuickCup_Event4Group1Round2_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event10_NAC_unreal": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event9_NAC_unreal": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event18_NAC_unreal": "epicgames_S37_RankedCupReloadDuos_NAC",
@@ -8000,6 +6210,7 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event12_NAC_Silver": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event13_NAC_elite": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC_Bronze": "epicgames_S37_RankedCupReloadDuos_NAC",
+    "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_gold": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event9_NAC_champion": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event8_NAC_Bronze": "epicgames_S37_RankedCupReloadDuos_NAC",
@@ -8009,10 +6220,7 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_unreal": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event9_NAC_Bronze": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event1_NAC": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event3Round1_NAC": "S37_ReloadQuickCup_Event3Round1_NAC",
-    "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_gold": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_Silver": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event8Round1_NAC": "S37_ReloadQuickCup_Event8Round1_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event4_NAC": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC_elite": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_platinum": "epicgames_S37_RankedCupReloadDuos_NAC",
@@ -8024,15 +6232,13 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event14_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event18_NAC_gold": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event2Round3_NAC": "PayoutTable_ReloadQuickCup",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event1_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event4_NAC_platinum": "epicgames_S37_RankedCupReloadDuos_NAC",
+    "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_Bronze": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event2_NAC_elite": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event8_NAC_gold": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event2_NAC": "epicgames_S37_BlitzMobileCupWeekly_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event13_NAC_Silver": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event1Group1Round2_NAC": "S37_ReloadQuickCup_Event1Group1Round2_NAC",
-    "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_Bronze": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event7_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event13_NAC_unreal": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event19_NAC_champion": "epicgames_S37_RankedCupReloadDuos_NAC",
@@ -8040,7 +6246,6 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event18_NAC_diamond": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_elite": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event2_NAC_champion": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event2Round1_NAC": "S37_ReloadQuickCup_Event2Round1_NAC",
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event4_NAC": "epicgames_S37_BlitzMobileCupWeekly_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event6_NAC_platinum": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC_Bronze": "epicgames_S37_RankedCupReloadDuos_NAC",
@@ -8049,7 +6254,6 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_elite": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event17_NAC_Bronze": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_gold": "epicgames_S37_RankedCupReloadDuos_NAC",
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event3Group1Round2_NAC": "S37_ReloadQuickCup_Event3Group1Round2_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC_unreal": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC": "epicgames_S37_RankedCupReloadDuos_NAC",
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event18_NAC": "epicgames_S37_RankedCupReloadDuos_NAC",
@@ -8066,11 +6270,23 @@
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event19_NAC_unreal": "epicgames_S37_RankedCupReloadDuos_NAC"
   },
   "resolvedWindowLocations": {
+    "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event7_NAC": [
+      "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event7_NAC"
+    ],
+    "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event3_NAC": [
+      "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event3_NAC"
+    ],
     "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event2_NAC": [
       "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event2_NAC"
     ],
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event1_NAC": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event1_NAC"
+    ],
     "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event10_NAC": [
       "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event10_NAC"
+    ],
+    "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event4_NAC": [
+      "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event4_NAC"
     ],
     "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event6_NAC": [
       "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event6_NAC"
@@ -8086,8 +6302,8 @@
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event13_NAC_champion",
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event13_NAC_unreal"
     ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event2Round1_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event2Round1_NAC"
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event2_NAC": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event2_NAC"
     ],
     "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event5_NAC": [
       "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event5_NAC"
@@ -8119,24 +6335,6 @@
     ],
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event6_NAC": [
       "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event6_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event7Round1_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event7Round1_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event1Round1_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event1Round1_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event4Round1_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event4Round1_NAC"
-    ],
-    "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event7_NAC": [
-      "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event7_NAC"
-    ],
-    "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event3_NAC": [
-      "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event3_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event7Round3_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event7Round3_NAC"
     ],
     "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event4_NAC": [
       "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event4_NAC"
@@ -8181,9 +6379,6 @@
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC_champion",
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event16_NAC_unreal"
     ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event2Group1Round2_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event2Group1Round2_NAC"
-    ],
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event12_NAC": [
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event12_NAC",
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event12_NAC_Bronze",
@@ -8216,21 +6411,12 @@
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_champion",
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event11_NAC_unreal"
     ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event1Round3_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event1Round3_NAC"
-    ],
     "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event6_NAC": [
       "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event6_NAC",
       "Fortnite:series:epicgames_S37_SoloSeriesCup_NAC_series"
     ],
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event7_NAC": [
       "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event7_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event9Round3_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event9Round3_NAC"
-    ],
-    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event1_NAC": [
-      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event1_NAC"
     ],
     "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event1_NAC": [
       "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event1_NAC",
@@ -8268,22 +6454,6 @@
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event10_NAC_champion",
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event10_NAC_unreal"
     ],
-    "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event9_NAC": [
-      "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event9_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event9Round1_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event9Round1_NAC"
-    ],
-    "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event5_NAC": [
-      "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event5_NAC",
-      "Fortnite:series:epicgames_S37_SoloSeriesCup_NAC_series"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event9Group1Round2_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event9Group1Round2_NAC"
-    ],
-    "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event7_NAC": [
-      "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event7_NAC"
-    ],
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC": [
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC",
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC_Bronze",
@@ -8295,8 +6465,15 @@
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC_champion",
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event3_NAC_unreal"
     ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event8Group1Round2_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event8Group1Round2_NAC"
+    "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event9_NAC": [
+      "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event9_NAC"
+    ],
+    "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event5_NAC": [
+      "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Event5_NAC",
+      "Fortnite:series:epicgames_S37_SoloSeriesCup_NAC_series"
+    ],
+    "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event7_NAC": [
+      "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event7_NAC"
     ],
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event3_NAC": [
       "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event3_NAC"
@@ -8306,9 +6483,6 @@
     ],
     "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event5_NAC": [
       "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event5_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event3Round3_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event3Round3_NAC"
     ],
     "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Final_NAC": [
       "Fortnite:epicgames_S37_SoloSeriesCup_NAC:S37_SoloSeriesCup_Final_NAC"
@@ -8327,29 +6501,11 @@
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event7_NAC_champion",
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event7_NAC_unreal"
     ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event7Group1Round2_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event7Group1Round2_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event4Round3_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event4Round3_NAC"
-    ],
     "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event3_NAC": [
       "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event3_NAC"
     ],
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event11_NAC": [
       "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event11_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event8Round3_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event8Round3_NAC"
-    ],
-    "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event4_NAC": [
-      "Fortnite:epicgames_S37_OGCups_BR_NAC:S37_OGCup_BR_Event4_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event4Group1Round2_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event4Group1Round2_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event3Round1_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event3Round1_NAC"
     ],
     "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event8_NAC": [
       "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event8_NAC"
@@ -8367,9 +6523,6 @@
     ],
     "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event6_NAC": [
       "Fortnite:epicgames_S37_OGCups_ZB_NAC:S37_OGCup_ZB_Event6_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event8Round1_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event8Round1_NAC"
     ],
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event4_NAC": [
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event4_NAC",
@@ -8418,23 +6571,11 @@
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_champion",
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event15_NAC_unreal"
     ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event2Round3_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event2Round3_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event1Group1Round2_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event1Group1Round2_NAC"
-    ],
-    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event2_NAC": [
-      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event2_NAC"
-    ],
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event4_NAC": [
       "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event4_NAC"
     ],
     "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event5_NAC": [
       "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAC:S37_BlitzMobileCupWeekly_Event5_NAC"
-    ],
-    "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event3Group1Round2_NAC": [
-      "Fortnite:epicgames_S37_ReloadQuickCup_NAC:S37_ReloadQuickCup_Event3Group1Round2_NAC"
     ],
     "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC": [
       "Fortnite:epicgames_S37_RankedCupReloadDuos_NAC:S37_RankedCupReloadDuos_Event5_NAC",
