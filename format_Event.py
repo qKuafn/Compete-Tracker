@@ -467,22 +467,23 @@ async def format_EventData():
         save_eventId = "_".join(event["eventId"].split("_")[1:-1])
         current_event_ids.add(save_eventId)
 
-    for filename in os.listdir(config2.TOURNAMENT_DIR):
-        if not filename.endswith(".json"):
-            continue
-        file_eventId = filename.replace(".json", "")
-        filepath = os.path.join(config2.TOURNAMENT_DIR, filename)
+    if os.path.exists(config2.TOURNAMENT_DIR):
+        for filename in os.listdir(config2.TOURNAMENT_DIR):
+            if not filename.endswith(".json"):
+                continue
+            file_eventId = filename.replace(".json", "")
+            filepath = os.path.join(config2.TOURNAMENT_DIR, filename)
 
-        if file_eventId not in current_event_ids and filename != "S37_Delulu.json":
-            print(f"   [INF] 🔴 トーナメント削除 : {file_eventId}")
-            try:
-                os.makedirs(config2.ARCHIVE_DIR, exist_ok=True)
-                dest_path = os.path.join(config2.ARCHIVE_DIR, os.path.basename(filepath))
-                shutil.move(filepath, dest_path)
-                config.tags.append(f"{file_eventId} (Del)")
-                config.deleted_Tournaments.append(file_eventId)
-            except Exception as e:
-                print(f"   [ERR] アーカイブフォルダへの移動失敗 : {file_eventId} ({e})")
+            if file_eventId not in current_event_ids and filename != "S37_Delulu.json":
+                print(f"   [INF] 🔴 トーナメント削除 : {file_eventId}")
+                try:
+                    os.makedirs(config2.ARCHIVE_DIR, exist_ok=True)
+                    dest_path = os.path.join(config2.ARCHIVE_DIR, os.path.basename(filepath))
+                    shutil.move(filepath, dest_path)
+                    config.tags.append(f"{file_eventId} (Del)")
+                    config.deleted_Tournaments.append(file_eventId)
+                except Exception as e:
+                    print(f"   [ERR] アーカイブフォルダへの移動失敗 : {file_eventId} ({e})")
 
     if not config.added_Tournaments and not config.updated_Tournaments and not config.deleted_Tournaments:
         print(" [INF] ✅️ 変更なし")
