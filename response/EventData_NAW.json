@@ -1,11 +1,878 @@
 {
-  "scoringRuleSets": {},
-  "payoutTables": {},
-  "events": [],
-  "templates": [],
-  "leaderboardDefs": [],
-  "scoreLocationScoringRuleSets": {},
-  "scoreLocationPayoutTables": {},
-  "resolvedWindowLocations": {},
+  "scoringRuleSets": {
+    "S37_BlitzCups_ScoringRules": [
+      {
+        "trackedStat": "PLACEMENT_STAT_INDEX",
+        "matchRule": "lte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 2,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 3,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 4,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 5,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 6,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 7,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 8,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 9,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 10,
+            "pointsEarned": 1,
+            "multiplicative": false
+          }
+        ]
+      },
+      {
+        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+        "matchRule": "gte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 1,
+            "multiplicative": false
+          }
+        ]
+      }
+    ]
+  },
+  "payoutTables": {
+    "epicgames_S37_BlitzMobileCupWeekly_NAW": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 5,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_fuzzyclaw",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 950,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_fuzzyclaw",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "epicgames_S37_BlitzMobileCupWeekly_NAW_OCT": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 5,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_lopexdale",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 950,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_cuchulainndale",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "events": [
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S37_BlitzMobileCupWeekly_NAW",
+      "beginTime": "2025-08-29T00:00:00Z",
+      "endTime": "2025-10-31T01:00:00Z",
+      "displayDataId": "s37_blitzweekly",
+      "eventGroup": "Season37_BlitzMobileCupWeekly",
+      "announcementTime": "2025-08-07T15:00:00Z",
+      "regions": [
+        "NAW"
+      ],
+      "regionMappings": {
+        "NAW": "NAWCOMP"
+      },
+      "platforms": [
+        "IOS",
+        "Android"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "webId": "S37_BlitzMobileCupWeekly",
+        "minimumAccountLevel": 15,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S37_BlitzMobileCupWeekly_Event1_NAW",
+          "eventTemplateId": "S37_BlitzCups_EventTemplate",
+          "countdownBeginTime": "2025-08-28T23:00:00Z",
+          "beginTime": "2025-08-29T00:00:00Z",
+          "endTime": "2025-08-29T01:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_blitzmobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S37_BlitzMobileCupWeekly_Event2_NAW",
+          "eventTemplateId": "S37_BlitzCups_EventTemplate",
+          "countdownBeginTime": "2025-09-04T23:00:00Z",
+          "beginTime": "2025-09-05T00:00:00Z",
+          "endTime": "2025-09-05T01:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_blitzmobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S37_BlitzMobileCupWeekly_Event3_NAW",
+          "eventTemplateId": "S37_BlitzCups_EventTemplate",
+          "countdownBeginTime": "2025-09-11T23:00:00Z",
+          "beginTime": "2025-09-12T00:00:00Z",
+          "endTime": "2025-09-12T01:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_blitzmobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S37_BlitzMobileCupWeekly_Event4_NAW",
+          "eventTemplateId": "S37_BlitzCups_EventTemplate",
+          "countdownBeginTime": "2025-09-17T23:00:00Z",
+          "beginTime": "2025-09-18T00:00:00Z",
+          "endTime": "2025-09-18T01:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_blitzmobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S37_BlitzMobileCupWeekly_Event5_NAW",
+          "eventTemplateId": "S37_BlitzCups_EventTemplate",
+          "countdownBeginTime": "2025-09-23T23:00:00Z",
+          "beginTime": "2025-09-24T00:00:00Z",
+          "endTime": "2025-09-24T01:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_blitzmobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S37_BlitzMobileCupWeekly_Event6_NAW",
+          "eventTemplateId": "S37_BlitzCups_EventTemplate",
+          "countdownBeginTime": "2025-10-01T23:00:00Z",
+          "beginTime": "2025-10-02T00:00:00Z",
+          "endTime": "2025-10-02T01:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_blitzmobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S37_BlitzMobileCupWeekly_Event7_NAW",
+          "eventTemplateId": "S37_BlitzCups_EventTemplate",
+          "countdownBeginTime": "2025-10-08T23:00:00Z",
+          "beginTime": "2025-10-09T00:00:00Z",
+          "endTime": "2025-10-09T01:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_blitzmobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S37_BlitzMobileCupWeekly_Event8_NAW",
+          "eventTemplateId": "S37_BlitzCups_EventTemplate",
+          "countdownBeginTime": "2025-10-12T23:00:00Z",
+          "beginTime": "2025-10-13T00:00:00Z",
+          "endTime": "2025-10-13T01:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_blitzmobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S37_BlitzMobileCupWeekly_Event9_NAW",
+          "eventTemplateId": "S37_BlitzCups_EventTemplate",
+          "countdownBeginTime": "2025-10-16T23:00:00Z",
+          "beginTime": "2025-10-17T00:00:00Z",
+          "endTime": "2025-10-17T01:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_blitzmobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S37_BlitzMobileCupWeekly_Event10_NAW",
+          "eventTemplateId": "S37_BlitzCups_EventTemplate",
+          "countdownBeginTime": "2025-10-19T23:00:00Z",
+          "beginTime": "2025-10-20T00:00:00Z",
+          "endTime": "2025-10-20T01:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_blitzmobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S37_BlitzMobileCupWeekly_Event11_NAW",
+          "eventTemplateId": "S37_BlitzCups_EventTemplate",
+          "countdownBeginTime": "2025-10-23T23:00:00Z",
+          "beginTime": "2025-10-24T00:00:00Z",
+          "endTime": "2025-10-24T01:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_blitzmobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S37_BlitzMobileCupWeekly_Event12_NAW",
+          "eventTemplateId": "S37_BlitzCups_EventTemplate",
+          "countdownBeginTime": "2025-10-26T23:00:00Z",
+          "beginTime": "2025-10-27T00:00:00Z",
+          "endTime": "2025-10-27T01:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_blitzmobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S37_BlitzMobileCupWeekly_Event13_NAW",
+          "eventTemplateId": "S37_BlitzCups_EventTemplate",
+          "countdownBeginTime": "2025-10-30T23:00:00Z",
+          "beginTime": "2025-10-31T00:00:00Z",
+          "endTime": "2025-10-31T01:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s37_blitzmobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s37_blitzmobilecupweekly_naw"
+      }
+    }
+  ],
+  "templates": [
+    {
+      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+      "matchCap": 10,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "S37_BlitzCups_EventTemplate",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    }
+  ],
+  "leaderboardDefs": [
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "S37_BlitzMobileCups_LeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S37_BlitzCups_ScoringRules",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${eventId}",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    },
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "S37_BlitzMobileCupsOctober_LeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S37_BlitzCups_ScoringRules",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${eventId}_OCT",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    }
+  ],
+  "scoreLocationScoringRuleSets": {
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event1_NAW": "S37_BlitzCups_ScoringRules",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event9_NAW": "S37_BlitzCups_ScoringRules",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event3_NAW": "S37_BlitzCups_ScoringRules",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event4_NAW": "S37_BlitzCups_ScoringRules",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event6_NAW": "S37_BlitzCups_ScoringRules",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event8_NAW": "S37_BlitzCups_ScoringRules",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event5_NAW": "S37_BlitzCups_ScoringRules",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event13_NAW": "S37_BlitzCups_ScoringRules",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event10_NAW": "S37_BlitzCups_ScoringRules",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event2_NAW": "S37_BlitzCups_ScoringRules",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event7_NAW": "S37_BlitzCups_ScoringRules",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event11_NAW": "S37_BlitzCups_ScoringRules",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event12_NAW": "S37_BlitzCups_ScoringRules"
+  },
+  "scoreLocationPayoutTables": {
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event1_NAW": "epicgames_S37_BlitzMobileCupWeekly_NAW",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event9_NAW": "epicgames_S37_BlitzMobileCupWeekly_NAW_OCT",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event3_NAW": "epicgames_S37_BlitzMobileCupWeekly_NAW",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event4_NAW": "epicgames_S37_BlitzMobileCupWeekly_NAW",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event6_NAW": "epicgames_S37_BlitzMobileCupWeekly_NAW_OCT",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event8_NAW": "epicgames_S37_BlitzMobileCupWeekly_NAW_OCT",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event5_NAW": "epicgames_S37_BlitzMobileCupWeekly_NAW",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event13_NAW": "epicgames_S37_BlitzMobileCupWeekly_NAW_OCT",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event10_NAW": "epicgames_S37_BlitzMobileCupWeekly_NAW_OCT",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event2_NAW": "epicgames_S37_BlitzMobileCupWeekly_NAW",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event7_NAW": "epicgames_S37_BlitzMobileCupWeekly_NAW_OCT",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event11_NAW": "epicgames_S37_BlitzMobileCupWeekly_NAW_OCT",
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event12_NAW": "epicgames_S37_BlitzMobileCupWeekly_NAW_OCT"
+  },
+  "resolvedWindowLocations": {
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event1_NAW": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event1_NAW"
+    ],
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event9_NAW": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event9_NAW"
+    ],
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event3_NAW": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event3_NAW"
+    ],
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event4_NAW": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event4_NAW"
+    ],
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event6_NAW": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event6_NAW"
+    ],
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event8_NAW": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event8_NAW"
+    ],
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event5_NAW": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event5_NAW"
+    ],
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event13_NAW": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event13_NAW"
+    ],
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event10_NAW": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event10_NAW"
+    ],
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event2_NAW": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event2_NAW"
+    ],
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event7_NAW": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event7_NAW"
+    ],
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event11_NAW": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event11_NAW"
+    ],
+    "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event12_NAW": [
+      "Fortnite:epicgames_S37_BlitzMobileCupWeekly_NAW:S37_BlitzMobileCupWeekly_Event12_NAW"
+    ]
+  },
   "eventSeries": []
 }
