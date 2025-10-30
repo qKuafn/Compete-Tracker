@@ -591,5 +591,53 @@
         ]
       }
     }
+  },
+  "S37_BlitzMobileCupWeekly_Event13_ASIA": {
+    "beginTime_UNIX": 1761811200,
+    "beginTime_JST": "2025-10-30 17:00:00",
+    "endTime_UNIX": 1761814800,
+    "endTime_JST": "2025-10-30 18:00:00",
+    "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:s37_blitzmobile_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S37_BlitzMobileCupsOctober_LeaderboardDef": {
+        "scoringRuleSetId": "S37_BlitzCups_ScoringRules",
+        "WindowLocation": "S37_BlitzMobileCupWeekly_Event13_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 5,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_lopexdale"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 750,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_cuchulainndale"
+          }
+        ]
+      }
+    }
   }
 }
