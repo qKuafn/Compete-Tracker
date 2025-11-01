@@ -1,0 +1,204 @@
+{
+  "EventName": "Solo Series Victory Cash Cup",
+  "eventId": "epicgames_S38_SoloSeriesCup_ASIA",
+  "displayDataId": "s38_soloseries",
+  "square_poster_image": "https://cdn2.unrealengine.com/fnce-37-10-soloseries-ingamecompetetab-solotexture-800x800-800x800-e2b94d5baa94.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fnce-37-10-soloseries-ingamecompetetab-grouptexture-1560x1024-1560x1024-709804f5cf5f.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/en-37-10-soloseries-discovertile-1920x1080-1920x1080-3f44c89b7a36.jpg",
+  "metadata": {
+    "requireSystemFeatures": [
+      "SecureBoot",
+      "CryptoProcessor"
+    ],
+    "tournamentType": "CashCup",
+    "TeamLockType": "Window",
+    "webId": "S38_SoloSeriesCup",
+    "minimumAccountLevel": 350,
+    "DisqualifyType": "Event",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "XboxOneGDK",
+    "PS4",
+    "XCloud",
+    "Helios",
+    "Luna",
+    "IOS",
+    "XB1",
+    "XboxOne",
+    "XSX",
+    "Android",
+    "LunaMobile",
+    "Switch2",
+    "PS5",
+    "XCloudMobile",
+    "Mac",
+    "HeliosMobile",
+    "GFN",
+    "Switch",
+    "GFNMobile",
+    "Windows"
+  ],
+  "S38_SoloSeriesCup_Event1_ASIA": {
+    "beginTime_UNIX": 1762938000,
+    "beginTime_JST": "2025-11-12 18:00:00",
+    "endTime_UNIX": 1762948800,
+    "endTime_JST": "2025-11-12 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_Solo",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:s38_soloseries_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-br:6",
+        "currentRanking:ranked-zb:6",
+        "currentRanking:ranked_blastberry_build:6",
+        "currentRanking:ranked_blastberry_nobuild:6"
+      ]
+    ],
+    "requireAllTokens": [
+      "S38_CashCup_Qualified"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S38_SoloSeriesCupEvent1_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "S37_ScoringRules_SoloSeries",
+        "WindowLocation": "S38_SoloSeriesCup_Event1_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": []
+      },
+      "S38_SoloSeriesCup_CumulativeLeaderboardDef": {
+        "scoringRuleSetId": "S37_ScoringRules_SoloSeries",
+        "WindowLocation": "epicgames_S38_SoloSeriesCup_ASIA_cumulative",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": []
+      }
+    }
+  },
+  "S38_SoloSeriesCup_Event2_ASIA": {
+    "beginTime_UNIX": 1763542800,
+    "beginTime_JST": "2025-11-19 18:00:00",
+    "endTime_UNIX": 1763553600,
+    "endTime_JST": "2025-11-19 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_Solo",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:s38_soloseries_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-br:6",
+        "currentRanking:ranked-zb:6",
+        "currentRanking:ranked_blastberry_build:6",
+        "currentRanking:ranked_blastberry_nobuild:6"
+      ]
+    ],
+    "requireAllTokens": [
+      "S38_CashCup_Qualified"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S38_SoloSeriesCupEvent2_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "S37_ScoringRules_SoloSeries",
+        "WindowLocation": "S38_SoloSeriesCup_Event2_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "cumulative:epicgames_S38_SoloSeriesCup_ASIA_cumulative",
+            "scoringType": "rank",
+            "threshold": 500,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S38_SoloSeries_Final_ASIA"
+          }
+        ]
+      },
+      "S38_SoloSeriesCup_CumulativeLeaderboardDef": {
+        "scoringRuleSetId": "S37_ScoringRules_SoloSeries",
+        "WindowLocation": "epicgames_S38_SoloSeriesCup_ASIA_cumulative",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": []
+      }
+    }
+  },
+  "S38_SoloSeriesCup_Final_ASIA": {
+    "beginTime_UNIX": 1763974800,
+    "beginTime_JST": "2025-11-24 18:00:00",
+    "endTime_UNIX": 1763978400,
+    "endTime_JST": "2025-11-24 19:00:00",
+    "playlistId": "Playlist_ShowdownTournament_Solo",
+    "matchCap": 3,
+    "additionalRequirements": [
+      "eula:s38_soloseries_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [
+      "S38_SoloSeries_Final_ASIA"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S38_SoloSeriesCupFinal_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_VictoryCup",
+        "WindowLocation": "S38_SoloSeriesCup_Final_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 100,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 200,
+            "rewardType": "ecomm",
+            "quantity": 400,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 600,
+            "value": "USD"
+          }
+        ]
+      }
+    }
+  }
+}
