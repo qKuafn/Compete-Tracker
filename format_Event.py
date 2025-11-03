@@ -540,6 +540,7 @@ def find_diffs(old, new, path=""):
     IGNORED_ORDER_KEYS = {
         "platforms",
         "additionalRequirements",
+        "requireSystemFeatures"
         "requireAllTokens",
         "requireAnyTokens",
         "requireNoneTokensCaller",
