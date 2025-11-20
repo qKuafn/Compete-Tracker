@@ -5118,6 +5118,49 @@
         ]
       }
     ],
+    "S38_StrangerThingsMobileCup_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:emoticon_vegetable",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 175,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_cornerweek",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_cornerweek",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S38_RankedCupReloadDuos_NAC": [
       {
         "scoringType": "value",
@@ -10626,6 +10669,81 @@
         "type": "br:tournament",
         "code": "tournament_epicgames_s38_strangerthingscup_nac"
       }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S38_StrangerThingsMobileCup_NAC",
+      "beginTime": "2025-11-22T02:00:00Z",
+      "endTime": "2025-11-22T03:30:00Z",
+      "displayDataId": "s38_strangerthingsblitz",
+      "eventGroup": "Season38_StrangerThingsMobileCup",
+      "announcementTime": "2025-08-07T17:00:00Z",
+      "regions": [
+        "NAC",
+        "NAE",
+        "NAW"
+      ],
+      "regionMappings": {
+        "NAC": "NACCOMP",
+        "NAE": "NACCOMP",
+        "NAW": "NACCOMP"
+      },
+      "platforms": [
+        "IOS",
+        "Android"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "webId": "S38_StrangerThingsMobileCup",
+        "minimumAccountLevel": 15,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S38_StrangerThingsMobileCup_NAC",
+          "eventTemplateId": "EventTemplate_S38_StrangerThingsCup",
+          "countdownBeginTime": "2025-11-22T01:00:00Z",
+          "beginTime": "2025-11-22T02:00:00Z",
+          "endTime": "2025-11-22T03:30:00Z",
+          "round": 0,
+          "payoutDelay": 20,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s38_stranger_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            "input-touch"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S38_StrangerThingsCup_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s38_strangerthingsmobilecup_nac"
+      }
     }
   ],
   "templates": [
@@ -13335,6 +13453,7 @@
     "Fortnite:epicgames_S38_ReloadQuickCup_Group2_NAC:S38_ReloadQuickCup_Event1Group2Round2_NAC": "ScoringRules_ReloadDuosQuick_R1",
     "Fortnite:epicgames_S38_RankedCupSolo_NAC:S38_RankedCupSolo_Event4_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S38_BlitzMobileCup_NAC:S38_BlitzMobileCup_Week1Qualifier5_NAC": "S38_TouchOnlyMobileCup_ScoringRules",
+    "Fortnite:epicgames_S38_StrangerThingsMobileCup_NAC:S38_StrangerThingsMobileCup_NAC": "S38_StrangerThingsCup_ScoringRules",
     "Fortnite:epicgames_S38_RankedCupDuosZB_NAC:S38_RankedCupDuosZB_Event2_NAC_unreal": "ScoringRules_RankedCupDuos_Unreal",
     "Fortnite:epicgames_S38_RankedCupDuosBR_NAC:S38_RankedCupDuosBR_Event2_NAC_Bronze": "ScoringRules_RankedCupDuos_Bronze",
     "Fortnite:epicgames_S38_RankedCupReloadDuos_NAC:S38_RankedCupReloadDuos_Event2_NAC_Bronze": "ScoringRules_RankedCupDuosReload_Bronze",
@@ -13524,6 +13643,7 @@
     "Fortnite:epicgames_S38_RankedCupSolo_NAC:S38_RankedCupSolo_Event6_NAC_1_diamond": "epicgames_S38_RankedCupSolo_NAC_1_PDECU",
     "Fortnite:epicgames_S38_RankedCupSolo_NAC:S38_RankedCupSolo_Event4_NAC": "epicgames_S38_RankedCupSolo_NAC",
     "Fortnite:epicgames_S38_BlitzMobileCup_NAC:S38_BlitzMobileCup_Week1Qualifier5_NAC": "S38_PayoutTable_BlitzMobileCup_Week1",
+    "Fortnite:epicgames_S38_StrangerThingsMobileCup_NAC:S38_StrangerThingsMobileCup_NAC": "S38_StrangerThingsMobileCup_NAC",
     "Fortnite:epicgames_S38_RankedCupDuosZB_NAC:S38_RankedCupDuosZB_Event2_NAC_unreal": "epicgames_S38_RankedCupDuosZB_NAC",
     "Fortnite:epicgames_S38_RankedCupDuosBR_NAC:S38_RankedCupDuosBR_Event2_NAC_Bronze": "epicgames_S38_RankedCupDuosBR_NAC",
     "Fortnite:epicgames_S38_RankedCupReloadDuos_NAC:S38_RankedCupReloadDuos_Event2_NAC_Bronze": "epicgames_S38_RankedCupReloadDuos_NAC",
@@ -13809,6 +13929,9 @@
     "Fortnite:epicgames_S38_BlitzMobileCup_NAC:S38_BlitzMobileCup_Week1Qualifier5_NAC": [
       "Fortnite:epicgames_S38_BlitzMobileCup_NAC:S38_BlitzMobileCup_Week1Qualifier5_NAC",
       "Fortnite:series:epicgames_S38_BlitzMobileCup_NAC_Week1_series"
+    ],
+    "Fortnite:epicgames_S38_StrangerThingsMobileCup_NAC:S38_StrangerThingsMobileCup_NAC": [
+      "Fortnite:epicgames_S38_StrangerThingsMobileCup_NAC:S38_StrangerThingsMobileCup_NAC"
     ],
     "Fortnite:epicgames_S38_ReloadQuickCup_NAC:S38_ReloadQuickCup_Event1Round1_NAC": [
       "Fortnite:epicgames_S38_ReloadQuickCup_NAC:S38_ReloadQuickCup_Event1Round1_NAC"
