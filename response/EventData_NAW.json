@@ -4440,6 +4440,75 @@
       }
     ],
     "EmptyScoringRules": [],
+    "S38_StrangerThingsCup_ScoringRules": [
+      {
+        "trackedStat": "PLACEMENT_STAT_INDEX",
+        "matchRule": "lte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 2,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 3,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 4,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 5,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 6,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 7,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 8,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 9,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 10,
+            "pointsEarned": 1,
+            "multiplicative": false
+          }
+        ]
+      },
+      {
+        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+        "matchRule": "gte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 1,
+            "multiplicative": true
+          }
+        ]
+      }
+    ],
     "ScoringRules_RankedCupDuosReload_Champion": [
       {
         "trackedStat": "CHAMPION_PLACEMENT_STAT_INDEX",
@@ -5364,6 +5433,49 @@
                 "value": "S38_ReloadQuickCup_Event1Round3_NAW",
                 "quantity": 1,
                 "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S38_StrangerThingsCup_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:emoticon_vegetable",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1700,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_cornerweek",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_cornerweek",
+                "quantity": 1,
+                "notifiesPlayer": true
               }
             ]
           }
@@ -10274,6 +10386,98 @@
         "type": "br:tournament",
         "code": "tournament_epicgames_s38_squadsvictorycup_naw"
       }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S38_StrangerThingsCup_NAC",
+      "beginTime": "2025-11-22T04:00:00Z",
+      "endTime": "2025-11-22T05:30:00Z",
+      "displayDataId": "s38_strangerthings",
+      "eventGroup": "Season38_StrangerThingsCup",
+      "announcementTime": "2025-11-07T18:00:00Z",
+      "regions": [
+        "NAC",
+        "NAE",
+        "NAW"
+      ],
+      "regionMappings": {
+        "NAC": "NACCOMP",
+        "NAE": "NACCOMP",
+        "NAW": "NACCOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "IOS",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "Android",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "webId": "S38_StrangerThingsCup",
+        "minimumAccountLevel": 50,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S38_StrangerThingsCup_NAC",
+          "eventTemplateId": "EventTemplate_S38_StrangerThingsCup",
+          "countdownBeginTime": "2025-11-22T03:00:00Z",
+          "beginTime": "2025-11-22T04:00:00Z",
+          "endTime": "2025-11-22T05:30:00Z",
+          "round": 0,
+          "payoutDelay": 20,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s38_stranger_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S38_StrangerThingsCup_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s38_strangerthingscup_nac"
+      }
     }
   ],
   "templates": [
@@ -10531,6 +10735,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupSolo",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+      "matchCap": 15,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S38_StrangerThingsCup",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -12559,6 +12800,51 @@
     },
     {
       "gameId": "Fortnite",
+      "leaderboardDefId": "S38_StrangerThingsCup_LeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 15,
+      "useIndividualScores": true,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S38_StrangerThingsCup_ScoringRules",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${windowId}",
+        "payoutDate": "windowEnd+PT10M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    },
+    {
+      "gameId": "Fortnite",
       "leaderboardDefId": "RankedCupDuosReload_Diamond_LeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -12833,6 +13119,7 @@
     "Fortnite:epicgames_S38_RankedCupDuosZB_NAW:S38_RankedCupDuosZB_Event3_NAW_champion": "ScoringRules_RankedCupDuos_Champion",
     "Fortnite:epicgames_S38_RankedCupSolo_NAW:S38_RankedCupSolo_Event5_NAW_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S38_RankedCupSolo_NAW:S38_RankedCupSolo_Event1_NAW_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
+    "Fortnite:epicgames_S38_StrangerThingsCup_NAC:S38_StrangerThingsCup_NAC": "S38_StrangerThingsCup_ScoringRules",
     "Fortnite:epicgames_S38_RankedCupSolo_NAW:S38_RankedCupSolo_Event6_NAW_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S38_RankedCupReloadDuos_NAW:S38_RankedCupReloadDuos_Event1_NAW_diamond": "ScoringRules_RankedCupDuosReload_Diamond",
     "Fortnite:epicgames_S38_RankedCupSolo_NAW:S38_RankedCupSolo_Event3_NAW_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
@@ -13032,6 +13319,7 @@
     "Fortnite:epicgames_S38_RankedCupDuosZB_NAW:S38_RankedCupDuosZB_Event3_NAW_champion": "epicgames_S38_RankedCupDuosZB_NAW",
     "Fortnite:epicgames_S38_RankedCupSolo_NAW:S38_RankedCupSolo_Event5_NAW_1_diamond": "epicgames_S38_RankedCupSolo_NAW_1_PDECU",
     "Fortnite:epicgames_S38_RankedCupSolo_NAW:S38_RankedCupSolo_Event1_NAW_1_elite": "epicgames_S38_RankedCupSolo_NAW_1_PDECU",
+    "Fortnite:epicgames_S38_StrangerThingsCup_NAC:S38_StrangerThingsCup_NAC": "S38_StrangerThingsCup_NAC",
     "Fortnite:epicgames_S38_RankedCupSolo_NAW:S38_RankedCupSolo_Event6_NAW_1_elite": "epicgames_S38_RankedCupSolo_NAW_1_PDECU",
     "Fortnite:epicgames_S38_RankedCupReloadDuos_NAW:S38_RankedCupReloadDuos_Event1_NAW_diamond": "epicgames_S38_RankedCupReloadDuos_NAW",
     "Fortnite:epicgames_S38_RankedCupSolo_NAW:S38_RankedCupSolo_Event3_NAW_1_diamond": "epicgames_S38_RankedCupSolo_NAW_1_PDECU",
@@ -13182,6 +13470,9 @@
       "Fortnite:epicgames_S38_RankedCupDuosZB_NAW:S38_RankedCupDuosZB_Event2_NAW_elite",
       "Fortnite:epicgames_S38_RankedCupDuosZB_NAW:S38_RankedCupDuosZB_Event2_NAW_champion",
       "Fortnite:epicgames_S38_RankedCupDuosZB_NAW:S38_RankedCupDuosZB_Event2_NAW_unreal"
+    ],
+    "Fortnite:epicgames_S38_StrangerThingsCup_NAC:S38_StrangerThingsCup_NAC": [
+      "Fortnite:epicgames_S38_StrangerThingsCup_NAC:S38_StrangerThingsCup_NAC"
     ],
     "Fortnite:epicgames_S38_RankedCupSolo_NAW:S38_RankedCupSolo_Event4_NAW": [
       "Fortnite:epicgames_S38_RankedCupSolo_NAW:S38_RankedCupSolo_Event4_NAW",
