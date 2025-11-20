@@ -5236,25 +5236,6 @@
         "scoreId": "cumulative:epicgames_S38_SoloSeriesCup_ME_cumulative"
       }
     ],
-    "epicgames_S38_RankedCupSolo_ME_1_BSG": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 50,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaGlider:umbrella_rankedstill",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "S38_SquadsVictoryCup_Round1_Day1_ME": [
       {
         "scoringType": "rank",
@@ -5659,6 +5640,68 @@
       }
     ],
     "epicgames_S38_RankedCupDuosZB_ME": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaGlider:umbrella_rankedstill",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S38_StrangerThingsMobileCup_ME": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:emoticon_vegetable",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 45,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_cornerweek",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_cornerweek",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "epicgames_S38_RankedCupSolo_ME_1_BSG": [
       {
         "scoringType": "value",
         "ranks": [
@@ -10462,6 +10505,77 @@
         "type": "br:tournament",
         "code": "tournament_epicgames_s38_strangerthingscup_me"
       }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S38_StrangerThingsMobileCup_ME",
+      "beginTime": "2025-11-21T14:00:00Z",
+      "endTime": "2025-11-21T15:30:00Z",
+      "displayDataId": "s38_strangerthingsblitz",
+      "eventGroup": "Season38_StrangerThingsMobileCup",
+      "announcementTime": "2025-08-07T06:00:00Z",
+      "regions": [
+        "ME"
+      ],
+      "regionMappings": {
+        "ME": "MECOMP"
+      },
+      "platforms": [
+        "IOS",
+        "Android"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "webId": "S38_StrangerThingsMobileCup",
+        "minimumAccountLevel": 15,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S38_StrangerThingsMobileCup_ME",
+          "eventTemplateId": "EventTemplate_S38_StrangerThingsCup",
+          "countdownBeginTime": "2025-11-21T13:00:00Z",
+          "beginTime": "2025-11-21T14:00:00Z",
+          "endTime": "2025-11-21T15:30:00Z",
+          "round": 0,
+          "payoutDelay": 20,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s38_stranger_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            "input-touch"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S38_StrangerThingsCup_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s38_strangerthingsmobilecup_me"
+      }
     }
   ],
   "templates": [
@@ -13209,6 +13323,7 @@
     "Fortnite:epicgames_S38_BlitzMobileCup_ME:S38_BlitzMobileCup_Week2Qualifier3_ME": "S38_TouchOnlyMobileCup_ScoringRules",
     "Fortnite:epicgames_S38_RankedCupDuosBR_ME:S38_RankedCupDuosBR_Event3_ME_elite": "ScoringRules_RankedCupDuos_Elite",
     "Fortnite:epicgames_S38_RankedCupDuosBR_ME:S38_RankedCupDuosBR_Event1_ME_platinum": "ScoringRules_RankedCupDuos_Platinum",
+    "Fortnite:epicgames_S38_StrangerThingsMobileCup_ME:S38_StrangerThingsMobileCup_ME": "S38_StrangerThingsCup_ScoringRules",
     "Fortnite:epicgames_S38_ReloadQuickCup_Group2_ME:S38_ReloadQuickCup_Event1Group2Round2_ME": "ScoringRules_ReloadDuosQuick_R1",
     "Fortnite:series:epicgames_S38_BlitzMobileCup_ME_Week1_series": "EmptyScoringRules",
     "Fortnite:epicgames_S38_RankedCupDuosZB_ME:S38_RankedCupDuosZB_Event1_ME_Silver": "ScoringRules_RankedCupDuos_Silver",
@@ -13401,6 +13516,7 @@
     "Fortnite:epicgames_S38_BlitzMobileCup_ME:S38_BlitzMobileCup_Week2Qualifier3_ME": "S38_PayoutTable_BlitzMobileCup_Week2",
     "Fortnite:epicgames_S38_RankedCupDuosBR_ME:S38_RankedCupDuosBR_Event3_ME_elite": "epicgames_S38_RankedCupDuosBR_ME",
     "Fortnite:epicgames_S38_RankedCupDuosBR_ME:S38_RankedCupDuosBR_Event1_ME_platinum": "epicgames_S38_RankedCupDuosBR_ME",
+    "Fortnite:epicgames_S38_StrangerThingsMobileCup_ME:S38_StrangerThingsMobileCup_ME": "S38_StrangerThingsMobileCup_ME",
     "Fortnite:epicgames_S38_RankedCupDuosZB_ME:S38_RankedCupDuosZB_Event1_ME_Silver": "epicgames_S38_RankedCupDuosZB_ME",
     "Fortnite:epicgames_S38_RankedCupSolo_ME:S38_RankedCupSolo_Event3_ME": "epicgames_S38_RankedCupSolo_ME",
     "Fortnite:epicgames_S38_RankedCupDuosBR_ME:S38_RankedCupDuosBR_Event1_ME_Silver": "epicgames_S38_RankedCupDuosBR_ME",
@@ -13688,6 +13804,9 @@
     "Fortnite:epicgames_S38_BlitzMobileCup_ME:S38_BlitzMobileCup_Week2Qualifier3_ME": [
       "Fortnite:epicgames_S38_BlitzMobileCup_ME:S38_BlitzMobileCup_Week2Qualifier3_ME",
       "Fortnite:series:epicgames_S38_BlitzMobileCup_ME_Week2_series"
+    ],
+    "Fortnite:epicgames_S38_StrangerThingsMobileCup_ME:S38_StrangerThingsMobileCup_ME": [
+      "Fortnite:epicgames_S38_StrangerThingsMobileCup_ME:S38_StrangerThingsMobileCup_ME"
     ],
     "Fortnite:epicgames_S38_ReloadQuickCup_Group2_ME:S38_ReloadQuickCup_Event1Group2Round2_ME": [
       "Fortnite:epicgames_S38_ReloadQuickCup_Group2_ME:S38_ReloadQuickCup_Event1Group2Round2_ME"
