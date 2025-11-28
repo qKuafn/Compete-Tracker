@@ -538,6 +538,150 @@
         ]
       }
     ],
+    "ScoringRules_DuosDivisionalCupTrial": [
+      {
+        "trackedStat": "PLACEMENT_STAT_INDEX",
+        "matchRule": "lte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 9,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 2,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 3,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 4,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 5,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 6,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 7,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 8,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 9,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 10,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 11,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 12,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 13,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 14,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 15,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 16,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 17,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 18,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 19,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 20,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 21,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 22,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 23,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 24,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 25,
+            "pointsEarned": 2,
+            "multiplicative": false
+          }
+        ]
+      },
+      {
+        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+        "matchRule": "gte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 1,
+            "multiplicative": true
+          }
+        ]
+      }
+    ],
     "EmptyScoringRules": [],
     "S37_ScoringRules_SoloSeries": [
       {
@@ -803,6 +947,30 @@
           {
             "keyValue": 1,
             "pointsEarned": 2,
+            "multiplicative": true
+          }
+        ]
+      }
+    ],
+    "ScoringRules_PerformanceEvaluationRound2": [
+      {
+        "trackedStat": "PLACEMENT_STAT_INDEX",
+        "matchRule": "lte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 100,
+            "multiplicative": false
+          }
+        ]
+      },
+      {
+        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+        "matchRule": "gte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 0,
             "multiplicative": true
           }
         ]
@@ -1148,79 +1316,17 @@
     ]
   },
   "payoutTables": {
-    "S39_ChaosChampionFNCSBlitzCup_NAC": [
+    "S39_PerformanceEvaluation_Event10Round1_NAC": [
       {
         "scoringType": "rank",
         "ranks": [
           {
-            "threshold": 150,
+            "threshold": 50,
             "payouts": [
               {
-                "rewardType": "game",
+                "rewardType": "token",
                 "rewardMode": "standard",
-                "value": "AthenaCharacter:character_wickedmindfncs",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "thenaItemWrap:wrap_wickedmindfncs",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_happyfncs",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_fncs_s38",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:eid_victoryhighway",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 8,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:spray_s38fncscommunitycup",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 40,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_fncsshield_s38",
+                "value": "S39_PerformanceEvaluation_Event10Round2_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -1310,18 +1416,37 @@
         ]
       }
     ],
-    "S39_PayoutTable_SoloSeriesCopy": [
+    "S39_PerformanceEvaluation_Event5Round1_NAC": [
       {
-        "scoringType": "value",
+        "scoringType": "rank",
         "ranks": [
           {
-            "threshold": 0,
+            "threshold": 50,
             "payouts": [
               {
-                "rewardType": "copy_score",
+                "rewardType": "token",
                 "rewardMode": "standard",
-                "value": "S39_SoloSeriesCup_SeriesLeaderboardDef",
-                "quantity": 0,
+                "value": "S39_PerformanceEvaluation_Event5Round2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S39_PerformanceEvaluation_Event4Round1_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_PerformanceEvaluation_Event4Round2_NAC",
+                "quantity": 1,
                 "notifiesPlayer": false
               }
             ]
@@ -1364,9 +1489,1374 @@
           }
         ]
       }
+    ],
+    "S39_PerformanceEvaluation_Event9Round1_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_PerformanceEvaluation_Event9Round2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S39_PerformanceEvaluation_Event1Round1_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_PerformanceEvaluation_Event1Round2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S39_PerformanceEvaluation_Event3Round1_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_PerformanceEvaluation_Event3Round2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S39_PerformanceEvaluation_Event11Round1_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_PerformanceEvaluation_Event11Round2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S39_PerformanceEvaluation_Event8Round1_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_PerformanceEvaluation_Event8Round2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S39_ChaosChampionFNCSBlitzCup_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 150,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_wickedmindfncs",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "thenaItemWrap:wrap_wickedmindfncs",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_happyfncs",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_fncs_s38",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:eid_victoryhighway",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_s38fncscommunitycup",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 40,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_fncsshield_s38",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S39_PerformanceEvaluation_Event2Round1_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_PerformanceEvaluation_Event2Round2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S39_PayoutTable_SoloSeriesCopy": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "copy_score",
+                "rewardMode": "standard",
+                "value": "S39_SoloSeriesCup_SeriesLeaderboardDef",
+                "quantity": 0,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S39_PerformanceEvaluation_Event7Round1_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_PerformanceEvaluation_Event7Round2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S39_PerformanceEvaluation_Event6Round1_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_PerformanceEvaluation_Event6Round2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S35_PayoutTable_PerformanceEvaluation_Round2": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 100,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 400,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 800,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 300,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 1200,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 1600,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
     ]
   },
   "events": [
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S39_PerformanceEvaluation_NAC",
+      "beginTime": "2025-12-05T00:00:00Z",
+      "endTime": "2026-02-27T05:00:00Z",
+      "displayDataId": "s37_perfeval",
+      "eventGroup": "Season39_PerfEval",
+      "announcementTime": "2025-08-27T12:00:00Z",
+      "regions": [
+        "NAC",
+        "NAE"
+      ],
+      "regionMappings": {
+        "NAC": "NACCOMP",
+        "NAE": "NACCOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "IOS",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "Android",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "SecureBoot",
+          "CryptoProcessor"
+        ],
+        "tournamentType": "WorkshopCup",
+        "webId": "S39_PerformanceEvaluation",
+        "minimumAccountLevel": 350,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event1Round1_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round1",
+          "countdownBeginTime": "2025-12-04T22:00:00Z",
+          "beginTime": "2025-12-05T00:00:00Z",
+          "endTime": "2025-12-05T02:00:00Z",
+          "round": 1,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_PerformanceEvaluation_Round1_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "S37_Duos_Division1_BR",
+            "S37_Duos_Division1_NAW",
+            "S37_Duos_Division1_OCE",
+            "S37_Duos_Division1_ME",
+            "S37_Duos_Division1_NAC",
+            "S37_Duos_Division1_ASIA",
+            "S37_Duos_Division1_EU"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "SubgroupId": "Week1",
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event1Round2_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round2",
+          "countdownBeginTime": "2025-12-05T01:00:00Z",
+          "beginTime": "2025-12-05T03:00:00Z",
+          "endTime": "2025-12-05T05:00:00Z",
+          "round": 1,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_PerformanceEvaluation_Event1Round2_NAC"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {
+            "NAC": "NACCOMPTEST",
+            "NAE": "NACCOMPTEST"
+          },
+          "metadata": {
+            "ScheduledMatchmakingInitialDelaySeconds": 600,
+            "SubgroupId": "Week1",
+            "ServerReplays": true,
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingMatchDelaySeconds": 1920
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event2Round1_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round1",
+          "countdownBeginTime": "2025-12-11T22:00:00Z",
+          "beginTime": "2025-12-12T00:00:00Z",
+          "endTime": "2025-12-12T02:00:00Z",
+          "round": 2,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_PerformanceEvaluation_Round1_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "S37_Duos_Division1_BR",
+            "S37_Duos_Division1_NAW",
+            "S37_Duos_Division1_OCE",
+            "S37_Duos_Division1_ME",
+            "S37_Duos_Division1_NAC",
+            "S37_Duos_Division1_ASIA",
+            "S37_Duos_Division1_EU"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "SubgroupId": "Week2",
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event2Round2_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round2",
+          "countdownBeginTime": "2025-12-12T01:00:00Z",
+          "beginTime": "2025-12-12T03:00:00Z",
+          "endTime": "2025-12-12T05:00:00Z",
+          "round": 2,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_PerformanceEvaluation_Event2Round2_NAC"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {
+            "NAC": "NACCOMPTEST",
+            "NAE": "NACCOMPTEST"
+          },
+          "metadata": {
+            "ScheduledMatchmakingInitialDelaySeconds": 600,
+            "SubgroupId": "Week2",
+            "ServerReplays": true,
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingMatchDelaySeconds": 1920
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event3Round1_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round1",
+          "countdownBeginTime": "2025-12-18T22:00:00Z",
+          "beginTime": "2025-12-19T00:00:00Z",
+          "endTime": "2025-12-19T02:00:00Z",
+          "round": 3,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_PerformanceEvaluation_Round1_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "S37_Duos_Division1_BR",
+            "S37_Duos_Division1_NAW",
+            "S37_Duos_Division1_OCE",
+            "S37_Duos_Division1_ME",
+            "S37_Duos_Division1_NAC",
+            "S37_Duos_Division1_ASIA",
+            "S37_Duos_Division1_EU"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "SubgroupId": "Week3",
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event3Round2_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round2",
+          "countdownBeginTime": "2025-12-19T01:00:00Z",
+          "beginTime": "2025-12-19T03:00:00Z",
+          "endTime": "2025-12-19T05:00:00Z",
+          "round": 3,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_PerformanceEvaluation_Event3Round2_NAC"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {
+            "NAC": "NACCOMPTEST",
+            "NAE": "NACCOMPTEST"
+          },
+          "metadata": {
+            "ScheduledMatchmakingInitialDelaySeconds": 600,
+            "SubgroupId": "Week3",
+            "ServerReplays": true,
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingMatchDelaySeconds": 1920
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event4Round1_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round1",
+          "countdownBeginTime": "2026-01-09T22:00:00Z",
+          "beginTime": "2026-01-10T00:00:00Z",
+          "endTime": "2026-01-10T02:00:00Z",
+          "round": 4,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_PerformanceEvaluation_Round1_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "S37_Duos_Division1_BR",
+            "S37_Duos_Division1_NAW",
+            "S37_Duos_Division1_OCE",
+            "S37_Duos_Division1_ME",
+            "S37_Duos_Division1_NAC",
+            "S37_Duos_Division1_ASIA",
+            "S37_Duos_Division1_EU"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "SubgroupId": "Week4",
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event4Round2_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round2",
+          "countdownBeginTime": "2026-01-10T01:00:00Z",
+          "beginTime": "2026-01-10T03:00:00Z",
+          "endTime": "2026-01-10T05:00:00Z",
+          "round": 4,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_PerformanceEvaluation_Event4Round2_NAC"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {
+            "NAC": "NACCOMPTEST",
+            "NAE": "NACCOMPTEST"
+          },
+          "metadata": {
+            "ScheduledMatchmakingInitialDelaySeconds": 600,
+            "SubgroupId": "Week4",
+            "ServerReplays": true,
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingMatchDelaySeconds": 1920
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event5Round1_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round1",
+          "countdownBeginTime": "2026-01-15T22:00:00Z",
+          "beginTime": "2026-01-16T00:00:00Z",
+          "endTime": "2026-01-16T02:00:00Z",
+          "round": 5,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_PerformanceEvaluation_Round1_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "S37_Duos_Division1_BR",
+            "S37_Duos_Division1_NAW",
+            "S37_Duos_Division1_OCE",
+            "S37_Duos_Division1_ME",
+            "S37_Duos_Division1_NAC",
+            "S37_Duos_Division1_ASIA",
+            "S37_Duos_Division1_EU"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "SubgroupId": "Week5",
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event5Round2_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round2",
+          "countdownBeginTime": "2026-01-16T01:00:00Z",
+          "beginTime": "2026-01-16T03:00:00Z",
+          "endTime": "2026-01-16T05:00:00Z",
+          "round": 5,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_PerformanceEvaluation_Event5Round2_NAC"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {
+            "NAC": "NACCOMPTEST",
+            "NAE": "NACCOMPTEST"
+          },
+          "metadata": {
+            "ScheduledMatchmakingInitialDelaySeconds": 600,
+            "SubgroupId": "Week5",
+            "ServerReplays": true,
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingMatchDelaySeconds": 1920
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event6Round1_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round1",
+          "countdownBeginTime": "2026-01-22T22:00:00Z",
+          "beginTime": "2026-01-23T00:00:00Z",
+          "endTime": "2026-01-23T02:00:00Z",
+          "round": 6,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_PerformanceEvaluation_Round1_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "S37_Duos_Division1_BR",
+            "S37_Duos_Division1_NAW",
+            "S37_Duos_Division1_OCE",
+            "S37_Duos_Division1_ME",
+            "S37_Duos_Division1_NAC",
+            "S37_Duos_Division1_ASIA",
+            "S37_Duos_Division1_EU"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "SubgroupId": "Week6",
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event6Round2_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round2",
+          "countdownBeginTime": "2026-01-23T01:00:00Z",
+          "beginTime": "2026-01-23T03:00:00Z",
+          "endTime": "2026-01-23T05:00:00Z",
+          "round": 6,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_PerformanceEvaluation_Event6Round2_NAC"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {
+            "NAC": "NACCOMPTEST",
+            "NAE": "NACCOMPTEST"
+          },
+          "metadata": {
+            "ScheduledMatchmakingInitialDelaySeconds": 600,
+            "SubgroupId": "Week6",
+            "ServerReplays": true,
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingMatchDelaySeconds": 1920
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event7Round1_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round1",
+          "countdownBeginTime": "2026-01-29T22:00:00Z",
+          "beginTime": "2026-01-30T00:00:00Z",
+          "endTime": "2026-01-30T02:00:00Z",
+          "round": 7,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_PerformanceEvaluation_Round1_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "S37_Duos_Division1_BR",
+            "S37_Duos_Division1_NAW",
+            "S37_Duos_Division1_OCE",
+            "S37_Duos_Division1_ME",
+            "S37_Duos_Division1_NAC",
+            "S37_Duos_Division1_ASIA",
+            "S37_Duos_Division1_EU"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "SubgroupId": "Week7",
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event7Round2_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round2",
+          "countdownBeginTime": "2026-01-30T01:00:00Z",
+          "beginTime": "2026-01-30T03:00:00Z",
+          "endTime": "2026-01-30T05:00:00Z",
+          "round": 7,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_PerformanceEvaluation_Event7Round2_NAC"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {
+            "NAC": "NACCOMPTEST",
+            "NAE": "NACCOMPTEST"
+          },
+          "metadata": {
+            "ScheduledMatchmakingInitialDelaySeconds": 600,
+            "SubgroupId": "Week7",
+            "ServerReplays": true,
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingMatchDelaySeconds": 1920
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event8Round1_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round1",
+          "countdownBeginTime": "2026-02-05T22:00:00Z",
+          "beginTime": "2026-02-06T00:00:00Z",
+          "endTime": "2026-02-06T02:00:00Z",
+          "round": 8,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_PerformanceEvaluation_Round1_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "S37_Duos_Division1_BR",
+            "S37_Duos_Division1_NAW",
+            "S37_Duos_Division1_OCE",
+            "S37_Duos_Division1_ME",
+            "S37_Duos_Division1_NAC",
+            "S37_Duos_Division1_ASIA",
+            "S37_Duos_Division1_EU"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "SubgroupId": "Week8",
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event8Round2_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round2",
+          "countdownBeginTime": "2026-02-06T01:00:00Z",
+          "beginTime": "2026-02-06T03:00:00Z",
+          "endTime": "2026-02-06T05:00:00Z",
+          "round": 8,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_PerformanceEvaluation_Event8Round2_NAC"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {
+            "NAC": "NACCOMPTEST",
+            "NAE": "NACCOMPTEST"
+          },
+          "metadata": {
+            "ScheduledMatchmakingInitialDelaySeconds": 600,
+            "SubgroupId": "Week8",
+            "ServerReplays": true,
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingMatchDelaySeconds": 1920
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event9Round1_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round1",
+          "countdownBeginTime": "2026-02-12T22:00:00Z",
+          "beginTime": "2026-02-13T00:00:00Z",
+          "endTime": "2026-02-13T02:00:00Z",
+          "round": 9,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_PerformanceEvaluation_Round1_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "S37_Duos_Division1_BR",
+            "S37_Duos_Division1_NAW",
+            "S37_Duos_Division1_OCE",
+            "S37_Duos_Division1_ME",
+            "S37_Duos_Division1_NAC",
+            "S37_Duos_Division1_ASIA",
+            "S37_Duos_Division1_EU"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "SubgroupId": "Week9",
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event9Round2_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round2",
+          "countdownBeginTime": "2026-02-13T01:00:00Z",
+          "beginTime": "2026-02-13T03:00:00Z",
+          "endTime": "2026-02-13T05:00:00Z",
+          "round": 9,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_PerformanceEvaluation_Event9Round2_NAC"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {
+            "NAC": "NACCOMPTEST",
+            "NAE": "NACCOMPTEST"
+          },
+          "metadata": {
+            "ScheduledMatchmakingInitialDelaySeconds": 600,
+            "SubgroupId": "Week9",
+            "ServerReplays": true,
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingMatchDelaySeconds": 1920
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event10Round1_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round1",
+          "countdownBeginTime": "2026-02-19T22:00:00Z",
+          "beginTime": "2026-02-20T00:00:00Z",
+          "endTime": "2026-02-20T02:00:00Z",
+          "round": 10,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_PerformanceEvaluation_Round1_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "S37_Duos_Division1_BR",
+            "S37_Duos_Division1_NAW",
+            "S37_Duos_Division1_OCE",
+            "S37_Duos_Division1_ME",
+            "S37_Duos_Division1_NAC",
+            "S37_Duos_Division1_ASIA",
+            "S37_Duos_Division1_EU"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "SubgroupId": "Week10",
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event10Round2_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round2",
+          "countdownBeginTime": "2026-02-20T01:00:00Z",
+          "beginTime": "2026-02-20T03:00:00Z",
+          "endTime": "2026-02-20T05:00:00Z",
+          "round": 10,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_PerformanceEvaluation_Event10Round2_NAC"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {
+            "NAC": "NACCOMPTEST",
+            "NAE": "NACCOMPTEST"
+          },
+          "metadata": {
+            "ScheduledMatchmakingInitialDelaySeconds": 600,
+            "SubgroupId": "Week10",
+            "ServerReplays": true,
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingMatchDelaySeconds": 1920
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event11Round1_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round1",
+          "countdownBeginTime": "2026-02-26T22:00:00Z",
+          "beginTime": "2026-02-27T00:00:00Z",
+          "endTime": "2026-02-27T02:00:00Z",
+          "round": 11,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S37_PerformanceEvaluation_Round1_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "S37_Duos_Division1_BR",
+            "S37_Duos_Division1_NAW",
+            "S37_Duos_Division1_OCE",
+            "S37_Duos_Division1_ME",
+            "S37_Duos_Division1_NAC",
+            "S37_Duos_Division1_ASIA",
+            "S37_Duos_Division1_EU"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "SubgroupId": "Week11",
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S39_PerformanceEvaluation_Event11Round2_NAC",
+          "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round2",
+          "countdownBeginTime": "2026-02-27T01:00:00Z",
+          "beginTime": "2026-02-27T03:00:00Z",
+          "endTime": "2026-02-27T05:00:00Z",
+          "round": 11,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_perfeval_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_PerformanceEvaluation_Event11Round2_NAC"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {
+            "NAC": "NACCOMPTEST",
+            "NAE": "NACCOMPTEST"
+          },
+          "metadata": {
+            "ScheduledMatchmakingInitialDelaySeconds": 600,
+            "SubgroupId": "Week11",
+            "ServerReplays": true,
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingMatchDelaySeconds": 1920
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s39_performanceevaluation_nac"
+      }
+    },
     {
       "gameId": "Fortnite",
       "eventId": "epicgames_S39_ChaosChampionFNCSBlitzCup_NAC",
@@ -2180,43 +3670,6 @@
   ],
   "templates": [
     {
-      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
-      "matchCap": 10,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S39_ChaosChampionFNCSBlitzCup",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_Solo",
       "matchCap": 10,
       "tiebreakerFormula": {
@@ -2254,6 +3707,43 @@
       "clampsToZero": false
     },
     {
+      "playlistId": "Playlist_ShowdownTournament_Duos",
+      "matchCap": 4,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round2",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_Solo",
       "matchCap": 10,
       "tiebreakerFormula": {
@@ -2285,6 +3775,80 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_S37_SoloSeriesCup",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_NPM_Duos",
+      "matchCap": 7,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S37_PerformanceEvaluation_Round1",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+      "matchCap": 10,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S39_ChaosChampionFNCSBlitzCup",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -2329,6 +3893,51 @@
     }
   ],
   "leaderboardDefs": [
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "S37_PerformanceEvaluation_Round1_DefaultLeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "ScoringRules_DuosDivisionalCupTrial",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${windowId}",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    },
     {
       "gameId": "Fortnite",
       "leaderboardDefId": "S39_SoloSeriesCupFinalDay1_DefaultLeaderboardDef",
@@ -2476,6 +4085,51 @@
     },
     {
       "gameId": "Fortnite",
+      "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "ScoringRules_PerformanceEvaluationRound2",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "S35_PayoutTable_PerformanceEvaluation_Round2",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    },
+    {
+      "gameId": "Fortnite",
       "leaderboardDefId": "S39_ChaosChampionFNCSCup_LeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -2613,51 +4267,96 @@
   "scoreLocationScoringRuleSets": {
     "Fortnite:series:epicgames_S39_SoloSeriesCup_NAC_series": "EmptyScoringRules",
     "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event3_NAC": "S37_ScoringRules_SoloSeries",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event8Round1_NAC": "ScoringRules_DuosDivisionalCupTrial",
     "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event4_NAC": "S37_ScoringRules_SoloSeries",
-    "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event2_NAC": "S37_ScoringRules_SoloSeries",
     "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event1_NAC": "S37_ScoringRules_SoloSeries",
-    "Fortnite:epicgames_S39_SoloSeriesCupFinal_NAC:S39_SoloSeriesCupFinal_Day1_NAC": "S37_ScoringRules_FinalSoloSeries",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event2Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event5Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
     "Fortnite:cumulative:epicgames_S39_SoloSeriesCupFinal_NAC_cumulative": "S37_ScoringRules_FinalSoloSeries",
     "Fortnite:epicgames_S39_SoloSeriesCupFinal_NAC:S39_SoloSeriesCupFinal_Day2_NAC": "S37_ScoringRules_FinalSoloSeries",
     "Fortnite:epicgames_S39_ChaosChampionFNCSBlitzCup_NAC:S39_ChaosChampionFNCSBlitzCup_NAC": "S39_ChaosChampionFNCSBlitzCup_ScoringRules",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event6Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat4_NAC": "S39_ScoringRules_HeatsSoloSeries",
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat1_NAC": "S39_ScoringRules_HeatsSoloSeries",
-    "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat2_NAC": "S39_ScoringRules_HeatsSoloSeries",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event1Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event11Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event6Round1_NAC": "ScoringRules_DuosDivisionalCupTrial",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event9Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event10Round1_NAC": "ScoringRules_DuosDivisionalCupTrial",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event5Round1_NAC": "ScoringRules_DuosDivisionalCupTrial",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event8Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat3_NAC": "S39_ScoringRules_HeatsSoloSeries",
-    "Fortnite:epicgames_S39_ChaosChampionFNCSCup_NAC:S39_ChaosChampionFNCSCup_NAC": "S39_ChaosChampionFNCSCup_ScoringRules"
+    "Fortnite:epicgames_S39_ChaosChampionFNCSCup_NAC:S39_ChaosChampionFNCSCup_NAC": "S39_ChaosChampionFNCSCup_ScoringRules",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event4Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
+    "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event2_NAC": "S37_ScoringRules_SoloSeries",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event7Round1_NAC": "ScoringRules_DuosDivisionalCupTrial",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event7Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
+    "Fortnite:epicgames_S39_SoloSeriesCupFinal_NAC:S39_SoloSeriesCupFinal_Day1_NAC": "S37_ScoringRules_FinalSoloSeries",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event3Round1_NAC": "ScoringRules_DuosDivisionalCupTrial",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event9Round1_NAC": "ScoringRules_DuosDivisionalCupTrial",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event2Round1_NAC": "ScoringRules_DuosDivisionalCupTrial",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event10Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event1Round1_NAC": "ScoringRules_DuosDivisionalCupTrial",
+    "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat2_NAC": "S39_ScoringRules_HeatsSoloSeries",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event3Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event4Round1_NAC": "ScoringRules_DuosDivisionalCupTrial",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event11Round1_NAC": "ScoringRules_DuosDivisionalCupTrial"
   },
   "scoreLocationPayoutTables": {
     "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event3_NAC": "S39_PayoutTable_SoloSeriesCopy",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event8Round1_NAC": "S39_PerformanceEvaluation_Event8Round1_NAC",
     "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event4_NAC": "S39_PayoutTable_SoloSeriesCopy",
-    "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event2_NAC": "S39_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event1_NAC": "S39_PayoutTable_SoloSeriesCopy",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event7Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event2Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event5Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S39_ChaosChampionFNCSBlitzCup_NAC:S39_ChaosChampionFNCSBlitzCup_NAC": "S39_ChaosChampionFNCSBlitzCup_NAC",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event6Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat4_NAC": "epicgames_S39_SoloSeriesCupHeats_NAC",
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat1_NAC": "epicgames_S39_SoloSeriesCupHeats_NAC",
-    "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat2_NAC": "epicgames_S39_SoloSeriesCupHeats_NAC",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event1Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event11Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event6Round1_NAC": "S39_PerformanceEvaluation_Event6Round1_NAC",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event9Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event10Round1_NAC": "S39_PerformanceEvaluation_Event10Round1_NAC",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event5Round1_NAC": "S39_PerformanceEvaluation_Event5Round1_NAC",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event8Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat3_NAC": "epicgames_S39_SoloSeriesCupHeats_NAC",
-    "Fortnite:epicgames_S39_ChaosChampionFNCSCup_NAC:S39_ChaosChampionFNCSCup_NAC": "S39_ChaosChampionFNCSCup_NAC"
+    "Fortnite:epicgames_S39_ChaosChampionFNCSCup_NAC:S39_ChaosChampionFNCSCup_NAC": "S39_ChaosChampionFNCSCup_NAC",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event4Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
+    "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event2_NAC": "S39_PayoutTable_SoloSeriesCopy",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event7Round1_NAC": "S39_PerformanceEvaluation_Event7Round1_NAC",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event3Round1_NAC": "S39_PerformanceEvaluation_Event3Round1_NAC",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event9Round1_NAC": "S39_PerformanceEvaluation_Event9Round1_NAC",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event2Round1_NAC": "S39_PerformanceEvaluation_Event2Round1_NAC",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event10Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event1Round1_NAC": "S39_PerformanceEvaluation_Event1Round1_NAC",
+    "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat2_NAC": "epicgames_S39_SoloSeriesCupHeats_NAC",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event3Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event4Round1_NAC": "S39_PerformanceEvaluation_Event4Round1_NAC",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event11Round1_NAC": "S39_PerformanceEvaluation_Event11Round1_NAC"
   },
   "resolvedWindowLocations": {
     "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event3_NAC": [
       "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event3_NAC",
       "Fortnite:series:epicgames_S39_SoloSeriesCup_NAC_series"
     ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event8Round1_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event8Round1_NAC"
+    ],
     "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event4_NAC": [
       "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event4_NAC",
-      "Fortnite:series:epicgames_S39_SoloSeriesCup_NAC_series"
-    ],
-    "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event2_NAC": [
-      "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event2_NAC",
       "Fortnite:series:epicgames_S39_SoloSeriesCup_NAC_series"
     ],
     "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event1_NAC": [
       "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event1_NAC",
       "Fortnite:series:epicgames_S39_SoloSeriesCup_NAC_series"
     ],
-    "Fortnite:epicgames_S39_SoloSeriesCupFinal_NAC:S39_SoloSeriesCupFinal_Day1_NAC": [
-      "Fortnite:epicgames_S39_SoloSeriesCupFinal_NAC:S39_SoloSeriesCupFinal_Day1_NAC",
-      "Fortnite:cumulative:epicgames_S39_SoloSeriesCupFinal_NAC_cumulative"
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event2Round2_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event2Round2_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event5Round2_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event5Round2_NAC"
     ],
     "Fortnite:epicgames_S39_SoloSeriesCupFinal_NAC:S39_SoloSeriesCupFinal_Day2_NAC": [
       "Fortnite:epicgames_S39_SoloSeriesCupFinal_NAC:S39_SoloSeriesCupFinal_Day2_NAC",
@@ -2666,20 +4365,85 @@
     "Fortnite:epicgames_S39_ChaosChampionFNCSBlitzCup_NAC:S39_ChaosChampionFNCSBlitzCup_NAC": [
       "Fortnite:epicgames_S39_ChaosChampionFNCSBlitzCup_NAC:S39_ChaosChampionFNCSBlitzCup_NAC"
     ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event6Round2_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event6Round2_NAC"
+    ],
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat4_NAC": [
       "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat4_NAC"
     ],
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat1_NAC": [
       "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat1_NAC"
     ],
-    "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat2_NAC": [
-      "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat2_NAC"
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event1Round2_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event1Round2_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event11Round2_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event11Round2_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event6Round1_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event6Round1_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event9Round2_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event9Round2_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event10Round1_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event10Round1_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event5Round1_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event5Round1_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event8Round2_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event8Round2_NAC"
     ],
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat3_NAC": [
       "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat3_NAC"
     ],
     "Fortnite:epicgames_S39_ChaosChampionFNCSCup_NAC:S39_ChaosChampionFNCSCup_NAC": [
       "Fortnite:epicgames_S39_ChaosChampionFNCSCup_NAC:S39_ChaosChampionFNCSCup_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event4Round2_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event4Round2_NAC"
+    ],
+    "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event2_NAC": [
+      "Fortnite:epicgames_S39_SoloSeriesCup_NAC:S39_SoloSeriesCup_Event2_NAC",
+      "Fortnite:series:epicgames_S39_SoloSeriesCup_NAC_series"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event7Round1_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event7Round1_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event7Round2_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event7Round2_NAC"
+    ],
+    "Fortnite:epicgames_S39_SoloSeriesCupFinal_NAC:S39_SoloSeriesCupFinal_Day1_NAC": [
+      "Fortnite:epicgames_S39_SoloSeriesCupFinal_NAC:S39_SoloSeriesCupFinal_Day1_NAC",
+      "Fortnite:cumulative:epicgames_S39_SoloSeriesCupFinal_NAC_cumulative"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event3Round1_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event3Round1_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event9Round1_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event9Round1_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event2Round1_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event2Round1_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event10Round2_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event10Round2_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event1Round1_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event1Round1_NAC"
+    ],
+    "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat2_NAC": [
+      "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat2_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event3Round2_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event3Round2_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event4Round1_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event4Round1_NAC"
+    ],
+    "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event11Round1_NAC": [
+      "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event11Round1_NAC"
     ]
   },
   "eventSeries": []
