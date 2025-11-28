@@ -1648,6 +1648,98 @@
         ]
       }
     ],
+    "epicgames_S39_SoloSeriesCupFinal_ASIA": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 2500,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 2,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 1250,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 3,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 750,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 5,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 500,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 10,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 375,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 25,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 250,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 150,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ],
+        "scoreId": "cumulative:epicgames_S39_SoloSeriesCupFinal_ASIA_cumulative"
+      }
+    ],
     "S39_ChaosChampionFNCSBlitzCup_ASIA": [
       {
         "scoringType": "rank",
@@ -2980,7 +3072,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S39_SoloSeriesCupFinalDay1_DefaultLeaderboardDef",
+              "leaderboardDefId": "S39_SoloSeriesCupFinalDay2_DefaultLeaderboardDef",
               "isMainWindowLeaderboard": true
             },
             {
@@ -3788,6 +3880,51 @@
     },
     {
       "gameId": "Fortnite",
+      "leaderboardDefId": "S39_SoloSeriesCupFinalDay2_DefaultLeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": true,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S37_ScoringRules_FinalSoloSeries",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${eventId}",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    },
+    {
+      "gameId": "Fortnite",
       "leaderboardDefId": "S39_ChaosChampionFNCSBlitzCup_LeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -3904,7 +4041,6 @@
     "Fortnite:epicgames_S39_DuosVictoryCup_ASIA:S39_DuosVictoryCup_Round2_Day2_ASIA": "S39_VictoryCups_Round2",
     "Fortnite:epicgames_S39_SoloSeriesCup_ASIA:S39_SoloSeriesCup_Event1_ASIA": "S39_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S39_DuosVictoryCup_ASIA:S39_DuosVictoryCup_Round1_Day2_ASIA": "S39_DuosVictoryCup_Round1_Day2_ASIA",
-    "Fortnite:epicgames_S39_SoloSeriesCup_ASIA:S39_SoloSeriesCup_Event2_ASIA": "S39_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_ASIA:S39_SoloSeriesCup_Heat1_ASIA": "epicgames_S39_SoloSeriesCupHeats_ASIA",
     "Fortnite:epicgames_S39_SoloSeriesCup_ASIA:S39_SoloSeriesCup_Event3_ASIA": "S39_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S39_DuosVictoryCup_ASIA:S39_DuosVictoryCup_Round2_Day1_ASIA": "S39_VictoryCups_Round2",
@@ -3912,6 +4048,8 @@
     "Fortnite:epicgames_S39_DuosVictoryCup_ASIA:S39_DuosVictoryCup_Round2_Day3_ASIA": "S39_VictoryCups_Round2",
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_ASIA:S39_SoloSeriesCup_Heat2_ASIA": "epicgames_S39_SoloSeriesCupHeats_ASIA",
     "Fortnite:epicgames_S39_ChaosChampionFNCSCup_ASIA:S39_ChaosChampionFNCSCup_ASIA": "S39_ChaosChampionFNCSCup_ASIA",
+    "Fortnite:epicgames_S39_SoloSeriesCupFinal_ASIA:S39_SoloSeriesCupFinal_Day2_ASIA": "epicgames_S39_SoloSeriesCupFinal_ASIA",
+    "Fortnite:epicgames_S39_SoloSeriesCup_ASIA:S39_SoloSeriesCup_Event2_ASIA": "S39_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S39_1MillionUnrealCup_ASIA:S39_1MillionUnrealCup_ASIA": "S39_1MillionUnrealCup_ASIA",
     "Fortnite:epicgames_S39_DuosVictoryCup_ASIA:S39_DuosVictoryCup_Round1_Day3_ASIA": "S39_DuosVictoryCup_Round1_Day3_ASIA"
   },

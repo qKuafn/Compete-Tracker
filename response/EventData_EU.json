@@ -2145,6 +2145,182 @@
         ]
       }
     ],
+    "epicgames_S39_SoloSeriesCupFinal_EU": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 15000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 2,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 10000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 3,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 9000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 4,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 8000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 5,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 7000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 6,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 6000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 7,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 5000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 4000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 9,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 3000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 10,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 2000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 25,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 1000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 750,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 75,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 500,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 100,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 250,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ],
+        "scoreId": "cumulative:epicgames_S39_SoloSeriesCupFinal_EU_cumulative"
+      }
+    ],
     "S35_PayoutTable_PerformanceEvaluation_Round2": [
       {
         "scoringType": "value",
@@ -4469,7 +4645,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S39_SoloSeriesCupFinalDay1_DefaultLeaderboardDef",
+              "leaderboardDefId": "S39_SoloSeriesCupFinalDay2_DefaultLeaderboardDef",
               "isMainWindowLeaderboard": true
             },
             {
@@ -5435,6 +5611,51 @@
     },
     {
       "gameId": "Fortnite",
+      "leaderboardDefId": "S39_SoloSeriesCupFinalDay2_DefaultLeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": true,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S37_ScoringRules_FinalSoloSeries",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${eventId}",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    },
+    {
+      "gameId": "Fortnite",
       "leaderboardDefId": "S39_DuosVictoryCup_Round1_DefaultLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -5672,7 +5893,6 @@
     "Fortnite:epicgames_S39_PerformanceEvaluation_EU:S39_PerformanceEvaluation_Event3Round2_EU": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S39_SoloSeriesCup_EU:S39_SoloSeriesCup_Event4_EU": "S39_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S39_PerformanceEvaluation_EU:S39_PerformanceEvaluation_Event11Round2_EU": "S35_PayoutTable_PerformanceEvaluation_Round2",
-    "Fortnite:epicgames_S39_PerformanceEvaluation_EU:S39_PerformanceEvaluation_Event2Round2_EU": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S39_PerformanceEvaluation_EU:S39_PerformanceEvaluation_Event8Round2_EU": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_EU:S39_SoloSeriesCup_Heat1_EU": "epicgames_S39_SoloSeriesCupHeats_EU",
     "Fortnite:epicgames_S39_PerformanceEvaluation_EU:S39_PerformanceEvaluation_Event4Round2_EU": "S35_PayoutTable_PerformanceEvaluation_Round2",
@@ -5698,7 +5918,9 @@
     "Fortnite:epicgames_S39_DuosVictoryCup_EU:S39_DuosVictoryCup_Round2_Day3_EU": "S39_VictoryCups_Round2",
     "Fortnite:epicgames_S39_SoloSeriesCup_EU:S39_SoloSeriesCup_Event1_EU": "S39_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_EU:S39_SoloSeriesCup_Heat3_EU": "epicgames_S39_SoloSeriesCupHeats_EU",
-    "Fortnite:epicgames_S39_PerformanceEvaluation_EU:S39_PerformanceEvaluation_Event1Round1_EU": "S39_PerformanceEvaluation_Event1Round1_EU"
+    "Fortnite:epicgames_S39_PerformanceEvaluation_EU:S39_PerformanceEvaluation_Event1Round1_EU": "S39_PerformanceEvaluation_Event1Round1_EU",
+    "Fortnite:epicgames_S39_PerformanceEvaluation_EU:S39_PerformanceEvaluation_Event2Round2_EU": "S35_PayoutTable_PerformanceEvaluation_Round2",
+    "Fortnite:epicgames_S39_SoloSeriesCupFinal_EU:S39_SoloSeriesCupFinal_Day2_EU": "epicgames_S39_SoloSeriesCupFinal_EU"
   },
   "resolvedWindowLocations": {
     "Fortnite:epicgames_S39_PerformanceEvaluation_EU:S39_PerformanceEvaluation_Event9Round1_EU": [
