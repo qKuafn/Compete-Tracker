@@ -104,13 +104,70 @@
       "Permanent_Tournament_Ban"
     ],
     "ScoringRules": {
-      "S39_SoloSeriesCupFinalDay1_DefaultLeaderboardDef": {
+      "S39_SoloSeriesCupFinalDay2_DefaultLeaderboardDef": {
         "scoringRuleSetId": "S37_ScoringRules_FinalSoloSeries",
         "WindowLocation": "S39_SoloSeriesCupFinal_Day2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": true,
         "onlyScoreTopN": -1,
-        "payouts": []
+        "payouts": [
+          {
+            "scoreId": "cumulative:epicgames_S39_SoloSeriesCupFinal_ASIA_cumulative",
+            "scoringType": "rank",
+            "threshold": 1,
+            "rewardType": "ecomm",
+            "quantity": 2500,
+            "value": "USD"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S39_SoloSeriesCupFinal_ASIA_cumulative",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "ecomm",
+            "quantity": 1250,
+            "value": "USD"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S39_SoloSeriesCupFinal_ASIA_cumulative",
+            "scoringType": "rank",
+            "threshold": 3,
+            "rewardType": "ecomm",
+            "quantity": 750,
+            "value": "USD"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S39_SoloSeriesCupFinal_ASIA_cumulative",
+            "scoringType": "rank",
+            "threshold": 5,
+            "rewardType": "ecomm",
+            "quantity": 500,
+            "value": "USD"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S39_SoloSeriesCupFinal_ASIA_cumulative",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "ecomm",
+            "quantity": 375,
+            "value": "USD"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S39_SoloSeriesCupFinal_ASIA_cumulative",
+            "scoringType": "rank",
+            "threshold": 25,
+            "rewardType": "ecomm",
+            "quantity": 250,
+            "value": "USD"
+          },
+          {
+            "scoreId": "cumulative:epicgames_S39_SoloSeriesCupFinal_ASIA_cumulative",
+            "scoringType": "rank",
+            "threshold": 50,
+            "rewardType": "ecomm",
+            "quantity": 150,
+            "value": "USD"
+          }
+        ]
       },
       "S39_SoloSeriesCupFinal_CumulativeLeaderboardDef": {
         "scoringRuleSetId": "S37_ScoringRules_FinalSoloSeries",
