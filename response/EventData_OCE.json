@@ -20647,8 +20647,8 @@
     {
       "gameId": "Fortnite",
       "eventId": "epicgames_S39_ChaosChampionFNCSBlitzCup_OCE",
-      "beginTime": "2025-12-01T06:00:00Z",
-      "endTime": "2025-12-01T07:00:00Z",
+      "beginTime": "2025-12-01T05:00:00Z",
+      "endTime": "2025-12-01T06:30:00Z",
       "displayDataId": "S38_chaosblitz",
       "eventGroup": "Season39_ChaosChampionFNCSBlitzCup",
       "announcementTime": "2025-11-05T03:00:00Z",
@@ -20673,10 +20673,10 @@
       "eventWindows": [
         {
           "eventWindowId": "S39_ChaosChampionFNCSBlitzCup_OCE",
-          "eventTemplateId": "EventTemplate_S39_ChaosChampionFNCSBlitzCup",
-          "countdownBeginTime": "2025-12-01T05:00:00Z",
-          "beginTime": "2025-12-01T06:00:00Z",
-          "endTime": "2025-12-01T07:00:00Z",
+          "eventTemplateId": "EventTemplate_S39_ChaosChampionFNCSBlitzCup_new",
+          "countdownBeginTime": "2025-12-01T03:00:00Z",
+          "beginTime": "2025-12-01T05:00:00Z",
+          "endTime": "2025-12-01T06:30:00Z",
           "round": 1,
           "payoutDelay": 32,
           "isTBD": false,
@@ -30298,43 +30298,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
-      "matchCap": 10,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S39_ChaosChampionFNCSBlitzCup",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_RC_Solo",
       "matchCap": 10,
       "tiebreakerFormula": {
@@ -30514,6 +30477,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "S39_ReloadCashVictoryCup_EventTemplate_Round1",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+      "matchCap": 15,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S39_ChaosChampionFNCSBlitzCup_new",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
