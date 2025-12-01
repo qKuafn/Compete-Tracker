@@ -9783,75 +9783,6 @@
         ]
       }
     ],
-    "S39_ChaosChampionFNCSBlitzCup_ScoringRules": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 2,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 3,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 4,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 5,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 6,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 7,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 8,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 9,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 10,
-            "pointsEarned": 1,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 1,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
     "S37_ScoringRules_FinalSoloSeries": [
       {
         "trackedStat": "PLACEMENT_STAT_INDEX",
@@ -16832,87 +16763,6 @@
         ]
       }
     ],
-    "S39_ChaosChampionFNCSBlitzCup_ASIA": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 30,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:character_wickedmindfncs",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaItemWrap:wrap_wickedmindfncs",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_happyfncs",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_fncs_s38",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:eid_victoryhighway",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 8,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:spray_s38fncscommunitycup",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 40,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_fncsshield_s38",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "epicgames_S39_RankedCupSoloJan_ASIA_1_Platinum": [
       {
         "scoringType": "percentile",
@@ -20293,78 +20143,6 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s39_1millionunrealcup_asia"
-      }
-    },
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S39_ChaosChampionFNCSBlitzCup_ASIA",
-      "beginTime": "2025-12-01T07:00:00Z",
-      "endTime": "2025-12-01T08:30:00Z",
-      "displayDataId": "S38_chaosblitz",
-      "eventGroup": "Season39_ChaosChampionFNCSBlitzCup",
-      "announcementTime": "2025-11-05T05:00:00Z",
-      "regions": [
-        "ASIA"
-      ],
-      "regionMappings": {
-        "ASIA": "ASIACOMP"
-      },
-      "platforms": [
-        "IOS",
-        "Android"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "tournamentType": "ShopCup",
-        "webId": "S39_ChaosChampionFNCSBlitzCup",
-        "minimumAccountLevel": 15,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S39_ChaosChampionFNCSBlitzCup_ASIA",
-          "eventTemplateId": "EventTemplate_S39_ChaosChampionFNCSBlitzCup",
-          "countdownBeginTime": "2025-12-01T05:00:00Z",
-          "beginTime": "2025-12-01T07:00:00Z",
-          "endTime": "2025-12-01T08:30:00Z",
-          "round": 1,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s39_chaoschampion_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "input-touch"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S39_ChaosChampionFNCSBlitzCup_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s39_chaoschampionfncsblitzcup_asia"
       }
     },
     {
@@ -29826,43 +29604,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
-      "matchCap": 10,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S39_ChaosChampionFNCSBlitzCup",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_RC_Solo",
       "matchCap": 10,
       "tiebreakerFormula": {
@@ -30823,6 +30564,51 @@
       "clampsToZero": true,
       "payoutsConfig": {
         "payoutTableIdFormat": "${eventId}_${round}_Elite",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    },
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "S39_SoloSeriesCup_DefaultLeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": true,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S37_ScoringRules_SoloSeries",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "S39_PayoutTable_SoloSeriesCopy",
         "payoutDate": "windowEnd+PT32M"
       },
       "hidePlayerScores": false,
@@ -31817,96 +31603,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "S39_ChaosChampionFNCSBlitzCup_LeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S39_ChaosChampionFNCSBlitzCup_ScoringRules",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": []
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "S39_SoloSeriesCup_DefaultLeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": true,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S37_ScoringRules_SoloSeries",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "S39_PayoutTable_SoloSeriesCopy",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": []
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "RankedCup_Duos_Champion_LeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -32498,7 +32194,6 @@
     "Fortnite:epicgames_S39_DuosVictoryCup_ASIA:S39_DuosVictoryCup_Round2_Day3_January_ASIA": "S39_Duos_VictoryCup_Round2_ScoringRules",
     "Fortnite:epicgames_S39_RankedCupSoloDec_ASIA:S39_RankedCupSoloDec_Event15_ASIA_3_platinum": "ScoringRules_RankedCupSolo_Platinum_3",
     "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S39_RankedCupSoloJan_Event9_ASIA_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
-    "Fortnite:epicgames_S39_ChaosChampionFNCSBlitzCup_ASIA:S39_ChaosChampionFNCSBlitzCup_ASIA": "S39_ChaosChampionFNCSBlitzCup_ScoringRules",
     "Fortnite:epicgames_S39_RankedCupSoloDec_ASIA:S39_RankedCupSoloDec_Event2_ASIA_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S39_RankedCupSoloDec_ASIA:S39_RankedCupSoloDec_Event4_ASIA_2_unreal": "ScoringRules_RankedCupSolo_Unreal_2",
     "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S39_RankedCupSoloJan_Event12_ASIA_1_gold": "ScoringRules_RankedCupSolo_Gold_1",
@@ -33095,7 +32790,6 @@
     "Fortnite:epicgames_S39_DuosVictoryCup_ASIA:S39_DuosVictoryCup_Round2_Day3_January_ASIA": "S39_VictoryCups_Round2",
     "Fortnite:epicgames_S39_RankedCupSoloDec_ASIA:S39_RankedCupSoloDec_Event15_ASIA_3_platinum": "epicgames_S39_RankedCupSoloDec_ASIA_3_Platinum",
     "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S39_RankedCupSoloJan_Event9_ASIA_1_unreal": "epicgames_S39_RankedCupSoloJan_ASIA_1_Unreal",
-    "Fortnite:epicgames_S39_ChaosChampionFNCSBlitzCup_ASIA:S39_ChaosChampionFNCSBlitzCup_ASIA": "S39_ChaosChampionFNCSBlitzCup_ASIA",
     "Fortnite:epicgames_S39_RankedCupSoloDec_ASIA:S39_RankedCupSoloDec_Event2_ASIA_1_platinum": "epicgames_S39_RankedCupSoloDec_ASIA_1_Platinum",
     "Fortnite:epicgames_S39_RankedCupSoloDec_ASIA:S39_RankedCupSoloDec_Event4_ASIA_2_unreal": "epicgames_S39_RankedCupSoloDec_ASIA_2_Unreal",
     "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S39_RankedCupSoloJan_Event12_ASIA_1_gold": "epicgames_S39_RankedCupSoloJan_ASIA_1_Gold",
@@ -33991,9 +33685,6 @@
     ],
     "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_ASIA:S39_ReloadCashVictoryCup_Event6Round1_ASIA": [
       "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_ASIA:S39_ReloadCashVictoryCup_Event6Round1_ASIA"
-    ],
-    "Fortnite:epicgames_S39_ChaosChampionFNCSBlitzCup_ASIA:S39_ChaosChampionFNCSBlitzCup_ASIA": [
-      "Fortnite:epicgames_S39_ChaosChampionFNCSBlitzCup_ASIA:S39_ChaosChampionFNCSBlitzCup_ASIA"
     ],
     "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_ASIA:S39_ReloadCashVictoryCup_Event2Round1_ASIA": [
       "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_ASIA:S39_ReloadCashVictoryCup_Event2Round1_ASIA"
