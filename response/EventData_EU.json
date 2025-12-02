@@ -18281,6 +18281,87 @@
         ]
       }
     ],
+    "S39_ChaosChampionFNCSCup_EU_Round2": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 2350,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_wickedmindfncs",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaItemWrap:wrap_wickedmindfncs",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_happyfncs",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_fncs_s38",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:eid_victoryhighway",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_s38fncscommunitycup",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 40,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_fncsshield_s38",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S39_RankedCupDuosZB_EU_1_Bronze": [
       {
         "scoringType": "percentile",
@@ -22294,7 +22375,7 @@
       "gameId": "Fortnite",
       "eventId": "epicgames_S39_ChaosChampionFNCSCup_EU",
       "beginTime": "2025-12-01T18:00:00Z",
-      "endTime": "2025-12-02T21:00:01Z",
+      "endTime": "2025-12-02T21:00:00Z",
       "displayDataId": "S38_chaos",
       "eventGroup": "Season39_ChaosChampionFNCSCup",
       "announcementTime": "2025-11-05T14:00:00Z",
@@ -22377,8 +22458,8 @@
           "eventWindowId": "S39_ChaosChampionFNCSCup_EU_Round2",
           "eventTemplateId": "EventTemplate_S39_ChaosChampionFNCSCup",
           "countdownBeginTime": "2025-12-02T16:00:00Z",
-          "beginTime": "2025-12-02T18:00:01Z",
-          "endTime": "2025-12-02T21:00:01Z",
+          "beginTime": "2025-12-02T18:00:00Z",
+          "endTime": "2025-12-02T21:00:00Z",
           "round": 1,
           "payoutDelay": 32,
           "isTBD": false,
@@ -33818,7 +33899,7 @@
       "scoringRuleSetId": "S39_ChaosChampionFNCSCup_ScoringRules",
       "clampsToZero": true,
       "payoutsConfig": {
-        "payoutTableIdFormat": "S39_ChaosChampionFNCSCup_EU",
+        "payoutTableIdFormat": "${windowId}",
         "payoutDate": "windowEnd+PT32M"
       },
       "hidePlayerScores": false,
@@ -35736,7 +35817,7 @@
     "Fortnite:epicgames_S39_RankedCupDuosBR_EU:S39_RankedCupDuosBR_Event4_EU_1_platinum": "epicgames_S39_RankedCupDuosBR_EU_1_Platinum",
     "Fortnite:epicgames_S39_RankedCupSoloDec_EU:S39_RankedCupSoloDec_Event6_EU_2_champion": "epicgames_S39_RankedCupSoloDec_EU_2_Champion",
     "Fortnite:epicgames_S39_RankedCupSoloJan_EU:S39_RankedCupSoloJan_Event11_EU_1_Silver": "epicgames_S39_RankedCupSoloJan_EU_1_Silver",
-    "Fortnite:epicgames_S39_ChaosChampionFNCSCup_EU:S39_ChaosChampionFNCSCup_EU_Round2": "S39_ChaosChampionFNCSCup_EU",
+    "Fortnite:epicgames_S39_ChaosChampionFNCSCup_EU:S39_ChaosChampionFNCSCup_EU_Round2": "S39_ChaosChampionFNCSCup_EU_Round2",
     "Fortnite:epicgames_S39_RankedCupDuosBR_EU:S39_RankedCupDuosBR_Event5_EU_1_elite": "epicgames_S39_RankedCupDuosBR_EU_1_Elite",
     "Fortnite:epicgames_S39_SoloSeriesCup_EU:S39_SoloSeriesCup_Event2_EU": "S39_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Jan_EU:S39_DuosConsoleVictoryCupZB_Event12Round2_EU": "S39_DuosConsoleVictoryCupZB_Round2",
