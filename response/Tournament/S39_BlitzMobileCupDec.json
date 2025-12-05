@@ -105,6 +105,108 @@
       }
     }
   },
+  "S39_BlitzMobileCup_DecRound1_ASIA_makegood": {
+    "beginTime_UNIX": 1765000800,
+    "beginTime_JST": "2025-12-06 15:00:00",
+    "endTime_UNIX": 1765004400,
+    "endTime_JST": "2025-12-06 16:00:00",
+    "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:s39_mobile_rules",
+      "input-touch",
+      "mfa",
+      "adps:g-a81a33a3b9a7",
+      [
+        "currentRanking:ranked-br:6",
+        "currentRanking:ranked-zb:6",
+        "currentRanking:ranked_blastberry_build:6",
+        "currentRanking:ranked_blastberry_nobuild:6"
+      ]
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "S39_RegionLock_Mobile_DecQual1_EU",
+      "S39_RegionLock_Mobile_DecQual1_BR",
+      "S39_RegionLock_Mobile_DecQual1_OCE",
+      "Permanent_Tournament_Ban",
+      "S39_RegionLock_Mobile_DecQual1_NAW",
+      "S39_RegionLock_Mobile_DecQual1_ME",
+      "S39_RegionLock_Mobile_DecQual1_NAC"
+    ],
+    "ScoringRules": {
+      "S39_BlitzMobileCup_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_MobileSeriesRounds",
+        "WindowLocation": "S39_BlitzMobileCup_DecRound1_ASIA_makegood",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": []
+      },
+      "S39_MobileSeries_LeaderboardDef_mg": {
+        "scoringRuleSetId": "ScoringRules_MobileSeriesRounds",
+        "WindowLocation": "S39_BlitzMobileCup_DecRound1_ASIA_makegood_1",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S39_RegionLock_Mobile_DecQual1_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_jackcolby"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "copy_score",
+            "quantity": 0,
+            "value": "S39_BlitzMobileCup_SeriesLeaderboardDef"
+          }
+        ]
+      },
+      "S39_BlitzMobileCup_SeriesLeaderboardDef": {
+        "scoringRuleSetId": "EmptyScoringRules",
+        "WindowLocation": "epicgames_S39_BlitzMobileCupDec_ASIA_Qualifier1_series",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": false,
+        "onlyScoreTopN": 1,
+        "payouts": [
+          {
+            "scoreId": "series:epicgames_S39_BlitzMobileCupDec_ASIA_Qualifier1_series",
+            "scoringType": "rank",
+            "threshold": 500,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_jackcolby"
+          },
+          {
+            "scoreId": "series:epicgames_S39_BlitzMobileCupDec_ASIA_Qualifier1_series",
+            "scoringType": "rank",
+            "threshold": 16,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S39_BlitzMobileQualifier1Dec_ASIA"
+          }
+        ]
+      }
+    }
+  },
   "S39_BlitzMobileCup_DecRound2_ASIA": {
     "beginTime_UNIX": 1765008000,
     "beginTime_JST": "2025-12-06 17:00:00",
@@ -130,7 +232,13 @@
     "requireAnyTokensCaller": [],
     "requireNoneTokensCaller": [
       "EpicAccountPrizingRestriction_v2",
-      "Permanent_Tournament_Ban"
+      "S39_RegionLock_Mobile_DecQual1_EU",
+      "S39_RegionLock_Mobile_DecQual1_BR",
+      "S39_RegionLock_Mobile_DecQual1_OCE",
+      "Permanent_Tournament_Ban",
+      "S39_RegionLock_Mobile_DecQual1_NAW",
+      "S39_RegionLock_Mobile_DecQual1_ME",
+      "S39_RegionLock_Mobile_DecQual1_NAC"
     ],
     "ScoringRules": {
       "S39_BlitzMobileCup_DefaultLeaderboardDef": {
@@ -141,13 +249,21 @@
         "onlyScoreTopN": -1,
         "payouts": []
       },
-      "S39_BlitzMobileCup_LeaderboardDef": {
+      "S39_MobileSeries_LeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_MobileSeriesRounds",
         "WindowLocation": "S39_BlitzMobileCup_DecRound2_ASIA_1",
         "isMainWindowLeaderboard": false,
         "useIndividualScores": true,
         "onlyScoreTopN": -1,
         "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S39_RegionLock_Mobile_DecQual1_ASIA"
+          },
           {
             "scoreId": "",
             "scoringType": "value",

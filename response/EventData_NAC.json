@@ -18167,6 +18167,59 @@
         ]
       }
     ],
+    "S39_BlitzMobileCup_DecRound2_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S39_RegionLock_Mobile_DecQual1_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 10,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_jackcolby",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "copy_score",
+                "rewardMode": "standard",
+                "value": "S39_BlitzMobileCup_SeriesLeaderboardDef",
+                "quantity": 0,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S39_PayoutTable_BlitzMobileCup_7": [
       {
         "scoringType": "value",
@@ -22854,7 +22907,7 @@
               "isMainWindowLeaderboard": true
             },
             {
-              "leaderboardDefId": "S39_BlitzMobileCup_LeaderboardDef",
+              "leaderboardDefId": "S39_MobileSeries_LeaderboardDef",
               "isMainWindowLeaderboard": false
             },
             {
@@ -22867,7 +22920,13 @@
           "requireAnyTokens": [],
           "requireNoneTokensCaller": [
             "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
+            "S39_RegionLock_Mobile_DecQual1_EU",
+            "S39_RegionLock_Mobile_DecQual1_ASIA",
+            "S39_RegionLock_Mobile_DecQual1_BR",
+            "S39_RegionLock_Mobile_DecQual1_OCE",
+            "Permanent_Tournament_Ban",
+            "S39_RegionLock_Mobile_DecQual1_NAW",
+            "S39_RegionLock_Mobile_DecQual1_ME"
           ],
           "requireAllTokensCaller": [],
           "requireAnyTokensCaller": [],
@@ -22879,7 +22938,7 @@
               0
             ],
             "asyncPayoutsExclusiveLeaderboardDefs": [
-              "S39_BlitzMobileCup_LeaderboardDef"
+              "S39_MobileSeries_LeaderboardDef"
             ]
           }
         },
@@ -36739,6 +36798,51 @@
     },
     {
       "gameId": "Fortnite",
+      "leaderboardDefId": "S39_MobileSeries_LeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}_${round}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": true,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "ScoringRules_MobileSeriesRounds",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${windowId}",
+        "payoutDate": "windowEnd+PT10M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    },
+    {
+      "gameId": "Fortnite",
       "leaderboardDefId": "S39_BlitzMobileCupQual6_SeriesLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "series",
@@ -38033,7 +38137,7 @@
     "Fortnite:epicgames_S39_RankedCupDuosBR_NAC:S39_RankedCupDuosBR_Event3_NAC_1_champion": "epicgames_S39_RankedCupDuosBR_NAC_1_Champion",
     "Fortnite:epicgames_S39_RankedCupDuosZB_NAC:S39_RankedCupDuosDecZB_Event2_NAC_2_champion": "epicgames_S39_RankedCupDuosZB_NAC_2_Champion",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_NAC:S39_RankedCupReloadDuosJan_Event1_NAC_1_Unreal": "epicgames_S39_RankedCupReloadDuosJan_NAC_1_Unreal",
-    "Fortnite:epicgames_S39_BlitzMobileCupDec_NAC:S39_BlitzMobileCup_DecRound2_NAC_1": "S39_PayoutTable_BlitzMobileCup_1",
+    "Fortnite:epicgames_S39_BlitzMobileCupDec_NAC:S39_BlitzMobileCup_DecRound2_NAC_1": "S39_BlitzMobileCup_DecRound2_NAC",
     "Fortnite:epicgames_S39_RankedCupSoloDec_NAC:S39_RankedCupSoloDec_Event2_NAC_1_diamond": "epicgames_S39_RankedCupSoloDec_NAC_1_Diamond",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAC:S39_RankedCupSoloJan_Event15_NAC_1_platinum": "epicgames_S39_RankedCupSoloJan_NAC_1_Platinum",
     "Fortnite:epicgames_S39_RankedCupDuosZB_NAC:S39_RankedCupDuosDecZB_Event1_NAC_1_Bronze": "epicgames_S39_RankedCupDuosZB_NAC_1_Bronze",
