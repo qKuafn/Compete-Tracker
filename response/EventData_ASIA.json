@@ -14025,59 +14025,6 @@
         ]
       }
     ],
-    "S39_BlitzMobileCup_DecRound2_ASIA_makegood": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 0,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "S39_RegionLock_Mobile_DecQual1_ASIA",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 10,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_jackcolby",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 0,
-            "payouts": [
-              {
-                "rewardType": "copy_score",
-                "rewardMode": "standard",
-                "value": "S39_BlitzMobileCup_SeriesLeaderboardDef",
-                "quantity": 0,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "S39_PayoutTable_BlitzMobileCup_5": [
       {
         "scoringType": "value",
@@ -17929,6 +17876,59 @@
         ]
       }
     ],
+    "S39_BlitzMobileCup_DecRound1_ASIA_makegood": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S39_RegionLock_Mobile_DecQual1_ASIA",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 10,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_jackcolby",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "copy_score",
+                "rewardMode": "standard",
+                "value": "S39_BlitzMobileCup_SeriesLeaderboardDef",
+                "quantity": 0,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S39_ReloadCashVictoryCup_Event5Round1_ASIA": [
       {
         "scoringType": "rank",
@@ -21370,7 +21370,7 @@
               "isMainWindowLeaderboard": true
             },
             {
-              "leaderboardDefId": "S39_MobileSeries_LeaderboardDef_mg",
+              "leaderboardDefId": "S39_MobileSeries_LeaderboardDef",
               "isMainWindowLeaderboard": false
             },
             {
@@ -21401,7 +21401,7 @@
               0
             ],
             "asyncPayoutsExclusiveLeaderboardDefs": [
-              "S39_MobileSeries_LeaderboardDef_mg"
+              "S39_MobileSeries_LeaderboardDef"
             ]
           }
         },
@@ -33236,6 +33236,51 @@
   "leaderboardDefs": [
     {
       "gameId": "Fortnite",
+      "leaderboardDefId": "Ranked_Cup_Solo_Diamond_LeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}_${round}_diamond",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "DIAMOND_VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "DIAMOND_TEAM_ELIMS_STAT_INDEX",
+            "bits": 12,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "DIAMOND_PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "DIAMOND_TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "ScoringRules_RankedCupSolo_Diamond_${round}",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${eventId}_${round}_Diamond",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": []
+    },
+    {
+      "gameId": "Fortnite",
       "leaderboardDefId": "S39_DuosVictoryCup_Round1_DefaultLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -34089,96 +34134,6 @@
       "payoutsConfig": {
         "payoutTableIdFormat": "${eventId}_${round}_Unreal",
         "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": []
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "Ranked_Cup_Solo_Diamond_LeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}_${round}_diamond",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "DIAMOND_VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "DIAMOND_TEAM_ELIMS_STAT_INDEX",
-            "bits": 12,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "DIAMOND_PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "DIAMOND_TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "ScoringRules_RankedCupSolo_Diamond_${round}",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${eventId}_${round}_Diamond",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": []
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "S39_MobileSeries_LeaderboardDef_mg",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}_${round}",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": true,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "ScoringRules_MobileSeriesRounds",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "S39_BlitzMobileCup_DecRound2_ASIA_makegood",
-        "payoutDate": "windowEnd+PT10M"
       },
       "hidePlayerScores": false,
       "percentileAccuracy": 1,
@@ -36016,7 +35971,7 @@
   "scoreLocationPayoutTables": {
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_ASIA:S39_RankedCupDuosJanZB_Event3_ASIA_1_gold": "epicgames_S39_RankedCupDuosZBJan_ASIA_1_Gold",
     "Fortnite:epicgames_S39_RankedCupDuosZB_ASIA:S39_RankedCupDuosDecZB_Event3_ASIA_2_platinum": "epicgames_S39_RankedCupDuosZB_ASIA_2_Platinum",
-    "Fortnite:epicgames_S39_BlitzMobileCupDec_ASIA:S39_BlitzMobileCup_DecRound1_ASIA_makegood_1": "S39_BlitzMobileCup_DecRound2_ASIA_makegood",
+    "Fortnite:epicgames_S39_BlitzMobileCupDec_ASIA:S39_BlitzMobileCup_DecRound1_ASIA_makegood_1": "S39_BlitzMobileCup_DecRound1_ASIA_makegood",
     "Fortnite:epicgames_S39_RankedCupSoloDec_ASIA:S39_RankedCupSoloDec_Event1_ASIA_1_Bronze": "epicgames_S39_RankedCupSoloDec_ASIA_1_Bronze",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_ASIA:S39_RankedCupReloadDuosJan_Event6_ASIA_1_Diamond": "epicgames_S39_RankedCupReloadDuosJan_ASIA_1_Diamond",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_ASIA:S39_RankedCupDuosJanZB_Event2_ASIA_1_champion": "epicgames_S39_RankedCupDuosZBJan_ASIA_1_Champion",
