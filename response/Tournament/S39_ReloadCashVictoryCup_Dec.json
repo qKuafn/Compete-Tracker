@@ -40,6 +40,112 @@
     "GFNMobile",
     "Windows"
   ],
+  "S39_ReloadCashVictoryCup_Event1Round1_ASIA": {
+    "beginTime_UNIX": 1764925200,
+    "beginTime_JST": "2025-12-05 18:00:00",
+    "endTime_UNIX": 1764932400,
+    "endTime_JST": "2025-12-05 20:00:00",
+    "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_CR",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:s39_victory_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-zb:6",
+        "currentRanking:ranked-br:6",
+        "currentRanking:ranked_blastberry_build:6",
+        "currentRanking:ranked_blastberry_nobuild:6"
+      ]
+    ],
+    "requireAllTokens": [
+      "S39_CashCup_Qualified"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S39_ReloadCashVictoryCup_LeaderboardDef_Round1": {
+        "scoringRuleSetId": "S39_ReloadCashVictoryCup_ScoringRules_Round1",
+        "WindowLocation": "S39_ReloadCashVictoryCup_Event1Round1_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 120,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S39_ReloadCashVictoryCup_Event1Round2_ASIA"
+          }
+        ]
+      }
+    }
+  },
+  "S39_ReloadCashVictoryCup_Event1Round2_ASIA": {
+    "beginTime_UNIX": 1764936000,
+    "beginTime_JST": "2025-12-05 21:00:00",
+    "endTime_UNIX": 1764939600,
+    "endTime_JST": "2025-12-05 22:00:00",
+    "playlistId": "Playlist_ShowdownTournament_PiperBootDuos_CR",
+    "matchCap": 3,
+    "additionalRequirements": [
+      "eula:s39_victory_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [
+      "S39_ReloadCashVictoryCup_Event1Round2_ASIA"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S39_ReloadCashVictoryCup_LeaderboardDef_Round2": {
+        "scoringRuleSetId": "S39_ReloadCashVictoryCup_ScoringRules_Round2",
+        "WindowLocation": "S39_ReloadCashVictoryCup_Event1Round2_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 100,
+            "rewardType": "ecomm",
+            "quantity": 100,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 200,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 300,
+            "value": "USD"
+          }
+        ]
+      }
+    }
+  },
   "S39_ReloadCashVictoryCup_Event2Round1_ASIA": {
     "beginTime_UNIX": 1765270800,
     "beginTime_JST": "2025-12-09 18:00:00",
