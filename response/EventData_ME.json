@@ -10243,150 +10243,6 @@
         ]
       }
     ],
-    "S38_DuosVictoryCup_Round1_ScoringRules": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 9,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 2,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 3,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 4,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 5,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 6,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 7,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 8,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 9,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 10,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 11,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 12,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 13,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 14,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 15,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 16,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 17,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 18,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 19,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 20,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 21,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 22,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 23,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 24,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 25,
-            "pointsEarned": 2,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 2,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
     "EmptyScoringRules": [],
     "ScoringRules_RankedCupDuos_Gold_1": [
       {
@@ -24462,7 +24318,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S38_DuosVictoryCup_Round1_DefaultLeaderboardDef",
+              "leaderboardDefId": "S39_DuosVictoryCup_Round1_DefaultLeaderboardDef",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -33476,51 +33332,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "S38_DuosVictoryCup_Round1_DefaultLeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 7,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S38_DuosVictoryCup_Round1_ScoringRules",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": []
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "S39_BlitzMobileCupQual4_SeriesLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "series",
@@ -35266,7 +35077,7 @@
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_ME:S39_RankedCupReloadDuosJan_Event7_ME_1_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_1",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_ME:S39_RankedCupReloadDuosJan_Event7_ME_1_Champion": "ScoringRules_RankedCupDuosReload_Champion_1",
     "Fortnite:epicgames_S39_RankedCupSoloJan_ME:S39_RankedCupSoloJan_Event11_ME": "EmptyScoringRules",
-    "Fortnite:epicgames_S39_DuosVictoryCup_ME:S39_DuosVictoryCup_Round1_Day2_January_ME": "S38_DuosVictoryCup_Round1_ScoringRules",
+    "Fortnite:epicgames_S39_DuosVictoryCup_ME:S39_DuosVictoryCup_Round1_Day2_January_ME": "S39_DuosVictoryCup_Round1_ScoringRules",
     "Fortnite:epicgames_S39_DuosVictoryCup_Dec_ME:S39_DuosVictoryCup_Round2_Day2_ME": "S39_Duos_VictoryCup_Round2_ScoringRules",
     "Fortnite:epicgames_S39_BlitzMobileCupJan_ME:S39_BlitzMobileCup_JanRound2_ME": "ScoringRules_MobileSeriesRounds",
     "Fortnite:epicgames_S39_RankedCupReloadDuosDec_ME:S39_RankedCupReloadDuosDec_Event3_ME_2_Champion": "ScoringRules_RankedCupDuosReload_Champion_2",
