@@ -259,13 +259,21 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
             print(f"    [ERR] 🔴 その他データ取得エラー : {e}")
 
         def find_value_by_time(row_data, target_time):
+            if not isinstance(row_data, list):
+                return None
+
             for item in row_data:
-                item_data = item.get("time")
-                if item_data == float(target_time):
-                    data = item.get("value")
-                    return data
-            print(f"       [INF] データに対応するtimeなし : {target_time}")
-            return "エラー"
+                if not isinstance(item, dict):
+                    continue  # ← dict 以外は無視
+
+                # time が存在する行だけ扱う
+                if "time" not in item:
+                    continue
+
+                if item.get("time") == target_time:
+                    return item.get("value")
+
+            return None
 
         # === 戦利品プールの更新のみ有効化・無効化のチェック ===
         # === それ以外は「元 → 更新」をdisplayに追加 ===
