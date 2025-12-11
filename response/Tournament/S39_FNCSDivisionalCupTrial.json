@@ -1,0 +1,115 @@
+{
+  "EventName": "FNCS トライアル",
+  "eventId": "epicgames_S39_FNCSDivisionalCupTrial_ASIA",
+  "displayDataId": "s39_divisiontrial",
+  "square_poster_image": "https://cdn2.unrealengine.com/fnce-39-00-comp-fncs2026update-in-game-tab-800x800-800x800-6586b08eaab0.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fnce-39-00-comp-fncs2026update-in-game-tab-1560x1024-1560x1024-d92ce875645e.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/jp-fnce-39-00-competitive-discoverytile-trial-1920x1080-1920x1080-894bb72cd2ac.jpg",
+  "metadata": {
+    "requireSystemFeatures": [
+      "SecureBoot",
+      "CryptoProcessor"
+    ],
+    "tournamentType": "CashCup",
+    "TeamLockType": "Window",
+    "webId": "S39_FNCSDivisionalCupTrial",
+    "minimumAccountLevel": 350,
+    "DisqualifyType": "Event",
+    "RegionLockType": "Window",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "XboxOneGDK",
+    "PS4",
+    "XCloud",
+    "Helios",
+    "Luna",
+    "IOS",
+    "XB1",
+    "XboxOne",
+    "XSX",
+    "Android",
+    "LunaMobile",
+    "Switch2",
+    "PS5",
+    "XCloudMobile",
+    "Mac",
+    "HeliosMobile",
+    "GFN",
+    "Switch",
+    "GFNMobile",
+    "Windows"
+  ],
+  "S39_FNCS_DivisionalCupTrial_ASIA": {
+    "beginTime_UNIX": 1769850000,
+    "beginTime_JST": "2026-01-31 18:00:00",
+    "endTime_UNIX": 1769860800,
+    "endTime_JST": "2026-01-31 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_Duos",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:s39_duosdiv_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-br:6",
+        "currentRanking:ranked-zb:6",
+        "currentRanking:ranked_blastberry_build:6",
+        "currentRanking:ranked_blastberry_nobuild:6"
+      ]
+    ],
+    "requireAllTokens": [
+      "S39_CashCup_Qualified"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "RegionLock_S39_FNCSDivisionalTrial_BR",
+      "RegionLock_S39_FNCSDivisionalTrial_EU",
+      "S39_FNCS_Division1_ASIA",
+      "RegionLock_S39_FNCSDivisionalTrial_OCE",
+      "RegionLock_S39_FNCSDivisionalTrial_ME",
+      "RegionLock_S39_FNCSDivisionalTrial_NAW",
+      "RegionLock_S39_FNCSDivisionalTrial_NAC",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S39_FNCSDivisionalCup_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_v2",
+        "WindowLocation": "S39_FNCS_DivisionalCupTrial_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "RegionLock_S39_FNCSDuosDivisionalTrial_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S39_FNCSDuos_Division3_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 1000,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S39_FNCSDuos_Division2_ASIA"
+          }
+        ]
+      }
+    }
+  }
+}
