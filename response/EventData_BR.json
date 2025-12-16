@@ -16885,6 +16885,97 @@
         ]
       }
     ],
+    "epicgames_S39_BlitzMobileCupDecQual_BR": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 700,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 2,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 600,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 3,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 500,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 4,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 400,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 250,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 12,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 200,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 16,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 100,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S39_RankedCupDuosZBJan_BR_1_Diamond": [
       {
         "scoringType": "percentile",
@@ -22335,6 +22426,125 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s39_1millionunrealcup_br"
+      }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S39_BlitzMobileCupDecQual_BR",
+      "beginTime": "2025-12-07T20:00:00Z",
+      "endTime": "2025-12-14T21:20:00Z",
+      "displayDataId": "s39_mobile_dec_qual",
+      "eventGroup": "Season39_BlitzMobileCup",
+      "announcementTime": "2025-06-07T03:00:00Z",
+      "regions": [
+        "BR"
+      ],
+      "regionMappings": {
+        "BR": "BRCOMP"
+      },
+      "platforms": [
+        "IOS",
+        "Android"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "tournamentType": "CashCup",
+        "webId": "S39_BlitzMobileCupDecQuals",
+        "minimumAccountLevel": 50,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S39_BlitzMobileCup_DecQualifier1_BR",
+          "eventTemplateId": "EventTemplate_S38_BlitzMobileCup",
+          "countdownBeginTime": "2025-12-07T19:00:00Z",
+          "beginTime": "2025-12-07T20:00:00Z",
+          "endTime": "2025-12-07T21:20:00Z",
+          "round": 1,
+          "payoutDelay": 10,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_mobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            "input-touch"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_BlitzMobileCupFinal_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_BlitzMobileQualifier1Dec_BR"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingInitialDelaySeconds": 300,
+            "ScheduledMatchmakingMatchDelaySeconds": 480
+          }
+        },
+        {
+          "eventWindowId": "S39_BlitzMobileCup_DecQualifier2_BR",
+          "eventTemplateId": "EventTemplate_S38_BlitzMobileCup",
+          "countdownBeginTime": "2025-12-14T19:00:00Z",
+          "beginTime": "2025-12-14T20:00:00Z",
+          "endTime": "2025-12-14T21:20:00Z",
+          "round": 2,
+          "payoutDelay": 10,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_mobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            "input-touch"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_BlitzMobileCupFinal_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_BlitzMobileQualifier2Dec_BR"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingInitialDelaySeconds": 300,
+            "ScheduledMatchmakingMatchDelaySeconds": 480
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s39_blitzmobilecupdecqual_br"
       }
     },
     {
@@ -37874,6 +38084,7 @@
     "Fortnite:epicgames_S39_RankedCupSoloJan_BR:S39_RankedCupSoloJan_Event15_BR_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_BR:S39_RankedCupReloadDuosJan_Event4_BR": "EmptyScoringRules",
     "Fortnite:epicgames_S39_RankedCupDuosZB_BR:S39_RankedCupDuosDecZB_Event3_BR_3_unreal": "ScoringRules_RankedCupDuos_Unreal_3",
+    "Fortnite:epicgames_S39_BlitzMobileCupDecQual_BR:S39_BlitzMobileCup_DecQualifier2_BR": "ScoringRules_MobileSeriesQualifiers",
     "Fortnite:epicgames_S39_RankedCupDuosZB_BR:S39_RankedCupDuosDecZB_Event1_BR_1_diamond": "ScoringRules_RankedCupDuos_Diamond_1",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_BR:S39_RankedCupDuosJanZB_Event3_BR_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S39_RankedCupSoloJan_BR:S39_RankedCupSoloJan_Event6_BR_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
@@ -38118,6 +38329,7 @@
     "Fortnite:epicgames_S39_BlitzMobileCupFeb_BR:S39_BlitzMobileCup_FebRound6_BR_7": "ScoringRules_MobileSeriesRounds",
     "Fortnite:epicgames_S39_RankedCupSoloJan_BR:S39_RankedCupSoloJan_Event11_BR_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
     "Fortnite:epicgames_S39_RankedCupSoloDec_BR:S39_RankedCupSoloDec_Event15_BR_3_platinum": "ScoringRules_RankedCupSolo_Platinum_3",
+    "Fortnite:epicgames_S39_BlitzMobileCupDecQual_BR:S39_BlitzMobileCup_DecQualifier1_BR": "ScoringRules_MobileSeriesQualifiers",
     "Fortnite:epicgames_S39_RankedCupDuosBR_BR:S39_RankedCupDuosBR_Event6_BR_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S39_RankedCupSoloJan_BR:S39_RankedCupSoloJan_Event3_BR_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
     "Fortnite:epicgames_S39_RankedCupSoloDec_BR:S39_RankedCupSoloDec_Event1_BR_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
@@ -38580,6 +38792,7 @@
     "Fortnite:epicgames_S39_RankedCupDuosBR_BR:S39_RankedCupDuosBR_Event2_BR_1_gold": "epicgames_S39_RankedCupDuosBR_BR_1_Gold",
     "Fortnite:epicgames_S39_RankedCupSoloJan_BR:S39_RankedCupSoloJan_Event15_BR_1_platinum": "epicgames_S39_RankedCupSoloJan_BR_1_Platinum",
     "Fortnite:epicgames_S39_RankedCupDuosZB_BR:S39_RankedCupDuosDecZB_Event3_BR_3_unreal": "epicgames_S39_RankedCupDuosZB_BR_3_Unreal",
+    "Fortnite:epicgames_S39_BlitzMobileCupDecQual_BR:S39_BlitzMobileCup_DecQualifier2_BR": "epicgames_S39_BlitzMobileCupDecQual_BR",
     "Fortnite:epicgames_S39_RankedCupDuosZB_BR:S39_RankedCupDuosDecZB_Event1_BR_1_diamond": "epicgames_S39_RankedCupDuosZB_BR_1_Diamond",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_BR:S39_RankedCupDuosJanZB_Event3_BR_1_unreal": "epicgames_S39_RankedCupDuosZBJan_BR_1_Unreal",
     "Fortnite:series:epicgames_S39_BlitzMobileCupFeb_BR_Qualifier5_series": "epicgames_S39_BlitzMobileCupFeb_BR_Qualifier5",
@@ -38792,6 +39005,7 @@
     "Fortnite:epicgames_S39_BlitzMobileCupFeb_BR:S39_BlitzMobileCup_FebRound6_BR_7": "S39_PayoutTable_BlitzMobileCup_7",
     "Fortnite:epicgames_S39_RankedCupSoloJan_BR:S39_RankedCupSoloJan_Event11_BR_1_champion": "epicgames_S39_RankedCupSoloJan_BR_1_Champion",
     "Fortnite:epicgames_S39_RankedCupSoloDec_BR:S39_RankedCupSoloDec_Event15_BR_3_platinum": "epicgames_S39_RankedCupSoloDec_BR_3_Platinum",
+    "Fortnite:epicgames_S39_BlitzMobileCupDecQual_BR:S39_BlitzMobileCup_DecQualifier1_BR": "epicgames_S39_BlitzMobileCupDecQual_BR",
     "Fortnite:epicgames_S39_RankedCupDuosBR_BR:S39_RankedCupDuosBR_Event6_BR_1_platinum": "epicgames_S39_RankedCupDuosBR_BR_1_Platinum",
     "Fortnite:epicgames_S39_RankedCupSoloJan_BR:S39_RankedCupSoloJan_Event3_BR_1_unreal": "epicgames_S39_RankedCupSoloJan_BR_1_Unreal",
     "Fortnite:epicgames_S39_RankedCupSoloDec_BR:S39_RankedCupSoloDec_Event1_BR_1_unreal": "epicgames_S39_RankedCupSoloDec_BR_1_Unreal",
@@ -39380,6 +39594,9 @@
     "Fortnite:epicgames_S39_DuosVictoryCup_BR:S39_DuosVictoryCup_Round2_Day1_January_BR": [
       "Fortnite:epicgames_S39_DuosVictoryCup_BR:S39_DuosVictoryCup_Round2_Day1_January_BR"
     ],
+    "Fortnite:epicgames_S39_BlitzMobileCupDecQual_BR:S39_BlitzMobileCup_DecQualifier2_BR": [
+      "Fortnite:epicgames_S39_BlitzMobileCupDecQual_BR:S39_BlitzMobileCup_DecQualifier2_BR"
+    ],
     "Fortnite:epicgames_S39_RankedCupSoloDec_BR:S39_RankedCupSoloDec_Event5_BR": [
       "Fortnite:epicgames_S39_RankedCupSoloDec_BR:S39_RankedCupSoloDec_Event5_BR",
       "Fortnite:epicgames_S39_RankedCupSoloDec_BR:S39_RankedCupSoloDec_Event5_BR_2_Bronze",
@@ -39724,6 +39941,9 @@
       "Fortnite:epicgames_S39_BlitzMobileCupFeb_BR:S39_BlitzMobileCup_FebRound6_BR",
       "Fortnite:epicgames_S39_BlitzMobileCupFeb_BR:S39_BlitzMobileCup_FebRound6_BR_7",
       "Fortnite:series:epicgames_S39_BlitzMobileCupFeb_BR_Qualifier6_series"
+    ],
+    "Fortnite:epicgames_S39_BlitzMobileCupDecQual_BR:S39_BlitzMobileCup_DecQualifier1_BR": [
+      "Fortnite:epicgames_S39_BlitzMobileCupDecQual_BR:S39_BlitzMobileCup_DecQualifier1_BR"
     ],
     "Fortnite:epicgames_S39_RankedCupSoloJan_BR:S39_RankedCupSoloJan_Event15_BR": [
       "Fortnite:epicgames_S39_RankedCupSoloJan_BR:S39_RankedCupSoloJan_Event15_BR",
