@@ -24620,7 +24620,7 @@
       "gameId": "Fortnite",
       "eventId": "epicgames_S39_BlitzMobileCupDecQual_NAC",
       "beginTime": "2025-12-07T23:00:00Z",
-      "endTime": "2025-12-15T00:20:00Z",
+      "endTime": "2025-12-18T00:20:00Z",
       "displayDataId": "s39_mobile_dec_qual",
       "eventGroup": "Season39_BlitzMobileCup",
       "announcementTime": "2025-06-07T05:00:00Z",
@@ -24715,6 +24715,49 @@
           "canLiveSpectate": false,
           "requireAllTokens": [
             "S39_BlitzMobileQualifier2Dec_NAC"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingInitialDelaySeconds": 300,
+            "ScheduledMatchmakingMatchDelaySeconds": 480
+          }
+        },
+        {
+          "eventWindowId": "S39_BlitzMobileCup_DecQualifier2_NAC_mg",
+          "eventTemplateId": "EventTemplate_S38_BlitzMobileCup",
+          "countdownBeginTime": "2025-12-17T22:00:00Z",
+          "beginTime": "2025-12-17T23:00:00Z",
+          "endTime": "2025-12-18T00:20:00Z",
+          "round": 2,
+          "payoutDelay": 10,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_mobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            "input-touch"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_BlitzMobileCupFinal_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_BlitzMobileQualifier2Dec_NAC_mg"
           ],
           "requireAnyTokens": [],
           "requireNoneTokensCaller": [
@@ -41324,6 +41367,7 @@
     "Fortnite:epicgames_S39_RankedCupDuosBR_NAC:S39_RankedCupDuosBR_Event1_NAC_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
     "Fortnite:epicgames_S39_RankedCupReloadDuosDec_NAC:S39_RankedCupReloadDuosDec_Event5_NAC_3_Unreal": "ScoringRules_RankedCupDuosReload_Unreal_3",
     "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Dec_NAC:S39_DuosConsoleVictoryCupZB_Event2Round1_NAC": "S39_DuosConsoleVictoryCupZB_ScoringRules_Round1",
+    "Fortnite:epicgames_S39_BlitzMobileCupDecQual_NAC:S39_BlitzMobileCup_DecQualifier2_NAC_mg": "ScoringRules_MobileSeriesQualifiers",
     "Fortnite:epicgames_S39_RankedCupSoloDec_NAC:S39_RankedCupSoloDec_Event7_NAC_2_platinum": "ScoringRules_RankedCupSolo_Platinum_2",
     "Fortnite:epicgames_S39_RankedCupSoloDec_NAC:S39_RankedCupSoloDec_Event6_NAC_2_unreal": "ScoringRules_RankedCupSolo_Unreal_2",
     "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event4Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
@@ -42093,6 +42137,7 @@
     "Fortnite:epicgames_S39_RankedCupDuosBR_NAC:S39_RankedCupDuosBR_Event1_NAC_1_gold": "epicgames_S39_RankedCupDuosBR_NAC_1_Gold",
     "Fortnite:epicgames_S39_RankedCupReloadDuosDec_NAC:S39_RankedCupReloadDuosDec_Event5_NAC_3_Unreal": "epicgames_S39_RankedCupReloadDuosDec_NAC_3_Unreal",
     "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Dec_NAC:S39_DuosConsoleVictoryCupZB_Event2Round1_NAC": "S39_DuosConsoleVictoryCupZB_Event2Round1_NAC",
+    "Fortnite:epicgames_S39_BlitzMobileCupDecQual_NAC:S39_BlitzMobileCup_DecQualifier2_NAC_mg": "epicgames_S39_BlitzMobileCupDecQual_NAC",
     "Fortnite:epicgames_S39_RankedCupSoloDec_NAC:S39_RankedCupSoloDec_Event7_NAC_2_platinum": "epicgames_S39_RankedCupSoloDec_NAC_2_Platinum",
     "Fortnite:epicgames_S39_RankedCupSoloDec_NAC:S39_RankedCupSoloDec_Event6_NAC_2_unreal": "epicgames_S39_RankedCupSoloDec_NAC_2_Unreal",
     "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event4Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
@@ -42779,9 +42824,6 @@
     "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat3_NAC": [
       "Fortnite:epicgames_S39_SoloSeriesCupHeats_NAC:S39_SoloSeriesCup_Heat3_NAC"
     ],
-    "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Dec_NAC:S39_DuosConsoleVictoryCupZB_Event2Round1_NAC": [
-      "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Dec_NAC:S39_DuosConsoleVictoryCupZB_Event2Round1_NAC"
-    ],
     "Fortnite:epicgames_S39_RankedCupDuosZB_NAC:S39_RankedCupDuosDecZB_Event3_NAC": [
       "Fortnite:epicgames_S39_RankedCupDuosZB_NAC:S39_RankedCupDuosDecZB_Event3_NAC",
       "Fortnite:epicgames_S39_RankedCupDuosZB_NAC:S39_RankedCupDuosDecZB_Event3_NAC_3_Bronze",
@@ -42798,6 +42840,12 @@
     ],
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division5_NAC:S39_FNCSDivisionalCup_Division5_Event5_NAC": [
       "Fortnite:epicgames_S39_FNCSDivisionalCup_Division5_NAC:S39_FNCSDivisionalCup_Division5_Event5_NAC"
+    ],
+    "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Dec_NAC:S39_DuosConsoleVictoryCupZB_Event2Round1_NAC": [
+      "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Dec_NAC:S39_DuosConsoleVictoryCupZB_Event2Round1_NAC"
+    ],
+    "Fortnite:epicgames_S39_BlitzMobileCupDecQual_NAC:S39_BlitzMobileCup_DecQualifier2_NAC_mg": [
+      "Fortnite:epicgames_S39_BlitzMobileCupDecQual_NAC:S39_BlitzMobileCup_DecQualifier2_NAC_mg"
     ],
     "Fortnite:epicgames_S39_RankedCupDuosBR_NAC:S39_RankedCupDuosBR_Event6_NAC": [
       "Fortnite:epicgames_S39_RankedCupDuosBR_NAC:S39_RankedCupDuosBR_Event6_NAC",
