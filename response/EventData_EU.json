@@ -7327,6 +7327,44 @@
         ]
       }
     ],
+    "S39_MobileSeries_JanRound5_EU": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1300,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_nitronova",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ],
+        "scoreId": "series:epicgames_S39_MobileSeriesJan_EU_Qualifier3_series"
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 16,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_MobileSeriesQualifier3Jan_EU",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ],
+        "scoreId": "series:epicgames_S39_MobileSeriesJan_EU_Qualifier3_series"
+      }
+    ],
     "S39_ReloadCashVictoryCup_Event9Round1_EU": [
       {
         "scoringType": "rank",
@@ -16793,6 +16831,10 @@
             {
               "leaderboardDefId": "S39_BlitzMobileCupQual3_SeriesLeaderboardDef",
               "isMainWindowLeaderboard": false
+            },
+            {
+              "leaderboardDefId": "S39_MobileSeriesCup_SeriesLeaderboardDef",
+              "isMainWindowLeaderboard": false
             }
           ],
           "canLiveSpectate": false,
@@ -16809,7 +16851,8 @@
             "ServerReplays": true,
             "RoundType": "Qualifiers",
             "hideScoreLocationsIndexes": [
-              0
+              0,
+              3
             ],
             "asyncPayoutsExclusiveLeaderboardDefs": [
               "S39_BlitzMobileCup_LeaderboardDef"
@@ -26257,6 +26300,52 @@
     },
     {
       "gameId": "Fortnite",
+      "leaderboardDefId": "S39_MobileSeriesCup_SeriesLeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}_series",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "EmptyScoringRules",
+      "clampsToZero": true,
+      "onlyScoreTopN": 1,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${windowId}",
+        "payoutDate": "windowEnd+PT20H"
+      },
+      "hidePlayerScores": false,
+      "requiredPlayerListings": [],
+      "discardZeroScore": false
+    },
+    {
+      "gameId": "Fortnite",
       "leaderboardDefId": "S39_FNCSDivisionalCup_Division1Finals_DefaultLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -27395,6 +27484,7 @@
     "Fortnite:epicgames_S39_DuosVictoryCup_EU:S39_DuosVictoryCup_Round1_Day1_January_EU": "S39_DuosVictoryCup_Round1_ScoringRules",
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division5_EU:S39_FNCSDivisionalCup_Division5_Event8_EU": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_EU:S39_RankedCupReloadDuosJan_Event2_EU_1_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_1",
+    "Fortnite:epicgames_S39_MobileSeriesJan_EU:S39_MobileSeries_JanRound5_EU_series": "EmptyScoringRules",
     "Fortnite:epicgames_S39_RankedCupDuosBR_EU:S39_RankedCupDuosBR_Event2_EU_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
     "Fortnite:epicgames_S39_ReloadCashVictoryCup_Jan_EU:S39_ReloadCashVictoryCup_Event8Round2_EU": "S39_ReloadCashVictoryCup_ScoringRules_Round2",
     "Fortnite:epicgames_S39_RankedCupSoloJan_EU:S38_RankedCupSoloJan_Event1_EU": "EmptyScoringRules",
@@ -27886,6 +27976,7 @@
     "Fortnite:epicgames_S39_DuosVictoryCup_EU:S39_DuosVictoryCup_Round1_Day1_January_EU": "S39_DuosVictoryCup_Round1_Day1_January_EU",
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division5_EU:S39_FNCSDivisionalCup_Division5_Event8_EU": "S39_FNCSDivisionalCup_Division5_Event8_EU",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_EU:S39_RankedCupReloadDuosJan_Event2_EU_1_Diamond": "epicgames_S39_RankedCupReloadDuosJan_EU_1_Diamond",
+    "Fortnite:epicgames_S39_MobileSeriesJan_EU:S39_MobileSeries_JanRound5_EU_series": "S39_MobileSeries_JanRound5_EU",
     "Fortnite:epicgames_S39_RankedCupDuosBR_EU:S39_RankedCupDuosBR_Event2_EU_1_Silver": "epicgames_S39_RankedCupDuosBR_EU_1_Silver",
     "Fortnite:epicgames_S39_RankedCupSoloJan_EU:S39_RankedCupSoloJan_Event4_EU_1_gold": "epicgames_S39_RankedCupSoloJan_EU_1_Gold",
     "Fortnite:epicgames_S39_ReloadCashVictoryCup_Jan_EU:S39_ReloadCashVictoryCup_Event8Round2_EU": "S39_ReloadCashVictoryCup_Round2",
@@ -27995,7 +28086,8 @@
     "Fortnite:epicgames_S39_MobileSeriesJan_EU:S39_MobileSeries_JanRound5_EU": [
       "Fortnite:epicgames_S39_MobileSeriesJan_EU:S39_MobileSeries_JanRound5_EU",
       "Fortnite:epicgames_S39_MobileSeriesJan_EU:S39_MobileSeries_JanRound5_EU_3",
-      "Fortnite:series:epicgames_S39_MobileSeriesJan_EU_Qualifier3_series"
+      "Fortnite:series:epicgames_S39_MobileSeriesJan_EU_Qualifier3_series",
+      "Fortnite:epicgames_S39_MobileSeriesJan_EU:S39_MobileSeries_JanRound5_EU_series"
     ],
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division5_EU:S39_FNCSDivisionalCup_Division5_Event2_EU": [
       "Fortnite:epicgames_S39_FNCSDivisionalCup_Division5_EU:S39_FNCSDivisionalCup_Division5_Event2_EU"
