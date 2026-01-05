@@ -6412,6 +6412,25 @@
         ]
       }
     ],
+    "S39_ReloadEliteSeries2Open1_ASIA": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "RegionLock_S39_ReloadEliteSeries2Opens_ASIA",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S39_ReloadEliteSeries1Heat2_ASIA": [
       {
         "scoringType": "rank",
@@ -6758,6 +6777,43 @@
             ]
           }
         ]
+      }
+    ],
+    "S39_ReloadEliteSeries2Open2_ASIA": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "RegionLock_S39_ReloadEliteSeries2Opens_ASIA",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 500,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_ReloadEliteSeries2PlayIn_ASIA",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ],
+        "scoreId": "cumulative:epicgames_S39_ReloadEliteSeries2Opens_ASIA_cumulative"
       }
     ],
     "epicgames_S39_RankedCupSoloJan_ASIA_1_Elite": [
@@ -20111,6 +20167,171 @@
     },
     {
       "gameId": "Fortnite",
+      "eventId": "epicgames_S39_ReloadEliteSeries2Opens_ASIA",
+      "beginTime": "2026-01-08T09:00:00Z",
+      "endTime": "2026-01-16T12:00:00Z",
+      "displayDataId": "s39_reloadelite_opens",
+      "eventGroup": "Season39_ReloadEliteSeries2",
+      "announcementTime": "2025-06-06T15:00:00Z",
+      "regions": [
+        "ASIA"
+      ],
+      "regionMappings": {
+        "ASIA": "ASIACOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "IOS",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "Android",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "SecureBoot",
+          "CryptoProcessor"
+        ],
+        "tournamentType": "CashCup",
+        "TeamLockType": "Window",
+        "webId": "S39_ReloadEliteSeriesOpen",
+        "minimumAccountLevel": 350,
+        "DisqualifyType": "Event",
+        "RegionLockType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S39_ReloadEliteSeries2Open1_ASIA",
+          "eventTemplateId": "EventTemplate_S39_ReloadEliteSeries",
+          "countdownBeginTime": "2026-01-08T07:00:00Z",
+          "beginTime": "2026-01-08T09:00:00Z",
+          "endTime": "2026-01-08T12:00:00Z",
+          "round": 1,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_reload_elite_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            [
+              "currentRanking:ranked_blastberry_build:15",
+              "currentRanking:ranked_blastberry_nobuild:15"
+            ]
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_ReloadEliteSeriesOpens_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            },
+            {
+              "leaderboardDefId": "S39_ReloadEliteSeriesCumulative_LeaderboardDef",
+              "isMainWindowLeaderboard": false
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "RegionLock_S39_ReloadEliteSeries2Opens_NAW",
+            "RegionLock_S39_ReloadEliteSeries2Opens_OCE",
+            "RegionLock_S39_ReloadEliteSeries2Opens_EU",
+            "RegionLock_S39_ReloadEliteSeries2Opens_NAC",
+            "RegionLock_S39_ReloadEliteSeries2Opens_ME",
+            "RegionLock_S39_ReloadEliteSeries2Opens_BR",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S39_ReloadEliteSeries2Open2_ASIA",
+          "eventTemplateId": "EventTemplate_S39_ReloadEliteSeries",
+          "countdownBeginTime": "2026-01-16T07:00:00Z",
+          "beginTime": "2026-01-16T09:00:00Z",
+          "endTime": "2026-01-16T12:00:00Z",
+          "round": 1,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_reload_elite_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            [
+              "currentRanking:ranked_blastberry_build:15",
+              "currentRanking:ranked_blastberry_nobuild:15"
+            ]
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_ReloadEliteSeriesOpens_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            },
+            {
+              "leaderboardDefId": "S39_ReloadEliteSeriesCumulative_LeaderboardDef",
+              "isMainWindowLeaderboard": false
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "RegionLock_S39_ReloadEliteSeries2Opens_NAW",
+            "RegionLock_S39_ReloadEliteSeries2Opens_OCE",
+            "RegionLock_S39_ReloadEliteSeries2Opens_EU",
+            "RegionLock_S39_ReloadEliteSeries2Opens_NAC",
+            "RegionLock_S39_ReloadEliteSeries2Opens_ME",
+            "RegionLock_S39_ReloadEliteSeries2Opens_BR",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s39_reloadeliteseries2opens_asia"
+      }
+    },
+    {
+      "gameId": "Fortnite",
       "eventId": "epicgames_S39_ReloadEliteSeries2PlayIn_ASIA",
       "beginTime": "2026-02-20T09:00:00Z",
       "endTime": "2026-02-22T12:00:00Z",
@@ -23990,6 +24211,7 @@
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_ASIA:S39_RankedCupDuosJanZB_Event7_ASIA_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_ASIA:S39_RankedCupDuosJanZB_Event2_ASIA_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_ASIA:S39_RankedCupDuosJanZB_Event2_ASIA_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
+    "Fortnite:epicgames_S39_ReloadEliteSeries2Opens_ASIA:S39_ReloadEliteSeries2Open2_ASIA": "S39_ScoringRules_EliteSeriesOpens",
     "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S39_RankedCupSoloJan_Event6_ASIA_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division3_ASIA:S39_FNCSDivisionalCup_Division3_Event7_ASIA": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S39_RankedCupSoloJan_Event8_ASIA_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
@@ -24025,11 +24247,12 @@
     "Fortnite:epicgames_S39_SoloSeriesCupFinal_ASIA:S39_SoloSeriesCupFinal_Day1_ASIA": "S37_ScoringRules_FinalSoloSeries",
     "Fortnite:epicgames_S39_SoloSeriesCup_ASIA:S39_SoloSeriesCup_Event4_ASIA": "S37_ScoringRules_SoloSeries",
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division1_ASIA:S39_FNCSDivisionalCup_Division1_Week2Day1_ASIA": "ScoringRules_DuosDivisionalCup_Div1",
-    "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_ASIA:S39_ReloadCashVictoryCup_Event2Round2_ASIA": "S39_ReloadCashVictoryCup_ScoringRules_Round2",
     "Fortnite:epicgames_S39_RankedCupDuosBR_ASIA:S39_RankedCupDuosBR_Event6_ASIA_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Jan_ASIA:S39_DuosConsoleVictoryCupZB_Event12Round1_ASIA": "S39_DuosConsoleVictoryCupZB_ScoringRules_Round1",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_ASIA:S39_RankedCupDuosJanZB_Event5_ASIA_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_ASIA:S39_RankedCupReloadDuosJan_Event7_ASIA_1_Gold": "ScoringRules_RankedCupDuosReload_Gold_1",
+    "Fortnite:epicgames_S39_ReloadEliteSeries2Opens_ASIA:S39_ReloadEliteSeries2Open1_ASIA": "S39_ScoringRules_EliteSeriesOpens",
+    "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_ASIA:S39_ReloadCashVictoryCup_Event2Round2_ASIA": "S39_ReloadCashVictoryCup_ScoringRules_Round2",
     "Fortnite:epicgames_S39_RankedCupDuosBR_ASIA:S39_RankedCupDuosBR_Event1_ASIA_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S38_RankedCupSoloJan_Event1_ASIA_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
     "Fortnite:epicgames_S39_RankedCupDuosBR_ASIA:S39_RankedCupDuosBR_Event1_ASIA_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
@@ -24276,7 +24499,6 @@
     "Fortnite:epicgames_S39_RankedCupDuosBR_ASIA:S39_RankedCupDuosBR_Event6_ASIA_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_ASIA:S39_RankedCupDuosJanZB_Event1_ASIA_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_ASIA:S39_RankedCupReloadDuosJan_Event8_ASIA_1_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_1",
-    "Fortnite:epicgames_S39_ReloadCashVictoryCup_Jan_ASIA:S39_ReloadCashVictoryCup_Event8Round2_ASIA": "S39_ReloadCashVictoryCup_ScoringRules_Round2",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_ASIA:S39_RankedCupReloadDuosJan_Event7_ASIA_1_Unreal": "ScoringRules_RankedCupDuosReload_Unreal_1",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_ASIA:S39_RankedCupReloadDuosJan_Event4_ASIA_1_Elite": "ScoringRules_RankedCupDuosReload_Elite_1",
     "Fortnite:epicgames_S39_MobileSeriesJan_ASIA:S39_MobileSeries_JanRound10ASIA_4": "ScoringRules_MobileSeriesRounds",
@@ -24284,6 +24506,8 @@
     "Fortnite:epicgames_S39_RankedCupDuosBR_ASIA:S39_RankedCupDuosBR_Event7_ASIA_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_ASIA:S39_RankedCupReloadDuosJan_Event8_ASIA_1_Unreal": "ScoringRules_RankedCupDuosReload_Unreal_1",
     "Fortnite:epicgames_S39_RankedCupDuosBR_ASIA:S39_RankedCupDuosBR_Event5_ASIA_1_diamond": "ScoringRules_RankedCupDuos_Diamond_1",
+    "Fortnite:cumulative:epicgames_S39_ReloadEliteSeries2Opens_ASIA_cumulative": "S39_ScoringRules_EliteSeriesOpens",
+    "Fortnite:epicgames_S39_ReloadCashVictoryCup_Jan_ASIA:S39_ReloadCashVictoryCup_Event8Round2_ASIA": "S39_ReloadCashVictoryCup_ScoringRules_Round2",
     "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S39_RankedCupSoloJan_Event2_ASIA_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S39_RankedCupDuosBR_ASIA:S39_RankedCupDuosBR_Event2_ASIA_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S39_RankedCupSoloJan_Event7_ASIA_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
@@ -24494,6 +24718,7 @@
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_ASIA:S39_RankedCupDuosJanZB_Event7_ASIA_1_platinum": "epicgames_S39_RankedCupDuosZBJan_ASIA_1_Platinum",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_ASIA:S39_RankedCupDuosJanZB_Event2_ASIA_1_champion": "epicgames_S39_RankedCupDuosZBJan_ASIA_1_Champion",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_ASIA:S39_RankedCupDuosJanZB_Event2_ASIA_1_platinum": "epicgames_S39_RankedCupDuosZBJan_ASIA_1_Platinum",
+    "Fortnite:epicgames_S39_ReloadEliteSeries2Opens_ASIA:S39_ReloadEliteSeries2Open2_ASIA": "S39_ReloadEliteSeries2Open2_ASIA",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_ASIA:S39_RankedCupDuosJanZB_Event4_ASIA_1_unreal": "epicgames_S39_RankedCupDuosZBJan_ASIA_1_Unreal",
     "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S39_RankedCupSoloJan_Event6_ASIA_1_diamond": "epicgames_S39_RankedCupSoloJan_ASIA_1_Diamond",
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division3_ASIA:S39_FNCSDivisionalCup_Division3_Event7_ASIA": "S39_FNCSDivisionalCup_Division3_Event7_ASIA",
@@ -24524,11 +24749,12 @@
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_ASIA:S39_RankedCupDuosJanZB_Event4_ASIA_1_Silver": "epicgames_S39_RankedCupDuosZBJan_ASIA_1_Silver",
     "Fortnite:epicgames_S39_SoloSeriesCup_ASIA:S39_SoloSeriesCup_Event4_ASIA": "S39_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division1_ASIA:S39_FNCSDivisionalCup_Division1_Week2Day1_ASIA": "S39_FNCSDivisionalCup_Division1_Week2Day1_ASIA",
-    "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_ASIA:S39_ReloadCashVictoryCup_Event2Round2_ASIA": "S39_ReloadCashVictoryCup_Round2",
     "Fortnite:epicgames_S39_RankedCupDuosBR_ASIA:S39_RankedCupDuosBR_Event6_ASIA_1_unreal": "epicgames_S39_RankedCupDuosBR_ASIA_1_Unreal",
     "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Jan_ASIA:S39_DuosConsoleVictoryCupZB_Event12Round1_ASIA": "S39_DuosConsoleVictoryCupZB_Event12Round1_ASIA",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_ASIA:S39_RankedCupDuosJanZB_Event5_ASIA_1_unreal": "epicgames_S39_RankedCupDuosZBJan_ASIA_1_Unreal",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_ASIA:S39_RankedCupReloadDuosJan_Event7_ASIA_1_Gold": "epicgames_S39_RankedCupReloadDuosJan_ASIA_1_Gold",
+    "Fortnite:epicgames_S39_ReloadEliteSeries2Opens_ASIA:S39_ReloadEliteSeries2Open1_ASIA": "S39_ReloadEliteSeries2Open1_ASIA",
+    "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_ASIA:S39_ReloadCashVictoryCup_Event2Round2_ASIA": "S39_ReloadCashVictoryCup_Round2",
     "Fortnite:epicgames_S39_RankedCupDuosBR_ASIA:S39_RankedCupDuosBR_Event1_ASIA_1_champion": "epicgames_S39_RankedCupDuosBR_ASIA_1_Champion",
     "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S38_RankedCupSoloJan_Event1_ASIA_1_champion": "epicgames_S39_RankedCupSoloJan_ASIA_1_Champion",
     "Fortnite:epicgames_S39_RankedCupDuosBR_ASIA:S39_RankedCupDuosBR_Event1_ASIA_1_Silver": "epicgames_S39_RankedCupDuosBR_ASIA_1_Silver",
@@ -24932,6 +25158,10 @@
       "Fortnite:epicgames_S39_MobileSeriesJan_ASIA:S39_MobileSeries_JanRound2_ASIA_3",
       "Fortnite:series:epicgames_S39_MobileSeriesJan_ASIA_Qualifier3_series"
     ],
+    "Fortnite:epicgames_S39_ReloadEliteSeries2Opens_ASIA:S39_ReloadEliteSeries2Open2_ASIA": [
+      "Fortnite:epicgames_S39_ReloadEliteSeries2Opens_ASIA:S39_ReloadEliteSeries2Open2_ASIA",
+      "Fortnite:cumulative:epicgames_S39_ReloadEliteSeries2Opens_ASIA_cumulative"
+    ],
     "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S39_RankedCupSoloJan_Event10_ASIA": [
       "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S39_RankedCupSoloJan_Event10_ASIA",
       "Fortnite:epicgames_S39_RankedCupSoloJan_ASIA:S39_RankedCupSoloJan_Event10_ASIA_1_Bronze",
@@ -25008,11 +25238,15 @@
       "Fortnite:epicgames_S39_FNCSDivisionalCup_Division1_ASIA:S39_FNCSDivisionalCup_Division1_Week2Day1_ASIA",
       "Fortnite:cumulative:epicgames_S39_FNCSDivisionalCup_Division1_ASIA_Week2_cumulative"
     ],
-    "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_ASIA:S39_ReloadCashVictoryCup_Event2Round2_ASIA": [
-      "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_ASIA:S39_ReloadCashVictoryCup_Event2Round2_ASIA"
-    ],
     "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Jan_ASIA:S39_DuosConsoleVictoryCupZB_Event12Round1_ASIA": [
       "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Jan_ASIA:S39_DuosConsoleVictoryCupZB_Event12Round1_ASIA"
+    ],
+    "Fortnite:epicgames_S39_ReloadEliteSeries2Opens_ASIA:S39_ReloadEliteSeries2Open1_ASIA": [
+      "Fortnite:epicgames_S39_ReloadEliteSeries2Opens_ASIA:S39_ReloadEliteSeries2Open1_ASIA",
+      "Fortnite:cumulative:epicgames_S39_ReloadEliteSeries2Opens_ASIA_cumulative"
+    ],
+    "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_ASIA:S39_ReloadCashVictoryCup_Event2Round2_ASIA": [
+      "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_ASIA:S39_ReloadCashVictoryCup_Event2Round2_ASIA"
     ],
     "Fortnite:epicgames_S39_ReloadEliteSeries1Opens_ASIA:S39_ReloadEliteSeries1Open2_ASIA": [
       "Fortnite:epicgames_S39_ReloadEliteSeries1Opens_ASIA:S39_ReloadEliteSeries1Open2_ASIA",
