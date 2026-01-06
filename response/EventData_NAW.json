@@ -14049,7 +14049,7 @@
         },
         {
           "eventWindowId": "S39_MobileSeries_JanRound3_NAW",
-          "eventTemplateId": "EventTemplate_S39_MobileSeriesCup",
+          "eventTemplateId": "EventTemplate_S38_BlitzMobileCup",
           "countdownBeginTime": "2026-01-08T00:00:00Z",
           "beginTime": "2026-01-08T01:00:00Z",
           "endTime": "2026-01-08T02:00:00Z",
@@ -14200,10 +14200,6 @@
             },
             {
               "leaderboardDefId": "S39_BlitzMobileCupQual3_SeriesLeaderboardDef",
-              "isMainWindowLeaderboard": false
-            },
-            {
-              "leaderboardDefId": "S39_MobileSeriesCup_SeriesLeaderboardDef",
               "isMainWindowLeaderboard": false
             }
           ],
@@ -23582,52 +23578,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "S39_MobileSeriesCup_SeriesLeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}_series",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "EmptyScoringRules",
-      "clampsToZero": true,
-      "onlyScoreTopN": 1,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT20H"
-      },
-      "hidePlayerScores": false,
-      "requiredPlayerListings": [],
-      "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "S39_FNCSDivisionalCup_Division1Finals_DefaultLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -24793,7 +24743,6 @@
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAW:S39_RankedCupSoloJan_Event16_NAW_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_NAW:S39_ReloadCashVictoryCup_Event3Round1_NAW": "S39_ReloadCashVictoryCup_ScoringRules_Round1",
     "Fortnite:epicgames_S39_ReloadEliteSeries1Heat2_NAW:S39_FNCS_ReloadEliteSeries1Heat2_NAW": "S39_ScoringRules_EliteSeriesHeats",
-    "Fortnite:epicgames_S39_MobileSeriesJan_NAW:S39_MobileSeries_JanRound5_NAW_series": "EmptyScoringRules",
     "Fortnite:epicgames_S39_RankedCupDuosBR_NAW:S39_RankedCupDuosBR_Event6_NAW_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S39_SoloSeriesCup_NAW:S39_SoloSeriesCup_Event4_NAW": "S37_ScoringRules_SoloSeries",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAW:S39_RankedCupSoloJan_Event16_NAW_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
@@ -25244,7 +25193,6 @@
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAW:S39_RankedCupSoloJan_Event16_NAW_1_Bronze": "epicgames_S39_RankedCupSoloJan_NAW_1_Bronze",
     "Fortnite:epicgames_S39_ReloadCashVictoryCup_Dec_NAW:S39_ReloadCashVictoryCup_Event3Round1_NAW": "S39_ReloadCashVictoryCup_Event3Round1_NAW",
     "Fortnite:epicgames_S39_ReloadEliteSeries1Heat2_NAW:S39_FNCS_ReloadEliteSeries1Heat2_NAW": "epicgames_S39_ReloadEliteSeries1Heat2_NAW",
-    "Fortnite:epicgames_S39_MobileSeriesJan_NAW:S39_MobileSeries_JanRound5_NAW_series": "S39_MobileSeries_JanRound5_NAW",
     "Fortnite:epicgames_S39_RankedCupDuosBR_NAW:S39_RankedCupDuosBR_Event6_NAW_1_unreal": "epicgames_S39_RankedCupDuosBR_NAW_1_Unreal",
     "Fortnite:epicgames_S39_SoloSeriesCup_NAW:S39_SoloSeriesCup_Event4_NAW": "S39_PayoutTable_SoloSeriesCopy",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAW:S39_RankedCupSoloJan_Event16_NAW_1_platinum": "epicgames_S39_RankedCupSoloJan_NAW_1_Platinum",
@@ -26002,8 +25950,7 @@
     "Fortnite:epicgames_S39_MobileSeriesJan_NAW:S39_MobileSeries_JanRound5_NAW": [
       "Fortnite:epicgames_S39_MobileSeriesJan_NAW:S39_MobileSeries_JanRound5_NAW",
       "Fortnite:epicgames_S39_MobileSeriesJan_NAW:S39_MobileSeries_JanRound5_NAW_3",
-      "Fortnite:series:epicgames_S39_MobileSeriesJan_NAW_Qualifier3_series",
-      "Fortnite:epicgames_S39_MobileSeriesJan_NAW:S39_MobileSeries_JanRound5_NAW_series"
+      "Fortnite:series:epicgames_S39_MobileSeriesJan_NAW_Qualifier3_series"
     ],
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division2_NAW:S39_FNCSDivisionalCup_Division2_Event6_NAW": [
       "Fortnite:epicgames_S39_FNCSDivisionalCup_Division2_NAW:S39_FNCSDivisionalCup_Division2_Event6_NAW"
