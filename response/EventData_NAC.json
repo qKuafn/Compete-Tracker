@@ -16809,6 +16809,32 @@
         ]
       }
     ],
+    "S39_KizunaAICupMobile_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 150,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_marchtreatcup",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_marchtreatcup",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S39_FNCSDivisionalCup_Division2_Event3_NAC": [
       {
         "scoringType": "value",
@@ -23136,6 +23162,80 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s39_fncsdivisionalcup_division5_nac"
+      }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S39_KizunaAICupMobile_NAC",
+      "beginTime": "2026-01-13T23:00:00Z",
+      "endTime": "2026-01-14T00:00:00Z",
+      "displayDataId": "s39_kizuna_mobile",
+      "eventGroup": "Season39_KizunaAICupMobile",
+      "announcementTime": "2026-01-01T14:00:00Z",
+      "regions": [
+        "NAC",
+        "NAE"
+      ],
+      "regionMappings": {
+        "NAC": "NACCOMP",
+        "NAE": "NACCOMP"
+      },
+      "platforms": [
+        "IOS",
+        "Android"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "tournamentType": "WorkshopCup",
+        "webId": "S39_KizunaAICupMobile",
+        "minimumAccountLevel": 50,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S39_KizunaAICupMobile_NAC",
+          "eventTemplateId": "EventTemplate_S39_KizunaAICupMobile",
+          "countdownBeginTime": "2026-01-13T22:00:00Z",
+          "beginTime": "2026-01-13T23:00:00Z",
+          "endTime": "2026-01-14T00:00:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_kizuna_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            "input-touch"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_KizunaAICupMobile_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s39_kizunaaicupmobile_nac"
       }
     },
     {
@@ -31118,6 +31218,43 @@
       "clampsToZero": false
     },
     {
+      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+      "matchCap": 10,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S39_KizunaAICupMobile",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_CR",
       "matchCap": 8,
       "tiebreakerFormula": {
@@ -31547,6 +31684,52 @@
       "clampsToZero": true,
       "onlyScoreTopN": 1,
       "hidePlayerScores": false,
+      "requiredPlayerListings": [],
+      "discardZeroScore": false
+    },
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "S39_KizunaAICupMobile_LeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "ScoringRules_MobileSeriesRounds",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${windowId}",
+        "payoutDate": "windowEnd+PT10M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
       "requiredPlayerListings": [],
       "discardZeroScore": false
     },
@@ -34415,6 +34598,7 @@
     "Fortnite:epicgames_S39_RankedCupDuosBR_NAC:S39_RankedCupDuosBR_Event3_NAC_2_elite": "ScoringRules_RankedCupDuos_Elite_2",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAC:S39_RankedCupSoloJan_Event8_NAC_2_champion": "ScoringRules_RankedCupSolo_Champion_2",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_NAC:S39_RankedCupDuosJanZB_Event4_NAC_2_gold": "ScoringRules_RankedCupDuos_Gold_2",
+    "Fortnite:epicgames_S39_KizunaAICupMobile_NAC:S39_KizunaAICupMobile_NAC": "ScoringRules_MobileSeriesRounds",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_NAC:S39_RankedCupDuosJanZB_Event6_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAC:S39_RankedCupSoloJan_Event9_NAC_2_Silver": "ScoringRules_RankedCupSolo_Silver_2",
     "Fortnite:epicgames_S39_ReloadCashVictoryCup_Jan_NAC:S39_ReloadCashVictoryCup_Event9Round2_NAC": "S39_ReloadCashVictoryCup_ScoringRules_Round2",
@@ -34914,6 +35098,7 @@
     "Fortnite:epicgames_S39_RankedCupDuosBR_NAC:S39_RankedCupDuosBR_Event3_NAC_2_elite": "epicgames_S39_RankedCupDuosBR_NAC_2_Elite",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAC:S39_RankedCupSoloJan_Event8_NAC_2_champion": "epicgames_S39_RankedCupSoloJan_NAC_2_Champion",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_NAC:S39_RankedCupDuosJanZB_Event4_NAC_2_gold": "epicgames_S39_RankedCupDuosZBJan_NAC_2_Gold",
+    "Fortnite:epicgames_S39_KizunaAICupMobile_NAC:S39_KizunaAICupMobile_NAC": "S39_KizunaAICupMobile_NAC",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAC:S39_RankedCupSoloJan_Event9_NAC_2_Silver": "epicgames_S39_RankedCupSoloJan_NAC_2_Silver",
     "Fortnite:epicgames_S39_ReloadCashVictoryCup_Jan_NAC:S39_ReloadCashVictoryCup_Event9Round2_NAC": "S39_ReloadCashVictoryCup_Round2",
     "Fortnite:epicgames_S39_MobileSeriesCupJanQual_NAC:S39_MobileSeriesCup_JanQualifier4_NAC": "epicgames_S39_MobileSeriesCupJanQual_NAC",
@@ -35739,6 +35924,9 @@
     ],
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division2_NAC:S39_FNCSDivisionalCup_Division2_Event6_NAC": [
       "Fortnite:epicgames_S39_FNCSDivisionalCup_Division2_NAC:S39_FNCSDivisionalCup_Division2_Event6_NAC"
+    ],
+    "Fortnite:epicgames_S39_KizunaAICupMobile_NAC:S39_KizunaAICupMobile_NAC": [
+      "Fortnite:epicgames_S39_KizunaAICupMobile_NAC:S39_KizunaAICupMobile_NAC"
     ],
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_NAC:S39_RankedCupDuosJanZB_Event6_NAC": [
       "Fortnite:epicgames_S39_RankedCupDuosZBJan_NAC:S39_RankedCupDuosJanZB_Event6_NAC",
