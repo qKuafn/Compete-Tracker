@@ -1,0 +1,69 @@
+{
+  "EventName": "キズナアイモバイルカップ",
+  "eventId": "epicgames_S39_KizunaAICupMobile_ASIA",
+  "displayDataId": "s39_kizuna_mobile",
+  "square_poster_image": "https://cdn2.unrealengine.com/fnsp-39-20-marchtreat-comp-in-game-tab-800x800-800x800-69dd4e4ca562.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fnsp-39-20-marchtreat-comp-in-game-tab-1560x1024-1560x1024-69e616394c98.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/jp-fnsp-39-20-marchtreat-mobile-discoverplaylisttile-1920x1080-1920x1080-ddf4ebce1be7.jpg",
+  "metadata": {
+    "tournamentType": "WorkshopCup",
+    "webId": "S39_KizunaAICupMobile",
+    "minimumAccountLevel": 50,
+    "DisqualifyType": "Window",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "IOS",
+    "Android"
+  ],
+  "S39_KizunaAICupMobile_ASIA": {
+    "beginTime_UNIX": 1768291200,
+    "beginTime_JST": "2026-01-13 17:00:00",
+    "endTime_UNIX": 1768294800,
+    "endTime_JST": "2026-01-13 18:00:00",
+    "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:s39_kizuna_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      "input-touch"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S39_KizunaAICupMobile_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_MobileSeriesRounds",
+        "WindowLocation": "S39_KizunaAICupMobile_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 30,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_marchtreatcup"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 30,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_marchtreatcup"
+          }
+        ]
+      }
+    }
+  }
+}
