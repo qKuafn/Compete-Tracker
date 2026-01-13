@@ -15224,32 +15224,6 @@
         ]
       }
     ],
-    "S39_KizunaAICupMobile_EU": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 200,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_marchtreatcup",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:character_marchtreatcup",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "epicgames_S39_RankedCupDuosBR_EU_2_Diamond": [
       {
         "scoringType": "percentile",
@@ -22600,78 +22574,6 @@
     },
     {
       "gameId": "Fortnite",
-      "eventId": "epicgames_S39_KizunaAICupMobile_EU",
-      "beginTime": "2026-01-13T17:00:00Z",
-      "endTime": "2026-01-13T18:00:00Z",
-      "displayDataId": "s39_kizuna_mobile",
-      "eventGroup": "Season39_KizunaAICupMobile",
-      "announcementTime": "2026-01-01T08:00:00Z",
-      "regions": [
-        "EU"
-      ],
-      "regionMappings": {
-        "EU": "EUCOMP"
-      },
-      "platforms": [
-        "IOS",
-        "Android"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "tournamentType": "WorkshopCup",
-        "webId": "S39_KizunaAICupMobile",
-        "minimumAccountLevel": 50,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S39_KizunaAICupMobile_EU",
-          "eventTemplateId": "EventTemplate_S39_KizunaAICupMobile",
-          "countdownBeginTime": "2026-01-13T16:00:00Z",
-          "beginTime": "2026-01-13T17:00:00Z",
-          "endTime": "2026-01-13T18:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s39_kizuna_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            "input-touch"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S39_KizunaAICupMobile_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s39_kizunaaicupmobile_eu"
-      }
-    },
-    {
-      "gameId": "Fortnite",
       "eventId": "epicgames_S39_MobileSeriesCupJanQual_EU",
       "beginTime": "2026-01-12T17:00:00Z",
       "endTime": "2026-01-25T18:20:00Z",
@@ -29468,6 +29370,43 @@
       "clampsToZero": false
     },
     {
+      "playlistId": "Playlist_ShowdownTournament_Duos",
+      "matchCap": 6,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup_Final",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_NPM_Duos",
       "matchCap": 7,
       "tiebreakerFormula": {
@@ -29795,80 +29734,6 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "S39_ReloadCashVictoryCup_EventTemplate_Round1",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_Duos",
-      "matchCap": 6,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup_Final",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
-      "matchCap": 10,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S39_KizunaAICupMobile",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -30209,52 +30074,6 @@
       },
       "scoringRuleSetId": "S37_ScoringRules_FinalSoloSeries",
       "clampsToZero": true,
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": [],
-      "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "S39_KizunaAICupMobile_LeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "ScoringRules_MobileSeriesRounds",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT10M"
-      },
       "hidePlayerScores": false,
       "percentileAccuracy": 1,
       "requiredPlayerListings": [],
@@ -32914,7 +32733,6 @@
     "Fortnite:epicgames_S39_RankedCupSoloJan_EU:S38_RankedCupSoloJan_Event1_EU_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S39_MobileSeriesJan_EU:S39_MobileSeries_JanRound10_EU": "ScoringRules_MobileSeriesRounds",
     "Fortnite:epicgames_S39_RankedCupDuosBR_EU:S39_RankedCupDuosBR_Event7_EU": "EmptyScoringRules",
-    "Fortnite:epicgames_S39_KizunaAICupMobile_EU:S39_KizunaAICupMobile_EU": "ScoringRules_MobileSeriesRounds",
     "Fortnite:epicgames_S39_RankedCupSoloJan_EU:S39_RankedCupSoloJan_Event7_EU_2_elite": "ScoringRules_RankedCupSolo_Elite_2",
     "Fortnite:epicgames_S39_RankedCupDuosBR_EU:S39_RankedCupDuosBR_Event8_EU_2_Bronze": "ScoringRules_RankedCupDuos_Bronze_2",
     "Fortnite:epicgames_S39_SoloSeriesCupFinal_EU:S39_SoloSeriesCupFinal_Day1_EU": "S37_ScoringRules_FinalSoloSeries",
@@ -33415,7 +33233,6 @@
     "Fortnite:epicgames_S39_RankedCupSoloJan_EU:S38_RankedCupSoloJan_Event1_EU_1_diamond": "epicgames_S39_RankedCupSoloJan_EU_1_Diamond",
     "Fortnite:epicgames_S39_MobileSeriesJan_EU:S39_MobileSeries_JanRound10_EU": "S39_MobileSeries_JanRound10_EU",
     "Fortnite:epicgames_S39_RankedCupSoloJan_EU:S39_RankedCupSoloJan_Event4_EU_2_champion": "epicgames_S39_RankedCupSoloJan_EU_2_Champion",
-    "Fortnite:epicgames_S39_KizunaAICupMobile_EU:S39_KizunaAICupMobile_EU": "S39_KizunaAICupMobile_EU",
     "Fortnite:epicgames_S39_RankedCupSoloJan_EU:S39_RankedCupSoloJan_Event7_EU_2_elite": "epicgames_S39_RankedCupSoloJan_EU_2_Elite",
     "Fortnite:epicgames_S39_RankedCupDuosBR_EU:S39_RankedCupDuosBR_Event8_EU_2_Bronze": "epicgames_S39_RankedCupDuosBR_EU_2_Bronze",
     "Fortnite:epicgames_S39_RankedCupDuosBR_EU:S39_RankedCupDuosBR_Event6_EU_2_champion": "epicgames_S39_RankedCupDuosBR_EU_2_Champion",
@@ -34120,9 +33937,6 @@
       "Fortnite:epicgames_S39_RankedCupReloadDuosJan_EU:S39_RankedCupReloadDuosJan_Event3_EU_2_Elite",
       "Fortnite:epicgames_S39_RankedCupReloadDuosJan_EU:S39_RankedCupReloadDuosJan_Event3_EU_2_Champion",
       "Fortnite:epicgames_S39_RankedCupReloadDuosJan_EU:S39_RankedCupReloadDuosJan_Event3_EU_2_Unreal"
-    ],
-    "Fortnite:epicgames_S39_KizunaAICupMobile_EU:S39_KizunaAICupMobile_EU": [
-      "Fortnite:epicgames_S39_KizunaAICupMobile_EU:S39_KizunaAICupMobile_EU"
     ],
     "Fortnite:epicgames_S39_SoloSeriesCupFinal_EU:S39_SoloSeriesCupFinal_Day1_EU": [
       "Fortnite:epicgames_S39_SoloSeriesCupFinal_EU:S39_SoloSeriesCupFinal_Day1_EU",
