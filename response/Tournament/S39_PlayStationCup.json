@@ -1,0 +1,239 @@
+{
+  "EventName": "PlayStationカップ(バトルロイヤル)",
+  "eventId": "epicgames_S39_PlayStationCup_ASIA",
+  "displayDataId": "s39_playstation",
+  "square_poster_image": "https://cdn2.unrealengine.com/fnce-33-30-tileview-playstation-cup-01-800x800-800x800-7eb399672d51.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fnce-33-30-textures-playstationcup-01-1560x1024-a4c549ac1a5e.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/jp-fneco-33-30-competitive-discoverytile-playstationcup-1920x1080-1920x1080-73e949b0d27a.jpg",
+  "metadata": {
+    "tournamentType": "CashCup",
+    "webId": "S39_PlayStationCup",
+    "minimumAccountLevel": 50,
+    "DisqualifyType": "Window",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "PS4",
+    "PS5"
+  ],
+  "S39_PlayStationCup_Qualifier1_ASIA": {
+    "beginTime_UNIX": 1769504400,
+    "beginTime_JST": "2026-01-27 18:00:00",
+    "endTime_UNIX": 1769515200,
+    "endTime_JST": "2026-01-27 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_Solo",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:TBD",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S39_PlayStationCup_LeaderboardDef_Qualifier": {
+        "scoringRuleSetId": "S39_PlayStationCup_ScoringRules_Qualifier",
+        "WindowLocation": "S39_PlayStationCup_Qualifier1_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:spray_pscupbr"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 50,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S39_PlayStationCup_Final_ASIA"
+          }
+        ]
+      }
+    }
+  },
+  "S39_PlayStationCup_Qualifier2_ASIA": {
+    "beginTime_UNIX": 1769763600,
+    "beginTime_JST": "2026-01-30 18:00:00",
+    "endTime_UNIX": 1769774400,
+    "endTime_JST": "2026-01-30 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_Solo",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:TBD",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban",
+      "S39_PlayStationCup_Final_ASIA"
+    ],
+    "ScoringRules": {
+      "S39_PlayStationCup_LeaderboardDef_Qualifier": {
+        "scoringRuleSetId": "S39_PlayStationCup_ScoringRules_Qualifier",
+        "WindowLocation": "S39_PlayStationCup_Qualifier2_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:spray_pscupbr"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 50,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S39_PlayStationCup_Final_ASIA"
+          }
+        ]
+      }
+    }
+  },
+  "S39_PlayStationCup_Final_ASIA": {
+    "beginTime_UNIX": 1769936400,
+    "beginTime_JST": "2026-02-01 18:00:00",
+    "endTime_UNIX": 1769947200,
+    "endTime_JST": "2026-02-01 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_Solo",
+    "matchCap": 6,
+    "additionalRequirements": [
+      "eula:s39_playstation_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [
+      "S39_PlayStationCup_Final_ASIA"
+    ],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S39_PlayStationCup_LeaderboardDef_Final": {
+        "scoringRuleSetId": "S39_PlayStationCup_ScoringRules_Final",
+        "WindowLocation": "S39_PlayStationCup_Final_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 1,
+            "rewardType": "ecomm",
+            "quantity": 1500,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "ecomm",
+            "quantity": 1000,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 3,
+            "rewardType": "ecomm",
+            "quantity": 900,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "ecomm",
+            "quantity": 800,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 5,
+            "rewardType": "ecomm",
+            "quantity": 700,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "ecomm",
+            "quantity": 600,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 7,
+            "rewardType": "ecomm",
+            "quantity": 500,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "ecomm",
+            "quantity": 400,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 9,
+            "rewardType": "ecomm",
+            "quantity": 300,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 25,
+            "rewardType": "ecomm",
+            "quantity": 100,
+            "value": "USD"
+          }
+        ]
+      }
+    }
+  }
+}
