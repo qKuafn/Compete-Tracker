@@ -13082,73 +13082,6 @@
         ]
       }
     ],
-    "S39_FNCS_DivisionalCupTrial_NAC": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 0,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "RegionLock_S39_FNCSDivisionalTrial_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "S39_FNCS_Division5_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 1000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S39_FNCS_Division2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 3000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S39_FNCS_Division3_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 8000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S39_FNCS_Division4_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "epicgames_S39_RankedCupDuosBR_NAC_2_Gold": [
       {
         "scoringType": "percentile",
@@ -18535,119 +18468,6 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s39_duosconsolevictorycupzb_jan_nac"
-      }
-    },
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S39_FNCSDivisionalCupTrial_NAC",
-      "beginTime": "2026-02-01T00:00:00Z",
-      "endTime": "2026-02-01T03:00:00Z",
-      "displayDataId": "s39_divisiontrial",
-      "eventGroup": "Season39_FNCSDivisionalCupTrial",
-      "announcementTime": "2025-06-07T05:00:00Z",
-      "regions": [
-        "NAE",
-        "NAC"
-      ],
-      "regionMappings": {
-        "NAC": "NACCOMP",
-        "NAE": "NACCOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "SecureBoot",
-          "CryptoProcessor"
-        ],
-        "tournamentType": "CashCup",
-        "TeamLockType": "Window",
-        "webId": "S39_FNCSDivisionalCupTrial",
-        "minimumAccountLevel": 350,
-        "DisqualifyType": "Event",
-        "RegionLockType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S39_FNCS_DivisionalCupTrial_NAC",
-          "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
-          "countdownBeginTime": "2026-01-31T22:00:00Z",
-          "beginTime": "2026-02-01T00:00:00Z",
-          "endTime": "2026-02-01T03:00:00Z",
-          "round": 1,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s39_fncsdiv_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            [
-              "currentRanking:ranked-br:6",
-              "currentRanking:ranked-zb:6",
-              "currentRanking:ranked_blastberry_build:6",
-              "currentRanking:ranked_blastberry_nobuild:6"
-            ]
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S39_FNCSDivisionalCup_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S39_CashCup_Qualified"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "RegionLock_S39_FNCSDivisionalTrial_BR",
-            "RegionLock_S39_FNCSDivisionalTrial_EU",
-            "S39_FNCS_Division1_NAC",
-            "RegionLock_S39_FNCSDivisionalTrial_ASIA",
-            "S39_FNCS_Banned",
-            "Permanent_Tournament_Ban",
-            "RegionLock_S39_FNCSDivisionalTrial_OCE",
-            "RegionLock_S39_FNCSDivisionalTrial_ME",
-            "RegionLock_S39_FNCSDivisionalTrial_NAW"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s39_fncsdivisionalcuptrial_nac"
       }
     },
     {
@@ -30197,7 +30017,6 @@
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_NAC:S39_RankedCupDuosJanZB_Event6_NAC_2_Silver": "ScoringRules_RankedCupDuos_Silver_2",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAC:S39_RankedCupSoloJan_Event16_NAC_2_Silver": "ScoringRules_RankedCupSolo_Silver_2",
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division4_NAC:S39_FNCSDivisionalCup_Division4_Event3_NAC": "ScoringRules_DuosDivisionalCup_v2",
-    "Fortnite:epicgames_S39_FNCSDivisionalCupTrial_NAC:S39_FNCS_DivisionalCupTrial_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S39_RankedCupDuosBR_NAC:S39_RankedCupDuosBR_Event6_NAC_2_gold": "ScoringRules_RankedCupDuos_Gold_2",
     "Fortnite:epicgames_S39_RankedCupDuosBR_NAC:S39_RankedCupDuosBR_Event5_NAC_2_Silver": "ScoringRules_RankedCupDuos_Silver_2",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAC:S39_RankedCupSoloJan_Event9_NAC_2_unreal": "ScoringRules_RankedCupSolo_Unreal_2",
@@ -30677,7 +30496,6 @@
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_NAC:S39_RankedCupDuosJanZB_Event6_NAC_2_Silver": "epicgames_S39_RankedCupDuosZBJan_NAC_2_Silver",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAC:S39_RankedCupSoloJan_Event16_NAC_2_Silver": "epicgames_S39_RankedCupSoloJan_NAC_2_Silver",
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division4_NAC:S39_FNCSDivisionalCup_Division4_Event3_NAC": "S39_FNCSDivisionalCup_Division4_Event3_NAC",
-    "Fortnite:epicgames_S39_FNCSDivisionalCupTrial_NAC:S39_FNCS_DivisionalCupTrial_NAC": "S39_FNCS_DivisionalCupTrial_NAC",
     "Fortnite:epicgames_S39_RankedCupDuosBR_NAC:S39_RankedCupDuosBR_Event6_NAC_2_gold": "epicgames_S39_RankedCupDuosBR_NAC_2_Gold",
     "Fortnite:epicgames_S39_RankedCupDuosBR_NAC:S39_RankedCupDuosBR_Event5_NAC_2_Silver": "epicgames_S39_RankedCupDuosBR_NAC_2_Silver",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAC:S39_RankedCupSoloJan_Event9_NAC_2_unreal": "epicgames_S39_RankedCupSoloJan_NAC_2_Unreal",
@@ -31155,9 +30973,6 @@
     ],
     "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event7Round2_NAC": [
       "Fortnite:epicgames_S39_PerformanceEvaluation_NAC:S39_PerformanceEvaluation_Event7Round2_NAC"
-    ],
-    "Fortnite:epicgames_S39_FNCSDivisionalCupTrial_NAC:S39_FNCS_DivisionalCupTrial_NAC": [
-      "Fortnite:epicgames_S39_FNCSDivisionalCupTrial_NAC:S39_FNCS_DivisionalCupTrial_NAC"
     ],
     "Fortnite:epicgames_S39_ReloadEliteSeries1Heat3_NAC:S39_ReloadEliteSeries1Heat3_NAC": [
       "Fortnite:epicgames_S39_ReloadEliteSeries1Heat3_NAC:S39_ReloadEliteSeries1Heat3_NAC"
