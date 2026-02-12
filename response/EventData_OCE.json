@@ -14995,6 +14995,97 @@
         ]
       }
     ],
+    "epicgames_S39_MobileSeriesCupMarQualAll_OCE": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 700,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 2,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 600,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 3,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 500,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 4,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 400,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 250,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 12,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 200,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 16,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 100,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S39_RankedCupReloadDuosJan_OCE_1_Silver": [
       {
         "scoringType": "percentile",
@@ -18630,6 +18721,99 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s39_mobileseriescupmarqual_oce"
+      }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S39_MobileSeriesCupMarQualAll_OCE",
+      "beginTime": "2026-03-08T06:00:00Z",
+      "endTime": "2026-03-08T07:20:00Z",
+      "displayDataId": "s39_mobile_jan_qual",
+      "eventGroup": "Season39_MobileSeriesCup",
+      "announcementTime": "2025-06-06T14:00:00Z",
+      "regions": [
+        "OCE"
+      ],
+      "regionMappings": {
+        "OCE": "OCECOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "tournamentType": "CashCup",
+        "IsDuplicate": true,
+        "webId": "S39_MobileSeriesCupMarQuals",
+        "minimumAccountLevel": 50,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S39_MobileSeriesCup_MarQualifier7All_OCE",
+          "eventTemplateId": "EventTemplate_S38_BlitzMobileCup",
+          "countdownBeginTime": "2026-03-08T05:00:00Z",
+          "beginTime": "2026-03-08T06:00:00Z",
+          "endTime": "2026-03-08T07:20:00Z",
+          "round": 1,
+          "payoutDelay": 10,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_mobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            "input-touch"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_BlitzMobileCupFinal_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_MobileSeriesQualifier7Mar_OCE"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingInitialDelaySeconds": 300,
+            "ScheduledMatchmakingMatchDelaySeconds": 480
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s39_mobileseriescupmarqualall_oce"
       }
     },
     {
@@ -28948,12 +29132,13 @@
     "Fortnite:epicgames_S39_RankedCupSoloJan_OCE:S39_RankedCupSoloJan_Event4_OCE_2_diamond": "ScoringRules_RankedCupSolo_Diamond_2",
     "Fortnite:epicgames_S39_RankedCupSoloJan_OCE:S39_RankedCupSoloJan_Event21_OCE_2_unreal": "ScoringRules_RankedCupSolo_Unreal_2",
     "Fortnite:epicgames_S39_RankedCupSoloJan_OCE:S39_RankedCupSoloJan_Event2_OCE_2_Bronze": "ScoringRules_RankedCupSolo_Bronze_2",
-    "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Jan_OCE:S39_DuosConsoleVictoryCupZB_Event7Round2_OCE": "S39_DuosConsoleVictoryCupZB_ScoringRules_Round2",
     "Fortnite:epicgames_S39_RankedCupSoloJan_OCE:S39_RankedCupSoloJan_Event16_OCE_2_diamond": "ScoringRules_RankedCupSolo_Diamond_2",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_OCE:S39_RankedCupDuosJanZB_Event2_OCE_2_elite": "ScoringRules_RankedCupDuos_Elite_2",
     "Fortnite:epicgames_S39_RankedCupSoloJan_OCE:S39_RankedCupSoloJan_Event18_OCE_2_platinum": "ScoringRules_RankedCupSolo_Platinum_2",
     "Fortnite:epicgames_S39_MobileSeriesFebAll_OCE:S39_MobileSeries_FebRound10All_OCE": "ScoringRules_MobileSeriesRounds",
     "Fortnite:epicgames_S39_RankedCupSoloJan_OCE:S39_RankedCupSoloJan_Event7_OCE_2_platinum": "ScoringRules_RankedCupSolo_Platinum_2",
+    "Fortnite:epicgames_S39_MobileSeriesCupMarQualAll_OCE:S39_MobileSeriesCup_MarQualifier7All_OCE": "ScoringRules_MobileSeriesQualifiers",
+    "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Jan_OCE:S39_DuosConsoleVictoryCupZB_Event7Round2_OCE": "S39_DuosConsoleVictoryCupZB_ScoringRules_Round2",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_OCE:S39_RankedCupReloadDuosJan_Event3_OCE_2_Gold": "ScoringRules_RankedCupDuosReload_Gold_2",
     "Fortnite:epicgames_S39_RankedCupDuosBR_OCE:S39_RankedCupDuosBR_Event1_OCE_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
     "Fortnite:epicgames_S39_MobileSeriesFebAll_OCE:S39_MobileSeries_FebRound7All_OCE": "ScoringRules_MobileSeriesRounds",
@@ -29510,12 +29695,13 @@
     "Fortnite:epicgames_S39_RankedCupSoloJan_OCE:S39_RankedCupSoloJan_Event4_OCE_2_diamond": "epicgames_S39_RankedCupSoloJan_OCE_2_Diamond",
     "Fortnite:epicgames_S39_RankedCupSoloJan_OCE:S39_RankedCupSoloJan_Event21_OCE_2_unreal": "epicgames_S39_RankedCupSoloJan_OCE_2_Unreal",
     "Fortnite:epicgames_S39_RankedCupSoloJan_OCE:S39_RankedCupSoloJan_Event2_OCE_2_Bronze": "epicgames_S39_RankedCupSoloJan_OCE_2_Bronze",
-    "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Jan_OCE:S39_DuosConsoleVictoryCupZB_Event7Round2_OCE": "S39_DuosConsoleVictoryCupZB_Round2",
     "Fortnite:epicgames_S39_RankedCupSoloJan_OCE:S39_RankedCupSoloJan_Event16_OCE_2_diamond": "epicgames_S39_RankedCupSoloJan_OCE_2_Diamond",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_OCE:S39_RankedCupDuosJanZB_Event2_OCE_2_elite": "epicgames_S39_RankedCupDuosZBJan_OCE_2_Elite",
     "Fortnite:epicgames_S39_RankedCupSoloJan_OCE:S39_RankedCupSoloJan_Event18_OCE_2_platinum": "epicgames_S39_RankedCupSoloJan_OCE_2_Platinum",
     "Fortnite:epicgames_S39_MobileSeriesFebAll_OCE:S39_MobileSeries_FebRound10All_OCE": "S39_MobileSeriesAll_PayoutTable",
     "Fortnite:epicgames_S39_RankedCupSoloJan_OCE:S39_RankedCupSoloJan_Event7_OCE_2_platinum": "epicgames_S39_RankedCupSoloJan_OCE_2_Platinum",
+    "Fortnite:epicgames_S39_MobileSeriesCupMarQualAll_OCE:S39_MobileSeriesCup_MarQualifier7All_OCE": "epicgames_S39_MobileSeriesCupMarQualAll_OCE",
+    "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Jan_OCE:S39_DuosConsoleVictoryCupZB_Event7Round2_OCE": "S39_DuosConsoleVictoryCupZB_Round2",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_OCE:S39_RankedCupReloadDuosJan_Event3_OCE_2_Gold": "epicgames_S39_RankedCupReloadDuosJan_OCE_2_Gold",
     "Fortnite:epicgames_S39_RankedCupDuosBR_OCE:S39_RankedCupDuosBR_Event1_OCE_1_Bronze": "epicgames_S39_RankedCupDuosBR_OCE_1_Bronze",
     "Fortnite:epicgames_S39_MobileSeriesFebAll_OCE:S39_MobileSeries_FebRound7All_OCE": "S39_MobileSeriesAll_PayoutTable",
@@ -30255,12 +30441,15 @@
       "Fortnite:epicgames_S39_MobileSeriesFebAll_OCE:S39_MobileSeries_FebRound10All_OCE",
       "Fortnite:series:epicgames_S39_MobileSeriesFebAll_OCE_Qual6_series"
     ],
-    "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Jan_OCE:S39_DuosConsoleVictoryCupZB_Event7Round2_OCE": [
-      "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Jan_OCE:S39_DuosConsoleVictoryCupZB_Event7Round2_OCE"
-    ],
     "Fortnite:epicgames_S39_MobileSeriesFebAll_OCE:S39_MobileSeries_FebRound7All_OCE": [
       "Fortnite:epicgames_S39_MobileSeriesFebAll_OCE:S39_MobileSeries_FebRound7All_OCE",
       "Fortnite:series:epicgames_S39_MobileSeriesFebAll_OCE_Qual6_series"
+    ],
+    "Fortnite:epicgames_S39_MobileSeriesCupMarQualAll_OCE:S39_MobileSeriesCup_MarQualifier7All_OCE": [
+      "Fortnite:epicgames_S39_MobileSeriesCupMarQualAll_OCE:S39_MobileSeriesCup_MarQualifier7All_OCE"
+    ],
+    "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Jan_OCE:S39_DuosConsoleVictoryCupZB_Event7Round2_OCE": [
+      "Fortnite:epicgames_S39_DuosConsoleVictoryCupZB_Jan_OCE:S39_DuosConsoleVictoryCupZB_Event7Round2_OCE"
     ],
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_OCE:S39_RankedCupDuosJanZB_Event3_OCE": [
       "Fortnite:epicgames_S39_RankedCupDuosZBJan_OCE:S39_RankedCupDuosJanZB_Event3_OCE",

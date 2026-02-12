@@ -13894,25 +13894,6 @@
         ]
       }
     ],
-    "S39_MobileSeries_FebRound4_NAW": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 10,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_scalybutcher",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "S39_DuosConsoleVictoryCupZB_Event11Round1_NAW": [
       {
         "scoringType": "rank",
@@ -14047,6 +14028,116 @@
                 "rewardMode": "standard",
                 "value": "S39_FNCS_Division1_NAW",
                 "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S39_MobileSeries_FebRound4_NAW": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 10,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_scalybutcher",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "epicgames_S39_MobileSeriesCupMarQualAll_NAW": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 700,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 2,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 600,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 3,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 500,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 4,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 400,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 250,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 12,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 200,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 16,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 100,
                 "notifiesPlayer": false
               }
             ]
@@ -18702,6 +18793,99 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s39_mobileseriescupmarqual_naw"
+      }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S39_MobileSeriesCupMarQualAll_NAW",
+      "beginTime": "2026-03-09T00:00:00Z",
+      "endTime": "2026-03-09T01:20:00Z",
+      "displayDataId": "s39_mobile_jan_qual",
+      "eventGroup": "Season39_MobileSeriesCup",
+      "announcementTime": "2025-06-07T07:00:00Z",
+      "regions": [
+        "NAW"
+      ],
+      "regionMappings": {
+        "NAW": "NAWCOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "tournamentType": "CashCup",
+        "IsDuplicate": true,
+        "webId": "S39_MobileSeriesCupMarQuals",
+        "minimumAccountLevel": 50,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S39_MobileSeriesCup_MarQualifier7All_NAW",
+          "eventTemplateId": "EventTemplate_S38_BlitzMobileCup",
+          "countdownBeginTime": "2026-03-08T23:00:00Z",
+          "beginTime": "2026-03-09T00:00:00Z",
+          "endTime": "2026-03-09T01:20:00Z",
+          "round": 1,
+          "payoutDelay": 10,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s39_mobile_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            "input-touch"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_BlitzMobileCupFinal_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S39_MobileSeriesQualifier7Mar_NAW"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers",
+            "ScheduledMatchmakingInitialDelaySeconds": 300,
+            "ScheduledMatchmakingMatchDelaySeconds": 480
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s39_mobileseriescupmarqualall_naw"
       }
     },
     {
@@ -29104,6 +29288,7 @@
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAW:S39_RankedCupSoloJan_Event14_NAW_2_diamond": "ScoringRules_RankedCupSolo_Diamond_2",
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division2_NAW:S39_FNCSDivisionalCup_Division2_Event8_NAW": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:cumulative:epicgames_S39_FNCSDivisionalCup_Division1_NAW_Week3_cumulative": "ScoringRules_DuosDivisionalCup_Div1",
+    "Fortnite:epicgames_S39_MobileSeriesCupMarQualAll_NAW:S39_MobileSeriesCup_MarQualifier7All_NAW": "ScoringRules_MobileSeriesQualifiers",
     "Fortnite:epicgames_S39_MobileSeriesMarAll_NAW:S39_MobileSeries_MarRound1All_NAW": "ScoringRules_MobileSeriesRounds",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAW:S39_RankedCupSoloJan_Event19_NAW_2_gold": "ScoringRules_RankedCupSolo_Gold_2",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_NAW:S39_RankedCupReloadDuosJan_Event4_NAW_2_Elite": "ScoringRules_RankedCupDuosReload_Elite_2",
@@ -29657,6 +29842,7 @@
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division2_NAW:S39_FNCSDivisionalCup_Division2_Event11_NAW": "S39_FNCSDivisionalCup_Division2_Event11_NAW",
     "Fortnite:epicgames_S39_RankedCupDuosZBJan_NAW:S39_RankedCupDuosJanZB_Event5_NAW_2_unreal": "epicgames_S39_RankedCupDuosZBJan_NAW_2_Unreal",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAW:S39_RankedCupSoloJan_Event14_NAW_2_diamond": "epicgames_S39_RankedCupSoloJan_NAW_2_Diamond",
+    "Fortnite:epicgames_S39_MobileSeriesCupMarQualAll_NAW:S39_MobileSeriesCup_MarQualifier7All_NAW": "epicgames_S39_MobileSeriesCupMarQualAll_NAW",
     "Fortnite:epicgames_S39_MobileSeriesMarAll_NAW:S39_MobileSeries_MarRound1All_NAW": "S39_MobileSeries_MarRound1All_NAW",
     "Fortnite:epicgames_S39_RankedCupSoloJan_NAW:S39_RankedCupSoloJan_Event19_NAW_2_gold": "epicgames_S39_RankedCupSoloJan_NAW_2_Gold",
     "Fortnite:epicgames_S39_RankedCupReloadDuosJan_NAW:S39_RankedCupReloadDuosJan_Event4_NAW_2_Elite": "epicgames_S39_RankedCupReloadDuosJan_NAW_2_Elite",
@@ -30529,12 +30715,15 @@
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division2_NAW:S39_FNCSDivisionalCup_Division2_Event8_NAW": [
       "Fortnite:epicgames_S39_FNCSDivisionalCup_Division2_NAW:S39_FNCSDivisionalCup_Division2_Event8_NAW"
     ],
+    "Fortnite:epicgames_S39_FNCSDivisionalCup_Division2_NAW:S39_FNCSDivisionalCup_Division2_Event11_NAW": [
+      "Fortnite:epicgames_S39_FNCSDivisionalCup_Division2_NAW:S39_FNCSDivisionalCup_Division2_Event11_NAW"
+    ],
+    "Fortnite:epicgames_S39_MobileSeriesCupMarQualAll_NAW:S39_MobileSeriesCup_MarQualifier7All_NAW": [
+      "Fortnite:epicgames_S39_MobileSeriesCupMarQualAll_NAW:S39_MobileSeriesCup_MarQualifier7All_NAW"
+    ],
     "Fortnite:epicgames_S39_MobileSeriesMarAll_NAW:S39_MobileSeries_MarRound1All_NAW": [
       "Fortnite:epicgames_S39_MobileSeriesMarAll_NAW:S39_MobileSeries_MarRound1All_NAW",
       "Fortnite:series:epicgames_S39_MobileSeriesMarAll_NAW_Qualifier7_series"
-    ],
-    "Fortnite:epicgames_S39_FNCSDivisionalCup_Division2_NAW:S39_FNCSDivisionalCup_Division2_Event11_NAW": [
-      "Fortnite:epicgames_S39_FNCSDivisionalCup_Division2_NAW:S39_FNCSDivisionalCup_Division2_Event11_NAW"
     ],
     "Fortnite:epicgames_S39_FNCSDivisionalCup_Division3_NAW:S39_FNCSDivisionalCup_Division3_Event4_NAW": [
       "Fortnite:epicgames_S39_FNCSDivisionalCup_Division3_NAW:S39_FNCSDivisionalCup_Division3_Event4_NAW"
