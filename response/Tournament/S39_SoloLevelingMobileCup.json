@@ -1,0 +1,77 @@
+{
+  "EventName": "俺だけレベルアップな件: ARISEモバイルカップ",
+  "eventId": "epicgames_S39_SoloLevelingMobileCup_ASIA",
+  "displayDataId": "s39_sololeveling_mobile",
+  "square_poster_image": "https://cdn2.unrealengine.com/fneco-39-50-solo-compcup-ingamecompetetab-solotexture-800x800-800x800-a42a7cece2d5.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fneco-39-50-solo-compcup-ingamecompetetab-grouptexture-1560x1024-1560x1024-a9d4afac213f.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/jp-fneco-39-50-sololeveling-discovertile-1920x1080-1920x1080-b8a912c5ba68.jpg",
+  "metadata": {
+    "tournamentType": "ShopCup",
+    "webId": "S37_SoloLevelingMobileCup",
+    "minimumAccountLevel": 50,
+    "DisqualifyType": "Window",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "Android",
+    "IOS"
+  ],
+  "S39_SoloLevelingMobile_ASIA": {
+    "beginTime_UNIX": 1771574400,
+    "beginTime_JST": "2026-02-20 17:00:00",
+    "endTime_UNIX": 1771578000,
+    "endTime_JST": "2026-02-20 18:00:00",
+    "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:s39_sololeveling_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      "input-touch"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S39_SoloLevelingMobile_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_MobileSeriesRounds",
+        "WindowLocation": "S39_SoloLevelingMobile_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:emoticon_rampcanalfncs"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 30,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_rampcanal"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 30,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_rampcanal"
+          }
+        ]
+      }
+    }
+  }
+}
