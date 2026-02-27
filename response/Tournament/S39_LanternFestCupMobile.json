@@ -1,0 +1,89 @@
+{
+  "EventName": "ランタンフェスティバル モバイルカップ",
+  "eventId": "epicgames_S39_LanternFestCupMobile_ASIA",
+  "displayDataId": "s39_lantern_mobile",
+  "square_poster_image": "https://cdn2.unrealengine.com/fnbr-39-40-lanternfest-texture-800x800-800x800-1710df84375f.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fnbr-39-40-lanternfest-ingamecompetetab-grouptexture-1560x1024-1560x1024-47bc9cbc4b1b.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/jp-fnbr-39-40-lanternfest-competitive-aaliyah-mobiletag-discovertile-1920x1080-1920x1080-e9bca2ee7377.jpg",
+  "metadata": {
+    "requireSystemFeatures": [
+      "AndroidSecureDevice",
+      "IOSMinimumOSVersion"
+    ],
+    "tournamentType": "ShopCup",
+    "webId": "S39_LanternFestCupMobile",
+    "minimumAccountLevel": 50,
+    "DisqualifyType": "Window",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "Android",
+    "IOS"
+  ],
+  "S39_LanternFestCupMobile_ASIA": {
+    "beginTime_UNIX": 1772524800,
+    "beginTime_JST": "2026-03-03 17:00:00",
+    "endTime_UNIX": 1772528400,
+    "endTime_JST": "2026-03-03 18:00:00",
+    "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:",
+      "adps:g-a81a33a3b9a7",
+      "input-touch",
+      "mfa"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S39_LanternFestMobile_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "S39_LanternFestMobile_ScoringRules",
+        "WindowLocation": "S39_LanternFestCupMobile_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:spray_lanternfest26cup"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 150,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_sablehorizon"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 150,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_sablehorizon"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 150,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_sablehorizon"
+          }
+        ]
+      }
+    }
+  }
+}
