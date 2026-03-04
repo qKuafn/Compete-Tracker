@@ -16147,7 +16147,7 @@
         },
         {
           "eventWindowId": "S39_FNCSDivisionalCup_Division1_Week6Day1_NAW",
-          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
+          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup12",
           "countdownBeginTime": "2026-03-09T23:00:00Z",
           "beginTime": "2026-03-10T01:00:00Z",
           "endTime": "2026-03-10T04:00:00Z",
@@ -16198,7 +16198,7 @@
         },
         {
           "eventWindowId": "S39_FNCSDivisionalCup_Division1_Week6Day2_NAW",
-          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
+          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup12",
           "countdownBeginTime": "2026-03-10T23:00:00Z",
           "beginTime": "2026-03-11T01:00:00Z",
           "endTime": "2026-03-11T04:00:00Z",
@@ -23509,6 +23509,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupReloadDuos",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_NPM_Duos",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup12",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
