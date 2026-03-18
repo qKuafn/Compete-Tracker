@@ -1,5 +1,104 @@
 {
   "scoringRuleSets": {
+    "S40_DuckythegamerCupMobile_ScoringRules": [
+      {
+        "trackedStat": "PLACEMENT_STAT_INDEX",
+        "matchRule": "lte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 3,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 2,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 3,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 4,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 5,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 6,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 7,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 8,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 9,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 10,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 11,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 12,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 13,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 14,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 15,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 16,
+            "pointsEarned": 1,
+            "multiplicative": false
+          }
+        ]
+      },
+      {
+        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+        "matchRule": "gte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 1,
+            "multiplicative": true
+          }
+        ]
+      }
+    ],
     "S40_PlayStationCupMrSavageZB_ScoringRules": [
       {
         "trackedStat": "PLACEMENT_STAT_INDEX",
@@ -564,6 +663,53 @@
     ]
   },
   "payoutTables": {
+    "S40_DuckythegamerCupMobile_ME": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 30,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:cid_744_athena_commando_f_duckhero",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_sleepyduck",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaGlider:glider_id_228_celestialfemale",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_id_578_wickedduckfemale",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticShoes:shoes_pondrider",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S40_PlayStationCupMrSavageZB_ME": [
       {
         "scoringType": "value",
@@ -868,6 +1014,82 @@
   "events": [
     {
       "gameId": "Fortnite",
+      "eventId": "epicgames_S40_DuckythegamerCupMobile_ME",
+      "beginTime": "2026-03-21T14:00:00Z",
+      "endTime": "2026-03-21T15:30:00Z",
+      "displayDataId": "s40_ducky",
+      "eventGroup": "Season40_DuckythegamerCupMobile",
+      "announcementTime": "2026-03-02T12:00:00Z",
+      "regions": [
+        "ME"
+      ],
+      "regionMappings": {
+        "ME": "MECOMP"
+      },
+      "platforms": [
+        "Android",
+        "IOS"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "ShopCup",
+        "webId": "S40_DuckythegamerCupMobile",
+        "minimumAccountLevel": 15,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S40_DuckythegamerCupMobile_ME",
+          "eventTemplateId": "EventTemplate_S40_DuckythegamerCupMobile",
+          "countdownBeginTime": "2026-03-21T13:00:00Z",
+          "beginTime": "2026-03-21T14:00:00Z",
+          "endTime": "2026-03-21T15:30:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s40_duckythegamer_rules",
+            "adps:g-a81a33a3b9a7",
+            "input-touch",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S40_DuckythegamerCuptMobile_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s40_duckythegamercupmobile_me"
+      }
+    },
+    {
+      "gameId": "Fortnite",
       "eventId": "epicgames_S40_PlayStationCupMrSavageZB_ME",
       "beginTime": "2026-03-21T15:00:00Z",
       "endTime": "2026-03-21T18:00:00Z",
@@ -1087,6 +1309,43 @@
   ],
   "templates": [
     {
+      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+      "matchCap": 10,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S40_DuckythegamerCupMobile",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_NoBuildBR_Solo",
       "matchCap": 11,
       "tiebreakerFormula": {
@@ -1199,6 +1458,52 @@
     }
   ],
   "leaderboardDefs": [
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "S40_DuckythegamerCuptMobile_DefaultLeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S40_DuckythegamerCupMobile_ScoringRules",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${windowId}",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": [],
+      "discardZeroScore": false
+    },
     {
       "gameId": "Fortnite",
       "leaderboardDefId": "S40_PlayStationCupMrSavageZB_LeaderboardDef",
@@ -1339,16 +1644,21 @@
     }
   ],
   "scoreLocationScoringRuleSets": {
+    "Fortnite:epicgames_S40_DuckythegamerCupMobile_ME:S40_DuckythegamerCupMobile_ME": "S40_DuckythegamerCupMobile_ScoringRules",
     "Fortnite:epicgames_S40_PlayStationCupMrSavageZB_ME:S40_PlayStationCupMrSavageZB_ME": "S40_PlayStationCupMrSavageZB_ScoringRules",
     "Fortnite:epicgames_S40_PlayStationCupMrSavage_Final_ME:S40_PlayStationCupMrSavage_Final_ME": "S40_PlayStationCupMrSavage_ScoringRules_Final",
     "Fortnite:epicgames_S40_PlayStationCupMrSavage_Qualifier_ME:S40_PlayStationCupMrSavage_Qualifier_ME": "S40_PlayStationCupMrSavage_ScoringRules_Qualifier"
   },
   "scoreLocationPayoutTables": {
+    "Fortnite:epicgames_S40_DuckythegamerCupMobile_ME:S40_DuckythegamerCupMobile_ME": "S40_DuckythegamerCupMobile_ME",
     "Fortnite:epicgames_S40_PlayStationCupMrSavageZB_ME:S40_PlayStationCupMrSavageZB_ME": "S40_PlayStationCupMrSavageZB_ME",
     "Fortnite:epicgames_S40_PlayStationCupMrSavage_Final_ME:S40_PlayStationCupMrSavage_Final_ME": "S40_PlayStationCupMrSavage_Final_ME",
     "Fortnite:epicgames_S40_PlayStationCupMrSavage_Qualifier_ME:S40_PlayStationCupMrSavage_Qualifier_ME": "S40_PlayStationCupMrSavage_Qualifier_ME"
   },
   "resolvedWindowLocations": {
+    "Fortnite:epicgames_S40_DuckythegamerCupMobile_ME:S40_DuckythegamerCupMobile_ME": [
+      "Fortnite:epicgames_S40_DuckythegamerCupMobile_ME:S40_DuckythegamerCupMobile_ME"
+    ],
     "Fortnite:epicgames_S40_PlayStationCupMrSavageZB_ME:S40_PlayStationCupMrSavageZB_ME": [
       "Fortnite:epicgames_S40_PlayStationCupMrSavageZB_ME:S40_PlayStationCupMrSavageZB_ME"
     ],
