@@ -1,0 +1,161 @@
+{
+  "EventName": "s40_major1_lcq",
+  "eventId": "epicgames_S40_FNCSMajor1_LastChanceQualifier_ASIA",
+  "displayDataId": "s40_major1_lcq",
+  "square_poster_image": "未設定",
+  "tournament_view_background_image": "未設定",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "未設定",
+  "metadata": {
+    "requireSystemFeatures": [
+      "SecureBoot",
+      "CryptoProcessor",
+      "IOMMU",
+      "AndroidSecureDevice",
+      "IOSMinimumOSVersion"
+    ],
+    "tournamentType": "FNCS",
+    "TeamLockType": "Week",
+    "webId": "S40_FNCSMajor1_LCQ",
+    "minimumAccountLevel": 350,
+    "TrackedStats": [
+      "Headshots",
+      "DamageDealt",
+      "GainedHealthTimes",
+      "GainedShieldTimes",
+      "Travel_Distance_Ground",
+      "DamageReceived"
+    ],
+    "DisqualifyType": "Event",
+    "RegionLockType": "Season",
+    "AccountLockType": "Week"
+  },
+  "platforms": [
+    "XboxOneGDK",
+    "PS4",
+    "XCloud",
+    "Helios",
+    "Luna",
+    "IOS",
+    "XB1",
+    "XboxOne",
+    "XSX",
+    "Android",
+    "LunaMobile",
+    "Switch2",
+    "PS5",
+    "XCloudMobile",
+    "Mac",
+    "HeliosMobile",
+    "GFN",
+    "Switch",
+    "GFNMobile",
+    "Windows"
+  ],
+  "S40_FNCSMajor1_LastChanceQualifier_ASIA": {
+    "beginTime_UNIX": 1776675600,
+    "beginTime_JST": "2026-04-20 18:00:00",
+    "endTime_UNIX": 1776686400,
+    "endTime_JST": "2026-04-20 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_Duos",
+    "matchCap": 11,
+    "additionalRequirements": [
+      "eula:s33_fncs_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [
+      "S40_CashCup_Qualified"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [
+      "S39_FNCS_Division1_ASIA",
+      "S39_FNCS_Division2_ASIA",
+      "S39_FNCS_Division3_ASIA"
+    ],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "RegionLock_S40_FNCSMajor1_BR",
+      "S40_FNCS_Banned",
+      "RegionLock_S40_FNCSMajor1_NAC",
+      "Permanent_Tournament_Ban",
+      "S40_FNCSMajor1_GrandFinalist_ASIA",
+      "RegionLock_S40_FNCSMajor1_NAW",
+      "RegionLock_S40_FNCSMajor1_OCE",
+      "RegionLock_S40_FNCSMajor1_ME",
+      "RegionLock_S40_FNCSMajor1_EU"
+    ],
+    "ScoringRules": {
+      "S40_FNCSMajor1_LastChanceQualifier_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_FNCS2026_LCQ",
+        "WindowLocation": "S40_FNCSMajor1_LastChanceQualifier_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "RegionLock_S40_FNCSMajor1_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 50,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S40_FNCSMajor1_LastChanceLobby_ASIA"
+          }
+        ]
+      }
+    }
+  },
+  "S40_FNCSMajor1_LastChanceLobby_ASIA": {
+    "beginTime_UNIX": 1776762000,
+    "beginTime_JST": "2026-04-21 18:00:00",
+    "endTime_UNIX": 1776768000,
+    "endTime_JST": "2026-04-21 19:40:00",
+    "playlistId": "Playlist_ShowdownTournament_Duos",
+    "matchCap": 4,
+    "additionalRequirements": [
+      "eula:s33_fncs_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [
+      "S40_FNCSMajor1_LastChanceLobby_ASIA"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "Permanent_Tournament_Ban",
+      "S40_FNCSMajor1_GrandFinalist_ASIA",
+      "S40_FNCS_Banned",
+      "EpicAccountPrizingRestriction_v2"
+    ],
+    "ScoringRules": {
+      "S40_FNCSMajor1_LastChanceLobby_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_FNCS2026_LCL",
+        "WindowLocation": "S40_FNCSMajor1_LastChanceLobby_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 1000,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S40_FNCSMajor1_GrandFinalist_ASIA"
+          }
+        ]
+      }
+    }
+  }
+}
