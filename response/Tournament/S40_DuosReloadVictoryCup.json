@@ -1,0 +1,146 @@
+{
+  "EventName": "s40_reload_victory",
+  "eventId": "epicgames_S40_DuosReloadVictoryCup_ASIA",
+  "displayDataId": "s40_reload_victory",
+  "square_poster_image": "未設定",
+  "tournament_view_background_image": "未設定",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "未設定",
+  "metadata": {
+    "requireSystemFeatures": [
+      "SecureBoot",
+      "CryptoProcessor"
+    ],
+    "tournamentType": "CashCup",
+    "TeamLockType": "Window",
+    "webId": "S40_ReloadVictoryCup",
+    "minimumAccountLevel": 350,
+    "DisqualifyType": "Window",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "XboxOneGDK",
+    "PS4",
+    "XCloud",
+    "Helios",
+    "Luna",
+    "IOS",
+    "XB1",
+    "XboxOne",
+    "XSX",
+    "Android",
+    "LunaMobile",
+    "Switch2",
+    "PS5",
+    "XCloudMobile",
+    "Mac",
+    "HeliosMobile",
+    "GFN",
+    "Switch",
+    "GFNMobile",
+    "Windows"
+  ],
+  "S40_DuosReloadVictoryCup_Round1_day1_ASIA": {
+    "beginTime_UNIX": 1777021200,
+    "beginTime_JST": "2026-04-24 18:00:00",
+    "endTime_UNIX": 1777028400,
+    "endTime_JST": "2026-04-24 20:00:00",
+    "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_CR",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:s40_victory_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-br-combined:9"
+      ]
+    ],
+    "requireAllTokens": [
+      "S40_CashCup_Qualified"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S40_DuosReloadVictoryCup_LeaderboardDef_Round1": {
+        "scoringRuleSetId": "S40_DuosReloadVictoryCup_ScoringRules_Round1",
+        "WindowLocation": "S40_DuosReloadVictoryCup_Round1_day1_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 120,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S40_DuosReloadVictoryCup_Round2_day1_ASIA"
+          }
+        ]
+      }
+    }
+  },
+  "S40_DuosReloadVictoryCup_Round2_day1_ASIA": {
+    "beginTime_UNIX": 1777032000,
+    "beginTime_JST": "2026-04-24 21:00:00",
+    "endTime_UNIX": 1777034700,
+    "endTime_JST": "2026-04-24 21:45:00",
+    "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_CR",
+    "matchCap": 3,
+    "additionalRequirements": [
+      "eula:s40_victory_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [
+      "S40_DuosReloadVictoryCup_Round2_day1_ASIA"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S40_DuosReloadVictoryCup_LeaderboardDef_Round2": {
+        "scoringRuleSetId": "S40_DuosReloadVictoryCup_ScoringRules_Round2",
+        "WindowLocation": "S40_DuosReloadVictoryCup_Round2_day1_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 100,
+            "rewardType": "ecomm",
+            "quantity": 100,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 200,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 300,
+            "value": "USD"
+          }
+        ]
+      }
+    }
+  }
+}
