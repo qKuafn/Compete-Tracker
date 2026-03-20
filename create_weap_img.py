@@ -21,16 +21,6 @@ async def fetch_data(session, Weapon_Path, local):
     Request_Description_key = Description_key if Description_key else Weapon_Data[0].get("Properties", {}).get("ItemDescription", {}).get("localizedString", "")
     Description_Data = config.loc_data.get(Request_Description_key, "不明")
 
-    Rarity_Row = Weapon_Data[0].get("Properties", {}).get("Rarity", "")
-    rarity = Rarity_Row.split("::")[-1]
-    if not Rarity_Row:
-        weapon_tags = Weapon_Data[0].get("Properties", {}).get("Tags", [])
-        rarity_tag = next((tag for tag in weapon_tags if tag.startswith("Rarity.")), None)
-        if rarity_tag:
-            rarity = rarity_tag.split(".")[-1]
-        else:
-            rarity = "Uncommon"
-
     RangedWeapons_Path = None
     RangedWeapons_RowName = None
     RangedWeapons_WeaponData = None
@@ -150,6 +140,29 @@ async def fetch_data(session, Weapon_Path, local):
 
     WeaponData_DataLists = Weapon_Data[0].get("Properties", {}).get("DataList", [])
     WeaponIcon_Path = None
+    rarity = "Uncommon"  # デフォルト値
+
+    # Properties からレアリティを取得
+    Rarity_Row = Weapon_Data[0].get("Properties", {}).get("Rarity", "")
+    if Rarity_Row:
+        rarity = Rarity_Row.split("::")[-1]
+    else:
+        # Tags から取得
+        weapon_tags = Weapon_Data[0].get("Properties", {}).get("Tags", [])
+        rarity_tag = next((tag for tag in weapon_tags if tag.startswith("Rarity.")), None)
+        if rarity_tag:
+            rarity = rarity_tag.split(".")[-1]
+
+    # Properties/Tags で取得できなかった場合のみ DataList から取得
+    if rarity == "Uncommon":
+        for DataList in WeaponData_DataLists:
+            if "Rarity" in DataList:
+                Rarity_Row = DataList["Rarity"]
+                rarity = Rarity_Row.split("::")[-1] if Rarity_Row else "Uncommon"
+                break
+
+    print (f"    [INF] レアリティ : {rarity}")
+
     
     for DataList in WeaponData_DataLists:
         if "LargeIcon" in DataList:
