@@ -557,6 +557,30 @@
         ]
       }
     ],
+    "S40_ConsoleVCC_SolosZB_ScoringRules_Round2": [
+      {
+        "trackedStat": "PLACEMENT_STAT_INDEX",
+        "matchRule": "lte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 100,
+            "multiplicative": false
+          }
+        ]
+      },
+      {
+        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+        "matchRule": "gte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 0,
+            "multiplicative": true
+          }
+        ]
+      }
+    ],
     "ScoringRules_RankedCupSolo_Gold_1": [
       {
         "trackedStat": "GOLD_PLACEMENT_STAT_INDEX",
@@ -5248,129 +5272,6 @@
         ]
       }
     ],
-    "S40_DuckythegamerCupMobile_ScoringRules": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 3,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 2,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 3,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 4,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 5,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 6,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 7,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 8,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 9,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 10,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 11,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 12,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 13,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 14,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 15,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 16,
-            "pointsEarned": 1,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 1,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
-    "S40_ConsoleVCC_SolosZB_ScoringRules_Round2": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 100,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 0,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
     "ScoringRules_RankedCupSolo_Silver_1": [
       {
         "trackedStat": "SILVER_PLACEMENT_STAT_INDEX",
@@ -8119,53 +8020,6 @@
         ]
       }
     ],
-    "S40_DuckythegamerCupMobileAll_EU": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 200,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:cid_744_athena_commando_f_duckhero",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_sleepyduck",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaGlider:glider_id_228_celestialfemale",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_id_578_wickedduckfemale",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticShoes:shoes_pondrider",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "epicgames_S40_RankedCupDuos_EU_1_Platinum": [
       {
         "scoringType": "rank",
@@ -10876,53 +10730,6 @@
                 "value": "S39_FNCS_Division3_EU",
                 "quantity": 1,
                 "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S40_DuckythegamerCupMobile_EU": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 200,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:cid_744_athena_commando_f_duckhero",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_sleepyduck",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaGlider:glider_id_228_celestialfemale",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_id_578_wickedduckfemale",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticShoes:shoes_pondrider",
-                "quantity": 1,
-                "notifiesPlayer": true
               }
             ]
           }
@@ -17370,176 +17177,6 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s40_consolevcc_soloszb_eu"
-      }
-    },
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S40_DuckythegamerCupMobile_EU",
-      "beginTime": "2026-03-21T17:00:00Z",
-      "endTime": "2026-03-21T18:15:00Z",
-      "displayDataId": "s40_ducky",
-      "eventGroup": "Season40_DuckythegamerCupMobile",
-      "announcementTime": "2026-03-02T15:00:00Z",
-      "regions": [
-        "EU"
-      ],
-      "regionMappings": {
-        "EU": "EUCOMP"
-      },
-      "platforms": [
-        "Android",
-        "IOS"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "ShopCup",
-        "webId": "S40_DuckythegamerCupMobile",
-        "minimumAccountLevel": 15,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S40_DuckythegamerCupMobile_EU",
-          "eventTemplateId": "EventTemplate_S40_DuckythegamerCupMobile",
-          "countdownBeginTime": "2026-03-21T16:00:00Z",
-          "beginTime": "2026-03-21T17:00:00Z",
-          "endTime": "2026-03-21T18:15:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s40_duckythegamer_rules",
-            "adps:g-a81a33a3b9a7",
-            "input-touch",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S40_DuckythegamerCuptMobile_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s40_duckythegamercupmobile_eu"
-      }
-    },
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S40_DuckythegamerCupMobileAll_EU",
-      "beginTime": "2026-03-21T17:00:00Z",
-      "endTime": "2026-03-21T18:15:00Z",
-      "displayDataId": "s40_ducky",
-      "eventGroup": "Season40_DuckythegamerCupMobile",
-      "announcementTime": "2026-03-02T15:00:00Z",
-      "regions": [
-        "EU"
-      ],
-      "regionMappings": {
-        "EU": "EUCOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "ShopCup",
-        "IsDuplicate": true,
-        "webId": "S40_DuckythegamerCupMobile",
-        "minimumAccountLevel": 15,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S40_DuckythegamerCupMobileAll_EU",
-          "eventTemplateId": "EventTemplate_S40_DuckythegamerCupMobile",
-          "countdownBeginTime": "2026-03-21T14:00:00Z",
-          "beginTime": "2026-03-21T17:00:00Z",
-          "endTime": "2026-03-21T18:15:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s40_duckythegamer_rules",
-            "adps:g-a81a33a3b9a7",
-            "input-touch",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S40_DuckythegamerCuptMobile_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "fake_token"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s40_duckythegamercupmobileall_eu"
       }
     },
     {
@@ -30617,6 +30254,43 @@
     },
     {
       "playlistId": "Playlist_ShowdownTournament_Duos",
+      "matchCap": 5,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S40_FNCSMajor1_LastChanceLobby5",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_Duos",
       "matchCap": 4,
       "tiebreakerFormula": {
         "basePointsBits": 11,
@@ -30795,80 +30469,6 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_S39_ReloadEliteSeries",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_Duos",
-      "matchCap": 5,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S40_FNCSMajor1_LastChanceLobby5",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
-      "matchCap": 10,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S40_DuckythegamerCupMobile",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -33007,52 +32607,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "S40_DuckythegamerCuptMobile_DefaultLeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S40_DuckythegamerCupMobile_ScoringRules",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": [],
-      "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "S40_MobileSeriesCupQual9_SeriesLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "series",
@@ -34906,7 +34460,6 @@
     "Fortnite:epicgames_S40_MobileSeriesMayAll_EU:S40_MobileSeries_MayAllRound1_EU": "ScoringRules_MobileSeriesOpens_v2",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division4_EU:S40_FNCSDivisionalCup_Division4_Event5_EU": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event16_EU_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
-    "Fortnite:epicgames_S40_DuckythegamerCupMobile_EU:S40_DuckythegamerCupMobile_EU": "S40_DuckythegamerCupMobile_ScoringRules",
     "Fortnite:epicgames_S40_RankedCupDuosZB_EU:S40_RankedCupDuosZB_Event5_EU_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
     "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event13_EU_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event2_EU_1_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_1",
@@ -34959,7 +34512,6 @@
     "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event7_EU": "EmptyScoringRules",
     "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event10_EU_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_EU:S40_RankedCupDuosZB_Event3_EU_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
-    "Fortnite:epicgames_S40_DuckythegamerCupMobileAll_EU:S40_DuckythegamerCupMobileAll_EU": "S40_DuckythegamerCupMobile_ScoringRules",
     "Fortnite:epicgames_S40_RankedCupDuosZB_EU:S40_RankedCupDuosZB_Event2_EU_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event2_EU_1_Silver": "ScoringRules_RankedCupDuosReload_Silver_1",
     "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event20_EU_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
@@ -35531,7 +35083,6 @@
     "Fortnite:epicgames_S40_MobileSeriesMayAll_EU:S40_MobileSeries_MayAllRound1_EU": "S40_PayoutTable_MobileSeriesMay",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division4_EU:S40_FNCSDivisionalCup_Division4_Event5_EU": "S40_FNCSDivisionalCup_Division4_Event5_EU",
     "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event16_EU_1_Silver": "epicgames_S40_RankedCupSolo_EU_1_Silver",
-    "Fortnite:epicgames_S40_DuckythegamerCupMobile_EU:S40_DuckythegamerCupMobile_EU": "S40_DuckythegamerCupMobile_EU",
     "Fortnite:epicgames_S40_RankedCupDuosZB_EU:S40_RankedCupDuosZB_Event5_EU_1_Silver": "epicgames_S40_RankedCupDuosZB_EU_1_Silver",
     "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event13_EU_1_unreal": "epicgames_S40_RankedCupSolo_EU_1_Unreal",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event2_EU_1_Diamond": "epicgames_S40_RankedCupReloadDuos_EU_1_Diamond",
@@ -35578,7 +35129,6 @@
     "Fortnite:epicgames_S40_RankedCupDuosZB_EU:S40_RankedCupDuosZB_Event3_EU_1_gold": "epicgames_S40_RankedCupDuosZB_EU_1_Gold",
     "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event10_EU_1_Bronze": "epicgames_S40_RankedCupSolo_EU_1_Bronze",
     "Fortnite:epicgames_S40_RankedCupDuosZB_EU:S40_RankedCupDuosZB_Event3_EU_1_champion": "epicgames_S40_RankedCupDuosZB_EU_1_Champion",
-    "Fortnite:epicgames_S40_DuckythegamerCupMobileAll_EU:S40_DuckythegamerCupMobileAll_EU": "S40_DuckythegamerCupMobileAll_EU",
     "Fortnite:epicgames_S40_MobileSeriesMarAll_EU:S40_MobileSeries_MarRoundAll6_EU": "S40_PayoutTable_MobileSeriesMar",
     "Fortnite:epicgames_S40_RankedCupDuosZB_EU:S40_RankedCupDuosZB_Event2_EU_1_unreal": "epicgames_S40_RankedCupDuosZB_EU_1_Unreal",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event2_EU_1_Silver": "epicgames_S40_RankedCupReloadDuos_EU_1_Silver",
@@ -36341,9 +35891,6 @@
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division4_EU:S40_FNCSDivisionalCup_Division4_Event5_EU": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division4_EU:S40_FNCSDivisionalCup_Division4_Event5_EU"
     ],
-    "Fortnite:epicgames_S40_DuckythegamerCupMobile_EU:S40_DuckythegamerCupMobile_EU": [
-      "Fortnite:epicgames_S40_DuckythegamerCupMobile_EU:S40_DuckythegamerCupMobile_EU"
-    ],
     "Fortnite:epicgames_S40_MobileSeriesCupQualAll_EU:S40_MobileSeriesCup_MarQualifier10All_EU": [
       "Fortnite:epicgames_S40_MobileSeriesCupQualAll_EU:S40_MobileSeriesCup_MarQualifier10All_EU"
     ],
@@ -36433,9 +35980,6 @@
       "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event7_EU_1_elite",
       "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event7_EU_1_champion",
       "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event7_EU_1_unreal"
-    ],
-    "Fortnite:epicgames_S40_DuckythegamerCupMobileAll_EU:S40_DuckythegamerCupMobileAll_EU": [
-      "Fortnite:epicgames_S40_DuckythegamerCupMobileAll_EU:S40_DuckythegamerCupMobileAll_EU"
     ],
     "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event3_EU": [
       "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event3_EU",
