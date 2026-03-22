@@ -24026,7 +24026,8 @@
       },
       "platforms": [
         "PS4",
-        "PS5"
+        "PS5",
+        "Windows"
       ],
       "platformMappings": {},
       "metadata": {
@@ -24089,7 +24090,7 @@
     {
       "gameId": "Fortnite",
       "eventId": "epicgames_S40_RankedCupDuos_NAC",
-      "beginTime": "2026-03-22T23:00:00Z",
+      "beginTime": "2026-03-29T23:00:00Z",
       "endTime": "2026-05-25T02:00:00Z",
       "displayDataId": "s40_ranked_duosbr",
       "eventGroup": "Season40_RankedCupDuos",
@@ -24140,94 +24141,6 @@
         "AccountLockType": "Window"
       },
       "eventWindows": [
-        {
-          "eventWindowId": "S40_RankedCupDuos_Event1_NAC",
-          "eventTemplateId": "EventTemplate_RankedCupDuos",
-          "countdownBeginTime": "2026-03-22T21:00:00Z",
-          "beginTime": "2026-03-22T23:00:00Z",
-          "endTime": "2026-03-23T02:00:00Z",
-          "round": 1,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s40_rankedcup_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa",
-            [
-              "currentRanking:ranked-br-combined:0"
-            ]
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "Lead_Default",
-              "isMainWindowLeaderboard": true
-            },
-            {
-              "leaderboardDefId": "RankedCup_Duos_Bronze_LeaderboardDef",
-              "isMainWindowLeaderboard": false
-            },
-            {
-              "leaderboardDefId": "RankedCup_Duos_Silver_LeaderboardDef",
-              "isMainWindowLeaderboard": false
-            },
-            {
-              "leaderboardDefId": "RankedCup_Duos_Gold_LeaderboardDef",
-              "isMainWindowLeaderboard": false
-            },
-            {
-              "leaderboardDefId": "RankedCup_Duos_Platinum_LeaderboardDef",
-              "isMainWindowLeaderboard": false
-            },
-            {
-              "leaderboardDefId": "RankedCup_Duos_Diamond_LeaderboardDef",
-              "isMainWindowLeaderboard": false
-            },
-            {
-              "leaderboardDefId": "RankedCup_Duos_Elite_LeaderboardDef",
-              "isMainWindowLeaderboard": false
-            },
-            {
-              "leaderboardDefId": "RankedCup_Duos_Champion_LeaderboardDef",
-              "isMainWindowLeaderboard": false
-            },
-            {
-              "leaderboardDefId": "RankedCup_Duos_Unreal_LeaderboardDef",
-              "isMainWindowLeaderboard": false
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "VisualRound": 0,
-            "defaultLeaderboardByRank": {
-              "RankedCup_Duos_Bronze_LeaderboardDef": "0:2",
-              "RankedCup_Duos_Elite_LeaderboardDef": "16:16",
-              "RankedCup_Duos_Platinum_LeaderboardDef": "9:11",
-              "RankedCup_Duos_Gold_LeaderboardDef": "6:8",
-              "RankedCup_Duos_Diamond_LeaderboardDef": "12:14",
-              "RankedCup_Duos_Silver_LeaderboardDef": "3:5",
-              "RankedCup_Duos_Champion_LeaderboardDef": "15:15",
-              "RankedCup_Duos_Unreal_LeaderboardDef": "17:17"
-            },
-            "hideScoreLocationsIndexes": [
-              0
-            ],
-            "RoundType": "Qualifiers",
-            "ServerReplays": true,
-            "RankTrackTypeForMatchStatsPrefixes": "ranked-br-combined"
-          }
-        },
         {
           "eventWindowId": "S40_RankedCupDuos_Event2_NAC",
           "eventTemplateId": "EventTemplate_RankedCupDuos",
@@ -33669,6 +33582,7 @@
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event3_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event14_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event14_NAC_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
+    "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event20_NAC_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event5_NAC_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event6_NAC_1_gold": "ScoringRules_RankedCupSolo_Gold_1",
     "Fortnite:epicgames_S40_MobileSeriesMay_NAC:S40_MobileSeries_MayRound1_NAC_11": "ScoringRules_MobileSeriesOpens_v2",
@@ -33677,14 +33591,11 @@
     "Fortnite:epicgames_S40_MobileSeriesApr_NAC:S40_MobileSeries_AprRound10_NAC": "ScoringRules_MobileSeriesOpens_v2",
     "Fortnite:epicgames_S40_MobileSeriesAprAll_NAC:S40_MobileSeries_AprRoundAll3_NAC": "ScoringRules_MobileSeriesOpens_v2",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division4_NAC:S40_FNCSDivisionalCup_Division4_Event4_NAC": "ScoringRules_DuosDivisionalCup_v2",
-    "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event20_NAC_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
     "Fortnite:epicgames_S40_SoloVictoryCup_NAC:S40_SoloVictoryCup_Round1_Day1_NAC": "S40_SoloVictoryCup_ScoringRules_Round1",
     "Fortnite:epicgames_S40_MobileSeriesMar_NAC:S40_MobileSeries_MarRound9_NAC": "ScoringRules_MobileSeriesOpens_v2",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event15_NAC_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
     "Fortnite:epicgames_S40_MobileSeriesApr_NAC:S40_MobileSeries_AprRound1_NAC": "ScoringRules_MobileSeriesOpens_v2",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event6_NAC_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event19_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S40_FNCSMajor1_HeatsStage_NAC:S40_FNCSMajor1_HeatsStage_Heat2_NAC": "ScoringRules_FNCS2026_Heats",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event18_NAC_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
@@ -33751,7 +33662,6 @@
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event9_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event9_NAC_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event8_NAC_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
     "Fortnite:series:epicgames_S40_MobileSeriesApr_NAC_Qualifier10_series": "EmptyScoringRules",
     "Fortnite:epicgames_S40_SoloVictoryCup_NAC:S40_SoloVictoryCup_Round1_Day3_NAC": "S40_SoloVictoryCup_ScoringRules_Round1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event5_NAC_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
@@ -33779,7 +33689,6 @@
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event12_NAC_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event3_NAC_1_diamond": "ScoringRules_RankedCupDuos_Diamond_1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event9_NAC_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event13_NAC_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event9_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event9_NAC_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
@@ -33808,7 +33717,6 @@
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event10_NAC_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:cumulative:epicgames_S40_FNCSDivisionalCup_Division1_NAC_Week4_cumulative": "ScoringRules_DuosDivisionalCup_Div1",
     "Fortnite:epicgames_S40_ReloadEliteSeries3Opens_NAC:S40_ReloadEliteSeries3Open1_NAC": "S39_ScoringRules_EliteSeriesOpensQ2",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_NAC:S40_FNCSDivisionalCup_Division1_Week3Day1_NAC": "ScoringRules_DuosDivisionalCup_Div1",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event8_NAC_1_Gold": "ScoringRules_RankedCupDuosReload_Gold_1",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division2_NAC:S40_FNCSDivisionalCup_Division2_Event1_NAC": "ScoringRules_DuosDivisionalCup_v2",
@@ -34077,7 +33985,6 @@
     "Fortnite:epicgames_S40_MobileSeriesAprAll_NAC:S40_MobileSeries_AprRoundAll2_NAC": "ScoringRules_MobileSeriesOpens_v2",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_NAC:S40_FNCSDivisionalCup_Division1_Week3Day2_NAC": "ScoringRules_DuosDivisionalCup_Div1",
     "Fortnite:epicgames_S40_ReloadEliteSeries3Opens_NAC:S40_ReloadEliteSeries3Open2_NAC": "S39_ScoringRules_EliteSeriesOpensQ2",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event4_NAC_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event10_NAC_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event8_NAC_1_diamond": "ScoringRules_RankedCupDuos_Diamond_1",
@@ -34150,6 +34057,7 @@
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event1_NAC_1_Gold": "ScoringRules_RankedCupDuosReload_Gold_1",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event6_NAC_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event9_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
+    "Fortnite:epicgames_S40_PlayStationCupMrSavageZB_NAC:S40_PlayStationCupMrSavageZB_NAC": "S40_PlayStationCupMrSavageZB_ScoringRules",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event2_NAC_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event2_NAC_1_Silver": "ScoringRules_RankedCupDuosReload_Silver_1",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event10_NAC_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
@@ -34166,8 +34074,6 @@
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event8_NAC_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event18_NAC_1_gold": "ScoringRules_RankedCupSolo_Gold_1",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event6_NAC_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
-    "Fortnite:epicgames_S40_PlayStationCupMrSavageZB_NAC:S40_PlayStationCupMrSavageZB_NAC": "S40_PlayStationCupMrSavageZB_ScoringRules",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event1_NAC_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event9_NAC_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event10_NAC_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
@@ -34261,6 +34167,7 @@
     "Fortnite:cumulative:epicgames_S40_FNCSDivisionalCup_Division1_NAC_Week2_cumulative": "ScoringRules_DuosDivisionalCup_Div1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event9_NAC_1_diamond": "ScoringRules_RankedCupDuos_Diamond_1",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event5_NAC": "ScoringRules_DuosDivisionalCup5_3",
+    "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event3_NAC_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_NAC:S40_FNCSDivisionalCup_Division3_Event3_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event12_NAC_1_gold": "ScoringRules_RankedCupSolo_Gold_1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event6_NAC_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
@@ -34268,9 +34175,8 @@
     "Fortnite:epicgames_S40_PerformanceEvaluation_NAC:S40_PerformanceEvaluation_Event11Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_NAC:S40_FNCSDivisionalCup_Division1_Week5Final_NAC": "ScoringRules_DuosDivisionalCup_Div1Final",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division4_NAC:S40_FNCSDivisionalCup_Division4_Event4_1_NAC": "ScoringRules_DuosDivisionalCup_v2",
+    "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_NAC:S40_FNCSDivisionalCup_Division3_Event10_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event2_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_diamond": "ScoringRules_RankedCupDuos_Diamond_1",
-    "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event3_NAC_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event2_NAC_1_diamond": "ScoringRules_RankedCupDuos_Diamond_1",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event6_NAC_1_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_1",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event1_NAC": "EmptyScoringRules",
@@ -34280,8 +34186,6 @@
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_NAC:S40_FNCSDivisionalCup_Division3_Event4_2_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_NAC:S40_FNCSDivisionalCup_Division3_Event6_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event1_NAC_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
-    "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_NAC:S40_FNCSDivisionalCup_Division3_Event10_NAC": "ScoringRules_DuosDivisionalCup_v2",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S40_PerformanceEvaluation_NAC:S40_PerformanceEvaluation_Event7Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event8_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event11_NAC": "EmptyScoringRules",
@@ -34319,6 +34223,7 @@
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event5_NAC_1_Silver": "epicgames_S40_RankedCupReloadDuos_NAC_1_Silver",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event3_NAC_1_unreal": "epicgames_S40_RankedCupDuos_NAC_1_Unreal",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event14_NAC_1_unreal": "epicgames_S40_RankedCupSolo_NAC_1_Unreal",
+    "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event20_NAC_1_platinum": "epicgames_S40_RankedCupSolo_NAC_1_Platinum",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event5_NAC_1_elite": "epicgames_S40_RankedCupDuos_NAC_1_Elite",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event6_NAC_1_gold": "epicgames_S40_RankedCupSolo_NAC_1_Gold",
     "Fortnite:epicgames_S40_MobileSeriesMay_NAC:S40_MobileSeries_MayRound1_NAC_11": "S40_PayoutTable_MobileSeries_11",
@@ -34327,14 +34232,11 @@
     "Fortnite:epicgames_S40_MobileSeriesApr_NAC:S40_MobileSeries_AprRound10_NAC": "S40_PayoutTable_MobileSeriesApr",
     "Fortnite:epicgames_S40_MobileSeriesAprAll_NAC:S40_MobileSeries_AprRoundAll3_NAC": "S40_PayoutTable_MobileSeriesApr",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division4_NAC:S40_FNCSDivisionalCup_Division4_Event4_NAC": "S40_FNCSDivisionalCup_Division4_Event4_NAC",
-    "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event20_NAC_1_platinum": "epicgames_S40_RankedCupSolo_NAC_1_Platinum",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_Bronze": "epicgames_S40_RankedCupDuos_NAC_1_Bronze",
     "Fortnite:epicgames_S40_SoloVictoryCup_NAC:S40_SoloVictoryCup_Round1_Day1_NAC": "S40_SoloVictoryCup_Round1_Day1_NAC",
     "Fortnite:epicgames_S40_MobileSeriesMar_NAC:S40_MobileSeries_MarRound9_NAC": "S40_PayoutTable_MobileSeriesApr",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event15_NAC_1_unreal": "epicgames_S40_RankedCupSolo_NAC_1_Unreal",
     "Fortnite:epicgames_S40_MobileSeriesApr_NAC:S40_MobileSeries_AprRound1_NAC": "S40_PayoutTable_MobileSeriesApr",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event6_NAC_1_champion": "epicgames_S40_RankedCupSolo_NAC_1_Champion",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_unreal": "epicgames_S40_RankedCupDuos_NAC_1_Unreal",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event8_NAC_1_unreal": "epicgames_S40_RankedCupSolo_NAC_1_Unreal",
     "Fortnite:epicgames_S40_FNCSMajor1_HeatsStage_NAC:S40_FNCSMajor1_HeatsStage_Heat2_NAC": "epicgames_S40_FNCSMajor1_HeatsStage_NAC",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event18_NAC_1_Bronze": "epicgames_S40_RankedCupSolo_NAC_1_Bronze",
@@ -34393,7 +34295,6 @@
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event5_NAC_1_gold": "epicgames_S40_RankedCupDuos_NAC_1_Gold",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event9_NAC_1_Bronze": "epicgames_S40_RankedCupSolo_NAC_1_Bronze",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event8_NAC_1_Silver": "epicgames_S40_RankedCupSolo_NAC_1_Silver",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_Silver": "epicgames_S40_RankedCupDuos_NAC_1_Silver",
     "Fortnite:series:epicgames_S40_MobileSeriesApr_NAC_Qualifier10_series": "epicgames_S40_MobileSeriesApr_NAC_Qualifier10",
     "Fortnite:epicgames_S40_SoloVictoryCup_NAC:S40_SoloVictoryCup_Round1_Day3_NAC": "S40_SoloVictoryCup_Round1_Day3_NAC",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event5_NAC_1_Bronze": "epicgames_S40_RankedCupDuosZB_NAC_1_Bronze",
@@ -34420,7 +34321,6 @@
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event12_NAC_1_diamond": "epicgames_S40_RankedCupSolo_NAC_1_Diamond",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event3_NAC_1_diamond": "epicgames_S40_RankedCupDuosZB_NAC_1_Diamond",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event9_NAC_1_elite": "epicgames_S40_RankedCupDuosZB_NAC_1_Elite",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_platinum": "epicgames_S40_RankedCupDuos_NAC_1_Platinum",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event13_NAC_1_elite": "epicgames_S40_RankedCupSolo_NAC_1_Elite",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event9_NAC_1_Silver": "epicgames_S40_RankedCupDuosZB_NAC_1_Silver",
     "Fortnite:epicgames_S40_MobileSeriesMayAll_NAC:S40_MobileSeries_MayAllRound5_NAC": "S40_PayoutTable_MobileSeriesApr",
@@ -34446,7 +34346,6 @@
     "Fortnite:epicgames_S40_MobileSeriesAprAll_NAC:S40_MobileSeries_AprRoundAll5_NAC": "S40_PayoutTable_MobileSeriesApr",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event10_NAC_1_platinum": "epicgames_S40_RankedCupSolo_NAC_1_Platinum",
     "Fortnite:epicgames_S40_ReloadEliteSeries3Opens_NAC:S40_ReloadEliteSeries3Open1_NAC": "S40_ReloadEliteSeries3Open1_NAC",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_gold": "epicgames_S40_RankedCupDuos_NAC_1_Gold",
     "Fortnite:epicgames_S40_PerformanceEvaluation_NAC:S40_PerformanceEvaluation_Event4Round1_NAC": "S40_PerformanceEvaluation_Event4Round1_NAC",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_NAC:S40_FNCSDivisionalCup_Division1_Week3Day1_NAC": "S40_FNCSDivisionalCup_Division1_Week3Day1_NAC",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event8_NAC_1_Gold": "epicgames_S40_RankedCupReloadDuos_NAC_1_Gold",
@@ -34751,6 +34650,7 @@
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event1_NAC_1_Gold": "epicgames_S40_RankedCupReloadDuos_NAC_1_Gold",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event6_NAC_1_Silver": "epicgames_S40_RankedCupDuos_NAC_1_Silver",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event9_NAC_1_unreal": "epicgames_S40_RankedCupDuos_NAC_1_Unreal",
+    "Fortnite:epicgames_S40_PlayStationCupMrSavageZB_NAC:S40_PlayStationCupMrSavageZB_NAC": "S40_PlayStationCupMrSavageZB_NAC",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event2_NAC_1_champion": "epicgames_S40_RankedCupDuos_NAC_1_Champion",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event2_NAC_1_Silver": "epicgames_S40_RankedCupReloadDuos_NAC_1_Silver",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event10_NAC_1_platinum": "epicgames_S40_RankedCupDuos_NAC_1_Platinum",
@@ -34766,8 +34666,6 @@
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event8_NAC_1_gold": "epicgames_S40_RankedCupDuos_NAC_1_Gold",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event18_NAC_1_gold": "epicgames_S40_RankedCupSolo_NAC_1_Gold",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event6_NAC_1_Bronze": "epicgames_S40_RankedCupDuos_NAC_1_Bronze",
-    "Fortnite:epicgames_S40_PlayStationCupMrSavageZB_NAC:S40_PlayStationCupMrSavageZB_NAC": "S40_PlayStationCupMrSavageZB_NAC",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_elite": "epicgames_S40_RankedCupDuos_NAC_1_Elite",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event1_NAC_1_champion": "epicgames_S40_RankedCupDuosZB_NAC_1_Champion",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event9_NAC_1_champion": "epicgames_S40_RankedCupDuos_NAC_1_Champion",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event10_NAC_1_diamond": "epicgames_S40_RankedCupSolo_NAC_1_Diamond",
@@ -34852,6 +34750,7 @@
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event4_NAC_1_elite": "epicgames_S40_RankedCupDuos_NAC_1_Elite",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event9_NAC_1_diamond": "epicgames_S40_RankedCupDuosZB_NAC_1_Diamond",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event5_NAC": "S40_FNCSDivisionalCup_Division5_Event5_NAC",
+    "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event3_NAC_1_diamond": "epicgames_S40_RankedCupSolo_NAC_1_Diamond",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_NAC:S40_FNCSDivisionalCup_Division3_Event3_NAC": "S40_FNCSDivisionalCup_Division3_Event3_NAC",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event14_NAC_1_Silver": "epicgames_S40_RankedCupSolo_NAC_1_Silver",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event12_NAC_1_gold": "epicgames_S40_RankedCupSolo_NAC_1_Gold",
@@ -34860,9 +34759,8 @@
     "Fortnite:epicgames_S40_PerformanceEvaluation_NAC:S40_PerformanceEvaluation_Event11Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_NAC:S40_FNCSDivisionalCup_Division1_Week5Final_NAC": "epicgames_S40_FNCSDivisionalCup_Division1_NAC",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division4_NAC:S40_FNCSDivisionalCup_Division4_Event4_1_NAC": "S40_FNCSDivisionalCup_Division4_Event4_1_NAC",
+    "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_NAC:S40_FNCSDivisionalCup_Division3_Event10_NAC": "S40_FNCSDivisionalCup_Division3_Event10_NAC",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event2_NAC_1_unreal": "epicgames_S40_RankedCupDuosZB_NAC_1_Unreal",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_diamond": "epicgames_S40_RankedCupDuos_NAC_1_Diamond",
-    "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event3_NAC_1_diamond": "epicgames_S40_RankedCupSolo_NAC_1_Diamond",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event2_NAC_1_diamond": "epicgames_S40_RankedCupDuos_NAC_1_Diamond",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event6_NAC_1_Bronze": "epicgames_S40_RankedCupReloadDuos_NAC_1_Bronze",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event7_NAC_1_champion": "epicgames_S40_RankedCupSolo_NAC_1_Champion",
@@ -34870,8 +34768,6 @@
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_NAC:S40_FNCSDivisionalCup_Division3_Event4_2_NAC": "S40_FNCSDivisionalCup_Division3_Event4_2_NAC",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_NAC:S40_FNCSDivisionalCup_Division3_Event6_NAC": "S40_FNCSDivisionalCup_Division3_Event6_NAC",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event1_NAC_1_elite": "epicgames_S40_RankedCupDuosZB_NAC_1_Elite",
-    "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_NAC:S40_FNCSDivisionalCup_Division3_Event10_NAC": "S40_FNCSDivisionalCup_Division3_Event10_NAC",
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_champion": "epicgames_S40_RankedCupDuos_NAC_1_Champion",
     "Fortnite:epicgames_S40_PerformanceEvaluation_NAC:S40_PerformanceEvaluation_Event7Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event8_NAC_1_unreal": "epicgames_S40_RankedCupDuos_NAC_1_Unreal",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division4_NAC:S40_FNCSDivisionalCup_Division4_Event3_NAC": "S40_FNCSDivisionalCup_Division4_Event3_NAC",
@@ -35585,17 +35481,6 @@
     "Fortnite:epicgames_S40_ReloadEliteSeries3Opens_NAC:S40_ReloadEliteSeries3Open2_NAC": [
       "Fortnite:epicgames_S40_ReloadEliteSeries3Opens_NAC:S40_ReloadEliteSeries3Open2_NAC",
       "Fortnite:cumulative:epicgames_S40_ReloadEliteSeries3Opens_NAC_cumulative"
-    ],
-    "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC": [
-      "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC",
-      "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_Bronze",
-      "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_Silver",
-      "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_gold",
-      "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_platinum",
-      "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_diamond",
-      "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_elite",
-      "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_champion",
-      "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event1_NAC_1_unreal"
     ],
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_NAC:S40_FNCSDivisionalCup_Division3_Event4_1_NAC": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_NAC:S40_FNCSDivisionalCup_Division3_Event4_1_NAC"
