@@ -850,30 +850,6 @@
         ]
       }
     ],
-    "S40_PlayStationCupMrSavage_ScoringRules_Final": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 100,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 0,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
     "S40_ConsoleVCC_SolosZB_ScoringRules_Round1": [
       {
         "trackedStat": "PLACEMENT_STAT_INDEX",
@@ -11351,85 +11327,6 @@
         "scoreId": "cumulative:epicgames_S40_FNCSDivisionalCup_Division1_ASIA_Week4_cumulative"
       }
     ],
-    "S40_PlayStationCupMrSavage_Final_ASIA": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 100,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 250,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 200,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 500,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 300,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 750,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 400,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 1000,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 500,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 1250,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 600,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 1500,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "S40_FNCSDivisionalCup_Division1_Week3Day2_ASIA": [
       {
         "scoringType": "value",
@@ -19484,83 +19381,6 @@
     },
     {
       "gameId": "Fortnite",
-      "eventId": "epicgames_S40_PlayStationCupMrSavage_Final_ASIA",
-      "beginTime": "2026-03-29T05:00:00Z",
-      "endTime": "2026-03-29T07:40:00Z",
-      "displayDataId": "s40_ps_mrsavage_final",
-      "eventGroup": "S40_PlayStationCupMrSavage",
-      "announcementTime": "2025-12-31T23:00:00Z",
-      "regions": [
-        "ASIA"
-      ],
-      "regionMappings": {
-        "ASIA": "ASIACOMP"
-      },
-      "platforms": [
-        "PS4",
-        "PS5",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "tournamentType": "CashCup",
-        "webId": "S40_PlayStationCupMrSavage",
-        "minimumAccountLevel": 50,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S40_PlayStationCupMrSavage_Final_ASIA",
-          "eventTemplateId": "S40_PlayStationCupMrSavage_EventTemplate_Final",
-          "countdownBeginTime": "2026-03-29T03:00:00Z",
-          "beginTime": "2026-03-29T05:00:00Z",
-          "endTime": "2026-03-29T07:40:00Z",
-          "round": 1,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s40_playstation_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S40_PlayStationCupMrSavage_LeaderboardDef_Final",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [
-            "S40_PlayStationCupMrSavage_Final_ASIA"
-          ],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ScheduledMatchmakingInitialDelaySeconds": 600,
-            "ServerReplays": true,
-            "liveSpectateAccessToken": "S29_PSCupMarch_Final_Spectator",
-            "RoundType": "Qualifiers",
-            "ScheduledMatchmakingMatchDelaySeconds": 1680
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s40_playstationcupmrsavage_final_asia"
-      }
-    },
-    {
-      "gameId": "Fortnite",
       "eventId": "epicgames_S40_RankedCupDuos_ASIA",
       "beginTime": "2026-03-28T09:00:00Z",
       "endTime": "2026-05-24T12:00:00Z",
@@ -25134,6 +24954,43 @@
       "clampsToZero": false
     },
     {
+      "playlistId": "Playlist_ShowdownTournament_Duos",
+      "matchCap": 11,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S40_FNCSMajor1_LastChanceQualifier",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_NoBuildBR_Solo",
       "matchCap": 8,
       "tiebreakerFormula": {
@@ -25350,80 +25207,6 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_S40_FNCSMajor1_LastChanceLobby",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_Solo",
-      "matchCap": 6,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "S40_PlayStationCupMrSavage_EventTemplate_Final",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_Duos",
-      "matchCap": 11,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S40_FNCSMajor1_LastChanceQualifier",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -26940,52 +26723,6 @@
         ]
       },
       "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_v2",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": [],
-      "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "S40_PlayStationCupMrSavage_LeaderboardDef_Final",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 6,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S40_PlayStationCupMrSavage_ScoringRules_Final",
       "clampsToZero": true,
       "payoutsConfig": {
         "payoutTableIdFormat": "${windowId}",
@@ -29091,7 +28828,6 @@
     "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event3_ASIA_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S40_RankedCupSolo_ASIA:S40_RankedCupSolo_Event7_ASIA_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S40_MobileSeriesMayAll_ASIA:S40_MobileSeries_MayAllRound5_ASIA": "ScoringRules_MobileSeriesOpens_v2",
-    "Fortnite:epicgames_S40_PlayStationCupMrSavage_Final_ASIA:S40_PlayStationCupMrSavage_Final_ASIA": "S40_PlayStationCupMrSavage_ScoringRules_Final",
     "Fortnite:epicgames_S40_RankedCupSolo_ASIA:S40_RankedCupSolo_Event4_ASIA_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_ASIA:S40_RankedCupDuosZB_Event5_ASIA_1_diamond": "ScoringRules_RankedCupDuos_Diamond_1",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division2_ASIA:S40_FNCSDivisionalCup_Division2_Event8_ASIA": "ScoringRules_DuosDivisionalCup_v2",
@@ -29616,7 +29352,6 @@
     "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event3_ASIA_1_champion": "epicgames_S40_RankedCupDuos_ASIA_1_Champion",
     "Fortnite:epicgames_S40_RankedCupSolo_ASIA:S40_RankedCupSolo_Event7_ASIA_1_diamond": "epicgames_S40_RankedCupSolo_ASIA_1_Diamond",
     "Fortnite:epicgames_S40_MobileSeriesMayAll_ASIA:S40_MobileSeries_MayAllRound5_ASIA": "S40_PayoutTable_MobileSeriesApr",
-    "Fortnite:epicgames_S40_PlayStationCupMrSavage_Final_ASIA:S40_PlayStationCupMrSavage_Final_ASIA": "S40_PlayStationCupMrSavage_Final_ASIA",
     "Fortnite:epicgames_S40_RankedCupSolo_ASIA:S40_RankedCupSolo_Event4_ASIA_1_unreal": "epicgames_S40_RankedCupSolo_ASIA_1_Unreal",
     "Fortnite:epicgames_S40_RankedCupDuosZB_ASIA:S40_RankedCupDuosZB_Event5_ASIA_1_diamond": "epicgames_S40_RankedCupDuosZB_ASIA_1_Diamond",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division2_ASIA:S40_FNCSDivisionalCup_Division2_Event8_ASIA": "S40_FNCSDivisionalCup_Division2_Event8_ASIA",
@@ -30506,9 +30241,6 @@
     "Fortnite:epicgames_S40_ReloadEliteSeries3Opens_ASIA:S40_ReloadEliteSeries3Open1_ASIA": [
       "Fortnite:epicgames_S40_ReloadEliteSeries3Opens_ASIA:S40_ReloadEliteSeries3Open1_ASIA",
       "Fortnite:cumulative:epicgames_S40_ReloadEliteSeries3Opens_ASIA_cumulative"
-    ],
-    "Fortnite:epicgames_S40_PlayStationCupMrSavage_Final_ASIA:S40_PlayStationCupMrSavage_Final_ASIA": [
-      "Fortnite:epicgames_S40_PlayStationCupMrSavage_Final_ASIA:S40_PlayStationCupMrSavage_Final_ASIA"
     ],
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division2_ASIA:S40_FNCSDivisionalCup_Division2_Event8_ASIA": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division2_ASIA:S40_FNCSDivisionalCup_Division2_Event8_ASIA"
