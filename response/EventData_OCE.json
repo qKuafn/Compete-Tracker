@@ -9493,7 +9493,7 @@
             ]
           }
         ],
-        "scoreId": "cumulative:epicgames_S40_FNCSDivisionalCup_Division1_OCE_Week2_cumulative_mg"
+        "scoreId": "cumulative:epicgames_S40_FNCSDivisionalCup_Division1_OCE_Week2_cm_mg"
       }
     ],
     "S40_FNCSDivisionalCup_Division3_Event3_OCE": [
@@ -14125,7 +14125,7 @@
               "isMainWindowLeaderboard": true
             },
             {
-              "leaderboardDefId": "S39_FNCSDivisionalCup_Division1Weekly_CumulativeLeaderboard_mg",
+              "leaderboardDefId": "S39_FNCSDivisionalCup_Division1Weekly_Cumulative_mg",
               "isMainWindowLeaderboard": false
             }
           ],
@@ -14176,7 +14176,7 @@
               "isMainWindowLeaderboard": true
             },
             {
-              "leaderboardDefId": "S39_FNCSDivisionalCup_Division1Weekly_CumulativeLeaderboard_mg",
+              "leaderboardDefId": "S39_FNCSDivisionalCup_Division1Weekly_Cumulative_mg",
               "isMainWindowLeaderboard": false
             }
           ],
@@ -27064,6 +27064,48 @@
     },
     {
       "gameId": "Fortnite",
+      "leaderboardDefId": "S39_FNCSDivisionalCup_Division1Weekly_Cumulative_mg",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "cumulative",
+      "leaderboardInstanceIdFormat": "${eventId}_Week${round}_cm_mg",
+      "maxSessionHistorySize": 22,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
+      "clampsToZero": true,
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": [],
+      "discardZeroScore": false
+    },
+    {
+      "gameId": "Fortnite",
       "leaderboardDefId": "S39_FNCSDivisionalCup_DefaultLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -28015,48 +28057,6 @@
         "payoutTableIdFormat": "${eventId}",
         "payoutDate": "windowEnd+PT20M"
       },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": [],
-      "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "S39_FNCSDivisionalCup_Division1Weekly_CumulativeLeaderboard_mg",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "cumulative",
-      "leaderboardInstanceIdFormat": "${eventId}_Week${round}_cumulative_mg",
-      "maxSessionHistorySize": 22,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "ScoringRules_DuosDivisionalCup_Div1",
-      "clampsToZero": true,
       "hidePlayerScores": false,
       "percentileAccuracy": 1,
       "requiredPlayerListings": [],
@@ -29200,7 +29200,6 @@
     "Fortnite:epicgames_S40_RankedCupDuosZB_OCE:S40_RankedCupDuosZB_Event6_OCE": "EmptyScoringRules",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event20_OCE_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S40_MobileSeriesMar_OCE:S40_MobileSeries_MarRound7_OCE_8": "ScoringRules_MobileSeriesOpens_v2",
-    "Fortnite:cumulative:epicgames_S40_FNCSDivisionalCup_Division1_OCE_Week2_cumulative_mg": "ScoringRules_DuosDivisionalCup_Div1",
     "Fortnite:epicgames_S40_MobileSeriesCupQualAll_OCE:S40_MobileSeriesCup_MarQualifier9All_OCE": "ScoringRules_MobileSeriesQualifiers_v2",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event19_OCE_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S40_RankedCupDuos_OCE:S40_RankedCupDuos_Event9_OCE_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
@@ -29208,6 +29207,7 @@
     "Fortnite:epicgames_S40_RankedCupDuos_OCE:S40_RankedCupDuos_Event6_OCE_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_OCE:S40_RankedCupDuosZB_Event1_OCE_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_OCE:S40_RankedCupDuosZB_Event1_OCE": "EmptyScoringRules",
+    "Fortnite:cumulative:epicgames_S40_FNCSDivisionalCup_Division1_OCE_Week2_cm_mg": "ScoringRules_DuosDivisionalCup_Div1",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event17_OCE": "EmptyScoringRules",
     "Fortnite:epicgames_S40_MobileSeriesMar_OCE:S40_MobileSeries_MarRound8_OCE_8": "ScoringRules_MobileSeriesOpens_v2",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event9_OCE_1_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_1",
@@ -30387,7 +30387,7 @@
     ],
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week2Day2_OCE": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week2Day2_OCE",
-      "Fortnite:cumulative:epicgames_S40_FNCSDivisionalCup_Division1_OCE_Week2_cumulative_mg"
+      "Fortnite:cumulative:epicgames_S40_FNCSDivisionalCup_Division1_OCE_Week2_cm_mg"
     ],
     "Fortnite:epicgames_S40_MobileSeriesApr_OCE:S40_MobileSeries_AprRound3_OCE": [
       "Fortnite:epicgames_S40_MobileSeriesApr_OCE:S40_MobileSeries_AprRound3_OCE",
@@ -30816,7 +30816,7 @@
     ],
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week2Day1_mg_OCE": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week2Day1_mg_OCE",
-      "Fortnite:cumulative:epicgames_S40_FNCSDivisionalCup_Division1_OCE_Week2_cumulative_mg"
+      "Fortnite:cumulative:epicgames_S40_FNCSDivisionalCup_Division1_OCE_Week2_cm_mg"
     ],
     "Fortnite:epicgames_S40_ConsoleVCC_SolosZB_OCE:S40_ConsoleVCC_SolosZB_Event1Round1_OCE": [
       "Fortnite:epicgames_S40_ConsoleVCC_SolosZB_OCE:S40_ConsoleVCC_SolosZB_Event1Round1_OCE"
