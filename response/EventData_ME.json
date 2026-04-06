@@ -8636,6 +8636,80 @@
         ]
       }
     ],
+    "S40_ChampionKorFNCSCupMobileAll_ME": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 5,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_peelyhat",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 20,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_moralkorefncs",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 25,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaItemWrap:wrap_moralkorefncs",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_moralkorefncs",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_moralkorefncs",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_moralkorefncs",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S40_MobileSeriesAprAll_ME_Qualifier9": [
       {
         "scoringType": "rank",
@@ -13252,6 +13326,102 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s40_championkorfncscupmobile_me"
+      }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S40_ChampionKorFNCSCupMobileAll_ME",
+      "beginTime": "2026-04-11T14:00:00Z",
+      "endTime": "2026-04-11T15:15:00Z",
+      "displayDataId": "s40_kor_mobile",
+      "eventGroup": "Season40_ChampionKorFNCSCupMobile",
+      "announcementTime": "2026-04-02T12:00:00Z",
+      "regions": [
+        "ME"
+      ],
+      "regionMappings": {
+        "ME": "MECOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "IOS",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "Android",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "ShopCup",
+        "webId": "S40_ChampionKorFNCSCupMobile",
+        "minimumAccountLevel": 15,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S40_ChampionKorFNCSCupMobileAll_ME",
+          "eventTemplateId": "EventTemplate_S40_ChampionKorFNCSCupMobile",
+          "countdownBeginTime": "2026-04-11T13:00:00Z",
+          "beginTime": "2026-04-11T14:00:00Z",
+          "endTime": "2026-04-11T15:15:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s40_fncskor_rules",
+            "adps:g-a81a33a3b9a7",
+            "input-touch",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S40_ChampionKorFNCSCupMobile_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "fake_token"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s40_championkorfncscupmobileall_me"
       }
     },
     {
@@ -27431,6 +27601,7 @@
     "Fortnite:epicgames_S40_RankedCupSolo_ME:S40_RankedCupSolo_Event5_ME_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_ME:S40_RankedCupDuosZB_Event3_ME_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_ME:S40_RankedCupReloadDuos_Event5_ME_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1",
+    "Fortnite:epicgames_S40_ChampionKorFNCSCupMobileAll_ME:S40_ChampionKorFNCSCupMobileAll_ME": "S40_ChampionKorFNCSCupMobile_ScoringRules",
     "Fortnite:epicgames_S40_RankedCupSolo_ME:S40_RankedCupSolo_Event19_ME": "EmptyScoringRules",
     "Fortnite:epicgames_S40_RankedCupDuos_ME:S40_RankedCupDuos_Event11_ME_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
     "Fortnite:epicgames_S40_RankedCupSolo_ME:S40_RankedCupSolo_Event14_ME_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
@@ -27970,6 +28141,7 @@
     "Fortnite:epicgames_S40_RankedCupSolo_ME:S40_RankedCupSolo_Event5_ME_1_unreal": "epicgames_S40_RankedCupSolo_ME_1_Unreal",
     "Fortnite:epicgames_S40_RankedCupDuosZB_ME:S40_RankedCupDuosZB_Event3_ME_1_platinum": "epicgames_S40_RankedCupDuosZB_ME_1_Platinum",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_ME:S40_RankedCupReloadDuos_Event5_ME_1_Platinum": "epicgames_S40_RankedCupReloadDuos_ME_1_Platinum",
+    "Fortnite:epicgames_S40_ChampionKorFNCSCupMobileAll_ME:S40_ChampionKorFNCSCupMobileAll_ME": "S40_ChampionKorFNCSCupMobileAll_ME",
     "Fortnite:epicgames_S40_RankedCupDuos_ME:S40_RankedCupDuos_Event11_ME_1_Silver": "epicgames_S40_RankedCupDuos_ME_1_Silver",
     "Fortnite:epicgames_S40_RankedCupSolo_ME:S40_RankedCupSolo_Event15_ME_1_gold": "epicgames_S40_RankedCupSolo_ME_1_Gold",
     "Fortnite:epicgames_S40_RankedCupSolo_ME:S40_RankedCupSolo_Event14_ME_1_Silver": "epicgames_S40_RankedCupSolo_ME_1_Silver",
@@ -28489,6 +28661,9 @@
       "Fortnite:epicgames_S40_MobileSeriesApr_ME:S40_MobileSeries_AprRound10_ME",
       "Fortnite:epicgames_S40_MobileSeriesApr_ME:S40_MobileSeries_AprRound10_ME_10",
       "Fortnite:series:epicgames_S40_MobileSeriesApr_ME_Qualifier10_series"
+    ],
+    "Fortnite:epicgames_S40_ChampionKorFNCSCupMobileAll_ME:S40_ChampionKorFNCSCupMobileAll_ME": [
+      "Fortnite:epicgames_S40_ChampionKorFNCSCupMobileAll_ME:S40_ChampionKorFNCSCupMobileAll_ME"
     ],
     "Fortnite:epicgames_S40_RankedCupSolo_ME:S40_RankedCupSolo_Event19_ME": [
       "Fortnite:epicgames_S40_RankedCupSolo_ME:S40_RankedCupSolo_Event19_ME",
