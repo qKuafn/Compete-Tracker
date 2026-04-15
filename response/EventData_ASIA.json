@@ -701,6 +701,30 @@
         ]
       }
     ],
+    "S40_ConsoleVCC_SolosZB_ScoringRules_Round2": [
+      {
+        "trackedStat": "PLACEMENT_STAT_INDEX",
+        "matchRule": "lte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 100,
+            "multiplicative": false
+          }
+        ]
+      },
+      {
+        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+        "matchRule": "gte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 0,
+            "multiplicative": true
+          }
+        ]
+      }
+    ],
     "ScoringRules_RankedCupSolo_Gold_1": [
       {
         "trackedStat": "GOLD_PLACEMENT_STAT_INDEX",
@@ -4548,134 +4572,6 @@
           {
             "keyValue": 1,
             "pointsEarned": 2,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
-    "S40_TripleThreat_ScoringRules": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 11,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 2,
-            "pointsEarned": 6,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 3,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 4,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 5,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 6,
-            "pointsEarned": 3,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 7,
-            "pointsEarned": 3,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 8,
-            "pointsEarned": 3,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 9,
-            "pointsEarned": 3,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 10,
-            "pointsEarned": 3,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 11,
-            "pointsEarned": 3,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 12,
-            "pointsEarned": 3,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 13,
-            "pointsEarned": 3,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 14,
-            "pointsEarned": 3,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 15,
-            "pointsEarned": 3,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 16,
-            "pointsEarned": 3,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 17,
-            "pointsEarned": 3,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 2,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
-    "S40_ConsoleVCC_SolosZB_ScoringRules_Round2": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 100,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 0,
             "multiplicative": true
           }
         ]
@@ -12122,133 +12018,6 @@
                 "value": "S39_FNCS_Division2_ASIA",
                 "quantity": 1,
                 "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S40_TripleThreat_ASIA": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 8,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:spray_eagerunify",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:spray_alderoptic",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:spray_emberyearn",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 80,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:character_eagerunify",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:character_alderoptic",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:character_emberyearn",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_eagerunify",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_alderoptic",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_emberyearn",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_eagerunify",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_alderoptic",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_emberyearn",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaItemWrap:wrap_eagerunify",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaItemWrap:wrap_alderoptic",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaItemWrap:wrap_emberyearn",
-                "quantity": 1,
-                "notifiesPlayer": true
               }
             ]
           }
@@ -23422,101 +23191,6 @@
         "type": "br:tournament",
         "code": "tournament_epicgames_s40_reloadeliteseries3playin_asia"
       }
-    },
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S40_TripleThreatCup_ASIA",
-      "beginTime": "2026-04-15T09:00:00Z",
-      "endTime": "2026-04-15T12:00:00Z",
-      "displayDataId": "s40_triple",
-      "eventGroup": "Season40_TripleThreatCup",
-      "announcementTime": "2026-04-01T06:00:00Z",
-      "regions": [
-        "ASIA"
-      ],
-      "regionMappings": {
-        "ASIA": "ASIACOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "SecureBoot",
-          "CryptoProcessor",
-          "IOMMU",
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "ShopCup",
-        "webId": "S40_TripleThreatCup",
-        "minimumAccountLevel": 50,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S40_TripleThreat_ASIA",
-          "eventTemplateId": "EventTemplate_S40_TripleThreatCup",
-          "countdownBeginTime": "2026-04-15T07:00:00Z",
-          "beginTime": "2026-04-15T09:00:00Z",
-          "endTime": "2026-04-15T12:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s40_tripletreat_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S40_TripleThreat_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s40_triplethreatcup_asia"
-      }
     }
   ],
   "templates": [
@@ -23811,6 +23485,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "S40_ConsoleVCC_SolosZB_EventTemplate_Round2",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_NPM_Duos",
+      "matchCap": 11,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -24144,80 +23855,6 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupDuosZB",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_NPM_Duos",
-      "matchCap": 11,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_Trios",
-      "matchCap": 11,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S40_TripleThreatCup",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -25635,52 +25272,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "S40_TripleThreat_DefaultLeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 11,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S40_TripleThreat_ScoringRules",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "2026-04-16T11:00:00Z"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": [],
-      "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "S40_FNCSMajor1_HeatsStage_DefaultLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -26979,7 +26570,6 @@
     "Fortnite:epicgames_S40_ReloadEliteSeries3PlayIn_ASIA:S40_ReloadEliteSeries3PlayInDay1_ASIA": "S39_ScoringRules_EliteSeriesOpensQ2",
     "Fortnite:epicgames_S40_ConsoleCC_TriosZB_ASIA:S40_ConsoleCC_TriosZB_Event1Round2_ASIA": "S40_ConsoleCC_TriosZB_ScoringRules_Round2",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_ASIA:S40_RankedCupReloadDuos_Event10_ASIA_1_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_1",
-    "Fortnite:epicgames_S40_TripleThreatCup_ASIA:S40_TripleThreat_ASIA": "S40_TripleThreat_ScoringRules",
     "Fortnite:epicgames_S40_RankedCupSolo_ASIA:S40_RankedCupSolo_Event9_ASIA_1_gold": "ScoringRules_RankedCupSolo_Gold_1",
     "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event12_ASIA_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
     "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event11_ASIA_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
@@ -27511,7 +27101,6 @@
     "Fortnite:epicgames_S40_MobileSeriesMayAll_ASIA:S40_MobileSeries_MayAllRound1_ASIA": "S40_PayoutTable_MobileSeriesMay",
     "Fortnite:epicgames_S40_ConsoleCC_TriosZB_ASIA:S40_ConsoleCC_TriosZB_Event1Round2_ASIA": "S40_ConsoleCC_TriosZB_Event1Round2_ASIA",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_ASIA:S40_RankedCupReloadDuos_Event10_ASIA_1_Bronze": "epicgames_S40_RankedCupReloadDuos_ASIA_1_Bronze",
-    "Fortnite:epicgames_S40_TripleThreatCup_ASIA:S40_TripleThreat_ASIA": "S40_TripleThreat_ASIA",
     "Fortnite:epicgames_S40_RankedCupSolo_ASIA:S40_RankedCupSolo_Event9_ASIA_1_gold": "epicgames_S40_RankedCupSolo_ASIA_1_Gold",
     "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event4_ASIA_1_diamond": "epicgames_S40_RankedCupDuos_ASIA_1_Diamond",
     "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event12_ASIA_1_Bronze": "epicgames_S40_RankedCupDuos_ASIA_1_Bronze",
@@ -28170,9 +27759,6 @@
       "Fortnite:epicgames_S40_MobileSeriesMay_ASIA:S40_MobileSeries_MayRound4_ASIA",
       "Fortnite:epicgames_S40_MobileSeriesMay_ASIA:S40_MobileSeries_MayRound4_ASIA_11",
       "Fortnite:series:epicgames_S40_MobileSeriesMay_ASIA_Qualifier11_series"
-    ],
-    "Fortnite:epicgames_S40_TripleThreatCup_ASIA:S40_TripleThreat_ASIA": [
-      "Fortnite:epicgames_S40_TripleThreatCup_ASIA:S40_TripleThreat_ASIA"
     ],
     "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event7_ASIA": [
       "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event7_ASIA",
