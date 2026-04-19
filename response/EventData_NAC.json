@@ -21040,7 +21040,7 @@
       "gameId": "Fortnite",
       "eventId": "epicgames_S40_FNCSMajor1_HeatsStage_NAC",
       "beginTime": "2026-04-17T23:00:00Z",
-      "endTime": "2026-04-19T23:30:00Z",
+      "endTime": "2026-04-20T00:40:00Z",
       "displayDataId": "s40_major1_heats",
       "eventGroup": "Season40_FNCSMajor1",
       "announcementTime": "2025-06-07T05:00:00Z",
@@ -21193,10 +21193,10 @@
         },
         {
           "eventWindowId": "S40_FNCSMajor1_HeatsStage_Heat3_NAC",
-          "eventTemplateId": "EventTemplate_S40_FNCSMajor1_HeatsStage",
+          "eventTemplateId": "EventTemplate_S40_FNCSMajor1_HeatsStageExtraNAC",
           "countdownBeginTime": "2026-04-19T19:00:00Z",
           "beginTime": "2026-04-19T21:00:00Z",
-          "endTime": "2026-04-19T23:30:00Z",
+          "endTime": "2026-04-20T00:40:00Z",
           "round": 1,
           "payoutDelay": 32,
           "isTBD": false,
@@ -29003,6 +29003,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup_Final",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_Duos",
+      "matchCap": 7,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S40_FNCSMajor1_HeatsStageExtraNAC",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
