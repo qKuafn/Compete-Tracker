@@ -17020,7 +17020,7 @@
       "gameId": "Fortnite",
       "eventId": "epicgames_S40_FNCSMajor1_HeatsStage_ASIA",
       "beginTime": "2026-04-18T09:00:00Z",
-      "endTime": "2026-04-19T11:10:00Z",
+      "endTime": "2026-04-19T12:45:00Z",
       "displayDataId": "s40_major1_heats",
       "eventGroup": "Season40_FNCSMajor1",
       "announcementTime": "2025-06-06T15:00:00Z",
@@ -17125,10 +17125,10 @@
         },
         {
           "eventWindowId": "S40_FNCSMajor1_HeatsStage_Heat2_ASIA",
-          "eventTemplateId": "EventTemplate_S40_FNCSMajor1_HeatsStage",
-          "countdownBeginTime": "2026-04-19T07:00:00Z",
-          "beginTime": "2026-04-19T09:00:00Z",
-          "endTime": "2026-04-19T11:10:00Z",
+          "eventTemplateId": "EventTemplate_S40_FNCSMajor1_HeatsStageExtra",
+          "countdownBeginTime": "2026-04-19T11:00:00Z",
+          "beginTime": "2026-04-19T12:30:00Z",
+          "endTime": "2026-04-19T12:45:00Z",
           "round": 1,
           "payoutDelay": 32,
           "isTBD": false,
@@ -24919,43 +24919,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_Duos",
-      "matchCap": 6,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup_Final",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_NoBuildBR_Solo",
       "matchCap": 3,
       "tiebreakerFormula": {
@@ -25061,6 +25024,80 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_S40_FNCSMajor1_LastChanceLobby",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_Duos",
+      "matchCap": 6,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup_Final",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_Duos",
+      "matchCap": 6,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S40_FNCSMajor1_HeatsStageExtra",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
