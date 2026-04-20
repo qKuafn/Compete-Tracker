@@ -17119,7 +17119,7 @@
       "gameId": "Fortnite",
       "eventId": "epicgames_S40_FNCSMajor1_LastChanceQualifier_OCE",
       "beginTime": "2026-04-20T08:00:00Z",
-      "endTime": "2026-04-21T09:40:00Z",
+      "endTime": "2026-04-21T09:10:00Z",
       "displayDataId": "s40_major1_lcq",
       "eventGroup": "Season40_FNCSMajor1",
       "announcementTime": "2025-06-06T14:00:00Z",
@@ -17233,10 +17233,10 @@
         },
         {
           "eventWindowId": "S40_FNCSMajor1_LastChanceLobby_OCE",
-          "eventTemplateId": "EventTemplate_S40_FNCSMajor1_LastChanceLobby",
+          "eventTemplateId": "EventTemplate_S40_FNCSMajor1_LastChanceLobby3",
           "countdownBeginTime": "2026-04-21T06:00:00Z",
           "beginTime": "2026-04-21T08:00:00Z",
-          "endTime": "2026-04-21T09:40:00Z",
+          "endTime": "2026-04-21T09:10:00Z",
           "round": 1,
           "payoutDelay": 32,
           "isTBD": false,
@@ -24887,6 +24887,43 @@
       "clampsToZero": false
     },
     {
+      "playlistId": "Playlist_ShowdownTournament_Duos",
+      "matchCap": 3,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S40_FNCSMajor1_LastChanceLobby3",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_RC",
       "matchCap": 10,
       "tiebreakerFormula": {
@@ -25177,43 +25214,6 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_Duos",
-      "matchCap": 4,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S40_FNCSMajor1_LastChanceLobby",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
