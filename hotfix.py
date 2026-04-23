@@ -151,8 +151,16 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
 
     file_data_cache = {}
 
+    def should_Send_LootChange(path):
+        if path == "/ForbiddenFruitDataTables/DataTables/ForbiddenFruitChapterLootPackages" or path == "/Figment_LootTables/DataTables/FigmentLootPackages" or path == "/BlastBerryLoot/DataTables/BlastBerryLootPackages" or path == "/LootCurrentSeason/DataTables/Delulu/DeluluOverrideLootPackages_Client" or "Juno" in path:
+            return False
+        return True
+
     for (changed_path, row, key), change in merged.items():
-        print(f"    [INF] 解析対象 : path={changed_path}, row={row}")
+        Send_LootChange = should_Send_LootChange(changed_path)
+        if not Send_LootChange:
+            continue
+        print(f"    [INF] 解析対象 : path={changed_path}, row={row}, Send_LootChange={Send_LootChange}")
         added = change["追加"]
         removed = change["削除"]
         if added:
@@ -381,6 +389,10 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
     # === 戦利品プール更新の武器画像付きのEmbed組み立て ===
     loot_embeds_files = []  # (embed, files) のタプルを保存
     for (status, changed_path), weapon_dict in grouped.items():
+        Send_LootChange = should_Send_LootChange(changed_path)
+        if not Send_LootChange:
+            continue
+
         for weapon, entries in weapon_dict.items():
             if weapon:
                 # === image_pathごとに、対応する lines と weapon_path を image_lines_map に保存 ===
@@ -396,10 +408,9 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                         print(f"    [ERR] ❌️ 武器画像のパスがありません。画像生成をスキップします")
 
                 for image_path, data in image_lines_map.items():
-                    if changed_path == "/ForbiddenFruitDataTables/DataTables/ForbiddenFruitChapterLootPackages" or changed_path == "/Figment_LootTables/DataTables/FigmentLootPackages" or changed_path == "/BlastBerryLoot/DataTables/BlastBerryLootPackages" or changed_path == "/LootCurrentSeason/DataTables/Delulu/DeluluOverrideLootPackages_Client" or "Juno" in changed_path:
-                        Send_LootChange = False
-                    else:
-                        Send_LootChange = True
+                    if not image_path:
+                        continue
+
                     lines = data["lines"]
                     weapon_path = data["weapon_path"]
 
