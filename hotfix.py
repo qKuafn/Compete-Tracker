@@ -210,7 +210,14 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                     weapon_name = ""
 
                 if weapon_data:
-                    rarity_data = weapon_data[0].get("Properties", {}).get("Rarity", "Uncommon")
+                    rarity_data = weapon_data[0].get("Properties", {}).get("Rarity", "Uncommon").split("::")[-1]
+                    if rarity_data == "Uncommon":
+                        WeaponData_DataLists = weapon_data[0].get("Properties", {}).get("DataList", [])
+                        for DataList in WeaponData_DataLists:
+                            if "Rarity" in DataList:
+                                Rarity_Row = DataList["Rarity"]
+                                rarity_data = Rarity_Row.split("::")[-1] if Rarity_Row else "Uncommon"
+                                break
                     rarity = "不明"
                     if "Common" in rarity_data:
                         rarity = "白"
@@ -407,7 +414,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                         print(f"    [ERR] ❌️ 武器画像のパスがありません。画像生成をスキップします")
 
                 for image_path, data in image_lines_map.items():
-                    if changed_path == "/ForbiddenFruitDataTables/DataTables/ForbiddenFruitChapterLootPackages" or changed_path == "/Figment_LootTables/DataTables/FigmentLootPackages" or changed_path == "/BlastBerryLoot/DataTables/BlastBerryLootPackages" or changed_path == "/LootCurrentSeason/DataTables/Delulu/DeluluOverrideLootPackages_Client":
+                    if changed_path == "/ForbiddenFruitDataTables/DataTables/ForbiddenFruitChapterLootPackages" or changed_path == "/Figment_LootTables/DataTables/FigmentLootPackages" or changed_path == "/BlastBerryLoot/DataTables/BlastBerryLootPackages" or changed_path == "/LootCurrentSeason/DataTables/Delulu/DeluluOverrideLootPackages_Client" or "Juno" in changed_path:
                         Send_LootChange = False
                     else:
                         Send_LootChange = True
@@ -488,15 +495,20 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
 
 async def get_loc_list():
     paths = [
-        "FortniteGame/Content/Localization/Fortnite/ja/Fortnite",
         "FortniteGame/Content/Localization/Fortnite_locchunk10/ja/Fortnite_locchunk10",
-        "FortniteGame/Content/Localization/Fortnite_locchunk30/ja/Fortnite_locchunk30",
-        "FortniteGame/Content/Localization/Fortnite_locchunk20/ja/Fortnite_locchunk20",
-        "FortniteGame/Content/Localization/Fortnite_locchunk40/ja/Fortnite_locchunk40",
+        "FortniteGame/Content/Localization/Fortnite_locchunk100/ja/Fortnite_locchunk100",
+        "FortniteGame/Content/Localization/Fortnite_locchunk11/ja/Fortnite_locchunk11",
         "FortniteGame/Content/Localization/Fortnite_locchunk13/ja/Fortnite_locchunk13",
-        "FortniteGame/Content/Localization/Fortnite_locchunk80/ja/Fortnite_locchunk80",
+        "FortniteGame/Content/Localization/Fortnite_locchunk20/ja/Fortnite_locchunk20",
+        "FortniteGame/Content/Localization/Fortnite_locchunk30/ja/Fortnite_locchunk30",
+        "FortniteGame/Content/Localization/Fortnite_locchunk32/ja/Fortnite_locchunk32",
+        "FortniteGame/Content/Localization/Fortnite_locchunk35/ja/Fortnite_locchunk35",
+        "FortniteGame/Content/Localization/Fortnite_locchunk40/ja/Fortnite_locchunk40",
         "FortniteGame/Content/Localization/Fortnite_locchunk50/ja/Fortnite_locchunk50",
-        "FortniteGame/Content/Localization/Fortnite_locchunk100/ja/Fortnite_locchunk100"
+        "FortniteGame/Content/Localization/Fortnite_locchunk60/ja/Fortnite_locchunk60",
+        "FortniteGame/Content/Localization/Fortnite_locchunk80/ja/Fortnite_locchunk80",
+        "FortniteGame/Content/Localization/Fortnite_locchunk85/ja/Fortnite_locchunk85",
+        "FortniteGame/Content/Localization/Fortnite_locchunk90/ja/Fortnite_locchunk90"
     ]
 
     loc_dict = {}
