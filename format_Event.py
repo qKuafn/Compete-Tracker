@@ -21,6 +21,10 @@ async def format_EventData():
     content = None
 
     # === 組み立て開始 ===
+    if (not EventData) or (not WebData_ja and not WebData_en):
+        print(" [ERR] ❌️ EventDataの取得に失敗")
+        return
+
     for event in EventData["events"]:
         entry = {}
 
