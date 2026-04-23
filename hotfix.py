@@ -517,7 +517,6 @@ async def get_loc_list():
         "FortniteGame/Content/Localization/Fortnite_locchunk50/ja/Fortnite_locchunk50",
         "FortniteGame/Content/Localization/Fortnite_locchunk60/ja/Fortnite_locchunk60",
         "FortniteGame/Content/Localization/Fortnite_locchunk80/ja/Fortnite_locchunk80",
-        "FortniteGame/Content/Localization/Fortnite_locchunk85/ja/Fortnite_locchunk85",
         "FortniteGame/Content/Localization/Fortnite_locchunk90/ja/Fortnite_locchunk90"
     ]
 
