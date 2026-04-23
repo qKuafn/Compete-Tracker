@@ -339,7 +339,8 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
             "weapon": weapon
         })
 
-    # === Embed組み立て・Discord送信 ===
+    # === Embed組み立て ===
+    analysis_embeds = []
     for (status, changed_path), weapon_dict in grouped.items():
         all_entries = []
         for entries in weapon_dict.values():
@@ -374,30 +375,11 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                 "color": 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F,
                 "timestamp": datetime.now(config.UTC).isoformat()
             })
+        
+        analysis_embeds.extend(embeds)
 
-        for i, embed in enumerate(embeds):
-            payload = {
-                "embeds": [embed],
-                "username": "Hotfix Tracker"
-            }
-            data = {
-                "payload_json": json.dumps(payload, ensure_ascii=False)
-            }
-            if config2.Hotfix_Webhook:
-                    response = requests.post(config.Hotfix_Webhook_URL, data=data)
-                    if response.status_code == 204 or response.status_code == 200:
-                        print(f"      [INF] ⭕️ Discord通知成功")
-                    else:
-                        print(f"      [ERR] ❌ Discord通知失敗 : {response.status_code} {response.text}")
-            if config2.Log_Webhook:
-                    response = requests.post(config.Log_Webhook_URL, data=data)
-                    if response.status_code == 204 or response.status_code == 200:
-                        print(f"      [INF] ⭕️ Discord通知成功")
-                    else:
-                        print(f"      [ERR] ❌ Discord通知失敗 : {response.status_code} {response.text}")
-                        print([embed])
-
-    # === 戦利品プール更新の武器画像付きのEmbed組み立て・Discord送信 ===
+    # === 戦利品プール更新の武器画像付きのEmbed組み立て ===
+    loot_embeds_files = []  # (embed, files) のタプルを保存
     for (status, changed_path), weapon_dict in grouped.items():
         for weapon, entries in weapon_dict.items():
             if weapon:
@@ -457,7 +439,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
 
                     with open(image_path, "rb") as img:
                         files = {
-                            "file": (filename, img)
+                            "file": (filename, img.read())
                         }
                         embed = {
                             "title": weapon,
@@ -472,25 +454,53 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                                 "icon_url": "https://media.discordapp.net/attachments/1398826721129791509/1398826776544940212/VLtjyUF.png?ex=6886c674&is=688574f4&hm=178dda435ced5653551856f935321e4dcd5de6fde7829046f841ca44343f2d64&=&format=webp&quality=lossless&width=320&height=320"
                             }
                         }
-                        payload = {
-                            "embeds": [embed],
-                            "username": "戦利品プール更新"
-                        }
-                        data = {
-                            "payload_json": json.dumps(payload, ensure_ascii=False)
-                        }
-                        if config2.Hotfix_Webhook and Send_LootChange:
-                            response = requests.post(config.Loot_Webhook_URL, data=data, files=files)
-                            if response.status_code in (200, 204):
-                                print(f"    [INF] ⭕️ Discord通知成功 (画像) : {status} ({weapon})")
-                            else:
-                                print(f"    [ERR] ❌ Discord通知失敗 (画像) : {response.status_code} {response.text}")
-                        if config2.Log_Webhook:
-                            response = requests.post(config.Log_Webhook_URL, data=data, files=files)
-                            if response.status_code in (200, 204):
-                                print(f"    [INF] ⭕️ Discord通知成功 (画像) : {status} ({weapon})")
-                            else:
-                                print(f"    [ERR] ❌ Discord通知失敗 (画像) : {response.status_code} {response.text}")
+                        if Send_LootChange:
+                            loot_embeds_files.append((embed, files))
+
+    # === 解析通知Embedをまとめて送信 ===
+    if analysis_embeds:
+        payload = {
+            "embeds": analysis_embeds,
+            "username": "Hotfix Tracker"
+        }
+        data = {
+            "payload_json": json.dumps(payload, ensure_ascii=False)
+        }
+        if config2.Hotfix_Webhook:
+            response = requests.post(config.Hotfix_Webhook_URL, data=data)
+            if response.status_code == 204 or response.status_code == 200:
+                print(f"      [INF] ⭕️ Discord通知成功 (解析 {len(analysis_embeds)}件)")
+            else:
+                print(f"      [ERR] ❌ Discord通知失敗 : {response.status_code} {response.text}")
+        if config2.Log_Webhook:
+            response = requests.post(config.Log_Webhook_URL, data=data)
+            if response.status_code == 204 or response.status_code == 200:
+                print(f"      [INF] ⭕️ Discord通知成功 (解析 {len(analysis_embeds)}件)")
+            else:
+                print(f"      [ERR] ❌ Discord通知失敗 : {response.status_code} {response.text}")
+
+    # === 戦利品通知Embedをまとめて送信 ===
+    for embed, files in loot_embeds_files:
+        payload = {
+            "embeds": [embed],
+            "username": "戦利品プール更新"
+        }
+        data = {
+            "payload_json": json.dumps(payload, ensure_ascii=False)
+        }
+        if config2.Hotfix_Webhook:
+            response = requests.post(config.Loot_Webhook_URL, data=data, files=files)
+            if response.status_code in (200, 204):
+                print(f"    [INF] ⭕️ Discord通知成功 (画像)")
+            else:
+                print(f"    [ERR] ❌ Discord通知失敗 (画像) : {response.status_code} {response.text}")
+        if config2.Log_Webhook:
+            response = requests.post(config.Log_Webhook_URL, data=data, files=files)
+            if response.status_code in (200, 204):
+                print(f"    [INF] ⭕️ Discord通知成功 (画像)")
+            else:
+                print(f"    [ERR] ❌ Discord通知失敗 (画像) : {response.status_code} {response.text}")
+
     print ("  [INF] ✅️ Hotfix 処理完了")
 
 async def get_loc_list():
