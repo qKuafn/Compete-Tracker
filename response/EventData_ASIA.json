@@ -19806,7 +19806,7 @@
       "eventWindows": [
         {
           "eventWindowId": "S40_ReloadEliteSeries3Heat1_ASIA",
-          "eventTemplateId": "EventTemplate_S39_ReloadEliteSeriesHeats",
+          "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesHeatsES",
           "countdownBeginTime": "2026-05-15T07:00:00Z",
           "beginTime": "2026-05-15T09:00:00Z",
           "endTime": "2026-05-15T12:00:00Z",
@@ -19909,7 +19909,7 @@
       "eventWindows": [
         {
           "eventWindowId": "S40_ReloadEliteSeries3Heat2_ASIA",
-          "eventTemplateId": "EventTemplate_S39_ReloadEliteSeriesHeats",
+          "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesHeatsES",
           "countdownBeginTime": "2026-05-15T07:00:00Z",
           "beginTime": "2026-05-15T09:00:01Z",
           "endTime": "2026-05-15T12:00:01Z",
@@ -20012,7 +20012,7 @@
       "eventWindows": [
         {
           "eventWindowId": "S40_ReloadEliteSeries3Heat4_ASIA",
-          "eventTemplateId": "EventTemplate_S39_ReloadEliteSeriesHeats",
+          "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesHeatsES",
           "countdownBeginTime": "2026-05-15T07:00:00Z",
           "beginTime": "2026-05-15T09:12:01Z",
           "endTime": "2026-05-15T12:12:01Z",
@@ -20115,7 +20115,7 @@
       "eventWindows": [
         {
           "eventWindowId": "S40_ReloadEliteSeries3Heat3_ASIA",
-          "eventTemplateId": "EventTemplate_S39_ReloadEliteSeriesHeats",
+          "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesHeatsES",
           "countdownBeginTime": "2026-05-15T07:00:00Z",
           "beginTime": "2026-05-15T09:12:00Z",
           "endTime": "2026-05-15T12:12:00Z",
@@ -20218,7 +20218,7 @@
       "eventWindows": [
         {
           "eventWindowId": "S40_ReloadEliteSeries3Final_ASIA",
-          "eventTemplateId": "EventTemplate_S39_ReloadEliteSeriesHeats",
+          "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesHeatsES",
           "countdownBeginTime": "2026-05-17T07:00:00Z",
           "beginTime": "2026-05-17T09:00:00Z",
           "endTime": "2026-05-17T12:00:00Z",
@@ -20321,7 +20321,7 @@
       "eventWindows": [
         {
           "eventWindowId": "S40_ReloadEliteSeries3Open1_ASIA",
-          "eventTemplateId": "EventTemplate_S39_ReloadEliteSeries",
+          "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesES",
           "countdownBeginTime": "2026-05-01T07:00:00Z",
           "beginTime": "2026-05-01T09:00:00Z",
           "endTime": "2026-05-01T11:30:00Z",
@@ -20376,7 +20376,7 @@
         },
         {
           "eventWindowId": "S40_ReloadEliteSeries3Open2_ASIA",
-          "eventTemplateId": "EventTemplate_S39_ReloadEliteSeries",
+          "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesES",
           "countdownBeginTime": "2026-05-03T07:00:00Z",
           "beginTime": "2026-05-03T09:00:00Z",
           "endTime": "2026-05-03T11:30:00Z",
@@ -20490,7 +20490,7 @@
       "eventWindows": [
         {
           "eventWindowId": "S40_ReloadEliteSeries3PlayInDay1_ASIA",
-          "eventTemplateId": "EventTemplate_S39_ReloadEliteSeries",
+          "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesESNPM",
           "countdownBeginTime": "2026-05-08T07:00:00Z",
           "beginTime": "2026-05-08T09:00:00Z",
           "endTime": "2026-05-08T11:30:00Z",
@@ -20536,7 +20536,7 @@
         },
         {
           "eventWindowId": "S40_ReloadEliteSeries3PlayInDay2_ASIA",
-          "eventTemplateId": "EventTemplate_S39_ReloadEliteSeries",
+          "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesESNPM",
           "countdownBeginTime": "2026-05-10T07:00:00Z",
           "beginTime": "2026-05-10T09:00:00Z",
           "endTime": "2026-05-10T11:30:00Z",
@@ -20885,43 +20885,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_CR",
-      "matchCap": 12,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S39_ReloadEliteSeries",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_NPM_Duos",
       "matchCap": 11,
       "tiebreakerFormula": {
@@ -20990,43 +20953,6 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupDuos",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_Duos",
-      "matchCap": 11,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -21107,8 +21033,8 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_CR",
-      "matchCap": 8,
+      "playlistId": "Playlist_ShowdownTournament_RE_MatchMistDuos_CR",
+      "matchCap": 12,
       "tiebreakerFormula": {
         "basePointsBits": 11,
         "components": [
@@ -21137,7 +21063,7 @@
         ]
       },
       "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S39_ReloadEliteSeriesHeats",
+      "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesES",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -21175,6 +21101,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupSolo",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_MatchMistDuos_NPM",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesESNPM",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -21249,6 +21212,80 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupDuosZB",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_MatchMistDuos_CR",
+      "matchCap": 8,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesHeatsES",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_Duos",
+      "matchCap": 11,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
