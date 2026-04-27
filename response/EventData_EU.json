@@ -18505,7 +18505,7 @@
       "gameId": "Fortnite",
       "eventId": "epicgames_S40_FNCSMajor1_SecondChance_EU",
       "beginTime": "2026-04-28T17:00:00Z",
-      "endTime": "2026-04-29T20:00:00Z",
+      "endTime": "2026-04-29T19:40:00Z",
       "displayDataId": "s40_major1_second_chance",
       "eventGroup": "Season40_FNCSMajor1",
       "announcementTime": "2025-06-06T23:00:00Z",
@@ -18558,8 +18558,7 @@
           "GainedShieldTimes",
           "Travel_Distance_Ground"
         ],
-        "DisqualifyType": "Event",
-        "RegionLockType": "Season",
+        "DisqualifyType": "Window",
         "AccountLockType": "Window"
       },
       "eventWindows": [
@@ -18609,7 +18608,7 @@
           "metadata": {
             "ServerReplays": true,
             "RoundType": "Qualifiers",
-            "SubgroupId": "Major1_EU"
+            "SubgroupId": "Major1_SecondChance_EU"
           }
         },
         {
@@ -18617,7 +18616,7 @@
           "eventTemplateId": "EventTemplate_S40_FNCSMajor1_Final",
           "countdownBeginTime": "2026-04-29T15:00:00Z",
           "beginTime": "2026-04-29T17:00:00Z",
-          "endTime": "2026-04-29T20:00:00Z",
+          "endTime": "2026-04-29T19:40:00Z",
           "round": 1,
           "payoutDelay": 32,
           "isTBD": false,
@@ -18641,24 +18640,20 @@
           ],
           "requireAnyTokens": [],
           "requireNoneTokensCaller": [
-            "RegionLock_S40_SecondChance_OCE",
-            "S40_FNCS_Banned",
-            "RegionLock_S40_SecondChance_NAC",
-            "RegionLock_S40_SecondChance_BR",
-            "Permanent_Tournament_Ban",
-            "RegionLock_S40_SecondChance_NAW",
             "EpicAccountPrizingRestriction_v2",
-            "RegionLock_S40_SecondChance_ME",
-            "S40_Major1_Summit",
-            "RegionLock_S40_SecondChance_ASIA"
+            "S40_FNCS_Banned",
+            "Permanent_Tournament_Ban"
           ],
           "requireAllTokensCaller": [],
           "requireAnyTokensCaller": [],
           "regionMappings": {},
           "metadata": {
+            "ScheduledMatchmakingInitialDelaySeconds": 600,
+            "SubgroupId": "Major1_SecondChance_EU",
             "ServerReplays": true,
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
             "RoundType": "Qualifiers",
-            "SubgroupId": "Major1_EU"
+            "ScheduledMatchmakingMatchDelaySeconds": 1680
           }
         }
       ],
