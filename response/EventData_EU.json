@@ -6177,25 +6177,6 @@
     ]
   },
   "payoutTables": {
-    "S40_FNCSDivisionalCup_Division1_Week5Day1_EU": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 0,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "S40_FNCSDivisionLock_Division1Week5_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "epicgames_S40_RankedCupReloadDuos_EU_2_Diamond": [
       {
         "scoringType": "rank",
@@ -7601,6 +7582,104 @@
                 "rewardMode": "standard",
                 "value": "S39_FNCS_Division4_EU",
                 "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S40_FNCSDivisionalCup_Division1_Week5Day1_EU": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S40_FNCSDivisionLock_Division1Week5_EU",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S40_PlayStationCupClix_Final_EU": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 100,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 750,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 1500,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 300,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 2250,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 3000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 500,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 3750,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 600,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 4500,
                 "notifiesPlayer": false
               }
             ]
@@ -11547,49 +11626,6 @@
                 "rewardMode": "standard",
                 "value": "S40_FNCS_SecondChance_Final_EU",
                 "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S40_PlayStationCupClix_Final": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 100,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 100,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 200,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 200,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 300,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 300,
                 "notifiesPlayer": false
               }
             ]
@@ -26208,7 +26244,7 @@
       "scoringRuleSetId": "S40_PlayStationCupClix_ScoringRules_Final",
       "clampsToZero": true,
       "payoutsConfig": {
-        "payoutTableIdFormat": "S40_PlayStationCupClix_Final",
+        "payoutTableIdFormat": "${windowId}",
         "payoutDate": "windowEnd+PT32M"
       },
       "hidePlayerScores": false,
@@ -28145,7 +28181,7 @@
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_EU:S40_FNCSDivisionalCup_Division5_Event7_EU": "S40_FNCSDivisionalCup_Division5_Event7_EU",
     "Fortnite:epicgames_S40_RankedCupDuosZB_EU:S40_RankedCupDuosZB_Event7_EU_1_unreal": "epicgames_S40_RankedCupDuosZB_EU_1_Unreal",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_EU:S40_FNCSDivisionalCup_Division3_Event4_1_EU": "S40_FNCSDivisionalCup_Division3_Event4_1_EU",
-    "Fortnite:epicgames_S40_PlayStationCupClix_EU:S40_PlayStationCupClix_Final_EU": "S40_PlayStationCupClix_Final",
+    "Fortnite:epicgames_S40_PlayStationCupClix_EU:S40_PlayStationCupClix_Final_EU": "S40_PlayStationCupClix_Final_EU",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_EU:S40_FNCSDivisionalCup_Division5_Event10_EU": "S40_FNCSDivisionalCup_Division5_Event10_EU",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event6_EU_2_Gold": "epicgames_S40_RankedCupReloadDuos_EU_2_Gold",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event6_EU_2_Unreal": "epicgames_S40_RankedCupReloadDuos_EU_2_Unreal",

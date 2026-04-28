@@ -8015,6 +8015,85 @@
         ]
       }
     ],
+    "S40_PlayStationCupClix_Final_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 100,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 750,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 1500,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 300,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 2250,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 3000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 500,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 3750,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 600,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 4500,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S40_RankedCupReloadDuos_NAC_2_Bronze": [
       {
         "scoringType": "percentile",
@@ -12372,49 +12451,6 @@
                 "rewardMode": "standard",
                 "value": "S39_FNCS_Division4_NAC",
                 "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S40_PlayStationCupClix_Final": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 100,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 100,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 200,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 200,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 300,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 300,
                 "notifiesPlayer": false
               }
             ]
@@ -26274,7 +26310,7 @@
       "scoringRuleSetId": "S40_PlayStationCupClix_ScoringRules_Final",
       "clampsToZero": true,
       "payoutsConfig": {
-        "payoutTableIdFormat": "S40_PlayStationCupClix_Final",
+        "payoutTableIdFormat": "${windowId}",
         "payoutDate": "windowEnd+PT32M"
       },
       "hidePlayerScores": false,
@@ -28039,7 +28075,7 @@
     "Fortnite:epicgames_S40_PerformanceEvaluation_NAC:S40_PerformanceEvaluation_Event10Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S40_PerformanceEvaluation_NAC:S40_PerformanceEvaluation_Event8Round1_NAC": "S40_PerformanceEvaluation_Event8Round1_NAC",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event8_NAC_2_Gold": "epicgames_S40_RankedCupReloadDuos_NAC_2_Gold",
-    "Fortnite:epicgames_S40_PlayStationCupClix_NAC:S40_PlayStationCupClix_Final_NAC": "S40_PlayStationCupClix_Final",
+    "Fortnite:epicgames_S40_PlayStationCupClix_NAC:S40_PlayStationCupClix_Final_NAC": "S40_PlayStationCupClix_Final_NAC",
     "Fortnite:epicgames_S40_MobileSeriesApr_NAC:S40_MobileSeries_AprRound5_NAC": "S40_PayoutTable_MobileSeriesApr",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event5_NAC_1_champion": "epicgames_S40_RankedCupDuosZB_NAC_1_Champion",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event16_NAC_1_unreal": "epicgames_S40_RankedCupSolo_NAC_1_Unreal",

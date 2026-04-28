@@ -6009,6 +6009,85 @@
     ]
   },
   "payoutTables": {
+    "S40_PlayStationCupClix_Final_ASIA": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 100,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 250,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 500,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 300,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 750,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 1000,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 500,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 1250,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 600,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 1500,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S40_ReloadEliteSeries3Heat3_ASIA": [
       {
         "scoringType": "rank",
@@ -6038,6 +6117,44 @@
             ]
           }
         ]
+      }
+    ],
+    "epicgames_S40_MobileSeriesApr_ASIA_Qualifier9": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 500,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_axlfacet",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ],
+        "scoreId": "series:epicgames_S40_MobileSeriesApr_ASIA_Qualifier9_series"
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 16,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S40_MobileSeriesQualifier9Apr_ASIA",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ],
+        "scoreId": "series:epicgames_S40_MobileSeriesApr_ASIA_Qualifier9_series"
       }
     ],
     "S40_PlayStationCupClix_Qualifier_ASIA": [
@@ -10995,87 +11112,6 @@
                 "rewardMode": "standard",
                 "value": "S39_FNCS_Division2_ASIA",
                 "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "epicgames_S40_MobileSeriesApr_ASIA_Qualifier9": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 500,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_axlfacet",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ],
-        "scoreId": "series:epicgames_S40_MobileSeriesApr_ASIA_Qualifier9_series"
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 16,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S40_MobileSeriesQualifier9Apr_ASIA",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ],
-        "scoreId": "series:epicgames_S40_MobileSeriesApr_ASIA_Qualifier9_series"
-      }
-    ],
-    "S40_PlayStationCupClix_Final": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 100,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 100,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 200,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 200,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 300,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 300,
                 "notifiesPlayer": false
               }
             ]
@@ -22308,7 +22344,7 @@
       "scoringRuleSetId": "S40_PlayStationCupClix_ScoringRules_Final",
       "clampsToZero": true,
       "payoutsConfig": {
-        "payoutTableIdFormat": "S40_PlayStationCupClix_Final",
+        "payoutTableIdFormat": "${windowId}",
         "payoutDate": "windowEnd+PT32M"
       },
       "hidePlayerScores": false,
@@ -24067,7 +24103,7 @@
     "Fortnite:epicgames_S40_RankedCupSolo_ASIA:S40_RankedCupSolo_Event18_ASIA_1_diamond": "epicgames_S40_RankedCupSolo_ASIA_1_Diamond",
     "Fortnite:epicgames_S40_RankedCupSolo_ASIA:S40_RankedCupSolo_Event13_ASIA_1_elite": "epicgames_S40_RankedCupSolo_ASIA_1_Elite",
     "Fortnite:epicgames_S40_RankedCupDuosZB_ASIA:S40_RankedCupDuosZB_Event5_ASIA_1_Bronze": "epicgames_S40_RankedCupDuosZB_ASIA_1_Bronze",
-    "Fortnite:epicgames_S40_PlayStationCupClix_ASIA:S40_PlayStationCupClix_Final_ASIA": "S40_PlayStationCupClix_Final",
+    "Fortnite:epicgames_S40_PlayStationCupClix_ASIA:S40_PlayStationCupClix_Final_ASIA": "S40_PlayStationCupClix_Final_ASIA",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_ASIA:S40_RankedCupReloadDuos_Event10_ASIA_2_Platinum": "epicgames_S40_RankedCupReloadDuos_ASIA_2_Platinum",
     "Fortnite:epicgames_S40_RankedCupDuosZB_ASIA:S40_RankedCupDuosZB_Event7_ASIA_1_elite": "epicgames_S40_RankedCupDuosZB_ASIA_1_Elite",
     "Fortnite:epicgames_S40_RankedCupSolo_ASIA:S40_RankedCupSolo_Event18_ASIA_1_unreal": "epicgames_S40_RankedCupSolo_ASIA_1_Unreal",
