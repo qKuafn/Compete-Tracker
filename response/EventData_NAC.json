@@ -10513,6 +10513,67 @@
         ]
       }
     ],
+    "S40_TheDonatoMobileCup_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 150,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:cid_a_095_athena_commando_m_doubleagentgrey",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:eid_billybounce",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaGlider:glider_id_104_fuzzybear",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:happypickaxe",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticShoes:shoes_fuzzytracks",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaItemWrap:wrap_167_mastermind",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_ragedebris",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S40_PlayStationCupClix_Qualifier_NAC": [
       {
         "scoringType": "value",
@@ -24265,6 +24326,84 @@
     },
     {
       "gameId": "Fortnite",
+      "eventId": "epicgames_S40_TheDonatoMobileCup_NAC",
+      "beginTime": "2026-05-02T22:00:00Z",
+      "endTime": "2026-05-02T23:15:00Z",
+      "displayDataId": "s40_donato",
+      "eventGroup": "Season40_TheDonatoMobileCup",
+      "announcementTime": "2026-04-02T20:00:00Z",
+      "regions": [
+        "NAC",
+        "NAE"
+      ],
+      "regionMappings": {
+        "NAC": "NACCOMP",
+        "NAE": "NACCOMP"
+      },
+      "platforms": [
+        "Android",
+        "IOS"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "ShopCup",
+        "webId": "S40_TheDonatoMobileCup",
+        "minimumAccountLevel": 15,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S40_TheDonatoMobileCup_NAC",
+          "eventTemplateId": "EventTemplate_S40_TheDonatoMobileCup",
+          "countdownBeginTime": "2026-05-02T21:00:00Z",
+          "beginTime": "2026-05-02T22:00:00Z",
+          "endTime": "2026-05-02T23:15:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s40_thedonato_rules",
+            "adps:g-a81a33a3b9a7",
+            "input-touch",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S40_SpidergamerCupMobile_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s40_thedonatomobilecup_nac"
+      }
+    },
+    {
+      "gameId": "Fortnite",
       "eventId": "epicgames_S40_TheDonatoMobileCupAll_NAC",
       "beginTime": "2026-05-02T22:00:00Z",
       "endTime": "2026-05-02T23:15:00Z",
@@ -27790,6 +27929,7 @@
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event12_NAC_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
     "Fortnite:epicgames_S40_PerformanceEvaluation_NAC:S40_PerformanceEvaluation_Event6Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event4_NAC": "ScoringRules_DuosDivisionalCup5_3",
+    "Fortnite:epicgames_S40_TheDonatoMobileCup_NAC:S40_TheDonatoMobileCup_NAC": "S40_SpidergamerCupMobile_ScoringRules",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event11_NAC_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event9_NAC_2_Gold": "ScoringRules_RankedCupDuosReload_Gold_2",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event7_NAC_2_Elite": "ScoringRules_RankedCupDuosReload_Elite_2",
@@ -28155,6 +28295,7 @@
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event12_NAC_1_gold": "epicgames_S40_RankedCupDuos_NAC_1_Gold",
     "Fortnite:epicgames_S40_PerformanceEvaluation_NAC:S40_PerformanceEvaluation_Event6Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event4_NAC": "S40_FNCSDivisionalCup_Division5_Event4_NAC",
+    "Fortnite:epicgames_S40_TheDonatoMobileCup_NAC:S40_TheDonatoMobileCup_NAC": "S40_TheDonatoMobileCup_NAC",
     "Fortnite:epicgames_S40_RankedCupDuos_NAC:S40_RankedCupDuos_Event11_NAC_1_gold": "epicgames_S40_RankedCupDuos_NAC_1_Gold",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event9_NAC_2_Gold": "epicgames_S40_RankedCupReloadDuos_NAC_2_Gold",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event7_NAC_2_Elite": "epicgames_S40_RankedCupReloadDuos_NAC_2_Elite",
@@ -28899,6 +29040,9 @@
     ],
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event4_NAC": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event4_NAC"
+    ],
+    "Fortnite:epicgames_S40_TheDonatoMobileCup_NAC:S40_TheDonatoMobileCup_NAC": [
+      "Fortnite:epicgames_S40_TheDonatoMobileCup_NAC:S40_TheDonatoMobileCup_NAC"
     ],
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event5_NAC": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event5_NAC"
