@@ -5426,6 +5426,53 @@
     ]
   },
   "payoutTables": {
+    "S40_BakMobileCupAll_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 150,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:cid_cosmeticpicker_elastic2",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:eid_dab",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_id_190_golfclub",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaItemWrap:wrap_018_magma",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:bid_334_bannermale",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S40_ConsoleVCC_SolosZB_Event2Round1_NAC": [
       {
         "scoringType": "rank",
@@ -13614,6 +13661,103 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s40_bakmobilecup_nac"
+      }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S40_BakMobileCupAll_NAC",
+      "beginTime": "2026-05-09T23:00:00Z",
+      "endTime": "2026-05-10T00:15:00Z",
+      "displayDataId": "s40_bak",
+      "eventGroup": "Season40_BakMobileCup",
+      "announcementTime": "2026-05-01T20:00:00Z",
+      "regions": [
+        "NAC",
+        "NAE"
+      ],
+      "regionMappings": {
+        "NAC": "NACCOMP",
+        "NAE": "NACCOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "ShopCup",
+        "IsDuplicate": true,
+        "webId": "S40_BakMobileCup",
+        "minimumAccountLevel": 15,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S40_BakMobileCupAll_NAC",
+          "eventTemplateId": "EventTemplate_S40_BakMobileCup",
+          "countdownBeginTime": "2026-05-09T21:00:00Z",
+          "beginTime": "2026-05-09T23:00:00Z",
+          "endTime": "2026-05-10T00:15:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s40_bak_rules",
+            "adps:g-a81a33a3b9a7",
+            "input-touch",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S40_BakMobileCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "fake_token"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s40_bakmobilecupall_nac"
       }
     },
     {
@@ -24389,6 +24533,7 @@
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event7_NAC_2_Elite": "ScoringRules_RankedCupDuosReload_Elite_2",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event8_NAC_2_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_2",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event16_NAC_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
+    "Fortnite:epicgames_S40_BakMobileCupAll_NAC:S40_BakMobileCupAll_NAC": "S40_BakMobileCup_ScoringRules",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event4_2_NAC": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:cumulative:epicgames_S40_FNCSDivisionalCup_Division1_NAC_Week2_cumulative": "ScoringRules_DuosDivisionalCup_Div1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event9_NAC_1_diamond": "ScoringRules_RankedCupDuos_Diamond_1",
@@ -24713,6 +24858,7 @@
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event7_NAC_2_Elite": "epicgames_S40_RankedCupReloadDuos_NAC_2_Elite",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_NAC:S40_RankedCupReloadDuos_Event8_NAC_2_Bronze": "epicgames_S40_RankedCupReloadDuos_NAC_2_Bronze",
     "Fortnite:epicgames_S40_RankedCupSolo_NAC:S40_RankedCupSolo_Event16_NAC_1_elite": "epicgames_S40_RankedCupSolo_NAC_1_Elite",
+    "Fortnite:epicgames_S40_BakMobileCupAll_NAC:S40_BakMobileCupAll_NAC": "S40_BakMobileCupAll_NAC",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event4_2_NAC": "S40_FNCSDivisionalCup_Division5_Event4_2_NAC",
     "Fortnite:epicgames_S40_RankedCupDuosZB_NAC:S40_RankedCupDuosZB_Event9_NAC_1_diamond": "epicgames_S40_RankedCupDuosZB_NAC_1_Diamond",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event5_NAC": "S40_FNCSDivisionalCup_Division5_Event5_NAC",
@@ -25346,6 +25492,9 @@
     ],
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event5_NAC": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event5_NAC"
+    ],
+    "Fortnite:epicgames_S40_BakMobileCupAll_NAC:S40_BakMobileCupAll_NAC": [
+      "Fortnite:epicgames_S40_BakMobileCupAll_NAC:S40_BakMobileCupAll_NAC"
     ],
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event4_2_NAC": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division5_NAC:S40_FNCSDivisionalCup_Division5_Event4_2_NAC"
