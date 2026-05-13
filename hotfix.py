@@ -274,6 +274,10 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
             print(f"    [ERR] 🔴 その他データ取得エラー : {e}")
 
         def find_value_by_time(row_data, target_time):
+            try:
+                target_time_val = float(target_time)
+            except (ValueError, TypeError):
+                return None
             if not isinstance(row_data, list):
                 return None
 
@@ -285,7 +289,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                 if "time" not in item:
                     continue
 
-                if item.get("time") == target_time:
+                if item.get("time") == target_time_val:
                     return item.get("value")
 
             return None
