@@ -16,16 +16,17 @@ import config
 import config2
 
 base_name = ".DefaultGame"
+target_files = ["DefaultGame.ini", "DefaultBlastberryGame.ini"]
 
-def fetch_hotfix_uniqueFilename():
+def fetch_hotfix_uniqueFilename(target_filename):
     ensure_token()
-    print (f"[INF] Hotfix 取得開始")
+    print (f"[INF] Hotfix 取得開始 : {target_filename}")
     headers = {"Authorization": f"{config.token_type} {config.access_token}"}
     res = requests.get(config.CloudStrage_URL, headers=headers)
     if res.status_code == 200:
         data = res.json()
         for item in data:
-            if item.get("filename") == "DefaultGame.ini":
+            if item.get("filename") == target_filename:
                 uniqueFilename = item.get("uniqueFilename")
                 return uniqueFilename
     else:
@@ -34,44 +35,44 @@ def fetch_hotfix_uniqueFilename():
 
 async def fetch_and_store_hotfix(Actions):
     async with aiohttp.ClientSession() as session:
-        uniqueFilename = fetch_hotfix_uniqueFilename()
-        if not uniqueFilename:
-            print("  [ERR]  🔴 DefaultGame.iniに対応するUniqueFileNameがありません")
-            return
+        for target_filename in target_files:
+            uniqueFilename = fetch_hotfix_uniqueFilename(target_filename)
+            if not uniqueFilename:
+                print(f"  [ERR]  🔴 {target_filename}に対応するUniqueFileNameがありません")
+                continue
 
-        url = config.Hotfix_URL.format(UniqueFileName=uniqueFilename)
-        headers = {"Authorization": f"{config.token_type} {config.access_token}"}
-        res = requests.get(url, headers=headers)
-        if res.status_code == 200:
-            filepath = os.path.join(config2.RESPONSE_DIR, f"{base_name}.ini")
-            new_data = res.text
-            if os.path.exists(filepath):
+            url = config.Hotfix_URL.format(UniqueFileName=uniqueFilename)
+            headers = {"Authorization": f"{config.token_type} {config.access_token}"}
+            res = requests.get(url, headers=headers)
+            if res.status_code == 200:
+                filepath = os.path.join(config2.RESPONSE_DIR, f".{target_filename}")
+                new_data = res.text
                 try:
-                    old_data = load_ini(filepath)
+                    old_data = load_ini(filepath) if os.path.exists(filepath) else None
                 except Exception as e:
                     print(f"  [ERR] ❌️ 旧ファイルの取得に失敗 : {e}")
-            if new_data != old_data or old_data is None:
-                config.tags.append("Hotfix")
-                try:
-                    #if config2.test is False:
-                    #    with open(get_unique_filepath(config2.ARCHIVE_DIR, f"{base_name}", "ini"), "w", encoding="utf-8") as f:
-                    #        f.write(new_data)
-                    with open(filepath, "w", encoding="utf-8") as f:
-                        f.write(new_data)
-                    print(f"  [INF] 🟢 変更あり")
-                except Exception as e:
-                    print(f"  [ERR] ❌️ ファイルの保存に失敗 : {e}")
-                    return
-            elif new_data == old_data:
-                print("  [INF] ✅️ 変更なし")
-                return
-        else:
-            print(f"  [ERR] ❌️ DefaultGame.ini 取得失敗 : {res.status_code} {res.text}")
-            return
+                if new_data != old_data or old_data is None:
+                    config.tags.append("Hotfix")
+                    try:
+                        #if config2.test is False:
+                        #    with open(get_unique_filepath(config2.ARCHIVE_DIR, f"{base_name}", "ini"), "w", encoding="utf-8") as f:
+                        #        f.write(new_data)
+                        with open(filepath, "w", encoding="utf-8") as f:
+                            f.write(new_data)
+                        print(f"  [INF] 🟢 変更あり")
+                    except Exception as e:
+                        print(f"  [ERR] ❌️ ファイルの保存に失敗 : {e}")
+                        continue
+                elif new_data == old_data:
+                    print("  [INF] ✅️ 変更なし")
+                    continue
+            else:
+                print(f"  [ERR] ❌️ DefaultGame.ini 取得失敗 : {res.status_code} {res.text}")
+                continue
 
-        await load_changes(session, old_data, new_data, Actions)
+            await load_changes(target_filename, session, old_data, new_data, Actions)
 
-async def load_changes(session, old_data, new_data, Actions):
+async def load_changes(target_filename, session, old_data, new_data, Actions):
     old_lines = old_data.splitlines()
     new_lines = new_data.splitlines()
     diff = difflib.ndiff(old_lines, new_lines)
@@ -86,7 +87,7 @@ async def load_changes(session, old_data, new_data, Actions):
 
     # === Discord通知 ===
         diff_file = io.BytesIO(diff_text.encode("utf-8"))
-        files = {"file": ("hotfix.diff", diff_file, "text/plain")}
+        files = {"file": ("target_filename.diff", diff_file, "text/plain")}
         data = {
             "content": "Hotfixを検出",
             "username": "Hotfix Tracker",
