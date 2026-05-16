@@ -87,7 +87,7 @@ async def load_changes(target_filename, session, old_data, new_data, Actions):
 
     # === Discord通知 ===
         diff_file = io.BytesIO(diff_text.encode("utf-8"))
-        files = {"file": ("target_filename.diff", diff_file, "text/plain")}
+        files = {"file": (f"{target_filename}.diff", diff_file, "text/plain")}
         data = {
             "content": "Hotfixを検出",
             "username": "Hotfix Tracker",
