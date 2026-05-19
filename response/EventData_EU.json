@@ -4152,6 +4152,150 @@
         ]
       }
     ],
+    "S40_MandaloreanCup_ScoringRules": [
+      {
+        "trackedStat": "PLACEMENT_STAT_INDEX",
+        "matchRule": "lte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 9,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 2,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 3,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 4,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 5,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 6,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 7,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 8,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 9,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 10,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 11,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 12,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 13,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 14,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 15,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 16,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 17,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 18,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 19,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 20,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 21,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 22,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 23,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 24,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 25,
+            "pointsEarned": 2,
+            "multiplicative": false
+          }
+        ]
+      },
+      {
+        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+        "matchRule": "gte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 2,
+            "multiplicative": true
+          }
+        ]
+      }
+    ],
     "ScoringRules_RankedCupSolo_Platinum_1": [
       {
         "trackedStat": "PLATINUM_PLACEMENT_STAT_INDEX",
@@ -5092,49 +5236,6 @@
                 "rewardType": "game",
                 "rewardMode": "standard",
                 "value": "AthenaDance:spray_s40_rankedcups",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S40_FNCSDivisionalCup_Division5_Event10_EU": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 0,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "S40_FNCSDivisionLock_Division5Event10_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "S39_FNCS_Division5_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 400,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S39_FNCS_Division4_EU",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -7252,6 +7353,87 @@
         ]
       }
     ],
+    "S40_MandalorianCup_ZB_EU": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 40,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:emoticon_chiliabidefncs",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_chiliabidefncs",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 480,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_chiliabide",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_chiliabide",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_chiliabide",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:eid_chiliabide",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "SparksGuitar:sparks_chiliabide_guitar",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S40_RankedCupDuos_EU_1_Elite": [
       {
         "scoringType": "rank",
@@ -8103,6 +8285,130 @@
                 "value": "S39_FNCS_Division3_EU",
                 "quantity": 1,
                 "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S40_FNCSDivisionalCup_Division5_Event10_EU": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S40_FNCSDivisionLock_Division5Event10_EU",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S39_FNCS_Division5_EU",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division4_EU",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S40_MandalorianCup_EU": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 40,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:emoticon_chiliabidefncs",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_chiliabidefncs",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 480,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_chiliabide",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_chiliabide",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_chiliabide",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:eid_chiliabide",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "SparksGuitar:sparks_chiliabide_guitar",
+                "quantity": 1,
+                "notifiesPlayer": true
               }
             ]
           }
@@ -15784,6 +16090,198 @@
     },
     {
       "gameId": "Fortnite",
+      "eventId": "epicgames_S40_MandalorianCup_EU",
+      "beginTime": "2026-05-20T17:00:00Z",
+      "endTime": "2026-05-20T20:00:00Z",
+      "displayDataId": "s40_mandalorian",
+      "eventGroup": "S40_MandalorianCup",
+      "announcementTime": "2026-05-01T07:00:00Z",
+      "regions": [
+        "EU"
+      ],
+      "regionMappings": {
+        "EU": "EUCOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "IOS",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "Android",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "SecureBoot",
+          "CryptoProcessor",
+          "IOMMU",
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "CashCup",
+        "webId": "S40_MandalorianCup",
+        "minimumAccountLevel": 50,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S40_MandalorianCup_EU",
+          "eventTemplateId": "S40_MandaloreanCup_EventTemplate",
+          "countdownBeginTime": "2026-05-20T15:00:00Z",
+          "beginTime": "2026-05-20T17:00:00Z",
+          "endTime": "2026-05-20T20:00:00Z",
+          "round": 1,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s40_mandalorian_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S40_MandaloreanCup_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s40_mandaloriancup_eu"
+      }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S40_MandalorianCup_ZB_EU",
+      "beginTime": "2026-05-20T17:00:00Z",
+      "endTime": "2026-05-20T20:00:00Z",
+      "displayDataId": "s40_mandalorian_zb",
+      "eventGroup": "S40_MandalorianCup",
+      "announcementTime": "2026-05-01T07:00:00Z",
+      "regions": [
+        "EU"
+      ],
+      "regionMappings": {
+        "EU": "EUCOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "IOS",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "Android",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "SecureBoot",
+          "CryptoProcessor",
+          "IOMMU",
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "CashCup",
+        "webId": "S40_MandalorianCup",
+        "minimumAccountLevel": 50,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S40_MandalorianCup_ZB_EU",
+          "eventTemplateId": "S40_MandaloreanCup_EventTemplate_ZB",
+          "countdownBeginTime": "2026-05-20T15:00:00Z",
+          "beginTime": "2026-05-20T17:00:00Z",
+          "endTime": "2026-05-20T20:00:00Z",
+          "round": 1,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s40_mandalorian_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S40_MandaloreanCup_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s40_mandaloriancup_zb_eu"
+      }
+    },
+    {
+      "gameId": "Fortnite",
       "eventId": "epicgames_S40_MandaloreanMobileCup_EU",
       "beginTime": "2026-05-20T16:00:00Z",
       "endTime": "2026-05-20T17:15:00Z",
@@ -18393,6 +18891,43 @@
   ],
   "templates": [
     {
+      "playlistId": "Playlist_ShowdownTournament_Duos",
+      "matchCap": 11,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "S40_MandaloreanCup_EventTemplate",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_RE_MatchMistDuos_NPM",
       "matchCap": 3,
       "tiebreakerFormula": {
@@ -18646,6 +19181,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupSolo",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_NoBuildBR_Duos",
+      "matchCap": 11,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "S40_MandaloreanCup_EventTemplate_ZB",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -18975,52 +19547,6 @@
       "percentileAccuracy": 1,
       "requiredPlayerListings": [],
       "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "RankedCup_Duos_Elite_LeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}_${round}_elite",
-      "maxSessionHistorySize": 11,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "ELITE_VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "ELITE_TEAM_ELIMS_STAT_INDEX",
-            "bits": 12,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "ELITE_PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "ELITE_TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "ScoringRules_RankedCupDuos_Elite_${round}",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${eventId}_${round}_Elite",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": [],
-      "discardZeroScore": true
     },
     {
       "gameId": "Fortnite",
@@ -19795,6 +20321,98 @@
       "percentileAccuracy": 1,
       "requiredPlayerListings": [],
       "discardZeroScore": false
+    },
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "S40_MandaloreanCup_LeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 11,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S40_MandaloreanCup_ScoringRules",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${windowId}",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": [],
+      "discardZeroScore": false
+    },
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "RankedCup_Duos_Elite_LeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}_${round}_elite",
+      "maxSessionHistorySize": 11,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "ELITE_VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "ELITE_TEAM_ELIMS_STAT_INDEX",
+            "bits": 12,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "ELITE_PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "ELITE_TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "ScoringRules_RankedCupDuos_Elite_${round}",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${eventId}_${round}_Elite",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": [],
+      "discardZeroScore": true
     },
     {
       "gameId": "Fortnite",
@@ -20688,6 +21306,7 @@
     "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event20_EU_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event10_EU_2_Silver": "ScoringRules_RankedCupDuosReload_Silver_2",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division4_EU:S40_FNCSDivisionalCup_Division4_Event4_2_EU": "ScoringRules_DuosDivisionalCup_v2",
+    "Fortnite:epicgames_S40_MandalorianCup_ZB_EU:S40_MandalorianCup_ZB_EU": "S40_MandaloreanCup_ScoringRules",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division2_EU:S40_FNCSDivisionalCup_Division2_Event4_EU": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S40_PerformanceEvaluation_EU:S40_PerformanceEvaluation_Event4Round1_EU": "ScoringRules_DuosDivisionalCupTrial",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event9_EU_2_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_2",
@@ -20771,6 +21390,7 @@
     "Fortnite:epicgames_S40_PerformanceEvaluation_EU:S40_PerformanceEvaluation_Event10Round2_EU": "ScoringRules_PerformanceEvaluationRound2",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_EU:S40_FNCSDivisionalCup_Division3_Event5_EU": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S40_PerformanceEvaluation_EU:S40_PerformanceEvaluation_Event11Round1_EU": "ScoringRules_DuosDivisionalCupTrial",
+    "Fortnite:epicgames_S40_MandalorianCup_EU:S40_MandalorianCup_EU": "S40_MandaloreanCup_ScoringRules",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event9_EU_2_Gold": "ScoringRules_RankedCupDuosReload_Gold_2",
     "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event14_EU": "EmptyScoringRules",
     "Fortnite:epicgames_S40_RankedCupDuos_EU:S40_RankedCupDuos_Event12_EU_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
@@ -20989,6 +21609,7 @@
     "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event20_EU_1_elite": "epicgames_S40_RankedCupSolo_EU_1_Elite",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event10_EU_2_Silver": "epicgames_S40_RankedCupReloadDuos_EU_2_Silver",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division4_EU:S40_FNCSDivisionalCup_Division4_Event4_2_EU": "S40_FNCSDivisionalCup_Division4_Event4_2_EU",
+    "Fortnite:epicgames_S40_MandalorianCup_ZB_EU:S40_MandalorianCup_ZB_EU": "S40_MandalorianCup_ZB_EU",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division2_EU:S40_FNCSDivisionalCup_Division2_Event4_EU": "S40_FNCSDivisionalCup_Division2_Event4_EU",
     "Fortnite:epicgames_S40_PerformanceEvaluation_EU:S40_PerformanceEvaluation_Event4Round1_EU": "S40_PerformanceEvaluation_Event4Round1_EU",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event9_EU_2_Bronze": "epicgames_S40_RankedCupReloadDuos_EU_2_Bronze",
@@ -21063,6 +21684,7 @@
     "Fortnite:epicgames_S40_PerformanceEvaluation_EU:S40_PerformanceEvaluation_Event10Round2_EU": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division3_EU:S40_FNCSDivisionalCup_Division3_Event5_EU": "S40_FNCSDivisionalCup_Division3_Event5_EU",
     "Fortnite:epicgames_S40_PerformanceEvaluation_EU:S40_PerformanceEvaluation_Event11Round1_EU": "S40_PerformanceEvaluation_Event11Round1_EU",
+    "Fortnite:epicgames_S40_MandalorianCup_EU:S40_MandalorianCup_EU": "S40_MandalorianCup_EU",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_EU:S40_RankedCupReloadDuos_Event9_EU_2_Gold": "epicgames_S40_RankedCupReloadDuos_EU_2_Gold",
     "Fortnite:epicgames_S40_RankedCupDuos_EU:S40_RankedCupDuos_Event12_EU_1_gold": "epicgames_S40_RankedCupDuos_EU_1_Gold",
     "Fortnite:epicgames_S40_RankedCupDuos_EU:S40_RankedCupDuos_Event13_EU_1_diamond": "epicgames_S40_RankedCupDuos_EU_1_Diamond",
@@ -21377,6 +21999,9 @@
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_EU:S40_FNCSDivisionalCup_Division1_Week3Final_EU": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_EU:S40_FNCSDivisionalCup_Division1_Week3Final_EU"
     ],
+    "Fortnite:epicgames_S40_MandalorianCup_ZB_EU:S40_MandalorianCup_ZB_EU": [
+      "Fortnite:epicgames_S40_MandalorianCup_ZB_EU:S40_MandalorianCup_ZB_EU"
+    ],
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division2_EU:S40_FNCSDivisionalCup_Division2_Event4_EU": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division2_EU:S40_FNCSDivisionalCup_Division2_Event4_EU"
     ],
@@ -21560,6 +22185,9 @@
     ],
     "Fortnite:epicgames_S40_PerformanceEvaluation_EU:S40_PerformanceEvaluation_Event11Round1_EU": [
       "Fortnite:epicgames_S40_PerformanceEvaluation_EU:S40_PerformanceEvaluation_Event11Round1_EU"
+    ],
+    "Fortnite:epicgames_S40_MandalorianCup_EU:S40_MandalorianCup_EU": [
+      "Fortnite:epicgames_S40_MandalorianCup_EU:S40_MandalorianCup_EU"
     ],
     "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event14_EU": [
       "Fortnite:epicgames_S40_RankedCupSolo_EU:S40_RankedCupSolo_Event14_EU",
