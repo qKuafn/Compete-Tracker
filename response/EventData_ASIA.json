@@ -5324,6 +5324,87 @@
         ]
       }
     ],
+    "S40_MandalorianMobileCupAll_ASIA": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 20,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:emoticon_chiliabidefncs",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 5,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_chiliabidefncs",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 25,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_chiliabide",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_chiliabide",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_chiliabide",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:eid_chiliabide",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "SparksGuitar:sparks_chiliabide_guitar",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S40_RankedCupReloadDuos_ASIA_2_Unreal": [
       {
         "scoringType": "rank",
@@ -10389,6 +10470,101 @@
     },
     {
       "gameId": "Fortnite",
+      "eventId": "epicgames_S40_MandalorianMobileCupAll_ASIA",
+      "beginTime": "2026-05-20T08:00:00Z",
+      "endTime": "2026-05-20T09:15:00Z",
+      "displayDataId": "s40_mandalorian_mobile",
+      "eventGroup": "Season40_MandalorianMobileCup",
+      "announcementTime": "2026-05-01T06:00:00Z",
+      "regions": [
+        "ASIA"
+      ],
+      "regionMappings": {
+        "ASIA": "ASIACOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "ShopCup",
+        "IsDuplicate": true,
+        "webId": "S40_MandalorianMobileCup",
+        "minimumAccountLevel": 15,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S40_MandalorianMobileCupAll_ASIA",
+          "eventTemplateId": "EventTemplate_S40_MandaloreanMobileCup",
+          "countdownBeginTime": "2026-05-20T07:00:00Z",
+          "beginTime": "2026-05-20T08:00:00Z",
+          "endTime": "2026-05-20T09:15:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s40_mandalorian_rules",
+            "adps:g-a81a33a3b9a7",
+            "input-touch",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S40_MandaloreanMobileCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "fake_token"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s40_mandalorianmobilecupall_asia"
+      }
+    },
+    {
+      "gameId": "Fortnite",
       "eventId": "epicgames_S40_RankedCupDuos_ASIA",
       "beginTime": "2026-04-26T09:00:00Z",
       "endTime": "2026-05-24T12:00:00Z",
@@ -14930,6 +15106,7 @@
     "Fortnite:epicgames_S40_RankedCupSolo_ASIA:S40_RankedCupSolo_Event19_ASIA_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event12_ASIA_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event9_ASIA_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
+    "Fortnite:epicgames_S40_MandalorianMobileCupAll_ASIA:S40_MandalorianMobileCupAll_ASIA": "S40_MandaloreanCupMobile_ScoringRules",
     "Fortnite:epicgames_S40_RankedCupDuosZB_ASIA:S40_RankedCupDuosZB_Event1_ASIA_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_ASIA:S40_RankedCupReloadDuos_Event7_ASIA_2_Elite": "ScoringRules_RankedCupDuosReload_Elite_2",
     "Fortnite:epicgames_S40_RankedCupDuosZB_ASIA:S40_RankedCupDuosZB_Event9_ASIA_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
@@ -15157,6 +15334,7 @@
     "Fortnite:epicgames_S40_RankedCupSolo_ASIA:S40_RankedCupSolo_Event19_ASIA_1_elite": "epicgames_S40_RankedCupSolo_ASIA_1_Elite",
     "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event12_ASIA_1_champion": "epicgames_S40_RankedCupDuos_ASIA_1_Champion",
     "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event9_ASIA_1_elite": "epicgames_S40_RankedCupDuos_ASIA_1_Elite",
+    "Fortnite:epicgames_S40_MandalorianMobileCupAll_ASIA:S40_MandalorianMobileCupAll_ASIA": "S40_MandalorianMobileCupAll_ASIA",
     "Fortnite:epicgames_S40_RankedCupDuosZB_ASIA:S40_RankedCupDuosZB_Event1_ASIA_1_platinum": "epicgames_S40_RankedCupDuosZB_ASIA_1_Platinum",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_ASIA:S40_RankedCupReloadDuos_Event7_ASIA_2_Elite": "epicgames_S40_RankedCupReloadDuos_ASIA_2_Elite",
     "Fortnite:epicgames_S40_RankedCupDuosZB_ASIA:S40_RankedCupDuosZB_Event9_ASIA_1_Bronze": "epicgames_S40_RankedCupDuosZB_ASIA_1_Bronze",
@@ -15249,9 +15427,6 @@
       "Fortnite:epicgames_S40_RankedCupDuosZB_ASIA:S40_RankedCupDuosZB_Event1_ASIA_1_elite",
       "Fortnite:epicgames_S40_RankedCupDuosZB_ASIA:S40_RankedCupDuosZB_Event1_ASIA_1_champion",
       "Fortnite:epicgames_S40_RankedCupDuosZB_ASIA:S40_RankedCupDuosZB_Event1_ASIA_1_unreal"
-    ],
-    "Fortnite:epicgames_S40_MandalorianCup_ASIA:S40_MandalorianCup_ASIA": [
-      "Fortnite:epicgames_S40_MandalorianCup_ASIA:S40_MandalorianCup_ASIA"
     ],
     "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event11_ASIA": [
       "Fortnite:epicgames_S40_RankedCupDuos_ASIA:S40_RankedCupDuos_Event11_ASIA",
@@ -15473,6 +15648,12 @@
     ],
     "Fortnite:epicgames_S40_MandalorianCup_ZB_ASIA:S40_MandalorianCup_ZB_ASIA": [
       "Fortnite:epicgames_S40_MandalorianCup_ZB_ASIA:S40_MandalorianCup_ZB_ASIA"
+    ],
+    "Fortnite:epicgames_S40_MandalorianCup_ASIA:S40_MandalorianCup_ASIA": [
+      "Fortnite:epicgames_S40_MandalorianCup_ASIA:S40_MandalorianCup_ASIA"
+    ],
+    "Fortnite:epicgames_S40_MandalorianMobileCupAll_ASIA:S40_MandalorianMobileCupAll_ASIA": [
+      "Fortnite:epicgames_S40_MandalorianMobileCupAll_ASIA:S40_MandalorianMobileCupAll_ASIA"
     ],
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_ASIA:S40_FNCSDivisionalCup_Division1_Week1Day1_ASIA": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_ASIA:S40_FNCSDivisionalCup_Division1_Week1Day1_ASIA",
