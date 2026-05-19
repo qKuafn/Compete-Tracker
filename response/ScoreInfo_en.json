@@ -3,6 +3,51 @@
     "_type": "Scoring Rules Info",
     "scoring_rules": [
       {
+        "poster_description": "{0} {0}|plural(one=Elimination,other=Eliminations)",
+        "rule_name": "EACH_ELIMINATIONS_STAT",
+        "_type": "Scoring Rules Display Info",
+        "icon": "/Game/Athena/HUD/Art/killsico_alt.KillsIco_Alt",
+        "description": "{0} {0}|plural(one=Elimination,other=Eliminations)",
+        "hide_score_toast_notifications": false,
+        "poster_interval_description": "{0} - {1} Eliminations"
+      },
+      {
+        "poster_description": "Round Win",
+        "rule_name": "EACH_ROUND_WINS_STAT",
+        "_type": "Scoring Rules Display Info",
+        "icon": "/Game/UI/Foundation/Textures/Icons/Quest/T-Icon-Trophy-32.T-Icon-Trophy-32",
+        "description": "Round Win",
+        "hide_score_toast_notifications": false,
+        "poster_interval_description": "Round Win"
+      },
+      {
+        "poster_description": "{0}{0}|ordinal(one=st,two=nd,few=rd,other=th) Place",
+        "rule_name": "EACH_PLACEMENT_STAT",
+        "_type": "Scoring Rules Display Info",
+        "icon": "/Game/UI/Foundation/Textures/Icons/Quest/T-Icon-Trophy-32.T-Icon-Trophy-32",
+        "description": "Reach Top {0}",
+        "hide_score_toast_notifications": false,
+        "poster_interval_description": "{0}{0}|ordinal(one=st,two=nd,few=rd,other=th) - {1}{1}|ordinal(one=st,two=nd,few=rd,other=th) Place"
+      },
+      {
+        "poster_description": "{0}|plural(one=Each Damage Point Dealt, other=Every {0} Damage Points Dealt)",
+        "rule_name": "EACH_DAMAGE_DEALT_STAT",
+        "_type": "Scoring Rules Display Info",
+        "icon": "/Game/Athena/HUD/Art/killsico_alt.KillsIco_Alt",
+        "description": "{0}|plural(one=Each Damage Point Dealt, other=Every {0} Damage Points Dealt)",
+        "hide_score_toast_notifications": false,
+        "poster_interval_description": "{0} - {1} Damage Points Dealt"
+      },
+      {
+        "poster_description": "{0}|plural(one=Each Damage Point Taken, other=Every {0} Damage Points Taken)",
+        "rule_name": "EACH_DAMAGE_RECEIVED_STAT",
+        "_type": "Scoring Rules Display Info",
+        "icon": "/Game/Athena/HUD/Art/killsico_alt.KillsIco_Alt",
+        "description": "{0}|plural(one=Each Damage Point Taken, other=Every {0} Damage Points Taken)",
+        "hide_score_toast_notifications": false,
+        "poster_interval_description": "{0} - {1} Damage Points Taken"
+      },
+      {
         "poster_description": "{0}|plural(one=Each Bomb Planted, other=Every {0} Bombs Planted)",
         "rule_name": "EACH_CREATIVE_BOMBPLANTS_STAT",
         "_type": "Scoring Rules Display Info",
@@ -511,7 +556,7 @@
   "_title": "scoringrulesinformation",
   "_noIndex": false,
   "_activeDate": "2021-10-12T19:24:18.962Z",
-  "lastModified": "2025-12-19T20:40:11.117Z",
+  "lastModified": "2026-05-19T21:04:14.562Z",
   "_locale": "en-US",
   "_templateName": "FortniteGameScoringRulesInfo",
   "_suggestedPrefetch": []
