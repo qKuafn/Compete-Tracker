@@ -2211,105 +2211,6 @@
         ]
       }
     ],
-    "S40_MandaloreanCupMobile_ScoringRules": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 3,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 2,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 3,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 4,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 5,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 6,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 7,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 8,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 9,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 10,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 11,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 12,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 13,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 14,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 15,
-            "pointsEarned": 1,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 16,
-            "pointsEarned": 1,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 1,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
     "ScoringRules_RankedCupDuos_Champion_1": [
       {
         "trackedStat": "CHAMPION_PLACEMENT_STAT_INDEX",
@@ -4933,6 +4834,163 @@
           }
         ],
         "scoreId": "cumulative:epicgames_S40_FNCSDivisionalCup_Division1_OCE_Week1_cumulative"
+      }
+    ],
+    "epicgames_S40_RankedCupReloadDuos_OCE_2_Champion": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_rankedphantom",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticVariantToken:vtid_character_rankedphantom_stylea",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticVariantToken:vtid_character_rankedphantom_styleb",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticVariantToken:vtid_character_rankedphantom_stylec",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "percentile",
+        "ranks": [
+          {
+            "threshold": 0.25,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaGlider:umbrella_season_40_reload",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticVariantToken:vtid_glider_umbrella_season_40_reload_styleb",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "percentile",
+        "ranks": [
+          {
+            "threshold": 0.15,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_rankedphantom",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticVariantToken:vtid_pickaxe_rankedphantom_stylea",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticVariantToken:vtid_pickaxe_rankedphantom_styleb",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticVariantToken:vtid_pickaxe_rankedphantom_stylec",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "percentile",
+        "ranks": [
+          {
+            "threshold": 0.5,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_rankedphantom",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticVariantToken:vtid_backbling_rankedphantom_stylea",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticVariantToken:vtid_backbling_rankedphantom_styleb",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticVariantToken:vtid_backbling_rankedphantom_stylec",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "percentile",
+        "ranks": [
+          {
+            "threshold": 0.75,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_s40_rankedcups",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
       }
     ],
     "epicgames_S40_RankedCupDuosZB_OCE_1_Gold": [
@@ -7892,325 +7950,6 @@
         ]
       }
     ],
-    "epicgames_S40_RankedCupReloadDuos_OCE_2_Champion": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 8,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:character_rankedphantom",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_character_rankedphantom_stylea",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_character_rankedphantom_styleb",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_character_rankedphantom_stylec",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "percentile",
-        "ranks": [
-          {
-            "threshold": 0.25,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaGlider:umbrella_season_40_reload",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_glider_umbrella_season_40_reload_styleb",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "percentile",
-        "ranks": [
-          {
-            "threshold": 0.15,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_rankedphantom",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_pickaxe_rankedphantom_stylea",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_pickaxe_rankedphantom_styleb",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_pickaxe_rankedphantom_stylec",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "percentile",
-        "ranks": [
-          {
-            "threshold": 0.5,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_rankedphantom",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_backbling_rankedphantom_stylea",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_backbling_rankedphantom_styleb",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_backbling_rankedphantom_stylec",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "percentile",
-        "ranks": [
-          {
-            "threshold": 0.75,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:spray_s40_rankedcups",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S40_MandalorianMobileCupAll_OCE": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 20,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:emoticon_chiliabidefncs",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 5,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:spray_chiliabidefncs",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 25,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:character_chiliabide",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_chiliabide",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_chiliabide",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:eid_chiliabide",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "SparksGuitar:sparks_chiliabide_guitar",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S40_MandalorianMobileCup_OCE": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 20,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:emoticon_chiliabidefncs",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 5,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:spray_chiliabidefncs",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 25,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:character_chiliabide",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_chiliabide",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_chiliabide",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:eid_chiliabide",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "SparksGuitar:sparks_chiliabide_guitar",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "S40_FNCSDivisionalCup_Division1_Week4Day1_OCE": [
       {
         "scoringType": "value",
@@ -10281,177 +10020,6 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s40_mandaloriancup_zb_oce"
-      }
-    },
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S40_MandalorianMobileCup_OCE",
-      "beginTime": "2026-05-20T07:00:00Z",
-      "endTime": "2026-05-20T08:15:00Z",
-      "displayDataId": "s40_mandalorian_mobile",
-      "eventGroup": "Season40_MandalorianMobileCup",
-      "announcementTime": "2026-05-01T05:00:00Z",
-      "regions": [
-        "OCE"
-      ],
-      "regionMappings": {
-        "OCE": "OCECOMP"
-      },
-      "platforms": [
-        "Android",
-        "IOS"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "ShopCup",
-        "webId": "S40_MandalorianMobileCup",
-        "minimumAccountLevel": 15,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S40_MandalorianMobileCup_OCE",
-          "eventTemplateId": "EventTemplate_S40_MandaloreanMobileCup",
-          "countdownBeginTime": "2026-05-20T06:00:00Z",
-          "beginTime": "2026-05-20T07:00:00Z",
-          "endTime": "2026-05-20T08:15:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s40_mandalorian_rules",
-            "adps:g-a81a33a3b9a7",
-            "input-touch",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S40_MandaloreanMobileCup_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s40_mandalorianmobilecup_oce"
-      }
-    },
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S40_MandalorianMobileCupAll_OCE",
-      "beginTime": "2026-05-20T07:00:00Z",
-      "endTime": "2026-05-20T08:15:00Z",
-      "displayDataId": "s40_mandalorian_mobile",
-      "eventGroup": "Season40_MandalorianMobileCup",
-      "announcementTime": "2026-05-01T05:00:00Z",
-      "regions": [
-        "OCE"
-      ],
-      "regionMappings": {
-        "OCE": "OCECOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "ShopCup",
-        "IsDuplicate": true,
-        "webId": "S40_MandalorianMobileCup",
-        "minimumAccountLevel": 15,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S40_MandalorianMobileCupAll_OCE",
-          "eventTemplateId": "EventTemplate_S40_MandaloreanMobileCup",
-          "countdownBeginTime": "2026-05-20T06:00:00Z",
-          "beginTime": "2026-05-20T07:00:00Z",
-          "endTime": "2026-05-20T08:15:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s40_mandalorian_rules",
-            "adps:g-a81a33a3b9a7",
-            "input-touch",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S40_MandaloreanMobileCup_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "fake_token"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s40_mandalorianmobilecupall_oce"
       }
     },
     {
@@ -13181,43 +12749,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
-      "matchCap": 10,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S40_MandaloreanMobileCup",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_Duos",
       "matchCap": 6,
       "tiebreakerFormula": {
@@ -13655,6 +13186,52 @@
       "clampsToZero": true,
       "payoutsConfig": {
         "payoutTableIdFormat": "${eventId}_${round}_Diamond",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": [],
+      "discardZeroScore": true
+    },
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "RankedCup_DuosReload_Champion_LeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}_${round}_Champion",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "CHAMPION_VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "CHAMPION_TEAM_ELIMS_STAT_INDEX",
+            "bits": 12,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "CHAMPION_PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "CHAMPION_TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "ScoringRules_RankedCupDuosReload_Champion_${round}",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${eventId}_${round}_Champion",
         "payoutDate": "windowEnd+PT32M"
       },
       "hidePlayerScores": false,
@@ -14664,98 +14241,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "RankedCup_DuosReload_Champion_LeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}_${round}_Champion",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "CHAMPION_VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "CHAMPION_TEAM_ELIMS_STAT_INDEX",
-            "bits": 12,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "CHAMPION_PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "CHAMPION_TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "ScoringRules_RankedCupDuosReload_Champion_${round}",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${eventId}_${round}_Champion",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": [],
-      "discardZeroScore": true
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "S40_MandaloreanMobileCup_DefaultLeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S40_MandaloreanCupMobile_ScoringRules",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "requiredPlayerListings": [],
-      "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "RankedCup_Duos_Gold_LeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -15093,6 +14578,7 @@
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event14_OCE": "EmptyScoringRules",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week5Final_OCE": "ScoringRules_DuosDivisionalCup_Div1Final",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event9_OCE": "EmptyScoringRules",
+    "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event8_OCE_2_Gold": "ScoringRules_RankedCupDuosReload_Gold_2",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event7_OCE_2_Gold": "ScoringRules_RankedCupDuosReload_Gold_2",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event18_OCE_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event17_OCE_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
@@ -15101,8 +14587,6 @@
     "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event10_OCE_2_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_2",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event11_OCE_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event14_OCE_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
-    "Fortnite:epicgames_S40_MandalorianMobileCupAll_OCE:S40_MandalorianMobileCupAll_OCE": "S40_MandaloreanCupMobile_ScoringRules",
-    "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event8_OCE_2_Gold": "ScoringRules_RankedCupDuosReload_Gold_2",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event14_OCE_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week2Day2_OCE": "ScoringRules_DuosDivisionalCup_Div1",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event3_mg_OCE": "EmptyScoringRules",
@@ -15249,7 +14733,6 @@
     "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event9_OCE_2_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_2",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event20_OCE_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S40_RankedCupDuosZB_OCE:S40_RankedCupDuosZB_Event9_OCE_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
-    "Fortnite:epicgames_S40_MandalorianMobileCup_OCE:S40_MandalorianMobileCup_OCE": "S40_MandaloreanCupMobile_ScoringRules",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week4Day1_OCE": "ScoringRules_DuosDivisionalCup_Div1",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event12_OCE_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S40_RankedCupDuos_OCE:S40_RankedCupDuos_Event1_OCE_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
@@ -15354,6 +14837,7 @@
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event13_OCE_1_champion": "epicgames_S40_RankedCupSolo_OCE_1_Champion",
     "Fortnite:epicgames_S40_RankedCupDuos_OCE:S40_RankedCupDuos_Event11_OCE_1_Bronze": "epicgames_S40_RankedCupDuos_OCE_1_Bronze",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week5Final_OCE": "epicgames_S40_FNCSDivisionalCup_Division1_OCE",
+    "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event8_OCE_2_Gold": "epicgames_S40_RankedCupReloadDuos_OCE_2_Gold",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event7_OCE_2_Gold": "epicgames_S40_RankedCupReloadDuos_OCE_2_Gold",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event18_OCE_1_elite": "epicgames_S40_RankedCupSolo_OCE_1_Elite",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event17_OCE_1_champion": "epicgames_S40_RankedCupSolo_OCE_1_Champion",
@@ -15362,8 +14846,6 @@
     "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event10_OCE_2_Diamond": "epicgames_S40_RankedCupReloadDuos_OCE_2_Diamond",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event11_OCE_1_elite": "epicgames_S40_RankedCupSolo_OCE_1_Elite",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event14_OCE_1_Bronze": "epicgames_S40_RankedCupSolo_OCE_1_Bronze",
-    "Fortnite:epicgames_S40_MandalorianMobileCupAll_OCE:S40_MandalorianMobileCupAll_OCE": "S40_MandalorianMobileCupAll_OCE",
-    "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event8_OCE_2_Gold": "epicgames_S40_RankedCupReloadDuos_OCE_2_Gold",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event14_OCE_1_champion": "epicgames_S40_RankedCupSolo_OCE_1_Champion",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week2Day2_OCE": "S40_FNCSDivisionalCup_Division1_Week2Day2_OCE",
     "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event6_OCE_2_Bronze": "epicgames_S40_RankedCupReloadDuos_OCE_2_Bronze",
@@ -15490,7 +14972,6 @@
     "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event9_OCE_2_Platinum": "epicgames_S40_RankedCupReloadDuos_OCE_2_Platinum",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event20_OCE_1_Bronze": "epicgames_S40_RankedCupSolo_OCE_1_Bronze",
     "Fortnite:epicgames_S40_RankedCupDuosZB_OCE:S40_RankedCupDuosZB_Event9_OCE_1_unreal": "epicgames_S40_RankedCupDuosZB_OCE_1_Unreal",
-    "Fortnite:epicgames_S40_MandalorianMobileCup_OCE:S40_MandalorianMobileCup_OCE": "S40_MandalorianMobileCup_OCE",
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week4Day1_OCE": "S40_FNCSDivisionalCup_Division1_Week4Day1_OCE",
     "Fortnite:epicgames_S40_RankedCupSolo_OCE:S40_RankedCupSolo_Event12_OCE_1_Silver": "epicgames_S40_RankedCupSolo_OCE_1_Silver",
     "Fortnite:epicgames_S40_RankedCupDuos_OCE:S40_RankedCupDuos_Event1_OCE_1_champion": "epicgames_S40_RankedCupDuos_OCE_1_Champion",
@@ -15701,9 +15182,6 @@
       "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event9_OCE_2_Champion",
       "Fortnite:epicgames_S40_RankedCupReloadDuos_OCE:S40_RankedCupReloadDuos_Event9_OCE_2_Unreal"
     ],
-    "Fortnite:epicgames_S40_MandalorianMobileCupAll_OCE:S40_MandalorianMobileCupAll_OCE": [
-      "Fortnite:epicgames_S40_MandalorianMobileCupAll_OCE:S40_MandalorianMobileCupAll_OCE"
-    ],
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week2Day2_OCE": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week2Day2_OCE",
       "Fortnite:cumulative:epicgames_S40_FNCSDivisionalCup_Division1_OCE_Week2_cm_mg"
@@ -15869,9 +15347,6 @@
     "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week4Day1_OCE": [
       "Fortnite:epicgames_S40_FNCSDivisionalCup_Division1_OCE:S40_FNCSDivisionalCup_Division1_Week4Day1_OCE",
       "Fortnite:cumulative:epicgames_S40_FNCSDivisionalCup_Division1_OCE_Week4_cumulative"
-    ],
-    "Fortnite:epicgames_S40_MandalorianMobileCup_OCE:S40_MandalorianMobileCup_OCE": [
-      "Fortnite:epicgames_S40_MandalorianMobileCup_OCE:S40_MandalorianMobileCup_OCE"
     ]
   },
   "eventSeries": []
