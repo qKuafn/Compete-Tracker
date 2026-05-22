@@ -9,7 +9,10 @@
   "metadata": {
     "requireSystemFeatures": [
       "SecureBoot",
-      "CryptoProcessor"
+      "CryptoProcessor",
+      "IOMMU",
+      "AndroidSecureDevice",
+      "IOSMinimumOSVersion"
     ],
     "tournamentType": "CashCup",
     "TeamLockType": "Window",
@@ -36,14 +39,15 @@
     "Mac",
     "HeliosMobile",
     "GFN",
+    "Switch",
     "GFNMobile",
     "Windows"
   ],
-  "S40_DuosReloadVictoryCup_Round1_day1_ASIA": {
-    "beginTime_UNIX": 1777021200,
-    "beginTime_JST": "2026-04-24 18:00:00",
-    "endTime_UNIX": 1777028400,
-    "endTime_JST": "2026-04-24 20:00:00",
+  "S40_DuosReloadVictoryCup_Round1_day2_ASIA": {
+    "beginTime_UNIX": 1779440400,
+    "beginTime_JST": "2026-05-22 18:00:00",
+    "endTime_UNIX": 1779447600,
+    "endTime_JST": "2026-05-22 20:00:00",
     "playlistId": "Playlist_ShowdownTournament_RE_MatchMistDuos_CR",
     "matchCap": 10,
     "additionalRequirements": [
@@ -67,7 +71,7 @@
     "ScoringRules": {
       "S40_DuosReloadVictoryCup_LeaderboardDef_Round1": {
         "scoringRuleSetId": "S40_DuosReloadVictoryCup_ScoringRules_Round1",
-        "WindowLocation": "S40_DuosReloadVictoryCup_Round1_day1_ASIA",
+        "WindowLocation": "S40_DuosReloadVictoryCup_Round1_day2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
         "onlyScoreTopN": -1,
@@ -78,18 +82,18 @@
             "threshold": 120,
             "rewardType": "token",
             "quantity": 1,
-            "value": "S40_DuosReloadVictoryCup_Round2_day1_ASIA"
+            "value": "S40_DuosReloadVictoryCup_Round2_day2_ASIA"
           }
         ]
       }
     }
   },
-  "S40_DuosReloadVictoryCup_Round2_day1_ASIA": {
-    "beginTime_UNIX": 1777032000,
-    "beginTime_JST": "2026-04-24 21:00:00",
-    "endTime_UNIX": 1777034700,
-    "endTime_JST": "2026-04-24 21:45:00",
-    "playlistId": "Playlist_ShowdownTournament_RE_MatchMistDuos_CR",
+  "S40_DuosReloadVictoryCup_Round2_day2_ASIA": {
+    "beginTime_UNIX": 1779451200,
+    "beginTime_JST": "2026-05-22 21:00:00",
+    "endTime_UNIX": 1779453900,
+    "endTime_JST": "2026-05-22 21:45:00",
+    "playlistId": "Playlist_ShowdownTournament_RE_MatchMistDuos_NPM",
     "matchCap": 3,
     "additionalRequirements": [
       "eula:s40_victory_rules",
@@ -97,7 +101,7 @@
       "mfa"
     ],
     "requireAllTokens": [
-      "S40_DuosReloadVictoryCup_Round2_day1_ASIA"
+      "S40_DuosReloadVictoryCup_Round2_day2_ASIA"
     ],
     "requireAllTokensCaller": [],
     "requireAnyTokens": [],
@@ -109,7 +113,7 @@
     "ScoringRules": {
       "S40_DuosReloadVictoryCup_LeaderboardDef_Round2": {
         "scoringRuleSetId": "S40_DuosReloadVictoryCup_ScoringRules_Round2",
-        "WindowLocation": "S40_DuosReloadVictoryCup_Round2_day1_ASIA",
+        "WindowLocation": "S40_DuosReloadVictoryCup_Round2_day2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
         "onlyScoreTopN": -1,
