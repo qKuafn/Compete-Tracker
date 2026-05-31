@@ -2446,11 +2446,11 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "SpicyBratwurst_MainLeaderboardDef",
+      "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
       "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 21,
+      "maxSessionHistorySize": 10,
       "useIndividualScores": false,
       "tiebreakerFormula": {
         "basePointsBits": 11,
@@ -2479,9 +2479,14 @@
           }
         ]
       },
-      "scoringRuleSetId": "ScoringRules_SpicyBratwurst",
+      "scoringRuleSetId": "ScoringRules_PerformanceEvaluationRound2",
       "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "S35_PayoutTable_PerformanceEvaluation_Round2",
+        "payoutDate": "windowEnd+PT32M"
+      },
       "hidePlayerScores": false,
+      "percentileAccuracy": 1,
       "requiredPlayerListings": [],
       "discardZeroScore": false
     },
@@ -2533,11 +2538,11 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "S36_PerformanceEvaluation_Round2_DefaultLeaderboardDef",
+      "leaderboardDefId": "SpicyBratwurst_MainLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
       "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 10,
+      "maxSessionHistorySize": 21,
       "useIndividualScores": false,
       "tiebreakerFormula": {
         "basePointsBits": 11,
@@ -2566,14 +2571,9 @@
           }
         ]
       },
-      "scoringRuleSetId": "ScoringRules_PerformanceEvaluationRound2",
+      "scoringRuleSetId": "ScoringRules_SpicyBratwurst",
       "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "S35_PayoutTable_PerformanceEvaluation_Round2",
-        "payoutDate": "windowEnd+PT32M"
-      },
       "hidePlayerScores": false,
-      "percentileAccuracy": 1,
       "requiredPlayerListings": [],
       "discardZeroScore": false
     }
