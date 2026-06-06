@@ -2717,6 +2717,150 @@
         ]
       }
     ],
+    "ScoringRules_DuosDivisionalCup5_3": [
+      {
+        "trackedStat": "PLACEMENT_STAT_INDEX",
+        "matchRule": "lte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 9,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 2,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 3,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 4,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 5,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 6,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 7,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 8,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 9,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 10,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 11,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 12,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 13,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 14,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 15,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 16,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 17,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 18,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 19,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 20,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 21,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 22,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 23,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 24,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 25,
+            "pointsEarned": 2,
+            "multiplicative": false
+          }
+        ]
+      },
+      {
+        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+        "matchRule": "gte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 0,
+            "multiplicative": true
+          }
+        ]
+      }
+    ],
     "ScoringRules_RankedCupDuos_Champion_1": [
       {
         "trackedStat": "CHAMPION_PLACEMENT_STAT_INDEX",
@@ -4603,6 +4747,49 @@
     ]
   },
   "payoutTables": {
+    "S41_FNCSDivisionalCup_Division5_Event4_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division5Event4_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S39_FNCS_Division5_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division4_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S41_RankedCupDuosZB_NAC_1_Silver": [
       {
         "scoringType": "percentile",
@@ -4929,17 +5116,17 @@
         ]
       }
     ],
-    "epicgames_S41_RankedCupReloadDuos_NAC_1_Gold": [
+    "S41_FNCSDivisionalCup_Division4_Event8_1_NAC": [
       {
-        "scoringType": "percentile",
+        "scoringType": "value",
         "ranks": [
           {
-            "threshold": 0.15,
+            "threshold": 0,
             "payouts": [
               {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_reload_astroanode",
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division4Event8_1_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -4948,63 +5135,15 @@
         ]
       },
       {
-        "scoringType": "percentile",
+        "scoringType": "rank",
         "ranks": [
           {
-            "threshold": 0.02,
+            "threshold": 200,
             "payouts": [
               {
-                "rewardType": "game",
+                "rewardType": "token",
                 "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_rankedshade",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_pickaxe_rankedshade_stylea",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "percentile",
-        "ranks": [
-          {
-            "threshold": 0.3,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_rankedshade",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_backbling_rankedshade_stylea",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "percentile",
-        "ranks": [
-          {
-            "threshold": 0.5,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaItemWrap:wrap_rankedshade",
+                "value": "S39_FNCS_Division3_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -5104,7 +5243,7 @@
         ]
       }
     ],
-    "S41_FNCSDivisionalCup_Division1_Week3Day1_NAC": [
+    "S41_FNCSDivisionalCup_Division4_Event7_NAC": [
       {
         "scoringType": "value",
         "ranks": [
@@ -5114,7 +5253,24 @@
               {
                 "rewardType": "token",
                 "rewardMode": "rolling",
-                "value": "S41_FNCSDivisionLock_Division1Week3_NAC",
+                "value": "S41_FNCSDivisionLock_Division4Event7_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division3_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -5400,6 +5556,61 @@
         ]
       }
     ],
+    "S41_FNCSDivisionalCup_Division4_Event8_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division4Event8_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division3_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_FNCSDivisionalCup_Division1_Week3Day1_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division1Week3_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S41_FNCSDivisionalCup_Division2_Event3_NAC": [
       {
         "scoringType": "value",
@@ -5503,6 +5714,49 @@
                 "rewardType": "token",
                 "rewardMode": "standard",
                 "value": "S41_PerformanceEvaluation_Event9Round2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_FNCSDivisionalCup_Division5_Event8_2_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division5Event8_2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S39_FNCS_Division5_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division4_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -5736,6 +5990,49 @@
                 "rewardType": "game",
                 "rewardMode": "standard",
                 "value": "AthenaItemWrap:wrap_rankedshade",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_FNCSDivisionalCup_Division5_Event3_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division5Event3_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S39_FNCS_Division5_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division4_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -6496,6 +6793,42 @@
         ]
       }
     ],
+    "S41_FNCSDivisionalCup_Division4_Event2_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division4Event2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division3_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S41_FNCSDivisionalCup_Division1_Week1Day2_NAC": [
       {
         "scoringType": "value",
@@ -6661,6 +6994,49 @@
                 "rewardType": "game",
                 "rewardMode": "standard",
                 "value": "AthenaItemWrap:wrap_rankedshade",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_FNCSDivisionalCup_Division5_Event7_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division5Event7_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S39_FNCS_Division5_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division4_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -7773,6 +8149,85 @@
         ]
       }
     ],
+    "S41_FNCSDivisionalCup_Division5_Event5_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division5Event5_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S39_FNCS_Division5_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division4_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_FNCSDivisionalCup_Division4_Event3_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division4Event3_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division3_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S41_RankedCupDuos_NAC_1_Platinum": [
       {
         "scoringType": "rank",
@@ -7880,6 +8335,78 @@
                 "rewardType": "game",
                 "rewardMode": "standard",
                 "value": "AthenaItemWrap:wrap_rankedshade",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_FNCSDivisionalCup_Division4_Event4_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division4Event4_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division3_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_FNCSDivisionalCup_Division4_Event8_2_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division4Event8_2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division3_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -8463,6 +8990,85 @@
         ]
       }
     ],
+    "S41_FNCSDivisionalCup_Division2_Event5_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division2Event5_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 50,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S41_FNCS_Division1_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_FNCSDivisionalCup_Division5_Event1_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division5Event1_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S39_FNCS_Division5_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division4_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S41_RankedCupDuosZB_NAC_1_Gold": [
       {
         "scoringType": "percentile",
@@ -8554,7 +9160,7 @@
         ]
       }
     ],
-    "S41_FNCSDivisionalCup_Division2_Event5_NAC": [
+    "S41_FNCSDivisionalCup_Division5_Event8_1_NAC": [
       {
         "scoringType": "value",
         "ranks": [
@@ -8564,7 +9170,14 @@
               {
                 "rewardType": "token",
                 "rewardMode": "rolling",
-                "value": "S41_FNCSDivisionLock_Division2Event5_NAC",
+                "value": "S41_FNCSDivisionLock_Division5Event8_1_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S39_FNCS_Division5_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -8576,12 +9189,55 @@
         "scoringType": "rank",
         "ranks": [
           {
-            "threshold": 50,
+            "threshold": 400,
             "payouts": [
               {
                 "rewardType": "token",
                 "rewardMode": "standard",
-                "value": "S41_FNCS_Division1_NAC",
+                "value": "S39_FNCS_Division4_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_FNCSDivisionalCup_Division5_Event2_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division5Event2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S39_FNCS_Division5_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division4_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -8863,6 +9519,49 @@
         ]
       }
     ],
+    "S41_FNCSDivisionalCup_Division5_Event8_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division5Event8_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S39_FNCS_Division5_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division4_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S41_FNCSDivisionalCup_Division2_Event2_NAC": [
       {
         "scoringType": "value",
@@ -9019,6 +9718,169 @@
         ]
       }
     ],
+    "S41_FNCSDivisionalCup_Division4_Event6_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division4Event6_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division3_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_FNCSDivisionalCup_Division5_Event6_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division5Event6_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S39_FNCS_Division5_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 400,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division4_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "epicgames_S41_RankedCupReloadDuos_NAC_1_Gold": [
+      {
+        "scoringType": "percentile",
+        "ranks": [
+          {
+            "threshold": 0.15,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_reload_astroanode",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "percentile",
+        "ranks": [
+          {
+            "threshold": 0.02,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_rankedshade",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticVariantToken:vtid_pickaxe_rankedshade_stylea",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "percentile",
+        "ranks": [
+          {
+            "threshold": 0.3,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_rankedshade",
+                "quantity": 1,
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticVariantToken:vtid_backbling_rankedshade_stylea",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "percentile",
+        "ranks": [
+          {
+            "threshold": 0.5,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaItemWrap:wrap_rankedshade",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S41_PerformanceEvaluation_Event8Round1_NAC": [
       {
         "scoringType": "rank",
@@ -9030,6 +9892,42 @@
                 "rewardType": "token",
                 "rewardMode": "standard",
                 "value": "S41_PerformanceEvaluation_Event8Round2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_FNCSDivisionalCup_Division4_Event1_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division4Event1_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division3_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -9139,6 +10037,42 @@
                 "rewardType": "token",
                 "rewardMode": "standard",
                 "value": "S39_FNCS_Division2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_FNCSDivisionalCup_Division4_Event5_NAC": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_FNCSDivisionLock_Division4Event5_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S39_FNCS_Division3_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -11154,6 +12088,1124 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s41_fncsdivisionalcup_division3_nac"
+      }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S41_FNCSDivisionalCup_Division4_NAC",
+      "beginTime": "2026-06-08T23:00:03Z",
+      "endTime": "2026-07-20T02:00:03Z",
+      "displayDataId": "s40_division4",
+      "eventGroup": "Season41_FNCSDivisionalCup_Division4",
+      "announcementTime": "2025-06-07T05:00:00Z",
+      "regions": [
+        "NAE",
+        "NAC"
+      ],
+      "regionMappings": {
+        "NAC": "NACCOMP",
+        "NAE": "NACCOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "IOS",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "Android",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "SecureBoot",
+          "CryptoProcessor",
+          "IOMMU",
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "FNCS",
+        "TeamLockType": "Window",
+        "webId": "S41_FNCSDivisionalCup_Division4",
+        "minimumAccountLevel": 350,
+        "DisqualifyType": "Event",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division4_Event1_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
+          "countdownBeginTime": "2026-06-08T21:00:03Z",
+          "beginTime": "2026-06-08T23:00:03Z",
+          "endTime": "2026-06-09T02:00:03Z",
+          "round": 1,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [
+            "S39_FNCS_Division4_NAC",
+            "S39_FNCS_Division1_NAC",
+            "S39_FNCS_Division3_NAC",
+            "S39_FNCS_Division2_NAC",
+            "S40_FNCS_Division1_NAC"
+          ],
+          "requireNoneTokensCaller": [
+            "S41_FNCSDivisionLock_Division1Week1_NAC",
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division2Event1_NAC",
+            "S41_FNCSDivisionLock_Division3Event1_NAC",
+            "S41_FNCSDivisionLock_Division5Event1_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division4_Event2_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
+          "countdownBeginTime": "2026-06-09T21:00:03Z",
+          "beginTime": "2026-06-09T23:00:03Z",
+          "endTime": "2026-06-10T02:00:03Z",
+          "round": 1,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [
+            "S39_FNCS_Division4_NAC",
+            "S39_FNCS_Division1_NAC",
+            "S39_FNCS_Division3_NAC",
+            "S39_FNCS_Division2_NAC",
+            "S40_FNCS_Division1_NAC"
+          ],
+          "requireNoneTokensCaller": [
+            "S41_FNCSDivisionLock_Division1Week1_NAC",
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division5Event2_NAC",
+            "S41_FNCSDivisionLock_Division3Event2_NAC",
+            "S41_FNCSDivisionLock_Division2Event2_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division4_Event3_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
+          "countdownBeginTime": "2026-06-15T21:00:03Z",
+          "beginTime": "2026-06-15T23:00:03Z",
+          "endTime": "2026-06-16T02:00:03Z",
+          "round": 2,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [
+            "S39_FNCS_Division4_NAC",
+            "S39_FNCS_Division1_NAC",
+            "S39_FNCS_Division3_NAC",
+            "S39_FNCS_Division2_NAC",
+            "S40_FNCS_Division1_NAC"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division2Event3_NAC",
+            "S41_FNCSDivisionLock_Division3Event3_NAC",
+            "S41_FNCSDivisionLock_Division1Week2_NAC",
+            "S41_FNCSDivisionLock_Division5Event3_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division4_Event4_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
+          "countdownBeginTime": "2026-06-16T21:00:03Z",
+          "beginTime": "2026-06-16T23:00:03Z",
+          "endTime": "2026-06-17T02:00:03Z",
+          "round": 2,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [
+            "S39_FNCS_Division4_NAC",
+            "S39_FNCS_Division1_NAC",
+            "S39_FNCS_Division3_NAC",
+            "S39_FNCS_Division2_NAC",
+            "S40_FNCS_Division1_NAC"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division1Week2_NAC",
+            "S41_FNCSDivisionLock_Division3Event4_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban",
+            "S41_FNCSDivisionLock_Division2Event4_NAC",
+            "S41_FNCSDivisionLock_Division5Event4_NAC"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division4_Event5_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
+          "countdownBeginTime": "2026-06-22T21:00:03Z",
+          "beginTime": "2026-06-22T23:00:03Z",
+          "endTime": "2026-06-23T02:00:03Z",
+          "round": 4,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [
+            "S39_FNCS_Division4_NAC",
+            "S39_FNCS_Division1_NAC",
+            "S39_FNCS_Division3_NAC",
+            "S39_FNCS_Division2_NAC",
+            "S40_FNCS_Division1_NAC"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division5Event5_NAC",
+            "S41_FNCSDivisionLock_Division3Event5_NAC",
+            "S41_FNCSDivisionLock_Division1Week3_NAC",
+            "S41_FNCSDivisionLock_Division2Event5_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division4_Event6_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
+          "countdownBeginTime": "2026-06-23T21:00:03Z",
+          "beginTime": "2026-06-23T23:00:03Z",
+          "endTime": "2026-06-24T02:00:03Z",
+          "round": 4,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [
+            "S39_FNCS_Division4_NAC",
+            "S39_FNCS_Division1_NAC",
+            "S39_FNCS_Division3_NAC",
+            "S39_FNCS_Division2_NAC",
+            "S40_FNCS_Division1_NAC"
+          ],
+          "requireNoneTokensCaller": [
+            "S41_FNCSDivisionLock_Division2Event6_NAC",
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division1Week3_NAC",
+            "S41_FNCSDivisionLock_Division3Event6_NAC",
+            "S41_FNCSDivisionLock_Division5Event6_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division4_Event7_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
+          "countdownBeginTime": "2026-07-13T20:00:03Z",
+          "beginTime": "2026-07-13T23:00:03Z",
+          "endTime": "2026-07-14T02:00:03Z",
+          "round": 5,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [
+            "S39_FNCS_Division4_NAC",
+            "S39_FNCS_Division1_NAC",
+            "S39_FNCS_Division3_NAC",
+            "S39_FNCS_Division2_NAC",
+            "S40_FNCS_Division1_NAC"
+          ],
+          "requireNoneTokensCaller": [
+            "S41_FNCSDivisionLock_Division5Event7_NAC",
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division2Event7_NAC",
+            "S41_FNCSDivisionLock_Division3Event7_NAC",
+            "S41_FNCSDivisionLock_Division1Week4_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division4_Event8_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
+          "countdownBeginTime": "2026-07-14T21:00:03Z",
+          "beginTime": "2026-07-14T23:00:03Z",
+          "endTime": "2026-07-15T02:00:03Z",
+          "round": 5,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [
+            "S39_FNCS_Division4_NAC",
+            "S39_FNCS_Division1_NAC",
+            "S39_FNCS_Division3_NAC",
+            "S39_FNCS_Division2_NAC",
+            "S40_FNCS_Division1_NAC"
+          ],
+          "requireNoneTokensCaller": [
+            "S41_FNCSDivisionLock_Division2Event8_NAC",
+            "S41_FNCSDivisionLock_Division1Week4_NAC",
+            "S41_FNCSDivisionLock_Division5Event8_NAC",
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division3Event8_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division4_Event8_1_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
+          "countdownBeginTime": "2026-07-18T21:00:03Z",
+          "beginTime": "2026-07-18T23:00:03Z",
+          "endTime": "2026-07-19T02:00:03Z",
+          "round": 5,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [
+            "S39_FNCS_Division4_NAC",
+            "S39_FNCS_Division1_NAC",
+            "S39_FNCS_Division3_NAC",
+            "S39_FNCS_Division2_NAC",
+            "S40_FNCS_Division1_NAC"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division5Event8_1_NAC",
+            "S41_FNCSDivisionLock_Division3Event8_1_NAC",
+            "S41_FNCSDivisionLock_Division2Event8_1_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division4_Event8_2_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
+          "countdownBeginTime": "2026-07-19T21:00:03Z",
+          "beginTime": "2026-07-19T23:00:03Z",
+          "endTime": "2026-07-20T02:00:03Z",
+          "round": 5,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [
+            "S39_FNCS_Division4_NAC",
+            "S39_FNCS_Division1_NAC",
+            "S39_FNCS_Division3_NAC",
+            "S39_FNCS_Division2_NAC",
+            "S40_FNCS_Division1_NAC"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division3Event8_2_NAC",
+            "S41_FNCSDivisionLock_Division2Event8_2_NAC",
+            "S41_FNCSDivisionLock_Division5Event8_2_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s41_fncsdivisionalcup_division4_nac"
+      }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S41_FNCSDivisionalCup_Division5_NAC",
+      "beginTime": "2026-06-08T23:00:04Z",
+      "endTime": "2026-07-20T02:00:04Z",
+      "displayDataId": "s40_division5",
+      "eventGroup": "Season41_FNCSDivisionalCup_Division5",
+      "announcementTime": "2025-06-07T05:00:00Z",
+      "regions": [
+        "NAE",
+        "NAC"
+      ],
+      "regionMappings": {
+        "NAC": "NACCOMP",
+        "NAE": "NACCOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "IOS",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "Android",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "SecureBoot",
+          "CryptoProcessor",
+          "IOMMU",
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "FNCS",
+        "TeamLockType": "Window",
+        "webId": "S41_FNCSDivisionalCup_Division5",
+        "minimumAccountLevel": 350,
+        "DisqualifyType": "Event",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division5_Event1_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
+          "countdownBeginTime": "2026-06-08T21:00:04Z",
+          "beginTime": "2026-06-08T23:00:04Z",
+          "endTime": "2026-06-09T02:00:04Z",
+          "round": 1,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            [
+              "currentRanking:ranked-br-combined:6",
+              "currentRanking:blastbranked-blastberry-combined:6"
+            ]
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup5_3_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "S41_FNCSDivisionLock_Division1Week1_NAC",
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division2Event1_NAC",
+            "S41_FNCSDivisionLock_Division3Event1_NAC",
+            "S41_FNCSDivisionLock_Division4Event1_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division5_Event2_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
+          "countdownBeginTime": "2026-06-09T21:00:04Z",
+          "beginTime": "2026-06-09T23:00:04Z",
+          "endTime": "2026-06-10T02:00:04Z",
+          "round": 1,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            [
+              "currentRanking:ranked-br-combined:6",
+              "currentRanking:blastbranked-blastberry-combined:6"
+            ]
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup5_3_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "S41_FNCSDivisionLock_Division1Week1_NAC",
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division4Event2_NAC",
+            "S41_FNCSDivisionLock_Division3Event2_NAC",
+            "S41_FNCSDivisionLock_Division2Event2_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division5_Event3_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
+          "countdownBeginTime": "2026-06-15T21:00:04Z",
+          "beginTime": "2026-06-15T23:00:04Z",
+          "endTime": "2026-06-16T02:00:04Z",
+          "round": 2,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            [
+              "currentRanking:ranked-br-combined:6",
+              "currentRanking:blastbranked-blastberry-combined:6"
+            ]
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup5_3_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division4Event3_NAC",
+            "S41_FNCSDivisionLock_Division2Event3_NAC",
+            "S41_FNCSDivisionLock_Division3Event3_NAC",
+            "S41_FNCSDivisionLock_Division1Week2_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division5_Event4_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
+          "countdownBeginTime": "2026-06-16T21:00:04Z",
+          "beginTime": "2026-06-16T23:00:04Z",
+          "endTime": "2026-06-17T02:00:04Z",
+          "round": 2,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            [
+              "currentRanking:ranked-br-combined:6",
+              "currentRanking:blastbranked-blastberry-combined:6"
+            ]
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup5_3_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division2Event4_NAC",
+            "S41_FNCSDivisionLock_Division3Event4_NAC",
+            "S41_FNCSDivisionLock_Division4Event4_NAC",
+            "S41_FNCSDivisionLock_Division1Week2_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division5_Event5_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
+          "countdownBeginTime": "2026-06-22T21:00:04Z",
+          "beginTime": "2026-06-22T23:00:04Z",
+          "endTime": "2026-06-23T02:00:04Z",
+          "round": 4,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            [
+              "currentRanking:ranked-br-combined:6",
+              "currentRanking:ranked-blastberry-combined:6"
+            ]
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup5_3_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "S41_FNCSDivisionLock_Division4Event5_NAC",
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division3Event5_NAC",
+            "S41_FNCSDivisionLock_Division1Week3_NAC",
+            "S41_FNCSDivisionLock_Division2Event5_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division5_Event6_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
+          "countdownBeginTime": "2026-06-23T21:00:04Z",
+          "beginTime": "2026-06-23T23:00:04Z",
+          "endTime": "2026-06-24T02:00:04Z",
+          "round": 4,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            [
+              "currentRanking:ranked-br-combined:6",
+              "currentRanking:ranked-blastberry-combined:6"
+            ]
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup5_3_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "S41_FNCSDivisionLock_Division2Event6_NAC",
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division1Week3_NAC",
+            "S41_FNCSDivisionLock_Division3Event6_NAC",
+            "S41_FNCSDivisionLock_Division4Event6_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division5_Event7_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
+          "countdownBeginTime": "2026-07-13T20:00:04Z",
+          "beginTime": "2026-07-13T23:00:04Z",
+          "endTime": "2026-07-14T02:00:04Z",
+          "round": 5,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            [
+              "currentRanking:ranked-br-combined:6",
+              "currentRanking:ranked-blastberry-combined:6"
+            ]
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup5_3_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division2Event7_NAC",
+            "S41_FNCSDivisionLock_Division4Event7_NAC",
+            "S41_FNCSDivisionLock_Division3Event7_NAC",
+            "S41_FNCSDivisionLock_Division1Week4_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division5_Event8_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
+          "countdownBeginTime": "2026-07-14T21:00:04Z",
+          "beginTime": "2026-07-14T23:00:04Z",
+          "endTime": "2026-07-15T02:00:04Z",
+          "round": 5,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            [
+              "currentRanking:ranked-br-combined:6",
+              "currentRanking:ranked-blastberry-combined:6"
+            ]
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup5_3_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "S41_FNCSDivisionLock_Division4Event8_NAC",
+            "S41_FNCSDivisionLock_Division2Event8_NAC",
+            "S41_FNCSDivisionLock_Division1Week4_NAC",
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division3Event8_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division5_Event8_1_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
+          "countdownBeginTime": "2026-07-18T21:00:04Z",
+          "beginTime": "2026-07-18T23:00:04Z",
+          "endTime": "2026-07-19T02:00:04Z",
+          "round": 5,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            [
+              "currentRanking:ranked-br-combined:6",
+              "currentRanking:ranked-blastberry-combined:6"
+            ]
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup5_3_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division4Event8_1_NAC",
+            "S41_FNCSDivisionLock_Division3Event8_1_NAC",
+            "S41_FNCSDivisionLock_Division2Event8_1_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
+          "eventWindowId": "S41_FNCSDivisionalCup_Division5_Event8_2_NAC",
+          "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
+          "countdownBeginTime": "2026-07-19T21:00:04Z",
+          "beginTime": "2026-07-19T23:00:04Z",
+          "endTime": "2026-07-20T02:00:04Z",
+          "round": 5,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_fncsdiv_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa",
+            [
+              "currentRanking:ranked-br-combined:6",
+              "currentRanking:ranked-blastberry-combined:6"
+            ]
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S39_FNCSDivisionalCup5_3_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "S41_CashCup_Qualified"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "S41_FNCSDivisionLock_Division3Event8_2_NAC",
+            "S41_FNCSDivisionLock_Division4Event8_2_NAC",
+            "S41_FNCSDivisionLock_Division2Event8_2_NAC",
+            "S41_FNCS_Banned",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s41_fncsdivisionalcup_division5_nac"
       }
     },
     {
@@ -16068,6 +18120,43 @@
       "payoutTable": [],
       "liveSessionAttributes": [],
       "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_Duos",
+      "matchCap": 11,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S39_FNCSDivisionalCup",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
     }
   ],
   "leaderboardDefs": [
@@ -16208,6 +18297,52 @@
       "percentileAccuracy": 1,
       "requiredPlayerListings": [],
       "discardZeroScore": true
+    },
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "S39_FNCSDivisionalCup5_3_DefaultLeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 11,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "ScoringRules_DuosDivisionalCup5_3",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${windowId}",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "requiredPlayerListings": [],
+      "discardZeroScore": false
     },
     {
       "gameId": "Fortnite",
@@ -17624,7 +19759,6 @@
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event3Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
     "Fortnite:cumulative:epicgames_S41_FNCSDivisionalCup_Division1_NAC_Week2_cumulative": "ScoringRules_DuosDivisionalCup_Div1v2",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event1_NAC_1_diamond": "ScoringRules_RankedCupDuos_Diamond_1",
-    "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event5_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event3_NAC_1_Champion": "ScoringRules_RankedCupDuosReload_Champion_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event8_NAC_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
@@ -17632,12 +19766,16 @@
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event3_NAC_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event1Round1_NAC": "ScoringRules_DuosDivisionalCupTrial",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event9_NAC_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1",
-    "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event2_NAC_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event8_1_NAC": "ScoringRules_DuosDivisionalCup5_3",
+    "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event5_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event2_NAC_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event2_NAC_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division2_NAC:S41_FNCSDivisionalCup_Division2_Event7_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event8_NAC_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event8_NAC": "ScoringRules_DuosDivisionalCup5_3",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event1_NAC": "ScoringRules_DuosDivisionalCup_v2",
+    "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event2_NAC_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event9_NAC_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S41_MobileTestCup_NAC:S41_MobileTestCup_Round3_NAC": "ScoringRules_MobileSeriesOpensReload",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event3_NAC_1_diamond": "ScoringRules_RankedCupDuos_Diamond_1",
@@ -17686,16 +19824,16 @@
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event5_NAC_1_gold": "ScoringRules_RankedCupSolo_Gold_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event8_NAC_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event2_NAC_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
-    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event3_NAC_1_Silver": "ScoringRules_RankedCupDuosReload_Silver_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week4Day2_NAC": "ScoringRules_DuosDivisionalCup_Div1v2",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event9_NAC_1_Gold": "ScoringRules_RankedCupDuosReload_Gold_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event4_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event5_NAC_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
+    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event3_NAC_1_Silver": "ScoringRules_RankedCupDuosReload_Silver_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event8_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event7_NAC_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event8Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event6_NAC_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
-    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event8_NAC_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1",
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event5Round1_NAC": "ScoringRules_DuosDivisionalCupTrial",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event4_NAC_1_Champion": "ScoringRules_RankedCupDuosReload_Champion_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event4_NAC_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1",
@@ -17708,12 +19846,16 @@
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event2_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event4_NAC_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event5_NAC_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event4_NAC": "ScoringRules_DuosDivisionalCup5_3",
+    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event8_NAC_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event7_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event8_NAC_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division2_NAC:S40_FNCSDivisionalCup_Division2_Event8_2_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event8_NAC": "EmptyScoringRules",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event7_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event8_NAC_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event5_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event6_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event6_NAC_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event7_NAC_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
@@ -17723,13 +19865,14 @@
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event3_NAC_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S41_MobileTestCupAll_NAC:S41_MobileTestCupAll_Round4_NAC": "ScoringRules_MobileSeriesOpensReload",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event6_NAC_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
-    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC_1_Champion": "ScoringRules_RankedCupDuosReload_Champion_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event2_NAC_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week3Day1_NAC": "ScoringRules_DuosDivisionalCup_Div1v2",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event2_NAC_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event7_NAC_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event7_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
+    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC_1_Champion": "ScoringRules_RankedCupDuosReload_Champion_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event5_NAC": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event9_NAC_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event1_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC": "EmptyScoringRules",
@@ -17762,6 +19905,7 @@
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week2Day2_NAC": "ScoringRules_DuosDivisionalCup_Div1v2",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event4_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event7_NAC_1_diamond": "ScoringRules_RankedCupDuos_Diamond_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event8_2_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event3_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event2_NAC_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event2_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
@@ -17772,6 +19916,7 @@
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event2_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC_1_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event3_NAC_1_Elite": "ScoringRules_RankedCupDuosReload_Elite_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event3_NAC": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event9_NAC_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event8_NAC_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event7_NAC": "EmptyScoringRules",
@@ -17785,7 +19930,6 @@
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event3_NAC_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event5_NAC_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC_1_Silver": "ScoringRules_RankedCupDuosReload_Silver_1",
-    "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event4_NAC_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event6_NAC_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event9_NAC_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event7_NAC_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
@@ -17795,6 +19939,8 @@
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event4_NAC_1_gold": "ScoringRules_RankedCupSolo_Gold_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event9_NAC_1_Champion": "ScoringRules_RankedCupDuosReload_Champion_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event7_NAC_1_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event6_NAC": "ScoringRules_DuosDivisionalCup_v2",
+    "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event4_NAC_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event5_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event3_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event6_NAC_1_diamond": "ScoringRules_RankedCupDuos_Diamond_1",
@@ -17839,6 +19985,7 @@
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event6_NAC_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event5_NAC_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event5_NAC": "EmptyScoringRules",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event2_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event6_NAC_1_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event8_NAC_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division2_NAC:S41_FNCSDivisionalCup_Division2_Event3_NAC": "ScoringRules_DuosDivisionalCup_v2",
@@ -17873,6 +20020,7 @@
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event4_NAC_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event6_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC": "EmptyScoringRules",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event7_NAC": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event8_NAC_1_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event6_NAC": "ScoringRules_DuosDivisionalCup_v2",
@@ -17884,6 +20032,7 @@
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event8_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_MobileTestCup_NAC:S41_MobileTestCup_Round1_NAC": "ScoringRules_MobileSeriesOpensReload",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event1_NAC_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event4_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC_1_Elite": "ScoringRules_RankedCupDuosReload_Elite_1",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event4_NAC_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event6_NAC_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
@@ -17893,11 +20042,13 @@
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event4_NAC_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event2_NAC_1_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_1",
     "Fortnite:epicgames_S41_MobileTestCupAll_NAC:S41_MobileTestCupAll_Round2_NAC": "ScoringRules_MobileSeriesOpensReload",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event8_1_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event5_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event4_NAC_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_gold": "ScoringRules_RankedCupSolo_Gold_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event1_NAC_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event6_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event8_2_NAC": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event8_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event4_NAC": "EmptyScoringRules",
@@ -17905,11 +20056,11 @@
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event8_NAC_1_Silver": "ScoringRules_RankedCupDuosReload_Silver_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event6_NAC_1_Unreal": "ScoringRules_RankedCupDuosReload_Unreal_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event7_NAC_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event1_NAC": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event5_NAC_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week2Final_NAC": "ScoringRules_DuosDivisionalCup_Div1Final",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event3_NAC_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event2_NAC": "ScoringRules_DuosDivisionalCup_v2",
-    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event2_NAC_1_Champion": "ScoringRules_RankedCupDuosReload_Champion_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event3_NAC": "EmptyScoringRules",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event8_2_NAC": "ScoringRules_DuosDivisionalCup_v2",
@@ -17918,6 +20069,8 @@
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event8_NAC_1_Elite": "ScoringRules_RankedCupDuosReload_Elite_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event7_NAC_1_gold": "ScoringRules_RankedCupSolo_Gold_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event6_NAC_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
+    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event2_NAC_1_Champion": "ScoringRules_RankedCupDuosReload_Champion_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event3_NAC": "ScoringRules_DuosDivisionalCup_v2",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event8_NAC_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event6_NAC_1_Gold": "ScoringRules_RankedCupDuosReload_Gold_1",
     "Fortnite:cumulative:epicgames_S41_FNCSDivisionalCup_Division1_NAC_Week3_cumulative": "ScoringRules_DuosDivisionalCup_Div1v2",
@@ -17932,15 +20085,17 @@
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event6_NAC_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event1_NAC": "ScoringRules_DuosDivisionalCup_v2",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event2_NAC": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event1Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week4Day1_NAC": "ScoringRules_DuosDivisionalCup_Div1v2",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event1_NAC_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
-    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event7_NAC_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1",
     "Fortnite:epicgames_S41_MobileTestCup_NAC:S41_MobileTestCup_Round2_NAC": "ScoringRules_MobileSeriesOpensReload",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event7_NAC_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event8_NAC_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event4_NAC_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
-    "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1"
+    "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event6_NAC": "ScoringRules_DuosDivisionalCup5_3",
+    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event7_NAC_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1"
   },
   "scoreLocationPayoutTables": {
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event5_NAC_1_diamond": "epicgames_S41_RankedCupDuosZB_NAC_1_Diamond",
@@ -17987,7 +20142,6 @@
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC_1_Gold": "epicgames_S41_RankedCupReloadDuos_NAC_1_Gold",
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event3Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event1_NAC_1_diamond": "epicgames_S41_RankedCupDuos_NAC_1_Diamond",
-    "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event5_NAC_1_unreal": "epicgames_S41_RankedCupDuos_NAC_1_Unreal",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event3_NAC_1_Champion": "epicgames_S41_RankedCupReloadDuos_NAC_1_Champion",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event8_NAC_1_elite": "epicgames_S41_RankedCupSolo_NAC_1_Elite",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_champion": "epicgames_S41_RankedCupSolo_NAC_1_Champion",
@@ -17995,12 +20149,16 @@
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event3_NAC_1_champion": "epicgames_S41_RankedCupDuos_NAC_1_Champion",
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event1Round1_NAC": "S41_PerformanceEvaluation_Event1Round1_NAC",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event9_NAC_1_Platinum": "epicgames_S41_RankedCupReloadDuos_NAC_1_Platinum",
-    "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event2_NAC_1_diamond": "epicgames_S41_RankedCupSolo_NAC_1_Diamond",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event8_1_NAC": "S41_FNCSDivisionalCup_Division5_Event8_1_NAC",
+    "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event5_NAC_1_unreal": "epicgames_S41_RankedCupDuos_NAC_1_Unreal",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event2_NAC_1_elite": "epicgames_S41_RankedCupSolo_NAC_1_Elite",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event5_NAC_1_Bronze": "epicgames_S41_RankedCupReloadDuos_NAC_1_Bronze",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event2_NAC_1_platinum": "epicgames_S41_RankedCupDuos_NAC_1_Platinum",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division2_NAC:S41_FNCSDivisionalCup_Division2_Event7_NAC": "S41_FNCSDivisionalCup_Division2_Event7_NAC",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event8_NAC_1_Bronze": "epicgames_S41_RankedCupDuosZB_NAC_1_Bronze",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event8_NAC": "S41_FNCSDivisionalCup_Division5_Event8_NAC",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event1_NAC": "S41_FNCSDivisionalCup_Division4_Event1_NAC",
+    "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event2_NAC_1_diamond": "epicgames_S41_RankedCupSolo_NAC_1_Diamond",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event9_NAC_1_diamond": "epicgames_S41_RankedCupSolo_NAC_1_Diamond",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event3_NAC_1_diamond": "epicgames_S41_RankedCupDuos_NAC_1_Diamond",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event4_NAC_1_Bronze": "epicgames_S41_RankedCupReloadDuos_NAC_1_Bronze",
@@ -18041,16 +20199,16 @@
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event5_NAC_1_gold": "epicgames_S41_RankedCupSolo_NAC_1_Gold",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event8_NAC_1_platinum": "epicgames_S41_RankedCupDuosZB_NAC_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event2_NAC_1_gold": "epicgames_S41_RankedCupDuosZB_NAC_1_Gold",
-    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event3_NAC_1_Silver": "epicgames_S41_RankedCupReloadDuos_NAC_1_Silver",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week4Day2_NAC": "S41_FNCSDivisionalCup_Division1_Week4Day2_NAC",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event9_NAC_1_Gold": "epicgames_S41_RankedCupReloadDuos_NAC_1_Gold",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event4_NAC": "S41_FNCSDivisionalCup_Division3_Event4_NAC",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event5_NAC_1_diamond": "epicgames_S41_RankedCupSolo_NAC_1_Diamond",
+    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event3_NAC_1_Silver": "epicgames_S41_RankedCupReloadDuos_NAC_1_Silver",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event8_NAC": "S41_FNCSDivisionalCup_Division4_Event8_NAC",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_platinum": "epicgames_S41_RankedCupSolo_NAC_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event7_NAC_1_Bronze": "epicgames_S41_RankedCupDuosZB_NAC_1_Bronze",
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event8Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event6_NAC_1_champion": "epicgames_S41_RankedCupDuos_NAC_1_Champion",
-    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event8_NAC_1_Platinum": "epicgames_S41_RankedCupReloadDuos_NAC_1_Platinum",
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event5Round1_NAC": "S41_PerformanceEvaluation_Event5Round1_NAC",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event8_NAC_1_Bronze": "epicgames_S41_RankedCupDuos_NAC_1_Bronze",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event4_NAC_1_Champion": "epicgames_S41_RankedCupReloadDuos_NAC_1_Champion",
@@ -18064,8 +20222,12 @@
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event2_NAC_1_unreal": "epicgames_S41_RankedCupDuosZB_NAC_1_Unreal",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event4_NAC_1_platinum": "epicgames_S41_RankedCupDuos_NAC_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event5_NAC_1_elite": "epicgames_S41_RankedCupDuos_NAC_1_Elite",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event4_NAC": "S41_FNCSDivisionalCup_Division5_Event4_NAC",
+    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event8_NAC_1_Platinum": "epicgames_S41_RankedCupReloadDuos_NAC_1_Platinum",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event7_NAC": "S41_FNCSDivisionalCup_Division4_Event7_NAC",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event8_NAC_1_Silver": "epicgames_S41_RankedCupDuos_NAC_1_Silver",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC_1_gold": "epicgames_S41_RankedCupDuosZB_NAC_1_Gold",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event5_NAC": "S41_FNCSDivisionalCup_Division4_Event5_NAC",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event6_NAC_1_unreal": "epicgames_S41_RankedCupDuosZB_NAC_1_Unreal",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event3_NAC_1_diamond": "epicgames_S41_RankedCupSolo_NAC_1_Diamond",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event6_NAC_1_Bronze": "epicgames_S41_RankedCupSolo_NAC_1_Bronze",
@@ -18074,13 +20236,14 @@
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event2_NAC_1_gold": "epicgames_S41_RankedCupDuos_NAC_1_Gold",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event5_NAC_1_Elite": "epicgames_S41_RankedCupReloadDuos_NAC_1_Elite",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event6_NAC_1_Silver": "epicgames_S41_RankedCupDuosZB_NAC_1_Silver",
-    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC_1_Champion": "epicgames_S41_RankedCupReloadDuos_NAC_1_Champion",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event2_NAC_1_platinum": "epicgames_S41_RankedCupSolo_NAC_1_Platinum",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week3Day1_NAC": "S41_FNCSDivisionalCup_Division1_Week3Day1_NAC",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event2_NAC_1_Bronze": "epicgames_S41_RankedCupSolo_NAC_1_Bronze",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event7_NAC_1_platinum": "epicgames_S41_RankedCupSolo_NAC_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_Bronze": "epicgames_S41_RankedCupSolo_NAC_1_Bronze",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event7_NAC_1_unreal": "epicgames_S41_RankedCupDuosZB_NAC_1_Unreal",
+    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC_1_Champion": "epicgames_S41_RankedCupReloadDuos_NAC_1_Champion",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event5_NAC": "S41_FNCSDivisionalCup_Division5_Event5_NAC",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event9_NAC_1_elite": "epicgames_S41_RankedCupSolo_NAC_1_Elite",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event1_NAC_1_unreal": "epicgames_S41_RankedCupDuosZB_NAC_1_Unreal",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event1_NAC_1_champion": "epicgames_S41_RankedCupDuos_NAC_1_Champion",
@@ -18108,6 +20271,7 @@
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event7_NAC_1_Bronze": "epicgames_S41_RankedCupSolo_NAC_1_Bronze",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week2Day2_NAC": "S41_FNCSDivisionalCup_Division1_Week2Day2_NAC",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event7_NAC_1_diamond": "epicgames_S41_RankedCupDuosZB_NAC_1_Diamond",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event8_2_NAC": "S41_FNCSDivisionalCup_Division4_Event8_2_NAC",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event3_NAC": "S41_FNCSDivisionalCup_Division3_Event3_NAC",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event2_NAC_1_Silver": "epicgames_S41_RankedCupSolo_NAC_1_Silver",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event2_NAC_1_unreal": "epicgames_S41_RankedCupDuos_NAC_1_Unreal",
@@ -18116,6 +20280,7 @@
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event6_NAC_1_champion": "epicgames_S41_RankedCupSolo_NAC_1_Champion",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC_1_Bronze": "epicgames_S41_RankedCupReloadDuos_NAC_1_Bronze",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event3_NAC_1_Elite": "epicgames_S41_RankedCupReloadDuos_NAC_1_Elite",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event3_NAC": "S41_FNCSDivisionalCup_Division5_Event3_NAC",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event9_NAC_1_unreal": "epicgames_S41_RankedCupSolo_NAC_1_Unreal",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event8_NAC_1_gold": "epicgames_S41_RankedCupDuosZB_NAC_1_Gold",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC_1_Unreal": "epicgames_S41_RankedCupReloadDuos_NAC_1_Unreal",
@@ -18126,7 +20291,6 @@
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event3_NAC_1_gold": "epicgames_S41_RankedCupDuos_NAC_1_Gold",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event5_NAC_1_platinum": "epicgames_S41_RankedCupDuosZB_NAC_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC_1_Silver": "epicgames_S41_RankedCupReloadDuos_NAC_1_Silver",
-    "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event4_NAC_1_Bronze": "epicgames_S41_RankedCupDuos_NAC_1_Bronze",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event6_NAC_1_elite": "epicgames_S41_RankedCupDuos_NAC_1_Elite",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event9_NAC_1_champion": "epicgames_S41_RankedCupSolo_NAC_1_Champion",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event7_NAC_1_Silver": "epicgames_S41_RankedCupDuosZB_NAC_1_Silver",
@@ -18136,6 +20300,8 @@
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event4_NAC_1_gold": "epicgames_S41_RankedCupSolo_NAC_1_Gold",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event9_NAC_1_Champion": "epicgames_S41_RankedCupReloadDuos_NAC_1_Champion",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event7_NAC_1_Bronze": "epicgames_S41_RankedCupReloadDuos_NAC_1_Bronze",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event6_NAC": "S41_FNCSDivisionalCup_Division4_Event6_NAC",
+    "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event4_NAC_1_Bronze": "epicgames_S41_RankedCupDuos_NAC_1_Bronze",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event6_NAC_1_diamond": "epicgames_S41_RankedCupDuosZB_NAC_1_Diamond",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event4_NAC_1_Diamond": "epicgames_S41_RankedCupReloadDuos_NAC_1_Diamond",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC_1_diamond": "epicgames_S41_RankedCupDuosZB_NAC_1_Diamond",
@@ -18175,6 +20341,7 @@
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event6_NAC_1_Silver": "epicgames_S41_RankedCupDuos_NAC_1_Silver",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event5_NAC_1_Bronze": "epicgames_S41_RankedCupDuosZB_NAC_1_Bronze",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event8_NAC_1_elite": "epicgames_S41_RankedCupDuos_NAC_1_Elite",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event2_NAC": "S41_FNCSDivisionalCup_Division4_Event2_NAC",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event6_NAC_1_Bronze": "epicgames_S41_RankedCupReloadDuos_NAC_1_Bronze",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event8_NAC_1_diamond": "epicgames_S41_RankedCupSolo_NAC_1_Diamond",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division2_NAC:S41_FNCSDivisionalCup_Division2_Event3_NAC": "S41_FNCSDivisionalCup_Division2_Event3_NAC",
@@ -18203,6 +20370,7 @@
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event9_NAC_1_Silver": "epicgames_S41_RankedCupSolo_NAC_1_Silver",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event7_NAC_1_Silver": "epicgames_S41_RankedCupSolo_NAC_1_Silver",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event4_NAC_1_platinum": "epicgames_S41_RankedCupDuosZB_NAC_1_Platinum",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event7_NAC": "S41_FNCSDivisionalCup_Division5_Event7_NAC",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_elite": "epicgames_S41_RankedCupSolo_NAC_1_Elite",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event8_NAC_1_Diamond": "epicgames_S41_RankedCupReloadDuos_NAC_1_Diamond",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event6_NAC": "S41_FNCSDivisionalCup_Division3_Event6_NAC",
@@ -18212,28 +20380,31 @@
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC_1_champion": "epicgames_S41_RankedCupDuosZB_NAC_1_Champion",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event8_NAC": "S41_FNCSDivisionalCup_Division3_Event8_NAC",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event1_NAC_1_Bronze": "epicgames_S41_RankedCupDuosZB_NAC_1_Bronze",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event4_NAC": "S41_FNCSDivisionalCup_Division4_Event4_NAC",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC_1_Elite": "epicgames_S41_RankedCupReloadDuos_NAC_1_Elite",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event4_NAC_1_gold": "epicgames_S41_RankedCupDuos_NAC_1_Gold",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event6_NAC_1_unreal": "epicgames_S41_RankedCupSolo_NAC_1_Unreal",
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event2Round1_NAC": "S41_PerformanceEvaluation_Event2Round1_NAC",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event5_NAC_1_Gold": "epicgames_S41_RankedCupReloadDuos_NAC_1_Gold",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event4_NAC_1_champion": "epicgames_S41_RankedCupDuos_NAC_1_Champion",
-    "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_Silver": "epicgames_S41_RankedCupSolo_NAC_1_Silver",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event2_NAC_1_Diamond": "epicgames_S41_RankedCupReloadDuos_NAC_1_Diamond",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event8_1_NAC": "S41_FNCSDivisionalCup_Division4_Event8_1_NAC",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event5_NAC": "S41_FNCSDivisionalCup_Division3_Event5_NAC",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event4_NAC_1_champion": "epicgames_S41_RankedCupDuosZB_NAC_1_Champion",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_gold": "epicgames_S41_RankedCupSolo_NAC_1_Gold",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event1_NAC_1_platinum": "epicgames_S41_RankedCupDuosZB_NAC_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event6_NAC_1_unreal": "epicgames_S41_RankedCupDuos_NAC_1_Unreal",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event8_2_NAC": "S41_FNCSDivisionalCup_Division5_Event8_2_NAC",
+    "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_Silver": "epicgames_S41_RankedCupSolo_NAC_1_Silver",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event8_NAC_1_Silver": "epicgames_S41_RankedCupSolo_NAC_1_Silver",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event8_NAC_1_Silver": "epicgames_S41_RankedCupReloadDuos_NAC_1_Silver",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event6_NAC_1_Unreal": "epicgames_S41_RankedCupReloadDuos_NAC_1_Unreal",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event7_NAC_1_unreal": "epicgames_S41_RankedCupSolo_NAC_1_Unreal",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event1_NAC": "S41_FNCSDivisionalCup_Division5_Event1_NAC",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event5_NAC_1_platinum": "epicgames_S41_RankedCupSolo_NAC_1_Platinum",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week2Final_NAC": "epicgames_S41_FNCSDivisionalCup_Division1_NAC",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event3_NAC_1_Bronze": "epicgames_S41_RankedCupSolo_NAC_1_Bronze",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event2_NAC": "S41_FNCSDivisionalCup_Division3_Event2_NAC",
-    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event2_NAC_1_Champion": "epicgames_S41_RankedCupReloadDuos_NAC_1_Champion",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC_1_platinum": "epicgames_S41_RankedCupDuosZB_NAC_1_Platinum",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event8_2_NAC": "S41_FNCSDivisionalCup_Division3_Event8_2_NAC",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event6_NAC_1_diamond": "epicgames_S41_RankedCupSolo_NAC_1_Diamond",
@@ -18241,6 +20412,8 @@
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event8_NAC_1_Elite": "epicgames_S41_RankedCupReloadDuos_NAC_1_Elite",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event7_NAC_1_gold": "epicgames_S41_RankedCupSolo_NAC_1_Gold",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event6_NAC_1_elite": "epicgames_S41_RankedCupDuosZB_NAC_1_Elite",
+    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event2_NAC_1_Champion": "epicgames_S41_RankedCupReloadDuos_NAC_1_Champion",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event3_NAC": "S41_FNCSDivisionalCup_Division4_Event3_NAC",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event8_NAC_1_Silver": "epicgames_S41_RankedCupDuosZB_NAC_1_Silver",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event6_NAC_1_Gold": "epicgames_S41_RankedCupReloadDuos_NAC_1_Gold",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event5_NAC_1_elite": "epicgames_S41_RankedCupSolo_NAC_1_Elite",
@@ -18253,14 +20426,16 @@
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC_1_elite": "epicgames_S41_RankedCupDuosZB_NAC_1_Elite",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event6_NAC_1_Platinum": "epicgames_S41_RankedCupReloadDuos_NAC_1_Platinum",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event1_NAC": "S41_FNCSDivisionalCup_Division3_Event1_NAC",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event2_NAC": "S41_FNCSDivisionalCup_Division5_Event2_NAC",
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event1Round2_NAC": "S35_PayoutTable_PerformanceEvaluation_Round2",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week4Day1_NAC": "S41_FNCSDivisionalCup_Division1_Week4Day1_NAC",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event1_NAC_1_gold": "epicgames_S41_RankedCupDuos_NAC_1_Gold",
-    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event7_NAC_1_Platinum": "epicgames_S41_RankedCupReloadDuos_NAC_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event7_NAC_1_elite": "epicgames_S41_RankedCupSolo_NAC_1_Elite",
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event8_NAC_1_champion": "epicgames_S41_RankedCupSolo_NAC_1_Champion",
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event4_NAC_1_elite": "epicgames_S41_RankedCupDuos_NAC_1_Elite",
-    "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC_1_unreal": "epicgames_S41_RankedCupDuosZB_NAC_1_Unreal"
+    "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC_1_unreal": "epicgames_S41_RankedCupDuosZB_NAC_1_Unreal",
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event6_NAC": "S41_FNCSDivisionalCup_Division5_Event6_NAC",
+    "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event7_NAC_1_Platinum": "epicgames_S41_RankedCupReloadDuos_NAC_1_Platinum"
   },
   "resolvedWindowLocations": {
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event4_NAC": [
@@ -18277,16 +20452,8 @@
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event4Round1_NAC": [
       "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event4Round1_NAC"
     ],
-    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week3Day1_NAC": [
-      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week3Day1_NAC",
-      "Fortnite:cumulative:epicgames_S41_FNCSDivisionalCup_Division1_NAC_Week3_cumulative"
-    ],
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week4Final_NAC": [
       "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week4Final_NAC"
-    ],
-    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week1Day2_NAC": [
-      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week1Day2_NAC",
-      "Fortnite:cumulative:epicgames_S41_FNCSDivisionalCup_Division1_NAC_Week1_cumulative"
     ],
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event9Round1_NAC": [
       "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event9Round1_NAC"
@@ -18328,6 +20495,12 @@
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event3Round2_NAC": [
       "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event3Round2_NAC"
     ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event8_1_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event8_1_NAC"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event1_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event1_NAC"
+    ],
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC": [
       "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC",
       "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event3_NAC_1_Bronze",
@@ -18344,6 +20517,9 @@
     ],
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division2_NAC:S41_FNCSDivisionalCup_Division2_Event7_NAC": [
       "Fortnite:epicgames_S41_FNCSDivisionalCup_Division2_NAC:S41_FNCSDivisionalCup_Division2_Event7_NAC"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event8_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event8_NAC"
     ],
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division2_NAC:S41_FNCSDivisionalCup_Division2_Event8_NAC": [
       "Fortnite:epicgames_S41_FNCSDivisionalCup_Division2_NAC:S41_FNCSDivisionalCup_Division2_Event8_NAC"
@@ -18422,6 +20598,9 @@
       "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event2_NAC_1_champion",
       "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event2_NAC_1_unreal"
     ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event8_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event8_NAC"
+    ],
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week4Day2_NAC": [
       "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week4Day2_NAC",
       "Fortnite:cumulative:epicgames_S41_FNCSDivisionalCup_Division1_NAC_Week4_cumulative"
@@ -18434,6 +20613,9 @@
     ],
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event8Round2_NAC": [
       "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event8Round2_NAC"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event4_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event4_NAC"
     ],
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event5Round1_NAC": [
       "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event5Round1_NAC"
@@ -18463,11 +20645,24 @@
       "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event8_NAC_1_Champion",
       "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event8_NAC_1_Unreal"
     ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event7_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event7_NAC"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event5_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event5_NAC"
+    ],
     "Fortnite:epicgames_S41_MobileTestCupAll_NAC:S41_MobileTestCupAll_Round4_NAC": [
       "Fortnite:epicgames_S41_MobileTestCupAll_NAC:S41_MobileTestCupAll_Round4_NAC"
     ],
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event6Round2_NAC": [
       "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event6Round2_NAC"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event5_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event5_NAC"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week3Day1_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week3Day1_NAC",
+      "Fortnite:cumulative:epicgames_S41_FNCSDivisionalCup_Division1_NAC_Week3_cumulative"
     ],
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC": [
       "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event1_NAC",
@@ -18534,6 +20729,9 @@
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event5Round2_NAC": [
       "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event5Round2_NAC"
     ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event8_2_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event8_2_NAC"
+    ],
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event3_NAC": [
       "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event3_NAC"
     ],
@@ -18559,6 +20757,9 @@
       "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event2_NAC_1_Champion",
       "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event2_NAC_1_Unreal"
     ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event3_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event3_NAC"
+    ],
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event7_NAC": [
       "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event7_NAC",
       "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event7_NAC_1_Bronze",
@@ -18580,6 +20781,13 @@
       "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event8_NAC_1_elite",
       "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event8_NAC_1_champion",
       "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event8_NAC_1_unreal"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event6_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event6_NAC"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week1Day2_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week1Day2_NAC",
+      "Fortnite:cumulative:epicgames_S41_FNCSDivisionalCup_Division1_NAC_Week1_cumulative"
     ],
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event5_NAC": [
       "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event5_NAC",
@@ -18666,6 +20874,9 @@
       "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event8_NAC_1_champion",
       "Fortnite:epicgames_S41_RankedCupDuosZB_NAC:S41_RankedCupDuosZB_Event8_NAC_1_unreal"
     ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event2_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event2_NAC"
+    ],
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division2_NAC:S41_FNCSDivisionalCup_Division2_Event3_NAC": [
       "Fortnite:epicgames_S41_FNCSDivisionalCup_Division2_NAC:S41_FNCSDivisionalCup_Division2_Event3_NAC"
     ],
@@ -18718,6 +20929,9 @@
       "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_champion",
       "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event1_NAC_1_unreal"
     ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event7_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event7_NAC"
+    ],
     "Fortnite:epicgames_S41_MobileTestCup_NAC:S41_MobileTestCup_Round4_NAC": [
       "Fortnite:epicgames_S41_MobileTestCup_NAC:S41_MobileTestCup_Round4_NAC"
     ],
@@ -18726,6 +20940,9 @@
     ],
     "Fortnite:epicgames_S41_MobileTestCup_NAC:S41_MobileTestCup_Round1_NAC": [
       "Fortnite:epicgames_S41_MobileTestCup_NAC:S41_MobileTestCup_Round1_NAC"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event4_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event4_NAC"
     ],
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event2Round1_NAC": [
       "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event2Round1_NAC"
@@ -18741,6 +20958,18 @@
       "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event6_NAC_1_Champion",
       "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event6_NAC_1_Unreal"
     ],
+    "Fortnite:epicgames_S41_MobileTestCupAll_NAC:S41_MobileTestCupAll_Round2_NAC": [
+      "Fortnite:epicgames_S41_MobileTestCupAll_NAC:S41_MobileTestCupAll_Round2_NAC"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event8_1_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event8_1_NAC"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event5_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event5_NAC"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event8_2_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event8_2_NAC"
+    ],
     "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event8_NAC": [
       "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event8_NAC",
       "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event8_NAC_1_Bronze",
@@ -18751,12 +20980,6 @@
       "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event8_NAC_1_elite",
       "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event8_NAC_1_champion",
       "Fortnite:epicgames_S41_RankedCupDuos_NAC:S41_RankedCupDuos_Event8_NAC_1_unreal"
-    ],
-    "Fortnite:epicgames_S41_MobileTestCupAll_NAC:S41_MobileTestCupAll_Round2_NAC": [
-      "Fortnite:epicgames_S41_MobileTestCupAll_NAC:S41_MobileTestCupAll_Round2_NAC"
-    ],
-    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event5_NAC": [
-      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event5_NAC"
     ],
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week2Final_NAC": [
       "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week2Final_NAC"
@@ -18774,6 +20997,12 @@
     ],
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event2_NAC": [
       "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAC:S41_FNCSDivisionalCup_Division3_Event2_NAC"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event1_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event1_NAC"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event3_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_NAC:S41_FNCSDivisionalCup_Division4_Event3_NAC"
     ],
     "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event3_NAC": [
       "Fortnite:epicgames_S41_RankedCupSolo_NAC:S41_RankedCupSolo_Event3_NAC",
@@ -18803,12 +21032,18 @@
       "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event3_NAC_1_Champion",
       "Fortnite:epicgames_S41_RankedCupReloadDuos_NAC:S41_RankedCupReloadDuos_Event3_NAC_1_Unreal"
     ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event2_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event2_NAC"
+    ],
     "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event1Round2_NAC": [
       "Fortnite:epicgames_S41_PerformanceEvaluation_NAC:S41_PerformanceEvaluation_Event1Round2_NAC"
     ],
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week4Day1_NAC": [
       "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_NAC:S41_FNCSDivisionalCup_Division1_Week4Day1_NAC",
       "Fortnite:cumulative:epicgames_S41_FNCSDivisionalCup_Division1_NAC_Week4_cumulative"
+    ],
+    "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event6_NAC": [
+      "Fortnite:epicgames_S41_FNCSDivisionalCup_Division5_NAC:S41_FNCSDivisionalCup_Division5_Event6_NAC"
     ],
     "Fortnite:epicgames_S41_MobileTestCup_NAC:S41_MobileTestCup_Round2_NAC": [
       "Fortnite:epicgames_S41_MobileTestCup_NAC:S41_MobileTestCup_Round2_NAC"
