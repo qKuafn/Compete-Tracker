@@ -1,0 +1,182 @@
+{
+  "EventName": "s41_daysofplaybr",
+  "eventId": "epicgames_S41_PSCupDaysOfPlay_ASIA",
+  "displayDataId": "s41_daysofplaybr",
+  "square_poster_image": "未設定",
+  "tournament_view_background_image": "未設定",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "未設定",
+  "metadata": {
+    "tournamentType": "CashCup",
+    "webId": "S41_PSCupDaysOfPlay",
+    "minimumAccountLevel": 50,
+    "DisqualifyType": "Event",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "PS4",
+    "PS5"
+  ],
+  "S41_PSCupDaysOfPlay_Qualifier_ASIA": {
+    "beginTime_UNIX": 1780822800,
+    "beginTime_JST": "2026-06-07 18:00:00",
+    "endTime_UNIX": 1780833600,
+    "endTime_JST": "2026-06-07 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_Solo",
+    "matchCap": 11,
+    "additionalRequirements": [
+      "eula:s41_ps_daysofplay_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S41_PSCupDaysOfPlay_LeaderboardDef_Qualifier": {
+        "scoringRuleSetId": "S41_PSCupDaysOfPlay_ScoringRules_Qualifier",
+        "WindowLocation": "S41_PSCupDaysOfPlay_Qualifier_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:spray_s40_pscupbr"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 100,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S41_PSCupDaysOfPlay_Final_ASIA"
+          }
+        ]
+      }
+    }
+  },
+  "S41_PSCupDaysOfPlay_Final_ASIA": {
+    "beginTime_UNIX": 1781082000,
+    "beginTime_JST": "2026-06-10 18:00:00",
+    "endTime_UNIX": 1781091600,
+    "endTime_JST": "2026-06-10 20:40:00",
+    "playlistId": "Playlist_ShowdownTournament_Solo",
+    "matchCap": 6,
+    "additionalRequirements": [
+      "eula:s41_ps_daysofplay_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [
+      "S41_PSCupDaysOfPlay_Final_ASIA"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S41_PSCupDaysOfPlay_LeaderboardDef_Final": {
+        "scoringRuleSetId": "S41_PSCupDaysOfPlay_ScoringRules_Final",
+        "WindowLocation": "S41_PSCupDaysOfPlay_Final_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 1,
+            "rewardType": "ecomm",
+            "quantity": 1000,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "ecomm",
+            "quantity": 700,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 3,
+            "rewardType": "ecomm",
+            "quantity": 600,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "ecomm",
+            "quantity": 500,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 5,
+            "rewardType": "ecomm",
+            "quantity": 400,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 7,
+            "rewardType": "ecomm",
+            "quantity": 300,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 9,
+            "rewardType": "ecomm",
+            "quantity": 250,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 20,
+            "rewardType": "ecomm",
+            "quantity": 150,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 50,
+            "rewardType": "ecomm",
+            "quantity": 100,
+            "value": "USD"
+          }
+        ]
+      }
+    }
+  }
+}
