@@ -8521,6 +8521,42 @@
         ]
       }
     ],
+    "S41_PSCupDaysOfPlay_Qualifier_ASIA_mg": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_s40_pscupbr",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 100,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S41_PSCupDaysOfPlay_Final_ASIA_v2",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S41_ConsoleCC_DuosZB_Event6Round1_ASIA": [
       {
         "scoringType": "rank",
@@ -13603,6 +13639,44 @@
           }
         },
         {
+          "eventWindowId": "S41_PSCupDaysOfPlay_Qualifier_ASIA_mg",
+          "eventTemplateId": "S41_PSCupDaysOfPlay_EventTemplate_Qualifier",
+          "countdownBeginTime": "2026-06-08T07:00:00Z",
+          "beginTime": "2026-06-08T09:00:00Z",
+          "endTime": "2026-06-08T12:00:00Z",
+          "round": 1,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_ps_daysofplay_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S41_PSCupDaysOfPlay_LeaderboardDef_Qualifier",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        },
+        {
           "eventWindowId": "S41_PSCupDaysOfPlay_Final_ASIA",
           "eventTemplateId": "S41_PSCupDaysOfPlay_EventTemplate_Final",
           "countdownBeginTime": "2026-06-10T07:00:00Z",
@@ -13627,7 +13701,7 @@
           ],
           "canLiveSpectate": false,
           "requireAllTokens": [
-            "S41_PSCupDaysOfPlay_Final_ASIA"
+            "S41_PSCupDaysOfPlay_Final_ASIA_v2"
           ],
           "requireAnyTokens": [],
           "requireNoneTokensCaller": [
@@ -25358,6 +25432,7 @@
     "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event3_ASIA_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S41_FNCSLastChanceMajor_ASIA:S41_FNCSLastChanceMajor_Qual1Round1_ASIA": "ScoringRules_FNCS2026_LCQ",
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event2_ASIA_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
+    "Fortnite:epicgames_S41_PSCupDaysOfPlay_ASIA:S41_PSCupDaysOfPlay_Qualifier_ASIA_mg": "S41_PSCupDaysOfPlay_ScoringRules_Qualifier",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event2_ASIA_1_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event5_ASIA_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event5_ASIA": "EmptyScoringRules",
@@ -25719,6 +25794,7 @@
     "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event3_ASIA_1_elite": "epicgames_S41_RankedCupSolo_ASIA_1_Elite",
     "Fortnite:epicgames_S41_FNCSLastChanceMajor_ASIA:S41_FNCSLastChanceMajor_Qual1Round1_ASIA": "S41_FNCSLastChanceMajor_Qual1Round1_ASIA",
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event2_ASIA_1_platinum": "epicgames_S41_RankedCupDuosZB_ASIA_1_Platinum",
+    "Fortnite:epicgames_S41_PSCupDaysOfPlay_ASIA:S41_PSCupDaysOfPlay_Qualifier_ASIA_mg": "S41_PSCupDaysOfPlay_Qualifier_ASIA_mg",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event2_ASIA_1_Bronze": "epicgames_S41_RankedCupReloadDuos_ASIA_1_Bronze",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event5_ASIA_1_Platinum": "epicgames_S41_RankedCupReloadDuos_ASIA_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupDuos_ASIA:S41_RankedCupDuos_Event5_ASIA_1_gold": "epicgames_S41_RankedCupDuos_ASIA_1_Gold",
@@ -25789,9 +25865,6 @@
       "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event8_ASIA_1_Elite",
       "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event8_ASIA_1_Champion",
       "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event8_ASIA_1_Unreal"
-    ],
-    "Fortnite:epicgames_S41_FNCSLastChanceMajor_ASIA:S41_FNCSLastChanceMajor_Qual1Round1_ASIA": [
-      "Fortnite:epicgames_S41_FNCSLastChanceMajor_ASIA:S41_FNCSLastChanceMajor_Qual1Round1_ASIA"
     ],
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_ASIA:S41_FNCSDivisionalCup_Division1_Week3Final_ASIA": [
       "Fortnite:epicgames_S41_FNCSDivisionalCup_Division1_ASIA:S41_FNCSDivisionalCup_Division1_Week3Final_ASIA"
@@ -26310,6 +26383,12 @@
       "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event3_ASIA_1_Elite",
       "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event3_ASIA_1_Champion",
       "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event3_ASIA_1_Unreal"
+    ],
+    "Fortnite:epicgames_S41_FNCSLastChanceMajor_ASIA:S41_FNCSLastChanceMajor_Qual1Round1_ASIA": [
+      "Fortnite:epicgames_S41_FNCSLastChanceMajor_ASIA:S41_FNCSLastChanceMajor_Qual1Round1_ASIA"
+    ],
+    "Fortnite:epicgames_S41_PSCupDaysOfPlay_ASIA:S41_PSCupDaysOfPlay_Qualifier_ASIA_mg": [
+      "Fortnite:epicgames_S41_PSCupDaysOfPlay_ASIA:S41_PSCupDaysOfPlay_Qualifier_ASIA_mg"
     ],
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event5_ASIA": [
       "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event5_ASIA",
