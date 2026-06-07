@@ -65,6 +65,54 @@
       }
     }
   },
+  "S41_PSCupDaysOfPlay_Qualifier_ASIA_mg": {
+    "beginTime_UNIX": 1780909200,
+    "beginTime_JST": "2026-06-08 18:00:00",
+    "endTime_UNIX": 1780920000,
+    "endTime_JST": "2026-06-08 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_Solo",
+    "matchCap": 11,
+    "additionalRequirements": [
+      "eula:s41_ps_daysofplay_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S41_PSCupDaysOfPlay_LeaderboardDef_Qualifier": {
+        "scoringRuleSetId": "S41_PSCupDaysOfPlay_ScoringRules_Qualifier",
+        "WindowLocation": "S41_PSCupDaysOfPlay_Qualifier_ASIA_mg",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:spray_s40_pscupbr"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 100,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S41_PSCupDaysOfPlay_Final_ASIA_v2"
+          }
+        ]
+      }
+    }
+  },
   "S41_PSCupDaysOfPlay_Final_ASIA": {
     "beginTime_UNIX": 1781082000,
     "beginTime_JST": "2026-06-10 18:00:00",
@@ -78,7 +126,7 @@
       "mfa"
     ],
     "requireAllTokens": [
-      "S41_PSCupDaysOfPlay_Final_ASIA"
+      "S41_PSCupDaysOfPlay_Final_ASIA_v2"
     ],
     "requireAllTokensCaller": [],
     "requireAnyTokens": [],
