@@ -7882,6 +7882,94 @@
         ]
       }
     ],
+    "S41_ViniJr_MobileAll_OCE": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 5,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_chewystave",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 8,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_chewystavecurve",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_chewystavecurve",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_chewystavegerm",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_chewystavecurve",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:eid_bullseye",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 48,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_chewystavegerm",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_chewystavegerm",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S41_FNCSDivisionalCup_Division2_Event1_OCE": [
       {
         "scoringType": "value",
@@ -14183,6 +14271,100 @@
     ]
   },
   "events": [
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S41_ViniJr_MobileAll_OCE",
+      "beginTime": "2026-06-10T07:00:00Z",
+      "endTime": "2026-06-10T08:15:00Z",
+      "displayDataId": "s41_vinijr_mobile",
+      "eventGroup": "Season41_ViniJr_Mobile",
+      "announcementTime": "2026-01-06T21:00:00Z",
+      "regions": [
+        "OCE"
+      ],
+      "regionMappings": {
+        "OCE": "OCECOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "ShopCup",
+        "IsDuplicate": true,
+        "webId": "S41_ViniJr_Mobile",
+        "minimumAccountLevel": 15,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S41_ViniJr_MobileAll_OCE",
+          "eventTemplateId": "EventTemplate_S41_ViniJr_Mobile",
+          "countdownBeginTime": "2026-06-10T05:00:00Z",
+          "beginTime": "2026-06-10T07:00:00Z",
+          "endTime": "2026-06-10T08:15:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:S41_vinijr_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S41_ViniJr_Mobile_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "fake_token"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s41_vinijr_mobileall_oce"
+      }
+    },
     {
       "gameId": "Fortnite",
       "eventId": "epicgames_S41_ViniJr_Mobile_OCE",
@@ -27210,6 +27392,7 @@
     "Fortnite:epicgames_S41_FNCSMajor2_PlayInStage_OCE:S41_FNCSMajor2_PlayInStage_Day2_OCE": "ScoringRules_FNCS2026_PlayIns",
     "Fortnite:epicgames_S41_RankedCupDuos_OCE:S41_RankedCupDuos_Event5_OCE_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_OCE:S41_RankedCupDuosZB_Event2_OCE": "EmptyScoringRules",
+    "Fortnite:epicgames_S41_ViniJr_MobileAll_OCE:S41_ViniJr_MobileAll_OCE": "ScoringRules_MobileSeriesOpensReload",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_OCE:S41_RankedCupReloadDuos_Event1_OCE_1_Elite": "ScoringRules_RankedCupDuosReload_Elite_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_OCE:S41_FNCSDivisionalCup_Division3_Event8_1_OCE": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:epicgames_S41_RankedCupSolo_OCE:S41_RankedCupSolo_Event6_OCE_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
@@ -27580,6 +27763,7 @@
     "Fortnite:epicgames_S41_RankedCupSolo_OCE:S41_RankedCupSolo_Event9_OCE_1_gold": "epicgames_S41_RankedCupSolo_OCE_1_Gold",
     "Fortnite:epicgames_S41_ConsoleVCC_SolosZB_OCE:S41_ConsoleVCC_SolosZB_Event2Round2_OCE": "S41_ConsoleVCC_SolosZB_Round2",
     "Fortnite:epicgames_S41_RankedCupDuos_OCE:S41_RankedCupDuos_Event5_OCE_1_unreal": "epicgames_S41_RankedCupDuos_OCE_1_Unreal",
+    "Fortnite:epicgames_S41_ViniJr_MobileAll_OCE:S41_ViniJr_MobileAll_OCE": "S41_ViniJr_MobileAll_OCE",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_OCE:S41_RankedCupReloadDuos_Event1_OCE_1_Elite": "epicgames_S41_RankedCupReloadDuos_OCE_1_Elite",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_OCE:S41_FNCSDivisionalCup_Division3_Event8_1_OCE": "S41_FNCSDivisionalCup_Division3_Event8_1_OCE",
     "Fortnite:epicgames_S41_RankedCupSolo_OCE:S41_RankedCupSolo_Event6_OCE_1_Silver": "epicgames_S41_RankedCupSolo_OCE_1_Silver",
@@ -28274,6 +28458,9 @@
       "Fortnite:epicgames_S41_RankedCupDuosZB_OCE:S41_RankedCupDuosZB_Event2_OCE_1_elite",
       "Fortnite:epicgames_S41_RankedCupDuosZB_OCE:S41_RankedCupDuosZB_Event2_OCE_1_champion",
       "Fortnite:epicgames_S41_RankedCupDuosZB_OCE:S41_RankedCupDuosZB_Event2_OCE_1_unreal"
+    ],
+    "Fortnite:epicgames_S41_ViniJr_MobileAll_OCE:S41_ViniJr_MobileAll_OCE": [
+      "Fortnite:epicgames_S41_ViniJr_MobileAll_OCE:S41_ViniJr_MobileAll_OCE"
     ],
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_OCE:S41_FNCSDivisionalCup_Division3_Event8_1_OCE": [
       "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_OCE:S41_FNCSDivisionalCup_Division3_Event8_1_OCE"

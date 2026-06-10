@@ -10411,6 +10411,94 @@
         ]
       }
     ],
+    "S41_ViniJr_MobileAll_EU": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 5,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_chewystave",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 28,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_chewystavecurve",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_chewystavecurve",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_chewystavegerm",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_chewystavecurve",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:eid_bullseye",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 168,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_chewystavegerm",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_chewystavegerm",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S41_FNCSDivisionalCup_Division5_Event5_EU": [
       {
         "scoringType": "value",
@@ -15794,6 +15882,100 @@
     ]
   },
   "events": [
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S41_ViniJr_MobileAll_EU",
+      "beginTime": "2026-06-10T16:00:00Z",
+      "endTime": "2026-06-10T17:15:00Z",
+      "displayDataId": "s41_vinijr_mobile",
+      "eventGroup": "Season41_ViniJr_Mobile",
+      "announcementTime": "2026-01-07T08:00:00Z",
+      "regions": [
+        "EU"
+      ],
+      "regionMappings": {
+        "EU": "EUCOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "ShopCup",
+        "IsDuplicate": true,
+        "webId": "S41_ViniJr_Mobile",
+        "minimumAccountLevel": 15,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S41_ViniJr_MobileAll_EU",
+          "eventTemplateId": "EventTemplate_S41_ViniJr_Mobile",
+          "countdownBeginTime": "2026-06-10T14:00:00Z",
+          "beginTime": "2026-06-10T16:00:00Z",
+          "endTime": "2026-06-10T17:15:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:S41_vinijr_rules",
+            "adps:g-a81a33a3b9a7",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S41_ViniJr_Mobile_LeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "fake_token"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s41_vinijr_mobileall_eu"
+      }
+    },
     {
       "gameId": "Fortnite",
       "eventId": "epicgames_S41_ViniJr_Mobile_EU",
@@ -30623,6 +30805,7 @@
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event2_EU_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event8_EU_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
     "Fortnite:epicgames_S41_MobileTestCup_EU:S41_MobileTestCup_Round3_EU": "ScoringRules_MobileSeriesOpensReload",
+    "Fortnite:epicgames_S41_ViniJr_MobileAll_EU:S41_ViniJr_MobileAll_EU": "ScoringRules_MobileSeriesOpensReload",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_EU:S41_RankedCupReloadDuos_Event4_EU_1_Elite": "ScoringRules_RankedCupDuosReload_Elite_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_EU:S41_RankedCupReloadDuos_Event3_EU": "EmptyScoringRules",
     "Fortnite:epicgames_S41_ConsoleCC_DuosZB_EU:S41_ConsoleCC_DuosZB_Event2Round2_EU": "S41_ConsoleCC_DuosZB_ScoringRules_Round2",
@@ -31072,6 +31255,7 @@
     "Fortnite:epicgames_S41_PerformanceEvaluation_EU:S41_PerformanceEvaluation_Event8Round1_EU": "S41_PerformanceEvaluation_Event8Round1_EU",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event2_EU_1_champion": "epicgames_S41_RankedCupSolo_EU_1_Champion",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event8_EU_1_gold": "epicgames_S41_RankedCupDuosZB_EU_1_Gold",
+    "Fortnite:epicgames_S41_ViniJr_MobileAll_EU:S41_ViniJr_MobileAll_EU": "S41_ViniJr_MobileAll_EU",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_EU:S41_RankedCupReloadDuos_Event4_EU_1_Elite": "epicgames_S41_RankedCupReloadDuos_EU_1_Elite",
     "Fortnite:epicgames_S41_ConsoleCC_DuosZB_EU:S41_ConsoleCC_DuosZB_Event2Round2_EU": "S41_ConsoleCC_DuosZB_Event2Round2_EU",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event3_EU_1_Silver": "epicgames_S41_RankedCupDuosZB_EU_1_Silver",
@@ -31552,6 +31736,9 @@
     ],
     "Fortnite:epicgames_S41_MobileTestCup_EU:S41_MobileTestCup_Round3_EU": [
       "Fortnite:epicgames_S41_MobileTestCup_EU:S41_MobileTestCup_Round3_EU"
+    ],
+    "Fortnite:epicgames_S41_ViniJr_MobileAll_EU:S41_ViniJr_MobileAll_EU": [
+      "Fortnite:epicgames_S41_ViniJr_MobileAll_EU:S41_ViniJr_MobileAll_EU"
     ],
     "Fortnite:epicgames_S41_RankedCupReloadDuos_EU:S41_RankedCupReloadDuos_Event3_EU": [
       "Fortnite:epicgames_S41_RankedCupReloadDuos_EU:S41_RankedCupReloadDuos_Event3_EU",
