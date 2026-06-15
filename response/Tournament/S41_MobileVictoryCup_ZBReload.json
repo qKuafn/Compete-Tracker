@@ -1,0 +1,127 @@
+{
+  "EventName": "モバイル ゼロビルド リロード (エリートの拠点) ビクトリーカップ",
+  "eventId": "epicgames_S41_MobileVictoryCup_ZBReload_ASIA",
+  "displayDataId": "s41_mobile_vc_reload_zb",
+  "square_poster_image": "https://cdn2.unrealengine.com/fneco-35-00-consolevictorycup-comp-in-game-tab-800x800-ionvial-800x800-faf381354cc1.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fneco-35-00-consolevictorycup-comp-in-game-tab-1560x1024-ionvial-1560x1024-169a07fe519a.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/jp-fnce-38-00-competitive-discoverytile-victorycashcup-1980x1020-1920x1080-14e394072d00.jpg",
+  "metadata": {
+    "requireSystemFeatures": [
+      "AndroidSecureDevice",
+      "IOSMinimumOSVersion"
+    ],
+    "tournamentType": "ShopCup",
+    "webId": "S41_MobileVictoryCup",
+    "minimumAccountLevel": 50,
+    "DisqualifyType": "Window",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "Android",
+    "IOS"
+  ],
+  "S41_MobileVictoryCup_Day3_Round1_ZBReload_ASIA": {
+    "beginTime_UNIX": 1784880000,
+    "beginTime_JST": "2026-07-24 17:00:00",
+    "endTime_UNIX": 1784884500,
+    "endTime_JST": "2026-07-24 18:15:00",
+    "playlistId": "Playlist_ShowdownTournament_RE_MatchMistSolo_CR",
+    "matchCap": 6,
+    "additionalRequirements": [
+      "eula:s41_mobilevictory_rules",
+      [
+        "currentRanking:ranked-br-combined:6"
+      ],
+      "adps:g-a81a33a3b9a7",
+      "input-touch",
+      "mfa"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S41_MobileVictoryCup_Round1_ZBReload_RES_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "S41_MobileVictoryCup_Round1_ZBReload_RES_ScoringRules",
+        "WindowLocation": "S41_MobileVictoryCup_Day3_Round1_ZBReload_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 200,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S41_MobileVictoryCup_Day3_ZBReload_ASIA_Final"
+          }
+        ]
+      }
+    }
+  },
+  "S41_MobileVictoryCup_Day3_Round2_ZBReload_ASIA": {
+    "beginTime_UNIX": 1785052800,
+    "beginTime_JST": "2026-07-26 17:00:00",
+    "endTime_UNIX": 1785055500,
+    "endTime_JST": "2026-07-26 17:45:00",
+    "playlistId": "Playlist_ShowdownTournament_RE_MatchMistSolo_CR",
+    "matchCap": 3,
+    "additionalRequirements": [
+      "eula:s41_mobilevictory_rules",
+      "adps:g-a81a33a3b9a7",
+      "input-touch",
+      "mfa"
+    ],
+    "requireAllTokens": [
+      "S41_MobileVictoryCup_Day3_ZBReload_ASIA_Final"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S41_MobileVictoryCup_D2_Round2_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "S41_MovileVictoryCup_Round2_ScoringRules",
+        "WindowLocation": "S41_MobileVictoryCup_Day3_Round2_ZBReload_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 100,
+            "rewardType": "ecomm",
+            "quantity": 100,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 200,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 300,
+            "value": "USD"
+          }
+        ]
+      }
+    }
+  }
+}
