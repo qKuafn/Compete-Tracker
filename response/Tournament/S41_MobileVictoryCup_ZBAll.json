@@ -1,7 +1,7 @@
 {
-  "EventName": "モバイル リロード (エリートの拠点) ビクトリーカップ",
-  "eventId": "epicgames_S41_MobileVictoryCup_RES_ASIA",
-  "displayDataId": "s41_mobile_vc_reload",
+  "EventName": "モバイル ゼロビルド ビクトリーカップ",
+  "eventId": "epicgames_S41_MobileVictoryCup_ZBAll_ASIA",
+  "displayDataId": "s41_mobile_vc_zb",
   "square_poster_image": "https://cdn2.unrealengine.com/fneco-35-00-consolevictorycup-comp-in-game-tab-800x800-ionvial-800x800-faf381354cc1.jpg",
   "tournament_view_background_image": "https://cdn2.unrealengine.com/fneco-35-00-consolevictorycup-comp-in-game-tab-1560x1024-ionvial-1560x1024-169a07fe519a.jpg",
   "loading_screen_image": "未設定",
@@ -12,21 +12,38 @@
       "IOSMinimumOSVersion"
     ],
     "tournamentType": "ShopCup",
+    "IsDuplicate": true,
     "webId": "S41_MobileVictoryCup",
     "minimumAccountLevel": 50,
     "DisqualifyType": "Window",
     "AccountLockType": "Window"
   },
   "platforms": [
-    "Android",
-    "IOS"
+    "XboxOneGDK",
+    "PS4",
+    "XCloud",
+    "Helios",
+    "Luna",
+    "XB1",
+    "XboxOne",
+    "XSX",
+    "LunaMobile",
+    "Switch2",
+    "PS5",
+    "XCloudMobile",
+    "Mac",
+    "HeliosMobile",
+    "GFN",
+    "Switch",
+    "GFNMobile",
+    "Windows"
   ],
-  "S41_MobileVictoryCup_Day5_Round1_RES_ASIA": {
-    "beginTime_UNIX": 1786694400,
-    "beginTime_JST": "2026-08-14 17:00:00",
-    "endTime_UNIX": 1786698900,
-    "endTime_JST": "2026-08-14 18:15:00",
-    "playlistId": "Playlist_ShowdownTournament_RE_MatchMistSolo_CR",
+  "S41_MobileVictoryCup_Day4_Round1_ZBAll_ASIA": {
+    "beginTime_UNIX": 1785657600,
+    "beginTime_JST": "2026-08-02 17:00:00",
+    "endTime_UNIX": 1785663000,
+    "endTime_JST": "2026-08-02 18:30:00",
+    "playlistId": "Playlist_ShowdownTournament_NoBuildBR_Solo",
     "matchCap": 6,
     "additionalRequirements": [
       "eula:s41_mobilevictory_rules",
@@ -37,7 +54,9 @@
       "input-touch",
       "mfa"
     ],
-    "requireAllTokens": [],
+    "requireAllTokens": [
+      "fake_token"
+    ],
     "requireAllTokensCaller": [],
     "requireAnyTokens": [],
     "requireAnyTokensCaller": [],
@@ -46,9 +65,9 @@
       "Permanent_Tournament_Ban"
     ],
     "ScoringRules": {
-      "S41_MobileVictoryCup_Round1_ZBReload_RES_DefaultLeaderboardDef": {
-        "scoringRuleSetId": "S41_MobileVictoryCup_Round1_ZBReload_RES_ScoringRules",
-        "WindowLocation": "S41_MobileVictoryCup_Day5_Round1_RES_ASIA",
+      "S41_MobileVictoryCup_Round1_BR_ZB_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "S41_MobileVictoryCup_Round1_BR_ZB_ScoringRules",
+        "WindowLocation": "S41_MobileVictoryCup_Day4_Round1_ZBAll_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
         "onlyScoreTopN": -1,
@@ -56,21 +75,21 @@
           {
             "scoreId": "",
             "scoringType": "rank",
-            "threshold": 200,
+            "threshold": 500,
             "rewardType": "token",
             "quantity": 1,
-            "value": "S41_MobileVictoryCup_Day5_RES_ASIA_Final"
+            "value": "S41_MobileVictoryCup_Day4_ZB_ASIA_Final"
           }
         ]
       }
     }
   },
-  "S41_MobileVictoryCup_Day5_Round2_RES_ASIA": {
-    "beginTime_UNIX": 1786953600,
-    "beginTime_JST": "2026-08-17 17:00:00",
-    "endTime_UNIX": 1786956300,
-    "endTime_JST": "2026-08-17 17:45:00",
-    "playlistId": "Playlist_ShowdownTournament_RE_MatchMistSolo_CR",
+  "S41_MobileVictoryCup_Day4_Round2_ZBAll_ASIA": {
+    "beginTime_UNIX": 1785744000,
+    "beginTime_JST": "2026-08-03 17:00:00",
+    "endTime_UNIX": 1785747600,
+    "endTime_JST": "2026-08-03 18:00:00",
+    "playlistId": "Playlist_ShowdownTournament_NoBuildBR_Solo",
     "matchCap": 3,
     "additionalRequirements": [
       "eula:s41_mobilevictory_rules",
@@ -79,7 +98,8 @@
       "mfa"
     ],
     "requireAllTokens": [
-      "S41_MobileVictoryCup_Day5_RES_ASIA_Final"
+      "S41_MobileVictoryCup_Day4_ZB_ASIA_Final",
+      "fake_token"
     ],
     "requireAllTokensCaller": [],
     "requireAnyTokens": [],
@@ -91,7 +111,7 @@
     "ScoringRules": {
       "S41_MobileVictoryCup_D2_Round2_DefaultLeaderboardDef": {
         "scoringRuleSetId": "S41_MovileVictoryCup_Round2_ScoringRules",
-        "WindowLocation": "S41_MobileVictoryCup_Day5_Round2_RES_ASIA",
+        "WindowLocation": "S41_MobileVictoryCup_Day4_Round2_ZBAll_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
         "onlyScoreTopN": -1,

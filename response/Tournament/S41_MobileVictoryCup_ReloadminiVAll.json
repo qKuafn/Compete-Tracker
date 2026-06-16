@@ -1,7 +1,7 @@
 {
-  "EventName": "モバイル リロード (エリートの拠点) ビクトリーカップ",
-  "eventId": "epicgames_S41_MobileVictoryCup_RES_ASIA",
-  "displayDataId": "s41_mobile_vc_reload",
+  "EventName": "モバイル リロード (ミニベンチャー) ビクトリーカップ",
+  "eventId": "epicgames_S41_MobileVictoryCup_ReloadminiVAll_ASIA",
+  "displayDataId": "s41_mobile_vc_venture",
   "square_poster_image": "https://cdn2.unrealengine.com/fneco-35-00-consolevictorycup-comp-in-game-tab-800x800-ionvial-800x800-faf381354cc1.jpg",
   "tournament_view_background_image": "https://cdn2.unrealengine.com/fneco-35-00-consolevictorycup-comp-in-game-tab-1560x1024-ionvial-1560x1024-169a07fe519a.jpg",
   "loading_screen_image": "未設定",
@@ -12,22 +12,39 @@
       "IOSMinimumOSVersion"
     ],
     "tournamentType": "ShopCup",
+    "IsDuplicate": true,
     "webId": "S41_MobileVictoryCup",
     "minimumAccountLevel": 50,
     "DisqualifyType": "Window",
     "AccountLockType": "Window"
   },
   "platforms": [
-    "Android",
-    "IOS"
+    "XboxOneGDK",
+    "PS4",
+    "XCloud",
+    "Helios",
+    "Luna",
+    "XB1",
+    "XboxOne",
+    "XSX",
+    "LunaMobile",
+    "Switch2",
+    "PS5",
+    "XCloudMobile",
+    "Mac",
+    "HeliosMobile",
+    "GFN",
+    "Switch",
+    "GFNMobile",
+    "Windows"
   ],
-  "S41_MobileVictoryCup_Day5_Round1_RES_ASIA": {
-    "beginTime_UNIX": 1786694400,
-    "beginTime_JST": "2026-08-14 17:00:00",
-    "endTime_UNIX": 1786698900,
-    "endTime_JST": "2026-08-14 18:15:00",
-    "playlistId": "Playlist_ShowdownTournament_RE_MatchMistSolo_CR",
-    "matchCap": 6,
+  "S41_MobileVictoryCup_Day1_Round1_ReloadminiVAll_ASIA": {
+    "beginTime_UNIX": 1781856000,
+    "beginTime_JST": "2026-06-19 17:00:00",
+    "endTime_UNIX": 1781860500,
+    "endTime_JST": "2026-06-19 18:15:00",
+    "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+    "matchCap": 8,
     "additionalRequirements": [
       "eula:s41_mobilevictory_rules",
       [
@@ -37,7 +54,9 @@
       "input-touch",
       "mfa"
     ],
-    "requireAllTokens": [],
+    "requireAllTokens": [
+      "fake_token"
+    ],
     "requireAllTokensCaller": [],
     "requireAnyTokens": [],
     "requireAnyTokensCaller": [],
@@ -46,9 +65,9 @@
       "Permanent_Tournament_Ban"
     ],
     "ScoringRules": {
-      "S41_MobileVictoryCup_Round1_ZBReload_RES_DefaultLeaderboardDef": {
-        "scoringRuleSetId": "S41_MobileVictoryCup_Round1_ZBReload_RES_ScoringRules",
-        "WindowLocation": "S41_MobileVictoryCup_Day5_Round1_RES_ASIA",
+      "S41_MobileVictoryCup_Round1_ReloadminiV_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "S41_MobileVictoryCup_Round1_ReloadminiV_ScoringRules",
+        "WindowLocation": "S41_MobileVictoryCup_Day1_Round1_ReloadminiVAll_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
         "onlyScoreTopN": -1,
@@ -56,22 +75,22 @@
           {
             "scoreId": "",
             "scoringType": "rank",
-            "threshold": 200,
+            "threshold": 80,
             "rewardType": "token",
             "quantity": 1,
-            "value": "S41_MobileVictoryCup_Day5_RES_ASIA_Final"
+            "value": "S41_MobileVictoryCup_Day1_ReloadminiV_ASIA_Final"
           }
         ]
       }
     }
   },
-  "S41_MobileVictoryCup_Day5_Round2_RES_ASIA": {
-    "beginTime_UNIX": 1786953600,
-    "beginTime_JST": "2026-08-17 17:00:00",
-    "endTime_UNIX": 1786956300,
-    "endTime_JST": "2026-08-17 17:45:00",
-    "playlistId": "Playlist_ShowdownTournament_RE_MatchMistSolo_CR",
-    "matchCap": 3,
+  "S41_MobileVictoryCup_Day1_Round2_ReloadminiVAll_ASIA": {
+    "beginTime_UNIX": 1782028800,
+    "beginTime_JST": "2026-06-21 17:00:00",
+    "endTime_UNIX": 1782033000,
+    "endTime_JST": "2026-06-21 18:10:00",
+    "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+    "matchCap": 6,
     "additionalRequirements": [
       "eula:s41_mobilevictory_rules",
       "adps:g-a81a33a3b9a7",
@@ -79,7 +98,8 @@
       "mfa"
     ],
     "requireAllTokens": [
-      "S41_MobileVictoryCup_Day5_RES_ASIA_Final"
+      "S41_MobileVictoryCup_Day1_ReloadminiV_ASIA_Final",
+      "fake_token"
     ],
     "requireAllTokensCaller": [],
     "requireAnyTokens": [],
@@ -89,9 +109,9 @@
       "Permanent_Tournament_Ban"
     ],
     "ScoringRules": {
-      "S41_MobileVictoryCup_D2_Round2_DefaultLeaderboardDef": {
+      "S41_MobileVictoryCup_Round2_DefaultLeaderboardDef": {
         "scoringRuleSetId": "S41_MovileVictoryCup_Round2_ScoringRules",
-        "WindowLocation": "S41_MobileVictoryCup_Day5_Round2_RES_ASIA",
+        "WindowLocation": "S41_MobileVictoryCup_Day1_Round2_ReloadminiVAll_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
         "onlyScoreTopN": -1,
@@ -101,7 +121,7 @@
             "scoringType": "value",
             "threshold": 100,
             "rewardType": "ecomm",
-            "quantity": 100,
+            "quantity": 50,
             "value": "USD"
           },
           {
@@ -109,13 +129,37 @@
             "scoringType": "value",
             "threshold": 200,
             "rewardType": "ecomm",
-            "quantity": 200,
+            "quantity": 100,
             "value": "USD"
           },
           {
             "scoreId": "",
             "scoringType": "value",
             "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 150,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 400,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 500,
+            "rewardType": "ecomm",
+            "quantity": 250,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 600,
             "rewardType": "ecomm",
             "quantity": 300,
             "value": "USD"
