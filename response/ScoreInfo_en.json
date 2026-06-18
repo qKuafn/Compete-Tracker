@@ -3,6 +3,51 @@
     "_type": "Scoring Rules Info",
     "scoring_rules": [
       {
+        "poster_description": "{0}{0}|ordinal(one=st,two=nd,few=rd,other=th) Place",
+        "rule_name": "EACH_PLACEMENT_STAT",
+        "_type": "Scoring Rules Display Info",
+        "icon": "/Game/UI/Foundation/Textures/Icons/Quest/T-Icon-Trophy-32.T-Icon-Trophy-32",
+        "description": "Reach Top {0}",
+        "hide_score_toast_notifications": false,
+        "poster_interval_description": "{0}{0}|ordinal(one=st,two=nd,few=rd,other=th) - {1}{1}|ordinal(one=st,two=nd,few=rd,other=th) Place"
+      },
+      {
+        "poster_description": "{0}|plural(one=Each Damage Point Taken, other=Every {0} Damage Points Taken)",
+        "rule_name": "DAMAGE_RECEIVED_STAT",
+        "_type": "Scoring Rules Display Info",
+        "icon": "/Game/Athena/HUD/Art/killsico_alt.KillsIco_Alt",
+        "description": "{0}|plural(one=Each Damage Point Taken, other=Every {0} Damage Points Taken)",
+        "hide_score_toast_notifications": false,
+        "poster_interval_description": "{0} - {1} Damage Points Taken"
+      },
+      {
+        "poster_description": "{0}|plural(one=Each Damage Point Dealt, other=Every {0} Damage Points Dealt)",
+        "rule_name": "DAMAGE_DEALT_STAT",
+        "_type": "Scoring Rules Display Info",
+        "icon": "/Game/Athena/HUD/Art/killsico_alt.KillsIco_Alt",
+        "description": "{0}|plural(one=Each Damage Point Dealt, other=Every {0} Damage Points Dealt)",
+        "hide_score_toast_notifications": false,
+        "poster_interval_description": "{0} - {1} Damage Points Dealt"
+      },
+      {
+        "poster_description": "{0} {0}|plural(one=Elimination,other=Eliminations)",
+        "rule_name": "ELIMINATIONS_STAT",
+        "_type": "Scoring Rules Display Info",
+        "icon": "/Game/Athena/HUD/Art/killsico_alt.KillsIco_Alt",
+        "description": "{0} {0}|plural(one=Elimination,other=Eliminations)",
+        "hide_score_toast_notifications": false,
+        "poster_interval_description": "{0} - {1} Eliminations"
+      },
+      {
+        "poster_description": "{0}|plural(one=Round Won, other=Every {0} Round Wins)",
+        "rule_name": "ROUND_WINS_STAT",
+        "_type": "Scoring Rules Display Info",
+        "icon": "/Game/UI/Foundation/Textures/Icons/Quest/T-Icon-Trophy-32.T-Icon-Trophy-32",
+        "description": "{0}|plural(one=Round Won, other=Every {0} Round Wins)",
+        "hide_score_toast_notifications": false,
+        "poster_interval_description": "{0} - {1} Round Wins"
+      },
+      {
         "poster_description": "{0} {0}|plural(one=Elimination,other=Eliminations)",
         "rule_name": "EACH_ELIMINATIONS_STAT",
         "_type": "Scoring Rules Display Info",
@@ -12,13 +57,13 @@
         "poster_interval_description": "{0} - {1} Eliminations"
       },
       {
-        "poster_description": "Round Win",
-        "rule_name": "EACH_ROUND_WIN_STAT",
+        "poster_description": "{0}|plural(one=Round Won, other=Every {0} Round Wins)",
+        "rule_name": "EACH_ROUND_WINS_STAT",
         "_type": "Scoring Rules Display Info",
         "icon": "/Game/UI/Foundation/Textures/Icons/Quest/T-Icon-Trophy-32.T-Icon-Trophy-32",
-        "description": "Round Win",
+        "description": "{0}|plural(one=Round Won, other=Every {0} Round Wins)",
         "hide_score_toast_notifications": false,
-        "poster_interval_description": "Round Win"
+        "poster_interval_description": "{0} - {1} Round Wins"
       },
       {
         "poster_description": "{0}{0}|ordinal(one=st,two=nd,few=rd,other=th) Place",
@@ -556,7 +601,7 @@
   "_title": "scoringrulesinformation",
   "_noIndex": false,
   "_activeDate": "2021-10-12T19:24:18.962Z",
-  "lastModified": "2026-06-18T20:08:07.147Z",
+  "lastModified": "2026-06-18T20:23:06.105Z",
   "_locale": "en-US",
   "_templateName": "FortniteGameScoringRulesInfo",
   "_suggestedPrefetch": []
