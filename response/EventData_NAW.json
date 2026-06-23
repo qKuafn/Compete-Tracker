@@ -12780,6 +12780,32 @@
         ]
       }
     ],
+    "S41_SupergirlMobileCupAll_NAW": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 30,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_vowelsleep",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_vowelsleep",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S41_MobileSeriesHeat3Aug_NAW": [
       {
         "scoringType": "rank",
@@ -17278,6 +17304,101 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s41_supergirlmobilecup_naw"
+      }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S41_SupergirlMobileCupAll_NAW",
+      "beginTime": "2026-06-25T00:00:00Z",
+      "endTime": "2026-06-25T01:15:00Z",
+      "displayDataId": "s41_supergirl_mobile",
+      "eventGroup": "Season41_SupergirlMobileCup",
+      "announcementTime": "2026-06-01T22:00:00Z",
+      "regions": [
+        "NAW"
+      ],
+      "regionMappings": {
+        "NAW": "NAWCOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "ShopCup",
+        "IsDuplicate": true,
+        "webId": "S41_SupergirlMobileCup",
+        "minimumAccountLevel": 15,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S41_SupergirlMobileCupAll_NAW",
+          "eventTemplateId": "EventTemplate_S41_SupergirlMobileCup",
+          "countdownBeginTime": "2026-06-24T23:00:00Z",
+          "beginTime": "2026-06-25T00:00:00Z",
+          "endTime": "2026-06-25T01:15:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s41_supergirl_rules",
+            "adps:g-a81a33a3b9a7",
+            "input-touch",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S41_SupergirlMobileCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "fake_token"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s41_supergirlmobilecupall_naw"
       }
     },
     {
@@ -35206,13 +35327,14 @@
     "Fortnite:epicgames_S41_MobileVictoryCup_ZBAll_NAW:S41_MobileVictoryCup_Day4_Round2_ZBAll_NAW": "S41_MovileVictoryCup_Round2_ScoringRules",
     "Fortnite:epicgames_S41_RankedCupSolo_NAW:S41_RankedCupSolo_Event5_NAW_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S41_MobileSeriesHeat1_NAW:S41_MobileSeriesHeat1Aug_NAW": "ScoringRules_MobileSeriesReloadFinal",
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_NAW:S41_MobileVictoryCup_Day3_Round1_ZBReload_NAW": "S41_MobileVictoryCup_Round1_ZBReload_RES_ScoringRules",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAW:S41_RankedCupReloadDuos_Event1_NAW_1_Gold": "ScoringRules_RankedCupDuosReload_Gold_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAW:S41_FNCSDivisionalCup_Division3_Event4_NAW": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAW:S41_RankedCupDuosZB_Event4_NAW_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S41_RankedCupSoloReload_NAW:S41_RankedCupSoloReload_Event5_NAW_1_platinum": "ScoringRules_RankedCupSoloReload_Platinum_1",
     "Fortnite:epicgames_S41_RankedCupDuos_NAW:S41_RankedCupDuos_Event1_NAW_1_Silver": "ScoringRules_RankedCupDuos_Silver_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAW:S41_RankedCupDuosZB_Event2_NAW_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
+    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_NAW:S41_MobileVictoryCup_Day3_Round1_ZBReload_NAW": "S41_MobileVictoryCup_Round1_ZBReload_RES_ScoringRules",
+    "Fortnite:epicgames_S41_SupergirlMobileCupAll_NAW:S41_SupergirlMobileCupAll_NAW": "S41_SupergirlMobile_ScoringRules",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAW:S41_RankedCupDuosZB_Event3_NAW_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAW:S41_FNCSDivisionalCup_Division3_Event5_NAW": "ScoringRules_DuosDivisionalCup5_3",
     "Fortnite:epicgames_S41_RankedCupDuos_NAW:S41_RankedCupDuos_Event3_NAW_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
@@ -35738,13 +35860,14 @@
     "Fortnite:epicgames_S41_MobileVictoryCup_ZBAll_NAW:S41_MobileVictoryCup_Day4_Round2_ZBAll_NAW": "S41_MobileVictoryCup_Round2",
     "Fortnite:epicgames_S41_RankedCupSolo_NAW:S41_RankedCupSolo_Event5_NAW_1_Bronze": "epicgames_S41_RankedCupSolo_NAW_1_Bronze",
     "Fortnite:epicgames_S41_MobileSeriesHeat1_NAW:S41_MobileSeriesHeat1Aug_NAW": "S41_MobileSeriesHeat1Aug_NAW",
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_NAW:S41_MobileVictoryCup_Day3_Round1_ZBReload_NAW": "S41_MobileVictoryCup_Day3_Round1_ZBReload_NAW",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_NAW:S41_RankedCupReloadDuos_Event1_NAW_1_Gold": "epicgames_S41_RankedCupReloadDuos_NAW_1_Gold",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAW:S41_FNCSDivisionalCup_Division3_Event4_NAW": "S41_FNCSDivisionalCup_Division3_Event4_NAW",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAW:S41_RankedCupDuosZB_Event4_NAW_1_platinum": "epicgames_S41_RankedCupDuosZB_NAW_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupSoloReload_NAW:S41_RankedCupSoloReload_Event5_NAW_1_platinum": "epicgames_S41_RankedCupSoloReload_NAW_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupDuos_NAW:S41_RankedCupDuos_Event1_NAW_1_Silver": "epicgames_S41_RankedCupDuos_NAW_1_Silver",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAW:S41_RankedCupDuosZB_Event2_NAW_1_elite": "epicgames_S41_RankedCupDuosZB_NAW_1_Elite",
+    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_NAW:S41_MobileVictoryCup_Day3_Round1_ZBReload_NAW": "S41_MobileVictoryCup_Day3_Round1_ZBReload_NAW",
+    "Fortnite:epicgames_S41_SupergirlMobileCupAll_NAW:S41_SupergirlMobileCupAll_NAW": "S41_SupergirlMobileCupAll_NAW",
     "Fortnite:epicgames_S41_RankedCupDuosZB_NAW:S41_RankedCupDuosZB_Event3_NAW_1_champion": "epicgames_S41_RankedCupDuosZB_NAW_1_Champion",
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAW:S41_FNCSDivisionalCup_Division3_Event5_NAW": "S41_FNCSDivisionalCup_Division3_Event5_NAW",
     "Fortnite:epicgames_S41_RankedCupDuos_NAW:S41_RankedCupDuos_Event3_NAW_1_unreal": "epicgames_S41_RankedCupDuos_NAW_1_Unreal",
@@ -36444,6 +36567,9 @@
     ],
     "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_NAW:S41_MobileVictoryCup_Day3_Round1_ZBReload_NAW": [
       "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_NAW:S41_MobileVictoryCup_Day3_Round1_ZBReload_NAW"
+    ],
+    "Fortnite:epicgames_S41_SupergirlMobileCupAll_NAW:S41_SupergirlMobileCupAll_NAW": [
+      "Fortnite:epicgames_S41_SupergirlMobileCupAll_NAW:S41_SupergirlMobileCupAll_NAW"
     ],
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAW:S41_FNCSDivisionalCup_Division3_Event5_NAW": [
       "Fortnite:epicgames_S41_FNCSDivisionalCup_Division3_NAW:S41_FNCSDivisionalCup_Division3_Event5_NAW"
