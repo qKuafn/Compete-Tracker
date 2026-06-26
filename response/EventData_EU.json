@@ -8000,6 +8000,25 @@
     ]
   },
   "payoutTables": {
+    "S41_ConsoleVCC_SolosZB_Event7Round1_EU": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 2000,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S41_ConsoleVCC_SolosZB_Event7Round2_EU",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S41_RankedCupSoloReload_EU_1_Silver": [
       {
         "scoringType": "percentile",
@@ -13012,61 +13031,6 @@
         ]
       }
     ],
-    "epicgames_S41_ReloadEliteSeries4Heat3_EU": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 5,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S41_ReloadEliteSeries4Final_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 10,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 250,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 15,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 200,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 20,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 150,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "S41_FNCSDivisionalCup_Division2_Event5_EU": [
       {
         "scoringType": "value",
@@ -14435,80 +14399,6 @@
                 "rewardType": "token",
                 "rewardMode": "standard",
                 "value": "S41_ConsoleVCC_SolosZB_Event2Round2_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "epicgames_S41_ReloadEliteSeries4Heat4_EU": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 5,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S41_ReloadEliteSeries4Final_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 10,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 250,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 15,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 200,
-                "notifiesPlayer": false
-              }
-            ]
-          },
-          {
-            "threshold": 20,
-            "payouts": [
-              {
-                "rewardType": "ecomm",
-                "rewardMode": "standard",
-                "value": "USD",
-                "quantity": 150,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S41_ConsoleVCC_SolosZB_Event7Round1_EU": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 2000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S41_ConsoleVCC_SolosZB_Event7Round2_EU",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -18731,214 +18621,6 @@
     ]
   },
   "events": [
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S41_ReloadEliteSeries4Heat3_EU",
-      "beginTime": "2026-06-26T17:12:00Z",
-      "endTime": "2026-06-26T20:12:00Z",
-      "displayDataId": "s39_reloadelite_heats",
-      "eventGroup": "Season41_ReloadEliteSeries4",
-      "announcementTime": "2025-06-06T23:00:00Z",
-      "regions": [
-        "EU"
-      ],
-      "regionMappings": {
-        "EU": "EUCOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "SecureBoot",
-          "CryptoProcessor",
-          "IOMMU",
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "CashCup",
-        "TeamLockType": "Week",
-        "webId": "S41_ReloadEliteSeriesHeats",
-        "minimumAccountLevel": 350,
-        "DisqualifyType": "Event",
-        "RegionLockType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S41_ReloadEliteSeries4Heat3_EU",
-          "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesHeatsES",
-          "countdownBeginTime": "2026-06-26T15:00:00Z",
-          "beginTime": "2026-06-26T17:12:00Z",
-          "endTime": "2026-06-26T20:12:00Z",
-          "round": 1,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s39_reload_elite_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S39_ReloadEliteSeriesHeatQ2_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S41_ReloadEliteSeries4Heat3_EU"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ScheduledMatchmakingInitialDelaySeconds": 600,
-            "SubgroupId": "Series4_EU",
-            "ServerReplays": true,
-            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
-            "RoundType": "Qualifiers",
-            "ScheduledMatchmakingMatchDelaySeconds": 1440
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s41_reloadeliteseries4heat3_eu"
-      }
-    },
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S41_ReloadEliteSeries4Heat4_EU",
-      "beginTime": "2026-06-26T17:12:01Z",
-      "endTime": "2026-06-26T20:12:01Z",
-      "displayDataId": "s39_reloadelite_heats",
-      "eventGroup": "Season41_ReloadEliteSeries4",
-      "announcementTime": "2025-06-06T23:00:00Z",
-      "regions": [
-        "EU"
-      ],
-      "regionMappings": {
-        "EU": "EUCOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "SecureBoot",
-          "CryptoProcessor",
-          "IOMMU",
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "CashCup",
-        "TeamLockType": "Week",
-        "webId": "S41_ReloadEliteSeriesHeats",
-        "minimumAccountLevel": 350,
-        "DisqualifyType": "Event",
-        "RegionLockType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S41_ReloadEliteSeries4Heat4_EU",
-          "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesHeatsES",
-          "countdownBeginTime": "2026-06-26T15:00:00Z",
-          "beginTime": "2026-06-26T17:12:01Z",
-          "endTime": "2026-06-26T20:12:01Z",
-          "round": 1,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s39_reload_elite_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S39_ReloadEliteSeriesHeatQ2_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S41_ReloadEliteSeries4Heat4_EU"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ScheduledMatchmakingInitialDelaySeconds": 600,
-            "SubgroupId": "Series4_EU",
-            "ServerReplays": true,
-            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
-            "RoundType": "Qualifiers",
-            "ScheduledMatchmakingMatchDelaySeconds": 1440
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s41_reloadeliteseries4heat4_eu"
-      }
-    },
     {
       "gameId": "Fortnite",
       "eventId": "epicgames_S41_MongraalIconCup_EU",
@@ -38130,7 +37812,6 @@
     "Fortnite:epicgames_S41_RankedCupSoloReload_EU:S41_RankedCupSoloReload_Event1_EU": "EmptyScoringRules",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_EU:S41_RankedCupReloadDuos_Event9_EU_1_Unreal": "ScoringRules_RankedCupDuosReload_Unreal_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event7_EU": "EmptyScoringRules",
-    "Fortnite:epicgames_S41_ReloadEliteSeries4Heat4_EU:S41_ReloadEliteSeries4Heat4_EU": "S39_ScoringRules_EliteSeriesHeatsQ2",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event3_EU_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event1_EU_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event1_EU_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
@@ -38356,7 +38037,6 @@
     "Fortnite:epicgames_S41_MobileSeriesHeatAll1_EU:S41_MobileSeriesHeatAll1July_EU": "ScoringRules_MobileSeriesReloadFinal",
     "Fortnite:epicgames_S41_RankedCupSoloReload_EU:S41_RankedCupSoloReload_Event8_EU_1_elite": "ScoringRules_RankedCupSoloReload_Elite_1",
     "Fortnite:epicgames_S41_RankedCupSoloReload_EU:S41_RankedCupSoloReload_Event6_EU_1_platinum": "ScoringRules_RankedCupSoloReload_Platinum_1",
-    "Fortnite:epicgames_S41_ReloadEliteSeries4Heat3_EU:S41_ReloadEliteSeries4Heat3_EU": "S39_ScoringRules_EliteSeriesHeatsQ2",
     "Fortnite:epicgames_S41_MobileSeriesHeat4_EU:S41_MobileSeriesHeat4July_EU": "ScoringRules_MobileSeriesReloadFinal",
     "Fortnite:epicgames_S41_RankedCupSoloReload_EU:S41_RankedCupSoloReload_Event8_EU_1_Bronze": "ScoringRules_RankedCupSoloReload_Bronze_1",
     "Fortnite:epicgames_S41_RankedCupDuos_EU:S41_RankedCupDuos_Event2_EU_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
@@ -38721,7 +38401,6 @@
   "scoreLocationPayoutTables": {
     "Fortnite:epicgames_S41_RankedCupSoloReload_EU:S41_RankedCupSoloReload_Event6_EU_1_elite": "epicgames_S41_RankedCupSoloReload_EU_1_Elite",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_EU:S41_RankedCupReloadDuos_Event9_EU_1_Unreal": "epicgames_S41_RankedCupReloadDuos_EU_1_Unreal",
-    "Fortnite:epicgames_S41_ReloadEliteSeries4Heat4_EU:S41_ReloadEliteSeries4Heat4_EU": "epicgames_S41_ReloadEliteSeries4Heat4_EU",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event3_EU_1_platinum": "epicgames_S41_RankedCupSolo_EU_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event1_EU_1_elite": "epicgames_S41_RankedCupSolo_EU_1_Elite",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event1_EU_1_platinum": "epicgames_S41_RankedCupDuosZB_EU_1_Platinum",
@@ -38906,7 +38585,6 @@
     "Fortnite:epicgames_S41_MobileSeriesHeatAll1_EU:S41_MobileSeriesHeatAll1July_EU": "S41_MobileSeriesHeatAll1July_EU",
     "Fortnite:epicgames_S41_RankedCupSoloReload_EU:S41_RankedCupSoloReload_Event8_EU_1_elite": "epicgames_S41_RankedCupSoloReload_EU_1_Elite",
     "Fortnite:epicgames_S41_RankedCupSoloReload_EU:S41_RankedCupSoloReload_Event6_EU_1_platinum": "epicgames_S41_RankedCupSoloReload_EU_1_Platinum",
-    "Fortnite:epicgames_S41_ReloadEliteSeries4Heat3_EU:S41_ReloadEliteSeries4Heat3_EU": "epicgames_S41_ReloadEliteSeries4Heat3_EU",
     "Fortnite:epicgames_S41_MobileSeriesHeat4_EU:S41_MobileSeriesHeat4July_EU": "S41_MobileSeriesHeat4July_EU",
     "Fortnite:epicgames_S41_RankedCupSoloReload_EU:S41_RankedCupSoloReload_Event8_EU_1_Bronze": "epicgames_S41_RankedCupSoloReload_EU_1_Bronze",
     "Fortnite:epicgames_S41_RankedCupDuos_EU:S41_RankedCupDuos_Event2_EU_1_champion": "epicgames_S41_RankedCupDuos_EU_1_Champion",
@@ -39266,9 +38944,6 @@
       "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event7_EU_1_elite",
       "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event7_EU_1_champion",
       "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event7_EU_1_unreal"
-    ],
-    "Fortnite:epicgames_S41_ReloadEliteSeries4Heat4_EU:S41_ReloadEliteSeries4Heat4_EU": [
-      "Fortnite:epicgames_S41_ReloadEliteSeries4Heat4_EU:S41_ReloadEliteSeries4Heat4_EU"
     ],
     "Fortnite:epicgames_S41_MobileVictoryCup_ZB_EU:S41_MobileVictoryCup_Day4_Round2_ZB_EU": [
       "Fortnite:epicgames_S41_MobileVictoryCup_ZB_EU:S41_MobileVictoryCup_Day4_Round2_ZB_EU"
@@ -39773,6 +39448,9 @@
       "Fortnite:epicgames_S41_MobileSeriesOpenAll_EU:S41_MobileSeriesOpenAll_Round4_EU",
       "Fortnite:cumulative:epicgames_S41_MobileSeriesOpenAll_EU_2_cumulative"
     ],
+    "Fortnite:epicgames_S41_MobileSeriesHeat4_EU:S41_MobileSeriesHeat4July_EU": [
+      "Fortnite:epicgames_S41_MobileSeriesHeat4_EU:S41_MobileSeriesHeat4July_EU"
+    ],
     "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_EU:S41_FNCSDivisionalCup_Division4_Event1_EU": [
       "Fortnite:epicgames_S41_FNCSDivisionalCup_Division4_EU:S41_FNCSDivisionalCup_Division4_Event1_EU"
     ],
@@ -39781,12 +39459,6 @@
     ],
     "Fortnite:epicgames_S41_MobileSeriesHeatAll1_EU:S41_MobileSeriesHeatAll1July_EU": [
       "Fortnite:epicgames_S41_MobileSeriesHeatAll1_EU:S41_MobileSeriesHeatAll1July_EU"
-    ],
-    "Fortnite:epicgames_S41_ReloadEliteSeries4Heat3_EU:S41_ReloadEliteSeries4Heat3_EU": [
-      "Fortnite:epicgames_S41_ReloadEliteSeries4Heat3_EU:S41_ReloadEliteSeries4Heat3_EU"
-    ],
-    "Fortnite:epicgames_S41_MobileSeriesHeat4_EU:S41_MobileSeriesHeat4July_EU": [
-      "Fortnite:epicgames_S41_MobileSeriesHeat4_EU:S41_MobileSeriesHeat4July_EU"
     ],
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event1_EU": [
       "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event1_EU",
