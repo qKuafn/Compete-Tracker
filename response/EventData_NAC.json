@@ -19163,7 +19163,7 @@
       "gameId": "Fortnite",
       "eventId": "epicgames_S41_ReloadEliteSeries4Heat2_NAC",
       "beginTime": "2026-06-26T23:00:01Z",
-      "endTime": "2026-06-27T02:00:01Z",
+      "endTime": "2026-06-27T02:30:01Z",
       "displayDataId": "s39_reloadelite_heats",
       "eventGroup": "Season41_ReloadEliteSeries4",
       "announcementTime": "2025-06-07T05:00:00Z",
@@ -19217,10 +19217,10 @@
       "eventWindows": [
         {
           "eventWindowId": "S41_ReloadEliteSeries4Heat2_NAC",
-          "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesHeatsES",
+          "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesHeatsES_newgame",
           "countdownBeginTime": "2026-06-26T21:00:00Z",
           "beginTime": "2026-06-26T23:00:01Z",
-          "endTime": "2026-06-27T02:00:01Z",
+          "endTime": "2026-06-27T02:30:01Z",
           "round": 1,
           "payoutDelay": 32,
           "isTBD": false,
@@ -34331,43 +34331,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_RE_MatchMistSolo_CR",
-      "matchCap": 3,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S41_MobileVictoryCup_Round2_RES",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_RE_MatchMistDuos_RC",
       "matchCap": 12,
       "tiebreakerFormula": {
@@ -35028,6 +34991,80 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_S41_MongraalIconCup",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_MatchMistDuos_CR",
+      "matchCap": 9,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S40_ReloadEliteSeriesHeatsES_newgame",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_MatchMistSolo_CR",
+      "matchCap": 3,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S41_MobileVictoryCup_Round2_RES",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
