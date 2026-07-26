@@ -9354,25 +9354,6 @@
         ]
       }
     ],
-    "S41_MobileVictoryCup_Day3_Round1_ZBReload_ASIA": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 200,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S41_MobileVictoryCup_Day3_ZBReload_ASIA_Final",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "S41_PayoutTable_MobileSeriesAug": [
       {
         "scoringType": "value",
@@ -11068,25 +11049,6 @@
                 "value": "USD",
                 "quantity": 100,
                 "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S41_MobileVictoryCup_Day3_Round1_ZBReloadAll_ASIA": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 200,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S41_MobileVictoryCup_Day3_ZBReload_ASIA_Final",
-                "quantity": 1,
-                "notifiesPlayer": false
               }
             ]
           }
@@ -18809,268 +18771,6 @@
     ]
   },
   "events": [
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S41_MobileVictoryCup_ZBReload_ASIA",
-      "beginTime": "2026-07-24T08:00:00Z",
-      "endTime": "2026-07-26T08:45:00Z",
-      "displayDataId": "s41_mobile_vc_reload_zb",
-      "eventGroup": "Season41_MobileVictoryCup",
-      "announcementTime": "2026-06-01T06:00:00Z",
-      "regions": [
-        "ASIA"
-      ],
-      "regionMappings": {
-        "ASIA": "ASIACOMP"
-      },
-      "platforms": [
-        "Android",
-        "IOS"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "ShopCup",
-        "webId": "S41_MobileVictoryCup",
-        "minimumAccountLevel": 50,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S41_MobileVictoryCup_Day3_Round1_ZBReload_ASIA",
-          "eventTemplateId": "EventTemplate_S41_MobileVictoryCup_Round1_ZBReload",
-          "countdownBeginTime": "2026-07-24T06:00:00Z",
-          "beginTime": "2026-07-24T08:00:00Z",
-          "endTime": "2026-07-24T09:15:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s41_mobilevictory_rules",
-            [
-              "currentRanking:ranked-br-combined:6"
-            ],
-            "adps:g-a81a33a3b9a7",
-            "input-touch",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S41_MobileVictoryCup_Round1_ZBReload_RES_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers",
-            "asyncPayouts": true
-          }
-        },
-        {
-          "eventWindowId": "S41_MobileVictoryCup_Day3_Round2_ZBReload_ASIA",
-          "eventTemplateId": "EventTemplate_S41_MobileVictoryCup_Round2_ZBReload",
-          "countdownBeginTime": "2026-07-26T06:00:00Z",
-          "beginTime": "2026-07-26T08:00:00Z",
-          "endTime": "2026-07-26T08:45:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s41_mobilevictory_rules",
-            "adps:g-a81a33a3b9a7",
-            "input-touch",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S41_MobileVictoryCup_D2_Round2_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S41_MobileVictoryCup_Day3_ZBReload_ASIA_Final"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s41_mobilevictorycup_zbreload_asia"
-      }
-    },
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S41_MobileVictoryCup_ZBReloadAll_ASIA",
-      "beginTime": "2026-07-24T08:00:00Z",
-      "endTime": "2026-07-26T08:45:00Z",
-      "displayDataId": "s41_mobile_vc_reload_zb",
-      "eventGroup": "Season41_MobileVictoryCup",
-      "announcementTime": "2026-06-01T06:00:00Z",
-      "regions": [
-        "ASIA"
-      ],
-      "regionMappings": {
-        "ASIA": "ASIACOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "ShopCup",
-        "IsDuplicate": true,
-        "webId": "S41_MobileVictoryCup",
-        "minimumAccountLevel": 50,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S41_MobileVictoryCup_Day3_Round1_ZBReloadAll_ASIA",
-          "eventTemplateId": "EventTemplate_S41_MobileVictoryCup_Round1_ZBReload",
-          "countdownBeginTime": "2026-07-24T06:00:00Z",
-          "beginTime": "2026-07-24T08:00:00Z",
-          "endTime": "2026-07-24T09:15:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s41_mobilevictory_rules",
-            [
-              "currentRanking:ranked-br-combined:6"
-            ],
-            "adps:g-a81a33a3b9a7",
-            "input-touch",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S41_MobileVictoryCup_Round1_ZBReload_RES_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "fake_token"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers",
-            "asyncPayouts": true
-          }
-        },
-        {
-          "eventWindowId": "S41_MobileVictoryCup_Day3_Round2_ZBReloadAll_ASIA",
-          "eventTemplateId": "EventTemplate_S41_MobileVictoryCup_Round2_ZBReload",
-          "countdownBeginTime": "2026-07-26T06:00:00Z",
-          "beginTime": "2026-07-26T08:00:00Z",
-          "endTime": "2026-07-26T08:45:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s41_mobilevictory_rules",
-            "adps:g-a81a33a3b9a7",
-            "input-touch",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S41_MobileVictoryCup_D2_Round2_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "S41_MobileVictoryCup_Day3_ZBReload_ASIA_Final",
-            "fake_token"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s41_mobilevictorycup_zbreloadall_asia"
-      }
-    },
     {
       "gameId": "Fortnite",
       "eventId": "epicgames_S41_FNCSMajor2_HeatsStage_ASIA",
@@ -28531,43 +28231,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_RE_MatchMistNoBuildSolo_CR",
-      "matchCap": 6,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S41_MobileVictoryCup_Round1_ZBReload",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_NoBuildBR_Solo",
       "matchCap": 6,
       "tiebreakerFormula": {
@@ -28636,43 +28299,6 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupDuosZB",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_RE_MatchMistNoBuildSolo_CR",
-      "matchCap": 3,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S41_MobileVictoryCup_Round2_ZBReload",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -31281,7 +30907,6 @@
     }
   ],
   "scoreLocationScoringRuleSets": {
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_ASIA:S41_MobileVictoryCup_Day3_Round2_ZBReload_ASIA": "S41_MovileVictoryCup_Round2_ScoringRules",
     "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event1_ASIA_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S41_RankedCupSoloReload_ASIA:S41_RankedCupSoloReload_Event6_ASIA_1_platinum": "ScoringRules_RankedCupSoloReload_Platinum_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event9_ASIA_2_Champion": "ScoringRules_RankedCupDuosReload_Champion_2",
@@ -31298,7 +30923,6 @@
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event1_ASIA_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
     "Fortnite:epicgames_S41_FNCSMajor2_LastChanceQualifier_ASIA:S41_FNCSMajor2_LastChanceLobby_ASIA": "ScoringRules_FNCS2026_LCL",
     "Fortnite:epicgames_S41_RankedCupSoloReload_ASIA:S41_RankedCupSoloReload_Event4_ASIA_1_platinum": "ScoringRules_RankedCupSoloReload_Platinum_1",
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReloadAll_ASIA:S41_MobileVictoryCup_Day3_Round2_ZBReloadAll_ASIA": "S41_MovileVictoryCup_Round2_ScoringRules",
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event7_ASIA_2_elite": "ScoringRules_RankedCupDuos_Elite_2",
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event8_ASIA_2_platinum": "ScoringRules_RankedCupDuos_Platinum_2",
     "Fortnite:epicgames_S41_FNCSMajor2_HeatsStage_ASIA:S41_FNCSMajor2_HeatsStage_Heat1_ASIA": "ScoringRules_FNCS2026_Heats",
@@ -31362,7 +30986,6 @@
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event2_ASIA": "EmptyScoringRules",
     "Fortnite:epicgames_S41_MobileSeriesOpenAll_ASIA:S41_MobileSeriesOpenAll_Round2_ASIA": "ScoringRules_MobileSeriesOpensReload",
     "Fortnite:cumulative:epicgames_S41_MobileSeriesOpen_ASIA_1_cumulative": "ScoringRules_MobileSeriesOpensReload",
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_ASIA:S41_MobileVictoryCup_Day3_Round1_ZBReload_ASIA": "S41_MobileVictoryCup_Round1_ZBReload_RES_ScoringRules",
     "Fortnite:epicgames_S41_RankedCupDuos_ASIA:S41_RankedCupDuos_Event7_ASIA_2_Silver": "ScoringRules_RankedCupDuos_Silver_2",
     "Fortnite:epicgames_S41_RankedCupDuos_ASIA:S41_RankedCupDuos_Event5_ASIA_2_diamond": "ScoringRules_RankedCupDuos_Diamond_2",
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event5_ASIA_2_Bronze": "ScoringRules_RankedCupDuos_Bronze_2",
@@ -31679,7 +31302,6 @@
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event7_ASIA_2_champion": "ScoringRules_RankedCupDuos_Champion_2",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event2_ASIA_1_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event5_ASIA_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1",
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReloadAll_ASIA:S41_MobileVictoryCup_Day3_Round1_ZBReloadAll_ASIA": "S41_MobileVictoryCup_Round1_ZBReload_RES_ScoringRules",
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event7_ASIA": "EmptyScoringRules",
     "Fortnite:epicgames_S41_ConsoleCC_DuosZB_ASIA:S41_ConsoleCC_DuosZB_Event1Round2_ASIA": "S41_ConsoleCC_DuosZB_ScoringRules_Round2",
     "Fortnite:epicgames_S41_RankedCupDuos_ASIA:S41_RankedCupDuos_Event8_ASIA_2_Bronze": "ScoringRules_RankedCupDuos_Bronze_2",
@@ -31761,7 +31383,6 @@
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event2_ASIA_1_Gold": "ScoringRules_RankedCupDuosReload_Gold_1"
   },
   "scoreLocationPayoutTables": {
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_ASIA:S41_MobileVictoryCup_Day3_Round2_ZBReload_ASIA": "S41_MobileVictoryCup_Round2",
     "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event1_ASIA_1_Silver": "epicgames_S41_RankedCupSolo_ASIA_1_Silver",
     "Fortnite:epicgames_S41_RankedCupSoloReload_ASIA:S41_RankedCupSoloReload_Event6_ASIA_1_platinum": "epicgames_S41_RankedCupSoloReload_ASIA_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event9_ASIA_2_Champion": "epicgames_S41_RankedCupReloadDuos_ASIA_2_Champion",
@@ -31777,7 +31398,6 @@
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event1_ASIA_1_elite": "epicgames_S41_RankedCupDuosZB_ASIA_1_Elite",
     "Fortnite:epicgames_S41_FNCSMajor2_LastChanceQualifier_ASIA:S41_FNCSMajor2_LastChanceLobby_ASIA": "S41_FNCSMajor2_LastChanceLobby_ASIA",
     "Fortnite:epicgames_S41_RankedCupSoloReload_ASIA:S41_RankedCupSoloReload_Event4_ASIA_1_platinum": "epicgames_S41_RankedCupSoloReload_ASIA_1_Platinum",
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReloadAll_ASIA:S41_MobileVictoryCup_Day3_Round2_ZBReloadAll_ASIA": "S41_MobileVictoryCup_Round2",
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event7_ASIA_2_elite": "epicgames_S41_RankedCupDuosZB_ASIA_2_Elite",
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event8_ASIA_2_platinum": "epicgames_S41_RankedCupDuosZB_ASIA_2_Platinum",
     "Fortnite:epicgames_S41_FNCSMajor2_HeatsStage_ASIA:S41_FNCSMajor2_HeatsStage_Heat1_ASIA": "epicgames_S41_FNCSMajor2_HeatsStage_ASIA",
@@ -31836,7 +31456,6 @@
     "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event3_ASIA_1_Silver": "epicgames_S41_RankedCupSolo_ASIA_1_Silver",
     "Fortnite:epicgames_S41_MobileVictoryCup_ZBAll_ASIA:S41_MobileVictoryCup_Day4_Round2_ZBAll_ASIA": "S41_MobileVictoryCup_Round2",
     "Fortnite:epicgames_S41_MobileSeriesOpenAll_ASIA:S41_MobileSeriesOpenAll_Round2_ASIA": "S41_PayoutTable_MobileSeriesJune",
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_ASIA:S41_MobileVictoryCup_Day3_Round1_ZBReload_ASIA": "S41_MobileVictoryCup_Day3_Round1_ZBReload_ASIA",
     "Fortnite:epicgames_S41_RankedCupDuos_ASIA:S41_RankedCupDuos_Event7_ASIA_2_Silver": "epicgames_S41_RankedCupDuos_ASIA_2_Silver",
     "Fortnite:epicgames_S41_RankedCupDuos_ASIA:S41_RankedCupDuos_Event5_ASIA_2_diamond": "epicgames_S41_RankedCupDuos_ASIA_2_Diamond",
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event5_ASIA_2_Bronze": "epicgames_S41_RankedCupDuosZB_ASIA_2_Bronze",
@@ -32123,7 +31742,6 @@
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event2_ASIA_1_Bronze": "epicgames_S41_RankedCupReloadDuos_ASIA_1_Bronze",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event5_ASIA_1_Platinum": "epicgames_S41_RankedCupReloadDuos_ASIA_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event6_ASIA_2_Unreal": "epicgames_S41_RankedCupReloadDuos_ASIA_2_Unreal",
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReloadAll_ASIA:S41_MobileVictoryCup_Day3_Round1_ZBReloadAll_ASIA": "S41_MobileVictoryCup_Day3_Round1_ZBReloadAll_ASIA",
     "Fortnite:epicgames_S41_ConsoleCC_DuosZB_ASIA:S41_ConsoleCC_DuosZB_Event1Round2_ASIA": "S41_ConsoleCC_DuosZB_Event1Round2_ASIA",
     "Fortnite:epicgames_S41_RankedCupDuos_ASIA:S41_RankedCupDuos_Event8_ASIA_2_Bronze": "epicgames_S41_RankedCupDuos_ASIA_2_Bronze",
     "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event7_ASIA_1_Bronze": "epicgames_S41_RankedCupSolo_ASIA_1_Bronze",
@@ -32191,6 +31809,17 @@
     "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event2_ASIA_1_Gold": "epicgames_S41_RankedCupReloadDuos_ASIA_1_Gold"
   },
   "resolvedWindowLocations": {
+    "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA": [
+      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA",
+      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_Bronze",
+      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_Silver",
+      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_gold",
+      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_platinum",
+      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_diamond",
+      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_elite",
+      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_champion",
+      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_unreal"
+    ],
     "Fortnite:epicgames_S41_RankedCupSoloReload_ASIA:S41_RankedCupSoloReload_Event3_ASIA": [
       "Fortnite:epicgames_S41_RankedCupSoloReload_ASIA:S41_RankedCupSoloReload_Event3_ASIA",
       "Fortnite:epicgames_S41_RankedCupSoloReload_ASIA:S41_RankedCupSoloReload_Event3_ASIA_1_Bronze",
@@ -32213,25 +31842,8 @@
       "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event8_ASIA_2_Champion",
       "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event8_ASIA_2_Unreal"
     ],
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_ASIA:S41_MobileVictoryCup_Day3_Round2_ZBReload_ASIA": [
-      "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_ASIA:S41_MobileVictoryCup_Day3_Round2_ZBReload_ASIA"
-    ],
-    "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA": [
-      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA",
-      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_Bronze",
-      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_Silver",
-      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_gold",
-      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_platinum",
-      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_diamond",
-      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_elite",
-      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_champion",
-      "Fortnite:epicgames_S41_RankedCupSolo_ASIA:S41_RankedCupSolo_Event4_ASIA_1_unreal"
-    ],
     "Fortnite:epicgames_S41_FNCSMajor2_LastChanceQualifier_ASIA:S41_FNCSMajor2_LastChanceLobby_ASIA": [
       "Fortnite:epicgames_S41_FNCSMajor2_LastChanceQualifier_ASIA:S41_FNCSMajor2_LastChanceLobby_ASIA"
-    ],
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReloadAll_ASIA:S41_MobileVictoryCup_Day3_Round2_ZBReloadAll_ASIA": [
-      "Fortnite:epicgames_S41_MobileVictoryCup_ZBReloadAll_ASIA:S41_MobileVictoryCup_Day3_Round2_ZBReloadAll_ASIA"
     ],
     "Fortnite:epicgames_S41_FNCSMajor2_HeatsStage_ASIA:S41_FNCSMajor2_HeatsStage_Heat1_ASIA": [
       "Fortnite:epicgames_S41_FNCSMajor2_HeatsStage_ASIA:S41_FNCSMajor2_HeatsStage_Heat1_ASIA"
@@ -32326,9 +31938,6 @@
     "Fortnite:epicgames_S41_MobileSeriesOpenAll_ASIA:S41_MobileSeriesOpenAll_Round2_ASIA": [
       "Fortnite:epicgames_S41_MobileSeriesOpenAll_ASIA:S41_MobileSeriesOpenAll_Round2_ASIA",
       "Fortnite:cumulative:epicgames_S41_MobileSeriesOpenAll_ASIA_1_cumulative"
-    ],
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_ASIA:S41_MobileVictoryCup_Day3_Round1_ZBReload_ASIA": [
-      "Fortnite:epicgames_S41_MobileVictoryCup_ZBReload_ASIA:S41_MobileVictoryCup_Day3_Round1_ZBReload_ASIA"
     ],
     "Fortnite:epicgames_S41_MobileSeriesHeatAll4_ASIA:S41_MobileSeriesHeatAll4July_ASIA": [
       "Fortnite:epicgames_S41_MobileSeriesHeatAll4_ASIA:S41_MobileSeriesHeatAll4July_ASIA"
@@ -32776,9 +32385,6 @@
       "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event5_ASIA_1_Elite",
       "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event5_ASIA_1_Champion",
       "Fortnite:epicgames_S41_RankedCupReloadDuos_ASIA:S41_RankedCupReloadDuos_Event5_ASIA_1_Unreal"
-    ],
-    "Fortnite:epicgames_S41_MobileVictoryCup_ZBReloadAll_ASIA:S41_MobileVictoryCup_Day3_Round1_ZBReloadAll_ASIA": [
-      "Fortnite:epicgames_S41_MobileVictoryCup_ZBReloadAll_ASIA:S41_MobileVictoryCup_Day3_Round1_ZBReloadAll_ASIA"
     ],
     "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event7_ASIA": [
       "Fortnite:epicgames_S41_RankedCupDuosZB_ASIA:S41_RankedCupDuosZB_Event7_ASIA",
