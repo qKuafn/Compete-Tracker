@@ -8474,6 +8474,25 @@
         ]
       }
     ],
+    "S41_MobileSeriesOpen_Round5_BR": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 10,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_touchtoken",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S41_RankedCupDuosZB_BR_2_Unreal": [
       {
         "scoringType": "rank",
@@ -9090,25 +9109,6 @@
         ]
       }
     ],
-    "S41_PayoutTable_MobileSeriesAug": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 10,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:unknown",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "epicgames_S41_RankedCupDuos_BR_1_Diamond": [
       {
         "scoringType": "rank",
@@ -9564,6 +9564,25 @@
                 "rewardMode": "standard",
                 "value": "USD",
                 "quantity": 100,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_MobileSeriesOpenAll_Round5_BR": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 10,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_touchtoken",
+                "quantity": 1,
                 "notifiesPlayer": true
               }
             ]
@@ -10072,6 +10091,43 @@
         ]
       }
     ],
+    "S41_MobileSeriesOpen_Round6_BR": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 10,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_touchtoken",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 500,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_touchtoken",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ],
+        "scoreId": "cumulative:epicgames_S41_MobileSeriesOpen_BR_3_cumulative"
+      }
+    ],
     "epicgames_S41_RankedCupSolo_BR_1_Bronze": [
       {
         "scoringType": "percentile",
@@ -10396,6 +10452,43 @@
             ]
           }
         ]
+      }
+    ],
+    "S41_MobileSeriesOpenAll_Round6_BR": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 10,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_touchtoken",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 500,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaPickaxe:pickaxe_touchtoken",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ],
+        "scoreId": "cumulative:epicgames_S41_MobileSeriesOpenAll_BR_3_cumulative"
       }
     ],
     "epicgames_S41_RankedCupSolo_BR_1_Unreal": [
@@ -19464,7 +19557,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S41_MobileSeriesOpensAug_LeaderboardDef",
+              "leaderboardDefId": "S41_MobileSeriesOpens_LeaderboardDef",
               "isMainWindowLeaderboard": true
             },
             {
@@ -19513,7 +19606,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S41_MobileSeriesOpensAug_LeaderboardDef",
+              "leaderboardDefId": "S41_MobileSeriesOpens_LeaderboardDef",
               "isMainWindowLeaderboard": true
             },
             {
@@ -19789,7 +19882,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S41_MobileSeriesOpensAug_LeaderboardDef",
+              "leaderboardDefId": "S41_MobileSeriesOpens_LeaderboardDef",
               "isMainWindowLeaderboard": true
             },
             {
@@ -19836,7 +19929,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S41_MobileSeriesOpensAug_LeaderboardDef",
+              "leaderboardDefId": "S41_MobileSeriesOpens_LeaderboardDef",
               "isMainWindowLeaderboard": true
             },
             {
@@ -28349,51 +28442,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "S41_MobileSeriesOpensAug_LeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 10,
-      "useIndividualScores": true,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "ScoringRules_MobileSeriesOpensReload",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "S41_PayoutTable_MobileSeriesAug",
-        "payoutDate": "windowEnd+PT30M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "Ranked_Cup_SoloReload_Gold_LeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -30999,7 +31047,7 @@
     "Fortnite:epicgames_S41_RankedCupDuosZB_BR:S41_RankedCupDuosZB_Event2_BR_1_diamond": "epicgames_S41_RankedCupDuosZB_BR_1_Diamond",
     "Fortnite:epicgames_S41_ConsoleVCC_SolosZB_BR:S41_ConsoleVCC_SolosZB_Event3Round2_BR": "S41_ConsoleVCC_SolosZB_Round2",
     "Fortnite:epicgames_S41_RankedCupDuosZB_BR:S41_RankedCupDuosZB_Event7_BR_2_champion": "epicgames_S41_RankedCupDuosZB_BR_2_Champion",
-    "Fortnite:epicgames_S41_MobileSeriesOpenAll_BR:S41_MobileSeriesOpenAll_Round5_BR": "S41_PayoutTable_MobileSeriesAug",
+    "Fortnite:epicgames_S41_MobileSeriesOpenAll_BR:S41_MobileSeriesOpenAll_Round5_BR": "S41_MobileSeriesOpenAll_Round5_BR",
     "Fortnite:epicgames_S41_RankedCupDuosZB_BR:S41_RankedCupDuosZB_Event5_BR_2_platinum": "epicgames_S41_RankedCupDuosZB_BR_2_Platinum",
     "Fortnite:epicgames_S41_MobileSeriesHeatAll4_BR:S41_MobileSeriesHeatAll4June_BR": "S41_MobileSeriesHeatAll4June_BR",
     "Fortnite:epicgames_S41_RankedCupSolo_BR:S41_RankedCupSolo_Event5_BR_1_champion": "epicgames_S41_RankedCupSolo_BR_1_Champion",
@@ -31083,7 +31131,7 @@
     "Fortnite:epicgames_S41_RankedCupDuos_BR:S41_RankedCupDuos_Event3_BR_1_gold": "epicgames_S41_RankedCupDuos_BR_1_Gold",
     "Fortnite:epicgames_S41_MobileSeriesCupQualAll_BR:S41_MobileSeriesCup_Qualifier13_BR": "epicgames_S41_MobileSeriesCupQualAll_BR",
     "Fortnite:epicgames_S41_RankedCupDuos_BR:S41_RankedCupDuos_Event4_BR_1_gold": "epicgames_S41_RankedCupDuos_BR_1_Gold",
-    "Fortnite:epicgames_S41_MobileSeriesOpen_BR:S41_MobileSeriesOpen_Round6_BR": "S41_PayoutTable_MobileSeriesAug",
+    "Fortnite:epicgames_S41_MobileSeriesOpen_BR:S41_MobileSeriesOpen_Round6_BR": "S41_MobileSeriesOpen_Round6_BR",
     "Fortnite:epicgames_S41_RankedCupSoloReload_BR:S41_RankedCupSoloReload_Event3_BR_1_Silver": "epicgames_S41_RankedCupSoloReload_BR_1_Silver",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_BR:S41_RankedCupReloadDuos_Event5_BR_1_Diamond": "epicgames_S41_RankedCupReloadDuos_BR_1_Diamond",
     "Fortnite:epicgames_S41_RankedCupDuos_BR:S41_RankedCupDuos_Event2_BR_1_unreal": "epicgames_S41_RankedCupDuos_BR_1_Unreal",
@@ -31249,7 +31297,7 @@
     "Fortnite:epicgames_S41_MobileSeriesOpenAll_BR:S41_MobileSeriesOpenAll_Round4_BR": "S41_MobileSeriesOpenAll_Round4_BR",
     "Fortnite:epicgames_S41_RankedCupDuosZB_BR:S41_RankedCupDuosZB_Event8_BR_2_platinum": "epicgames_S41_RankedCupDuosZB_BR_2_Platinum",
     "Fortnite:epicgames_S41_FNCSLastChanceMajor_BR:S41_FNCSLastChanceMajor_Qual2Round3_BR": "S41_FNCSLastChanceMajor_Qual2Round3_BR",
-    "Fortnite:epicgames_S41_MobileSeriesOpen_BR:S41_MobileSeriesOpen_Round5_BR": "S41_PayoutTable_MobileSeriesAug",
+    "Fortnite:epicgames_S41_MobileSeriesOpen_BR:S41_MobileSeriesOpen_Round5_BR": "S41_MobileSeriesOpen_Round5_BR",
     "Fortnite:epicgames_S41_RankedCupDuos_BR:S41_RankedCupDuos_Event8_BR_2_gold": "epicgames_S41_RankedCupDuos_BR_2_Gold",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_BR:S41_RankedCupReloadDuos_Event8_BR_2_Silver": "epicgames_S41_RankedCupReloadDuos_BR_2_Silver",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_BR:S41_RankedCupReloadDuos_Event3_BR_1_Silver": "epicgames_S41_RankedCupReloadDuos_BR_1_Silver",
@@ -31382,7 +31430,7 @@
     "Fortnite:epicgames_S41_MobileSeriesHeat2_BR:S41_MobileSeriesHeat2Aug_BR": "S41_MobileSeriesHeat2Aug_BR",
     "Fortnite:epicgames_S41_RankedCupDuos_BR:S41_RankedCupDuos_Event5_BR_2_gold": "epicgames_S41_RankedCupDuos_BR_2_Gold",
     "Fortnite:epicgames_S41_RankedCupDuosZB_BR:S41_RankedCupDuosZB_Event4_BR_1_gold": "epicgames_S41_RankedCupDuosZB_BR_1_Gold",
-    "Fortnite:epicgames_S41_MobileSeriesOpenAll_BR:S41_MobileSeriesOpenAll_Round6_BR": "S41_PayoutTable_MobileSeriesAug",
+    "Fortnite:epicgames_S41_MobileSeriesOpenAll_BR:S41_MobileSeriesOpenAll_Round6_BR": "S41_MobileSeriesOpenAll_Round6_BR",
     "Fortnite:epicgames_S41_RankedCupDuos_BR:S41_RankedCupDuos_Event2_BR_1_platinum": "epicgames_S41_RankedCupDuos_BR_1_Platinum",
     "Fortnite:epicgames_S41_RankedCupSoloReload_BR:S41_RankedCupSoloReload_Event8_BR_1_elite": "epicgames_S41_RankedCupSoloReload_BR_1_Elite",
     "Fortnite:epicgames_S41_RankedCupDuos_BR:S41_RankedCupDuos_Event4_BR_1_diamond": "epicgames_S41_RankedCupDuos_BR_1_Diamond",
