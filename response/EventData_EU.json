@@ -9500,25 +9500,6 @@
     ]
   },
   "payoutTables": {
-    "S41_ConsoleVCC_SolosZB_Event7Round1_EU": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 2000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S41_ConsoleVCC_SolosZB_Event7Round2_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "epicgames_S41_RankedCupSoloReload_EU_1_Silver": [
       {
         "scoringType": "percentile",
@@ -16878,6 +16859,61 @@
         ]
       }
     ],
+    "S41_FNCSLastChanceMajor_Qual1Round1_EU_risk": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_DenyQual1Round2_EU",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1000,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S41_DenyQual1Round2_EU",
+                "quantity": -1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S41_ConsoleVCC_SolosZB_Event7Round1_EU": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 2000,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S41_ConsoleVCC_SolosZB_Event7Round2_EU",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S41_RankedCupDuos_EU_1_Champion": [
       {
         "scoringType": "rank",
@@ -21069,6 +21105,42 @@
         ]
       }
     ],
+    "S41_FNCSLastChanceMajor_Qual2Round1_EU_risk": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S41_DenyQual2Round2_EU",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1000,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S41_DenyQual2Round2_EU",
+                "quantity": -1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S41_FNCSCommunityMobileCup_EU": [
       {
         "scoringType": "value",
@@ -24558,6 +24630,10 @@
             {
               "leaderboardDefId": "S40_FNCSMajor1_LastChanceQualifier_DefaultLeaderboardDef",
               "isMainWindowLeaderboard": true
+            },
+            {
+              "leaderboardDefId": "S41_FNCSLastChanceMajor_RiskQualLeaderboardDef",
+              "isMainWindowLeaderboard": false
             }
           ],
           "canLiveSpectate": false,
@@ -24582,7 +24658,10 @@
           "metadata": {
             "ServerReplays": true,
             "RoundType": "Qualifiers",
-            "SubgroupId": "LastChanceQual1_EU"
+            "SubgroupId": "LastChanceQual1_EU",
+            "hideScoreLocationsIndexes": [
+              1
+            ]
           }
         },
         {
@@ -24617,11 +24696,12 @@
           "requireNoneTokensCaller": [
             "EpicAccountPrizingRestriction_v2",
             "RegionLock_S41_FNCSLastChanceQual1_NAW",
-            "RegionLock_S41_FNCSLastChanceQual1_NAC",
             "RegionLock_S41_FNCSLastChanceQual1_ME",
             "RegionLock_S41_FNCSLastChanceQual1_BR",
             "RegionLock_S41_FNCSLastChanceQual1_ASIA",
             "RegionLock_S41_FNCSLastChanceQual1_OCE",
+            "S41_DenyQual1Round2_EU",
+            "RegionLock_S41_FNCSLastChanceQual1_NAC",
             "S41_FNCS_Banned",
             "Permanent_Tournament_Ban"
           ],
@@ -24697,6 +24777,10 @@
             {
               "leaderboardDefId": "S40_FNCSMajor1_LastChanceQualifier_DefaultLeaderboardDef",
               "isMainWindowLeaderboard": true
+            },
+            {
+              "leaderboardDefId": "S41_FNCSLastChanceMajor_RiskQualLeaderboardDef",
+              "isMainWindowLeaderboard": false
             }
           ],
           "canLiveSpectate": false,
@@ -24716,12 +24800,13 @@
             "RegionLock_S41_FNCSLastChanceQual2_ME",
             "RegionLock_S41_FNCSLastChanceQual2_NAW",
             "RegionLock_S41_FNCSLastChanceQual2_ASIA",
-            "S41_FNCSLastChanceMajor_Final_ME",
             "RegionLock_S41_FNCSLastChanceQual2_BR",
             "RegionLock_S41_FNCSLastChanceQual2_OCE",
             "S41_FNCSLastChanceMajor_Final_NAC",
             "S41_FNCS_Banned",
-            "Permanent_Tournament_Ban"
+            "Permanent_Tournament_Ban",
+            "S41_DenyQual2Round2_EU",
+            "S41_FNCSLastChanceMajor_Final_ME"
           ],
           "requireAllTokensCaller": [],
           "requireAnyTokensCaller": [],
@@ -24729,7 +24814,10 @@
           "metadata": {
             "ServerReplays": true,
             "RoundType": "Qualifiers",
-            "SubgroupId": "LastChanceQual2_EU"
+            "SubgroupId": "LastChanceQual2_EU",
+            "hideScoreLocationsIndexes": [
+              1
+            ]
           }
         },
         {
@@ -33685,6 +33773,51 @@
     },
     {
       "gameId": "Fortnite",
+      "leaderboardDefId": "S41_FNCSLastChanceMajor_RiskQualLeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}_risk",
+      "maxSessionHistorySize": 11,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "ScoringRules_FNCS2026_LCQ",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${windowId}_risk",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "discardZeroScore": false
+    },
+    {
+      "gameId": "Fortnite",
       "leaderboardDefId": "Ranked_Cup_SoloReload_Gold_LeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -36238,7 +36371,6 @@
     "Fortnite:epicgames_S41_RankedCupDuos_EU:S41_RankedCupDuos_Event6_EU_2_champion": "ScoringRules_RankedCupDuos_Champion_2",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event1_EU_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event8_EU_2_champion": "ScoringRules_RankedCupDuos_Champion_2",
-    "Fortnite:epicgames_S41_FNCSCommunityCupAll_EU:S41_FNCSCommunityMobileCupAll_EU": "S41_FNCSCommunityMobile_ScoringRules",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event4_EU": "EmptyScoringRules",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_EU:S41_RankedCupReloadDuos_Event9_EU_2_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_2",
     "Fortnite:epicgames_S41_RankedCupDuos_EU:S41_RankedCupDuos_Event4_EU": "EmptyScoringRules",
@@ -36250,6 +36382,8 @@
     "Fortnite:epicgames_S41_MobileVictoryCup_ZB_EU:S41_MobileVictoryCup_Day4_Round2_ZB_EU": "S41_MovileVictoryCup_Round2_ScoringRules",
     "Fortnite:epicgames_S41_RankedCupDuos_EU:S41_RankedCupDuos_Event1_EU_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S41_MobileSeriesHeat1_EU:S41_MobileSeriesHeat1June_EU": "ScoringRules_MobileSeriesReloadFinal",
+    "Fortnite:epicgames_S41_FNCSCommunityCupAll_EU:S41_FNCSCommunityMobileCupAll_EU": "S41_FNCSCommunityMobile_ScoringRules",
+    "Fortnite:epicgames_S41_FNCSLastChanceMajor_EU:S41_FNCSLastChanceMajor_Qual1Round1_EU_risk": "ScoringRules_FNCS2026_LCQ",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event4_EU_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_EU:S41_RankedCupReloadDuos_Event9_EU_2_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_2",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_EU:S41_RankedCupReloadDuos_Event2_EU_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1",
@@ -36512,11 +36646,12 @@
     "Fortnite:epicgames_S41_MobileSeriesHeat1_EU:S41_MobileSeriesHeat1Aug_EU": "ScoringRules_MobileSeriesReloadFinal",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event8_EU_2_gold": "ScoringRules_RankedCupDuos_Gold_2",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event6_EU_2_Silver": "ScoringRules_RankedCupDuos_Silver_2",
-    "Fortnite:epicgames_S41_ConsoleCC_DuosZB_EU:S41_ConsoleCC_DuosZB_Event7Round2_EU": "S41_ConsoleCC_DuosZB_ScoringRules_Round2",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event1_EU_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S41_RankedCupDuos_EU:S41_RankedCupDuos_Event8_EU": "EmptyScoringRules",
     "Fortnite:epicgames_S41_RankedCupSoloReload_EU:S41_RankedCupSoloReload_Event1_EU_1_Silver": "ScoringRules_RankedCupSoloReload_Silver_1",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event6_EU": "EmptyScoringRules",
+    "Fortnite:epicgames_S41_ConsoleCC_DuosZB_EU:S41_ConsoleCC_DuosZB_Event7Round2_EU": "S41_ConsoleCC_DuosZB_ScoringRules_Round2",
+    "Fortnite:epicgames_S41_FNCSLastChanceMajor_EU:S41_FNCSLastChanceMajor_Qual2Round1_EU_risk": "ScoringRules_FNCS2026_LCQ",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event3_EU_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event5_EU_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S41_RankedCupSoloReload_EU:S41_RankedCupSoloReload_Event4_EU_1_platinum": "ScoringRules_RankedCupSoloReload_Platinum_1",
@@ -36743,7 +36878,6 @@
     "Fortnite:epicgames_S41_RankedCupDuos_EU:S41_RankedCupDuos_Event6_EU_2_champion": "epicgames_S41_RankedCupDuos_EU_2_Champion",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event1_EU_1_Silver": "epicgames_S41_RankedCupSolo_EU_1_Silver",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event8_EU_2_champion": "epicgames_S41_RankedCupDuosZB_EU_2_Champion",
-    "Fortnite:epicgames_S41_FNCSCommunityCupAll_EU:S41_FNCSCommunityMobileCupAll_EU": "S41_FNCSCommunityMobileCupAll_EU",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_EU:S41_RankedCupReloadDuos_Event9_EU_2_Diamond": "epicgames_S41_RankedCupReloadDuos_EU_2_Diamond",
     "Fortnite:epicgames_S41_MobileSeriesOpen_EU:S41_MobileSeriesOpen_Round1_EU": "S41_PayoutTable_MobileSeriesJune",
     "Fortnite:epicgames_S41_ConsoleVCC_SolosZB_EU:S41_ConsoleVCC_SolosZB_Event2Round1_EU": "S41_ConsoleVCC_SolosZB_Event2Round1_EU",
@@ -36752,6 +36886,8 @@
     "Fortnite:epicgames_S41_MobileVictoryCup_ZB_EU:S41_MobileVictoryCup_Day4_Round2_ZB_EU": "S41_MobileVictoryCup_Round2",
     "Fortnite:epicgames_S41_RankedCupDuos_EU:S41_RankedCupDuos_Event1_EU_1_champion": "epicgames_S41_RankedCupDuos_EU_1_Champion",
     "Fortnite:epicgames_S41_MobileSeriesHeat1_EU:S41_MobileSeriesHeat1June_EU": "S41_MobileSeriesHeat1June_EU",
+    "Fortnite:epicgames_S41_FNCSCommunityCupAll_EU:S41_FNCSCommunityMobileCupAll_EU": "S41_FNCSCommunityMobileCupAll_EU",
+    "Fortnite:epicgames_S41_FNCSLastChanceMajor_EU:S41_FNCSLastChanceMajor_Qual1Round1_EU_risk": "S41_FNCSLastChanceMajor_Qual1Round1_EU_risk",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event4_EU_1_elite": "epicgames_S41_RankedCupDuosZB_EU_1_Elite",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_EU:S41_RankedCupReloadDuos_Event9_EU_2_Bronze": "epicgames_S41_RankedCupReloadDuos_EU_2_Bronze",
     "Fortnite:epicgames_S41_RankedCupReloadDuos_EU:S41_RankedCupReloadDuos_Event2_EU_1_Platinum": "epicgames_S41_RankedCupReloadDuos_EU_1_Platinum",
@@ -36983,8 +37119,9 @@
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event8_EU_2_gold": "epicgames_S41_RankedCupDuosZB_EU_2_Gold",
     "Fortnite:epicgames_S41_RankedCupDuosZB_EU:S41_RankedCupDuosZB_Event6_EU_2_Silver": "epicgames_S41_RankedCupDuosZB_EU_2_Silver",
     "Fortnite:epicgames_S41_RankedCupSoloReload_EU:S41_RankedCupSoloReload_Event1_EU_1_Silver": "epicgames_S41_RankedCupSoloReload_EU_1_Silver",
-    "Fortnite:epicgames_S41_ConsoleCC_DuosZB_EU:S41_ConsoleCC_DuosZB_Event7Round2_EU": "S41_ConsoleCC_DuosZB_Event7Round2_EU",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event1_EU_1_diamond": "epicgames_S41_RankedCupSolo_EU_1_Diamond",
+    "Fortnite:epicgames_S41_ConsoleCC_DuosZB_EU:S41_ConsoleCC_DuosZB_Event7Round2_EU": "S41_ConsoleCC_DuosZB_Event7Round2_EU",
+    "Fortnite:epicgames_S41_FNCSLastChanceMajor_EU:S41_FNCSLastChanceMajor_Qual2Round1_EU_risk": "S41_FNCSLastChanceMajor_Qual2Round1_EU_risk",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event3_EU_1_unreal": "epicgames_S41_RankedCupSolo_EU_1_Unreal",
     "Fortnite:epicgames_S41_RankedCupSolo_EU:S41_RankedCupSolo_Event5_EU_1_Silver": "epicgames_S41_RankedCupSolo_EU_1_Silver",
     "Fortnite:epicgames_S41_RankedCupSoloReload_EU:S41_RankedCupSoloReload_Event4_EU_1_platinum": "epicgames_S41_RankedCupSoloReload_EU_1_Platinum",
@@ -37732,7 +37869,8 @@
       "Fortnite:epicgames_S41_PerformanceEvaluation_EU:S41_PerformanceEvaluation_Event4Round2_EU"
     ],
     "Fortnite:epicgames_S41_FNCSLastChanceMajor_EU:S41_FNCSLastChanceMajor_Qual1Round1_EU": [
-      "Fortnite:epicgames_S41_FNCSLastChanceMajor_EU:S41_FNCSLastChanceMajor_Qual1Round1_EU"
+      "Fortnite:epicgames_S41_FNCSLastChanceMajor_EU:S41_FNCSLastChanceMajor_Qual1Round1_EU",
+      "Fortnite:epicgames_S41_FNCSLastChanceMajor_EU:S41_FNCSLastChanceMajor_Qual1Round1_EU_risk"
     ],
     "Fortnite:epicgames_S41_ConsoleVCC_SolosZB_EU:S41_ConsoleVCC_SolosZB_Event4Round2_EU": [
       "Fortnite:epicgames_S41_ConsoleVCC_SolosZB_EU:S41_ConsoleVCC_SolosZB_Event4Round2_EU"
@@ -37801,7 +37939,8 @@
       "Fortnite:epicgames_S41_ReloadReloadSoloVictoryCup_EU:S41_ReloadSoloVictoryCup_Round1_Day3_EU"
     ],
     "Fortnite:epicgames_S41_FNCSLastChanceMajor_EU:S41_FNCSLastChanceMajor_Qual2Round1_EU": [
-      "Fortnite:epicgames_S41_FNCSLastChanceMajor_EU:S41_FNCSLastChanceMajor_Qual2Round1_EU"
+      "Fortnite:epicgames_S41_FNCSLastChanceMajor_EU:S41_FNCSLastChanceMajor_Qual2Round1_EU",
+      "Fortnite:epicgames_S41_FNCSLastChanceMajor_EU:S41_FNCSLastChanceMajor_Qual2Round1_EU_risk"
     ],
     "Fortnite:epicgames_S41_ConsoleCC_DuosZB_EU:S41_ConsoleCC_DuosZB_Event3Round1_EU": [
       "Fortnite:epicgames_S41_ConsoleCC_DuosZB_EU:S41_ConsoleCC_DuosZB_Event3Round1_EU"
