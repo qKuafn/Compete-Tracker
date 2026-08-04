@@ -27431,7 +27431,7 @@
         },
         {
           "eventWindowId": "S41_RankedCupReloadDuos_Event8_BR",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_TheSprinfield",
           "countdownBeginTime": "2026-08-08T19:00:00Z",
           "beginTime": "2026-08-08T21:00:00Z",
           "endTime": "2026-08-09T00:00:00Z",
@@ -27519,7 +27519,7 @@
         },
         {
           "eventWindowId": "S41_RankedCupReloadDuos_Event9_BR",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_TheSprinfield",
           "countdownBeginTime": "2026-08-15T19:00:00Z",
           "beginTime": "2026-08-15T21:00:00Z",
           "endTime": "2026-08-16T00:00:00Z",
@@ -31790,6 +31790,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupSoloReload",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_RopeSmileDuos_RC",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupReloadDuos_TheSprinfield",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
