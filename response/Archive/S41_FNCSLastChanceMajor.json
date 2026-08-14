@@ -1,11 +1,11 @@
 {
-  "EventName": "s41_lastchance_major",
+  "EventName": "FNCS グローバルチャンピオンシップ ラストチャンス 決勝",
   "eventId": "epicgames_S41_FNCSLastChanceMajor_ASIA",
-  "displayDataId": "s41_lastchance_major",
-  "square_poster_image": "未設定",
-  "tournament_view_background_image": "未設定",
+  "displayDataId": "s41_last_chance",
+  "square_poster_image": "https://cdn2.unrealengine.com/fnce-39-00-comp-fncs2026update-in-game-tab-800x800-800x800-41126f7a36d0.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fnce-39-00-comp-fncs2026update-in-game-tab-1560x1024-1560x1024-1ac6399a65cc.jpg",
   "loading_screen_image": "未設定",
-  "playlist_title_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/jp-fnce-39-00-competitive-discoverytile-major-1920x1080-1920x1080-b4b895e2483c.jpg",
   "metadata": {
     "requireSystemFeatures": [
       "SecureBoot",
@@ -26,8 +26,7 @@
       "GainedShieldTimes",
       "Travel_Distance_Ground"
     ],
-    "DisqualifyType": "Event",
-    "RegionLockType": "Season",
+    "DisqualifyType": "Window",
     "AccountLockType": "Window"
   },
   "platforms": [
@@ -57,7 +56,7 @@
     "beginTime_JST": "2026-08-03 18:00:00",
     "endTime_UNIX": 1785758400,
     "endTime_JST": "2026-08-03 21:00:00",
-    "playlistId": "Playlist_ShowdownTournament_NPM_Duos",
+    "playlistId": "Playlist_ShowdownTournament_Duos",
     "matchCap": 11,
     "additionalRequirements": [
       "eula:s40_fncs_rules",
@@ -65,7 +64,7 @@
       "mfa"
     ],
     "requireAllTokens": [
-      "PowerRankingTop200K"
+      "PowerRankings_30_07_2026_Top200K"
     ],
     "requireAllTokensCaller": [],
     "requireAnyTokens": [],
@@ -99,11 +98,44 @@
           },
           {
             "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S41_DenyQual1Round2_ASIA"
+          },
+          {
+            "scoreId": "",
             "scoringType": "rank",
             "threshold": 1000,
             "rewardType": "token",
             "quantity": 1,
             "value": "S41_FNCSLastChanceMajor_Qual1Round2_ASIA"
+          }
+        ]
+      },
+      "S41_FNCSLastChanceMajor_RiskQualLeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_FNCS2026_LCQ",
+        "WindowLocation": "S41_FNCSLastChanceMajor_Qual1Round1_ASIA_risk",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S41_DenyQual1Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 1000,
+            "rewardType": "token",
+            "quantity": -1,
+            "value": "S41_DenyQual1Round2_ASIA"
           }
         ]
       }
@@ -124,7 +156,7 @@
     "requireAllTokens": [],
     "requireAllTokensCaller": [],
     "requireAnyTokens": [
-      "PowerRankingTop2K",
+      "PowerRankings_30_07_2026_Top2K",
       "S41_FNCSLastChanceMajor_Qual1Round2_ASIA"
     ],
     "requireAnyTokensCaller": [],
@@ -132,10 +164,11 @@
       "EpicAccountPrizingRestriction_v2",
       "RegionLock_S41_FNCSLastChanceQual1_NAW",
       "RegionLock_S41_FNCSLastChanceQual1_NAC",
-      "RegionLock_S41_FNCSLastChanceQual1_ME",
       "RegionLock_S41_FNCSLastChanceQual1_BR",
       "RegionLock_S41_FNCSLastChanceQual1_EU",
       "RegionLock_S41_FNCSLastChanceQual1_OCE",
+      "RegionLock_S41_FNCSLastChanceQual1_ME",
+      "S41_DenyQual1Round2_ASIA",
       "S41_FNCS_Banned",
       "Permanent_Tournament_Ban"
     ],
@@ -215,28 +248,35 @@
     "beginTime_JST": "2026-08-07 18:00:00",
     "endTime_UNIX": 1786104000,
     "endTime_JST": "2026-08-07 21:00:00",
-    "playlistId": "Playlist_ShowdownTournament_NPM_Duos",
+    "playlistId": "Playlist_ShowdownTournament_Duos",
     "matchCap": 11,
     "additionalRequirements": [
       "eula:s40_fncs_rules",
       "adps:g-a81a33a3b9a7",
       "mfa"
     ],
-    "requireAllTokens": [
-      "PowerRankingTop200K"
-    ],
+    "requireAllTokens": [],
     "requireAllTokensCaller": [],
-    "requireAnyTokens": [],
+    "requireAnyTokens": [
+      "PowerRankings_06_08_2026_Top200K",
+      "PowerRankings_30_07_2026_Top200K"
+    ],
     "requireAnyTokensCaller": [],
     "requireNoneTokensCaller": [
       "EpicAccountPrizingRestriction_v2",
-      "RegionLock_S41_FNCSLastChanceQual2_OCE",
+      "S41_FNCSLastChanceMajor_Final_EU",
+      "S41_FNCSLastChanceMajor_Final_BR",
       "S41_FNCSLastChanceMajor_Final_ASIA",
+      "S41_FNCSLastChanceMajor_Final_OCE",
       "RegionLock_S41_FNCSLastChanceQual2_NAC",
+      "S41_FNCSLastChanceMajor_Final_NAW",
       "RegionLock_S41_FNCSLastChanceQual2_ME",
       "RegionLock_S41_FNCSLastChanceQual2_NAW",
       "RegionLock_S41_FNCSLastChanceQual2_EU",
+      "S41_FNCSLastChanceMajor_Final_ME",
       "RegionLock_S41_FNCSLastChanceQual2_BR",
+      "RegionLock_S41_FNCSLastChanceQual2_OCE",
+      "S41_FNCSLastChanceMajor_Final_NAC",
       "S41_FNCS_Banned",
       "Permanent_Tournament_Ban"
     ],
@@ -258,11 +298,44 @@
           },
           {
             "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S41_DenyQual2Round2_ASIA"
+          },
+          {
+            "scoreId": "",
             "scoringType": "rank",
             "threshold": 1000,
             "rewardType": "token",
             "quantity": 1,
             "value": "S41_FNCSLastChanceMajor_Qual2Round2_ASIA"
+          }
+        ]
+      },
+      "S41_FNCSLastChanceMajor_RiskQualLeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_FNCS2026_LCQ",
+        "WindowLocation": "S41_FNCSLastChanceMajor_Qual2Round1_ASIA_risk",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 0,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S41_DenyQual2Round2_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 1000,
+            "rewardType": "token",
+            "quantity": -1,
+            "value": "S41_DenyQual2Round2_ASIA"
           }
         ]
       }
@@ -273,8 +346,8 @@
     "beginTime_JST": "2026-08-08 18:00:00",
     "endTime_UNIX": 1786190400,
     "endTime_JST": "2026-08-08 21:00:00",
-    "playlistId": "Playlist_ShowdownTournament_Duos",
-    "matchCap": 6,
+    "playlistId": "Playlist_ShowdownTournament_NPM_Duos",
+    "matchCap": 11,
     "additionalRequirements": [
       "eula:s40_fncs_rules",
       "adps:g-a81a33a3b9a7",
@@ -283,19 +356,27 @@
     "requireAllTokens": [],
     "requireAllTokensCaller": [],
     "requireAnyTokens": [
-      "PowerRankingTop2K",
+      "PowerRankings_06_08_2026_Top2K",
+      "PowerRankings_30_07_2026_Top2K",
       "S41_FNCSLastChanceMajor_Qual2Round2_ASIA"
     ],
     "requireAnyTokensCaller": [],
     "requireNoneTokensCaller": [
       "EpicAccountPrizingRestriction_v2",
-      "RegionLock_S41_FNCSLastChanceQual2_OCE",
+      "S41_FNCSLastChanceMajor_Final_EU",
+      "S41_FNCSLastChanceMajor_Final_BR",
       "S41_FNCSLastChanceMajor_Final_ASIA",
+      "S41_DenyQual2Round2_ASIA",
+      "S41_FNCSLastChanceMajor_Final_OCE",
       "RegionLock_S41_FNCSLastChanceQual2_NAC",
+      "S41_FNCSLastChanceMajor_Final_NAW",
       "RegionLock_S41_FNCSLastChanceQual2_ME",
       "RegionLock_S41_FNCSLastChanceQual2_NAW",
       "RegionLock_S41_FNCSLastChanceQual2_EU",
+      "S41_FNCSLastChanceMajor_Final_ME",
       "RegionLock_S41_FNCSLastChanceQual2_BR",
+      "RegionLock_S41_FNCSLastChanceQual2_OCE",
+      "S41_FNCSLastChanceMajor_Final_NAC",
       "S41_FNCS_Banned",
       "Permanent_Tournament_Ban"
     ],
@@ -373,10 +454,10 @@
   "S41_FNCSLastChanceMajor_Final_ASIA": {
     "beginTime_UNIX": 1786698000,
     "beginTime_JST": "2026-08-14 18:00:00",
-    "endTime_UNIX": 1786708800,
-    "endTime_JST": "2026-08-14 21:00:00",
-    "playlistId": "Playlist_ShowdownTournament_NPM_Duos",
-    "matchCap": 11,
+    "endTime_UNIX": 1786707600,
+    "endTime_JST": "2026-08-14 20:40:00",
+    "playlistId": "Playlist_ShowdownTournament_Duos",
+    "matchCap": 6,
     "additionalRequirements": [
       "eula:s40_fncs_rules",
       "adps:g-a81a33a3b9a7",
