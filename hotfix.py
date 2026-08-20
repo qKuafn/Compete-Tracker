@@ -417,52 +417,8 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
         for entries in weapon_dict.values():
             all_entries.extend(entries)
         lines = [f"- `{e['row']}` : {e['key']} ... {e['display']}" for e in all_entries]
-<<<<<<< Updated upstream
-
-        header = f"```{changed_path}```"
-        embeds = []
-        current_lines = [header]
-        # 改行を含めて正確に計算。title と overhead を考慮して max_desc を設定
-        title_text = f"Hotfix{status}"
-        overhead = len(title_text) + 200  # title, color, timestamp のオーバーヘッド
-        max_desc = min(4096, 6000 - overhead)
-        current_length = len(header)
-
-        for line in lines:
-            # 新しい行を追加する場合の改行込みサイズ
-            if current_lines:
-                candidate_desc = "\n".join(current_lines + [line])
-            else:
-                candidate_desc = line
-            candidate_length = len(candidate_desc)
-
-            if current_lines and candidate_length > max_desc:
-                print("     [INF] Embedの文字数制限のため、分割して送信します")
-                embeds.append({
-                    "title": title_text,
-                    "description": "\n".join(current_lines),
-                    "color": 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F,
-                    "timestamp": datetime.now(config.UTC).isoformat()
-                })
-                current_lines = [line]
-                current_length = len(line)
-            else:
-                current_lines.append(line)
-                current_length = candidate_length
-
-        if current_lines:
-            embeds.append({
-                "title": title_text,
-                "description": "\n".join(current_lines),
-                "color": 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F,
-                "timestamp": datetime.now(config.UTC).isoformat()
-            })
-        
-        analysis_embeds.extend(embeds)
-=======
         color = 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F
         analysis_embeds.extend(build_embeds(f"Hotfix{status}", changed_path, lines, color))
->>>>>>> Stashed changes
 
     # === 戦利品プール更新の武器画像付きのEmbed組み立て ===
     loot_embeds_files = []  # (embed, files) のタプルを保存
@@ -490,11 +446,6 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
 
                     lines = data["lines"]
                     weapon_path = data["weapon_path"]
-<<<<<<< Updated upstream
-
-                    description_header = f"```{changed_path}```"
-=======
->>>>>>> Stashed changes
                     filename = weapon_path.split('/')[-1].split('.')[0] + ".png"
                     color = 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F
                     embed_lines = [f"- `{changed_path}```"] if False else []
@@ -532,114 +483,6 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                             print(f"    [ERR] ❌️ 画像の一時保存に失敗 : {image_path}, {e}")
 
                     with open(image_path, "rb") as img:
-<<<<<<< Updated upstream
-                        files = {
-                            "file": (filename, img.read())
-                        }
-                        # description_text を分割（4000文字制限）
-                        max_desc_len = 4000
-                        description_text = description_header + "\n" + "\n".join(lines)
-                        
-                        if len(description_text) <= max_desc_len:
-                            # 分割不要
-                            embed = {
-                                "title": weapon,
-                                "description": description_text,
-                                "color": 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F,
-                                "timestamp": datetime.now(config.UTC).isoformat(),
-                                "image": {
-                                    "url": f"attachment://{filename}"
-                                },
-                                "footer":{
-                                    "text": "FNLive",
-                                    "icon_url": "https://media.discordapp.net/attachments/1398826721129791509/1398826776544940212/VLtjyUF.png?ex=6886c674&is=688574f4&hm=178dda435ced5653551856f935321e4dcd5de6fde7829046f841ca44343f2d64&=&format=webp&quality=lossless&width=320&height=320"
-                                }
-                            }
-                            if Send_LootChange:
-                                loot_embeds_files.append((embed, files))
-                        else:
-                            # 分割が必要
-                            parts = [description_header]
-                            current_part = description_header
-                            for line in lines:
-                                candidate = current_part + "\n" + line
-                                if len(candidate) > max_desc_len:
-                                    if len(current_part) > len(description_header):
-                                        parts.append(current_part)
-                                    current_part = description_header + "\n" + line
-                                else:
-                                    current_part = candidate
-                            if current_part:
-                                parts.append(current_part)
-                            
-                            for desc_part in parts:
-                                embed = {
-                                    "title": weapon,
-                                    "description": desc_part,
-                                    "color": 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F,
-                                    "timestamp": datetime.now(config.UTC).isoformat(),
-                                    "image": {
-                                        "url": f"attachment://{filename}"
-                                    },
-                                    "footer":{
-                                        "text": "FNLive",
-                                        "icon_url": "https://media.discordapp.net/attachments/1398826721129791509/1398826776544940212/VLtjyUF.png?ex=6886c674&is=688574f4&hm=178dda435ced5653551856f935321e4dcd5de6fde7829046f841ca44343f2d64&=&format=webp&quality=lossless&width=320&height=320"
-                                    }
-                                }
-                                if Send_LootChange:
-                                    loot_embeds_files.append((embed, files))
-
-    # === 解析通知Embedをまとめて送信 ===
-    if analysis_embeds:
-        # Embed 送信バッチ処理（最大 6000 文字超過を避けるため、複数バッチに分割）
-        payload_json_str = json.dumps({"embeds": analysis_embeds, "username": "Hotfix Tracker"}, ensure_ascii=False)
-        if len(payload_json_str) <= 6000:
-            payload = {
-                "embeds": analysis_embeds,
-                "username": "Hotfix Tracker"
-            }
-            data = {
-                "payload_json": json.dumps(payload, ensure_ascii=False)
-            }
-            if config2.Hotfix_Webhook:
-                response = requests.post(config.Hotfix_Webhook_URL, data=data)
-                if response.status_code == 204 or response.status_code == 200:
-                    print(f"      [INF] ⭕️ Discord通知成功 (解析 {len(analysis_embeds)}件)")
-                else:
-                    print(f"      [ERR] ❌ Discord通知失敗 : {response.status_code} {response.text}")
-            if config2.Log_Webhook:
-                response = requests.post(config.Log_Webhook_URL, data=data)
-                if response.status_code == 204 or response.status_code == 200:
-                    print(f"      [INF] ⭕️ Discord通知成功 (解析 {len(analysis_embeds)}件)")
-                else:
-                    print(f"      [ERR] ❌ Discord通知失敗 : {response.status_code} {response.text}")
-        else:
-            # バッチ分割が必要な場合
-            print(f"     [INF] Embed合計サイズが制限を超えたため、複数バッチに分割して送信します")
-            batch = []
-            for embed in analysis_embeds:
-                batch.append(embed)
-                batch_json = json.dumps({"embeds": batch, "username": "Hotfix Tracker"}, ensure_ascii=False)
-                if len(batch_json) > 6000:
-                    batch.pop()  # 直前の embed を削除
-                    data = {
-                        "payload_json": json.dumps({"embeds": batch, "username": "Hotfix Tracker"}, ensure_ascii=False)
-                    }
-                    if config2.Hotfix_Webhook:
-                        requests.post(config.Hotfix_Webhook_URL, data=data)
-                    if config2.Log_Webhook:
-                        requests.post(config.Log_Webhook_URL, data=data)
-                    batch = [embed]  # 新しいバッチを開始
-            if batch:
-                data = {
-                    "payload_json": json.dumps({"embeds": batch, "username": "Hotfix Tracker"}, ensure_ascii=False)
-                }
-                if config2.Hotfix_Webhook:
-                    requests.post(config.Hotfix_Webhook_URL, data=data)
-                if config2.Log_Webhook:
-                    requests.post(config.Log_Webhook_URL, data=data)
-            print(f"      [INF] ⭕️ Discord通知成功 (解析 {len(analysis_embeds)}件)")
-=======
                         image_data = img.read()
                         for embed in build_embeds(weapon, changed_path, lines, color):
                             embed["image"] = {"url": f"attachment://{filename}"}
@@ -665,7 +508,6 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                     print(f"      [INF] ⭕️ Discord通知成功 (解析 バッチ) ")
                 else:
                     print(f"      [ERR] ❌ Discord通知失敗 : {response.status_code} {response.text}")
->>>>>>> Stashed changes
 
     # === 戦利品通知Embedをまとめて送信 ===
     for embed, files in loot_embeds_files:
