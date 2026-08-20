@@ -1,0 +1,4350 @@
+{
+  "EventName": "ソロ ランクカップ(ゼロビルド)",
+  "eventId": "epicgames_S42_RankedCupSolo_ZB_ASIA",
+  "displayDataId": "s42_ranked_solo_zb",
+  "square_poster_image": "https://cdn2.unrealengine.com/fnce-33-30-tileview-ranked-cups-03-800x800-800x800-80182e6bd7c7.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fnce-33-30-textures-ranked-3up-1560x1024-1fc4d30d8f76.jpg",
+  "loading_screen_image": "https://cdn2.unrealengine.com/en-fneco-33-00-competitive-discoverytile-rankedcups-1920x1080-1920x1080-a078f4d982b2.jpg",
+  "playlist_title_image": "https://cdn2.unrealengine.com/jp-fneco-33-00-competitive-discoverytile-rankedcups-1920x1080-1920x1080-6d462300e968.jpg",
+  "metadata": {
+    "requireSystemFeatures": [
+      "SecureBoot",
+      "CryptoProcessor",
+      "IOMMU",
+      "AndroidSecureDevice",
+      "IOSMinimumOSVersion"
+    ],
+    "tournamentType": "RankedCup",
+    "webId": "S42_RankedCupSolo_ZB",
+    "minimumAccountLevel": 50,
+    "TrackedStats": [],
+    "DisqualifyType": "Window",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "XboxOneGDK",
+    "PS4",
+    "XCloud",
+    "Helios",
+    "Luna",
+    "IOS",
+    "XB1",
+    "XboxOne",
+    "XSX",
+    "Android",
+    "LunaMobile",
+    "Switch2",
+    "PS5",
+    "XCloudMobile",
+    "Mac",
+    "HeliosMobile",
+    "GFN",
+    "Switch",
+    "GFNMobile",
+    "Windows"
+  ],
+  "S42_RankedCupSolo_ZB_Event1_ASIA": {
+    "beginTime_UNIX": 1787562000,
+    "beginTime_JST": "2026-08-24 18:00:00",
+    "endTime_UNIX": 1787572800,
+    "endTime_JST": "2026-08-24 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_FN_NoBuildBR_RC_Solo",
+    "matchCap": 11,
+    "additionalRequirements": [
+      "eula:s42_rankedcup_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-br-combined:0"
+      ]
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "Lead_Default": {
+        "scoringRuleSetId": "EmptyScoringRules",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event1_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": []
+      },
+      "Ranked_Cup_Solo_Bronze_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Bronze_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event1_ASIA_1_Bronze",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Silver_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Silver_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event1_ASIA_1_Silver",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.01,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Gold_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Gold_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event1_ASIA_1_gold",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.02,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Platinum_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Platinum_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event1_ASIA_1_platinum",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.03,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Diamond_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Diamond_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event1_ASIA_1_diamond",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Elite_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Elite_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event1_ASIA_1_elite",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Champion_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Champion_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event1_ASIA_1_champion",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Unreal_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Unreal_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event1_ASIA_1_unreal",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      }
+    }
+  },
+  "S42_RankedCupSolo_ZB_Event2_ASIA": {
+    "beginTime_UNIX": 1788166800,
+    "beginTime_JST": "2026-08-31 18:00:00",
+    "endTime_UNIX": 1788177600,
+    "endTime_JST": "2026-08-31 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_FN_NoBuildBR_RC_Solo",
+    "matchCap": 11,
+    "additionalRequirements": [
+      "eula:s42_rankedcup_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-br-combined:0"
+      ]
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "Lead_Default": {
+        "scoringRuleSetId": "EmptyScoringRules",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event2_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": []
+      },
+      "Ranked_Cup_Solo_Bronze_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Bronze_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event2_ASIA_1_Bronze",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Silver_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Silver_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event2_ASIA_1_Silver",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.01,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Gold_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Gold_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event2_ASIA_1_gold",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.02,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Platinum_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Platinum_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event2_ASIA_1_platinum",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.03,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Diamond_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Diamond_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event2_ASIA_1_diamond",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Elite_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Elite_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event2_ASIA_1_elite",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Champion_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Champion_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event2_ASIA_1_champion",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Unreal_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Unreal_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event2_ASIA_1_unreal",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      }
+    }
+  },
+  "S42_RankedCupSolo_ZB_Event3_ASIA": {
+    "beginTime_UNIX": 1788685200,
+    "beginTime_JST": "2026-09-06 18:00:00",
+    "endTime_UNIX": 1788696000,
+    "endTime_JST": "2026-09-06 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_FN_NoBuildBR_RC_Solo",
+    "matchCap": 11,
+    "additionalRequirements": [
+      "eula:s42_rankedcup_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-br-combined:0"
+      ]
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "Lead_Default": {
+        "scoringRuleSetId": "EmptyScoringRules",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event3_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": []
+      },
+      "Ranked_Cup_Solo_Bronze_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Bronze_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event3_ASIA_1_Bronze",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Silver_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Silver_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event3_ASIA_1_Silver",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.01,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Gold_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Gold_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event3_ASIA_1_gold",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.02,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Platinum_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Platinum_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event3_ASIA_1_platinum",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.03,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Diamond_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Diamond_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event3_ASIA_1_diamond",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Elite_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Elite_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event3_ASIA_1_elite",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Champion_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Champion_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event3_ASIA_1_champion",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Unreal_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Unreal_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event3_ASIA_1_unreal",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      }
+    }
+  },
+  "S42_RankedCupSolo_ZB_Event4_ASIA": {
+    "beginTime_UNIX": 1789376400,
+    "beginTime_JST": "2026-09-14 18:00:00",
+    "endTime_UNIX": 1789387200,
+    "endTime_JST": "2026-09-14 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_FN_NoBuildBR_RC_Solo",
+    "matchCap": 11,
+    "additionalRequirements": [
+      "eula:s42_rankedcup_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-br-combined:0"
+      ]
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "Lead_Default": {
+        "scoringRuleSetId": "EmptyScoringRules",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event4_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": []
+      },
+      "Ranked_Cup_Solo_Bronze_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Bronze_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event4_ASIA_1_Bronze",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Silver_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Silver_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event4_ASIA_1_Silver",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.01,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Gold_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Gold_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event4_ASIA_1_gold",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.02,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Platinum_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Platinum_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event4_ASIA_1_platinum",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.03,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Diamond_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Diamond_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event4_ASIA_1_diamond",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Elite_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Elite_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event4_ASIA_1_elite",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Champion_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Champion_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event4_ASIA_1_champion",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Unreal_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Unreal_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event4_ASIA_1_unreal",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      }
+    }
+  },
+  "S42_RankedCupSolo_ZB_Event5_ASIA": {
+    "beginTime_UNIX": 1790586000,
+    "beginTime_JST": "2026-09-28 18:00:00",
+    "endTime_UNIX": 1790596800,
+    "endTime_JST": "2026-09-28 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_FN_NoBuildBR_RC_Solo",
+    "matchCap": 11,
+    "additionalRequirements": [
+      "eula:s42_rankedcup_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-br-combined:0"
+      ]
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "Lead_Default": {
+        "scoringRuleSetId": "EmptyScoringRules",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event5_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": []
+      },
+      "Ranked_Cup_Solo_Bronze_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Bronze_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event5_ASIA_1_Bronze",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Silver_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Silver_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event5_ASIA_1_Silver",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.01,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Gold_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Gold_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event5_ASIA_1_gold",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.02,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Platinum_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Platinum_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event5_ASIA_1_platinum",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.03,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Diamond_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Diamond_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event5_ASIA_1_diamond",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Elite_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Elite_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event5_ASIA_1_elite",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Champion_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Champion_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event5_ASIA_1_champion",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Unreal_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Unreal_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event5_ASIA_1_unreal",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      }
+    }
+  },
+  "S42_RankedCupSolo_ZB_Event6_ASIA": {
+    "beginTime_UNIX": 1791190800,
+    "beginTime_JST": "2026-10-05 18:00:00",
+    "endTime_UNIX": 1791201600,
+    "endTime_JST": "2026-10-05 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_FN_NoBuildBR_RC_Solo",
+    "matchCap": 11,
+    "additionalRequirements": [
+      "eula:s42_rankedcup_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-br-combined:0"
+      ]
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "Lead_Default": {
+        "scoringRuleSetId": "EmptyScoringRules",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event6_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": []
+      },
+      "Ranked_Cup_Solo_Bronze_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Bronze_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event6_ASIA_1_Bronze",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Silver_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Silver_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event6_ASIA_1_Silver",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.01,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Gold_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Gold_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event6_ASIA_1_gold",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.02,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Platinum_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Platinum_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event6_ASIA_1_platinum",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.03,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Diamond_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Diamond_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event6_ASIA_1_diamond",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Elite_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Elite_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event6_ASIA_1_elite",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Champion_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Champion_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event6_ASIA_1_champion",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Unreal_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Unreal_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event6_ASIA_1_unreal",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      }
+    }
+  },
+  "S42_RankedCupSolo_ZB_Event7_ASIA": {
+    "beginTime_UNIX": 1791795600,
+    "beginTime_JST": "2026-10-12 18:00:00",
+    "endTime_UNIX": 1791806400,
+    "endTime_JST": "2026-10-12 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_FN_NoBuildBR_RC_Solo",
+    "matchCap": 11,
+    "additionalRequirements": [
+      "eula:s42_rankedcup_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-br-combined:0"
+      ]
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "Lead_Default": {
+        "scoringRuleSetId": "EmptyScoringRules",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event7_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": []
+      },
+      "Ranked_Cup_Solo_Bronze_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Bronze_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event7_ASIA_1_Bronze",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Silver_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Silver_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event7_ASIA_1_Silver",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.01,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Gold_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Gold_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event7_ASIA_1_gold",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.02,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Platinum_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Platinum_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event7_ASIA_1_platinum",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.03,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Diamond_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Diamond_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event7_ASIA_1_diamond",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Elite_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Elite_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event7_ASIA_1_elite",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Champion_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Champion_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event7_ASIA_1_champion",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Unreal_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Unreal_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event7_ASIA_1_unreal",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      }
+    }
+  },
+  "S42_RankedCupSolo_ZB_Event8_ASIA": {
+    "beginTime_UNIX": 1792400400,
+    "beginTime_JST": "2026-10-19 18:00:00",
+    "endTime_UNIX": 1792411200,
+    "endTime_JST": "2026-10-19 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_FN_NoBuildBR_RC_Solo",
+    "matchCap": 11,
+    "additionalRequirements": [
+      "eula:s42_rankedcup_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-br-combined:0"
+      ]
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "Lead_Default": {
+        "scoringRuleSetId": "EmptyScoringRules",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event8_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": []
+      },
+      "Ranked_Cup_Solo_Bronze_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Bronze_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event8_ASIA_1_Bronze",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Silver_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Silver_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event8_ASIA_1_Silver",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.01,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Gold_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Gold_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event8_ASIA_1_gold",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.02,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Platinum_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Platinum_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event8_ASIA_1_platinum",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.03,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Diamond_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Diamond_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event8_ASIA_1_diamond",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.05,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Elite_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Elite_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event8_ASIA_1_elite",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 6,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.3,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Champion_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Champion_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event8_ASIA_1_champion",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.2,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.1,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.35,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      },
+      "Ranked_Cup_Solo_Unreal_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_RankedCupSolo_Unreal_1",
+        "WindowLocation": "S42_RankedCupSolo_ZB_Event8_ASIA_1_unreal",
+        "isMainWindowLeaderboard": false,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaGlider:glider_season_42"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.25,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.15,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_specterdunk"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styled"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "percentile",
+            "threshold": 0.4,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec"
+          }
+        ]
+      }
+    }
+  }
+}

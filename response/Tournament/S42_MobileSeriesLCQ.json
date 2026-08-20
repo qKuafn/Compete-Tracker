@@ -1,0 +1,119 @@
+{
+  "EventName": "Mobile Series Last Chance Qualifier",
+  "eventId": "epicgames_S42_MobileSeriesLCQ_ASIA",
+  "displayDataId": "s42_mobile_lcq",
+  "square_poster_image": "https://cdn2.unrealengine.com/fnce-39-00-mobileseries-800x800-800x800-b6eb77da594c.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fnce-39-00-mobileseries-1560x1024-1560x1024-012982522bb4.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/fnce-39-00-mobileseries-roundstage-discoverplaylisttile-1920x1080-1920x1080-6f732a5fea3e.jpg",
+  "metadata": {
+    "requireSystemFeatures": [
+      "AndroidSecureDevice",
+      "IOSMinimumOSVersion"
+    ],
+    "tournamentType": "WorkshopCup",
+    "webId": "S42_MobileSeriesLCQ",
+    "minimumAccountLevel": 50,
+    "DisqualifyType": "Window",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "IOS",
+    "Android"
+  ],
+  "S42_MobileSeriesLCQ_Round1_ASIA": {
+    "beginTime_UNIX": 1788595200,
+    "beginTime_JST": "2026-09-05 17:00:00",
+    "endTime_UNIX": 1788599700,
+    "endTime_JST": "2026-09-05 18:15:00",
+    "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+    "matchCap": 8,
+    "additionalRequirements": [
+      "eula:s39_mobile_rules",
+      "adps:g-a81a33a3b9a7",
+      [
+        "currentRanking:ranked-br-combined:6",
+        "currentRanking:ranked-blastberry-combined:6"
+      ],
+      "input-touch",
+      "mfa"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S41_MobileSeriesOpens_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_MobileSeriesOpensReload",
+        "WindowLocation": "S42_MobileSeriesLCQ_Round1_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 10,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_crudedraft"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 500,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaPickaxe:pickaxe_crudedraft"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 160,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S42_MobileSeriesLCQ_Round2_ASIA"
+          }
+        ]
+      }
+    }
+  },
+  "S42_MobileSeriesLCQ_Round2_ASIA": {
+    "beginTime_UNIX": 1788681600,
+    "beginTime_JST": "2026-09-06 17:00:00",
+    "endTime_UNIX": 1788686100,
+    "endTime_JST": "2026-09-06 18:15:00",
+    "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+    "matchCap": 8,
+    "additionalRequirements": [
+      "eula:s39_mobile_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      "input-touch"
+    ],
+    "requireAllTokens": [
+      "S42_MobileSeriesLCQ_Round2_ASIA"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S42_MobileSeriesLCQ_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_MobileSeriesOpensReload",
+        "WindowLocation": "S42_MobileSeriesLCQ_Round2_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": []
+      }
+    }
+  }
+}

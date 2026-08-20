@@ -1,0 +1,67 @@
+{
+  "EventName": "Mobile Series Group Stage",
+  "eventId": "epicgames_S42_MobileSeriesGroup2_ASIA",
+  "displayDataId": "s42_mobile_stage",
+  "square_poster_image": "https://cdn2.unrealengine.com/fnce-39-00-mobileseries-800x800-800x800-b6eb77da594c.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fnce-39-00-mobileseries-1560x1024-1560x1024-012982522bb4.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/fnce-39-00-mobileseries-roundstage-discoverplaylisttile-1920x1080-1920x1080-6f732a5fea3e.jpg",
+  "metadata": {
+    "requireSystemFeatures": [
+      "AndroidSecureDevice",
+      "IOSMinimumOSVersion"
+    ],
+    "tournamentType": "CashCup",
+    "webId": "S42_MobileSeriesGroups",
+    "minimumAccountLevel": 50,
+    "DisqualifyType": "Window",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "IOS",
+    "Android"
+  ],
+  "S42_MobileSeriesGroup2_ASIA": {
+    "beginTime_UNIX": 1789200361,
+    "beginTime_JST": "2026-09-12 17:06:01",
+    "endTime_UNIX": 1789205161,
+    "endTime_JST": "2026-09-12 18:26:01",
+    "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+    "matchCap": 6,
+    "additionalRequirements": [
+      "eula:s39_mobile_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      "input-touch"
+    ],
+    "requireAllTokens": [
+      "S42_MobileSeriesGroup2_ASIA"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S41_MobileSeriesHeats_LeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_MobileSeriesReloadFinal",
+        "WindowLocation": "S42_MobileSeriesGroup2_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S41_MobileSeriesSemiFinal_ASIA"
+          }
+        ]
+      }
+    }
+  }
+}
