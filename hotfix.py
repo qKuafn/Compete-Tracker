@@ -131,7 +131,8 @@ async def parse_hotfix(session, new_data, diff_text, Actions):
                 "value": value          # 数値 例: "0.0"
             })
         if "TableUpdate;" in line or "AddRow;" in line:
-            print("   [INF] テーブル更新・行追加は無視")
+            # print("   [INF] テーブル更新・行追加は無視")
+            continue
     await check_depth_changes(session, new_data, parsed_hotfix, Actions)
 
 async def check_depth_changes(session, new_data, diff_data, Actions):
@@ -158,17 +159,17 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
         return True
 
     for (changed_path, row, key), change in merged.items():
-        Send_LootChange = should_Send_LootChange(changed_path)
-        if not Send_LootChange:
-            continue
-        print(f"    [INF] 解析対象 : path={changed_path}, row={row}, Send_LootChange={Send_LootChange}")
-        added = change["追加"]
-        removed = change["削除"]
-        if added:
-            origin_row = added.get("origin_row")
-        elif removed:
-            origin_row = removed.get("origin_row")
         try:
+            Send_LootChange = should_Send_LootChange(changed_path)
+            if not Send_LootChange:
+                continue
+            print(f"    [INF] 解析対象 : path={changed_path}, row={row}, Send_LootChange={Send_LootChange}")
+            added = change["追加"]
+            removed = change["削除"]
+            if added:
+                origin_row = added.get("origin_row")
+            elif removed:
+                origin_row = removed.get("origin_row")
             weapon = ""
             weapon_path = ""
             image_path = ""
@@ -176,9 +177,9 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
             # === 戦利品更新の場合、武器名の取得・武器画像パスの取得 ===
             if "LootPackages" in changed_path:
 
-                if not config.loc_data:
-                    config.loc_data = await get_loc_list()
-                    print(f"    [INF] ⭕️ localization 取得完了（{len(config.loc_data)}件）")
+                #if not config.loc_data:
+                #    config.loc_data = await get_loc_list()
+                #    print(f"    [INF] ⭕️ localization 取得完了（{len(config.loc_data)}件）")
 
                 if changed_path not in file_data_cache:
                     file_data = fetch_export_data(changed_path)
@@ -211,7 +212,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                 try:
                     if weapon_data:
                         weapon_name_key = weapon_data[0].get("Properties", {}).get("ItemName", {}).get("key", "不明")
-                        weapon_name = config.loc_data.get(weapon_name_key, "不明")
+                        weapon_name = get_localize(weapon_name_key)
                     else:
                         weapon_name = ""
                 except Exception as e:
@@ -295,6 +296,27 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
 
             return None
 
+        def get_default_weight_for_key(row_data, key, origin_row):
+            # CurveTable の場合は Keys 内の time を検索
+            if "CurveTable=" in origin_row:
+                return find_value_by_time(row_data, key)
+
+            # dict の場合はキー取得を優先
+            if isinstance(row_data, dict):
+                try:
+                    val = row_data.get(key, "エラー")
+                except Exception:
+                    val = "エラー"
+                if val == "エラー" and isinstance(row_data.get("Keys"), list):
+                    return find_value_by_time(row_data.get("Keys"), key)
+                return val
+
+            # list の場合は time 検索を試みる
+            if isinstance(row_data, list):
+                return find_value_by_time(row_data, key)
+
+            return "エラー"
+
         # === 戦利品プールの更新のみ有効化・無効化のチェック ===
         # === それ以外は「元 → 更新」をdisplayに追加 ===
         if added and removed:
@@ -309,12 +331,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
             status = "更新"
             key = added["key"]
         elif added:
-            if "CurveTable=" in origin_row:
-                default_weight = find_value_by_time(row_data, added["key"])
-            elif "DataTable=" in origin_row:
-                default_weight = row_data.get(added["key"], "エラー")
-                if default_weight == "エラー":
-                    default_weight = find_value_by_time(row_data, added["key"])
+            default_weight = get_default_weight_for_key(row_data, added["key"], origin_row)
             display = f"{format_number(default_weight)} → {format_number(added['value'])}"
             if default_weight != added['value']:
                 if added.get("key") == "Weight":
@@ -325,12 +342,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
             status = "追加"
             key = added["key"]
         elif removed:
-            if "CurveTable=" in origin_row:
-                default_weight = find_value_by_time(row_data, removed["key"])
-            elif "DataTable=" in origin_row:
-                default_weight = row_data.get(removed["key"], "エラー")
-                if default_weight == "エラー":
-                    default_weight = find_value_by_time(row_data, removed["key"])
+            default_weight = get_default_weight_for_key(row_data, removed["key"], origin_row)
             display = f"{format_number(removed['value'])} → {format_number(default_weight)}"
             if removed['value'] != default_weight:
                 if removed.get("key") == "Weight":
@@ -352,13 +364,60 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
             "weapon": weapon
         })
 
-    # === Embed組み立て ===
+    def build_embeds(title, changed_path, lines, color, max_description=3800):
+        header = f"```{changed_path}```"
+        embeds = []
+        current_lines = [header]
+        current_length = len(header) + 1
+
+        for line in lines:
+            line_length = len(line) + 1
+            if current_length + line_length > max_description:
+                print("     [INF] Embedの文字数制限のため、分割して送信します")
+                embeds.append({
+                    "title": title,
+                    "description": "\n".join(current_lines),
+                    "color": color,
+                    "timestamp": datetime.now(config.UTC).isoformat()
+                })
+                current_lines = [header, line]
+                current_length = len(header) + 1 + line_length
+            else:
+                current_lines.append(line)
+                current_length += line_length
+
+        if current_lines:
+            embeds.append({
+                "title": title,
+                "description": "\n".join(current_lines),
+                "color": color,
+                "timestamp": datetime.now(config.UTC).isoformat()
+            })
+        return embeds
+
+    def send_embeds_in_batches(url, username, embeds, files=None, batch_size=8):
+        for start in range(0, len(embeds), batch_size):
+            batch = embeds[start:start + batch_size]
+            payload = {
+                "embeds": batch,
+                "username": username
+            }
+            data = {
+                "payload_json": json.dumps(payload, ensure_ascii=False)
+            }
+            if files is None:
+                response = requests.post(url, data=data)
+            else:
+                response = requests.post(url, data=data, files=files)
+            yield response
+
     analysis_embeds = []
     for (status, changed_path), weapon_dict in grouped.items():
         all_entries = []
         for entries in weapon_dict.values():
             all_entries.extend(entries)
         lines = [f"- `{e['row']}` : {e['key']} ... {e['display']}" for e in all_entries]
+<<<<<<< Updated upstream
 
         header = f"```{changed_path}```"
         embeds = []
@@ -400,6 +459,10 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
             })
         
         analysis_embeds.extend(embeds)
+=======
+        color = 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F
+        analysis_embeds.extend(build_embeds(f"Hotfix{status}", changed_path, lines, color))
+>>>>>>> Stashed changes
 
     # === 戦利品プール更新の武器画像付きのEmbed組み立て ===
     loot_embeds_files = []  # (embed, files) のタプルを保存
@@ -410,7 +473,6 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
 
         for weapon, entries in weapon_dict.items():
             if weapon:
-                # === image_pathごとに、対応する lines と weapon_path を image_lines_map に保存 ===
                 image_lines_map = defaultdict(lambda: {"lines": [], "weapon_path": None})
                 for e in entries:
                     image_path = e.get("image_path", "")
@@ -428,9 +490,15 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
 
                     lines = data["lines"]
                     weapon_path = data["weapon_path"]
+<<<<<<< Updated upstream
 
                     description_header = f"```{changed_path}```"
+=======
+>>>>>>> Stashed changes
                     filename = weapon_path.split('/')[-1].split('.')[0] + ".png"
+                    color = 0x2ECC71 if status == "追加" else 0xE74C3C if status == "削除" else 0xF1C40F
+                    embed_lines = [f"- `{changed_path}```"] if False else []
+                    description_lines = [f"- `{e['row']}`\n  - {e['key']} ... {e['display']}" for e in entries]
 
                     if not Actions and os.path.isfile(image_path):
                         print(f"    [INF] 画像を読み込み : {image_path}")
@@ -464,6 +532,7 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                             print(f"    [ERR] ❌️ 画像の一時保存に失敗 : {image_path}, {e}")
 
                     with open(image_path, "rb") as img:
+<<<<<<< Updated upstream
                         files = {
                             "file": (filename, img.read())
                         }
@@ -570,6 +639,33 @@ async def check_depth_changes(session, new_data, diff_data, Actions):
                 if config2.Log_Webhook:
                     requests.post(config.Log_Webhook_URL, data=data)
             print(f"      [INF] ⭕️ Discord通知成功 (解析 {len(analysis_embeds)}件)")
+=======
+                        image_data = img.read()
+                        for embed in build_embeds(weapon, changed_path, lines, color):
+                            embed["image"] = {"url": f"attachment://{filename}"}
+                            embed["footer"] = {
+                                "text": "FNLive",
+                                "icon_url": "https://media.discordapp.net/attachments/1398826721129791509/1398826776544940212/VLtjyUF.png?ex=6886c674&is=688574f4&hm=178dda435ced5653551856f935321e4dcd5de6fde7829046f841ca44343f2d64&=&format=webp&quality=lossless&width=320&height=320"
+                            }
+                            files = {"file": (filename, image_data)}
+                            if Send_LootChange:
+                                loot_embeds_files.append((embed, files))
+
+    # === 解析通知Embedをまとめて送信 ===
+    if analysis_embeds:
+        if config2.Hotfix_Webhook:
+            for response in send_embeds_in_batches(config.Hotfix_Webhook_URL, "Hotfix Tracker", analysis_embeds):
+                if response.status_code in (200, 204):
+                    print(f"      [INF] ⭕️ Discord通知成功 (解析 バッチ) ")
+                else:
+                    print(f"      [ERR] ❌ Discord通知失敗 : {response.status_code} {response.text}")
+        if config2.Log_Webhook:
+            for response in send_embeds_in_batches(config.Log_Webhook_URL, "Hotfix Tracker", analysis_embeds):
+                if response.status_code in (200, 204):
+                    print(f"      [INF] ⭕️ Discord通知成功 (解析 バッチ) ")
+                else:
+                    print(f"      [ERR] ❌ Discord通知失敗 : {response.status_code} {response.text}")
+>>>>>>> Stashed changes
 
     # === 戦利品通知Embedをまとめて送信 ===
     for embed, files in loot_embeds_files:
@@ -624,6 +720,28 @@ async def get_loc_list():
                     loc_dict[key] = val
 
     return loc_dict
+
+def get_localize(key):
+    url = "https://export-service.dillyapis.com/v1/export/localize"
+    payload = {
+        "culture": "ja",
+        "ns": "",
+        "values": [
+            {
+                "key": key
+            }
+        ]
+    }
+    print(f"[INF] ローカライズ取得 : {key}")
+
+    response = requests.post(url, json=payload)
+    if response.status_code == 200:
+        data = response.json()
+        localized_data = data.get("jsonOutput", [])[0]["value"]
+        return localized_data
+    else:
+        print(f"[ERR] ローカライズ取得失敗 : {key} - {response.status_code} - {response.text}")
+        return "不明"
 
 if __name__ == "__main__":
     config2.test = True
