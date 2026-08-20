@@ -86,13 +86,22 @@ def fetch_Playlist():
 
 # === 更新が入っているPlaylist Id一覧を取得 ===
 def extract_asset_ids(data: dict) -> List[str]:
+    if not data:
+        return []
     return list(data.get("FortPlaylistAthena", {}).get("assets", {}).keys())
 
 # === 更新が入っているPlaylist Id一覧を取得 ===
 def detect_changed_ids(current_data: List[str], new_data: dict, old_data: dict) -> List[str]:
     updated_ids = []
-    current_assets = new_data.get("FortPlaylistAthena", {}).get("assets", {})
-    previous_assets = old_data.get("FortPlaylistAthena", {}).get("assets", {})
+    if not new_data:
+        current_assets = {}
+    else:
+        current_assets = new_data.get("FortPlaylistAthena", {}).get("assets", {})
+
+    if not old_data:
+        previous_assets = {}
+    else:
+        previous_assets = old_data.get("FortPlaylistAthena", {}).get("assets", {})
 
     # 最新データのプレイリスト毎に、新・旧の meta > promotedAt を比較
     for key in current_data:
