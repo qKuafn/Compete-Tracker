@@ -11295,7 +11295,7 @@
               {
                 "rewardType": "game",
                 "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_character_specterdunk_styleb",
+                "value": "CosmeticVariantToken:vtid_character_specterdunk_stylec",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -11336,7 +11336,7 @@
               {
                 "rewardType": "game",
                 "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_styleb",
+                "value": "CosmeticVariantToken:vtid_pickaxe_specterdunk_stylec",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -11360,7 +11360,7 @@
               {
                 "rewardType": "game",
                 "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_backbling_specterdunk_styleb",
+                "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -15299,7 +15299,7 @@
       "eventWindows": [
         {
           "eventWindowId": "S42_ReloadDuosVictoryCup_Event1_Round1_EU",
-          "eventTemplateId": "EventTemplate_S42_ReloadDuosVictoryCupOasis_Round1",
+          "eventTemplateId": "S42_DuosReloadVictoryCup_EventTemplate_Round1",
           "countdownBeginTime": "2026-08-24T15:00:00Z",
           "beginTime": "2026-08-24T17:00:00Z",
           "endTime": "2026-08-24T19:00:00Z",
@@ -15342,7 +15342,7 @@
         },
         {
           "eventWindowId": "S42_ReloadDuosVictoryCup_Event1_Round2_EU",
-          "eventTemplateId": "EventTemplate_S42_ReloadDuosVictoryCupOasis_Round2",
+          "eventTemplateId": "S42_DuosReloadVictoryCup_EventTemplate_Round2",
           "countdownBeginTime": "2026-08-24T19:00:00Z",
           "beginTime": "2026-08-24T20:00:00Z",
           "endTime": "2026-08-24T21:00:00Z",
@@ -26597,6 +26597,43 @@
       "clampsToZero": false
     },
     {
+      "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_PBM",
+      "matchCap": 10,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "S42_DuosReloadVictoryCup_EventTemplate_Round1",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_Duos",
       "matchCap": 6,
       "tiebreakerFormula": {
@@ -27108,6 +27145,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupReloadDuos_ZB",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_NPM",
+      "matchCap": 3,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "S42_DuosReloadVictoryCup_EventTemplate_Round2",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
