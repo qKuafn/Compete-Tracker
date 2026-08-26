@@ -119,6 +119,145 @@
         ]
       }
     ],
+    "S42_CrashBandicootMobileCup_ScoringRules": [
+      {
+        "trackedStat": "PLACEMENT_STAT_INDEX",
+        "matchRule": "lte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 7,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 2,
+            "pointsEarned": 5,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 3,
+            "pointsEarned": 5,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 4,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 5,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 6,
+            "pointsEarned": 3,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 7,
+            "pointsEarned": 3,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 8,
+            "pointsEarned": 3,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 9,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 10,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 11,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 12,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 13,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 14,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 15,
+            "pointsEarned": 2,
+            "multiplicative": false
+          }
+        ]
+      },
+      {
+        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+        "matchRule": "gte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 2,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 3,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 4,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 5,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 6,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 7,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 8,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 9,
+            "pointsEarned": 1,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 10,
+            "pointsEarned": 1,
+            "multiplicative": false
+          }
+        ]
+      }
+    ],
     "ScoringRules_RankedCupDuosReload_Diamond_1": [
       {
         "trackedStat": "DIAMOND_PLACEMENT_STAT_INDEX",
@@ -12204,25 +12343,6 @@
         ]
       }
     ],
-    "S42_SoloVictoryCupBR_Event1Round1_EU": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 4000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S42_SoloVictoryCupBR_Event1Round2_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "S42_ReloadCashCup_DuosZB_Event2Round2_EU": [
       {
         "scoringType": "rank",
@@ -12315,6 +12435,68 @@
                 "value": "S42_PerformanceEvaluation_Event3Round2_EU",
                 "quantity": 1,
                 "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S42_SoloVictoryCupBR_Event1Round1_EU": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 4000,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S42_SoloVictoryCupBR_Event1Round2_EU",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S42_CrashBandicootMobileCupAll_EU": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 5,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_sprucebark",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_sprucebark",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaItemWrap:wrap_sprucebark",
+                "quantity": 1,
+                "notifiesPlayer": true
               }
             ]
           }
@@ -12601,6 +12783,49 @@
                 "value": "S39_FNCS_Division3_EU",
                 "quantity": 1,
                 "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S42_CrashBandicootMobileCup_EU": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 5,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaDance:spray_sprucebark",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 200,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaCharacter:character_sprucebark",
+                "quantity": 1,
+                "notifiesPlayer": true
+              },
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaItemWrap:wrap_sprucebark",
+                "quantity": 1,
+                "notifiesPlayer": true
               }
             ]
           }
@@ -15126,6 +15351,177 @@
   "events": [
     {
       "gameId": "Fortnite",
+      "eventId": "epicgames_S42_CrashBandicootMobileCup_EU",
+      "beginTime": "2026-08-28T16:00:00Z",
+      "endTime": "2026-08-28T17:15:00Z",
+      "displayDataId": "s42_bandicoot_mobile",
+      "eventGroup": "Season42_CrashBandicootMobileCup",
+      "announcementTime": "2026-08-25T14:00:00Z",
+      "regions": [
+        "EU"
+      ],
+      "regionMappings": {
+        "EU": "EUCOMP"
+      },
+      "platforms": [
+        "Android",
+        "IOS"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "ShopCup",
+        "webId": "S42_CrashBandicootMobileCup",
+        "minimumAccountLevel": 15,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S42_CrashBandicootMobileCup_EU",
+          "eventTemplateId": "EventTemplate_S42_CrashBandicootMobileCup",
+          "countdownBeginTime": "2026-08-28T15:00:00Z",
+          "beginTime": "2026-08-28T16:00:00Z",
+          "endTime": "2026-08-28T17:15:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s42_crashbandicoot_rules",
+            "adps:g-a81a33a3b9a7",
+            "input-touch",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S42_CrashBandicootMobileCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s42_crashbandicootmobilecup_eu"
+      }
+    },
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_S42_CrashBandicootMobileCupAll_EU",
+      "beginTime": "2026-08-28T16:00:00Z",
+      "endTime": "2026-08-28T17:15:00Z",
+      "displayDataId": "s42_bandicoot_mobile",
+      "eventGroup": "Season42_CrashBandicootMobileCupAll",
+      "announcementTime": "2026-08-25T14:00:00Z",
+      "regions": [
+        "EU"
+      ],
+      "regionMappings": {
+        "EU": "EUCOMP"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "AndroidSecureDevice",
+          "IOSMinimumOSVersion"
+        ],
+        "tournamentType": "ShopCup",
+        "IsDuplicate": true,
+        "webId": "S42_CrashBandicootMobileCupAll",
+        "minimumAccountLevel": 15,
+        "DisqualifyType": "Window",
+        "AccountLockType": "Window"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "S42_CrashBandicootMobileCupAll_EU",
+          "eventTemplateId": "EventTemplate_S42_CrashBandicootMobileCup",
+          "countdownBeginTime": "2026-08-28T15:00:00Z",
+          "beginTime": "2026-08-28T16:00:00Z",
+          "endTime": "2026-08-28T17:15:00Z",
+          "round": 0,
+          "payoutDelay": 32,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s42_crashbandicoot_rules",
+            "adps:g-a81a33a3b9a7",
+            "input-touch",
+            "mfa"
+          ],
+          "teammateEligibility": "all",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "S42_CrashBandicootMobileCup_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [
+            "fake_token"
+          ],
+          "requireAnyTokens": [],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "regionMappings": {},
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers"
+          }
+        }
+      ],
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_s42_crashbandicootmobilecupall_eu"
+      }
+    },
+    {
+      "gameId": "Fortnite",
       "eventId": "epicgames_S42_CrashBandicootCup_EU",
       "beginTime": "2026-08-28T17:00:00Z",
       "endTime": "2026-08-28T19:30:00Z",
@@ -15314,102 +15710,6 @@
       "link": {
         "type": "br:tournament",
         "code": "tournament_epicgames_s42_crashbandicootcup_zb_eu"
-      }
-    },
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S42_OverrideSeries_aug28_EU",
-      "beginTime": "2026-08-28T17:00:00Z",
-      "endTime": "2026-08-28T20:00:00Z",
-      "displayDataId": "s42_override_default",
-      "eventGroup": "Season42_OverrideSeries",
-      "announcementTime": "2026-08-20T07:00:00Z",
-      "regions": [
-        "EU"
-      ],
-      "regionMappings": {
-        "EU": "EU"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "SecureBoot",
-          "CryptoProcessor",
-          "IOMMU",
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "WorkshopCup",
-        "webId": "S42_OverrideSeries_aug28",
-        "minimumAccountLevel": 50,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S42_OverrideSeries_aug28_Event1_EU",
-          "eventTemplateId": "EventTemplate_OverrideSeries",
-          "countdownBeginTime": "2026-08-28T15:00:00Z",
-          "beginTime": "2026-08-28T17:00:00Z",
-          "endTime": "2026-08-28T20:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:TBD",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_OverrideSeries_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s42_overrideseries_aug28_eu"
       }
     },
     {
@@ -27535,6 +27835,43 @@
   ],
   "templates": [
     {
+      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+      "matchCap": 8,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S42_CrashBandicootMobileCup",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_RE_PunchBerryNoBuildDuo_CR",
       "matchCap": 12,
       "tiebreakerFormula": {
@@ -29429,51 +29766,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "S41_MobileVictoryCup_Round2_DefaultLeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 6,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S41_MovileVictoryCup_Round2_ScoringRules",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "S41_MobileVictoryCup_Day1_Round2",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "Lead_Default",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -31303,6 +31595,96 @@
     },
     {
       "gameId": "Fortnite",
+      "leaderboardDefId": "S42_CrashBandicootMobileCup_DefaultLeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 8,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S42_CrashBandicootMobileCup_ScoringRules",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${windowId}",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "discardZeroScore": false
+    },
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "S41_MobileVictoryCup_Round2_DefaultLeaderboardDef",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 6,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S41_MovileVictoryCup_Round2_ScoringRules",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "S41_MobileVictoryCup_Day1_Round2",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "discardZeroScore": false
+    },
+    {
+      "gameId": "Fortnite",
       "leaderboardDefId": "RankedCup_Duos_Champion_LeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -31704,6 +32086,7 @@
     "Fortnite:epicgames_S42_PerformanceEvaluation_EU:S42_PerformanceEvaluation_Event5Round1_EU": "ScoringRules_DuosDivisionalCupTrial",
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event8_EU_1_platinum": "ScoringRules_RankedCupSoloReload_Platinum_1",
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event3_EU_1_Bronze": "ScoringRules_RankedCupSoloReload_Bronze_1",
+    "Fortnite:epicgames_S42_CrashBandicootMobileCup_EU:S42_CrashBandicootMobileCup_EU": "S42_CrashBandicootMobileCup_ScoringRules",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_EU:S42_RankedCupReloadDuos_ZB_Event3_EU_1_Unreal": "ScoringRules_RankedCupDuosReload_Unreal_1",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event1_EU_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event6_EU_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
@@ -31791,6 +32174,7 @@
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event7_EU_1_gold": "ScoringRules_RankedCupSolo_Gold_1",
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event2_EU_1_diamond": "ScoringRules_RankedCupSoloReload_Diamond_1",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event2_EU_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1",
+    "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event3_EU_1_Elite": "ScoringRules_RankedCupDuosReload_Elite_1",
     "Fortnite:epicgames_S42_PerformanceEvaluation_EU:S42_PerformanceEvaluation_Event2Round2_EU": "ScoringRules_PerformanceEvaluationRound2",
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event6_EU_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_EU:S42_RankedCupSoloReload_ZB_Event5_EU_1_champion": "ScoringRules_RankedCupSoloReload_Champion_1",
@@ -31801,8 +32185,6 @@
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event2_EU_1_Silver": "ScoringRules_RankedCupSoloReload_Silver_1",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event2_EU_1_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_1",
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event5_EU_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
-    "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event3_EU_1_Elite": "ScoringRules_RankedCupDuosReload_Elite_1",
-    "Fortnite:epicgames_S42_OverrideSeries_aug28_EU:S42_OverrideSeries_aug28_Event1_EU": "S42_OverrideSeries_ScoringRules",
     "Fortnite:epicgames_S42_RankedCupDuos_EU:S42_RankedCupDuos_Event2_EU_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S42_RankedCupDuos_EU:S42_RankedCupDuos_Event1_EU_1_Bronze": "ScoringRules_RankedCupDuos_Bronze_1",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event2_EU_1_Gold": "ScoringRules_RankedCupDuosReload_Gold_1",
@@ -31864,7 +32246,6 @@
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event3_EU_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_EU:S42_RankedCupSoloReload_ZB_Event6_EU_1_platinum": "ScoringRules_RankedCupSoloReload_Platinum_1",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event7_EU_1_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_1",
-    "Fortnite:epicgames_S42_ConsoleVCC_SolosZB_EU:S42_ConsoleVCC_SolosZB_Event3Round2_EU": "S42_ConsoleVCC_SolosZB_ScoringRules_Round2",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_EU:S42_RankedCupReloadDuos_ZB_Event3_EU_1_Gold": "ScoringRules_RankedCupDuosReload_Gold_1",
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_EU:S42_RankedCupSoloReload_ZB_Event4_EU": "EmptyScoringRules",
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event6_EU": "EmptyScoringRules",
@@ -31877,6 +32258,8 @@
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event1_EU_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
     "Fortnite:epicgames_S42_FNCSDivisionalCup_Division1_EU:S42_FNCSDivisionalCup_Division1_Week2Final_EU": "ScoringRules_DuosDivisionalCup_Div1Final",
     "Fortnite:epicgames_S42_FNCSDivisionalCup_Division1_EU:S42_FNCSDivisionalCup_Division1_Event3_EU": "ScoringRules_DuosDivisionalCup_Div1v2",
+    "Fortnite:epicgames_S42_CrashBandicootMobileCupAll_EU:S42_CrashBandicootMobileCupAll_EU": "S42_CrashBandicootMobileCup_ScoringRules",
+    "Fortnite:epicgames_S42_ConsoleVCC_SolosZB_EU:S42_ConsoleVCC_SolosZB_Event3Round2_EU": "S42_ConsoleVCC_SolosZB_ScoringRules_Round2",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event3_EU_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_EU:S42_RankedCupDuos_ZB_Event4_EU_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S42_RankedCupDuos_EU:S42_RankedCupDuos_Event8_EU": "EmptyScoringRules",
@@ -32375,6 +32758,7 @@
     "Fortnite:epicgames_S42_PerformanceEvaluation_EU:S42_PerformanceEvaluation_Event5Round1_EU": "S42_PerformanceEvaluation_Event5Round1_EU",
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event8_EU_1_platinum": "epicgames_S42_RankedCupSoloReload_EU_1_Platinum",
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event3_EU_1_Bronze": "epicgames_S42_RankedCupSoloReload_EU_1_Bronze",
+    "Fortnite:epicgames_S42_CrashBandicootMobileCup_EU:S42_CrashBandicootMobileCup_EU": "S42_CrashBandicootMobileCup_EU",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_EU:S42_RankedCupReloadDuos_ZB_Event3_EU_1_Unreal": "epicgames_S42_RankedCupReloadDuos_ZB_EU_1_Unreal",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event1_EU_1_unreal": "epicgames_S42_RankedCupSolo_ZB_EU_1_Unreal",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event6_EU_1_elite": "epicgames_S42_RankedCupSolo_ZB_EU_1_Elite",
@@ -32523,7 +32907,6 @@
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event3_EU_1_Silver": "epicgames_S42_RankedCupSolo_EU_1_Silver",
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_EU:S42_RankedCupSoloReload_ZB_Event6_EU_1_platinum": "epicgames_S42_RankedCupSoloReload_ZB_EU_1_Platinum",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event7_EU_1_Diamond": "epicgames_S42_RankedCupReloadDuos_EU_1_Diamond",
-    "Fortnite:epicgames_S42_ConsoleVCC_SolosZB_EU:S42_ConsoleVCC_SolosZB_Event3Round2_EU": "S42_ConsoleVCC_SolosZB_Event3Round2_EU",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_EU:S42_RankedCupReloadDuos_ZB_Event3_EU_1_Gold": "epicgames_S42_RankedCupReloadDuos_ZB_EU_1_Gold",
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event2_EU_1_unreal": "epicgames_S42_RankedCupSolo_EU_1_Unreal",
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event5_EU_1_champion": "epicgames_S42_RankedCupSoloReload_EU_1_Champion",
@@ -32533,6 +32916,8 @@
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event1_EU_1_champion": "epicgames_S42_RankedCupSolo_EU_1_Champion",
     "Fortnite:epicgames_S42_FNCSDivisionalCup_Division1_EU:S42_FNCSDivisionalCup_Division1_Week2Final_EU": "epicgames_S42_FNCSDivisionalCup_Division1_EU",
     "Fortnite:epicgames_S42_FNCSDivisionalCup_Division1_EU:S42_FNCSDivisionalCup_Division1_Event3_EU": "S42_FNCSDivisionalCup_Division1_Event3_EU",
+    "Fortnite:epicgames_S42_CrashBandicootMobileCupAll_EU:S42_CrashBandicootMobileCupAll_EU": "S42_CrashBandicootMobileCupAll_EU",
+    "Fortnite:epicgames_S42_ConsoleVCC_SolosZB_EU:S42_ConsoleVCC_SolosZB_Event3Round2_EU": "S42_ConsoleVCC_SolosZB_Event3Round2_EU",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event3_EU_1_Silver": "epicgames_S42_RankedCupSolo_ZB_EU_1_Silver",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_EU:S42_RankedCupDuos_ZB_Event4_EU_1_champion": "epicgames_S42_RankedCupDuos_ZB_EU_1_Champion",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event2_EU_1_Bronze": "epicgames_S42_RankedCupReloadDuos_EU_1_Bronze",
@@ -33097,6 +33482,9 @@
     "Fortnite:epicgames_S42_ConsoleVCC_SolosZB_EU:S42_ConsoleVCC_SolosZB_Event1Round2_EU": [
       "Fortnite:epicgames_S42_ConsoleVCC_SolosZB_EU:S42_ConsoleVCC_SolosZB_Event1Round2_EU"
     ],
+    "Fortnite:epicgames_S42_CrashBandicootMobileCup_EU:S42_CrashBandicootMobileCup_EU": [
+      "Fortnite:epicgames_S42_CrashBandicootMobileCup_EU:S42_CrashBandicootMobileCup_EU"
+    ],
     "Fortnite:epicgames_S42_FNCSDivisionalCup_Division3_EU:S42_FNCSDivisionalCup_Division3_Event2_EU": [
       "Fortnite:epicgames_S42_FNCSDivisionalCup_Division3_EU:S42_FNCSDivisionalCup_Division3_Event2_EU"
     ],
@@ -33224,9 +33612,6 @@
     "Fortnite:epicgames_S42_FNCSDivisionalCup_Division1_EU:S42_FNCSDivisionalCup_Division1_Event4_EU": [
       "Fortnite:epicgames_S42_FNCSDivisionalCup_Division1_EU:S42_FNCSDivisionalCup_Division1_Event4_EU"
     ],
-    "Fortnite:epicgames_S42_OverrideSeries_aug28_EU:S42_OverrideSeries_aug28_Event1_EU": [
-      "Fortnite:epicgames_S42_OverrideSeries_aug28_EU:S42_OverrideSeries_aug28_Event1_EU"
-    ],
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event1_EU": [
       "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event1_EU",
       "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event1_EU_1_Bronze",
@@ -33296,9 +33681,6 @@
       "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_EU:S42_RankedCupSoloReload_ZB_Event1_EU_1_champion",
       "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_EU:S42_RankedCupSoloReload_ZB_Event1_EU_1_unreal"
     ],
-    "Fortnite:epicgames_S42_ConsoleVCC_SolosZB_EU:S42_ConsoleVCC_SolosZB_Event3Round2_EU": [
-      "Fortnite:epicgames_S42_ConsoleVCC_SolosZB_EU:S42_ConsoleVCC_SolosZB_Event3Round2_EU"
-    ],
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_EU:S42_RankedCupSoloReload_ZB_Event4_EU": [
       "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_EU:S42_RankedCupSoloReload_ZB_Event4_EU",
       "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_EU:S42_RankedCupSoloReload_ZB_Event4_EU_1_Bronze",
@@ -33326,6 +33708,12 @@
     ],
     "Fortnite:epicgames_S42_FNCSDivisionalCup_Division1_EU:S42_FNCSDivisionalCup_Division1_Event3_EU": [
       "Fortnite:epicgames_S42_FNCSDivisionalCup_Division1_EU:S42_FNCSDivisionalCup_Division1_Event3_EU"
+    ],
+    "Fortnite:epicgames_S42_CrashBandicootMobileCupAll_EU:S42_CrashBandicootMobileCupAll_EU": [
+      "Fortnite:epicgames_S42_CrashBandicootMobileCupAll_EU:S42_CrashBandicootMobileCupAll_EU"
+    ],
+    "Fortnite:epicgames_S42_ConsoleVCC_SolosZB_EU:S42_ConsoleVCC_SolosZB_Event3Round2_EU": [
+      "Fortnite:epicgames_S42_ConsoleVCC_SolosZB_EU:S42_ConsoleVCC_SolosZB_Event3Round2_EU"
     ],
     "Fortnite:epicgames_S42_RankedCupDuos_EU:S42_RankedCupDuos_Event8_EU": [
       "Fortnite:epicgames_S42_RankedCupDuos_EU:S42_RankedCupDuos_Event8_EU",
