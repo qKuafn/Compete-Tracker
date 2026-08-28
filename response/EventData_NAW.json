@@ -15015,10 +15015,11 @@
           "AndroidSecureDevice",
           "IOSMinimumOSVersion"
         ],
-        "tournamentType": "WorkshopCup",
+        "tournamentType": "Other",
         "webId": "S42_ArenaTestCup",
         "minimumAccountLevel": 50,
         "DisqualifyType": "Window",
+        "uefnExperienceType": "Arenas",
         "AccountLockType": "Window"
       },
       "eventWindows": [
@@ -15674,7 +15675,7 @@
         },
         {
           "eventWindowId": "S42_ReloadDuosVictoryCup_Event2_Round1_NAW",
-          "eventTemplateId": "EventTemplate_S42_ReloadDuosVictoryCupOasis_Round1",
+          "eventTemplateId": "S42_DuosReloadVictoryCup_EventTemplate_Round1",
           "countdownBeginTime": "2026-09-01T23:00:00Z",
           "beginTime": "2026-09-02T01:00:00Z",
           "endTime": "2026-09-02T03:00:00Z",
@@ -15717,7 +15718,7 @@
         },
         {
           "eventWindowId": "S42_ReloadDuosVictoryCup_Event2_Round2_NAW",
-          "eventTemplateId": "EventTemplate_S42_ReloadDuosVictoryCupOasis_Round2",
+          "eventTemplateId": "S42_DuosReloadVictoryCup_EventTemplate_Round2",
           "countdownBeginTime": "2026-09-02T03:00:00Z",
           "beginTime": "2026-09-02T04:00:00Z",
           "endTime": "2026-09-02T05:00:00Z",
@@ -20161,7 +20162,7 @@
         },
         {
           "eventWindowId": "S42_RankedCupSoloReload_Event2_NAW",
-          "eventTemplateId": "EventTemplate_RankedCupSoloReload",
+          "eventTemplateId": "EventTemplate_RankedCupSoloReload_v2",
           "countdownBeginTime": "2026-09-01T23:00:00Z",
           "beginTime": "2026-09-02T01:00:00Z",
           "endTime": "2026-09-02T04:00:00Z",
@@ -20925,7 +20926,7 @@
         },
         {
           "eventWindowId": "S42_RankedCupSoloReload_ZB_Event2_NAW",
-          "eventTemplateId": "EventTemplate_RankedCupSoloReload_ZB",
+          "eventTemplateId": "EventTemplate_RankedCupSoloReload_v2_ZB",
           "countdownBeginTime": "2026-09-01T23:00:00Z",
           "beginTime": "2026-09-02T01:00:00Z",
           "endTime": "2026-09-02T04:00:00Z",
@@ -24215,7 +24216,7 @@
       "eventWindows": [
         {
           "eventWindowId": "S42_RankedCupReloadDuos_ZB_Event1_NAW",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_ZB",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v1_ZB",
           "countdownBeginTime": "2026-08-30T23:00:00Z",
           "beginTime": "2026-08-31T01:00:00Z",
           "endTime": "2026-08-31T04:00:00Z",
@@ -24980,7 +24981,7 @@
       "eventWindows": [
         {
           "eventWindowId": "S42_RankedCupReloadDuos_Event1_NAW",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v1",
           "countdownBeginTime": "2026-08-30T23:00:00Z",
           "beginTime": "2026-08-31T01:00:00Z",
           "endTime": "2026-08-31T04:00:00Z",
@@ -25841,6 +25842,43 @@
       "clampsToZero": false
     },
     {
+      "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_RC",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v1",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_PBM",
       "matchCap": 10,
       "tiebreakerFormula": {
@@ -25989,7 +26027,7 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_RE_PunchBerryNoBuildDuo_PBM",
+      "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_PBM",
       "matchCap": 12,
       "tiebreakerFormula": {
         "basePointsBits": 11,
@@ -26020,6 +26058,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "S42_ReloadCashCup_DuosZB_EventTemplate_Round1",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_DashBerryNoBuildDuo_RC",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v1_ZB",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -26057,43 +26132,6 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_S39_FNCSNPMDivisionalCup",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_PunchBerryDuo_PBM",
-      "matchCap": 10,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S42_ReloadDuosVictoryCupOasis_Round1",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -26506,43 +26544,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_PunchBerryDuo_NPM",
-      "matchCap": 3,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S42_ReloadDuosVictoryCupOasis_Round2",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_RE_RopeSmileNoBuildDuo_PBM",
       "matchCap": 12,
       "tiebreakerFormula": {
@@ -26617,7 +26618,7 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_RE_PunchBerryNoBuildDuo_PBM",
+      "playlistId": "Playlist_ShowdownTournament_DashBerryDuo_NPM",
       "matchCap": 6,
       "tiebreakerFormula": {
         "basePointsBits": 11,
