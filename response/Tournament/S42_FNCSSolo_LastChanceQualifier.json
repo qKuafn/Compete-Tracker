@@ -1,0 +1,150 @@
+{
+  "EventName": "FNCS ソロ ラストチャンス予選",
+  "eventId": "epicgames_S42_FNCSSolo_LastChanceQualifier_ASIA",
+  "displayDataId": "s42_fncssolos_lcq",
+  "square_poster_image": "https://cdn2.unrealengine.com/fnce-39-00-comp-fncs2026update-in-game-tab-800x800-800x800-41126f7a36d0.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fnce-39-00-comp-fncs2026update-in-game-tab-1560x1024-1560x1024-1ac6399a65cc.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/1920x1080-1920x1080-7b2230bbda14.jpg",
+  "metadata": {
+    "requireSystemFeatures": [
+      "SecureBoot",
+      "CryptoProcessor",
+      "IOMMU",
+      "AndroidSecureDevice",
+      "IOSMinimumOSVersion"
+    ],
+    "tournamentType": "FNCS",
+    "webId": "S42_FNCSSolo_LCQ",
+    "minimumAccountLevel": 350,
+    "TrackedStats": [
+      "Headshots",
+      "DamageDealt",
+      "GainedHealthTimes",
+      "GainedShieldTimes",
+      "Travel_Distance_Ground",
+      "DamageReceived"
+    ],
+    "DisqualifyType": "Window",
+    "RegionLockType": "Season",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "XboxOneGDK",
+    "PS4",
+    "XCloud",
+    "Helios",
+    "Luna",
+    "IOS",
+    "XB1",
+    "XboxOne",
+    "XSX",
+    "Android",
+    "LunaMobile",
+    "Switch2",
+    "PS5",
+    "XCloudMobile",
+    "Mac",
+    "HeliosMobile",
+    "GFN",
+    "Switch",
+    "GFNMobile",
+    "Windows"
+  ],
+  "S42_FNCSSolo_LastChanceQualifier_ASIA": {
+    "beginTime_UNIX": 1792400400,
+    "beginTime_JST": "2026-10-19 18:00:00",
+    "endTime_UNIX": 1792411200,
+    "endTime_JST": "2026-10-19 21:00:00",
+    "playlistId": "Playlist_ShowdownTournament_FN_Solo",
+    "matchCap": 11,
+    "additionalRequirements": [
+      "eula:s42_fncs_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [
+      "RegionLock_S42_FNCSSolo_ASIA"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "Permanent_Tournament_Ban",
+      "S42_FNCSSolo_Finalist_ASIA",
+      "S42_FNCS_Banned",
+      "EpicAccountPrizingRestriction_v2"
+    ],
+    "ScoringRules": {
+      "S42_FNCSSoloQualifiers_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_FNCSSolo_Qualifier",
+        "WindowLocation": "S42_FNCSSolo_LastChanceQualifier_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 70,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S42_FNCSSolo_LastChanceFinal_ASIA"
+          }
+        ]
+      }
+    }
+  },
+  "S42_FNCSSolo_LastChanceLobby_ASIA": {
+    "beginTime_UNIX": 1792486800,
+    "beginTime_JST": "2026-10-20 18:00:00",
+    "endTime_UNIX": 1792494600,
+    "endTime_JST": "2026-10-20 20:10:00",
+    "playlistId": "Playlist_ShowdownTournament_FN_Solo",
+    "matchCap": 5,
+    "additionalRequirements": [
+      "eula:s42_fncs_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [
+      "S42_FNCSSolo_LastChanceFinal_ASIA"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "Permanent_Tournament_Ban",
+      "S42_FNCSSolo_Finalist_ASIA",
+      "S42_FNCS_Banned",
+      "EpicAccountPrizingRestriction_v2"
+    ],
+    "ScoringRules": {
+      "S42_FNCSSolo_HeatsStage_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_FNCSSolo_Heats",
+        "WindowLocation": "S42_FNCSSolo_LastChanceLobby_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 1000,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S42_FNCSSolo_Finalist_ASIA"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 22,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S42_FNCSSolo_Finalist_ASIA"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "EventName": "FNCS ソロ・ファストトラック",
+  "eventId": "epicgames_S42_FNCSSoloFastTracks_ASIA",
+  "displayDataId": "s42_fncssolos_fasttrack",
+  "square_poster_image": "https://cdn2.unrealengine.com/fnce-39-00-comp-fncs2026update-in-game-tab-800x800-800x800-41126f7a36d0.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fnce-39-00-comp-fncs2026update-in-game-tab-1560x1024-1560x1024-1ac6399a65cc.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/1920x1080-1920x1080-435c6f625c49.jpg",
+  "metadata": {
+    "requireSystemFeatures": [
+      "SecureBoot",
+      "CryptoProcessor",
+      "IOMMU",
+      "AndroidSecureDevice",
+      "IOSMinimumOSVersion"
+    ],
+    "tournamentType": "FNCS",
+    "webId": "S42_FNCSSoloFastTracks",
+    "minimumAccountLevel": 350,
+    "TrackedStats": [
+      "Headshots",
+      "DamageDealt",
+      "DamageReceived",
+      "GainedHealthTimes",
+      "GainedShieldTimes",
+      "Travel_Distance_Ground"
+    ],
+    "DisqualifyType": "Window",
+    "RegionLockType": "Season",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "XboxOneGDK",
+    "PS4",
+    "XCloud",
+    "Helios",
+    "Luna",
+    "IOS",
+    "XB1",
+    "XboxOne",
+    "XSX",
+    "Android",
+    "LunaMobile",
+    "Switch2",
+    "PS5",
+    "XCloudMobile",
+    "Mac",
+    "HeliosMobile",
+    "GFN",
+    "Switch",
+    "GFNMobile",
+    "Windows"
+  ],
+  "S42_FNCSSoloFastTracks_ASIA": {
+    "beginTime_UNIX": 1791622800,
+    "beginTime_JST": "2026-10-10 18:00:00",
+    "endTime_UNIX": 1791629100,
+    "endTime_JST": "2026-10-10 19:45:00",
+    "playlistId": "Playlist_ShowdownTournament_FN_Solo",
+    "matchCap": 4,
+    "additionalRequirements": [
+      "eula:s42_fncs_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [
+      "S42_FNCSSolo_FastTrack_ASIA"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban",
+      "S42_FNCS_Banned"
+    ],
+    "ScoringRules": {
+      "S42_FNCSSoloFastTrack_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "ScoringRules_FNCSSolo_FastTrack",
+        "WindowLocation": "S42_FNCSSoloFastTracks_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 8,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S42_FNCSSolo_Finalist_ASIA"
+          }
+        ]
+      }
+    }
+  }
+}
