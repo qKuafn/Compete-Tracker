@@ -8445,7 +8445,7 @@
             ]
           }
         ],
-        "scoreId": "cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_cumulative"
+        "scoreId": "cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_4_cumulative"
       }
     ],
     "S42_FNCSSoloQualifiers_Qual1Round1Day1_OCE": [
@@ -9211,7 +9211,7 @@
             ]
           }
         ],
-        "scoreId": "cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_cumulative"
+        "scoreId": "cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_1_cumulative"
       }
     ],
     "S42_ReloadSoloVictoryCup_Event1_Round1_OCE": [
@@ -15729,7 +15729,9 @@
           "requireAnyTokens": [],
           "requireNoneTokensCaller": [
             "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
+            "Permanent_Tournament_Ban",
+            "S42_MobileSeriesGroup1_OCE",
+            "S42_MobileSeriesGroup2_OCE"
           ],
           "requireAllTokensCaller": [],
           "requireAnyTokensCaller": [],
@@ -30106,7 +30108,7 @@
       "leaderboardDefId": "S42_FNCSSoloQualifiers_CumulativeLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "cumulative",
-      "leaderboardInstanceIdFormat": "${eventId}_cumulative",
+      "leaderboardInstanceIdFormat": "${eventId}_${round}_cumulative",
       "maxSessionHistorySize": 22,
       "useIndividualScores": false,
       "tiebreakerFormula": {
@@ -32025,6 +32027,7 @@
     "Fortnite:epicgames_S42_RankedCupSoloReload_OCE:S42_RankedCupSoloReload_Event7_OCE_1_elite": "ScoringRules_RankedCupSoloReload_Elite_1",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_OCE:S42_RankedCupSolo_ZB_Event2_OCE_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
     "Fortnite:epicgames_S42_ReloadReloadSoloVictoryCup_OCE:S42_ReloadSoloVictoryCup_Event3_Round2_OCE": "S42_ReloadSoloVictoryCup_ScoringRules_Round2",
+    "Fortnite:epicgames_S42_RankedCupDuos_ZB_OCE:S42_RankedCupDuos_ZB_Event6_OCE_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S42_ConsoleVCC_SolosZB_OCE:S42_ConsoleVCC_SolosZB_Event6Round1_OCE": "S42_ConsoleVCC_SolosZB_ScoringRules_Round1",
     "Fortnite:epicgames_S42_RankedCupDuos_OCE:S42_RankedCupDuos_Event1_OCE_1_gold": "ScoringRules_RankedCupDuos_Gold_1",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_OCE:S42_RankedCupSolo_ZB_Event5_OCE_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
@@ -32036,8 +32039,6 @@
     "Fortnite:epicgames_S42_ReloadDuosVictoryCup_OCE:S42_ReloadDuosVictoryCup_Event3_Round1_OCE": "S42_ReloadDuosVictoryCup_ScoringRules_Round1_v2",
     "Fortnite:epicgames_S42_RankedCupSolo_OCE:S42_RankedCupSolo_Event6_OCE_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_OCE:S42_RankedCupDuos_ZB_Event7_OCE_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
-    "Fortnite:cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_cumulative": "ScoringRules_FNCSSolo_Qualifier",
-    "Fortnite:epicgames_S42_RankedCupDuos_ZB_OCE:S42_RankedCupDuos_ZB_Event6_OCE_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S42_RankedCupDuos_OCE:S42_RankedCupDuos_Event1_OCE_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_OCE:S42_RankedCupSolo_ZB_Event5_OCE": "EmptyScoringRules",
     "Fortnite:epicgames_S42_RankedCupDuos_OCE:S42_RankedCupDuos_Event2_OCE_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
@@ -32186,6 +32187,7 @@
     "Fortnite:epicgames_S42_RankedCupSolo_OCE:S42_RankedCupSolo_Event7_OCE_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_OCE:S42_RankedCupDuos_ZB_Event4_OCE_1_elite": "ScoringRules_RankedCupDuos_Elite_1",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_OCE:S42_RankedCupReloadDuos_ZB_Event3_OCE_1_Gold": "ScoringRules_RankedCupDuosReload_Gold_1",
+    "Fortnite:cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_1_cumulative": "ScoringRules_FNCSSolo_Qualifier",
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_OCE:S42_RankedCupSoloReload_ZB_Event1_OCE_1_Silver": "ScoringRules_RankedCupSoloReload_Silver_1",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_OCE:S42_RankedCupReloadDuos_Event4_OCE": "EmptyScoringRules",
     "Fortnite:epicgames_S42_RankedCupDuos_OCE:S42_RankedCupDuos_Event2_OCE_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
@@ -32202,6 +32204,7 @@
     "Fortnite:epicgames_S42_RankedCupReloadDuos_OCE:S42_RankedCupReloadDuos_Event7_OCE_1_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_1",
     "Fortnite:epicgames_S42_ConsoleVCC_SolosZB_OCE:S42_ConsoleVCC_SolosZB_Event4Round2_OCE": "S42_ConsoleVCC_SolosZB_ScoringRules_Round2",
     "Fortnite:epicgames_S42_RankedCupSoloReload_OCE:S42_RankedCupSoloReload_Event7_OCE_1_platinum": "ScoringRules_RankedCupSoloReload_Platinum_1",
+    "Fortnite:cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_4_cumulative": "ScoringRules_FNCSSolo_Qualifier",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_OCE:S42_RankedCupSolo_ZB_Event6_OCE_1_gold": "ScoringRules_RankedCupSolo_Gold_1",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_OCE:S42_RankedCupReloadDuos_ZB_Event8_OCE_1_Silver": "ScoringRules_RankedCupDuosReload_Silver_1",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_OCE:S42_RankedCupReloadDuos_ZB_Event3_OCE_1_Champion": "ScoringRules_RankedCupDuosReload_Champion_1",
@@ -33594,7 +33597,7 @@
     ],
     "Fortnite:epicgames_S42_FNCSSoloQualifiers_OCE:S42_FNCSSoloQualifiers_Qual1Round1Day1_OCE": [
       "Fortnite:epicgames_S42_FNCSSoloQualifiers_OCE:S42_FNCSSoloQualifiers_Qual1Round1Day1_OCE",
-      "Fortnite:cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_cumulative",
+      "Fortnite:cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_1_cumulative",
       "Fortnite:risk:epicgames_S42_FNCSSoloQualifiers_OCE_1_risk"
     ],
     "Fortnite:epicgames_S42_FNCSSolo_LastChanceQualifier_OCE:S42_FNCSSolo_LastChanceQualifier_OCE": [
@@ -33653,7 +33656,7 @@
     ],
     "Fortnite:epicgames_S42_FNCSSoloQualifiers_OCE:S42_FNCSSoloQualifiers_Qual2Round1Day2_OCE": [
       "Fortnite:epicgames_S42_FNCSSoloQualifiers_OCE:S42_FNCSSoloQualifiers_Qual2Round1Day2_OCE",
-      "Fortnite:cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_cumulative",
+      "Fortnite:cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_4_cumulative",
       "Fortnite:risk:epicgames_S42_FNCSSoloQualifiers_OCE_4_risk"
     ],
     "Fortnite:epicgames_S42_FNCSDivisionalCup_Division2_OCE:S42_FNCSDivisionalCup_Division2_Event1_OCE": [
@@ -33708,7 +33711,7 @@
     ],
     "Fortnite:epicgames_S42_FNCSSoloQualifiers_OCE:S42_FNCSSoloQualifiers_Qual1Round1Day2_OCE": [
       "Fortnite:epicgames_S42_FNCSSoloQualifiers_OCE:S42_FNCSSoloQualifiers_Qual1Round1Day2_OCE",
-      "Fortnite:cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_cumulative",
+      "Fortnite:cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_1_cumulative",
       "Fortnite:risk:epicgames_S42_FNCSSoloQualifiers_OCE_1_risk"
     ],
     "Fortnite:epicgames_S42_ConsoleVCC_SolosZB_OCE:S42_ConsoleVCC_SolosZB_Event4Round2_OCE": [
@@ -33996,7 +33999,7 @@
     ],
     "Fortnite:epicgames_S42_FNCSSoloQualifiers_OCE:S42_FNCSSoloQualifiers_Qual2Round1Day1_OCE": [
       "Fortnite:epicgames_S42_FNCSSoloQualifiers_OCE:S42_FNCSSoloQualifiers_Qual2Round1Day1_OCE",
-      "Fortnite:cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_cumulative",
+      "Fortnite:cumulative:epicgames_S42_FNCSSoloQualifiers_OCE_4_cumulative",
       "Fortnite:risk:epicgames_S42_FNCSSoloQualifiers_OCE_4_risk"
     ],
     "Fortnite:epicgames_S42_ReloadCashCup_DuosZB_OCE:S42_ReloadCashCup_DuosZB_Event1Round1_mg_OCE": [
