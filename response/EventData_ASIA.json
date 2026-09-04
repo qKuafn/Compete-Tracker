@@ -15743,7 +15743,7 @@
         },
         {
           "eventWindowId": "S42_MobileSeriesLCQ_Round2_ASIA",
-          "eventTemplateId": "S41_EventTemplate_MobileSeriesOpens",
+          "eventTemplateId": "S41_EventTemplate_MobileSeriesOpensNPM",
           "countdownBeginTime": "2026-09-06T07:00:00Z",
           "beginTime": "2026-09-06T08:00:00Z",
           "endTime": "2026-09-06T09:15:00Z",
@@ -29089,7 +29089,7 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+      "playlistId": "Playlist_ShowdownTournament_RE_JumpBearNoBuildSolo_PBM",
       "matchCap": 8,
       "tiebreakerFormula": {
         "basePointsBits": 11,
@@ -29310,7 +29310,7 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_ForbiddenFruitNoBuildSolo",
+      "playlistId": "Playlist_ShowdownTournament_RE_JumpBearNoBuildSolo_PBM",
       "matchCap": 6,
       "tiebreakerFormula": {
         "basePointsBits": 11,
@@ -29414,6 +29414,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_OverrideSeriesSoloReload",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_JumpBearNoBuildSolo_NPM",
+      "matchCap": 8,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "S41_EventTemplate_MobileSeriesOpensNPM",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
