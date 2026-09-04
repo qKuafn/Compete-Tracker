@@ -22352,7 +22352,7 @@
         },
         {
           "eventWindowId": "S42_RankedCupSoloReload_ZB_Event3_OCE",
-          "eventTemplateId": "EventTemplate_RankedCupSoloReload_v3_ZB",
+          "eventTemplateId": "EventTemplate_RankedCupSoloReload_ZBVenture",
           "countdownBeginTime": "2026-09-07T06:00:00Z",
           "beginTime": "2026-09-07T08:00:00Z",
           "endTime": "2026-09-07T11:00:00Z",
@@ -23116,7 +23116,7 @@
         },
         {
           "eventWindowId": "S42_RankedCupSoloReload_Event3_OCE",
-          "eventTemplateId": "EventTemplate_RankedCupSoloReload_v3",
+          "eventTemplateId": "EventTemplate_RankedCupSoloReloadVenture",
           "countdownBeginTime": "2026-09-07T06:00:00Z",
           "beginTime": "2026-09-07T08:00:00Z",
           "endTime": "2026-09-07T11:00:00Z",
@@ -28171,6 +28171,43 @@
       "clampsToZero": false
     },
     {
+      "playlistId": "Playlist_ShowdownTournament_RE_BlastBerryNoBuildSolo_RC",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupSoloReload_ZBVenture",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_FN_Solo",
       "matchCap": 6,
       "tiebreakerFormula": {
@@ -28568,6 +28605,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupSolo_ZB",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_BlastBerrySolo_RC",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupSoloReloadVenture",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
