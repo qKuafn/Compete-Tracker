@@ -3809,150 +3809,6 @@
         ]
       }
     ],
-    "S42_MegaManCup_ScoringRules": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 9,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 2,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 3,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 4,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 5,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 6,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 7,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 8,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 9,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 10,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 11,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 12,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 13,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 14,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 15,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 16,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 17,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 18,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 19,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 20,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 21,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 22,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 23,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 24,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 25,
-            "pointsEarned": 2,
-            "multiplicative": false
-          }
-        ]
-      },
-      {
-        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 2,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
     "ScoringRules_MobileSeriesReloadFinal": [
       {
         "trackedStat": "PLACEMENT_STAT_INDEX",
@@ -6241,19 +6097,6 @@
       },
       {
         "trackedStat": "BRONZE_TEAM_ELIMS_STAT_INDEX",
-        "matchRule": "gte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 1,
-            "multiplicative": true
-          }
-        ]
-      }
-    ],
-    "S42_MegaManCup_ScoringRulesAlt": [
-      {
-        "trackedStat": "Weapon_Eliminations-Item_Weapon_Ranged_MintPunt",
         "matchRule": "gte",
         "rewardTiers": [
           {
@@ -9334,23 +9177,48 @@
         ]
       }
     ],
-    "S42_MegaManCup_ZB_EU_alt": [
+    "S42_FNCSSoloQualifiers_Qual2Round1Day2_EU": [
       {
         "scoringType": "value",
         "ranks": [
           {
-            "threshold": 5,
+            "threshold": 0,
             "payouts": [
               {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:spray_dunebrief",
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "RegionLock_S42_FNCSSolo_EU",
                 "quantity": 1,
-                "notifiesPlayer": true
+                "notifiesPlayer": false
+              },
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "S42_FNCSSolo_DenyQual2Round2_EU",
+                "quantity": 1,
+                "notifiesPlayer": false
               }
             ]
           }
         ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 8000,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S42_FNCSSolo_Qual2Round2_EU",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ],
+        "scoreId": "cumulative:epicgames_S42_FNCSSoloQualifiers_EU_4_cumulative"
       }
     ],
     "epicgames_S42_RankedCupSoloReload_EU_1_Unreal": [
@@ -9480,100 +9348,6 @@
                 "value": "CosmeticVariantToken:vtid_backbling_specterdunk_stylec",
                 "quantity": 1,
                 "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S42_FNCSSoloQualifiers_Qual2Round1Day2_EU": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 0,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "RegionLock_S42_FNCSSolo_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "S42_FNCSSolo_DenyQual2Round2_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 8000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S42_FNCSSolo_Qual2Round2_EU",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ],
-        "scoreId": "cumulative:epicgames_S42_FNCSSoloQualifiers_EU_4_cumulative"
-      }
-    ],
-    "S42_MegaManCup_EU": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 8,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:emoticon_dunebrief",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 500,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:character_dunebriefshift",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_dunebriefshift",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_dunebriefshift",
-                "quantity": 1,
-                "notifiesPlayer": true
               }
             ]
           }
@@ -11177,25 +10951,6 @@
                 "value": "S42_ConsoleVCC_SolosZB_Event5Round2_EU",
                 "quantity": 1,
                 "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "S42_MegaManCup_EU_alt": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 5,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:spray_dunebrief",
-                "quantity": 1,
-                "notifiesPlayer": true
               }
             ]
           }
@@ -15460,56 +15215,6 @@
         ]
       }
     ],
-    "S42_MegaManCup_ZB_EU": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 8,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaDance:emoticon_dunebrief",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 500,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaCharacter:character_dunebriefshift",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaPickaxe:pickaxe_dunebriefshift",
-                "quantity": 1,
-                "notifiesPlayer": true
-              },
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_dunebriefshift",
-                "quantity": 1,
-                "notifiesPlayer": true
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "S42_FNCSDivisionalCup_Division4_Event2_EU": [
       {
         "scoringType": "value",
@@ -16476,214 +16181,6 @@
     ]
   },
   "events": [
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S42_MegaManCup_EU",
-      "beginTime": "2026-09-08T17:00:00Z",
-      "endTime": "2026-09-08T20:00:00Z",
-      "displayDataId": "s42_megaman",
-      "eventGroup": "Season42_MegaManCup",
-      "announcementTime": "2026-09-01T07:00:00Z",
-      "regions": [
-        "EU"
-      ],
-      "regionMappings": {
-        "EU": "EUCOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "SecureBoot",
-          "CryptoProcessor",
-          "IOMMU",
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "ShopCup",
-        "webId": "S42_MegaManCup",
-        "minimumAccountLevel": 50,
-        "TrackedStats": [
-          "Weapon_Eliminations-Item_Weapon_Ranged_MintPunt",
-          "Weapon_Eliminations-Tag-Weapon-wid_mintpunt_r_EmptyOptic_EmptyBarrel_EmptyUnderbarrel_EmptyMagazine"
-        ],
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S42_MegaManCup_EU",
-          "eventTemplateId": "EventTemplate_S42_MegaManCup",
-          "countdownBeginTime": "2026-09-08T15:00:00Z",
-          "beginTime": "2026-09-08T17:00:00Z",
-          "endTime": "2026-09-08T20:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s42_megamancup_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_MegaManCup_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            },
-            {
-              "leaderboardDefId": "S42_MegaManCup_LeaderboardDefAlt",
-              "isMainWindowLeaderboard": false
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s42_megamancup_eu"
-      }
-    },
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S42_MegaManCup_ZB_EU",
-      "beginTime": "2026-09-08T17:00:00Z",
-      "endTime": "2026-09-08T20:00:00Z",
-      "displayDataId": "s42_megaman_zb",
-      "eventGroup": "Season42_MegaManCup_ZB",
-      "announcementTime": "2026-09-01T07:00:00Z",
-      "regions": [
-        "EU"
-      ],
-      "regionMappings": {
-        "EU": "EUCOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "SecureBoot",
-          "CryptoProcessor",
-          "IOMMU",
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "ShopCup",
-        "webId": "S42_MegaManCup_ZB",
-        "minimumAccountLevel": 50,
-        "TrackedStats": [
-          "Weapon_Eliminations-Item_Weapon_Ranged_MintPunt",
-          "Weapon_Eliminations-Tag-Weapon-wid_mintpunt_r_EmptyOptic_EmptyBarrel_EmptyUnderbarrel_EmptyMagazine"
-        ],
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S42_MegaManCup_ZB_EU",
-          "eventTemplateId": "EventTemplate_S42_MegaManCup_ZB",
-          "countdownBeginTime": "2026-09-08T15:00:00Z",
-          "beginTime": "2026-09-08T17:00:00Z",
-          "endTime": "2026-09-08T20:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s42_megamancup_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_MegaManCup_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            },
-            {
-              "leaderboardDefId": "S42_MegaManCup_LeaderboardDefAlt",
-              "isMainWindowLeaderboard": false
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s42_megamancup_zb_eu"
-      }
-    },
     {
       "gameId": "Fortnite",
       "eventId": "epicgames_S42_ArenaPerfEval_EU",
@@ -29864,43 +29361,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_FN_Duos",
-      "matchCap": 11,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S42_MegaManCup",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_BlastBerryNoBuildDuo_RC",
       "matchCap": 12,
       "tiebreakerFormula": {
@@ -31662,43 +31122,6 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupSoloReload_ZB",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_FN_NoBuildBR_Duos",
-      "matchCap": 11,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S42_MegaManCup_ZB",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -33578,51 +33001,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "S42_MegaManCup_LeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 11,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S42_MegaManCup_ScoringRules",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "S42_SoloVictoryCupBR_LeaderboardDef_Round1",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -33750,51 +33128,6 @@
       "clampsToZero": true,
       "payoutsConfig": {
         "payoutTableIdFormat": "${windowId}",
-        "payoutDate": "windowEnd+PT32M"
-      },
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "S42_MegaManCup_LeaderboardDefAlt",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}_alt",
-      "maxSessionHistorySize": 11,
-      "useIndividualScores": false,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S42_MegaManCup_ScoringRulesAlt",
-      "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${windowId}_alt",
         "payoutDate": "windowEnd+PT32M"
       },
       "hidePlayerScores": false,
@@ -34748,7 +34081,6 @@
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_EU:S42_RankedCupReloadDuos_ZB_Event5_EU_1_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_1",
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_EU:S42_RankedCupSoloReload_ZB_Event3_EU": "EmptyScoringRules",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event7_EU": "EmptyScoringRules",
-    "Fortnite:epicgames_S42_MegaManCup_ZB_EU:S42_MegaManCup_ZB_EU_alt": "S42_MegaManCup_ScoringRulesAlt",
     "Fortnite:epicgames_S42_RankedCupDuos_EU:S42_RankedCupDuos_Event3_EU_1_platinum": "ScoringRules_RankedCupDuos_Platinum_1",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event6_EU_1_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_1",
     "Fortnite:cumulative:epicgames_S42_FNCSSoloQualifiers_EU_4_cumulative": "ScoringRules_FNCSSolo_Qualifier",
@@ -34926,7 +34258,6 @@
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event8_EU_1_gold": "ScoringRules_RankedCupSoloReload_Gold_1",
     "Fortnite:epicgames_S42_RankedCupDuos_EU:S42_RankedCupDuos_Event6_EU": "EmptyScoringRules",
     "Fortnite:epicgames_S42_FNCSSoloQualifiers_EU:S42_FNCSSoloQualifiers_Qual2Round2_EU": "ScoringRules_FNCSSolo_Qualifier",
-    "Fortnite:epicgames_S42_MegaManCup_ZB_EU:S42_MegaManCup_ZB_EU": "S42_MegaManCup_ScoringRules",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_EU:S42_RankedCupReloadDuos_ZB_Event7_EU_1_Silver": "ScoringRules_RankedCupDuosReload_Silver_1",
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event2_EU_1_Silver": "ScoringRules_RankedCupSoloReload_Silver_1",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event2_EU_1_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_1",
@@ -35226,7 +34557,6 @@
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event1_EU_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event2_EU_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_EU:S42_RankedCupDuos_ZB_Event8_EU": "EmptyScoringRules",
-    "Fortnite:epicgames_S42_MegaManCup_EU:S42_MegaManCup_EU": "S42_MegaManCup_ScoringRules",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event4_EU_1_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_1",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_EU:S42_RankedCupDuos_ZB_Event7_EU_1_champion": "ScoringRules_RankedCupDuos_Champion_1",
     "Fortnite:epicgames_S42_FNCSDivisionalCup_Division5_EU:S42_FNCSDivisionalCup_Division5_Event4_EU": "ScoringRules_DuosDivisionalCup5_3",
@@ -35248,7 +34578,6 @@
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event4_EU_1_platinum": "ScoringRules_RankedCupSoloReload_Platinum_1",
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event6_EU_1_unreal": "ScoringRules_RankedCupSoloReload_Unreal_1",
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event4_EU_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
-    "Fortnite:epicgames_S42_MegaManCup_EU:S42_MegaManCup_EU_alt": "S42_MegaManCup_ScoringRulesAlt",
     "Fortnite:epicgames_S42_FNCSSoloQualifiers_EU:S42_FNCSSoloQualifiers_Qual1Round1Day2_EU": "ScoringRules_FNCSSolo_Qualifier",
     "Fortnite:epicgames_S42_ReloadDuosVictoryCup_EU:S42_ReloadDuosVictoryCup_Event2_Round1_EU": "S42_ReloadDuosVictoryCup_ScoringRules_Round1_v2",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event7_EU_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
@@ -35445,7 +34774,6 @@
     "Fortnite:epicgames_S42_FNCSDivisionalCup_Division2_EU:S42_FNCSDivisionalCup_Division2_Event4_EU": "S42_FNCSDivisionalCup_Division2_Event4_EU",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event7_EU_1_Silver": "epicgames_S42_RankedCupSolo_ZB_EU_1_Silver",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_EU:S42_RankedCupReloadDuos_ZB_Event5_EU_1_Platinum": "epicgames_S42_RankedCupReloadDuos_ZB_EU_1_Platinum",
-    "Fortnite:epicgames_S42_MegaManCup_ZB_EU:S42_MegaManCup_ZB_EU_alt": "S42_MegaManCup_ZB_EU_alt",
     "Fortnite:epicgames_S42_RankedCupDuos_EU:S42_RankedCupDuos_Event3_EU_1_platinum": "epicgames_S42_RankedCupDuos_EU_1_Platinum",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event6_EU_1_Bronze": "epicgames_S42_RankedCupReloadDuos_EU_1_Bronze",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_EU:S42_RankedCupDuos_ZB_Event4_EU_1_Bronze": "epicgames_S42_RankedCupDuos_ZB_EU_1_Bronze",
@@ -35603,7 +34931,6 @@
     "Fortnite:epicgames_S42_ReloadDuosVictoryCup_EU:S42_ReloadDuosVictoryCup_Event1_Round2_EU": "S42_ReloadDuosVictoryCup_Round2",
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event8_EU_1_gold": "epicgames_S42_RankedCupSoloReload_EU_1_Gold",
     "Fortnite:epicgames_S42_FNCSSoloQualifiers_EU:S42_FNCSSoloQualifiers_Qual2Round2_EU": "S42_FNCSSoloQualifiers_Qual2Round2_EU",
-    "Fortnite:epicgames_S42_MegaManCup_ZB_EU:S42_MegaManCup_ZB_EU": "S42_MegaManCup_ZB_EU",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_EU:S42_RankedCupReloadDuos_ZB_Event7_EU_1_Silver": "epicgames_S42_RankedCupReloadDuos_ZB_EU_1_Silver",
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event2_EU_1_Silver": "epicgames_S42_RankedCupSoloReload_EU_1_Silver",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event2_EU_1_Diamond": "epicgames_S42_RankedCupReloadDuos_EU_1_Diamond",
@@ -35871,7 +35198,6 @@
     "Fortnite:epicgames_S42_FNCSSoloQualifiers_EU:S42_FNCSSoloQualifiers_Qual2Round1Day2_EU": "S42_FNCSSoloQualifiers_Qual2Round1Day2_EU",
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event1_EU_1_Silver": "epicgames_S42_RankedCupSolo_EU_1_Silver",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event2_EU_1_elite": "epicgames_S42_RankedCupSolo_ZB_EU_1_Elite",
-    "Fortnite:epicgames_S42_MegaManCup_EU:S42_MegaManCup_EU": "S42_MegaManCup_EU",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event4_EU_1_Bronze": "epicgames_S42_RankedCupReloadDuos_EU_1_Bronze",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_EU:S42_RankedCupDuos_ZB_Event7_EU_1_champion": "epicgames_S42_RankedCupDuos_ZB_EU_1_Champion",
     "Fortnite:epicgames_S42_FNCSDivisionalCup_Division5_EU:S42_FNCSDivisionalCup_Division5_Event4_EU": "S42_FNCSDivisionalCup_Division5_Event4_EU",
@@ -35892,7 +35218,6 @@
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event4_EU_1_platinum": "epicgames_S42_RankedCupSoloReload_EU_1_Platinum",
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event6_EU_1_unreal": "epicgames_S42_RankedCupSoloReload_EU_1_Unreal",
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event4_EU_1_diamond": "epicgames_S42_RankedCupSolo_EU_1_Diamond",
-    "Fortnite:epicgames_S42_MegaManCup_EU:S42_MegaManCup_EU_alt": "S42_MegaManCup_EU_alt",
     "Fortnite:epicgames_S42_FNCSSoloQualifiers_EU:S42_FNCSSoloQualifiers_Qual1Round1Day2_EU": "S42_FNCSSoloQualifiers_Qual1Round1Day2_EU",
     "Fortnite:epicgames_S42_ReloadDuosVictoryCup_EU:S42_ReloadDuosVictoryCup_Event2_Round1_EU": "S42_ReloadDuosVictoryCup_Event2_Round1_EU",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event7_EU_1_platinum": "epicgames_S42_RankedCupSolo_ZB_EU_1_Platinum",
@@ -36426,10 +35751,6 @@
     "Fortnite:epicgames_S42_FNCSSoloQualifiers_EU:S42_FNCSSoloQualifiers_Qual2Round2_EU": [
       "Fortnite:epicgames_S42_FNCSSoloQualifiers_EU:S42_FNCSSoloQualifiers_Qual2Round2_EU"
     ],
-    "Fortnite:epicgames_S42_MegaManCup_ZB_EU:S42_MegaManCup_ZB_EU": [
-      "Fortnite:epicgames_S42_MegaManCup_ZB_EU:S42_MegaManCup_ZB_EU",
-      "Fortnite:epicgames_S42_MegaManCup_ZB_EU:S42_MegaManCup_ZB_EU_alt"
-    ],
     "Fortnite:epicgames_S42_SoloVictoryCup_EU:S42_SoloVictoryCup_Event1Round1_EU": [
       "Fortnite:epicgames_S42_SoloVictoryCup_EU:S42_SoloVictoryCup_Event1Round1_EU"
     ],
@@ -36898,10 +36219,6 @@
       "Fortnite:epicgames_S42_RankedCupDuos_ZB_EU:S42_RankedCupDuos_ZB_Event8_EU_1_elite",
       "Fortnite:epicgames_S42_RankedCupDuos_ZB_EU:S42_RankedCupDuos_ZB_Event8_EU_1_champion",
       "Fortnite:epicgames_S42_RankedCupDuos_ZB_EU:S42_RankedCupDuos_ZB_Event8_EU_1_unreal"
-    ],
-    "Fortnite:epicgames_S42_MegaManCup_EU:S42_MegaManCup_EU": [
-      "Fortnite:epicgames_S42_MegaManCup_EU:S42_MegaManCup_EU",
-      "Fortnite:epicgames_S42_MegaManCup_EU:S42_MegaManCup_EU_alt"
     ],
     "Fortnite:epicgames_S42_FNCSDivisionalCup_Division5_EU:S42_FNCSDivisionalCup_Division5_Event4_EU": [
       "Fortnite:epicgames_S42_FNCSDivisionalCup_Division5_EU:S42_FNCSDivisionalCup_Division5_Event4_EU"
