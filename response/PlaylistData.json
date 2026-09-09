@@ -21171,198 +21171,66 @@
           "RewardPlacementBonusType": "Solo",
           "bAllowSinglePartyMatches": false,
           "bRequeueAfterFailedSessionAssignment": true,
-          "bIsTournament": true,
+          "bIsTournament": false,
           "bIsLanTournament": false,
           "bUseMultidivisionQueues": false,
-          "Strategy": "BattleRoyaleStrategy_Showdown",
-          "CompetitivePointClamp": "100",
+          "Strategy": "",
+          "CompetitivePointClamp": "9999",
           "BotVersionPlaylistName": "",
           "MaxBucketCapacity": "10000",
           "MaxPendingMatches": "200",
           "PriorityRatingExpansion": [],
           "BracketDefinitions": [],
-          "FillRateTable": [
-            {
-              "MinMmr": "750",
-              "MaxMmr": "949",
-              "MinFillPct": "0.300000",
-              "MaxFillPct": "0.300000",
-              "MaxPriority": "50.000000"
-            },
-            {
-              "MinMmr": "950",
-              "MaxMmr": "1049",
-              "MinFillPct": "0.500000",
-              "MaxFillPct": "0.500000",
-              "MaxPriority": "50.000000"
-            },
-            {
-              "MinMmr": "1050",
-              "MaxMmr": "1214",
-              "MinFillPct": "0.700000",
-              "MaxFillPct": "1.000000",
-              "MaxPriority": "60.000000"
-            },
-            {
-              "MinMmr": "1215",
-              "MaxMmr": "1354",
-              "MinFillPct": "0.700000",
-              "MaxFillPct": "1.000000",
-              "MaxPriority": "60.000000"
-            },
-            {
-              "MinMmr": "1355",
-              "MaxMmr": "1519",
-              "MinFillPct": "0.700000",
-              "MaxFillPct": "1.000000",
-              "MaxPriority": "60.000000"
-            },
-            {
-              "MinMmr": "1520",
-              "MaxMmr": "1714",
-              "MinFillPct": "0.700000",
-              "MaxFillPct": "1.000000",
-              "MaxPriority": "60.000000"
-            },
-            {
-              "MinMmr": "1715",
-              "MaxMmr": "1919",
-              "MinFillPct": "0.700000",
-              "MaxFillPct": "1.000000",
-              "MaxPriority": "75.000000"
-            },
-            {
-              "MinMmr": "1920",
-              "MaxMmr": "2500",
-              "MinFillPct": "0.700000",
-              "MaxFillPct": "1.000000",
-              "MaxPriority": "90.000000"
-            }
-          ],
-          "BotFillMMRCutoff": "1049",
-          "ForceOnlyBotsThreshold": "-1",
-          "PlayerRatingBrackets": [
-            {
-              "MinMmr": "750",
-              "MaxMmr": "799"
-            },
-            {
-              "MinMmr": "800",
-              "MaxMmr": "849"
-            },
-            {
-              "MinMmr": "850",
-              "MaxMmr": "899"
-            },
-            {
-              "MinMmr": "900",
-              "MaxMmr": "949"
-            },
-            {
-              "MinMmr": "950",
-              "MaxMmr": "999"
-            },
-            {
-              "MinMmr": "1000",
-              "MaxMmr": "1049"
-            },
-            {
-              "MinMmr": "1050",
-              "MaxMmr": "1104"
-            },
-            {
-              "MinMmr": "1105",
-              "MaxMmr": "1159"
-            },
-            {
-              "MinMmr": "1160",
-              "MaxMmr": "1214"
-            },
-            {
-              "MinMmr": "1215",
-              "MaxMmr": "1424"
-            },
-            {
-              "MinMmr": "1425",
-              "MaxMmr": "1714"
-            },
-            {
-              "MinMmr": "1715",
-              "MaxMmr": "2500"
-            }
-          ],
+          "FillRateTable": [],
+          "BotFillMMRCutoff": "0",
+          "ForceOnlyBotsThreshold": "0",
+          "PlayerRatingBrackets": [],
           "MinBracketSize": "25",
           "MaxBracketSize": "0",
-          "BracketBalanceMergeInterval": "3 seconds",
-          "BracketBalanceSplitInterval": "5 seconds",
-          "OutlierBracketBalanceMergeInterval": "10 seconds",
-          "MinBracketPriority": "30.000000",
-          "MaxBracketPriority": "60.000000",
-          "MaxOutlierBracketPriority": "300.000000",
+          "BracketBalanceMergeInterval": "",
+          "BracketBalanceSplitInterval": "",
+          "OutlierBracketBalanceMergeInterval": "",
+          "MinBracketPriority": "0",
+          "MaxBracketPriority": "75",
+          "MaxOutlierBracketPriority": "0",
           "MaxOutlierBracketMergeMmrGap": "0",
-          "MmrThresholdForPrioritySession": "1710",
+          "MmrThresholdForPrioritySession": "0",
           "MinBackfillMatchPlayers": "0",
           "MaxTeamScoreAllowedForBackfill": "0",
           "MinPlayersForPrivateServer": "0",
           "MaxTeamScoreDiscrepancyPercent": "0.000000",
-          "bUsePlayerRating": true,
-          "bEnableRatingUpdate": true,
+          "bUsePlayerRating": false,
+          "bEnableRatingUpdate": false,
           "bRestrictSquadFillToSoloPlayers": true,
-          "bIsRankedMode": true,
-          "bUseReloadRankedFormula": true,
-          "bUseRankScaling": true,
+          "bIsRankedMode": false,
+          "bUseReloadRankedFormula": false,
+          "bUseRankScaling": false,
           "bAllowBackfill": false,
-          "bCheckSquadFillMapForAvailableSlotsInBackfill": true,
-          "RankLossMax": "18.000000",
-          "RankLossFloorMod": "0.750000",
-          "KillerRankShare": "0.250000",
-          "RankScalingMinDelta": "-500.000000",
-          "RankScalingMaxDelta": "500.000000",
-          "RankScalingStandardDeviation": "800.000000",
-          "RankKillFarmCutoff": "3",
-          "RankKillFarmFloor": "0.050000",
-          "RankKillFarmMultiplier": "0.300000",
-          "DamageTakenMax": "150.000000",
-          "PlacementLossMin": "10.000000",
-          "PlacementGainMin": "0.162000",
-          "SeasonNumber": "20009",
+          "bCheckSquadFillMapForAvailableSlotsInBackfill": false,
+          "RankLossMax": "0",
+          "RankLossFloorMod": "0",
+          "KillerRankShare": "0",
+          "RankScalingMinDelta": "0",
+          "RankScalingMaxDelta": "0",
+          "RankScalingStandardDeviation": "0",
+          "RankKillFarmCutoff": "0",
+          "RankKillFarmFloor": "0",
+          "RankKillFarmMultiplier": "0",
+          "DamageTakenMax": "0",
+          "PlacementLossMin": "0",
+          "PlacementGainMin": "0",
+          "SeasonNumber": "0",
           "RankBonuses": {
-            "KillBonuses": [
-              {
-                "BonusTier": "LowTier",
-                "Kills": "3"
-              },
-              {
-                "BonusTier": "MiddleTier",
-                "Kills": "6"
-              },
-              {
-                "BonusTier": "HighTier",
-                "Kills": "10"
-              }
-            ],
-            "PlacementBonuses": [
-              {
-                "BonusTier": "LowTier",
-                "Placement": "20"
-              },
-              {
-                "BonusTier": "MiddleTier",
-                "Placement": "10"
-              },
-              {
-                "BonusTier": "HighTier",
-                "Placement": "1"
-              }
-            ]
+            "KillBonuses": [],
+            "PlacementBonuses": []
           },
           "RatingType": "ranked-blastberry-combined",
           "bLimitedPoolMatchmakingEnabled": false,
           "bAllowedInLeto": false,
-          "bEnableDynamicBotBackfill": true,
+          "bEnableDynamicBotBackfill": false,
           "bRequireCrossplayEnabled": true,
           "LastQueuedPlaylistPriority": "-1",
-          "bAllowInGameMatchMaking": true,
+          "bAllowInGameMatchMaking": false,
           "bAllowReturnToMatchmakingOriginOnMatchEnd": false,
           "bAllowBotsInHumanTeams": false,
           "bForceNewPlayerStateOnReconnect": false,
@@ -21619,10 +21487,10 @@
         },
         "meta": {
           "headRevision": 5,
-          "promotedAt": "2026-09-09T18:54:39.360Z",
-          "promotion": 152,
-          "revisedAt": "2026-09-09T18:43:02.303Z",
-          "revision": 4
+          "promotedAt": "2026-09-09T23:12:51.751Z",
+          "promotion": 155,
+          "revisedAt": "2026-09-09T19:48:06.329Z",
+          "revision": 5
         }
       },
       "Playlist_ShowdownTournament_RE_BlastBerrySolo_NPM": {
@@ -23386,7 +23254,7 @@
       }
     },
     "meta": {
-      "promotion": 154
+      "promotion": 155
     }
   }
 }
