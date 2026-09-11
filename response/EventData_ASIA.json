@@ -8977,6 +8977,25 @@
         ]
       }
     ],
+    "S42_MobileSeriesCup_SemiFinal_ASIA": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 2,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S42_MobileSeries_SemiFinalDeny",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S42_ReloadCashCup_DuosZB_Event3Round1_ASIA": [
       {
         "scoringType": "rank",
@@ -16017,7 +16036,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S42_MobileSeriesSemiFinal_LeaderboardDef",
+              "leaderboardDefId": "S41_MobileSeriesHeats_LeaderboardDef",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -16028,14 +16047,15 @@
           "requireAnyTokens": [],
           "requireNoneTokensCaller": [
             "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
+            "Permanent_Tournament_Ban",
+            "S42_MobileSeries_SemiFinalDeny"
           ],
           "requireAllTokensCaller": [],
           "requireAnyTokensCaller": [],
           "regionMappings": {},
           "metadata": {
             "ServerReplays": true,
-            "RoundType": "SemiFinalifiers",
+            "RoundType": "Qualifiers",
             "ScheduledMatchmakingInitialDelaySeconds": 600,
             "ScheduledMatchmakingMatchDelaySeconds": 720
           }
@@ -32112,6 +32132,7 @@
     "Fortnite:epicgames_S42_RankedCupSolo_ASIA:S42_RankedCupSolo_Event4_ASIA_1_Silver": "epicgames_S42_RankedCupSolo_ASIA_1_Silver",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_ASIA:S42_RankedCupReloadDuos_ZB_Event6_ASIA_1_Gold": "epicgames_S42_RankedCupReloadDuos_ZB_ASIA_1_Gold",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_ASIA:S42_RankedCupDuos_ZB_Event5_ASIA_1_Silver": "epicgames_S42_RankedCupDuos_ZB_ASIA_1_Silver",
+    "Fortnite:epicgames_S42_MobileSeriesCupSemiFinal_ASIA:S42_MobileSeriesCup_SemiFinal_ASIA": "S42_MobileSeriesCup_SemiFinal_ASIA",
     "Fortnite:epicgames_S42_MobileVictoryCup_ReloadminiV_ASIA:S42_MobileVictoryCup_Event1_Round2_ASIA": "S41_MobileVictoryCup_Day1_Round2",
     "Fortnite:epicgames_S42_RankedCupSoloReload_ASIA:S42_RankedCupSoloReload_Event5_ASIA_1_champion": "epicgames_S42_RankedCupSoloReload_ASIA_1_Champion",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_ASIA:S42_RankedCupDuos_ZB_Event2_ASIA_1_gold": "epicgames_S42_RankedCupDuos_ZB_ASIA_1_Gold",

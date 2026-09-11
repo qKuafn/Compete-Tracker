@@ -14740,6 +14740,25 @@
         ]
       }
     ],
+    "S42_MobileSeriesCup_SemiFinal_OCE": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 2,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S42_MobileSeries_SemiFinalDeny",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S42_ConsoleVCC_SolosZB_Event6Round2_OCE": [
       {
         "scoringType": "value",
@@ -16017,7 +16036,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S42_MobileSeriesSemiFinal_LeaderboardDef",
+              "leaderboardDefId": "S41_MobileSeriesHeats_LeaderboardDef",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -16028,14 +16047,15 @@
           "requireAnyTokens": [],
           "requireNoneTokensCaller": [
             "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
+            "Permanent_Tournament_Ban",
+            "S42_MobileSeries_SemiFinalDeny"
           ],
           "requireAllTokensCaller": [],
           "requireAnyTokensCaller": [],
           "regionMappings": {},
           "metadata": {
             "ServerReplays": true,
-            "RoundType": "SemiFinalifiers",
+            "RoundType": "Qualifiers",
             "ScheduledMatchmakingInitialDelaySeconds": 600,
             "ScheduledMatchmakingMatchDelaySeconds": 720
           }
@@ -32407,6 +32427,7 @@
     "Fortnite:epicgames_S42_RankedCupSolo_OCE:S42_RankedCupSolo_Event4_OCE_1_elite": "epicgames_S42_RankedCupSolo_OCE_1_Elite",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_OCE:S42_RankedCupReloadDuos_Event3_OCE_1_Silver": "epicgames_S42_RankedCupReloadDuos_OCE_1_Silver",
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_OCE:S42_RankedCupSoloReload_ZB_Event2_OCE_1_Bronze": "epicgames_S42_RankedCupSoloReload_ZB_OCE_1_Bronze",
+    "Fortnite:epicgames_S42_MobileSeriesCupSemiFinal_OCE:S42_MobileSeriesCup_SemiFinal_OCE": "S42_MobileSeriesCup_SemiFinal_OCE",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_OCE:S42_RankedCupReloadDuos_ZB_Event5_OCE_1_Platinum": "epicgames_S42_RankedCupReloadDuos_ZB_OCE_1_Platinum",
     "Fortnite:epicgames_S42_MobileSeriesGroup2_OCE:S42_MobileSeriesGroup2_OCE": "S42_MobileSeriesGroup2_OCE",
     "Fortnite:epicgames_S42_RankedCupDuos_OCE:S42_RankedCupDuos_Event6_OCE_1_unreal": "epicgames_S42_RankedCupDuos_OCE_1_Unreal",

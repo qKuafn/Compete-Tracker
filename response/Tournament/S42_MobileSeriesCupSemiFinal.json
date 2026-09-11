@@ -42,16 +42,26 @@
     "requireAnyTokensCaller": [],
     "requireNoneTokensCaller": [
       "EpicAccountPrizingRestriction_v2",
-      "Permanent_Tournament_Ban"
+      "Permanent_Tournament_Ban",
+      "S42_MobileSeries_SemiFinalDeny"
     ],
     "ScoringRules": {
-      "S42_MobileSeriesSemiFinal_LeaderboardDef": {
+      "S41_MobileSeriesHeats_LeaderboardDef": {
         "scoringRuleSetId": "ScoringRules_MobileSeriesReloadFinal",
         "WindowLocation": "S42_MobileSeriesCup_SemiFinal_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": true,
         "onlyScoreTopN": -1,
-        "payouts": []
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S42_MobileSeries_SemiFinalDeny"
+          }
+        ]
       }
     }
   }
