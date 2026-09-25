@@ -15709,7 +15709,7 @@
             "mfa",
             [
               "leaderboard:epicgames_dreamyparadox:dreamyparadox:rank:2000",
-              "anyToken:S42_FNCSSolo_Qual1Round2_EU"
+              "anyToken:S42_FNCSSolo_Qual1Round2_EU,PowerRankings_24_09_2026_Top2K,PowerRankings_01_10_2026_Top2K"
             ]
           ],
           "teammateEligibility": "all",
@@ -15910,7 +15910,7 @@
             "mfa",
             [
               "leaderboard:epicgames_dreamyparadox:dreamyparadox:rank:2000",
-              "anyToken:S42_FNCSSolo_Qual2Round2_EU"
+              "anyToken:S42_FNCSSolo_Qual2Round2_EU,PowerRankings_01_10_2026_Top2K,PowerRankings_08_10_2026_Top2K"
             ]
           ],
           "teammateEligibility": "all",
@@ -18682,7 +18682,7 @@
         },
         {
           "eventWindowId": "S42_RankedCupSoloReload_Event5_EU",
-          "eventTemplateId": "EventTemplate_RankedCupSoloReload",
+          "eventTemplateId": "EventTemplate_RankedCupSoloReload_v4",
           "countdownBeginTime": "2026-09-29T15:00:00Z",
           "beginTime": "2026-09-29T17:00:00Z",
           "endTime": "2026-09-29T20:00:00Z",
@@ -18771,7 +18771,7 @@
         },
         {
           "eventWindowId": "S42_RankedCupSoloReload_Event6_EU",
-          "eventTemplateId": "EventTemplate_RankedCupSoloReload",
+          "eventTemplateId": "EventTemplate_RankedCupSoloReload_v4",
           "countdownBeginTime": "2026-10-06T15:00:00Z",
           "beginTime": "2026-10-06T17:00:00Z",
           "endTime": "2026-10-06T20:00:00Z",
@@ -19446,7 +19446,7 @@
         },
         {
           "eventWindowId": "S42_RankedCupSoloReload_ZB_Event5_EU",
-          "eventTemplateId": "EventTemplate_RankedCupSoloReload_ZB",
+          "eventTemplateId": "EventTemplate_RankedCupSoloReload_v4_ZB",
           "countdownBeginTime": "2026-09-29T15:00:00Z",
           "beginTime": "2026-09-29T17:00:00Z",
           "endTime": "2026-09-29T20:00:00Z",
@@ -19535,7 +19535,7 @@
         },
         {
           "eventWindowId": "S42_RankedCupSoloReload_ZB_Event6_EU",
-          "eventTemplateId": "EventTemplate_RankedCupSoloReload_ZB",
+          "eventTemplateId": "EventTemplate_RankedCupSoloReload_v4_ZB",
           "countdownBeginTime": "2026-10-06T15:00:00Z",
           "beginTime": "2026-10-06T17:00:00Z",
           "endTime": "2026-10-06T20:00:00Z",
@@ -21258,7 +21258,7 @@
       "eventWindows": [
         {
           "eventWindowId": "S42_ReloadSoloVictoryCup_Event1_Round1_EU",
-          "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round1",
+          "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round1_v2",
           "countdownBeginTime": "2026-10-02T15:00:00Z",
           "beginTime": "2026-10-02T17:00:00Z",
           "endTime": "2026-10-02T19:00:00Z",
@@ -21302,7 +21302,7 @@
         },
         {
           "eventWindowId": "S42_ReloadSoloVictoryCup_Event1_Round2_EU",
-          "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round2",
+          "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round2_v2",
           "countdownBeginTime": "2026-10-02T14:00:00Z",
           "beginTime": "2026-10-02T20:00:00Z",
           "endTime": "2026-10-02T20:45:00Z",
@@ -24218,7 +24218,7 @@
         },
         {
           "eventWindowId": "S42_RankedCupReloadDuos_ZB_Event5_EU",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_ZB",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3_ZB",
           "countdownBeginTime": "2026-10-04T15:00:00Z",
           "beginTime": "2026-10-04T17:00:00Z",
           "endTime": "2026-10-04T20:00:00Z",
@@ -24980,7 +24980,7 @@
         },
         {
           "eventWindowId": "S42_RankedCupReloadDuos_Event5_EU",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3",
           "countdownBeginTime": "2026-10-04T15:00:00Z",
           "beginTime": "2026-10-04T17:00:00Z",
           "endTime": "2026-10-04T20:00:00Z",
@@ -25536,6 +25536,43 @@
       "clampsToZero": false
     },
     {
+      "playlistId": "Playlist_ShowdownTournament_RE_PiperBootSolo_RC",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupSoloReload_v4",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_RE_SourSpawnSolo_NPM",
       "matchCap": 3,
       "tiebreakerFormula": {
@@ -25604,43 +25641,6 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_S42_MobileVictoryCup_Round2_reloadMini",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_FN_NoBuildBR_RC_Solo",
-      "matchCap": 11,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_RankedCupSolo_ZB",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -25721,43 +25721,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_BlastBerryNoBuildDuo_PBM",
-      "matchCap": 6,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "S42_ReloadCashCup_DuosZB_EventTemplate_Round2Venture",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_NPM_Duos",
       "matchCap": 8,
       "tiebreakerFormula": {
@@ -25832,43 +25795,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_FN_NoBuildBR_Solo",
-      "matchCap": 8,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "S42_ConsoleVCC_SolosZB_EventTemplate_Round1",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_PiperBootNoBuildDuos_PBM",
       "matchCap": 12,
       "tiebreakerFormula": {
@@ -25900,43 +25826,6 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "S42_ReloadCashCup_DuosZB_EventTemplate_Round1SurfCity",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_RE_BlastBerryNoBuildSolo_RC",
-      "matchCap": 12,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_RankedCupSoloReload_ZBVenture",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -26238,6 +26127,80 @@
       "clampsToZero": false
     },
     {
+      "playlistId": "Playlist_ShowdownTournament_RE_PiperBootSolo_NPM",
+      "matchCap": 3,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round2_v2",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_FN_NoBuildBR_RC_Solo",
+      "matchCap": 11,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupSolo_ZB",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_RE_BlastBerrySolo_RC",
       "matchCap": 12,
       "tiebreakerFormula": {
@@ -26532,6 +26495,117 @@
       "clampsToZero": false
     },
     {
+      "playlistId": "Playlist_ShowdownTournament_BlastBerryNoBuildDuo_PBM",
+      "matchCap": 6,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "S42_ReloadCashCup_DuosZB_EventTemplate_Round2Venture",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_PiperBootNoBuildDuos_RC",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3_ZB",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_PiperBootDuos_RC",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_DashBerryNoBuildDuo_PBM",
       "matchCap": 6,
       "tiebreakerFormula": {
@@ -26600,6 +26674,80 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupSoloReload_v2_ZB",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_FN_NoBuildBR_Solo",
+      "matchCap": 8,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "S42_ConsoleVCC_SolosZB_EventTemplate_Round1",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_PiperBootNoBuildSolo_RC",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupSoloReload_v4_ZB",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -26784,6 +26932,80 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "S42_ReloadCashCup_DuosZB_EventTemplate_Round1Venture",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_PiperBootSolo_PBM",
+      "matchCap": 10,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round1_v2",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_BlastBerryNoBuildSolo_RC",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupSoloReload_ZBVenture",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
