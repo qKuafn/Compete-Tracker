@@ -16,7 +16,7 @@ import config
 import config2
 
 base_name = ".DefaultGame"
-target_files = ["DefaultGame.ini", "DefaultBlastberryGame.ini"]
+target_files = ["DefaultGame.ini", "DefaultBlastberryGame.ini", "DefaultCompetitiveOnlineGame.ini"]
 
 def fetch_hotfix_uniqueFilename(target_filename):
     ensure_token()
