@@ -7241,26 +7241,6 @@
         ]
       }
     ],
-    "epicgames_S42_FNCSSoloQualifiers_NAC_1_risk": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 4000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S42_FNCSSolo_DenyQual1Round2_NAC",
-                "quantity": -1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ],
-        "scoreId": "risk:epicgames_S42_FNCSSoloQualifiers_NAC_1_risk"
-      }
-    ],
     "S42_ReloadCashCup_DuosZB_Event5Round2_NAC": [
       {
         "scoringType": "rank",
@@ -9030,6 +9010,25 @@
         ]
       }
     ],
+    "S42_PerformanceEvaluation_Event7Round1_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 33,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S42_PerformanceEvaluation_Event7Round2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S42_RankedCupSolo_ZB_NAW_1_Diamond": [
       {
         "scoringType": "rank",
@@ -9614,45 +9613,6 @@
         ]
       }
     ],
-    "epicgames_S42_FNCSSoloQualifiers_NAC_4_risk": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 4000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S42_FNCSSolo_DenyQual2Round2_NAC",
-                "quantity": -1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ],
-        "scoreId": "risk:epicgames_S42_FNCSSoloQualifiers_NAC_4_risk"
-      }
-    ],
-    "S42_PerformanceEvaluation_Event7Round1_NAC": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 33,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S42_PerformanceEvaluation_Event7Round2_NAC",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "S42_FNCSSoloQualifiers_Qual1Round1Day2_NAW": [
       {
         "scoringType": "value",
@@ -10129,26 +10089,6 @@
             ]
           }
         ]
-      }
-    ],
-    "epicgames_S42_FNCSSoloQualifiers_NAW_1_risk": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 2000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S42_FNCSSolo_DenyQual1Round2_NAW",
-                "quantity": -1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ],
-        "scoreId": "risk:epicgames_S42_FNCSSoloQualifiers_NAW_1_risk"
       }
     ],
     "S42_FNCSSoloQualifiers_Qual2Round1Day1_NAW": [
@@ -11109,6 +11049,25 @@
         ]
       }
     ],
+    "S42_ReloadCashCup_DuosZB_Event3Round1_NAC": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 20,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S42_ReloadCashCup_DuosZB_Event3Round2_NAC",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S42_ReloadCashCup_DuosZB_Event6Round2_NAC": [
       {
         "scoringType": "rank",
@@ -11355,45 +11314,6 @@
                 "rewardType": "token",
                 "rewardMode": "standard",
                 "value": "S42_FNCSSolo_Finalist_NAW",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "epicgames_S42_FNCSSoloQualifiers_NAW_4_risk": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 2000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S42_FNCSSolo_DenyQual2Round2_NAW",
-                "quantity": -1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ],
-        "scoreId": "risk:epicgames_S42_FNCSSoloQualifiers_NAW_4_risk"
-      }
-    ],
-    "S42_ReloadCashCup_DuosZB_Event3Round1_NAC": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 20,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S42_ReloadCashCup_DuosZB_Event3Round2_NAC",
                 "quantity": 1,
                 "notifiesPlayer": false
               }
@@ -43686,7 +43606,7 @@
       "leaderboardInstanceGroupingKeyFormat": "risk",
       "leaderboardInstanceIdFormat": "${eventId}_${round}_risk",
       "maxSessionHistorySize": 22,
-      "useIndividualScores": true,
+      "useIndividualScores": false,
       "tiebreakerFormula": {
         "basePointsBits": 22,
         "components": [
@@ -43716,10 +43636,6 @@
       },
       "scoringRuleSetId": "ScoringRules_FNCSSolo_Qualifier",
       "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${eventId}_${round}_risk",
-        "payoutDate": "roundEnd+PT32M"
-      },
       "hidePlayerScores": false,
       "percentileAccuracy": 1,
       "discardZeroScore": false
@@ -47723,6 +47639,7 @@
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_NAC:S42_RankedCupSolo_ZB_Event4_NAC_1_Bronze": "epicgames_S42_RankedCupSolo_ZB_NAC_1_Bronze",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_NAC:S42_RankedCupReloadDuos_ZB_Event8_NAC_1_Unreal": "epicgames_S42_RankedCupReloadDuos_ZB_NAC_1_Unreal",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_NAC:S42_RankedCupSolo_ZB_Event6_NAC_1_platinum": "epicgames_S42_RankedCupSolo_ZB_NAC_1_Platinum",
+    "Fortnite:epicgames_S42_RankedCupSolo_ZB_NAW:S42_RankedCupSolo_ZB_Event4_NAW_1_gold": "epicgames_S42_RankedCupSolo_ZB_NAW_1_Gold",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_NAC:S42_RankedCupDuos_ZB_Event2_NAC_1_Bronze": "epicgames_S42_RankedCupDuos_ZB_NAC_1_Bronze",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_NAC:S42_RankedCupReloadDuos_Event8_NAC_1_Gold": "epicgames_S42_RankedCupReloadDuos_NAC_1_Gold",
     "Fortnite:epicgames_S42_RankedCupSoloReload_NAW:S42_RankedCupSoloReload_Event2_NAW_1_unreal": "epicgames_S42_RankedCupSoloReload_NAW_1_Unreal",
@@ -47734,8 +47651,6 @@
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_NAC:S42_RankedCupDuos_ZB_Event7_NAC_1_diamond": "epicgames_S42_RankedCupDuos_ZB_NAC_1_Diamond",
     "Fortnite:epicgames_S42_RankedCupSolo_NAC:S42_RankedCupSolo_Event5_NAC_1_unreal": "epicgames_S42_RankedCupSolo_NAC_1_Unreal",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_NAC:S42_RankedCupDuos_ZB_Event6_NAC_1_Bronze": "epicgames_S42_RankedCupDuos_ZB_NAC_1_Bronze",
-    "Fortnite:risk:epicgames_S42_FNCSSoloQualifiers_NAW_1_risk": "epicgames_S42_FNCSSoloQualifiers_NAW_1_risk",
-    "Fortnite:epicgames_S42_RankedCupSolo_ZB_NAW:S42_RankedCupSolo_ZB_Event4_NAW_1_gold": "epicgames_S42_RankedCupSolo_ZB_NAW_1_Gold",
     "Fortnite:epicgames_S42_RankedCupDuos_NAC:S42_RankedCupDuos_Event2_NAC_1_champion": "epicgames_S42_RankedCupDuos_NAC_1_Champion",
     "Fortnite:epicgames_S42_RankedCupDuos_NAC:S42_RankedCupDuos_Event6_NAC_1_champion": "epicgames_S42_RankedCupDuos_NAC_1_Champion",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_NAC:S42_RankedCupReloadDuos_ZB_Event4_NAC_1_Gold": "epicgames_S42_RankedCupReloadDuos_ZB_NAC_1_Gold",
@@ -47894,7 +47809,6 @@
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_NAW:S42_RankedCupReloadDuos_ZB_Event3_NAW_1_Champion": "epicgames_S42_RankedCupReloadDuos_ZB_NAW_1_Champion",
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_NAC:S42_RankedCupSoloReload_ZB_Event1_NAC_1_elite": "epicgames_S42_RankedCupSoloReload_ZB_NAC_1_Elite",
     "Fortnite:epicgames_S42_RankedCupDuos_NAW:S42_RankedCupDuos_Event5_NAW_1_gold": "epicgames_S42_RankedCupDuos_NAW_1_Gold",
-    "Fortnite:risk:epicgames_S42_FNCSSoloQualifiers_NAW_4_risk": "epicgames_S42_FNCSSoloQualifiers_NAW_4_risk",
     "Fortnite:epicgames_S42_RankedCupSoloReload_NAW:S42_RankedCupSoloReload_Event8_NAW_1_Bronze": "epicgames_S42_RankedCupSoloReload_NAW_1_Bronze",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_NAW:S42_RankedCupSolo_ZB_Event1_NAW_1_Bronze": "epicgames_S42_RankedCupSolo_ZB_NAW_1_Bronze",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_NAW:S42_RankedCupDuos_ZB_Event6_NAW_1_Silver": "epicgames_S42_RankedCupDuos_ZB_NAW_1_Silver",
@@ -48108,7 +48022,6 @@
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_NAC:S42_RankedCupSolo_ZB_Event2_NAC_1_champion": "epicgames_S42_RankedCupSolo_ZB_NAC_1_Champion",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_NAW:S42_RankedCupDuos_ZB_Event1_NAW_1_Bronze": "epicgames_S42_RankedCupDuos_ZB_NAW_1_Bronze",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_NAC:S42_RankedCupDuos_ZB_Event3_NAC_1_elite": "epicgames_S42_RankedCupDuos_ZB_NAC_1_Elite",
-    "Fortnite:risk:epicgames_S42_FNCSSoloQualifiers_NAC_4_risk": "epicgames_S42_FNCSSoloQualifiers_NAC_4_risk",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_NAC:S42_RankedCupReloadDuos_Event5_NAC_1_Bronze": "epicgames_S42_RankedCupReloadDuos_NAC_1_Bronze",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_NAC:S42_RankedCupSolo_ZB_Event2_NAC_1_elite": "epicgames_S42_RankedCupSolo_ZB_NAC_1_Elite",
     "Fortnite:epicgames_S42_FNCSSoloQualifiers_NAC:S42_FNCSSoloQualifiers_Qual2Round1Day2_NAC": "S42_FNCSSoloQualifiers_Qual2Round1Day2_NAC",
@@ -48408,7 +48321,6 @@
     "Fortnite:epicgames_S42_RankedCupReloadDuos_NAC:S42_RankedCupReloadDuos_Event6_NAC_1_Champion": "epicgames_S42_RankedCupReloadDuos_NAC_1_Champion",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_NAC:S42_RankedCupReloadDuos_Event4_NAC_1_Unreal": "epicgames_S42_RankedCupReloadDuos_NAC_1_Unreal",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_NAW:S42_RankedCupDuos_ZB_Event1_NAW_1_Silver": "epicgames_S42_RankedCupDuos_ZB_NAW_1_Silver",
-    "Fortnite:risk:epicgames_S42_FNCSSoloQualifiers_NAC_1_risk": "epicgames_S42_FNCSSoloQualifiers_NAC_1_risk",
     "Fortnite:epicgames_S42_RankedCupDuos_NAW:S42_RankedCupDuos_Event7_NAW_1_Bronze": "epicgames_S42_RankedCupDuos_NAW_1_Bronze",
     "Fortnite:epicgames_S42_RankedCupDuos_NAW:S42_RankedCupDuos_Event8_NAW_1_elite": "epicgames_S42_RankedCupDuos_NAW_1_Elite",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_NAC:S42_RankedCupDuos_ZB_Event4_NAC_1_unreal": "epicgames_S42_RankedCupDuos_ZB_NAC_1_Unreal",

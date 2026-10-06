@@ -9692,26 +9692,6 @@
         ]
       }
     ],
-    "epicgames_S42_FNCSSoloQualifiers_ASIA_1_risk": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 2000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S42_FNCSSolo_DenyQual1Round2_ASIA",
-                "quantity": -1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ],
-        "scoreId": "risk:epicgames_S42_FNCSSoloQualifiers_ASIA_1_risk"
-      }
-    ],
     "S42_ConsoleVCC_SolosZB_Event2Round1_ASIA": [
       {
         "scoringType": "rank",
@@ -12805,26 +12785,6 @@
             ]
           }
         ]
-      }
-    ],
-    "epicgames_S42_FNCSSoloQualifiers_ASIA_4_risk": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 2000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S42_FNCSSolo_DenyQual2Round2_ASIA",
-                "quantity": -1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ],
-        "scoreId": "risk:epicgames_S42_FNCSSoloQualifiers_ASIA_4_risk"
       }
     ],
     "epicgames_S42_RankedCupSoloReload_ZB_ASIA_1_Bronze": [
@@ -25653,7 +25613,7 @@
       "leaderboardInstanceGroupingKeyFormat": "risk",
       "leaderboardInstanceIdFormat": "${eventId}_${round}_risk",
       "maxSessionHistorySize": 22,
-      "useIndividualScores": true,
+      "useIndividualScores": false,
       "tiebreakerFormula": {
         "basePointsBits": 22,
         "components": [
@@ -25683,10 +25643,6 @@
       },
       "scoringRuleSetId": "ScoringRules_FNCSSolo_Qualifier",
       "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${eventId}_${round}_risk",
-        "payoutDate": "roundEnd+PT32M"
-      },
       "hidePlayerScores": false,
       "percentileAccuracy": 1,
       "discardZeroScore": false
@@ -28532,6 +28488,7 @@
   "scoreLocationPayoutTables": {
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_ASIA:S42_RankedCupSolo_ZB_Event2_ASIA_1_elite": "epicgames_S42_RankedCupSolo_ZB_ASIA_1_Elite",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_ASIA:S42_RankedCupDuos_ZB_Event5_ASIA_1_unreal": "epicgames_S42_RankedCupDuos_ZB_ASIA_1_Unreal",
+    "Fortnite:epicgames_S42_FNCSSoloQualifiers_ASIA:S42_FNCSSoloQualifiers_Qual1Round2_ASIA": "S42_FNCSSoloQualifiers_Qual1Round2_ASIA",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_ASIA:S42_RankedCupDuos_ZB_Event3_ASIA_1_gold": "epicgames_S42_RankedCupDuos_ZB_ASIA_1_Gold",
     "Fortnite:epicgames_S42_MobileVictoryCup_ReloadminiV_ASIA:S42_MobileVictoryCup_Event3_Round1_ASIA": "S42_MobileVictoryCup_Event3_Round1_ASIA",
     "Fortnite:epicgames_S42_RankedCupSolo_ASIA:S42_RankedCupSolo_Event5_ASIA_1_platinum": "epicgames_S42_RankedCupSolo_ASIA_1_Platinum",
@@ -28542,8 +28499,6 @@
     "Fortnite:epicgames_S42_RankedCupDuos_ASIA:S42_RankedCupDuos_Event6_ASIA_1_Silver": "epicgames_S42_RankedCupDuos_ASIA_1_Silver",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_ASIA:S42_RankedCupDuos_ZB_Event1_ASIA_1_Silver": "epicgames_S42_RankedCupDuos_ZB_ASIA_1_Silver",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ASIA:S42_RankedCupReloadDuos_Event5_ASIA_1_Silver": "epicgames_S42_RankedCupReloadDuos_ASIA_1_Silver",
-    "Fortnite:epicgames_S42_FNCSSoloQualifiers_ASIA:S42_FNCSSoloQualifiers_Qual1Round2_ASIA": "S42_FNCSSoloQualifiers_Qual1Round2_ASIA",
-    "Fortnite:risk:epicgames_S42_FNCSSoloQualifiers_ASIA_4_risk": "epicgames_S42_FNCSSoloQualifiers_ASIA_4_risk",
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_ASIA:S42_RankedCupSoloReload_ZB_Event6_ASIA_1_elite": "epicgames_S42_RankedCupSoloReload_ZB_ASIA_1_Elite",
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_ASIA:S42_RankedCupSoloReload_ZB_Event1_ASIA_1_elite": "epicgames_S42_RankedCupSoloReload_ZB_ASIA_1_Elite",
     "Fortnite:epicgames_S42_RankedCupDuos_ASIA:S42_RankedCupDuos_Event3_ASIA_1_diamond": "epicgames_S42_RankedCupDuos_ASIA_1_Diamond",
@@ -28930,7 +28885,6 @@
     "Fortnite:epicgames_S42_RankedCupDuos_ASIA:S42_RankedCupDuos_Event5_ASIA_1_gold": "epicgames_S42_RankedCupDuos_ASIA_1_Gold",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_ASIA:S42_RankedCupReloadDuos_ZB_Event7_ASIA_1_Silver": "epicgames_S42_RankedCupReloadDuos_ZB_ASIA_1_Silver",
     "Fortnite:epicgames_S42_RankedCupDuos_ASIA:S42_RankedCupDuos_Event2_ASIA_1_Silver": "epicgames_S42_RankedCupDuos_ASIA_1_Silver",
-    "Fortnite:risk:epicgames_S42_FNCSSoloQualifiers_ASIA_1_risk": "epicgames_S42_FNCSSoloQualifiers_ASIA_1_risk",
     "Fortnite:epicgames_S42_FNCSSoloQualifiers_ASIA:S42_FNCSSoloQualifiers_Qual2Round1Day2_ASIA": "S42_FNCSSoloQualifiers_Qual2Round1Day2_ASIA",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_ASIA:S42_RankedCupSolo_ZB_Event1_ASIA_1_platinum": "epicgames_S42_RankedCupSolo_ZB_ASIA_1_Platinum",
     "Fortnite:epicgames_S42_RankedCupSolo_ASIA:S42_RankedCupSolo_Event8_ASIA_1_gold": "epicgames_S42_RankedCupSolo_ASIA_1_Gold",

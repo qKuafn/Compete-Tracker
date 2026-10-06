@@ -7338,6 +7338,42 @@
         ]
       }
     ],
+    "epicgames_S42_RankedCupDuos_ZB_EU_1_Bronze": [
+      {
+        "scoringType": "percentile",
+        "ranks": [
+          {
+            "threshold": 0.05,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "percentile",
+        "ranks": [
+          {
+            "threshold": 0.1,
+            "payouts": [
+              {
+                "rewardType": "game",
+                "rewardMode": "standard",
+                "value": "AthenaBackpack:backpack_specterdunk",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "S42_ConsoleVCC_SolosZB_Event4Round1_EU": [
       {
         "scoringType": "rank",
@@ -9207,26 +9243,6 @@
         ]
       }
     ],
-    "epicgames_S42_FNCSSoloQualifiers_EU_4_risk": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 8000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S42_FNCSSolo_DenyQual2Round2_EU",
-                "quantity": -1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ],
-        "scoreId": "risk:epicgames_S42_FNCSSoloQualifiers_EU_4_risk"
-      }
-    ],
     "epicgames_S42_RankedCupSoloReload_EU_1_Platinum": [
       {
         "scoringType": "rank",
@@ -9348,62 +9364,6 @@
             ]
           }
         ]
-      }
-    ],
-    "epicgames_S42_RankedCupDuos_ZB_EU_1_Bronze": [
-      {
-        "scoringType": "percentile",
-        "ranks": [
-          {
-            "threshold": 0.05,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "CosmeticVariantToken:vtid_glider_umbrella_season_42_styleb",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "scoringType": "percentile",
-        "ranks": [
-          {
-            "threshold": 0.1,
-            "payouts": [
-              {
-                "rewardType": "game",
-                "rewardMode": "standard",
-                "value": "AthenaBackpack:backpack_specterdunk",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "epicgames_S42_FNCSSoloQualifiers_EU_1_risk": [
-      {
-        "scoringType": "rank",
-        "ranks": [
-          {
-            "threshold": 8000,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "standard",
-                "value": "S42_FNCSSolo_DenyQual1Round2_EU",
-                "quantity": -1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ],
-        "scoreId": "risk:epicgames_S42_FNCSSoloQualifiers_EU_1_risk"
       }
     ],
     "epicgames_S42_RankedCupSoloReload_ZB_EU_1_Gold": [
@@ -26716,7 +26676,7 @@
       "leaderboardInstanceGroupingKeyFormat": "risk",
       "leaderboardInstanceIdFormat": "${eventId}_${round}_risk",
       "maxSessionHistorySize": 22,
-      "useIndividualScores": true,
+      "useIndividualScores": false,
       "tiebreakerFormula": {
         "basePointsBits": 22,
         "components": [
@@ -26746,10 +26706,6 @@
       },
       "scoringRuleSetId": "ScoringRules_FNCSSolo_Qualifier",
       "clampsToZero": true,
-      "payoutsConfig": {
-        "payoutTableIdFormat": "${eventId}_${round}_risk",
-        "payoutDate": "roundEnd+PT32M"
-      },
       "hidePlayerScores": false,
       "percentileAccuracy": 1,
       "discardZeroScore": false
@@ -29859,7 +29815,6 @@
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_EU:S42_RankedCupReloadDuos_ZB_Event8_EU_1_Champion": "epicgames_S42_RankedCupReloadDuos_ZB_EU_1_Champion",
     "Fortnite:epicgames_S42_RankedCupDuos_EU:S42_RankedCupDuos_Event6_EU_1_champion": "epicgames_S42_RankedCupDuos_EU_1_Champion",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_EU:S42_RankedCupDuos_ZB_Event8_EU_1_champion": "epicgames_S42_RankedCupDuos_ZB_EU_1_Champion",
-    "Fortnite:risk:epicgames_S42_FNCSSoloQualifiers_EU_4_risk": "epicgames_S42_FNCSSoloQualifiers_EU_4_risk",
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_EU:S42_RankedCupSoloReload_ZB_Event7_EU_1_unreal": "epicgames_S42_RankedCupSoloReload_ZB_EU_1_Unreal",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event7_EU_1_Silver": "epicgames_S42_RankedCupReloadDuos_EU_1_Silver",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_EU:S42_RankedCupReloadDuos_Event2_EU_1_Champion": "epicgames_S42_RankedCupReloadDuos_EU_1_Champion",
@@ -29918,7 +29873,6 @@
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_EU:S42_RankedCupDuos_ZB_Event6_EU_1_platinum": "epicgames_S42_RankedCupDuos_ZB_EU_1_Platinum",
     "Fortnite:epicgames_S42_RankedCupSolo_EU:S42_RankedCupSolo_Event3_EU_1_unreal": "epicgames_S42_RankedCupSolo_EU_1_Unreal",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_EU:S42_RankedCupSolo_ZB_Event7_EU_1_elite": "epicgames_S42_RankedCupSolo_ZB_EU_1_Elite",
-    "Fortnite:risk:epicgames_S42_FNCSSoloQualifiers_EU_1_risk": "epicgames_S42_FNCSSoloQualifiers_EU_1_risk",
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event5_EU_1_platinum": "epicgames_S42_RankedCupSoloReload_EU_1_Platinum",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_EU:S42_RankedCupReloadDuos_ZB_Event5_EU_1_Bronze": "epicgames_S42_RankedCupReloadDuos_ZB_EU_1_Bronze",
     "Fortnite:epicgames_S42_RankedCupSoloReload_EU:S42_RankedCupSoloReload_Event3_EU_1_gold": "epicgames_S42_RankedCupSoloReload_EU_1_Gold",
