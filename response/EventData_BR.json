@@ -3782,6 +3782,170 @@
         ]
       }
     ],
+    "S42_ReloadSoloVictoryCup_ScoringRules_Round1Surf": [
+      {
+        "trackedStat": "PLACEMENT_STAT_INDEX",
+        "matchRule": "lte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 6,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 2,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 3,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 4,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 5,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 6,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 7,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 8,
+            "pointsEarned": 4,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 9,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 10,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 11,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 12,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 13,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 14,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 15,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 16,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 17,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 18,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 19,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 20,
+            "pointsEarned": 2,
+            "multiplicative": false
+          }
+        ]
+      },
+      {
+        "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+        "matchRule": "gte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 2,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 3,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 4,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 5,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 6,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 7,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 8,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 9,
+            "pointsEarned": 2,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 10,
+            "pointsEarned": 2,
+            "multiplicative": false
+          }
+        ]
+      }
+    ],
     "ScoringRules_RankedCupDuos_Champion_1": [
       {
         "trackedStat": "CHAMPION_PLACEMENT_STAT_INDEX",
@@ -8726,7 +8890,7 @@
         "scoringType": "rank",
         "ranks": [
           {
-            "threshold": 320,
+            "threshold": 192,
             "payouts": [
               {
                 "rewardType": "token",
@@ -11386,7 +11550,7 @@
         "scoringType": "rank",
         "ranks": [
           {
-            "threshold": 320,
+            "threshold": 192,
             "payouts": [
               {
                 "rewardType": "token",
@@ -12205,7 +12369,7 @@
         "scoringType": "rank",
         "ranks": [
           {
-            "threshold": 320,
+            "threshold": 192,
             "payouts": [
               {
                 "rewardType": "token",
@@ -14136,10 +14300,11 @@
             }
           ],
           "canLiveSpectate": true,
-          "requireAllTokens": [
-            "S42_PSNickEh30_ZB_Final_BR"
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "S42_PSNickEh30_ZB_Final_BR",
+            "S29_PSCupMarch_Final_Spectator"
           ],
-          "requireAnyTokens": [],
           "requireNoneTokensCaller": [
             "EpicAccountPrizingRestriction_v2",
             "Permanent_Tournament_Ban"
@@ -14250,10 +14415,11 @@
             }
           ],
           "canLiveSpectate": true,
-          "requireAllTokens": [
-            "S42_PSNickEh30_Final_BR"
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "S42_PSNickEh30_Final_BR",
+            "S29_PSCupMarch_Final_Spectator"
           ],
-          "requireAnyTokens": [],
           "requireNoneTokensCaller": [
             "EpicAccountPrizingRestriction_v2",
             "Permanent_Tournament_Ban"
@@ -19720,7 +19886,7 @@
         },
         {
           "eventWindowId": "S42_ReloadSoloVictoryCup_Event2_Round1_BR",
-          "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round1",
+          "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round1_v2",
           "countdownBeginTime": "2026-10-09T19:00:00Z",
           "beginTime": "2026-10-09T21:00:00Z",
           "endTime": "2026-10-09T23:00:00Z",
@@ -19738,7 +19904,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S42_ReloadSoloVictoryCup_LeaderboardDef_Round1",
+              "leaderboardDefId": "S42_ReloadSoloVictoryCupSurf24_LeaderboardDef_Round1",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -19759,7 +19925,7 @@
         },
         {
           "eventWindowId": "S42_ReloadSoloVictoryCup_Event2_Round2_BR",
-          "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round2",
+          "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round2_v2",
           "countdownBeginTime": "2026-10-09T22:00:00Z",
           "beginTime": "2026-10-10T00:00:00Z",
           "endTime": "2026-10-10T00:45:00Z",
@@ -19799,7 +19965,7 @@
         },
         {
           "eventWindowId": "S42_ReloadSoloVictoryCup_Event3_Round1_BR",
-          "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round1",
+          "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round1_v2",
           "countdownBeginTime": "2026-10-16T19:00:00Z",
           "beginTime": "2026-10-16T21:00:00Z",
           "endTime": "2026-10-16T23:00:00Z",
@@ -19817,7 +19983,7 @@
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S42_ReloadSoloVictoryCup_LeaderboardDef_Round1",
+              "leaderboardDefId": "S42_ReloadSoloVictoryCupSurf24_LeaderboardDef_Round1",
               "isMainWindowLeaderboard": true
             }
           ],
@@ -19838,7 +20004,7 @@
         },
         {
           "eventWindowId": "S42_ReloadSoloVictoryCup_Event3_Round2_BR",
-          "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round2",
+          "eventTemplateId": "EventTemplate_S42_ReloadSoloVictoryCup_Round2_v2",
           "countdownBeginTime": "2026-10-16T21:00:00Z",
           "beginTime": "2026-10-17T00:00:00Z",
           "endTime": "2026-10-17T00:45:00Z",
@@ -25622,6 +25788,51 @@
     },
     {
       "gameId": "Fortnite",
+      "leaderboardDefId": "S42_ReloadSoloVictoryCupSurf24_LeaderboardDef_Round1",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": 10,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "scoringRuleSetId": "S42_ReloadSoloVictoryCup_ScoringRules_Round1Surf",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${windowId}",
+        "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "discardZeroScore": false
+    },
+    {
+      "gameId": "Fortnite",
       "leaderboardDefId": "S42_FNCSSoloQualifiers_RiskQualLeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "risk",
@@ -28218,7 +28429,7 @@
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_BR:S42_RankedCupSoloReload_ZB_Event8_BR_1_Silver": "ScoringRules_RankedCupSoloReload_Silver_1",
     "Fortnite:epicgames_S42_RankedCupDuos_ZB_BR:S42_RankedCupDuos_ZB_Event6_BR_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
     "Fortnite:epicgames_S42_RankedCupDuos_BR:S42_RankedCupDuos_Event8_BR_1_unreal": "ScoringRules_RankedCupDuos_Unreal_1",
-    "Fortnite:epicgames_S42_ReloadReloadSoloVictoryCup_BR:S42_ReloadSoloVictoryCup_Event3_Round1_BR": "S42_ReloadSoloVictoryCup_ScoringRules_Round1",
+    "Fortnite:epicgames_S42_ReloadReloadSoloVictoryCup_BR:S42_ReloadSoloVictoryCup_Event3_Round1_BR": "S42_ReloadSoloVictoryCup_ScoringRules_Round1Surf",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_ZB_BR:S42_RankedCupReloadDuos_ZB_Event8_BR_1_Gold": "ScoringRules_RankedCupDuosReload_Gold_1",
     "Fortnite:epicgames_S42_RankedCupSolo_BR:S42_RankedCupSolo_Event5_BR_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S42_RankedCupSolo_ZB_BR:S42_RankedCupSolo_ZB_Event5_BR": "EmptyScoringRules",
@@ -28458,7 +28669,7 @@
     "Fortnite:epicgames_S42_RankedCupSoloReload_BR:S42_RankedCupSoloReload_Event1_BR_1_Bronze": "ScoringRules_RankedCupSoloReload_Bronze_1",
     "Fortnite:epicgames_S42_RankedCupSoloReload_BR:S42_RankedCupSoloReload_Event5_BR_1_unreal": "ScoringRules_RankedCupSoloReload_Unreal_1",
     "Fortnite:epicgames_S42_RankedCupReloadDuos_BR:S42_RankedCupReloadDuos_Event1_BR_1_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_1",
-    "Fortnite:epicgames_S42_ReloadReloadSoloVictoryCup_BR:S42_ReloadSoloVictoryCup_Event2_Round1_BR": "S42_ReloadSoloVictoryCup_ScoringRules_Round1",
+    "Fortnite:epicgames_S42_ReloadReloadSoloVictoryCup_BR:S42_ReloadSoloVictoryCup_Event2_Round1_BR": "S42_ReloadSoloVictoryCup_ScoringRules_Round1Surf",
     "Fortnite:epicgames_S42_RankedCupSoloReload_ZB_BR:S42_RankedCupSoloReload_ZB_Event3_BR": "EmptyScoringRules",
     "Fortnite:epicgames_S42_RankedCupSolo_BR:S42_RankedCupSolo_Event6_BR_1_gold": "ScoringRules_RankedCupSolo_Gold_1",
     "Fortnite:epicgames_S42_RankedCupSoloReload_BR:S42_RankedCupSoloReload_Event3_BR_1_champion": "ScoringRules_RankedCupSoloReload_Champion_1",
