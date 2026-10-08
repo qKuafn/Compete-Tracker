@@ -1,0 +1,100 @@
+{
+  "EventName": "ストリートファイターカップ リロード",
+  "eventId": "epicgames_S42_StreetFighterCup_ASIA",
+  "displayDataId": "s42_streetfighter",
+  "square_poster_image": "https://cdn2.unrealengine.com/fneco-42-30-goldfish-competitive-competetab-solotexture-800x800-800x800-7ae7e8c4144e.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fneco-42-30-goldfish-competitive-competetab-grouptexture-1560x1024-1560x1024-127f1b8ad3ec.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/jp-fneco-42-30-goldfish-competitive-discovertile-1920x1080-1920x1080-1983660a9657.jpg",
+  "metadata": {
+    "requireSystemFeatures": [
+      "SecureBoot",
+      "CryptoProcessor",
+      "IOMMU",
+      "IOSMinimumOSVersion"
+    ],
+    "tournamentType": "ShopCup",
+    "webId": "S42_StreetFighterCup",
+    "minimumAccountLevel": 50,
+    "DisqualifyType": "Window",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "XboxOneGDK",
+    "PS4",
+    "XCloud",
+    "Helios",
+    "Luna",
+    "IOS",
+    "XB1",
+    "XboxOne",
+    "XSX",
+    "Android",
+    "LunaMobile",
+    "Switch2",
+    "PS5",
+    "XCloudMobile",
+    "Mac",
+    "HeliosMobile",
+    "GFN",
+    "Switch",
+    "GFNMobile",
+    "Windows"
+  ],
+  "S42_StreetFighterCup_ASIA": {
+    "beginTime_UNIX": 1791536400,
+    "beginTime_JST": "2026-10-09 18:00:00",
+    "endTime_UNIX": 1791545400,
+    "endTime_JST": "2026-10-09 20:30:00",
+    "playlistId": "Playlist_ShowdownTournament_SourSpawnDuos_PBM",
+    "matchCap": 12,
+    "additionalRequirements": [
+      "eula:s42_streetfighter_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S42_StreetFighterCup_LeaderboardDef": {
+        "scoringRuleSetId": "S42_StreetFighterCup_ScoringRules",
+        "WindowLocation": "S42_StreetFighterCup_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 50,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_pongoquell"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 50,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_pongoquell"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 8,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:spray_pongoquell"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "EventName": "ストリートファイターモバイルカップ",
+  "eventId": "epicgames_S42_StreetFighterCup_Mobile_ASIA",
+  "displayDataId": "s42_streetfighter_mobile",
+  "square_poster_image": "https://cdn2.unrealengine.com/fneco-42-30-goldfish-competitive-competetab-solotexture-800x800-800x800-7ae7e8c4144e.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fneco-42-30-goldfish-competitive-competetab-grouptexture-1560x1024-1560x1024-127f1b8ad3ec.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/jp-fneco-42-30-goldfish-competitive-mobile-discovertile-1920x1080-1920x1080-876776e1b909.jpg",
+  "metadata": {
+    "requireSystemFeatures": [
+      "IOSMinimumOSVersion"
+    ],
+    "tournamentType": "ShopCup",
+    "webId": "S42_StreetFighterMobileCup",
+    "minimumAccountLevel": 15,
+    "DisqualifyType": "Window",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "Android",
+    "IOS"
+  ],
+  "S42_StreetFighterMobileCup_ASIA": {
+    "beginTime_UNIX": 1791532800,
+    "beginTime_JST": "2026-10-09 17:00:00",
+    "endTime_UNIX": 1791537300,
+    "endTime_JST": "2026-10-09 18:15:00",
+    "playlistId": "Playlist_ShowdownTournament_RE_JumpBearNoBuildSolo_PBM",
+    "matchCap": 8,
+    "additionalRequirements": [
+      "eula:s42_streetfighter_rules",
+      "adps:g-a81a33a3b9a7",
+      "input-touch",
+      "mfa"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S42_StreetFighterMobileCup_DefaultLeaderboardDef": {
+        "scoringRuleSetId": "S42_StreetFighterMobileCup_ScoringRules",
+        "WindowLocation": "S42_StreetFighterMobileCup_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 30,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaCharacter:character_pongoquell"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 30,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaBackpack:backpack_pongoquell"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 5,
+            "rewardType": "game",
+            "quantity": 1,
+            "value": "AthenaDance:spray_pongoquell"
+          }
+        ]
+      }
+    }
+  }
+}
