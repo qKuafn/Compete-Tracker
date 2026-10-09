@@ -240,17 +240,17 @@
     }
   },
   "S42_ReloadSoloVictoryCup_Event3_Round1_ASIA": {
-    "beginTime_UNIX": 1792141200,
-    "beginTime_JST": "2026-10-16 18:00:00",
-    "endTime_UNIX": 1792148400,
-    "endTime_JST": "2026-10-16 20:00:00",
+    "beginTime_UNIX": 1791795600,
+    "beginTime_JST": "2026-10-12 18:00:00",
+    "endTime_UNIX": 1791802800,
+    "endTime_JST": "2026-10-12 20:00:00",
     "playlistId": "Playlist_ShowdownTournament_RE_PiperBootSolo_PBM",
     "matchCap": 10,
     "additionalRequirements": [
       "eula:s42_victory_rules",
       "adps:g-a81a33a3b9a7",
       "mfa",
-      "currentRanking:ranked-blastberry-combined:12"
+      "currentRanking:ranked-blastberry-combined:9"
     ],
     "requireAllTokens": [],
     "requireAllTokensCaller": [],
@@ -281,10 +281,10 @@
     }
   },
   "S42_ReloadSoloVictoryCup_Event3_Round2_ASIA": {
-    "beginTime_UNIX": 1792152000,
-    "beginTime_JST": "2026-10-16 21:00:00",
-    "endTime_UNIX": 1792154700,
-    "endTime_JST": "2026-10-16 21:45:00",
+    "beginTime_UNIX": 1791806400,
+    "beginTime_JST": "2026-10-12 21:00:00",
+    "endTime_UNIX": 1791809100,
+    "endTime_JST": "2026-10-12 21:45:00",
     "playlistId": "Playlist_ShowdownTournament_RE_PiperBootSolo_NPM",
     "matchCap": 3,
     "additionalRequirements": [
@@ -339,6 +339,105 @@
     }
   },
   "S42_ReloadSoloVictoryCup_Event4_Round1_ASIA": {
+    "beginTime_UNIX": 1792141200,
+    "beginTime_JST": "2026-10-16 18:00:00",
+    "endTime_UNIX": 1792148400,
+    "endTime_JST": "2026-10-16 20:00:00",
+    "playlistId": "Playlist_ShowdownTournament_RE_PiperBootSolo_PBM",
+    "matchCap": 10,
+    "additionalRequirements": [
+      "eula:s42_victory_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      "currentRanking:ranked-blastberry-combined:12"
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S42_ReloadSoloVictoryCupSurf24_LeaderboardDef_Round1": {
+        "scoringRuleSetId": "S42_ReloadSoloVictoryCup_ScoringRules_Round1Surf",
+        "WindowLocation": "S42_ReloadSoloVictoryCup_Event4_Round1_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 192,
+            "rewardType": "token",
+            "quantity": 1,
+            "value": "S42_ReloadSoloVictoryCup_Event4_Round2_ASIA"
+          }
+        ]
+      }
+    }
+  },
+  "S42_ReloadSoloVictoryCup_Event4_Round2_ASIA": {
+    "beginTime_UNIX": 1792152000,
+    "beginTime_JST": "2026-10-16 21:00:00",
+    "endTime_UNIX": 1792154700,
+    "endTime_JST": "2026-10-16 21:45:00",
+    "playlistId": "Playlist_ShowdownTournament_RE_PiperBootSolo_NPM",
+    "matchCap": 3,
+    "additionalRequirements": [
+      "eula:s42_victory_rules",
+      "adps:g-a81a33a3b9a7",
+      "mfa"
+    ],
+    "requireAllTokens": [
+      "S42_ReloadSoloVictoryCup_Event4_Round2_ASIA"
+    ],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S42_ReloadSoloVictoryCup_LeaderboardDef_Round2": {
+        "scoringRuleSetId": "S42_ReloadSoloVictoryCup_ScoringRules_Round2",
+        "WindowLocation": "S42_ReloadSoloVictoryCup_Event4_Round2_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": false,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 100,
+            "rewardType": "ecomm",
+            "quantity": 100,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 200,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "value",
+            "threshold": 300,
+            "rewardType": "ecomm",
+            "quantity": 300,
+            "value": "USD"
+          }
+        ]
+      }
+    }
+  },
+  "S42_ReloadSoloVictoryCup_Event5_Round1_ASIA": {
     "beginTime_UNIX": 1792746000,
     "beginTime_JST": "2026-10-23 18:00:00",
     "endTime_UNIX": 1792753200,
@@ -362,7 +461,7 @@
     "ScoringRules": {
       "S42_ReloadSoloVictoryCup_LeaderboardDef_Round1": {
         "scoringRuleSetId": "S42_ReloadSoloVictoryCup_ScoringRules_Round1",
-        "WindowLocation": "S42_ReloadSoloVictoryCup_Event4_Round1_ASIA",
+        "WindowLocation": "S42_ReloadSoloVictoryCup_Event5_Round1_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
         "onlyScoreTopN": -1,
@@ -373,13 +472,13 @@
             "threshold": 192,
             "rewardType": "token",
             "quantity": 1,
-            "value": "S42_ReloadSoloVictoryCup_Event4_Round2_ASIA"
+            "value": "S42_ReloadSoloVictoryCup_Event5_Round2_ASIA"
           }
         ]
       }
     }
   },
-  "S42_ReloadSoloVictoryCup_Event4_Round2_ASIA": {
+  "S42_ReloadSoloVictoryCup_Event5_Round2_ASIA": {
     "beginTime_UNIX": 1792756800,
     "beginTime_JST": "2026-10-23 21:00:00",
     "endTime_UNIX": 1792759500,
@@ -392,7 +491,7 @@
       "mfa"
     ],
     "requireAllTokens": [
-      "S42_ReloadSoloVictoryCup_Event4_Round2_ASIA"
+      "S42_ReloadSoloVictoryCup_Event5_Round2_ASIA"
     ],
     "requireAllTokensCaller": [],
     "requireAnyTokens": [],
@@ -404,7 +503,7 @@
     "ScoringRules": {
       "S42_ReloadSoloVictoryCup_LeaderboardDef_Round2": {
         "scoringRuleSetId": "S42_ReloadSoloVictoryCup_ScoringRules_Round2",
-        "WindowLocation": "S42_ReloadSoloVictoryCup_Event4_Round2_ASIA",
+        "WindowLocation": "S42_ReloadSoloVictoryCup_Event5_Round2_ASIA",
         "isMainWindowLeaderboard": true,
         "useIndividualScores": false,
         "onlyScoreTopN": -1,
