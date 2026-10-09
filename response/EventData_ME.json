@@ -14226,7 +14226,7 @@
       "eventWindows": [
         {
           "eventWindowId": "S42_StreetFighterCup_ZB_ME",
-          "eventTemplateId": "EventTemplate_S42_StreetFighterCup_ZB",
+          "eventTemplateId": "EventTemplate_S42_StreetFighterCupSourSpawn_ZB",
           "countdownBeginTime": "2026-10-09T13:00:00Z",
           "beginTime": "2026-10-09T15:00:00Z",
           "endTime": "2026-10-09T17:30:00Z",
@@ -14321,7 +14321,7 @@
       "eventWindows": [
         {
           "eventWindowId": "S42_StreetFighterCup_ME",
-          "eventTemplateId": "EventTemplate_S42_StreetFighterCup",
+          "eventTemplateId": "EventTemplate_S42_StreetFighterCupSourSpawn",
           "countdownBeginTime": "2026-10-09T13:00:00Z",
           "beginTime": "2026-10-09T15:00:00Z",
           "endTime": "2026-10-09T17:30:00Z",
@@ -19421,9 +19421,9 @@
         {
           "eventWindowId": "S42_ReloadCashCup_DuosZB_Event4Round1_ME",
           "eventTemplateId": "S42_ReloadCashCup_DuosZB_EventTemplate_Round1SurfCity",
-          "countdownBeginTime": "2026-10-04T09:00:00Z",
-          "beginTime": "2026-10-04T11:00:00Z",
-          "endTime": "2026-10-04T13:30:00Z",
+          "countdownBeginTime": "2026-10-04T13:00:00Z",
+          "beginTime": "2026-10-04T15:00:00Z",
+          "endTime": "2026-10-04T17:30:00Z",
           "round": 0,
           "payoutDelay": 32,
           "isTBD": false,
@@ -24209,43 +24209,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_PiperBootNoBuildDuos_PBM",
-      "matchCap": 12,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "S42_ReloadCashCup_DuosZB_EventTemplate_Round1SurfCity",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_FN_Solo",
       "matchCap": 6,
       "tiebreakerFormula": {
@@ -24313,6 +24276,43 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "S42_ReloadCashCup_DuosZB_EventTemplate_Round1",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_SourSpawnNoBuildDuos_PBM",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S42_StreetFighterCupSourSpawn_ZB",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -25240,6 +25240,80 @@
       "clampsToZero": false
     },
     {
+      "playlistId": "Playlist_ShowdownTournament_SourSpawnDuos_PBM",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S42_StreetFighterCupSourSpawn",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_PiperBootNoBuildDuos_PBM",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "S42_ReloadCashCup_DuosZB_EventTemplate_Round1SurfCity",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_RE_PiperBootSolo_PBM",
       "matchCap": 10,
       "tiebreakerFormula": {
@@ -25308,80 +25382,6 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupSoloReload_ZBVenture",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_SourSpawnDuos_PBM",
-      "matchCap": 12,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S42_StreetFighterCup",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
-      "playlistId": "Playlist_ShowdownTournament_SourSpawnNoBuildDuos_PBM",
-      "matchCap": 12,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S42_StreetFighterCup_ZB",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -26966,7 +26966,7 @@
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
       "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 6,
+      "maxSessionHistorySize": 10,
       "useIndividualScores": false,
       "tiebreakerFormula": {
         "basePointsBits": 11,
