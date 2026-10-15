@@ -20078,7 +20078,8 @@
           "additionalRequirements": [
             "eula:s37_delulu",
             "adps:g-a81a33a3b9a7",
-            "mfa"
+            "mfa",
+            "input-touch"
           ],
           "teammateEligibility": "all",
           "eventTemplateId": "S41_EventTemplate_MobileSeriesOpens",
@@ -20101,7 +20102,8 @@
           "regionMappings": {},
           "metadata": {
             "ServerReplays": true,
-            "RoundType": "Qualifiers"
+            "RoundType": "Qualifiers",
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator"
           }
         },
         {
@@ -20116,7 +20118,8 @@
           "additionalRequirements": [
             "eula:s37_delulu",
             "adps:g-a81a33a3b9a7",
-            "mfa"
+            "mfa",
+            "input-touch"
           ],
           "teammateEligibility": "all",
           "eventTemplateId": "S41_EventTemplate_MobileSeriesOpens",
@@ -20139,7 +20142,8 @@
           "regionMappings": {},
           "metadata": {
             "ServerReplays": true,
-            "RoundType": "Qualifiers"
+            "RoundType": "Qualifiers",
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator"
           }
         },
         {
@@ -20154,10 +20158,11 @@
           "additionalRequirements": [
             "eula:s37_delulu",
             "adps:g-a81a33a3b9a7",
-            "mfa"
+            "mfa",
+            "input-touch"
           ],
           "teammateEligibility": "all",
-          "eventTemplateId": "S41_EventTemplate_MobileSeriesOpens",
+          "eventTemplateId": "S42_EventTemplate_MobileSeriesOpensCR",
           "blackoutPeriods": [],
           "scoreLocations": [
             {
@@ -20177,7 +20182,8 @@
           "regionMappings": {},
           "metadata": {
             "ServerReplays": true,
-            "RoundType": "Qualifiers"
+            "RoundType": "Qualifiers",
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator"
           }
         }
       ],
@@ -28266,43 +28272,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_RE_PiperBootSolo_RC",
-      "matchCap": 12,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_RankedCupSoloReload_v4",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_RE_SourSpawnSolo_NPM",
       "matchCap": 3,
       "tiebreakerFormula": {
@@ -28556,6 +28525,80 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_RankedCupSoloReload_ZB",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_PiperBootSolo_RC",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupSoloReload_v4",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_JumpBearNoBuildSolo_CR",
+      "matchCap": 8,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "S42_EventTemplate_MobileSeriesOpensCR",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
