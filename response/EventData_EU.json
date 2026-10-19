@@ -19782,7 +19782,7 @@
       "gameId": "Fortnite",
       "eventId": "epicgames_S42_FNCSSolo_LastChanceQualifier_EU",
       "beginTime": "2026-10-19T17:00:00Z",
-      "endTime": "2026-10-20T19:30:00Z",
+      "endTime": "2026-10-20T19:10:00Z",
       "displayDataId": "s42_fncssolos_lcq",
       "eventGroup": "Season42_FNCSSolo",
       "announcementTime": "2025-06-06T23:00:00Z",
@@ -19834,7 +19834,7 @@
           "DamageReceived"
         ],
         "DisqualifyType": "Window",
-        "RegionLockType": "Season",
+        "RegionLockType": "Window",
         "AccountLockType": "Window"
       },
       "eventWindows": [
@@ -19867,10 +19867,11 @@
           ],
           "requireAnyTokens": [],
           "requireNoneTokensCaller": [
-            "Permanent_Tournament_Ban",
-            "S42_FNCSSolo_Finalist_EU",
+            "EpicAccountPrizingRestriction_v2",
+            "S42_FNCSSolo_LastChanceFinal_EU",
             "S42_FNCS_Banned",
-            "EpicAccountPrizingRestriction_v2"
+            "S42_FNCSSolo_Finalist_EU",
+            "Permanent_Tournament_Ban"
           ],
           "requireAllTokensCaller": [],
           "requireAnyTokensCaller": [],
@@ -19884,7 +19885,7 @@
           "eventWindowId": "S42_FNCSSolo_LastChanceLobby_EU",
           "countdownBeginTime": "2026-10-20T15:00:00Z",
           "beginTime": "2026-10-20T17:00:00Z",
-          "endTime": "2026-10-20T19:30:00Z",
+          "endTime": "2026-10-20T19:10:00Z",
           "round": 1,
           "payoutDelay": 32,
           "isTBD": false,
@@ -19921,9 +19922,8 @@
             "ScheduledMatchmakingInitialDelaySeconds": 600,
             "SubgroupId": "LastChanceLobby",
             "ServerReplays": true,
-            "liveSpectateAccessToken": "WeeklyTournamentSpectator",
             "RoundType": "Qualifiers",
-            "ScheduledMatchmakingMatchDelaySeconds": 2040
+            "ScheduledMatchmakingMatchDelaySeconds": 1680
           }
         }
       ],
