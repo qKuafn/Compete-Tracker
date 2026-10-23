@@ -1,0 +1,105 @@
+{
+  "EventName": "アリーナ キャッシュカップ",
+  "eventId": "epicgames_S42_ArenaCashCup_ASIA",
+  "displayDataId": "s42_arenas_cash",
+  "square_poster_image": "https://cdn2.unrealengine.com/fnbr-40-10-competitive-in-game-solotexture-800x800-800x800-630b3ce0a6fb.jpg",
+  "tournament_view_background_image": "https://cdn2.unrealengine.com/fnbr-40-10-competitive-in-game-grouptexture-1560x1024-1560x1024-c3a62e27ed0c.jpg",
+  "loading_screen_image": "未設定",
+  "playlist_title_image": "https://cdn2.unrealengine.com/en-fnbr-40-10-comp-arenascup-discovertile-1920x1080-1920x1080-a642c7c28321.jpg",
+  "metadata": {
+    "requireSystemFeatures": [
+      "SecureBoot",
+      "CryptoProcessor",
+      "IOMMU",
+      "IOSMinimumOSVersion"
+    ],
+    "tournamentType": "Other",
+    "webId": "S42_ArenaCashCup",
+    "minimumAccountLevel": 50,
+    "DisqualifyType": "Window",
+    "uefnExperienceType": "Arenas",
+    "AccountLockType": "Window"
+  },
+  "platforms": [
+    "XboxOneGDK",
+    "PS4",
+    "XCloud",
+    "Helios",
+    "Luna",
+    "IOS",
+    "XB1",
+    "XboxOne",
+    "XSX",
+    "Android",
+    "LunaMobile",
+    "Switch2",
+    "PS5",
+    "XCloudMobile",
+    "Mac",
+    "HeliosMobile",
+    "GFN",
+    "Switch",
+    "GFNMobile",
+    "Windows"
+  ],
+  "S42_ArenaCashCup_Event1_ASIA": {
+    "beginTime_UNIX": 1792918800,
+    "beginTime_JST": "2026-10-25 18:00:00",
+    "endTime_UNIX": 1792926000,
+    "endTime_JST": "2026-10-25 20:00:00",
+    "playlistId": "Playlist_VK_Play",
+    "matchCap": 12,
+    "additionalRequirements": [
+      "eula:s42_arenarules",
+      "adps:g-a81a33a3b9a7",
+      "mfa",
+      [
+        "currentRanking:ranked-squareclub:9",
+        "trackRanking:G14DI0:9"
+      ]
+    ],
+    "requireAllTokens": [],
+    "requireAllTokensCaller": [],
+    "requireAnyTokens": [],
+    "requireAnyTokensCaller": [],
+    "requireNoneTokensCaller": [
+      "EpicAccountPrizingRestriction_v2",
+      "Permanent_Tournament_Ban"
+    ],
+    "ScoringRules": {
+      "S42_ArenaCashCup_LeaderboardDef": {
+        "scoringRuleSetId": "S42_ArenaCashCup_ScoringRules",
+        "WindowLocation": "S42_ArenaCashCup_Event1_ASIA",
+        "isMainWindowLeaderboard": true,
+        "useIndividualScores": true,
+        "onlyScoreTopN": -1,
+        "payouts": [
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 1,
+            "rewardType": "ecomm",
+            "quantity": 300,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 2,
+            "rewardType": "ecomm",
+            "quantity": 200,
+            "value": "USD"
+          },
+          {
+            "scoreId": "",
+            "scoringType": "rank",
+            "threshold": 3,
+            "rewardType": "ecomm",
+            "quantity": 100,
+            "value": "USD"
+          }
+        ]
+      }
+    }
+  }
+}
