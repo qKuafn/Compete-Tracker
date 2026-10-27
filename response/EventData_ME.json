@@ -1518,7 +1518,7 @@
       "gameId": "Fortnite",
       "eventId": "epicgames_S42_FNCSSolo_Final_ME",
       "beginTime": "2026-10-26T15:00:00Z",
-      "endTime": "2026-10-27T17:40:00Z",
+      "endTime": "2026-10-27T18:15:00Z",
       "displayDataId": "s42_fncssolos_final",
       "eventGroup": "Season42_FNCSSolo",
       "announcementTime": "2025-06-06T21:00:00Z",
@@ -1625,7 +1625,7 @@
           "eventWindowId": "S42_FNCSSolo_Final_Day2_ME",
           "countdownBeginTime": "2026-10-27T13:00:00Z",
           "beginTime": "2026-10-27T15:00:00Z",
-          "endTime": "2026-10-27T17:40:00Z",
+          "endTime": "2026-10-27T18:15:00Z",
           "round": 1,
           "payoutDelay": 32,
           "isTBD": false,
@@ -1636,16 +1636,16 @@
             "mfa"
           ],
           "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_S42_FNCSSolo_HeatsStage",
+          "eventTemplateId": "EventTemplate_S42_FNCSSolo_HeatsStage_mg",
           "blackoutPeriods": [],
           "scoreLocations": [
             {
-              "leaderboardDefId": "S42_FNCSSolo_FinalDay2_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            },
-            {
               "leaderboardDefId": "S42_FNCSSolo_Final_CumulativeLeaderboardDef",
               "isMainWindowLeaderboard": false
+            },
+            {
+              "leaderboardDefId": "S42_FNCSSolo_FinalDay2_DefaultLeaderboardDef",
+              "isMainWindowLeaderboard": true
             }
           ],
           "canLiveSpectate": false,
@@ -2984,6 +2984,42 @@
       "clampsToZero": false
     },
     {
+      "playlistId": "Playlist_ShowdownTournament_FN_Solo",
+      "matchCap": 7,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 16
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "DAMAGE_RECEIVED_STAT",
+            "bits": 13,
+            "aggregation": "sum"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S42_FNCSSolo_HeatsStage_mg",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_RE_SourSpawnSolo_NPM",
       "matchCap": 12,
       "tiebreakerFormula": {
@@ -3548,8 +3584,8 @@
       "Fortnite:epicgames_S42_ArenaTestCup_ME:S42_ArenaTestCup_Event9_ME"
     ],
     "Fortnite:epicgames_S42_FNCSSolo_Final_ME:S42_FNCSSolo_Final_Day2_ME": [
-      "Fortnite:epicgames_S42_FNCSSolo_Final_ME:S42_FNCSSolo_Final_Day2_ME",
-      "Fortnite:cumulative:epicgames_S42_FNCSSolo_Final_ME_cumulative"
+      "Fortnite:cumulative:epicgames_S42_FNCSSolo_Final_ME_cumulative",
+      "Fortnite:epicgames_S42_FNCSSolo_Final_ME:S42_FNCSSolo_Final_Day2_ME"
     ],
     "Fortnite:epicgames_S43_FNCSSoloReload_HeatsStage_ME:S43_FNCSSoloReload_HeatsStage_Heat2_ME": [
       "Fortnite:epicgames_S43_FNCSSoloReload_HeatsStage_ME:S43_FNCSSoloReload_HeatsStage_Heat2_ME"
