@@ -677,6 +677,24 @@
           }
         ]
       }
+    ],
+    "FightNightLiveTest_ScoringRules": [
+      {
+        "trackedStat": "PLACEMENT_STAT_INDEX",
+        "matchRule": "lte",
+        "rewardTiers": [
+          {
+            "keyValue": 1,
+            "pointsEarned": 100,
+            "multiplicative": false
+          },
+          {
+            "keyValue": 2,
+            "pointsEarned": 5,
+            "multiplicative": false
+          }
+        ]
+      }
     ]
   },
   "payoutTables": {
@@ -741,6 +759,37 @@
           }
         ],
         "scoreId": "cumulative:epicgames_S43_FNCSSoloReloadQualifiers_BR_cumulative"
+      }
+    ],
+    "FightNight_TestWindow3": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "LiveTestingContender",
+                "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          },
+          {
+            "threshold": 2,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 100,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
       }
     ],
     "S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_BR": [
@@ -808,6 +857,66 @@
         "scoreId": "risk:epicgames_S43_FNCSSoloReloadQualifiers_BR_risk"
       }
     ],
+    "FightNight_TestWindow4": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "LiveTestingChampion",
+                "quantity": -1,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 2,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "LiveTestingContender",
+                "quantity": -1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 600,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 2,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 300,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "epicgames_S43_FNCSSoloReload_HeatsStage_BR": [
       {
         "scoringType": "value",
@@ -856,35 +965,30 @@
         ]
       }
     ],
-    "S43_FNCSSoloReloadQualifiers_Qual1Round2_BR": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 0,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "RegionLock_S43_FNCSSoloReload_BR",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      },
+    "FightNight_TestWindow5": [
       {
         "scoringType": "rank",
         "ranks": [
           {
-            "threshold": 500,
+            "threshold": 1,
             "payouts": [
               {
                 "rewardType": "token",
                 "rewardMode": "standard",
-                "value": "S43_FNCSSoloReload_Qual1Round3_BR",
+                "value": "LiveTestingContender",
                 "quantity": 1,
+                "notifiesPlayer": true
+              }
+            ]
+          },
+          {
+            "threshold": 2,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 100,
                 "notifiesPlayer": false
               }
             ]
@@ -1078,9 +1182,330 @@
           }
         ]
       }
+    ],
+    "FightNight_TestWindow6": [
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "LiveTestingChampion",
+                "quantity": -1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 2,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "LiveTestingContender",
+                "quantity": -1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 1,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 600,
+                "notifiesPlayer": false
+              }
+            ]
+          },
+          {
+            "threshold": 2,
+            "payouts": [
+              {
+                "rewardType": "ecomm",
+                "rewardMode": "standard",
+                "value": "USD",
+                "quantity": 300,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "S43_FNCSSoloReloadQualifiers_Qual1Round2_BR": [
+      {
+        "scoringType": "value",
+        "ranks": [
+          {
+            "threshold": 0,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "rolling",
+                "value": "RegionLock_S43_FNCSSoloReload_BR",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scoringType": "rank",
+        "ranks": [
+          {
+            "threshold": 500,
+            "payouts": [
+              {
+                "rewardType": "token",
+                "rewardMode": "standard",
+                "value": "S43_FNCSSoloReload_Qual1Round3_BR",
+                "quantity": 1,
+                "notifiesPlayer": false
+              }
+            ]
+          }
+        ]
+      }
     ]
   },
   "events": [
+    {
+      "gameId": "Fortnite",
+      "eventId": "epicgames_FightNight_InternalTest",
+      "beginTime": "2026-10-23T20:00:00Z",
+      "endTime": "2026-10-30T21:00:00Z",
+      "displayDataId": "s42_arenas_fight_night",
+      "eventGroup": "Season42_FightNight",
+      "announcementTime": "2026-10-11T12:00:00Z",
+      "regions": [
+        "BR"
+      ],
+      "regionMappings": {
+        "BR": "BR"
+      },
+      "platforms": [
+        "XboxOneGDK",
+        "PS4",
+        "XCloud",
+        "Helios",
+        "Luna",
+        "IOS",
+        "XB1",
+        "XboxOne",
+        "XSX",
+        "Android",
+        "LunaMobile",
+        "Switch2",
+        "PS5",
+        "XCloudMobile",
+        "Mac",
+        "HeliosMobile",
+        "GFN",
+        "Switch",
+        "GFNMobile",
+        "Windows"
+      ],
+      "platformMappings": {},
+      "metadata": {
+        "requireSystemFeatures": [
+          "SecureBoot",
+          "CryptoProcessor",
+          "IOMMU",
+          "IOSMinimumOSVersion",
+          "AndroidSecureDevice"
+        ],
+        "tournamentType": "Other",
+        "webId": "S42_FightNigh",
+        "minimumAccountLevel": 0,
+        "uefnExperienceType": "Arenas"
+      },
+      "eventWindows": [
+        {
+          "eventWindowId": "FightNight_TestWindow3",
+          "countdownBeginTime": "2026-10-23T18:00:00Z",
+          "beginTime": "2026-10-23T20:00:00Z",
+          "endTime": "2026-10-23T20:28:00Z",
+          "round": 0,
+          "payoutDelay": 1,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s42_arenafightnight_rules",
+            "mfa",
+            "adps:g-a81a33a3b9a7"
+          ],
+          "teammateEligibility": "all",
+          "eventTemplateId": "EventTemplate_FightNightLiveTest",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "FightNightLiveTest_MainLeaderboard",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "LiveTestingArenaFightNight"
+          ],
+          "requireNoneTokensCaller": [],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers",
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator"
+          }
+        },
+        {
+          "eventWindowId": "FightNight_TestWindow4",
+          "countdownBeginTime": "2026-10-23T20:00:00Z",
+          "beginTime": "2026-10-23T20:29:00Z",
+          "endTime": "2026-10-23T21:10:00Z",
+          "round": 1,
+          "payoutDelay": 1,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s42_arenafightnight_rules",
+            "mfa",
+            "adps:g-a81a33a3b9a7"
+          ],
+          "teammateEligibility": "all",
+          "eventTemplateId": "EventTemplate_FightNightLiveTest",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "FightNightLiveTest_MainLeaderboard",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "LiveTestingContender",
+            "LiveTestingChampion",
+            "WeeklyTournamentSpectator"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Finals",
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator"
+          }
+        },
+        {
+          "eventWindowId": "FightNight_TestWindow5",
+          "countdownBeginTime": "2026-10-30T18:00:00Z",
+          "beginTime": "2026-10-30T20:00:00Z",
+          "endTime": "2026-10-30T20:25:00Z",
+          "round": 0,
+          "payoutDelay": 1,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s42_arenafightnight_rules",
+            "mfa",
+            "adps:g-a81a33a3b9a7"
+          ],
+          "teammateEligibility": "all",
+          "eventTemplateId": "EventTemplate_FightNightLiveTest",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "FightNightLiveTest_MainLeaderboard",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "LiveTestingArenaFightNight"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Qualifiers",
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator"
+          }
+        },
+        {
+          "eventWindowId": "FightNight_TestWindow6",
+          "countdownBeginTime": "2026-10-30T20:00:00Z",
+          "beginTime": "2026-10-30T20:30:00Z",
+          "endTime": "2026-10-30T21:00:00Z",
+          "round": 1,
+          "payoutDelay": 1,
+          "isTBD": false,
+          "visibility": "public",
+          "additionalRequirements": [
+            "eula:s42_arenafightnight_rules",
+            "mfa",
+            "adps:g-a81a33a3b9a7"
+          ],
+          "teammateEligibility": "all",
+          "eventTemplateId": "EventTemplate_FightNightLiveTest",
+          "blackoutPeriods": [],
+          "scoreLocations": [
+            {
+              "leaderboardDefId": "FightNightLiveTest_MainLeaderboard",
+              "isMainWindowLeaderboard": true
+            }
+          ],
+          "canLiveSpectate": false,
+          "requireAllTokens": [],
+          "requireAnyTokens": [
+            "LiveTestingContender",
+            "LiveTestingChampion",
+            "WeeklyTournamentSpectator"
+          ],
+          "requireNoneTokensCaller": [
+            "EpicAccountPrizingRestriction_v2",
+            "Permanent_Tournament_Ban"
+          ],
+          "requireAllTokensCaller": [],
+          "requireAnyTokensCaller": [],
+          "metadata": {
+            "ServerReplays": true,
+            "RoundType": "Finals",
+            "liveSpectateAccessToken": "WeeklyTournamentSpectator"
+          }
+        }
+      ],
+      "sourceLinkCode": "7777-0610-2026",
+      "link": {
+        "type": "br:tournament",
+        "code": "tournament_epicgames_fightnight_internaltest",
+        "version": 1
+      }
+    },
     {
       "gameId": "Fortnite",
       "eventId": "epicgames_S42_ArenaTestCup_BR",
@@ -2174,6 +2599,42 @@
   ],
   "templates": [
     {
+      "playlistId": "Playlist_VK_Play",
+      "matchCap": 1,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 16
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "DAMAGE_RECEIVED_STAT",
+            "bits": 13,
+            "aggregation": "sum"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_FightNightLiveTest",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
       "playlistId": "Playlist_ShowdownTournament_RE_SourSpawnSolo_PBM",
       "matchCap": 10,
       "tiebreakerFormula": {
@@ -2431,6 +2892,50 @@
       "payoutsConfig": {
         "payoutTableIdFormat": "${windowId}",
         "payoutDate": "windowEnd+PT32M"
+      },
+      "hidePlayerScores": false,
+      "percentileAccuracy": 1,
+      "discardZeroScore": false
+    },
+    {
+      "gameId": "Fortnite",
+      "leaderboardDefId": "FightNightLiveTest_MainLeaderboard",
+      "leaderboardStorageId": "Fortnite_GLOBAL",
+      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
+      "leaderboardInstanceIdFormat": "${windowId}",
+      "maxSessionHistorySize": -1,
+      "useIndividualScores": false,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 16
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "DAMAGE_RECEIVED_STAT",
+            "bits": 13,
+            "aggregation": "sum"
+          }
+        ]
+      },
+      "scoringRuleSetId": "FightNightLiveTest_ScoringRules",
+      "clampsToZero": true,
+      "payoutsConfig": {
+        "payoutTableIdFormat": "${windowId}",
+        "payoutDate": "windowEnd+PT1M"
       },
       "hidePlayerScores": false,
       "percentileAccuracy": 1,
@@ -2698,36 +3203,44 @@
   "scoreLocationScoringRuleSets": {
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event1_BR": "S42_ArenaCup_ScoringRules",
     "Fortnite:epicgames_S43_FNCSSoloReload_Final_BR:S43_FNCSSoloReload_Final_BR": "ScoringRules_FNCSSoloReload_Final",
-    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round3_BR": "ScoringRules_FNCSSoloReload_Qualifier",
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event8_BR": "S42_ArenaCup_ScoringRulesv3",
+    "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow4": "FightNightLiveTest_ScoringRules",
     "Fortnite:epicgames_S43_FNCSSoloReload_LastChanceQualifier_BR:S43_FNCSSoloReload_LastChanceLobby_BR": "ScoringRules_FNCSSoloReload_Heats",
     "Fortnite:cumulative:epicgames_S43_FNCSSoloReloadQualifiers_BR_cumulative": "ScoringRules_FNCSSoloReload_Qualifier",
-    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round2_BR": "ScoringRules_FNCSSoloReload_Qualifier",
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event3_BR": "S42_ArenaCup_ScoringRules",
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event4_BR": "S42_ArenaCup_ScoringRules",
-    "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event9_BR": "S42_ArenaCup_ScoringRulesv3",
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event6_BR": "S42_ArenaCup_ScoringRulesv3",
     "Fortnite:epicgames_S43_FNCSSoloReload_HeatsStage_BR:S43_FNCSSoloReload_HeatsStage_Heat2_BR": "ScoringRules_FNCSSoloReload_Heats",
     "Fortnite:epicgames_S43_FNCSSoloReload_LastChanceQualifier_BR:S43_FNCSSoloReload_LastChanceQualifier_BR": "ScoringRules_FNCSSoloReload_Qualifier",
     "Fortnite:epicgames_S43_FNCSSoloReload_HeatsStage_BR:S43_FNCSSoloReload_HeatsStage_Heat1_BR": "ScoringRules_FNCSSoloReload_Heats",
     "Fortnite:risk:epicgames_S43_FNCSSoloReloadQualifiers_BR_1_risk": "ScoringRules_FNCSSoloReload_Qualifier",
+    "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow5": "FightNightLiveTest_ScoringRules",
+    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round3_BR": "ScoringRules_FNCSSoloReload_Qualifier",
+    "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow3": "FightNightLiveTest_ScoringRules",
+    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round2_BR": "ScoringRules_FNCSSoloReload_Qualifier",
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event7_BR": "S42_ArenaCup_ScoringRulesv3",
     "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round1Day2_BR": "ScoringRules_FNCSSoloReload_Qualifier",
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event2_BR": "S42_ArenaCup_ScoringRules",
     "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_BR": "ScoringRules_FNCSSoloReload_Qualifier",
-    "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event5_BR": "S42_ArenaCup_ScoringRules"
+    "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event5_BR": "S42_ArenaCup_ScoringRules",
+    "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow6": "FightNightLiveTest_ScoringRules",
+    "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event9_BR": "S42_ArenaCup_ScoringRulesv3"
   },
   "scoreLocationPayoutTables": {
     "Fortnite:epicgames_S43_FNCSSoloReload_Final_BR:S43_FNCSSoloReload_Final_BR": "S43_FNCSSoloReload_Final_BR",
-    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round3_BR": "S43_FNCSSoloReloadQualifiers_Qual1Round3_BR",
+    "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow4": "FightNight_TestWindow4",
     "Fortnite:epicgames_S43_FNCSSoloReload_LastChanceQualifier_BR:S43_FNCSSoloReload_LastChanceLobby_BR": "epicgames_S43_FNCSSoloReload_LastChanceQualifier_BR",
-    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round2_BR": "S43_FNCSSoloReloadQualifiers_Qual1Round2_BR",
     "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round1Day2_BR": "S43_FNCSSoloReloadQualifiers_Qual1Round1Day2_BR",
     "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_BR": "S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_BR",
+    "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow6": "FightNight_TestWindow6",
     "Fortnite:epicgames_S43_FNCSSoloReload_HeatsStage_BR:S43_FNCSSoloReload_HeatsStage_Heat2_BR": "epicgames_S43_FNCSSoloReload_HeatsStage_BR",
     "Fortnite:epicgames_S43_FNCSSoloReload_LastChanceQualifier_BR:S43_FNCSSoloReload_LastChanceQualifier_BR": "S43_FNCSSoloReload_LastChanceQualifier_BR",
     "Fortnite:epicgames_S43_FNCSSoloReload_HeatsStage_BR:S43_FNCSSoloReload_HeatsStage_Heat1_BR": "epicgames_S43_FNCSSoloReload_HeatsStage_BR",
-    "Fortnite:risk:epicgames_S43_FNCSSoloReloadQualifiers_BR_1_risk": "epicgames_S43_FNCSSoloReloadQualifiers_BR_risk"
+    "Fortnite:risk:epicgames_S43_FNCSSoloReloadQualifiers_BR_1_risk": "epicgames_S43_FNCSSoloReloadQualifiers_BR_risk",
+    "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow5": "FightNight_TestWindow5",
+    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round3_BR": "S43_FNCSSoloReloadQualifiers_Qual1Round3_BR",
+    "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow3": "FightNight_TestWindow3",
+    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round2_BR": "S43_FNCSSoloReloadQualifiers_Qual1Round2_BR"
   },
   "resolvedWindowLocations": {
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event1_BR": [
@@ -2739,26 +3252,20 @@
     "Fortnite:epicgames_S43_FNCSSoloReload_HeatsStage_BR:S43_FNCSSoloReload_HeatsStage_Heat1_BR": [
       "Fortnite:epicgames_S43_FNCSSoloReload_HeatsStage_BR:S43_FNCSSoloReload_HeatsStage_Heat1_BR"
     ],
-    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round3_BR": [
-      "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round3_BR"
-    ],
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event8_BR": [
       "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event8_BR"
     ],
+    "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow4": [
+      "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow4"
+    ],
     "Fortnite:epicgames_S43_FNCSSoloReload_LastChanceQualifier_BR:S43_FNCSSoloReload_LastChanceLobby_BR": [
       "Fortnite:epicgames_S43_FNCSSoloReload_LastChanceQualifier_BR:S43_FNCSSoloReload_LastChanceLobby_BR"
-    ],
-    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round2_BR": [
-      "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round2_BR"
     ],
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event3_BR": [
       "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event3_BR"
     ],
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event4_BR": [
       "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event4_BR"
-    ],
-    "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event9_BR": [
-      "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event9_BR"
     ],
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event6_BR": [
       "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event6_BR"
@@ -2768,6 +3275,18 @@
     ],
     "Fortnite:epicgames_S43_FNCSSoloReload_LastChanceQualifier_BR:S43_FNCSSoloReload_LastChanceQualifier_BR": [
       "Fortnite:epicgames_S43_FNCSSoloReload_LastChanceQualifier_BR:S43_FNCSSoloReload_LastChanceQualifier_BR"
+    ],
+    "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow5": [
+      "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow5"
+    ],
+    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round3_BR": [
+      "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round3_BR"
+    ],
+    "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow3": [
+      "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow3"
+    ],
+    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round2_BR": [
+      "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round2_BR"
     ],
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event7_BR": [
       "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event7_BR"
@@ -2787,6 +3306,12 @@
     ],
     "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event5_BR": [
       "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event5_BR"
+    ],
+    "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow6": [
+      "Fortnite:epicgames_FightNight_InternalTest:FightNight_TestWindow6"
+    ],
+    "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event9_BR": [
+      "Fortnite:epicgames_S42_ArenaTestCup_BR:S42_ArenaTestCup_Event9_BR"
     ]
   },
   "eventSeries": []
