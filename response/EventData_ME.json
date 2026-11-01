@@ -7868,102 +7868,6 @@
   "events": [
     {
       "gameId": "Fortnite",
-      "eventId": "epicgames_S43_SoloReloadTestCup_ME",
-      "beginTime": "2026-11-01T15:00:00Z",
-      "endTime": "2026-11-01T17:30:00Z",
-      "displayDataId": "s43_test_reload",
-      "eventGroup": "Season43_SoloReloadTestCup",
-      "announcementTime": "2025-06-06T21:00:00Z",
-      "regions": [
-        "ME"
-      ],
-      "regionMappings": {
-        "ME": "MECOMP"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "SecureBoot",
-          "CryptoProcessor",
-          "IOMMU",
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "Other",
-        "webId": "S43_SoloReloadTestCup",
-        "minimumAccountLevel": 50,
-        "DisqualifyType": "Window",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S43_SoloReloadTestCup_ME",
-          "countdownBeginTime": "2026-11-01T13:00:00Z",
-          "beginTime": "2026-11-01T15:00:00Z",
-          "endTime": "2026-11-01T17:30:00Z",
-          "round": 1,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_S43_FNCSSoloReload_Qualifier",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S43_SoloReloadTestCup_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers"
-          }
-        }
-      ],
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s43_soloreloadtestcup_me"
-      }
-    },
-    {
-      "gameId": "Fortnite",
       "eventId": "epicgames_S42_ArenaTestCup_ME",
       "beginTime": "2026-08-27T15:00:00Z",
       "endTime": "2026-11-02T17:00:00Z",
@@ -13112,47 +13016,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "S43_SoloReloadTestCup_DefaultLeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 12,
-      "useIndividualScores": true,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "ScoringRules_FNCSSoloReload_Qualifier",
-      "clampsToZero": true,
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "Lead_Default",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -13948,7 +13811,6 @@
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_ME:S43_RankedCupSolo_ZB_Event2_ME": "EmptyScoringRules",
     "Fortnite:cumulative:epicgames_S43_FNCSSoloReloadQualifiers_ME_cumulative": "ScoringRules_FNCSSoloReload_Qualifier",
     "Fortnite:epicgames_S43_SquadsVictoryCup_ME:S43_SquadsVictoryCup_Event2_Round1_ME": "S43_SquadsVictoryCup_Round1_ScoringRules",
-    "Fortnite:epicgames_S43_SoloReloadTestCup_ME:S43_SoloReloadTestCup_ME": "ScoringRules_FNCSSoloReload_Qualifier",
     "Fortnite:epicgames_S43_RankedCupSolo_ME:S43_RankedCupSolo_Event2_ME_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S42_ArenaTestCup_ME:S42_ArenaTestCup_Event7_ME": "S42_ArenaCup_ScoringRulesv3",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_ME:S43_RankedCupReloadDuos_ZB_Event1_ME": "EmptyScoringRules",
@@ -14444,9 +14306,6 @@
     ],
     "Fortnite:epicgames_S43_SquadsVictoryCup_ME:S43_SquadsVictoryCup_Event2_Round1_ME": [
       "Fortnite:epicgames_S43_SquadsVictoryCup_ME:S43_SquadsVictoryCup_Event2_Round1_ME"
-    ],
-    "Fortnite:epicgames_S43_SoloReloadTestCup_ME:S43_SoloReloadTestCup_ME": [
-      "Fortnite:epicgames_S43_SoloReloadTestCup_ME:S43_SoloReloadTestCup_ME"
     ],
     "Fortnite:epicgames_S42_ArenaTestCup_ME:S42_ArenaTestCup_Event7_ME": [
       "Fortnite:epicgames_S42_ArenaTestCup_ME:S42_ArenaTestCup_Event7_ME"
