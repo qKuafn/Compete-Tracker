@@ -278,89 +278,6 @@
         ]
       }
     ],
-    "S42_ArenaCup_ScoringRules": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 10,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 2,
-            "pointsEarned": 6,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 3,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 4,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 5,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 6,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 7,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 8,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 9,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 10,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 11,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 12,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 13,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 14,
-            "pointsEarned": 2,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 15,
-            "pointsEarned": 2,
-            "multiplicative": false
-          }
-        ]
-      }
-    ],
     "ScoringRules_RankedCupSolo_Elite_1": [
       {
         "trackedStat": "ELITE_PLACEMENT_STAT_INDEX",
@@ -1033,49 +950,6 @@
           {
             "keyValue": 10,
             "pointsEarned": 2,
-            "multiplicative": false
-          }
-        ]
-      }
-    ],
-    "S42_ArenaCup_ScoringRulesv3": [
-      {
-        "trackedStat": "PLACEMENT_STAT_INDEX",
-        "matchRule": "lte",
-        "rewardTiers": [
-          {
-            "keyValue": 1,
-            "pointsEarned": 6,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 2,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 3,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 4,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 5,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 6,
-            "pointsEarned": 4,
-            "multiplicative": false
-          },
-          {
-            "keyValue": 7,
-            "pointsEarned": 4,
             "multiplicative": false
           }
         ]
@@ -8301,828 +8175,6 @@
   "events": [
     {
       "gameId": "Fortnite",
-      "eventId": "epicgames_S42_ArenaTestCup_NAC",
-      "beginTime": "2026-08-27T23:00:00Z",
-      "endTime": "2026-11-03T02:00:00Z",
-      "displayDataId": "s42_arenas_test",
-      "eventGroup": "Season42_ArenaTestCup",
-      "announcementTime": "2026-08-01T13:00:00Z",
-      "regions": [
-        "NAC",
-        "NAE",
-        "NAW",
-        "NA"
-      ],
-      "regionMappings": {
-        "NAW": "NAC",
-        "NAC": "NAC",
-        "NAE": "NAC",
-        "NA": "NAC"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "SecureBoot",
-          "CryptoProcessor",
-          "IOMMU",
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "Other",
-        "webId": "S42_ArenaTestCup",
-        "minimumAccountLevel": 50,
-        "DisqualifyType": "Window",
-        "uefnExperienceType": "Arenas",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event1_NAC",
-          "countdownBeginTime": "2026-08-27T21:00:00Z",
-          "beginTime": "2026-08-27T23:00:00Z",
-          "endTime": "2026-08-28T00:30:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaCups_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event2_NAC",
-          "countdownBeginTime": "2026-08-30T21:00:00Z",
-          "beginTime": "2026-08-30T23:00:00Z",
-          "endTime": "2026-08-31T01:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaCups_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event3_NAC",
-          "countdownBeginTime": "2026-09-03T21:00:00Z",
-          "beginTime": "2026-09-03T23:00:00Z",
-          "endTime": "2026-09-04T01:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaCups_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest",
-            "ServerReplays": "true"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event4_NAC",
-          "countdownBeginTime": "2026-09-04T21:00:00Z",
-          "beginTime": "2026-09-04T23:00:00Z",
-          "endTime": "2026-09-05T01:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaCups_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest",
-            "ServerReplays": "true"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event5_NAC",
-          "countdownBeginTime": "2026-09-06T21:00:00Z",
-          "beginTime": "2026-09-06T23:00:00Z",
-          "endTime": "2026-09-07T01:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaCups_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event6_NAC",
-          "countdownBeginTime": "2026-10-04T17:00:00Z",
-          "beginTime": "2026-10-04T19:00:00Z",
-          "endTime": "2026-10-04T21:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaTest_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest",
-            "ServerReplays": "true"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event7_NAC",
-          "countdownBeginTime": "2026-10-11T17:00:00Z",
-          "beginTime": "2026-10-11T19:00:00Z",
-          "endTime": "2026-10-11T21:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaTest_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest",
-            "ServerReplays": "true"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event8_NAC",
-          "countdownBeginTime": "2026-10-18T17:00:00Z",
-          "beginTime": "2026-10-18T19:00:00Z",
-          "endTime": "2026-10-18T21:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaTest_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event9_NAC",
-          "countdownBeginTime": "2026-11-02T22:00:00Z",
-          "beginTime": "2026-11-03T00:00:00Z",
-          "endTime": "2026-11-03T02:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaTest_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest",
-            "ServerReplays": "true"
-          }
-        }
-      ],
-      "sourceLinkCode": "7777-9876-6789",
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s42_arenatestcup_nac"
-      }
-    },
-    {
-      "gameId": "Fortnite",
-      "eventId": "epicgames_S42_ArenaTestCup_NAW",
-      "beginTime": "2026-08-28T01:00:00Z",
-      "endTime": "2026-11-03T04:00:00Z",
-      "displayDataId": "s42_arenas_test",
-      "eventGroup": "Season42_ArenaTestCup",
-      "announcementTime": "2026-08-01T15:00:00Z",
-      "regions": [
-        "NAW",
-        "NAE",
-        "NAC",
-        "NA"
-      ],
-      "regionMappings": {
-        "NAW": "NAW",
-        "NAC": "NAW",
-        "NAE": "NAW",
-        "NA": "NAW"
-      },
-      "platforms": [
-        "XboxOneGDK",
-        "PS4",
-        "XCloud",
-        "Helios",
-        "Luna",
-        "IOS",
-        "XB1",
-        "XboxOne",
-        "XSX",
-        "Android",
-        "LunaMobile",
-        "Switch2",
-        "PS5",
-        "XCloudMobile",
-        "Mac",
-        "HeliosMobile",
-        "GFN",
-        "Switch",
-        "GFNMobile",
-        "Windows"
-      ],
-      "platformMappings": {},
-      "metadata": {
-        "requireSystemFeatures": [
-          "SecureBoot",
-          "CryptoProcessor",
-          "IOMMU",
-          "AndroidSecureDevice",
-          "IOSMinimumOSVersion"
-        ],
-        "tournamentType": "Other",
-        "webId": "S42_ArenaTestCup",
-        "minimumAccountLevel": 50,
-        "DisqualifyType": "Window",
-        "uefnExperienceType": "Arenas",
-        "AccountLockType": "Window"
-      },
-      "eventWindows": [
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event1_NAW",
-          "countdownBeginTime": "2026-08-27T23:00:00Z",
-          "beginTime": "2026-08-28T01:00:00Z",
-          "endTime": "2026-08-28T02:30:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaCups_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event2_NAW",
-          "countdownBeginTime": "2026-08-30T23:00:00Z",
-          "beginTime": "2026-08-31T01:00:00Z",
-          "endTime": "2026-08-31T03:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaCups_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event3_NAW",
-          "countdownBeginTime": "2026-09-03T23:00:00Z",
-          "beginTime": "2026-09-04T01:00:00Z",
-          "endTime": "2026-09-04T03:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaCups_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest",
-            "ServerReplays": "true"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event4_NAW",
-          "countdownBeginTime": "2026-09-04T23:00:00Z",
-          "beginTime": "2026-09-05T01:00:00Z",
-          "endTime": "2026-09-05T03:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaCups_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest",
-            "ServerReplays": "true"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event5_NAW",
-          "countdownBeginTime": "2026-09-06T23:00:00Z",
-          "beginTime": "2026-09-07T01:00:00Z",
-          "endTime": "2026-09-07T03:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaCups_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event6_NAW",
-          "countdownBeginTime": "2026-10-04T19:00:00Z",
-          "beginTime": "2026-10-04T21:00:00Z",
-          "endTime": "2026-10-04T23:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaTest_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest",
-            "ServerReplays": "true"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event7_NAW",
-          "countdownBeginTime": "2026-10-11T19:00:00Z",
-          "beginTime": "2026-10-11T21:00:00Z",
-          "endTime": "2026-10-11T23:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaTest_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest",
-            "ServerReplays": "true"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event8_NAW",
-          "countdownBeginTime": "2026-10-18T19:00:00Z",
-          "beginTime": "2026-10-18T21:00:00Z",
-          "endTime": "2026-10-18T23:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaTest_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest"
-          }
-        },
-        {
-          "eventWindowId": "S42_ArenaTestCup_Event9_NAW",
-          "countdownBeginTime": "2026-11-03T00:00:00Z",
-          "beginTime": "2026-11-03T02:00:00Z",
-          "endTime": "2026-11-03T04:00:00Z",
-          "round": 0,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s37_delulu",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_ArenaCup",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S42_ArenaTest_LeaderboardDef",
-              "isMainWindowLeaderboard": true
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "Permanent_Tournament_Ban"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "RoundType": "Qualifiers",
-            "liveSpectateAccessToken": "ArenaSpecTest",
-            "ServerReplays": "true"
-          }
-        }
-      ],
-      "sourceLinkCode": "7777-9876-6789",
-      "link": {
-        "type": "br:tournament",
-        "code": "tournament_epicgames_s42_arenatestcup_naw"
-      }
-    },
-    {
-      "gameId": "Fortnite",
       "eventId": "epicgames_S43_FNCSSoloReloadQualifiers_NAW",
       "beginTime": "2026-11-04T02:00:00Z",
       "endTime": "2026-11-09T04:30:00Z",
@@ -11831,7 +10883,7 @@
             ]
           ],
           "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v2",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3",
           "blackoutPeriods": [],
           "scoreLocations": [
             {
@@ -11919,7 +10971,7 @@
             ]
           ],
           "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v2",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3",
           "blackoutPeriods": [],
           "scoreLocations": [
             {
@@ -12330,7 +11382,7 @@
             ]
           ],
           "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v2_ZB",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3_ZB",
           "blackoutPeriods": [],
           "scoreLocations": [
             {
@@ -12418,7 +11470,7 @@
             ]
           ],
           "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v2_ZB",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3_ZB",
           "blackoutPeriods": [],
           "scoreLocations": [
             {
@@ -13928,42 +12980,6 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_VK_Play",
-      "matchCap": 10,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 16
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "DAMAGE_RECEIVED_STAT",
-            "bits": 13,
-            "aggregation": "sum"
-          }
-        ]
-      },
-      "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_ArenaCup",
-      "scoringRules": [],
-      "payoutTable": [],
-      "liveSessionAttributes": [],
-      "clampsToZero": false
-    },
-    {
       "playlistId": "Playlist_ShowdownTournament_RE_SourSpawnSolo_PBM",
       "matchCap": 8,
       "tiebreakerFormula": {
@@ -14000,8 +13016,8 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_RE_SourSpawnSolo_PBM",
-      "matchCap": 5,
+      "playlistId": "Playlist_ShowdownTournament_BlastBerryDuo_RC",
+      "matchCap": 12,
       "tiebreakerFormula": {
         "basePointsBits": 11,
         "components": [
@@ -14011,25 +13027,26 @@
             "aggregation": "sum"
           },
           {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
             "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
             "bits": 14,
             "aggregation": "avg",
-            "multiplier": 16
+            "multiplier": 100
           },
           {
             "trackedStat": "TIME_ALIVE_STAT",
             "bits": 11,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "DAMAGE_RECEIVED_STAT",
-            "bits": 13,
-            "aggregation": "sum"
+            "aggregation": "avg"
           }
         ]
       },
       "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S43_FNCSSoloReload_LastChanceLobby",
+      "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -14176,6 +13193,79 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_S43_FNCSSoloReload_QualifierNPM",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_SourSpawnSolo_PBM",
+      "matchCap": 5,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 16
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "DAMAGE_RECEIVED_STAT",
+            "bits": 13,
+            "aggregation": "sum"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S43_FNCSSoloReload_LastChanceLobby",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_BlastBerryNoBuildDuo_RC",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3_ZB",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -14468,47 +13558,6 @@
     },
     {
       "gameId": "Fortnite",
-      "leaderboardDefId": "S42_ArenaTest_LeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 20,
-      "useIndividualScores": true,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMINATIONS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S42_ArenaCup_ScoringRulesv3",
-      "clampsToZero": true,
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "discardZeroScore": false
-    },
-    {
-      "gameId": "Fortnite",
       "leaderboardDefId": "RankedCup_DuosReload_Silver_LeaderboardDef",
       "leaderboardStorageId": "Fortnite_GLOBAL",
       "leaderboardInstanceGroupingKeyFormat": "${eventId}",
@@ -14641,47 +13690,6 @@
       "hidePlayerScores": false,
       "percentileAccuracy": 1,
       "discardZeroScore": true
-    },
-    {
-      "gameId": "Fortnite",
-      "leaderboardDefId": "S42_ArenaCups_LeaderboardDef",
-      "leaderboardStorageId": "Fortnite_GLOBAL",
-      "leaderboardInstanceGroupingKeyFormat": "${eventId}",
-      "leaderboardInstanceIdFormat": "${windowId}",
-      "maxSessionHistorySize": 20,
-      "useIndividualScores": true,
-      "tiebreakerFormula": {
-        "basePointsBits": 11,
-        "components": [
-          {
-            "trackedStat": "VICTORY_ROYALE_STAT",
-            "bits": 4,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "TEAM_ELIMINATIONS_STAT_INDEX",
-            "bits": 13,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
-            "bits": 14,
-            "aggregation": "avg",
-            "multiplier": 100
-          },
-          {
-            "trackedStat": "TIME_ALIVE_STAT",
-            "bits": 11,
-            "aggregation": "avg"
-          }
-        ]
-      },
-      "scoringRuleSetId": "S42_ArenaCup_ScoringRules",
-      "clampsToZero": true,
-      "hidePlayerScores": false,
-      "percentileAccuracy": 1,
-      "discardZeroScore": false
     },
     {
       "gameId": "Fortnite",
@@ -15769,13 +14777,11 @@
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event4_NAW_4_Champion": "ScoringRules_RankedCupDuosReload_Champion_4",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event1_NAW_4_Elite": "ScoringRules_RankedCupDuosReload_Elite_4",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event2_NAW_4_Gold": "ScoringRules_RankedCupDuosReload_Gold_4",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event7_NAC": "S42_ArenaCup_ScoringRulesv3",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event5_NAW_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event1_NAW_4_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_4",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event1_NAW_4_Silver": "ScoringRules_RankedCupDuosReload_Silver_4",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event5_NAW": "EmptyScoringRules",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event1_NAW_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event7_NAW": "S42_ArenaCup_ScoringRulesv3",
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event3_NAW_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event2_NAW_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event3_NAW_4_Gold": "ScoringRules_RankedCupDuosReload_Gold_4",
@@ -15794,11 +14800,9 @@
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event2_NAW_1_unreal": "ScoringRules_RankedCupSolo_Unreal_1",
     "Fortnite:epicgames_S43_PerformanceEvaluationTrios_NAC:S43_PerformanceEvaluation_Event4Round1_NAC": "S43_ScoringRules_PerfEvalTrios",
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event3_NAW_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event8_NAW": "S42_ArenaCup_ScoringRulesv3",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event4_NAW": "EmptyScoringRules",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event5_NAW_1_gold": "ScoringRules_RankedCupSolo_Gold_1",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event2_NAW": "EmptyScoringRules",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event1_NAW": "S42_ArenaCup_ScoringRules",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event1_NAW_4_Gold": "ScoringRules_RankedCupDuosReload_Gold_4",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event5_NAW_4_Unreal": "ScoringRules_RankedCupDuosReload_Unreal_4",
     "Fortnite:epicgames_S43_PerformanceEvaluationTrios_NAC:S43_PerformanceEvaluation_Event2Round2_NAC": "ScoringRules_PerformanceEvaluationRound2",
@@ -15807,7 +14811,6 @@
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event2_NAW_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_NAW:S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_NAW": "ScoringRules_FNCSSoloReload_Qualifier",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event4_NAW_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event3_NAW": "S42_ArenaCup_ScoringRules",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event5_NAW_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event1_NAW_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S43_SquadsVictoryCup_NAW:S43_SquadsVictoryCup_Event2_Round2_NAW": "S43_SquadsVictoryCup_Round2_ScoringRules",
@@ -15846,7 +14849,6 @@
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event2_NAW_4_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_4",
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event3_NAW_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S43_SquadsVictoryCup_NAW:S43_SquadsVictoryCup_Event1_Round2_NAW": "S43_SquadsVictoryCup_Round2_ScoringRules",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event6_NAW": "S42_ArenaCup_ScoringRulesv3",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event4_NAW_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW": "EmptyScoringRules",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event1_NAW_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
@@ -15891,7 +14893,6 @@
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event1_NAW_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event4_NAW_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event2_NAW_4_Champion": "ScoringRules_RankedCupDuosReload_Champion_4",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event2_NAC": "S42_ArenaCup_ScoringRules",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event1_NAW_4_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_4",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event3_NAW_4_Elite": "ScoringRules_RankedCupDuosReload_Elite_4",
     "Fortnite:epicgames_S43_SquadsVictoryCup_NAC:S43_SquadsVictoryCup_Event1_Round1_NAC": "S43_SquadsVictoryCup_Round1_ScoringRules",
@@ -15900,7 +14901,6 @@
     "Fortnite:epicgames_S43_FNCSSoloReload_HeatsStage_NAW:S43_FNCSSoloReload_HeatsStage_Heat2_NAW": "ScoringRules_FNCSSoloReload_Heats",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event3_NAW_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_elite": "ScoringRules_RankedCupSolo_Elite_1",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event9_NAW": "S42_ArenaCup_ScoringRulesv3",
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event2_NAW_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event2_NAW_4_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_4",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event1_NAW": "EmptyScoringRules",
@@ -15910,7 +14910,6 @@
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event3_NAW_4_Elite": "ScoringRules_RankedCupDuosReload_Elite_4",
     "Fortnite:epicgames_S43_FNCSSoloReload_Final_NAW:S43_FNCSSoloReload_Final_NAW": "ScoringRules_FNCSSoloReload_Final",
     "Fortnite:epicgames_S43_TriosCashCup_NAW:S43_TriosCashCup_Event2_NAW": "S43_TriosCashCup_ScoringRules",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event1_NAC": "S42_ArenaCup_ScoringRules",
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
     "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_NAW:S43_FNCSSoloReloadQualifiers_Qual1Round3_NAW": "ScoringRules_FNCSSoloReload_Qualifier",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event2_NAW": "EmptyScoringRules",
@@ -15926,15 +14925,11 @@
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event3_NAW_4_Silver": "ScoringRules_RankedCupDuosReload_Silver_4",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event5_NAW_4_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_4",
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event2_NAW": "EmptyScoringRules",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event4_NAW": "S42_ArenaCup_ScoringRules",
     "Fortnite:epicgames_S43_PerformanceEvaluationTrios_NAC:S43_PerformanceEvaluation_Event1Round1_NAC": "S43_ScoringRules_PerfEvalTrios",
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event1_NAW_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event2_NAW_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event2_NAW_4_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_4",
     "Fortnite:epicgames_S43_SquadsVictoryCup_NAC:S43_SquadsVictoryCup_Event1_Round2_NAC": "S43_SquadsVictoryCup_Round2_ScoringRules",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event3_NAC": "S42_ArenaCup_ScoringRules",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event4_NAC": "S42_ArenaCup_ScoringRules",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event9_NAC": "S42_ArenaCup_ScoringRulesv3",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event2_NAW_4_Bronze": "ScoringRules_RankedCupDuosReload_Bronze_4",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event4_NAW_4_Unreal": "ScoringRules_RankedCupDuosReload_Unreal_4",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event1_NAW": "EmptyScoringRules",
@@ -15952,7 +14947,6 @@
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event3_NAW_4_Champion": "ScoringRules_RankedCupDuosReload_Champion_4",
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event4_NAW_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event5_NAW": "S42_ArenaCup_ScoringRules",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event3_NAW_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event3_NAW_4_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_4",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event3_NAW_4_Silver": "ScoringRules_RankedCupDuosReload_Silver_4",
@@ -15962,17 +14956,14 @@
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event3_NAW": "EmptyScoringRules",
     "Fortnite:epicgames_S43_ArenaCashCup_NAC:S43_ArenaCashCup_Event1_NAC": "S42_ArenaCashCup_ScoringRules",
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event5_NAW_1_Silver": "ScoringRules_RankedCupSolo_Silver_1",
+    "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event4_NAW_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
     "Fortnite:epicgames_S43_FNCSSoloReload_HeatsStage_NAW:S43_FNCSSoloReload_HeatsStage_Heat1_NAW": "ScoringRules_FNCSSoloReload_Heats",
     "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_NAW:S43_FNCSSoloReloadQualifiers_Qual1Round1Day2_NAW": "ScoringRules_FNCSSoloReload_Qualifier",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event5_NAW": "EmptyScoringRules",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event3_NAW_4_Gold": "ScoringRules_RankedCupDuosReload_Gold_4",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event8_NAC": "S42_ArenaCup_ScoringRulesv3",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event1_NAW_4_Diamond": "ScoringRules_RankedCupDuosReload_Diamond_4",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event4_NAW_4_Elite": "ScoringRules_RankedCupDuosReload_Elite_4",
     "Fortnite:epicgames_S43_TriosCashCup_NAW:S43_TriosCashCup_Event3_NAW": "S43_TriosCashCup_ScoringRules",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event5_NAC": "S42_ArenaCup_ScoringRules",
-    "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event4_NAW_1_platinum": "ScoringRules_RankedCupSolo_Platinum_1",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event6_NAC": "S42_ArenaCup_ScoringRulesv3",
     "Fortnite:cumulative:epicgames_S43_FNCSSoloReloadQualifiers_NAC_cumulative": "ScoringRules_FNCSSoloReload_Qualifier",
     "Fortnite:epicgames_S43_ArenaCashCup_NAC:S43_ArenaCashCup_Event2_NAC": "S42_ArenaCashCup_ScoringRules",
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event1_NAW_1_Bronze": "ScoringRules_RankedCupSolo_Bronze_1",
@@ -15996,7 +14987,6 @@
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event3_NAW_1_diamond": "ScoringRules_RankedCupSolo_Diamond_1",
     "Fortnite:epicgames_S43_SquadsVictoryCup_NAW:S43_SquadsVictoryCup_Event2_Round1_NAW": "S43_SquadsVictoryCup_Round1_ScoringRules",
     "Fortnite:epicgames_S43_FNCSSoloReload_LastChanceQualifier_NAW:S43_FNCSSoloReload_LastChanceLobby_NAW": "ScoringRules_FNCSSoloReload_Heats",
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event2_NAW": "S42_ArenaCup_ScoringRules",
     "Fortnite:epicgames_S43_ReloadZBDuosCashCup_NAW:S43_ReloadZBDuosCashCup_Event1Round2_NAW": "S43_ReloadZBDuosCashCup_ScoringRules_Round2",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event1_NAW_4_Unreal": "ScoringRules_RankedCupDuosReload_Unreal_4"
   },
@@ -16205,9 +15195,6 @@
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event1_NAW_4_Unreal": "epicgames_S43_RankedCupReloadDuos_NAW_4_Unreal"
   },
   "resolvedWindowLocations": {
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event7_NAC": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event7_NAC"
-    ],
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event5_NAW": [
       "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event5_NAW",
       "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event5_NAW_1_Bronze",
@@ -16219,9 +15206,6 @@
       "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event5_NAW_1_champion",
       "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event5_NAW_1_unreal"
     ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event7_NAW": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event7_NAW"
-    ],
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event4_NAW": [
       "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event4_NAW",
       "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event4_NAW_4_Bronze",
@@ -16232,6 +15216,20 @@
       "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event4_NAW_4_Elite",
       "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event4_NAW_4_Champion",
       "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event4_NAW_4_Unreal"
+    ],
+    "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW": [
+      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW",
+      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_Bronze",
+      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_Silver",
+      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_gold",
+      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_platinum",
+      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_diamond",
+      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_elite",
+      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_champion",
+      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_unreal"
+    ],
+    "Fortnite:epicgames_S43_SquadsVictoryCup_NAC:S43_SquadsVictoryCup_Event1_Round1_NAC": [
+      "Fortnite:epicgames_S43_SquadsVictoryCup_NAC:S43_SquadsVictoryCup_Event1_Round1_NAC"
     ],
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event4_NAW": [
       "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event4_NAW",
@@ -16265,6 +15263,9 @@
       "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event1_NAW_1_elite",
       "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event1_NAW_1_champion",
       "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event1_NAW_1_unreal"
+    ],
+    "Fortnite:epicgames_S43_PerformanceEvaluationTrios_NAC:S43_PerformanceEvaluation_Event2Round1_NAC": [
+      "Fortnite:epicgames_S43_PerformanceEvaluationTrios_NAC:S43_PerformanceEvaluation_Event2Round1_NAC"
     ],
     "Fortnite:epicgames_S43_PerformanceEvaluationTrios_NAC:S43_PerformanceEvaluation_Event1Round2_NAC": [
       "Fortnite:epicgames_S43_PerformanceEvaluationTrios_NAC:S43_PerformanceEvaluation_Event1Round2_NAC"
@@ -16300,9 +15301,6 @@
       "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event1_NAW_4_Champion",
       "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event1_NAW_4_Unreal"
     ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event8_NAW": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event8_NAW"
-    ],
     "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event4_NAW": [
       "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event4_NAW",
       "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event4_NAW_1_Bronze",
@@ -16325,9 +15323,6 @@
       "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event2_NAW_1_champion",
       "Fortnite:epicgames_S43_RankedCupSolo_NAW:S43_RankedCupSolo_Event2_NAW_1_unreal"
     ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event1_NAW": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event1_NAW"
-    ],
     "Fortnite:epicgames_S43_PerformanceEvaluationTrios_NAC:S43_PerformanceEvaluation_Event2Round2_NAC": [
       "Fortnite:epicgames_S43_PerformanceEvaluationTrios_NAC:S43_PerformanceEvaluation_Event2Round2_NAC"
     ],
@@ -16335,9 +15330,6 @@
       "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_NAW:S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_NAW",
       "Fortnite:cumulative:epicgames_S43_FNCSSoloReloadQualifiers_NAW_cumulative",
       "Fortnite:risk:epicgames_S43_FNCSSoloReloadQualifiers_NAW_1_risk"
-    ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event3_NAW": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event3_NAW"
     ],
     "Fortnite:epicgames_S43_SquadsVictoryCup_NAW:S43_SquadsVictoryCup_Event2_Round2_NAW": [
       "Fortnite:epicgames_S43_SquadsVictoryCup_NAW:S43_SquadsVictoryCup_Event2_Round2_NAW"
@@ -16370,20 +15362,6 @@
     "Fortnite:epicgames_S43_SquadsVictoryCup_NAW:S43_SquadsVictoryCup_Event1_Round2_NAW": [
       "Fortnite:epicgames_S43_SquadsVictoryCup_NAW:S43_SquadsVictoryCup_Event1_Round2_NAW"
     ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event6_NAW": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event6_NAW"
-    ],
-    "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW": [
-      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW",
-      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_Bronze",
-      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_Silver",
-      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_gold",
-      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_platinum",
-      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_diamond",
-      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_elite",
-      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_champion",
-      "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event5_NAW_1_unreal"
-    ],
     "Fortnite:epicgames_S43_ReloadZBDuosCashCup_NAW:S43_ReloadZBDuosCashCup_Event2Round2_NAW": [
       "Fortnite:epicgames_S43_ReloadZBDuosCashCup_NAW:S43_ReloadZBDuosCashCup_Event2Round2_NAW"
     ],
@@ -16413,12 +15391,6 @@
     "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_NAC:S43_FNCSSoloReloadQualifiers_Qual1Round2_NAC": [
       "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_NAC:S43_FNCSSoloReloadQualifiers_Qual1Round2_NAC"
     ],
-    "Fortnite:epicgames_S43_SquadsVictoryCup_NAC:S43_SquadsVictoryCup_Event1_Round1_NAC": [
-      "Fortnite:epicgames_S43_SquadsVictoryCup_NAC:S43_SquadsVictoryCup_Event1_Round1_NAC"
-    ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event2_NAC": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event2_NAC"
-    ],
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event3_NAW": [
       "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event3_NAW",
       "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_NAW:S43_RankedCupReloadDuos_ZB_Event3_NAW_4_Bronze",
@@ -16436,9 +15408,6 @@
     "Fortnite:epicgames_S43_FNCSSoloReload_Final_NAW:S43_FNCSSoloReload_Final_NAW": [
       "Fortnite:epicgames_S43_FNCSSoloReload_Final_NAW:S43_FNCSSoloReload_Final_NAW"
     ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event9_NAW": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event9_NAW"
-    ],
     "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event1_NAW": [
       "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event1_NAW",
       "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event1_NAW_4_Bronze",
@@ -16455,9 +15424,6 @@
     ],
     "Fortnite:epicgames_S43_TriosCashCup_NAW:S43_TriosCashCup_Event2_NAW": [
       "Fortnite:epicgames_S43_TriosCashCup_NAW:S43_TriosCashCup_Event2_NAW"
-    ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event1_NAC": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event1_NAC"
     ],
     "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_NAW:S43_FNCSSoloReloadQualifiers_Qual1Round3_NAW": [
       "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_NAW:S43_FNCSSoloReloadQualifiers_Qual1Round3_NAW"
@@ -16484,29 +15450,11 @@
       "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event2_NAW_1_champion",
       "Fortnite:epicgames_S43_RankedCupSolo_ZB_NAW:S43_RankedCupSolo_ZB_Event2_NAW_1_unreal"
     ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event4_NAW": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event4_NAW"
-    ],
     "Fortnite:epicgames_S43_PerformanceEvaluationTrios_NAC:S43_PerformanceEvaluation_Event1Round1_NAC": [
       "Fortnite:epicgames_S43_PerformanceEvaluationTrios_NAC:S43_PerformanceEvaluation_Event1Round1_NAC"
     ],
     "Fortnite:epicgames_S43_SquadsVictoryCup_NAC:S43_SquadsVictoryCup_Event1_Round2_NAC": [
       "Fortnite:epicgames_S43_SquadsVictoryCup_NAC:S43_SquadsVictoryCup_Event1_Round2_NAC"
-    ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event3_NAC": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event3_NAC"
-    ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event4_NAC": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event4_NAC"
-    ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event9_NAC": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event9_NAC"
-    ],
-    "Fortnite:epicgames_S43_PerformanceEvaluationTrios_NAC:S43_PerformanceEvaluation_Event2Round1_NAC": [
-      "Fortnite:epicgames_S43_PerformanceEvaluationTrios_NAC:S43_PerformanceEvaluation_Event2Round1_NAC"
-    ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event5_NAW": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event5_NAW"
     ],
     "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_NAC:S43_FNCSSoloReloadQualifiers_Qual1Round1Day2_NAC": [
       "Fortnite:cumulative:epicgames_S43_FNCSSoloReloadQualifiers_NAC_cumulative",
@@ -16538,9 +15486,6 @@
     "Fortnite:epicgames_S43_ArenaCashCup_NAC:S43_ArenaCashCup_Event1_NAC": [
       "Fortnite:epicgames_S43_ArenaCashCup_NAC:S43_ArenaCashCup_Event1_NAC"
     ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event5_NAC": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event5_NAC"
-    ],
     "Fortnite:epicgames_S43_FNCSSoloReload_HeatsStage_NAW:S43_FNCSSoloReload_HeatsStage_Heat1_NAW": [
       "Fortnite:epicgames_S43_FNCSSoloReload_HeatsStage_NAW:S43_FNCSSoloReload_HeatsStage_Heat1_NAW"
     ],
@@ -16560,14 +15505,8 @@
       "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event5_NAW_4_Champion",
       "Fortnite:epicgames_S43_RankedCupReloadDuos_NAW:S43_RankedCupReloadDuos_Event5_NAW_4_Unreal"
     ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event8_NAC": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event8_NAC"
-    ],
     "Fortnite:epicgames_S43_TriosCashCup_NAW:S43_TriosCashCup_Event3_NAW": [
       "Fortnite:epicgames_S43_TriosCashCup_NAW:S43_TriosCashCup_Event3_NAW"
-    ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event6_NAC": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAC:S42_ArenaTestCup_Event6_NAC"
     ],
     "Fortnite:epicgames_S43_ArenaCashCup_NAC:S43_ArenaCashCup_Event2_NAC": [
       "Fortnite:epicgames_S43_ArenaCashCup_NAC:S43_ArenaCashCup_Event2_NAC"
@@ -16600,9 +15539,6 @@
     ],
     "Fortnite:epicgames_S43_FNCSSoloReload_LastChanceQualifier_NAW:S43_FNCSSoloReload_LastChanceLobby_NAW": [
       "Fortnite:epicgames_S43_FNCSSoloReload_LastChanceQualifier_NAW:S43_FNCSSoloReload_LastChanceLobby_NAW"
-    ],
-    "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event2_NAW": [
-      "Fortnite:epicgames_S42_ArenaTestCup_NAW:S42_ArenaTestCup_Event2_NAW"
     ],
     "Fortnite:epicgames_S43_ReloadZBDuosCashCup_NAW:S43_ReloadZBDuosCashCup_Event1Round2_NAW": [
       "Fortnite:epicgames_S43_ReloadZBDuosCashCup_NAW:S43_ReloadZBDuosCashCup_Event1Round2_NAW"

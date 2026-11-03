@@ -9251,7 +9251,7 @@
             ]
           ],
           "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v2_ZB",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3_ZB",
           "blackoutPeriods": [],
           "scoreLocations": [
             {
@@ -9339,7 +9339,7 @@
             ]
           ],
           "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v2_ZB",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3_ZB",
           "blackoutPeriods": [],
           "scoreLocations": [
             {
@@ -9750,7 +9750,7 @@
             ]
           ],
           "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v2",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3",
           "blackoutPeriods": [],
           "scoreLocations": [
             {
@@ -9838,7 +9838,7 @@
             ]
           ],
           "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v2",
+          "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3",
           "blackoutPeriods": [],
           "scoreLocations": [
             {
@@ -11347,8 +11347,8 @@
       "clampsToZero": false
     },
     {
-      "playlistId": "Playlist_ShowdownTournament_RE_SourSpawnSolo_PBM",
-      "matchCap": 5,
+      "playlistId": "Playlist_ShowdownTournament_BlastBerryDuo_RC",
+      "matchCap": 12,
       "tiebreakerFormula": {
         "basePointsBits": 11,
         "components": [
@@ -11358,25 +11358,26 @@
             "aggregation": "sum"
           },
           {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
             "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
             "bits": 14,
             "aggregation": "avg",
-            "multiplier": 16
+            "multiplier": 100
           },
           {
             "trackedStat": "TIME_ALIVE_STAT",
             "bits": 11,
-            "aggregation": "sum"
-          },
-          {
-            "trackedStat": "DAMAGE_RECEIVED_STAT",
-            "bits": 13,
-            "aggregation": "sum"
+            "aggregation": "avg"
           }
         ]
       },
       "gameId": "Fortnite",
-      "eventTemplateId": "EventTemplate_S43_FNCSSoloReload_LastChanceLobby",
+      "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
@@ -11486,6 +11487,79 @@
       },
       "gameId": "Fortnite",
       "eventTemplateId": "EventTemplate_S43_FNCSSoloReload_QualifierNPM",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_RE_SourSpawnSolo_PBM",
+      "matchCap": 5,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 16
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "DAMAGE_RECEIVED_STAT",
+            "bits": 13,
+            "aggregation": "sum"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_S43_FNCSSoloReload_LastChanceLobby",
+      "scoringRules": [],
+      "payoutTable": [],
+      "liveSessionAttributes": [],
+      "clampsToZero": false
+    },
+    {
+      "playlistId": "Playlist_ShowdownTournament_BlastBerryNoBuildDuo_RC",
+      "matchCap": 12,
+      "tiebreakerFormula": {
+        "basePointsBits": 11,
+        "components": [
+          {
+            "trackedStat": "VICTORY_ROYALE_STAT",
+            "bits": 4,
+            "aggregation": "sum"
+          },
+          {
+            "trackedStat": "TEAM_ELIMS_STAT_INDEX",
+            "bits": 13,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+            "bits": 14,
+            "aggregation": "avg",
+            "multiplier": 100
+          },
+          {
+            "trackedStat": "TIME_ALIVE_STAT",
+            "bits": 11,
+            "aggregation": "avg"
+          }
+        ]
+      },
+      "gameId": "Fortnite",
+      "eventTemplateId": "EventTemplate_RankedCupReloadDuos_v3_ZB",
       "scoringRules": [],
       "payoutTable": [],
       "liveSessionAttributes": [],
