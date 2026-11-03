@@ -6166,32 +6166,6 @@
         ]
       }
     ],
-    "S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_BR": [
-      {
-        "scoringType": "value",
-        "ranks": [
-          {
-            "threshold": 0,
-            "payouts": [
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "RegionLock_S43_FNCSSoloReload_BR",
-                "quantity": 1,
-                "notifiesPlayer": false
-              },
-              {
-                "rewardType": "token",
-                "rewardMode": "rolling",
-                "value": "S43_FNCSSoloReload_DenyQual1Round2_BR",
-                "quantity": 1,
-                "notifiesPlayer": false
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "FightNight_Contender4_BR": [
       {
         "scoringType": "rank",
@@ -8057,7 +8031,7 @@
     {
       "gameId": "Fortnite",
       "eventId": "epicgames_S43_FNCSSoloReloadQualifiers_BR",
-      "beginTime": "2026-11-03T21:00:00Z",
+      "beginTime": "2026-11-04T21:00:00Z",
       "endTime": "2026-11-08T23:30:00Z",
       "displayDataId": "s42_fncssolos_reload_qual",
       "eventGroup": "Season43_FNCSSoloReload",
@@ -8115,64 +8089,6 @@
         "AccountLockType": "Window"
       },
       "eventWindows": [
-        {
-          "eventWindowId": "S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_BR",
-          "countdownBeginTime": "2026-11-03T19:00:00Z",
-          "beginTime": "2026-11-03T21:00:00Z",
-          "endTime": "2026-11-03T23:30:00Z",
-          "round": 1,
-          "payoutDelay": 32,
-          "isTBD": false,
-          "visibility": "public",
-          "additionalRequirements": [
-            "eula:s43_fncsreload_rules",
-            "adps:g-a81a33a3b9a7",
-            "mfa"
-          ],
-          "teammateEligibility": "all",
-          "eventTemplateId": "EventTemplate_S43_FNCSSoloReload_Qualifier",
-          "blackoutPeriods": [],
-          "scoreLocations": [
-            {
-              "leaderboardDefId": "S43_FNCSSoloReloadQualifiers_DefaultLeaderboardDef",
-              "isMainWindowLeaderboard": true
-            },
-            {
-              "leaderboardDefId": "S43_FNCSSoloReloadQualifiers_CumulativeLeaderboardDef",
-              "isMainWindowLeaderboard": false
-            },
-            {
-              "leaderboardDefId": "S43_FNCSSoloReloadQualifiers_RiskQualLeaderboardDef",
-              "isMainWindowLeaderboard": false
-            }
-          ],
-          "canLiveSpectate": false,
-          "requireAllTokens": [
-            "PowerRankings_29_10_2026_Top200K"
-          ],
-          "requireAnyTokens": [],
-          "requireNoneTokensCaller": [
-            "EpicAccountPrizingRestriction_v2",
-            "RegionLock_S43_FNCSSoloReload_OCE",
-            "RegionLock_S43_FNCSSoloReload_EU",
-            "S43_FNCS_Banned",
-            "RegionLock_S43_FNCSSoloReload_NAC",
-            "RegionLock_S43_FNCSSoloReload_ASIA",
-            "Permanent_Tournament_Ban",
-            "RegionLock_S43_FNCSSoloReload_NAW",
-            "RegionLock_S43_FNCSSoloReload_ME"
-          ],
-          "requireAllTokensCaller": [],
-          "requireAnyTokensCaller": [],
-          "regionMappings": {},
-          "metadata": {
-            "ServerReplays": true,
-            "RoundType": "Qualifiers",
-            "hideScoreLocationsIndexes": [
-              2
-            ]
-          }
-        },
         {
           "eventWindowId": "S43_FNCSSoloReloadQualifiers_Qual1Round1Day2_BR",
           "countdownBeginTime": "2026-11-04T19:00:00Z",
@@ -8246,7 +8162,7 @@
             "mfa",
             [
               "leaderboard:epicgames_dreamyparadox:dreamyparadox:rank:1000",
-              "anyToken:S43_FNCSSoloReload_Qual1Round2_BR,PowerRankings_24_09_2026_Top1K,PowerRankings_01_10_2026_Top1K"
+              "anyToken:S43_FNCSSoloReload_Qual1Round2_BR,PowerRankings_29_10_2026_Top1K"
             ]
           ],
           "teammateEligibility": "all",
@@ -14028,7 +13944,6 @@
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_BR:S43_RankedCupSolo_ZB_Event5_BR_1_champion": "ScoringRules_RankedCupSolo_Champion_1",
     "Fortnite:epicgames_S43_TriosCashCup_BR:S43_TriosCashCup_Event3_BR": "S43_TriosCashCup_ScoringRules",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_BR:S43_RankedCupReloadDuos_Event1_BR_4_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_4",
-    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_BR": "ScoringRules_FNCSSoloReload_Qualifier",
     "Fortnite:epicgames_S43_ArenaFightNight_BR:FightNight_Final2_BR": "FightNightLiveTest_ScoringRules",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_BR:S43_RankedCupReloadDuos_Event1_BR": "EmptyScoringRules",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_BR:S43_RankedCupReloadDuos_ZB_Event5_BR_4_Platinum": "ScoringRules_RankedCupDuosReload_Platinum_4",
@@ -14228,7 +14143,6 @@
     "Fortnite:epicgames_S43_RankedCupSolo_ZB_BR:S43_RankedCupSolo_ZB_Event5_BR_1_champion": "epicgames_S43_RankedCupSolo_ZB_BR_1_Champion",
     "Fortnite:epicgames_S43_TriosCashCup_BR:S43_TriosCashCup_Event3_BR": "S43_TriosCashCup_Event3_BR",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_BR:S43_RankedCupReloadDuos_Event1_BR_4_Platinum": "epicgames_S43_RankedCupReloadDuos_BR_4_Platinum",
-    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_BR": "S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_BR",
     "Fortnite:epicgames_S43_ArenaFightNight_BR:FightNight_Final2_BR": "FightNight_Final2_BR",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_ZB_BR:S43_RankedCupReloadDuos_ZB_Event5_BR_4_Platinum": "epicgames_S43_RankedCupReloadDuos_ZB_BR_4_Platinum",
     "Fortnite:epicgames_S43_RankedCupReloadDuos_BR:S43_RankedCupReloadDuos_Event3_BR_4_Unreal": "epicgames_S43_RankedCupReloadDuos_BR_4_Unreal",
@@ -14497,11 +14411,6 @@
     ],
     "Fortnite:epicgames_S43_TriosCashCup_BR:S43_TriosCashCup_Event3_BR": [
       "Fortnite:epicgames_S43_TriosCashCup_BR:S43_TriosCashCup_Event3_BR"
-    ],
-    "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_BR": [
-      "Fortnite:epicgames_S43_FNCSSoloReloadQualifiers_BR:S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_BR",
-      "Fortnite:cumulative:epicgames_S43_FNCSSoloReloadQualifiers_BR_cumulative",
-      "Fortnite:risk:epicgames_S43_FNCSSoloReloadQualifiers_BR_1_risk"
     ],
     "Fortnite:epicgames_S43_ArenaFightNight_BR:FightNight_Final2_BR": [
       "Fortnite:epicgames_S43_ArenaFightNight_BR:FightNight_Final2_BR"
